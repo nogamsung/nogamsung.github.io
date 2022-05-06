@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-06T18:43:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Speech - Basics</title><link href="http://localhost:4000/Speech-Basics" rel="alternate" type="text/html" title="Speech - Basics" /><published>2022-05-02T03:17:00+09:00</published><updated>2022-05-02T03:17:00+09:00</updated><id>http://localhost:4000/Speech-Basics</id><content type="html" xml:base="http://localhost:4000/Speech-Basics">&lt;p&gt;Speech Processing - Basics&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-06T22:27:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Speech[1] - Overview</title><link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech[1] - Overview" /><published>2022-05-02T03:17:00+09:00</published><updated>2022-05-02T03:17:00+09:00</updated><id>http://localhost:4000/Speech_1-Overview</id><content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
 
 &lt;p&gt;Application&lt;/p&gt;
 &lt;ul&gt;
@@ -33,7 +33,9 @@
 &lt;p&gt;Reference&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech Processing - Basics</summary></entry><entry><title type="html">Speech - Mel spectrogram Explanation</title><link href="http://localhost:4000/Speech-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech - Mel spectrogram Explanation" /><published>2022-05-02T02:40:00+09:00</published><updated>2022-05-02T02:40:00+09:00</updated><id>http://localhost:4000/Speech-Mel_spectrogram_Explanation</id><content type="html" xml:base="http://localhost:4000/Speech-Mel_spectrogram_Explanation">&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[1] - Overview</summary></entry><entry><title type="html">Speech[2] - Mel spectrogram Explanation</title><link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech[2] - Mel spectrogram Explanation" /><published>2022-05-02T02:40:00+09:00</published><updated>2022-05-02T02:40:00+09:00</updated><id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id><content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
+
+&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
 
 &lt;p&gt;How to calculate Mel frequency using Frequency
 &lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
@@ -57,4 +59,4 @@
   &lt;/li&gt;
   &lt;li&gt;Construct mel filter banks&lt;/li&gt;
   &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Humans perceive frequency logarithmically</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[2] - Mel spectrogram Explanation</summary></entry></feed>
