@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-07T22:03:55+09:00</updated>
+  <updated>2022-05-07T22:32:10+09:00</updated>
   <id>http://localhost:4000/tag/backend/feed.xml</id>
 
   
@@ -849,31 +849,31 @@ Hello
 &lt;h4 id=&quot;relationship-example&quot;&gt;Relationship Example&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;A website consists of cryptocurrency trade will be used as a example case&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;one-to-one-relationship&quot;&gt;One-to-one relationship&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;A user can only have one wallet
+  &lt;li&gt;One-to-one relationship
     &lt;ul&gt;
-      &lt;li&gt;user – wallet&lt;/li&gt;
+      &lt;li&gt;A user can only have one wallet
+        &lt;ul&gt;
+          &lt;li&gt;user - - wallet&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;one-to-many-relationship&quot;&gt;One-to-many relationship&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;A user can have hold of many NFTs
+  &lt;li&gt;One-to-many relationship
     &lt;ul&gt;
-      &lt;li&gt;user -= NFTs&lt;/li&gt;
+      &lt;li&gt;A user can have hold of many NFTs
+        &lt;ul&gt;
+          &lt;li&gt;user - = NFTs&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&quot;many-to-many-relationship&quot;&gt;Many-to-many relationship&lt;/h5&gt;
-&lt;ul&gt;
-  &lt;li&gt;A group of user can have hold of different cryto coin
+  &lt;li&gt;Many-to-many relationship
     &lt;ul&gt;
-      &lt;li&gt;user == cryto coin&lt;/li&gt;
+      &lt;li&gt;A group of user can have hold of different cryto coin
+        &lt;ul&gt;
+          &lt;li&gt;user = = coin&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
