@@ -11,7 +11,7 @@
 
 
 
-    <title>Geomseong Ahn - Geomseong Ahn's Blog</title>
+    <title>Backend - Geomseong Ahn's Blog</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -36,19 +36,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Computer Science & Engineering" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/author/gs97ahn/" />
+    <link rel="canonical" href="http://localhost:4000/tag/backend/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Geomseong Ahn - Geomseong Ahn's Blog" />
+    <meta property="og:title" content="Backend - Geomseong Ahn's Blog" />
     <meta property="og:description" content="Computer Science & Engineering" />
-    <meta property="og:url" content="http://localhost:4000/author/gs97ahn/" />
+    <meta property="og:url" content="http://localhost:4000/tag/backend/" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Geomseong Ahn - Geomseong Ahn's Blog" />
+    <meta name="twitter:title" content="Backend - Geomseong Ahn's Blog" />
     <meta name="twitter:description" content="Computer Science & Engineering" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/blog-cover.jpg" />
@@ -68,7 +68,7 @@
         "name": "Geomseong Ahn's Blog",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/author/gs97ahn/",
+    "url": "http://localhost:4000/tag/backend/",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/built/images/blog-cover.jpg",
@@ -77,7 +77,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/author/gs97ahn/"
+        "@id": "http://localhost:4000/tag/backend/"
     },
     "description": "Computer Science & Engineering"
 }
@@ -92,24 +92,26 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Author Page" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Tag Page" href="/feed.xml" />
 
 
 </head>
-<body class="author-template">
+<body class="tag-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default}} -->
+        <!-- default -->
 <!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
 
-<!-- #author  -->
-<!-- Everything inside the #author tags pulls data from the author -->
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<!-- #tag -->
+<!-- dynamically loading backgrounds for tags,  descriptions and page titles -->
 
-    
-    <header class="site-header outer no-cover">
-        <div class="inner">
-            <nav class="site-nav">
+
+
+<header class="site-header outer " style="background-image: url(/assets/built/images/blog-cover.jpg) ">
+    <div class="inner">
+        <nav class="site-nav">
     <div class="site-nav-left">
         
         
@@ -143,40 +145,27 @@
         
     </div>
 </nav>
-            <div class="site-header-content">
+        <div class="site-header-content">
+            <h1 class="site-title">Backend</h1>
+            <h2 class="site-description">
                 
-                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="gs97ahn" />
+    			    A collection of 5 posts
                 
-                <h1 class="site-title">Geomseong Ahn</h1>
-                
-                <div class="author-meta">
-                    
-                    <div class="author-stats">
-                        7 posts <span class="bull">&bull;</span>
-                    </div>
-                    
-                    
-                    
-                    <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/http://localhost:4000/author/gs97ahn/feed.xml" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
-</a>
-                </div>
-            </div>
+            </h2>
         </div>
-    </header>
-    
-
-<!-- /author -->
+    </div>
+</header>
+<!-- tag -->
 
 <!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
         <div class="post-feed">
             <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
 
-    <article class="post-card author-template">
+    <article class="post-card tag-template">
         
             <a class="post-card-image-link" href="/Spring_4-Spring_Bin_and_Dependencies_Relation">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/project-logo.png)"></div>
@@ -224,7 +213,7 @@
         </div>
     </article>
 
-    <article class="post-card author-template">
+    <article class="post-card tag-template">
         
             <a class="post-card-image-link" href="/Spring_3-Member_Management_Example">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/etc-logo.png)"></div>
@@ -272,7 +261,7 @@
         </div>
     </article>
 
-    <article class="post-card author-template">
+    <article class="post-card tag-template">
         
             <a class="post-card-image-link" href="/Spring_2-Web_Development_Basics-copy">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/etc-logo.png)"></div>
@@ -320,7 +309,7 @@
         </div>
     </article>
 
-    <article class="post-card author-template">
+    <article class="post-card tag-template">
         
             <a class="post-card-image-link" href="/Spring_1-Project_Environment_Setting">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/etc-logo.png)"></div>
@@ -368,7 +357,7 @@
         </div>
     </article>
 
-    <article class="post-card author-template">
+    <article class="post-card tag-template">
         
             <a class="post-card-image-link" href="/SQL-Overview">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/project-logo.png)"></div>
@@ -414,105 +403,8 @@
         </div>
     </article>
 
-    <article class="post-card author-template">
-        
-            <a class="post-card-image-link" href="/Speech_1-Overview">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/project-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Speech_1-Overview">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Ai</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Speech[1] - Overview</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Speech[1] - Overview
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card author-template">
-        
-            <a class="post-card-image-link" href="/Speech_2-Mel_spectrogram_Explanation">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/project-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Speech_2-Mel_spectrogram_Explanation">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Ai</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Speech[2] - Mel spectrogram Explanation</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Speech[2] - Mel spectrogram Explanation
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
 
         </div>
-
     </div>
 </main>
 

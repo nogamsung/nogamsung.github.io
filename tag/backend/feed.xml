@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
   <updated>2022-05-07T22:03:55+09:00</updated>
-  <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
+  <id>http://localhost:4000/tag/backend/feed.xml</id>
 
   
   
@@ -1039,135 +1039,6 @@ Hello
 
       
         <summary type="html">SQL - Overview Many developers say that SQL is their go-to database when starting a new project, even though SQL is more than 40 years old Billions of dollars were invested to create a new form of database(mongoDB, Cloud Firestore, etc.), but people still love SQL MySQL is an open source database: content management system like wordpress ecommerce platforms like shopify social media giants like twitter CRUD Create Read Update Delete Model and join relational data</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Speech[1] - Overview</title>
-      <link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech[1] - Overview" />
-      <published>2022-05-02T03:17:00+09:00</published>
-      <updated>2022-05-02T03:17:00+09:00</updated>
-      <id>http://localhost:4000/Speech_1-Overview</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
-
-&lt;p&gt;Application&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Audio Classification&lt;/li&gt;
-  &lt;li&gt;Speech Recognition&lt;/li&gt;
-  &lt;li&gt;Speaker Verification&lt;/li&gt;
-  &lt;li&gt;Audio Denoising&lt;/li&gt;
-  &lt;li&gt;Audio Upsampling&lt;/li&gt;
-  &lt;li&gt;Music Information Retrieval
-    &lt;ul&gt;
-      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
-      &lt;li&gt;Mood Classification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two stages for Speech Processing&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Preparing Audio Data&lt;/li&gt;
-  &lt;li&gt;Development &amp;amp; Evaluation of Model&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Technology commonly used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-  &lt;li&gt;Tensorflow / PyTorch&lt;/li&gt;
-  &lt;li&gt;Librosa&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reference&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">Speech[1] - Overview</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Speech[2] - Mel spectrogram Explanation</title>
-      <link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech[2] - Mel spectrogram Explanation" />
-      <published>2022-05-02T02:40:00+09:00</published>
-      <updated>2022-05-02T02:40:00+09:00</updated>
-      <id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
-
-&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
-
-&lt;p&gt;How to calculate Mel frequency using Frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How to calculate Frequency using Mel frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How to extract Mel spectrogram&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Extract STFT&lt;/li&gt;
-  &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
-  &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;How to convert frequencies to Mel scale&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Choose number of mel bands
-    &lt;ul&gt;
-      &lt;li&gt;Number of mel bands(e.g. 40, 60, 90, 128) depends on the problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Construct mel filter banks&lt;/li&gt;
-  &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">Speech[2] - Mel spectrogram Explanation</summary>
       
 
       
