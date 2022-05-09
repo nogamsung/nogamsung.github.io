@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-09T14:53:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [5] - Web MVC Development</title><link href="http://localhost:4000/Spring_5-Web_MVC_Development" rel="alternate" type="text/html" title="Spring [5] - Web MVC Development" /><published>2022-05-09T06:26:00+09:00</published><updated>2022-05-09T06:26:00+09:00</updated><id>http://localhost:4000/Spring_5-Web_MVC_Development</id><content type="html" xml:base="http://localhost:4000/Spring_5-Web_MVC_Development">&lt;h1 id=&quot;spring-5---web-mvc-development&quot;&gt;Spring [5] - Web MVC Development&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-09T16:43:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [5] - Web MVC Development</title><link href="http://localhost:4000/Spring_5-Web_MVC_Development" rel="alternate" type="text/html" title="Spring [5] - Web MVC Development" /><published>2022-05-09T06:26:00+09:00</published><updated>2022-05-09T06:26:00+09:00</updated><id>http://localhost:4000/Spring_5-Web_MVC_Development</id><content type="html" xml:base="http://localhost:4000/Spring_5-Web_MVC_Development">&lt;h1 id=&quot;spring-5---web-mvc-development&quot;&gt;Spring [5] - Web MVC Development&lt;/h1&gt;
 
 &lt;h3 id=&quot;member-web-function---add-home-controller&quot;&gt;Member Web Function - Add Home Controller&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add Home Controller&lt;/code&gt;&lt;/p&gt;
@@ -166,7 +166,7 @@
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/roadmaps/373&quot; target=&quot;_blank&quot;&gt;https://www.inflearn.com/roadmaps/373&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">Spring [4] - Spring Bin and Dependencies Relation</summary></entry><entry><title type="html">Spring[3] - Backend Development</title><link href="http://localhost:4000/Spring_3-Backend_Development" rel="alternate" type="text/html" title="Spring[3] - Backend Development" /><published>2022-05-07T07:10:00+09:00</published><updated>2022-05-07T07:10:00+09:00</updated><id>http://localhost:4000/Spring_3-Backend_Development</id><content type="html" xml:base="http://localhost:4000/Spring_3-Backend_Development">&lt;h1 id=&quot;spring3---backend-development&quot;&gt;Spring[3] - Backend Development&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">Spring [4] - Spring Bin and Dependencies Relation</summary></entry><entry><title type="html">Spring [3] - Backend Development</title><link href="http://localhost:4000/Spring_3-Backend_Development" rel="alternate" type="text/html" title="Spring [3] - Backend Development" /><published>2022-05-07T07:10:00+09:00</published><updated>2022-05-07T07:10:00+09:00</updated><id>http://localhost:4000/Spring_3-Backend_Development</id><content type="html" xml:base="http://localhost:4000/Spring_3-Backend_Development">&lt;h1 id=&quot;spring-3---backend-development&quot;&gt;Spring [3] - Backend Development&lt;/h1&gt;
 
 &lt;h3 id=&quot;business-requirements&quot;&gt;Business Requirements&lt;/h3&gt;
 &lt;ul&gt;
@@ -487,7 +487,7 @@
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/roadmaps/373&quot; target=&quot;_blank&quot;&gt;https://www.inflearn.com/roadmaps/373&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">Spring[3] - Backend Development</summary></entry><entry><title type="html">Spring[2] - Web Development Basics</title><link href="http://localhost:4000/Spring_2-Web_Development_Basics-copy" rel="alternate" type="text/html" title="Spring[2] - Web Development Basics" /><published>2022-05-07T06:10:00+09:00</published><updated>2022-05-07T06:10:00+09:00</updated><id>http://localhost:4000/Spring_2-Web_Development_Basics%20copy</id><content type="html" xml:base="http://localhost:4000/Spring_2-Web_Development_Basics-copy">&lt;h1 id=&quot;spring-2---web-development-basics&quot;&gt;Spring [2] - Web Development Basics&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">Spring [3] - Backend Development</summary></entry><entry><title type="html">Spring[2] - Web Development Basics</title><link href="http://localhost:4000/Spring_2-Web_Development_Basics-copy" rel="alternate" type="text/html" title="Spring[2] - Web Development Basics" /><published>2022-05-07T06:10:00+09:00</published><updated>2022-05-07T06:10:00+09:00</updated><id>http://localhost:4000/Spring_2-Web_Development_Basics%20copy</id><content type="html" xml:base="http://localhost:4000/Spring_2-Web_Development_Basics-copy">&lt;h1 id=&quot;spring-2---web-development-basics&quot;&gt;Spring [2] - Web Development Basics&lt;/h1&gt;
 
 &lt;h3 id=&quot;there-are-3-different-kinds&quot;&gt;There are 3 different kinds&lt;/h3&gt;
 &lt;ul&gt;
@@ -991,7 +991,33 @@ Hello
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Cz3WcZLRaWc&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=Cz3WcZLRaWc&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/&quot; target=&quot;_blank&quot;&gt;hhttps://www.geeksforgeeks.org/sql-ddl-dql-dml-dcl-tcl-commands/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">SQL - Overview Many developers say that SQL is their go-to database when starting a new project, even though SQL is more than 40 years old Billions of dollars were invested to create a new form of database(mongoDB, Cloud Firestore, etc.), but people still love SQL MySQL is an open source database: content management system like wordpress ecommerce platforms like shopify social media giants like twitter CRUD Create Read Update Delete Model and join relational data</summary></entry><entry><title type="html">Speech[1] - Overview</title><link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech[1] - Overview" /><published>2022-05-02T03:17:00+09:00</published><updated>2022-05-02T03:17:00+09:00</updated><id>http://localhost:4000/Speech_1-Overview</id><content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">SQL - Overview Many developers say that SQL is their go-to database when starting a new project, even though SQL is more than 40 years old Billions of dollars were invested to create a new form of database(mongoDB, Cloud Firestore, etc.), but people still love SQL MySQL is an open source database: content management system like wordpress ecommerce platforms like shopify social media giants like twitter CRUD Create Read Update Delete Model and join relational data</summary></entry><entry><title type="html">Speech[2] - Mel spectrogram Explanation</title><link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech[2] - Mel spectrogram Explanation" /><published>2022-05-03T02:40:00+09:00</published><updated>2022-05-03T02:40:00+09:00</updated><id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id><content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
+
+&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
+
+&lt;p&gt;How to calculate Mel frequency using Frequency
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to calculate Frequency using Mel frequency
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;How to extract Mel spectrogram&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Extract STFT&lt;/li&gt;
+  &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
+  &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;How to convert frequencies to Mel scale&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Choose number of mel bands
+    &lt;ul&gt;
+      &lt;li&gt;Number of mel bands(e.g. 40, 60, 90, 128) depends on the problem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Construct mel filter banks&lt;/li&gt;
+  &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[2] - Mel spectrogram Explanation</summary></entry><entry><title type="html">Speech[1] - Overview</title><link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech[1] - Overview" /><published>2022-05-02T03:17:00+09:00</published><updated>2022-05-02T03:17:00+09:00</updated><id>http://localhost:4000/Speech_1-Overview</id><content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
 
 &lt;p&gt;Application&lt;/p&gt;
 &lt;ul&gt;
@@ -1026,30 +1052,4 @@ Hello
 &lt;p&gt;Reference&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[1] - Overview</summary></entry><entry><title type="html">Speech[2] - Mel spectrogram Explanation</title><link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech[2] - Mel spectrogram Explanation" /><published>2022-05-02T02:40:00+09:00</published><updated>2022-05-02T02:40:00+09:00</updated><id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id><content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
-
-&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
-
-&lt;p&gt;How to calculate Mel frequency using Frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How to calculate Frequency using Mel frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;How to extract Mel spectrogram&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Extract STFT&lt;/li&gt;
-  &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
-  &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;How to convert frequencies to Mel scale&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Choose number of mel bands
-    &lt;ul&gt;
-      &lt;li&gt;Number of mel bands(e.g. 40, 60, 90, 128) depends on the problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Construct mel filter banks&lt;/li&gt;
-  &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[2] - Mel spectrogram Explanation</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="ai" /><summary type="html">Speech[1] - Overview</summary></entry></feed>

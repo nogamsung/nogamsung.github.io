@@ -38,9 +38,9 @@
     
       
       <item>
-        <title>Spring[3] - Backend Development</title>
+        <title>Spring [3] - Backend Development</title>
         
-          <description>&lt;h1 id=&quot;spring3---backend-development&quot;&gt;Spring[3] - Backend Development&lt;/h1&gt;
+          <description>&lt;h1 id=&quot;spring-3---backend-development&quot;&gt;Spring [3] - Backend Development&lt;/h1&gt;
 
 </description>
         
@@ -118,6 +118,21 @@
     
       
       <item>
+        <title>Speech[2] - Mel spectrogram Explanation</title>
+        
+          <description>&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 02:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Speech[1] - Overview</title>
         
           <description>&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
@@ -128,21 +143,6 @@
         <link>
         http://localhost:4000/Speech_1-Overview</link>
         <guid isPermaLink="true">http://localhost:4000/Speech_1-Overview</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Speech[2] - Mel spectrogram Explanation</title>
-        
-          <description>&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 02 May 2022 02:40:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</guid>
       </item>
       
     
