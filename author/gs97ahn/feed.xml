@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-09T16:43:17+09:00</updated>
+  <updated>2022-05-09T16:51:45+09:00</updated>
   <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
 
   
@@ -1229,29 +1229,30 @@ Hello
     </entry>
   
     <entry>
-      <title type="html">Speech[2] - Mel spectrogram Explanation</title>
-      <link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech[2] - Mel spectrogram Explanation" />
+      <title type="html">Speech [2] - Mel spectrogram Explanation</title>
+      <link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech [2] - Mel spectrogram Explanation" />
       <published>2022-05-03T02:40:00+09:00</published>
       <updated>2022-05-03T02:40:00+09:00</updated>
       <id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;p&gt;Speech[2] - Mel spectrogram Explanation&lt;/p&gt;
+      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;h1 id=&quot;speech-2---mel-spectrogram-explanation&quot;&gt;Speech [2] - Mel spectrogram Explanation&lt;/h1&gt;
 
+&lt;h4 id=&quot;tip&quot;&gt;Tip&lt;/h4&gt;
 &lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
 
-&lt;p&gt;How to calculate Mel frequency using Frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;how-to-calculate-mel-frequency-using-frequency&quot;&gt;How to calculate Mel frequency using Frequency&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;How to calculate Frequency using Mel frequency
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;how-to-calculate-frequency-using-mel-frequency&quot;&gt;How to calculate Frequency using Mel frequency&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;How to extract Mel spectrogram&lt;/p&gt;
+&lt;h3 id=&quot;how-to-extract-mel-spectrogram&quot;&gt;How to extract Mel spectrogram&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;Extract STFT&lt;/li&gt;
   &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
   &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;How to convert frequencies to Mel scale&lt;/p&gt;
+&lt;h3 id=&quot;how-to-convert-frequencies-to-mel-scale&quot;&gt;How to convert frequencies to Mel scale&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;Choose number of mel bands
     &lt;ul&gt;
@@ -1260,75 +1261,11 @@ Hello
   &lt;/li&gt;
   &lt;li&gt;Construct mel filter banks&lt;/li&gt;
   &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;</content>
+&lt;/ol&gt;
 
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">Speech[2] - Mel spectrogram Explanation</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Speech[1] - Overview</title>
-      <link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech[1] - Overview" />
-      <published>2022-05-02T03:17:00+09:00</published>
-      <updated>2022-05-02T03:17:00+09:00</updated>
-      <id>http://localhost:4000/Speech_1-Overview</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;p&gt;Speech[1] - Overview&lt;/p&gt;
-
-&lt;p&gt;Application&lt;/p&gt;
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Audio Classification&lt;/li&gt;
-  &lt;li&gt;Speech Recognition&lt;/li&gt;
-  &lt;li&gt;Speaker Verification&lt;/li&gt;
-  &lt;li&gt;Audio Denoising&lt;/li&gt;
-  &lt;li&gt;Audio Upsampling&lt;/li&gt;
-  &lt;li&gt;Music Information Retrieval
-    &lt;ul&gt;
-      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
-      &lt;li&gt;Mood Classification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two stages for Speech Processing&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Preparing Audio Data&lt;/li&gt;
-  &lt;li&gt;Development &amp;amp; Evaluation of Model&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Technology commonly used&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-  &lt;li&gt;Tensorflow / PyTorch&lt;/li&gt;
-  &lt;li&gt;Librosa&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Reference&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -1350,7 +1287,76 @@ Hello
       
 
       
-        <summary type="html">Speech[1] - Overview</summary>
+        <summary type="html">Speech [2] - Mel spectrogram Explanation</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [1] - Overview</title>
+      <link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech [1] - Overview" />
+      <published>2022-05-02T03:17:00+09:00</published>
+      <updated>2022-05-02T03:17:00+09:00</updated>
+      <id>http://localhost:4000/Speech_1-Overview</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;h1 id=&quot;speech-1---overview&quot;&gt;Speech [1] - Overview&lt;/h1&gt;
+
+&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Audio Classification&lt;/li&gt;
+  &lt;li&gt;Speech Recognition&lt;/li&gt;
+  &lt;li&gt;Speaker Verification&lt;/li&gt;
+  &lt;li&gt;Audio Denoising&lt;/li&gt;
+  &lt;li&gt;Audio Upsampling&lt;/li&gt;
+  &lt;li&gt;Music Information Retrieval
+    &lt;ul&gt;
+      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
+      &lt;li&gt;Mood Classification&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;two-stages-for-speech-processing&quot;&gt;Two stages for Speech Processing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Preparing Audio Data&lt;/li&gt;
+  &lt;li&gt;Development &amp;amp; Evaluation of Model&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;technology-commonly-used&quot;&gt;Technology commonly used&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Tensorflow / PyTorch&lt;/li&gt;
+  &lt;li&gt;Librosa&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Speech [1] - Overview</summary>
       
 
       
