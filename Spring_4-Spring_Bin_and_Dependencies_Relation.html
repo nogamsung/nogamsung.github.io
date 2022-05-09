@@ -43,25 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta property="og:description" content="Spring [4] - Spring Bin and Dependencies Relation
-
-Register Srping Bin and Set Dependencies Relation
-
-  Set dependcies relation for member controller to use member service and member repository
-
-
-Add dependencies relations in member controller
-
-
-
-  
-
-
-Reference
-
-  https://www.inflearn.com/roadmaps/373
-
-" />
+    <meta property="og:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService" />
     <meta property="og:url" content="http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/project-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -71,25 +53,7 @@ Reference
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta name="twitter:description" content="Spring [4] - Spring Bin and Dependencies Relation
-
-Register Srping Bin and Set Dependencies Relation
-
-  Set dependcies relation for member controller to use member service and member repository
-
-
-Add dependencies relations in member controller
-
-
-
-  
-
-
-Reference
-
-  https://www.inflearn.com/roadmaps/373
-
-" />
+    <meta name="twitter:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/project-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -121,25 +85,7 @@ Reference
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation"
     },
-    "description": "Spring [4] - Spring Bin and Dependencies Relation
-
-Register Srping Bin and Set Dependencies Relation
-
-  Set dependcies relation for member controller to use member service and member repository
-
-
-Add dependencies relations in member controller
-
-
-
-  
-
-
-Reference
-
-  https://www.inflearn.com/roadmaps/373
-
-"
+    "description": "Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService"
 }
     </script>
 
@@ -242,11 +188,118 @@ into the {body} of the default.hbs template -->
 </ul>
 
 <p><code class="language-plaintext highlighter-rouge">Add dependencies relations in member controller</code></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.controller</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Controller</span><span class="o">;</span>
+
+<span class="nd">@Controller</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberController</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">MemberService</span> <span class="n">memberService</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">MemberController</span><span class="o">(</span><span class="nc">MemberService</span> <span class="n">memberService</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">memberService</span> <span class="o">=</span> <span class="n">memberService</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
+
 <ul>
-  <li></li>
+  <li>If constructor has <code class="language-plaintext highlighter-rouge">@Autowird</code>, Spring container finds the related object. This method of dependencies relation outside is called DI(Dependency Injection)</li>
+  <li>Prior to this test, the developer had to put it in manually, but spring does it for us due to @Autowired</li>
 </ul>
+
+<p><code class="language-plaintext highlighter-rouge">Error occur</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Consider defining a bean of type 'hello.hellospring.services.MemberService' in your configuration.
+</code></pre></div></div>
+
+<ul>
+  <li>There are 2 ways to register Spring bin
+    <ul>
+      <li>Component scan and dependencies relation auto set</li>
+      <li>Register Spring bin using Java code</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="component-scan-and-dependencies-relation-auto-set">Component Scan and Dependencies Relation Auto Set</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@Component</code>: Spring bin is automatically registered if annotation exists</li>
+  <li><code class="language-plaintext highlighter-rouge">@Controller</code>: Controller got automatically registered to Spring bin due to component scan</li>
+  <li>The following annotation including <code class="language-plaintext highlighter-rouge">@Component</code> get automatically registered to Spring bin:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">@Controller</code></li>
+      <li><code class="language-plaintext highlighter-rouge">@Service</code></li>
+      <li><code class="language-plaintext highlighter-rouge">@Repository</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Member Service Spring Bin Register</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberService</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">MemberService</span><span class="o">(</span><span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">memberRepository</span> <span class="o">=</span> <span class="n">memberRepository</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="tip">Tip</h4>
+<ul>
+  <li>If constructor uses <code class="language-plaintext highlighter-rouge">@Autowired</code>, Srping bin will be found to be injected at the time the object is created</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Member Repository Spring Bin Register</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Repository</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemoryMemberRepository</span> <span class="kd">implements</span> <span class="nc">MemberRepository</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">memberService</code> and <code class="language-plaintext highlighter-rouge">memberRepository</code> are registered to Spring bin</li>
+</ul>
+
+<h4 id="tip-1">Tip</h4>
+<ul>
+  <li>Spring registers in single tone by default when registering Spring Continaer and Spring Bin.</li>
+</ul>
+
+<h4 id="register-spring-bin-using-java-code">Register Spring Bin Using Java Code</h4>
+<ul>
+  <li>Remove <code class="language-plaintext highlighter-rouge">@Serivce</code>, <code class="language-plaintext highlighter-rouge">@Repository</code> annotation and continue</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemoryMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringConfig</span> <span class="o">{</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberService</span> <span class="nf">memberService</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemberService</span><span class="o">(</span><span class="n">memberRepository</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberRepository</span> <span class="nf">memberRepository</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemoryMemberRepository</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
 <h3 id="reference">Reference</h3>
 <ul>
@@ -353,12 +406,20 @@ into the {body} of the default.hbs template -->
                         
                         
                         
+                        
+                         <li><a href="/Spring_5-Web_MVC_Development">Spring [5] - Web MVC Development</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
                             
                             
                         
                         
                         
-                         <li><a href="/Spring_3-Member_Management_Example">Spring[3] - Member Managemenet Example</a></li>
+                         <li><a href="/Spring_3-Backend_Development">Spring[3] - Backend Development</a></li>
                             
                             
                             
@@ -374,8 +435,7 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Spring_1-Project_Environment_Setting">Spring[1] - Project Enviornment Setting</a></li>
-                            
+                        
                             
                             
                             
@@ -395,7 +455,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/backend/">
                         
-                        See all 4 posts →
+                        See all 5 posts →
                         
                     </a>
                 </footer>
@@ -405,19 +465,16 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
             
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Spring_3-Member_Management_Example">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/etc-logo.png)"></div>
+            <a class="post-card-image-link" href="/Spring_5-Web_MVC_Development">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/project-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Spring_3-Member_Management_Example">
+            <a class="post-card-content-link" href="/Spring_5-Web_MVC_Development">
                 <header class="post-card-header">
                     
                         
@@ -427,11 +484,65 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">Spring[3] - Member Managemenet Example</h2>
+                    <h2 class="post-card-title">Spring [5] - Web MVC Development</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring[3] - Member Managemenet Example
+                        <p>Spring [5] - Web MVC Development
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Spring_3-Backend_Development">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/etc-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Spring_3-Backend_Development">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Backend</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Spring[3] - Backend Development</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Spring[3] - Backend Development
 
 </p>
                     
