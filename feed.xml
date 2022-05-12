@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-12T23:55:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [6] - Spring DB Access Technique</title><link href="http://localhost:4000/Spring_6-Spring_DB_Access_Technique" rel="alternate" type="text/html" title="Spring [6] - Spring DB Access Technique" /><published>2022-05-12T06:26:00+09:00</published><updated>2022-05-12T06:26:00+09:00</updated><id>http://localhost:4000/Spring_6-Spring_DB_Access_Technique</id><content type="html" xml:base="http://localhost:4000/Spring_6-Spring_DB_Access_Technique">&lt;h1 id=&quot;spring-6---spring-db-access-technique&quot;&gt;Spring [6] - Spring DB Access Technique&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-13T00:00:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [6] - Spring DB Access Technique</title><link href="http://localhost:4000/Spring_6-Spring_DB_Access_Technique" rel="alternate" type="text/html" title="Spring [6] - Spring DB Access Technique" /><published>2022-05-12T06:26:00+09:00</published><updated>2022-05-12T06:26:00+09:00</updated><id>http://localhost:4000/Spring_6-Spring_DB_Access_Technique</id><content type="html" xml:base="http://localhost:4000/Spring_6-Spring_DB_Access_Technique">&lt;h1 id=&quot;spring-6---spring-db-access-technique&quot;&gt;Spring [6] - Spring DB Access Technique&lt;/h1&gt;
 
 &lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
 &lt;p&gt;Provide light and convenient DB for development and test purpose&lt;/p&gt;
@@ -40,7 +40,7 @@
 &lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">Spring [6] - Spring DB Access Technique</summary></entry><entry><title type="html">Spring [5] - Web MVC Development</title><link href="http://localhost:4000/Spring_5-Web_MVC_Development" rel="alternate" type="text/html" title="Spring [5] - Web MVC Development" /><published>2022-05-09T06:26:00+09:00</published><updated>2022-05-09T06:26:00+09:00</updated><id>http://localhost:4000/Spring_5-Web_MVC_Development</id><content type="html" xml:base="http://localhost:4000/Spring_5-Web_MVC_Development">&lt;h1 id=&quot;spring-5---web-mvc-development&quot;&gt;Spring [5] - Web MVC Development&lt;/h1&gt;
 
 &lt;h3 id=&quot;member-web-function---add-home-controller&quot;&gt;Member Web Function - Add Home Controller&lt;/h3&gt;
-&lt;p&gt;Add Home Controller
+&lt;p&gt;Add Home Controller&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HomeController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -58,7 +58,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member Control Home
+&lt;p&gt;Member Control Home&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/templates/home.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
@@ -87,7 +87,7 @@
 
 &lt;h3 id=&quot;member-web-function---registration&quot;&gt;Member Web Function - Registration&lt;/h3&gt;
 &lt;h4 id=&quot;member-registration-form-developement&quot;&gt;Member Registration Form Developement&lt;/h4&gt;
-&lt;p&gt;Member Registeration Form Controller
+&lt;p&gt;Member Registeration Form Controller&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/MemberController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -116,7 +116,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member Registeration Form HTML
+&lt;p&gt;Member Registeration Form HTML&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/templates/member/createMemberForm.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
@@ -140,7 +140,7 @@
 
 &lt;h4 id=&quot;member-registration-controller&quot;&gt;Member Registration Controller&lt;/h4&gt;
 
-&lt;p&gt;Form Object that Receives Data from Web Registeration screen
+&lt;p&gt;Form Object that Receives Data from Web Registeration screen&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/MemberForm.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -158,7 +158,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member Controller that Actually Registers Member
+&lt;p&gt;Member Controller that Actually Registers Member&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/MemberController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@PostMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/members/new&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -173,7 +173,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;member-web-function---search&quot;&gt;Member Web Function - Search&lt;/h3&gt;
-&lt;p&gt;Search Function in Member Controller
+&lt;p&gt;Search Function in Member Controller&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/MemberController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/members&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
@@ -184,7 +184,7 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member List HTML
+&lt;p&gt;Member List HTML&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/templates/members/memberList.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
