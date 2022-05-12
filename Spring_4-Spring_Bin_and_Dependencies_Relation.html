@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta property="og:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService" />
+    <meta property="og:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final" />
     <meta property="og:url" content="http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta name="twitter:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService" />
+    <meta name="twitter:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation"
     },
-    "description": "Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService"
+    "description": "Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final"
 }
     </script>
 
@@ -183,11 +183,10 @@ into the {body} of the default.hbs template -->
                     <h1 id="spring-4---spring-bin-and-dependencies-relation">Spring [4] - Spring Bin and Dependencies Relation</h1>
 
 <h3 id="register-srping-bin-and-set-dependencies-relation">Register Srping Bin and Set Dependencies Relation</h3>
-<ul>
-  <li>Set dependcies relation for member controller to use member service and member repository</li>
-</ul>
+<p>Set dependcies relation for member controller to use member service and member repository</p>
 
-<p><code class="language-plaintext highlighter-rouge">Add dependencies relations in member controller</code></p>
+<p>Add dependencies relations in member controller
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/MemberController.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.controller</span><span class="o">;</span>
 
@@ -209,18 +208,18 @@ into the {body} of the default.hbs template -->
 
 <ul>
   <li>If constructor has <code class="language-plaintext highlighter-rouge">@Autowird</code>, Spring container finds the related object. This method of dependencies relation outside is called DI(Dependency Injection)</li>
-  <li>Prior to this test, the developer had to put it in manually, but spring does it for us due to @Autowired</li>
+  <li>Prior to this test, the developer had to put it in manually, but spring does it for us due to <code class="language-plaintext highlighter-rouge">@Autowired</code></li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">Error occur</code></p>
+<p>Error occur</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Consider defining a bean of type 'hello.hellospring.services.MemberService' in your configuration.
 </code></pre></div></div>
 
 <ul>
-  <li>There are 2 ways to register Spring bin
+  <li>Two method of registering Spring bin
     <ul>
-      <li>Component scan and dependencies relation auto set</li>
-      <li>Register Spring bin using Java code</li>
+      <li>Set component scan and automatic dependencies relation</li>
+      <li>Register spring bin using Java code</li>
     </ul>
   </li>
 </ul>
@@ -238,7 +237,8 @@ into the {body} of the default.hbs template -->
   </li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">Member Service Spring Bin Register</code></p>
+<p>Member Service Spring Bin Register
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/MemberService.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberService</span> <span class="o">{</span>
@@ -253,29 +253,28 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h4 id="tip">Tip</h4>
+<h4 id="tip">Tip👀</h4>
 <ul>
-  <li>If constructor uses <code class="language-plaintext highlighter-rouge">@Autowired</code>, Srping bin will be found to be injected at the time the object is created</li>
+  <li>If constructor uses <code class="language-plaintext highlighter-rouge">@Autowired</code>, Srping bin will be found to be injected at the time the object is created
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/MemoryMemberRepository.java</code></li>
 </ul>
-
-<p><code class="language-plaintext highlighter-rouge">Member Repository Spring Bin Register</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Repository</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemoryMemberRepository</span> <span class="kd">implements</span> <span class="nc">MemberRepository</span> <span class="o">{}</span>
 </code></pre></div></div>
-
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">memberService</code> and <code class="language-plaintext highlighter-rouge">memberRepository</code> are registered to Spring bin</li>
+  <li><code class="language-plaintext highlighter-rouge">memberService</code> and <code class="language-plaintext highlighter-rouge">memberRepository</code> are registered as spring bin in spring container</li>
 </ul>
 
-<h4 id="tip-1">Tip</h4>
+<h4 id="tip-1">Tip👀</h4>
 <ul>
   <li>Spring registers in single tone by default when registering Spring Continaer and Spring Bin.</li>
 </ul>
 
-<h4 id="register-spring-bin-using-java-code">Register Spring Bin Using Java Code</h4>
+<h3 id="registering-spring-bin-manually-with-java-code">Registering Spring Bin Manually with Java code</h3>
 <ul>
-  <li>Remove <code class="language-plaintext highlighter-rouge">@Serivce</code>, <code class="language-plaintext highlighter-rouge">@Repository</code> annotation and continue</li>
+  <li>Remove <code class="language-plaintext highlighter-rouge">@Service</code>, <code class="language-plaintext highlighter-rouge">@Repository</code>, <code class="language-plaintext highlighter-rouge">@Autowired</code> annotation in member service and member repository
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/SpringConfig.java</code></li>
 </ul>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
@@ -300,6 +299,12 @@ into the {body} of the default.hbs template -->
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
+<h4 id="tip-2">Tip👀</h4>
+<ul>
+  <li>You can set it with XML but people these days do not use this method</li>
+  <li>Developer in work use component scan when implementing codes for controller, service, repository</li>
+</ul>
 
 <h3 id="reference">Reference</h3>
 <ul>
@@ -407,6 +412,14 @@ into the {body} of the default.hbs template -->
                         
                         
                         
+                         <li><a href="/Spring_6-Spring_DB_Access_Technique">Spring [6] - Spring DB Access Technique</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Spring_5-Web_MVC_Development">Spring [5] - Web MVC Development</a></li>
                             
                             
@@ -427,8 +440,7 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Spring_2-Web_Development_Basics-copy">Spring[2] - Web Development Basics</a></li>
-                            
+                        
                             
                             
                             
@@ -455,7 +467,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/backend/">
                         
-                        See all 5 posts →
+                        See all 6 posts →
                         
                     </a>
                 </footer>
@@ -562,7 +574,7 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      2 min read
+                      3 min read
                     
                 </span>
             </footer>

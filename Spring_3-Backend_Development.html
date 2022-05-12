@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [3] - Backend Development" />
-    <meta property="og:description" content="Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member lookup Data Storage is not selected yet(a virtual scenario) Typical Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business" />
+    <meta property="og:description" content="Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member search Data Storage is not selected yet(a virtual scenario) General Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business" />
     <meta property="og:url" content="http://localhost:4000/Spring_3-Backend_Development" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [3] - Backend Development" />
-    <meta name="twitter:description" content="Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member lookup Data Storage is not selected yet(a virtual scenario) Typical Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business" />
+    <meta name="twitter:description" content="Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member search Data Storage is not selected yet(a virtual scenario) General Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_3-Backend_Development"
     },
-    "description": "Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member lookup Data Storage is not selected yet(a virtual scenario) Typical Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business"
+    "description": "Spring [3] - Backend Development Business Requirements Data: member id, name Function: member registration, member search Data Storage is not selected yet(a virtual scenario) General Web Application Hierarchy Controller: web MVC’s controller role Service: essential business logic implementation Repository: database access, save and manage domain object in DB Domain: business"
 }
     </script>
 
@@ -185,11 +185,11 @@ into the {body} of the default.hbs template -->
 <h3 id="business-requirements">Business Requirements</h3>
 <ul>
   <li>Data: member id, name</li>
-  <li>Function: member registration, member lookup</li>
+  <li>Function: member registration, member search</li>
   <li>Data Storage is not selected yet(a virtual scenario)</li>
 </ul>
 
-<h3 id="typical-web-application-hierarchy">Typical Web Application Hierarchy</h3>
+<h4 id="general-web-application-hierarchy">General Web Application Hierarchy</h4>
 <ul>
   <li>Controller: web MVC’s controller role</li>
   <li>Service: essential business logic implementation</li>
@@ -197,8 +197,16 @@ into the {body} of the default.hbs template -->
   <li>Domain: business domain object, such as member, order, coupon etc. are saved and managed in database</li>
 </ul>
 
+<h4 id="class-dependencies-relation">Class Dependencies Relation</h4>
+<ul>
+  <li>Data storage is not selected yet so allow flexibility of class implementation by using interface</li>
+  <li>Data storage can be RDB, NoSQL, or others</li>
+  <li>Implement with light memory based data storage for early stage implementation</li>
+</ul>
+
 <h3 id="create-member-domain-and-repository">Create member domain and repository</h3>
-<p><code class="language-plaintext highlighter-rouge">member object</code></p>
+<p>Member object
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/domain/Member.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span> <span class="o">{</span>
 
@@ -223,7 +231,8 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">member repository interface</code></p>
+<p>Member repository interface
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/MemberRepository.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
 
@@ -240,7 +249,8 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">member method</code></p>
+<p>Member memory repository implementation
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/MemoryMemberRepository.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
 
@@ -288,17 +298,8 @@ into the {body} of the default.hbs template -->
   <li>It is difficult to run many or repetitive tests in main method. Therefore, test case must be written. In java, JUnit, a framework, solves this problem.</li>
 </ul>
 
-<h4 id="how-to-implementate-test-cases-for-member-repository">How to implementate test cases for member repository</h4>
-<ul>
-  <li>Create MemoryMemberRepositoryTest.java in this path</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/test/java/hello.hellospring/repository/MemoryMemberRepositoryTest.java
-</code></pre></div></div>
-
-<ul>
-  <li>Type this into MemoryMemberRepositorytest.java</li>
-</ul>
+<p>Member repository memory implementation test case
+<code class="language-plaintext highlighter-rouge">src/test/java/hello.hellospring/repository/MemoryMemberRepositoryTest.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellosrping.repository</span><span class="o">;</span>
 
@@ -363,22 +364,18 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h4 id="tip">Tip</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@AfterEach</code>: If you run a number of test, the memory DB could have the latest test result, leaving a probability of failing the next test case. Therefore, use <code class="language-plaintext highlighter-rouge">@AfterEach</code> to clear memory DB every time a test is done</li>
+  <li>Test must be executed independently. Test cases that have dependency relation in a specific order means that it is not a good test case</li>
+</ul>
+
+<h4 id="tip">Tip👀</h4>
 <ul>
   <li>TDD(Test-driven Development): Implement test case first before actual implementation of function</li>
 </ul>
 
-<h3 id="developing-member-service">Developing member service</h3>
-<ul>
-  <li>Create MemberService.java in this path</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/main/java/hello.hellospring/service/MemberService.java
-</code></pre></div></div>
-
-<ul>
-  <li>Type this into MemberService.java</li>
-</ul>
+<h3 id="member-service-development">Member Service Development</h3>
+<p><code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/MemberService.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.service</span><span class="o">;</span>
 
@@ -418,16 +415,7 @@ into the {body} of the default.hbs template -->
 </code></pre></div></div>
 
 <h3 id="testing-member-service">Testing Member Service</h3>
-<ul>
-  <li>Create MemberServiceTest.java in this path</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/test/java/hello.hellospring/service/MemberServiceTest.java
-</code></pre></div></div>
-
-<ul>
-  <li>Type this into MemberServiceTest.java</li>
-</ul>
+<p><code class="language-plaintext highlighter-rouge">src/test/java/hello.hellospring/service/MemberServiceTest.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.service</span><span class="o">;</span>
 
@@ -460,43 +448,37 @@ into the {body} of the default.hbs template -->
 
     <span class="nd">@Test</span>
     <span class="kt">void</span> <span class="nf">join</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">// given</span>
+        <span class="c1">// Given</span>
         <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
         <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
 
-        <span class="c1">// when</span>
+        <span class="c1">// When</span>
         <span class="nc">Long</span> <span class="n">saveId</span> <span class="o">=</span> <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
 
-        <span class="c1">// then</span>
+        <span class="c1">// Then</span>
         <span class="nc">Member</span> <span class="n">findMember</span> <span class="o">=</span> <span class="n">memberService</span><span class="o">.</span><span class="na">findOne</span><span class="o">(</span><span class="n">saveId</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
         <span class="n">assertThat</span><span class="o">(</span><span class="n">member</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">findMember</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
     <span class="o">}</span>
 
     <span class="nd">@Test</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">duplicateMemberException</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">//given</span>
+        <span class="c1">//Given</span>
         <span class="nc">Member</span> <span class="n">member1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
         <span class="n">member1</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
 
         <span class="nc">Member</span> <span class="n">member2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
         <span class="n">member2</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
 
-        <span class="c1">//when</span>
+        <span class="c1">//When</span>
         <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member1</span><span class="o">);</span>
         <span class="nc">IllegalStateException</span> <span class="n">e</span> <span class="o">=</span> <span class="n">assertThrows</span><span class="o">(</span><span class="nc">IllegalStateException</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member2</span><span class="o">));</span>
         <span class="n">assertThat</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"Existing Member."</span><span class="o">);</span>
-        <span class="c1">//then</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Test</span>
-    <span class="kt">void</span> <span class="nf">findMembers</span><span class="o">()</span> <span class="o">{</span>
-    <span class="o">}</span>
-
-    <span class="nd">@Test</span>
-    <span class="kt">void</span> <span class="nf">findOne</span><span class="o">()</span> <span class="o">{</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@BeforeEach</code>: Called before each test is executed. Allows tests to be independent by creating a new object and gets a new dependency relation</li>
+</ul>
 
 <h3 id="reference">Reference</h3>
 <ul>
@@ -604,6 +586,14 @@ into the {body} of the default.hbs template -->
                         
                         
                         
+                         <li><a href="/Spring_6-Spring_DB_Access_Technique">Spring [6] - Spring DB Access Technique</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Spring_5-Web_MVC_Development">Spring [5] - Web MVC Development</a></li>
                             
                             
@@ -624,8 +614,7 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Spring_2-Web_Development_Basics-copy">Spring[2] - Web Development Basics</a></li>
-                            
+                        
                             
                             
                             
@@ -652,7 +641,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/backend/">
                         
-                        See all 5 posts →
+                        See all 6 posts →
                         
                     </a>
                 </footer>
@@ -720,12 +709,12 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Spring_2-Web_Development_Basics-copy">
+            <a class="post-card-image-link" href="/Spring_2-Web_Development_Basics">
                 <div class="post-card-image" style="background-image: url(/assets/built/images/spring-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Spring_2-Web_Development_Basics-copy">
+            <a class="post-card-content-link" href="/Spring_2-Web_Development_Basics">
                 <header class="post-card-header">
                     
                         
