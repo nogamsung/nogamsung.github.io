@@ -232,8 +232,8 @@ into the {body} of the default.hbs template -->
 
 <h3 id="view-environment-settings">View environment settings</h3>
 <h4 id="create-welcome-page">Create Welcome Page</h4>
-
 <p><code class="language-plaintext highlighter-rouge">src/main/resources/static/index.html</code></p>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -260,10 +260,9 @@ Hello
 <ul>
   <li>thymeleaf official website: https://www.thymeleaf.org/</li>
   <li>Spring offical tutorial: https://spring.io/guides/gs/serving-web-content/</li>
-  <li>Spring boot manual: https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines</li>
+  <li>Spring boot manual: https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines <br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></li>
 </ul>
-
-<p><code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span class="o">{</span>
@@ -277,6 +276,7 @@ Hello
 </code></pre></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">src/main/resources/template/hello.html</code></p>
+
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">xmlns:th=</span><span class="s">"http://www.thymeleaf.org"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>

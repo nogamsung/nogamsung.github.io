@@ -195,10 +195,9 @@ into the {body} of the default.hbs template -->
 
 <h4 id="how-to-create-static-content">How to create static content</h4>
 <ul>
-  <li>Spring</li>
+  <li>Spring<br />
+<code class="language-plaintext highlighter-rouge">src/main/resources/static/hello-static.html</code></li>
 </ul>
-
-<p><code class="language-plaintext highlighter-rouge">src/main/resources/static/hello-static.html</code></p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
@@ -219,11 +218,10 @@ This is static content
 
 <h3 id="mvc-and-template-engine">MVC and template engine</h3>
 <ul>
-  <li>MVC: Model, View, Controller</li>
+  <li>MVC: Model, View, Controller
+Controller<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></li>
 </ul>
-
-<p>Controller
-<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span><span class="o">{</span>
@@ -235,7 +233,7 @@ This is static content
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>View
+<p>View<br />
 <code class="language-plaintext highlighter-rouge">src/main/resoucres/template/hello-template.html</code></p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html</span> <span class="na">xmlns:th=</span><span class="s">"http://www.thymeleaf.org"</span><span class="nt">&gt;</span>
@@ -251,9 +249,8 @@ This is static content
 </ul>
 
 <h3 id="api">API</h3>
-<p><code class="language-plaintext highlighter-rouge">@ResponseBody</code> returns value</p>
-
-<p><code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></p>
+<p><code class="language-plaintext highlighter-rouge">@ResponseBody</code> returns value<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span class="o">{</span>
@@ -272,11 +269,10 @@ This is static content
 
 <p>Execution</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">http://localhost:8080/hello-string?name=spring</code></li>
+  <li><code class="language-plaintext highlighter-rouge">http://localhost:8080/hello-string?name=spring</code>
+<code class="language-plaintext highlighter-rouge">@ResponseBody</code> returns object<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></li>
 </ul>
-
-<p><code class="language-plaintext highlighter-rouge">@ResponseBody</code> returns object
-<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HelloController.java</code></p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Controller</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span class="o">{</span>

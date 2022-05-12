@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-13T00:00:15+09:00</updated>
+  <updated>2022-05-13T00:06:21+09:00</updated>
   <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
 
   
@@ -58,7 +58,8 @@
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;create-table&quot;&gt;Create Table&lt;/h4&gt;
-&lt;p&gt;Create file to manage table in root &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sql/ddl.sql&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Create file to manage table in root&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sql/ddl.sql&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EXISTS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;CASCADE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;
@@ -327,9 +328,9 @@
       <content type="html" xml:base="http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation">&lt;h1 id=&quot;spring-4---spring-bin-and-dependencies-relation&quot;&gt;Spring [4] - Spring Bin and Dependencies Relation&lt;/h1&gt;
 
 &lt;h3 id=&quot;register-srping-bin-and-set-dependencies-relation&quot;&gt;Register Srping Bin and Set Dependencies Relation&lt;/h3&gt;
-&lt;p&gt;Set dependcies relation for member controller to use member service and member repository&lt;/p&gt;
+&lt;p&gt;Set dependcies relation for member controller to use member service and member repository\&lt;/p&gt;
 
-&lt;p&gt;Add dependencies relations in member controller
+&lt;p&gt;Add dependencies relations in member controller&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/MemberController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -381,7 +382,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Member Service Spring Bin Register
+&lt;p&gt;Member Service Spring Bin Register&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/service/MemberService.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
@@ -399,7 +400,7 @@
 
 &lt;h4 id=&quot;tip&quot;&gt;Tip👀&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;If constructor uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Autowired&lt;/code&gt;, Srping bin will be found to be injected at the time the object is created
+  &lt;li&gt;If constructor uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Autowired&lt;/code&gt;, Srping bin will be found to be injected at the time the object is created&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/repository/MemoryMemberRepository.java&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -417,7 +418,7 @@
 
 &lt;h3 id=&quot;registering-spring-bin-manually-with-java-code&quot;&gt;Registering Spring Bin Manually with Java code&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Service&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Repository&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Autowired&lt;/code&gt; annotation in member service and member repository
+  &lt;li&gt;Remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Service&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Repository&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Autowired&lt;/code&gt; annotation in member service and member repository&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/SpringConfig.java&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -512,7 +513,7 @@
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;create-member-domain-and-repository&quot;&gt;Create member domain and repository&lt;/h3&gt;
-&lt;p&gt;Member object
+&lt;p&gt;Member object&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/domain/Member.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -538,7 +539,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member repository interface
+&lt;p&gt;Member repository interface&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/repository/MemberRepository.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.repository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -556,7 +557,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Member memory repository implementation
+&lt;p&gt;Member memory repository implementation&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/repository/MemoryMemberRepository.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.repository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -605,7 +606,7 @@
   &lt;li&gt;It is difficult to run many or repetitive tests in main method. Therefore, test case must be written. In java, JUnit, a framework, solves this problem.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Member repository memory implementation test case
+&lt;p&gt;Member repository memory implementation test case&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/test/java/hello.hellospring/repository/MemoryMemberRepositoryTest.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellosrping.repository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -839,10 +840,9 @@
 
 &lt;h4 id=&quot;how-to-create-static-content&quot;&gt;How to create static content&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Spring&lt;/li&gt;
+  &lt;li&gt;Spring&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/static/hello-static.html&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/static/hello-static.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -863,11 +863,10 @@ This is static content
 
 &lt;h3 id=&quot;mvc-and-template-engine&quot;&gt;MVC and template engine&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;MVC: Model, View, Controller&lt;/li&gt;
+  &lt;li&gt;MVC: Model, View, Controller
+Controller&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Controller
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Controller&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -879,7 +878,7 @@ This is static content
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;View
+&lt;p&gt;View&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resoucres/template/hello-template.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:th=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.thymeleaf.org&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -895,9 +894,8 @@ This is static content
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;api&quot;&gt;API&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@ResponseBody&lt;/code&gt; returns value&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@ResponseBody&lt;/code&gt; returns value&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Controller&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -916,11 +914,10 @@ This is static content
 
 &lt;p&gt;Execution&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/hello-string?name=spring&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/hello-string?name=spring&lt;/code&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@ResponseBody&lt;/code&gt; returns object&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@ResponseBody&lt;/code&gt; returns object
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Controller&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -1053,8 +1050,8 @@ This is static content
 
 &lt;h3 id=&quot;view-environment-settings&quot;&gt;View environment settings&lt;/h3&gt;
 &lt;h4 id=&quot;create-welcome-page&quot;&gt;Create Welcome Page&lt;/h4&gt;
-
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/static/index.html&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -1081,10 +1078,9 @@ Hello
 &lt;ul&gt;
   &lt;li&gt;thymeleaf official website: https://www.thymeleaf.org/&lt;/li&gt;
   &lt;li&gt;Spring offical tutorial: https://spring.io/guides/gs/serving-web-content/&lt;/li&gt;
-  &lt;li&gt;Spring boot manual: https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines&lt;/li&gt;
+  &lt;li&gt;Spring boot manual: https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HelloController.java&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Controller&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -1098,6 +1094,7 @@ Hello
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/resources/template/hello.html&lt;/code&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:th=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.thymeleaf.org&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
