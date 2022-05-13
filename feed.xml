@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-13T15:59:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [6] - Spring DB Access Technique</title><link href="http://localhost:4000/Spring_6-Spring_DB_Access_Technique" rel="alternate" type="text/html" title="Spring [6] - Spring DB Access Technique" /><published>2022-05-12T06:26:00+09:00</published><updated>2022-05-12T06:26:00+09:00</updated><id>http://localhost:4000/Spring_6-Spring_DB_Access_Technique</id><content type="html" xml:base="http://localhost:4000/Spring_6-Spring_DB_Access_Technique">&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-05-13T16:07:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Spring [6] - Spring DB Access Technique</title><link href="http://localhost:4000/Spring_6-Spring_DB_Access_Technique" rel="alternate" type="text/html" title="Spring [6] - Spring DB Access Technique" /><published>2022-05-12T06:26:00+09:00</published><updated>2022-05-12T06:26:00+09:00</updated><id>http://localhost:4000/Spring_6-Spring_DB_Access_Technique</id><content type="html" xml:base="http://localhost:4000/Spring_6-Spring_DB_Access_Technique">&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
 &lt;p&gt;Provide light and convenient DB for development and test purpose&lt;/p&gt;
 
 &lt;ul&gt;
@@ -663,6 +663,7 @@
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Spring data JPA automatically registers &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpringDataJpaMemberRepository&lt;/code&gt; to spring bin&lt;/li&gt;
 &lt;/ul&gt;
@@ -670,7 +671,7 @@
 &lt;h4 id=&quot;function-provided-by-spring-data-jpa&quot;&gt;Function Provided by Spring Data JPA&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Integrated CRUD by interface&lt;/li&gt;
-  &lt;li&gt;Serach functions by implementing only method names such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;finalByNam()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;findByEmail()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Serach functions by implementing only method names such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;finalByName()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;findByEmail()&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Paging function automatically provided&lt;/li&gt;
 &lt;/ul&gt;
 
