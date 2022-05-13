@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [5] - Web MVC Development" />
-    <meta property="og:description" content="Spring [5] - Web MVC Development Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello" />
+    <meta property="og:description" content="Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello Spring&lt;/h1&gt; &lt;p&gt;Member Function&lt;/p&gt; &lt;p&gt; &lt;a href="/members/new"&gt;Member" />
     <meta property="og:url" content="http://localhost:4000/Spring_5-Web_MVC_Development" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [5] - Web MVC Development" />
-    <meta name="twitter:description" content="Spring [5] - Web MVC Development Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello" />
+    <meta name="twitter:description" content="Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello Spring&lt;/h1&gt; &lt;p&gt;Member Function&lt;/p&gt; &lt;p&gt; &lt;a href="/members/new"&gt;Member" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_5-Web_MVC_Development"
     },
-    "description": "Spring [5] - Web MVC Development Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello"
+    "description": "Member Web Function - Add Home Controller Add Home Controller src/main/java/hello.hellospring/controller/HomeController.java package hello.hellospring.controller; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.GetMapping; @Controller public class HomeController { @GetMapping("/") public String home() { return "home"; } } Member Control Home src/main/resources/templates/home.html &lt;!DOCTYPE html&gt; &lt;html xmlns:th="http://www.thymeleaf.org"&gt; &lt;body&gt; &lt;div class="container"&gt; &lt;div&gt; &lt;h1&gt;Hello Spring&lt;/h1&gt; &lt;p&gt;Member Function&lt;/p&gt; &lt;p&gt; &lt;a href="/members/new"&gt;Member"
 }
     </script>
 
@@ -132,7 +132,7 @@ into the {body} of the default.hbs template -->
         <a href="/archive.html">All Posts</a>
     </li>
     <li class="nav-archive" role="menuitem">
-        <a href="/author_archive.html">Tag별 Posts</a>
+        <a href="/author_archive.html">Tag</a>
     </li>
 </ul>
         
@@ -180,9 +180,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="spring-5---web-mvc-development">Spring [5] - Web MVC Development</h1>
-
-<h3 id="member-web-function---add-home-controller">Member Web Function - Add Home Controller</h3>
+                    <h3 id="member-web-function---add-home-controller">Member Web Function - Add Home Controller</h3>
 <p>Add Home Controller<br />
 <code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/HomeController.java</code></p>
 
@@ -223,7 +221,7 @@ into the {body} of the default.hbs template -->
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<h4 id="tip">Tip👀</h4>
+<h4 id="tip-">Tip 👀</h4>
 <ul>
   <li>Controller has higher priority than static files</li>
 </ul>
@@ -359,7 +357,7 @@ into the {body} of the default.hbs template -->
 
 <h3 id="reference">Reference</h3>
 <ul>
-  <li><a href="https://www.inflearn.com/roadmaps/373" target="_blank">https://www.inflearn.com/roadmaps/373</a></li>
+  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank">https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8</a></li>
 </ul>
 
                 </div>
@@ -551,7 +549,8 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring [6] - Spring DB Access Technique
+                        <p>H2 Database Installation
+Provide light and convenient DB for development and test purpose
 
 </p>
                     
@@ -571,7 +570,7 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      1 min read
+                      8 min read
                     
                 </span>
             </footer>
@@ -605,7 +604,8 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring [4] - Spring Bin and Dependencies Relation
+                        <p>Register Srping Bin and Set Dependencies Relation
+Set dependcies relation for member controller to use member service and member repository
 
 </p>
                     

@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta property="og:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository\ Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final" />
+    <meta property="og:description" content="Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService memberService; @Autowired public MemberController(MemberService memberService) { this.memberService" />
     <meta property="og:url" content="http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [4] - Spring Bin and Dependencies Relation" />
-    <meta name="twitter:description" content="Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository\ Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final" />
+    <meta name="twitter:description" content="Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService memberService; @Autowired public MemberController(MemberService memberService) { this.memberService" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation"
     },
-    "description": "Spring [4] - Spring Bin and Dependencies Relation Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository\ Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final"
+    "description": "Register Srping Bin and Set Dependencies Relation Set dependcies relation for member controller to use member service and member repository Add dependencies relations in member controller src/main/java/hello.hellospring/controller/MemberController.java package hello.hellospring.controller; import hello.hellospring.service.MemberService; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Controller; @Controller public class MemberController { private final MemberService memberService; @Autowired public MemberController(MemberService memberService) { this.memberService"
 }
     </script>
 
@@ -132,7 +132,7 @@ into the {body} of the default.hbs template -->
         <a href="/archive.html">All Posts</a>
     </li>
     <li class="nav-archive" role="menuitem">
-        <a href="/author_archive.html">Tag별 Posts</a>
+        <a href="/author_archive.html">Tag</a>
     </li>
 </ul>
         
@@ -180,10 +180,8 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="spring-4---spring-bin-and-dependencies-relation">Spring [4] - Spring Bin and Dependencies Relation</h1>
-
-<h3 id="register-srping-bin-and-set-dependencies-relation">Register Srping Bin and Set Dependencies Relation</h3>
-<p>Set dependcies relation for member controller to use member service and member repository\</p>
+                    <h3 id="register-srping-bin-and-set-dependencies-relation">Register Srping Bin and Set Dependencies Relation</h3>
+<p>Set dependcies relation for member controller to use member service and member repository</p>
 
 <p>Add dependencies relations in member controller<br />
 <code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/controller/MemberController.java</code></p>
@@ -253,7 +251,7 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h4 id="tip">Tip👀</h4>
+<h4 id="tip-">Tip 👀</h4>
 <ul>
   <li>If constructor uses <code class="language-plaintext highlighter-rouge">@Autowired</code>, Srping bin will be found to be injected at the time the object is created<br />
 <code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/MemoryMemberRepository.java</code></li>
@@ -266,7 +264,7 @@ into the {body} of the default.hbs template -->
   <li><code class="language-plaintext highlighter-rouge">memberService</code> and <code class="language-plaintext highlighter-rouge">memberRepository</code> are registered as spring bin in spring container</li>
 </ul>
 
-<h4 id="tip-1">Tip👀</h4>
+<h4 id="tip--1">Tip 👀</h4>
 <ul>
   <li>Spring registers in single tone by default when registering Spring Continaer and Spring Bin.</li>
 </ul>
@@ -300,7 +298,7 @@ into the {body} of the default.hbs template -->
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h4 id="tip-2">Tip👀</h4>
+<h4 id="tip--2">Tip 👀</h4>
 <ul>
   <li>You can set it with XML but people these days do not use this method</li>
   <li>Developer in work use component scan when implementing codes for controller, service, repository</li>
@@ -308,7 +306,7 @@ into the {body} of the default.hbs template -->
 
 <h3 id="reference">Reference</h3>
 <ul>
-  <li><a href="https://www.inflearn.com/roadmaps/373" target="_blank">https://www.inflearn.com/roadmaps/373</a></li>
+  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank">https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8</a></li>
 </ul>
 
                 </div>
@@ -500,7 +498,9 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring [5] - Web MVC Development
+                        <p>Member Web Function - Add Home Controller
+Add Home Controller
+src/main/java/hello.hellospring/controller/HomeController.java
 
 </p>
                     
@@ -554,7 +554,12 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring [3] - Backend Development
+                        <p>Business Requirements
+
+  Data: member id, name
+  Function: member registration, member search
+  Data Storage is not selected yet(a virtual scenario)
+
 
 </p>
                     

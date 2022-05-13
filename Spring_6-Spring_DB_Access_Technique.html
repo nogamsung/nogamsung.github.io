@@ -43,7 +43,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring [6] - Spring DB Access Technique" />
-    <meta property="og:description" content="Spring [6] - Spring DB Access Technique H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards" />
+    <meta property="og:description" content="H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards Create Table Create file to manage table" />
     <meta property="og:url" content="http://localhost:4000/Spring_6-Spring_DB_Access_Technique" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -53,7 +53,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring [6] - Spring DB Access Technique" />
-    <meta name="twitter:description" content="Spring [6] - Spring DB Access Technique H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards" />
+    <meta name="twitter:description" content="H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards Create Table Create file to manage table" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring_6-Spring_DB_Access_Technique"
     },
-    "description": "Spring [6] - Spring DB Access Technique H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards"
+    "description": "H2 Database Installation Provide light and convenient DB for development and test purpose http://www.h2database.com Download and Install Match h2 databse version to Spring Boot version Give access: chmod 755 h2.sh Execute: ./h2.sh Create database file: jdbc:h2~/test Confirm ~/test.mv.db file Access by jdbc:h2:tcp://localhost/~/test afterwards Create Table Create file to manage table"
 }
     </script>
 
@@ -132,7 +132,7 @@ into the {body} of the default.hbs template -->
         <a href="/archive.html">All Posts</a>
     </li>
     <li class="nav-archive" role="menuitem">
-        <a href="/author_archive.html">Tag별 Posts</a>
+        <a href="/author_archive.html">Tag</a>
     </li>
 </ul>
         
@@ -180,9 +180,7 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h1 id="spring-6---spring-db-access-technique">Spring [6] - Spring DB Access Technique</h1>
-
-<h3 id="h2-database-installation">H2 Database Installation</h3>
+                    <h3 id="h2-database-installation">H2 Database Installation</h3>
 <p>Provide light and convenient DB for development and test purpose</p>
 
 <ul>
@@ -204,10 +202,10 @@ into the {body} of the default.hbs template -->
 <p>Create file to manage table in root<br />
 <code class="language-plaintext highlighter-rouge">sql/ddl.sql</code></p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">if</span> <span class="k">EXISTS</span> <span class="n">member</span> <span class="k">CASCADE</span><span class="p">;</span>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">EXISTS</span> <span class="n">member</span> <span class="k">CASCADE</span><span class="p">;</span>
 <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">member</span>
 <span class="p">(</span>
-    <span class="n">id</span>      <span class="nb">bigint</span> <span class="k">generated</span> <span class="k">BY</span> <span class="k">DEFAULT</span> <span class="k">AS</span> <span class="k">IDENTITY</span><span class="p">,</span>
+    <span class="n">id</span>      <span class="nb">BIGINT</span> <span class="k">GENERATED</span> <span class="k">BY</span> <span class="k">DEFAULT</span> <span class="k">AS</span> <span class="k">IDENTITY</span><span class="p">,</span>
     <span class="n">name</span>    <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
     <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
 <span class="p">);</span>
@@ -217,9 +215,655 @@ into the {body} of the default.hbs template -->
 
 <h3 id="pure-jdbc">Pure Jdbc</h3>
 
+<p>Environment settings</p>
+
+<p>Add jdbc, h2 database related libraries in bundle.gradle<br />
+<code class="language-plaintext highlighter-rouge">build.gradle</code></p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-jdbc'</span>
+<span class="n">runtimeOnly</span> <span class="s1">'com.h2database:h2'</span>
+</code></pre></div></div>
+
+<p>Add spring boot database connection settings<br />
+<code class="language-plaintext highlighter-rouge">src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:h2:tcp://localhost/~/test</span>
+<span class="py">spring.datasource.driver-class-name</span><span class="p">=</span><span class="s">org.h2.Driver</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">sa</span>
+</code></pre></div></div>
+
+<h4 id="caution-️">Caution ❗️</h4>
+<p>Starting spring boot 2.4, you must add <code class="language-plaintext highlighter-rouge">spring.datasource.username=sa</code> unless it will cause an error <code class="language-plaintext highlighter-rouge">Wrong user name or password</code></p>
+
+<h3 id="jdbc-repository-implementation">Jdbc Repository Implementation</h3>
+
+<p>Jdbc Member repository<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/JdbcMemberRepository.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.datasource.DataSourceUtils</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.sql.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JdbcMemberRepository</span> <span class="kd">implements</span> <span class="nc">MemberRepository</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">JdbcMemberRepository</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">dataSource</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Member</span> <span class="nf">save</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"insert into member(name) values(?)"</span><span class="o">;</span>
+        <span class="nc">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">getConnection</span><span class="o">();</span>
+            <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">,</span>
+                    <span class="nc">Statement</span><span class="o">.</span><span class="na">RETURN_GENERATED_KEYS</span><span class="o">);</span>
+            <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">member</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+            <span class="n">pstmt</span><span class="o">.</span><span class="na">executeUpdate</span><span class="o">();</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="n">pstmt</span><span class="o">.</span><span class="na">getGeneratedKeys</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">())</span> <span class="o">{</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">throw</span> <span class="k">new</span> <span class="nf">SQLException</span><span class="o">(</span><span class="s">"id 조회 실패"</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="n">member</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="n">close</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">pstmt</span><span class="o">,</span> <span class="n">rs</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"select * from member where id = ?"</span><span class="o">;</span>
+        <span class="nc">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">getConnection</span><span class="o">();</span>
+            <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+            <span class="n">pstmt</span><span class="o">.</span><span class="na">setLong</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">())</span> <span class="o">{</span>
+                <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+                <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="n">close</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">pstmt</span><span class="o">,</span> <span class="n">rs</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"select * from member"</span><span class="o">;</span>
+        <span class="nc">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">getConnection</span><span class="o">();</span>
+            <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">();</span>
+            <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">members</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+            <span class="k">while</span> <span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">())</span> <span class="o">{</span>
+                <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+                <span class="n">members</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="n">members</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="n">close</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">pstmt</span><span class="o">,</span> <span class="n">rs</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">"select * from member where name = ?"</span><span class="o">;</span>
+        <span class="nc">Connection</span> <span class="n">conn</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">PreparedStatement</span> <span class="n">pstmt</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">ResultSet</span> <span class="n">rs</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">conn</span> <span class="o">=</span> <span class="n">getConnection</span><span class="o">();</span>
+            <span class="n">pstmt</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="na">prepareStatement</span><span class="o">(</span><span class="n">sql</span><span class="o">);</span>
+            <span class="n">pstmt</span><span class="o">.</span><span class="na">setString</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+            <span class="n">rs</span> <span class="o">=</span> <span class="n">pstmt</span><span class="o">.</span><span class="na">executeQuery</span><span class="o">();</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">next</span><span class="o">())</span> <span class="o">{</span>
+                <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+                <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+                <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+            <span class="o">}</span>
+            <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">empty</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="n">close</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">pstmt</span><span class="o">,</span> <span class="n">rs</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nc">Connection</span> <span class="nf">getConnection</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="nc">DataSourceUtils</span><span class="o">.</span><span class="na">getConnection</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">(</span><span class="nc">Connection</span> <span class="n">conn</span><span class="o">,</span> <span class="nc">PreparedStatement</span> <span class="n">pstmt</span><span class="o">,</span> <span class="nc">ResultSet</span> <span class="n">rs</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">rs</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">rs</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">pstmt</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">pstmt</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">conn</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">close</span><span class="o">(</span><span class="n">conn</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">SQLException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">close</span><span class="o">(</span><span class="nc">Connection</span> <span class="n">conn</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">SQLException</span> <span class="o">{</span>
+        <span class="nc">DataSourceUtils</span><span class="o">.</span><span class="na">releaseConnection</span><span class="o">(</span><span class="n">conn</span><span class="o">,</span> <span class="n">dataSource</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Change spring settings<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/SpringConfig.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JdbcMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringConfig</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">SpringConfig</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">dataSource</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberService</span> <span class="nf">memberService</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemberService</span><span class="o">(</span><span class="n">memberRepository</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberRepository</span> <span class="nf">memberRepository</span><span class="o">()</span> <span class="o">{</span>
+<span class="c1">//        return new MemoryMemberRepository();</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcMemberRepository</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+  <li>
+    <p>DataSource is an object that you use when connecting database. Spring boot creates database connection in spring bin based on the information in DataSource, allowing to get DI</p>
+  </li>
+  <li>OCP, Open-Closed Principle
+    <ul>
+      <li>Open for extension and closed for fix or change</li>
+    </ul>
+  </li>
+  <li>By using spring DI(Dependencies Injection), you do not have to touch the original code and simply set it to change implementation class</li>
+  <li>Register Member and check the output</li>
+  <li>The data will exists even if the spring server is launched again since the data is securly saved to DB</li>
+</ul>
+
+<h3 id="spring-integration-test">Spring Integration Test</h3>
+
+<p>Member service spring integration test<br />
+<code class="language-plaintext highlighter-rouge">src/test/java/hello.hellospring/service/MemberServiceIntegrationTest.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.service</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.test.context.SpringBootTest</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">assertj</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">AssertionsForClassTypes</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">junit</span><span class="o">.</span><span class="na">jupiter</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">Assertions</span><span class="o">.</span><span class="na">assertThrows</span><span class="o">;</span>
+
+<span class="nd">@SpringBootTest</span>
+<span class="nd">@Transactional</span>
+<span class="kd">class</span> <span class="nc">MemberServiceIntegrationTest</span> <span class="o">{</span>
+
+    <span class="nd">@Autowired</span> <span class="nc">MemberService</span> <span class="n">memberService</span><span class="o">;</span>
+    <span class="nd">@Autowired</span> <span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">;</span>
+
+    <span class="nd">@Test</span>
+    <span class="kt">void</span> <span class="nf">join</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Given</span>
+        <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+        <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
+
+        <span class="c1">// When</span>
+        <span class="nc">Long</span> <span class="n">saveId</span> <span class="o">=</span> <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+
+        <span class="c1">// Then</span>
+        <span class="nc">Member</span> <span class="n">findMember</span> <span class="o">=</span> <span class="n">memberService</span><span class="o">.</span><span class="na">findOne</span><span class="o">(</span><span class="n">saveId</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">member</span><span class="o">.</span><span class="na">getName</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">findMember</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">duplicateMemberException</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Given</span>
+        <span class="nc">Member</span> <span class="n">member1</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+        <span class="n">member1</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
+
+        <span class="nc">Member</span> <span class="n">member2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+        <span class="n">member2</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">"spring"</span><span class="o">);</span>
+
+        <span class="c1">// When</span>
+        <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member1</span><span class="o">);</span>
+        <span class="nc">IllegalStateException</span> <span class="n">e</span> <span class="o">=</span> <span class="n">assertThrows</span><span class="o">(</span><span class="nc">IllegalStateException</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="n">memberService</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">member2</span><span class="o">));</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"Existing Member."</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@SpringBootTest</code>: Spring container and test are executed together</li>
+  <li><code class="language-plaintext highlighter-rouge">@Transactional</code>: If this annotation exists in test case, transaction starts before the test starts and rollbacks after test are complete. This way you will not leave any data in the DB which could affect next test.</li>
+</ul>
+
+<h3 id="spring-jdbctemplate">Spring JdbcTemplate</h3>
+<ul>
+  <li>Same environment setting as the pure Jdbc</li>
+  <li>Libraries such as Spring JdbcTemplate and MyBatis removes most of the loop code. However, you must code SQL manually.</li>
+</ul>
+
+<p>Spring JdbcTemplate Member Repository<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/JdbcTemplateMemberRepository.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.core.JdbcTemplate</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.core.RowMapper</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.core.namedparam.MapSqlParameterSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.core.simple.SimpleJdbcInsert</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JdbcTemplateMemberRepository</span> <span class="kd">implements</span> <span class="nc">MemberRepository</span><span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">JdbcTemplate</span> <span class="n">jdbcTemplate</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">JdbcTemplateMemberRepository</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">jdbcTemplate</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JdbcTemplate</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Member</span> <span class="nf">save</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SimpleJdbcInsert</span> <span class="n">jdbcInsert</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SimpleJdbcInsert</span><span class="o">(</span><span class="n">jdbcTemplate</span><span class="o">);</span>
+        <span class="n">jdbcInsert</span><span class="o">.</span><span class="na">withTableName</span><span class="o">(</span><span class="s">"member"</span><span class="o">).</span><span class="na">usingGeneratedKeyColumns</span><span class="o">(</span><span class="s">"id"</span><span class="o">);</span>
+
+        <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Object</span><span class="o">&gt;</span> <span class="n">parameters</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">parameters</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">member</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+        <span class="nc">Number</span> <span class="n">key</span> <span class="o">=</span> <span class="n">jdbcInsert</span><span class="o">.</span><span class="na">executeAndReturnKey</span><span class="o">(</span><span class="k">new</span> <span class="nc">MapSqlParameterSource</span><span class="o">(</span><span class="n">parameters</span><span class="o">));</span>
+        <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">key</span><span class="o">.</span><span class="na">longValue</span><span class="o">());</span>
+        <span class="k">return</span> <span class="n">member</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">jdbcTemplate</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="s">"select * from member where id = ?"</span><span class="o">,</span> <span class="n">memberRowMapper</span><span class="o">(),</span> <span class="n">id</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">findAny</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">jdbcTemplate</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="s">"select * from member where name = ?"</span><span class="o">,</span> <span class="n">memberRowMapper</span><span class="o">(),</span> <span class="n">name</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">findAny</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">jdbcTemplate</span><span class="o">.</span><span class="na">query</span><span class="o">(</span><span class="s">"select * from member"</span><span class="o">,</span> <span class="n">memberRowMapper</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nc">RowMapper</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">memberRowMapper</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="o">(</span><span class="n">rs</span><span class="o">,</span> <span class="n">rowNum</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Member</span><span class="o">();</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getLong</span><span class="o">(</span><span class="s">"id"</span><span class="o">));</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="n">rs</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">"name"</span><span class="o">));</span>
+            <span class="k">return</span> <span class="n">member</span><span class="o">;</span>
+        <span class="o">};</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Change spring settings to use JdbcTemplate<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/SpringConfig.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JdbcMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JdbcTemplateMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringConfig</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">SpringConfig</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">dataSource</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberService</span> <span class="nf">memberService</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemberService</span><span class="o">(</span><span class="n">memberRepository</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberRepository</span> <span class="nf">memberRepository</span><span class="o">()</span> <span class="o">{</span>
+<span class="c1">//        return new MemoryMemberRepository();</span>
+<span class="c1">//        return new JdbcMemberRepository(dataSource);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JdbcTemplateMemberRepository</span><span class="o">(</span><span class="n">dataSource</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="jpa">JPA</h3>
+<ul>
+  <li>JPA gets rid of the original repetitive code and it automatically creates SQL</li>
+  <li>By using JPA, you can use object oriented programming for SQL</li>
+  <li>The development productivity increase</li>
+</ul>
+
+<p>Add JPA, h2 database related libraries to build.gradle file<br />
+<code class="language-plaintext highlighter-rouge">build.gradle</code></p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">dependencies</span> <span class="o">{</span>
+	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-thymeleaf'</span>
+	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-web'</span>
+<span class="c1">//	implementation 'org.springframework.boot:spring-boot-starter-jdbc'</span>
+	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-data-jpa'</span>
+	<span class="n">runtimeOnly</span> <span class="s1">'com.h2database:h2'</span>
+	<span class="n">testImplementation</span><span class="o">(</span><span class="s1">'org.springframework.boot:spring-boot-starter-test'</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">exclude</span> <span class="nl">group:</span> <span class="s1">'org.junit.vintage'</span><span class="o">,</span> <span class="nl">module:</span> <span class="s1">'junit-vintage-engine'</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">spring-boot-starter-data-jpa</code> contains libraries related to jdbc. Therefore, you can get rid of jdbc.</p>
+
+<p>Add JPA settings in spring boot<br />
+<code class="language-plaintext highlighter-rouge">src/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:h2:tcp://localhost/~/test</span>
+<span class="py">spring.datasource.driver-class-name</span><span class="p">=</span><span class="s">org.h2.Driver</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">sa</span>
+
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+<span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">none</span>
+</code></pre></div></div>
+
+<h4 id="caution-️-1">Caution ❗️</h4>
+<ul>
+  <li>
+    <p>Starting spring boot 2.4, you must add <code class="language-plaintext highlighter-rouge">spring.datasource.username=sa</code>, or else it will cause an error</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">show-sql</code>: Prints the SQL created by JPA</li>
+  <li><code class="language-plaintext highlighter-rouge">ddl-auto</code>: JPA automatically creates table but <code class="language-plaintext highlighter-rouge">none</code> will have this function turned off
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">create</code> will create tables based on the entity information</li>
+    </ul>
+  </li>
+</ul>
+
+<p>JPA entity mapping<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/domain/Member.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.domain</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.Entity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.GeneratedValue</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.GenerationType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.persistence.Id</span><span class="o">;</span>
+
+<span class="nd">@Entity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span> <span class="o">{</span>
+
+    <span class="nd">@Id</span> <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="nc">GenerationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">Long</span> <span class="n">id</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">Long</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>JPA member repository<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/JpaMemberRepository.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.EntityManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JpaMemberRepository</span> <span class="kd">implements</span> <span class="nc">MemberRepository</span><span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">EntityManager</span> <span class="n">em</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">JpaMemberRepository</span><span class="o">(</span><span class="nc">EntityManager</span> <span class="n">em</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">em</span> <span class="o">=</span> <span class="n">em</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">Member</span> <span class="nf">save</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">member</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findById</span><span class="o">(</span><span class="nc">Long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="nc">Member</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+        <span class="k">return</span> <span class="nc">Optional</span><span class="o">.</span><span class="na">ofNullable</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span>  <span class="n">em</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"select m from Member m where m.name = :name"</span><span class="o">,</span> <span class="nc">Member</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">setParameter</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="n">name</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">getResultList</span><span class="o">();</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">findAny</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findAll</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">em</span><span class="o">.</span><span class="na">createQuery</span><span class="o">(</span><span class="s">"select m from Member m"</span><span class="o">,</span> <span class="nc">Member</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+                <span class="o">.</span><span class="na">getResultList</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Add transactional in service class<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/MemberService.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
+
+<span class="nd">@Transactional</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberService</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<p>Change Spring settings to use JPA</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JdbcMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JdbcTemplateMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.JpaMemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.persistence.EntityManager</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringConfig</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">EntityManager</span> <span class="n">em</span><span class="o">;</span>
+
+    <span class="nd">@Autowired</span>
+    <span class="kd">public</span> <span class="nf">SpringConfig</span><span class="o">(</span><span class="nc">DataSource</span> <span class="n">dataSource</span><span class="o">,</span> <span class="nc">EntityManager</span> <span class="n">em</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">dataSource</span> <span class="o">=</span> <span class="n">dataSource</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">em</span> <span class="o">=</span> <span class="n">em</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberService</span> <span class="nf">memberService</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemberService</span><span class="o">(</span><span class="n">memberRepository</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberRepository</span> <span class="nf">memberRepository</span><span class="o">()</span> <span class="o">{</span>
+<span class="c1">//        return new MemoryMemberRepository();</span>
+<span class="c1">//        return new JdbcMemberRepository(dataSource);</span>
+<span class="c1">//        return new JdbcTemplateMemberRepository(dataSource);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JpaMemberRepository</span><span class="o">(</span><span class="n">em</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="spring-data-jpa">Spring Data JPA</h3>
+<p>By using Spring Boot and JPA, the development productivity increases dramatically. However, if you use Spring data JPA, you will experience magic. You can almost finish development without even implementing any class. You can finish the job by using interface only. Therefore, you can focus on the essential business logic.</p>
+
+<h4 id="caution-️-2">Caution ❗️</h4>
+<ul>
+  <li>
+    <p>Spring data JPA allows you to conviently use JPA. Therefore, you must learn JPA before learning Spring data JPA.</p>
+  </li>
+  <li>
+    <p>Leave the JPA settings as it is</p>
+  </li>
+</ul>
+
+<p>Spring data JPA member repository<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/repository/SpringDataJpaMemberRepository.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.repository</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.data.jpa.repository.JpaRepository</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">SpringDataJpaMemberRepository</span> <span class="kd">extends</span> <span class="nc">JpaRepository</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">,</span> <span class="nc">Long</span><span class="o">&gt;,</span> <span class="nc">MemberRepository</span> <span class="o">{</span>
+
+    <span class="nd">@Override</span>
+    <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findByName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Change spring settings to use spring data JPA member repository<br />
+<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/SpringConfig.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">hello.hellospring.service.MemberService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="nd">@Configuration</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringConfig</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nf">SpringConfig</span><span class="o">(</span><span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">memberRepository</span> <span class="o">=</span> <span class="n">memberRepository</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">MemberService</span> <span class="nf">memberService</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MemberService</span><span class="o">(</span><span class="n">memberRepository</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<ul>
+  <li>Spring data JPA automatically registers <code class="language-plaintext highlighter-rouge">SpringDataJpaMemberRepository</code> to spring bin</li>
+</ul>
+
+<h4 id="function-provided-by-spring-data-jpa">Function Provided by Spring Data JPA</h4>
+<ul>
+  <li>Integrated CRUD by interface</li>
+  <li>Serach functions by implementing only method names such as <code class="language-plaintext highlighter-rouge">finalByNam()</code>, <code class="language-plaintext highlighter-rouge">findByEmail()</code></li>
+  <li>Paging function automatically provided</li>
+</ul>
+
+<h4 id="tip-">Tip 👀</h4>
+<ul>
+  <li>In real work, JPA and spring data JPA are in use. Complex dynamic query can be done by Querydsl library. If the a specific qeury cannot be done due to its complexity, you can use native query provided by JPA or spring JdbcTemplate.</li>
+</ul>
+
 <h3 id="reference">Reference</h3>
 <ul>
-  <li><a href="https://www.inflearn.com/roadmaps/373" target="_blank">https://www.inflearn.com/roadmaps/373</a></li>
+  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank">https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8</a></li>
 </ul>
 
                 </div>
@@ -414,7 +1058,9 @@ into the {body} of the default.hbs template -->
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Spring [5] - Web MVC Development
+                        <p>Member Web Function - Add Home Controller
+Add Home Controller
+src/main/java/hello.hellospring/controller/HomeController.java
 
 </p>
                     

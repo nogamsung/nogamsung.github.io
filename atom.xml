@@ -10,7 +10,8 @@
       <item>
         <title>Spring [6] - Spring DB Access Technique</title>
         
-          <description>&lt;h1 id=&quot;spring-6---spring-db-access-technique&quot;&gt;Spring [6] - Spring DB Access Technique&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
+&lt;p&gt;Provide light and convenient DB for development and test purpose&lt;/p&gt;
 
 </description>
         
@@ -25,7 +26,9 @@
       <item>
         <title>Spring [5] - Web MVC Development</title>
         
-          <description>&lt;h1 id=&quot;spring-5---web-mvc-development&quot;&gt;Spring [5] - Web MVC Development&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;member-web-function---add-home-controller&quot;&gt;Member Web Function - Add Home Controller&lt;/h3&gt;
+&lt;p&gt;Add Home Controller&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/controller/HomeController.java&lt;/code&gt;&lt;/p&gt;
 
 </description>
         
@@ -40,7 +43,8 @@
       <item>
         <title>Spring [4] - Spring Bin and Dependencies Relation</title>
         
-          <description>&lt;h1 id=&quot;spring-4---spring-bin-and-dependencies-relation&quot;&gt;Spring [4] - Spring Bin and Dependencies Relation&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;register-srping-bin-and-set-dependencies-relation&quot;&gt;Register Srping Bin and Set Dependencies Relation&lt;/h3&gt;
+&lt;p&gt;Set dependcies relation for member controller to use member service and member repository&lt;/p&gt;
 
 </description>
         
@@ -55,7 +59,12 @@
       <item>
         <title>Spring [3] - Backend Development</title>
         
-          <description>&lt;h1 id=&quot;spring-3---backend-development&quot;&gt;Spring [3] - Backend Development&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;business-requirements&quot;&gt;Business Requirements&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data: member id, name&lt;/li&gt;
+  &lt;li&gt;Function: member registration, member search&lt;/li&gt;
+  &lt;li&gt;Data Storage is not selected yet(a virtual scenario)&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
@@ -68,9 +77,13 @@
     
       
       <item>
-        <title>Spring[2] - Web Development Basics</title>
+        <title>Spring [2] - Web Development Basics</title>
         
-          <description>&lt;h1 id=&quot;spring-2---web-development-basics&quot;&gt;Spring [2] - Web Development Basics&lt;/h1&gt;
+          <description>&lt;ul&gt;
+  &lt;li&gt;Static Contents&lt;/li&gt;
+  &lt;li&gt;MVC and Template Engine&lt;/li&gt;
+  &lt;li&gt;API&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
@@ -83,9 +96,13 @@
     
       
       <item>
-        <title>Spring[1] - Project Enviornment Setting</title>
+        <title>Spring [1] - Project Environment Setting</title>
         
-          <description>&lt;h1 id=&quot;spring-1---project-environment-setting&quot;&gt;Spring [1] - Project Environment Setting&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Java&lt;/li&gt;
+  &lt;li&gt;IDE: IntelliJ or Eclipse&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
@@ -135,7 +152,8 @@
       <item>
         <title>Speech [2] - Mel spectrogram Explanation</title>
         
-          <description>&lt;h1 id=&quot;speech-2---mel-spectrogram-explanation&quot;&gt;Speech [2] - Mel spectrogram Explanation&lt;/h1&gt;
+          <description>&lt;h4 id=&quot;tip-&quot;&gt;Tip 👀&lt;/h4&gt;
+&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
 
 </description>
         
@@ -150,7 +168,21 @@
       <item>
         <title>Speech [1] - Overview</title>
         
-          <description>&lt;h1 id=&quot;speech-1---overview&quot;&gt;Speech [1] - Overview&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Audio Classification&lt;/li&gt;
+  &lt;li&gt;Speech Recognition&lt;/li&gt;
+  &lt;li&gt;Speaker Verification&lt;/li&gt;
+  &lt;li&gt;Audio Denoising&lt;/li&gt;
+  &lt;li&gt;Audio Upsampling&lt;/li&gt;
+  &lt;li&gt;Music Information Retrieval
+    &lt;ul&gt;
+      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
+      &lt;li&gt;Mood Classification&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         

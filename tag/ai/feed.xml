@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-13T00:06:21+09:00</updated>
+  <updated>2022-05-13T15:59:03+09:00</updated>
   <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
@@ -37,9 +37,7 @@
       <published>2022-05-03T02:40:00+09:00</published>
       <updated>2022-05-03T02:40:00+09:00</updated>
       <id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;h1 id=&quot;speech-2---mel-spectrogram-explanation&quot;&gt;Speech [2] - Mel spectrogram Explanation&lt;/h1&gt;
-
-&lt;h4 id=&quot;tip&quot;&gt;Tip&lt;/h4&gt;
+      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;h4 id=&quot;tip-&quot;&gt;Tip 👀&lt;/h4&gt;
 &lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
 
 &lt;h3 id=&quot;how-to-calculate-mel-frequency-using-frequency&quot;&gt;How to calculate Mel frequency using Frequency&lt;/h3&gt;
@@ -90,7 +88,7 @@
       
 
       
-        <summary type="html">Speech [2] - Mel spectrogram Explanation</summary>
+        <summary type="html">Tip 👀 Humans perceive frequency logarithmically</summary>
       
 
       
@@ -103,9 +101,7 @@
       <published>2022-05-02T03:17:00+09:00</published>
       <updated>2022-05-02T03:17:00+09:00</updated>
       <id>http://localhost:4000/Speech_1-Overview</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;h1 id=&quot;speech-1---overview&quot;&gt;Speech [1] - Overview&lt;/h1&gt;
-
-&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Audio Classification&lt;/li&gt;
   &lt;li&gt;Speech Recognition&lt;/li&gt;
@@ -159,7 +155,7 @@
       
 
       
-        <summary type="html">Speech [1] - Overview</summary>
+        <summary type="html">Application Audio Classification Speech Recognition Speaker Verification Audio Denoising Audio Upsampling Music Information Retrieval Music Instrument Classification Mood Classification …</summary>
       
 
       
