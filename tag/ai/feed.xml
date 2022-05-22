@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-13T16:07:38+09:00</updated>
+  <updated>2022-05-22T21:49:29+09:00</updated>
   <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
@@ -32,41 +32,123 @@
 
   
     <entry>
-      <title type="html">Speech [2] - Mel spectrogram Explanation</title>
-      <link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech [2] - Mel spectrogram Explanation" />
-      <published>2022-05-03T02:40:00+09:00</published>
-      <updated>2022-05-03T02:40:00+09:00</updated>
-      <id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;h4 id=&quot;tip-&quot;&gt;Tip 👀&lt;/h4&gt;
-&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-calculate-mel-frequency-using-frequency&quot;&gt;How to calculate Mel frequency using Frequency&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-calculate-frequency-using-mel-frequency&quot;&gt;How to calculate Frequency using Mel frequency&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-extract-mel-spectrogram&quot;&gt;How to extract Mel spectrogram&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Extract STFT&lt;/li&gt;
-  &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
-  &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;how-to-convert-frequencies-to-mel-scale&quot;&gt;How to convert frequencies to Mel scale&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Choose number of mel bands
+      <title type="html">Speech [6] - Improving Detection Rate</title>
+      <link href="http://localhost:4000/Speech_6-Improving_Recognition_Rate" rel="alternate" type="text/html" title="Speech [6] - Improving Detection Rate" />
+      <published>2022-05-03T23:40:00+09:00</published>
+      <updated>2022-05-03T23:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_6-Improving_Recognition_Rate</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_6-Improving_Recognition_Rate">&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
+&lt;p&gt;Keys that affect detection rate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Feature engineering
     &lt;ul&gt;
-      &lt;li&gt;Number of mel bands(e.g. 40, 60, 90, 128) depends on the problem&lt;/li&gt;
+      &lt;li&gt;Mel spectrogram&lt;/li&gt;
+      &lt;li&gt;MFCC&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Construct mel filter banks&lt;/li&gt;
-  &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;Model structure
+    &lt;ul&gt;
+      &lt;li&gt;CNN&lt;/li&gt;
+      &lt;li&gt;RNN&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of auditorial settings
+    &lt;ul&gt;
+      &lt;li&gt;indoor/outdoor&lt;/li&gt;
+      &lt;li&gt;reverberation, reverberation, distance, size of room&lt;/li&gt;
+      &lt;li&gt;masking, noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of audio equipment
+    &lt;ul&gt;
+      &lt;li&gt;microphone feature&lt;/li&gt;
+      &lt;li&gt;recorder feature&lt;/li&gt;
+      &lt;li&gt;A/D transform parameter&lt;/li&gt;
+      &lt;li&gt;noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;h4 id=&quot;data-augmentation&quot;&gt;Data Augmentation&lt;/h4&gt;
+&lt;p&gt;Data Augmentation&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Change the shape of the training dataset to increase the number of training dataset&lt;/li&gt;
+  &lt;li&gt;Category
+    &lt;ul&gt;
+      &lt;li&gt;Random Rotation&lt;/li&gt;
+      &lt;li&gt;Flip(Horizontal and Vertical)&lt;/li&gt;
+      &lt;li&gt;Zoom&lt;/li&gt;
+      &lt;li&gt;Random Shift&lt;/li&gt;
+      &lt;li&gt;Brigthness&lt;/li&gt;
+      &lt;li&gt;Add Noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Audio Data Augmentation&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Image&lt;/td&gt;
+        &lt;td&gt;Audio&lt;/td&gt;
+        &lt;td&gt;Usability&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Rotation&lt;/td&gt;
+        &lt;td&gt;?&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Flip(Horizontal)&lt;/td&gt;
+        &lt;td&gt;Reverse play&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Shift (Vertical)&lt;/td&gt;
+        &lt;td&gt;Ptich up/down&lt;/td&gt;
+        &lt;td&gt;△&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Shift (Horizontal)&lt;/td&gt;
+        &lt;td&gt;Time shift&lt;/td&gt;
+        &lt;td&gt;O&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Zoom (Horizontal)&lt;/td&gt;
+        &lt;td&gt;Change speed&lt;/td&gt;
+        &lt;td&gt;△&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Brithness&lt;/td&gt;
+        &lt;td&gt;Volume up/down&lt;/td&gt;
+        &lt;td&gt;O?&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;fusion&quot;&gt;Fusion&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mix a number of feature extraction method to get an accurate result&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Huang, Zilong, Chen Liu, Hongbo Fei, Wei Li, Jinghu Yu, and Yi Cao. “Urban Sound Classification Based on 2-Order Dense Convolutional Network Using Dual Features.” Applied Acoustics 164 (July 2020)&lt;/li&gt;
+  &lt;li&gt;D-2-DenseNet with [MFCC, GFCC] is best in UrbanSound8K and Dcase2016&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 2&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Su, Yu, Ke Zhang, Jingyu Wang, and Kurosh Madani. “Environment Sound Classification Using a Two-Stream CNN Based on Decision-Level Fusion.” Sensor 19, no.7 (April 11, 2019): 1733&lt;/li&gt;
+  &lt;li&gt;TSCNN-DS is best&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -88,7 +170,7 @@
       
 
       
-        <summary type="html">Tip 👀 Humans perceive frequency logarithmically</summary>
+        <summary type="html">Improving Detection Rate Keys that affect detection rate Feature engineering Mel spectrogram MFCC … Model structure CNN RNN … Affects of auditorial settings indoor/outdoor reverberation, reverberation, distance, size of room masking, noise … Affects of audio equipment microphone feature recorder feature A/D transform parameter noise …</summary>
       
 
       
@@ -96,44 +178,58 @@
     </entry>
   
     <entry>
-      <title type="html">Speech [1] - Overview</title>
-      <link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech [1] - Overview" />
-      <published>2022-05-02T03:17:00+09:00</published>
-      <updated>2022-05-02T03:17:00+09:00</updated>
-      <id>http://localhost:4000/Speech_1-Overview</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+      <title type="html">Speech [7] - Audio Settings Effect</title>
+      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
+      <published>2022-05-03T21:40:00+09:00</published>
+      <updated>2022-05-03T21:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
+&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
+
+&lt;p&gt;Decrease in Sound&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Audio Classification&lt;/li&gt;
-  &lt;li&gt;Speech Recognition&lt;/li&gt;
-  &lt;li&gt;Speaker Verification&lt;/li&gt;
-  &lt;li&gt;Audio Denoising&lt;/li&gt;
-  &lt;li&gt;Audio Upsampling&lt;/li&gt;
-  &lt;li&gt;Music Information Retrieval
+  &lt;li&gt;The more distance from the audio, the more decrease in sound&lt;/li&gt;
+  &lt;li&gt;Depends on the type of audio
     &lt;ul&gt;
-      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
-      &lt;li&gt;Mood Classification&lt;/li&gt;
+      &lt;li&gt;point sound source&lt;/li&gt;
+      &lt;li&gt;line seismic source&lt;/li&gt;
+      &lt;li&gt;flat seismic source&lt;/li&gt;
+      &lt;li&gt;flat sound source&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;two-stages-for-speech-processing&quot;&gt;Two stages for Speech Processing&lt;/h3&gt;
+&lt;h3 id=&quot;indoor-audio&quot;&gt;Indoor Audio&lt;/h3&gt;
+&lt;p&gt;Indoor audio effects&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Preparing Audio Data&lt;/li&gt;
-  &lt;li&gt;Development &amp;amp; Evaluation of Model&lt;/li&gt;
+  &lt;li&gt;Depends on the shape and ingredient of the wall
+    &lt;ul&gt;
+      &lt;li&gt;absorption, reflection&lt;/li&gt;
+      &lt;li&gt;echo&lt;/li&gt;
+      &lt;li&gt;sound focus&lt;/li&gt;
+      &lt;li&gt;dead point&lt;/li&gt;
+      &lt;li&gt;reverberation&lt;/li&gt;
+      &lt;li&gt;standing wave, room mode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;technology-commonly-used&quot;&gt;Technology commonly used&lt;/h3&gt;
+&lt;p&gt;Direct Sound, Early Reflections, Reverberation&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-  &lt;li&gt;Tensorflow / PyTorch&lt;/li&gt;
-  &lt;li&gt;Librosa&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;Direct Sound: the acutual sound arrive without any reflection&lt;/li&gt;
+  &lt;li&gt;Early Reflection: approx. 20~50ms delay of a single reflection from a single direction&lt;/li&gt;
+  &lt;li&gt;Reverberation: approx. 50ms delay of multiple reflection from various direction&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;Critical Distance&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Reverberation sound is equal to actual sound&lt;/li&gt;
+  &lt;li&gt;To be continued…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -155,7 +251,873 @@
       
 
       
-        <summary type="html">Application Audio Classification Speech Recognition Speaker Verification Audio Denoising Audio Upsampling Music Information Retrieval Music Instrument Classification Mood Classification …</summary>
+        <summary type="html">Transfer of audio Reflection, Refraction, Diffraction</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [5] - Urban Sound Classification</title>
+      <link href="http://localhost:4000/Speech_5-Urban_Sound_Classification" rel="alternate" type="text/html" title="Speech [5] - Urban Sound Classification" />
+      <published>2022-05-03T21:40:00+09:00</published>
+      <updated>2022-05-03T21:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_5-Urban_Sound_Classification</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_5-Urban_Sound_Classification">&lt;h4 id=&quot;1-feature-extraction&quot;&gt;1. Feature Extraction&lt;/h4&gt;
+&lt;p&gt;Urban Sound 8K Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;air_conditioner&lt;/li&gt;
+  &lt;li&gt;car_horn&lt;/li&gt;
+  &lt;li&gt;children_playing&lt;/li&gt;
+  &lt;li&gt;dog_bark&lt;/li&gt;
+  &lt;li&gt;drilling&lt;/li&gt;
+  &lt;li&gt;engine_idling&lt;/li&gt;
+  &lt;li&gt;gun_shot&lt;/li&gt;
+  &lt;li&gt;jackhammer&lt;/li&gt;
+  &lt;li&gt;siren&lt;/li&gt;
+  &lt;li&gt;street_music&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read CSV file information&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ML_DATA_PATH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;UrbanSound8K/metadata/UrbanSound8K.csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Class&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Numbers for each class
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Fold&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Numbers for each fold
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;fold&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value_counts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;countplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;fold&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Load a wav file&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;797&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ML_DATA_PATH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;UrbanSound8K/audio&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;fold&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;fold&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;features_df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;slice_file_name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# load wave file
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;librosa.load()&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Read wave file
+    &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22050&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mono&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;duration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Default
+    &lt;ul&gt;
+      &lt;li&gt;Sampling rate: 22050(sr=None)&lt;/li&gt;
+      &lt;li&gt;Channel: mono&lt;/li&gt;
+      &lt;li&gt;Output data range[-1, 1]&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Length fitting&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# if less than 4s, make it 4s
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22050&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22050&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;constant&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-cnn-model&quot;&gt;2. CNN Model&lt;/h3&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cnn_model_01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_dim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kernel_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_dim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;modle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MaxPooling2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;same&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MaxPooling2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dropout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MaxPooling2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MaxPooling2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pool_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dropout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GlobalAveragePooling2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Flatten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;512&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;relu&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;softmax&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;model.compile&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Environment settings for training method
+    &lt;ul&gt;
+      &lt;li&gt;loss: error rate function&lt;/li&gt;
+      &lt;li&gt;metrics: performance assessment&lt;/li&gt;
+      &lt;li&gt;optimizer: optmization method
+        &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnn_model_01&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_dim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;categorical_crossentropy&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metrics&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;accuracy&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;adam&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3-training&quot;&gt;3. Training&lt;/h4&gt;
+&lt;p&gt;model.fit&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;early_stop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keras&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EarlyStopping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;monitor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;val_accuracy&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;patience&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;history&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_batch_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epochs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_epochs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;validation_split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;callbacks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;early_stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;model.evaluate&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;score_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evaluate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;score_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;evaluate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Accuracy: Train {:6.2f}% Test {:6.2f}%&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">1. Feature Extraction Urban Sound 8K Dataset air_conditioner car_horn children_playing dog_bark drilling engine_idling gun_shot jackhammer siren street_music</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [4] - Audio Feature Extraction</title>
+      <link href="http://localhost:4000/Speech_4-Audio_Feature_Extraction" rel="alternate" type="text/html" title="Speech [4] - Audio Feature Extraction" />
+      <published>2022-05-03T19:40:00+09:00</published>
+      <updated>2022-05-03T19:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_4-Audio_Feature_Extraction</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_4-Audio_Feature_Extraction">&lt;h3 id=&quot;audio-feature-extraction&quot;&gt;Audio Feature Extraction&lt;/h3&gt;
+&lt;p&gt;Feature Extraction&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is feature extraction?
+    &lt;ul&gt;
+      &lt;li&gt;tall and big. 4 feet. 5 horns -&amp;gt; giraffe&lt;/li&gt;
+      &lt;li&gt;long nose -&amp;gt; elephant&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reason for feature extraction
+    &lt;ul&gt;
+      &lt;li&gt;decrease in data size&lt;/li&gt;
+      &lt;li&gt;increase in recognition&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Audio Feature Extraction&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Why wav format files are not directly inputted
+    &lt;ul&gt;
+      &lt;li&gt;contains noise&lt;/li&gt;
+      &lt;li&gt;too much data size&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Audio Feature Commonly Used&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Time domain feature
+    &lt;ul&gt;
+      &lt;li&gt;Zero crossing&lt;/li&gt;
+      &lt;li&gt;Tempo&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Frequency domain features
+    &lt;ul&gt;
+      &lt;li&gt;Spectral Centroid&lt;/li&gt;
+      &lt;li&gt;Spectral Spread&lt;/li&gt;
+      &lt;li&gt;Spectral Flatness&lt;/li&gt;
+      &lt;li&gt;Spectral Envelope&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Time-frequency feature
+    &lt;ul&gt;
+      &lt;li&gt;Spectrogram(STFT)&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;Log Mel-spectrogram&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;b&gt;MFCC&lt;/b&gt;&lt;/li&gt;
+      &lt;li&gt;Constant-Q transform(CQT)&lt;/li&gt;
+      &lt;li&gt;Chroma&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Caution with Feature&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Time-frequency expression –&amp;gt; STFT (Short Time Fourier Transform)&lt;/li&gt;
+  &lt;li&gt;Frequency expression similar to human ear –&amp;gt; Mel scale&lt;/li&gt;
+  &lt;li&gt;Sound pressure expression similar to human ear –&amp;gt; Log scale&lt;/li&gt;
+  &lt;li&gt;STFT + Mel Scale + Log Scale –&amp;gt; Log Mel spectrogram&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stft-short-time-fourier-transform&quot;&gt;STFT (Short Time Fourier Transform)&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Divide by section&lt;/li&gt;
+  &lt;li&gt;Apply Window&lt;/li&gt;
+  &lt;li&gt;FFT&lt;/li&gt;
+  &lt;li&gt;Graph&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;librosa&quot;&gt;Librosa&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://librosa.org&quot; target=&quot;_blank&quot;&gt;Librosa&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;python package for music and audio analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Spectrogram&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# spectrogram
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_fft&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_fft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hop_length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hop_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sp_db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;power_to_db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Spectrogram vs. Spectrogram(dB)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make sure to use dB because the model will be trained more accurately&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mel-spectrogram&quot;&gt;Mel spectrogram&lt;/h4&gt;
+&lt;p&gt;Mel-scale&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Audio level that is heard by human ears (Mel -&amp;gt; Melody)&lt;/li&gt;
+  &lt;li&gt;1000 mels = 1000 Hz tone
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2595&amp;space;log_{10}(1&amp;space;&amp;plus;&amp;space;\frac{f}{700})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2595 log_{10}(1 + \frac{f}{700})&quot; /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{\frac{m}{2595}}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{\frac{m}{2595}}-1)&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;400.00 Hz -&amp;gt; 509.38 Mel    10 Hz -&amp;gt; 10.2 Mel&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;410.00 Hz -&amp;gt; 519.58 Mel&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2000.00 Hz -&amp;gt; 1521.36 Mel     10 Hz -&amp;gt; 4.17 Mel&lt;/li&gt;
+  &lt;li&gt;2010.00 Hz -&amp;gt; 1525.53 Mel&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;librosa.feature.melspectrogram&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# melspectrogram
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melsp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melspectrogram&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_fft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_fft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hop_length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hop_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_mels&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;librosa.power_to_db&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# log melspectrogram
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logmelsp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;power_to_db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melsp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;top_db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;mfcc&quot;&gt;MFCC&lt;/h4&gt;
+&lt;p&gt;MFCC&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Normally used for audio feature expression&lt;/li&gt;
+  &lt;li&gt;Mel-Frequency Cepts(Spec)tral Coefficients&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Naming&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;u&gt;Spec&lt;/u&gt;trum -&amp;gt; &lt;u&gt;Ceps&lt;/u&gt;trum&lt;/li&gt;
+  &lt;li&gt;Fre&lt;u&gt;que&lt;/u&gt;ncy -&amp;gt; &lt;u&gt;Que&lt;/u&gt;frency&lt;/li&gt;
+  &lt;li&gt;&lt;u&gt;Fil&lt;/u&gt;tering -&amp;gt; &lt;u&gt;Lif&lt;/u&gt;tering&lt;/li&gt;
+  &lt;li&gt;Ha&lt;u&gt;r&lt;/u&gt;monic -&amp;gt; &lt;u&gt;R&lt;/u&gt;hamonic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MFCC Extraction Process&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mel spectrum -&amp;gt; Log -&amp;gt; Inverse FT(DCT: Discrete Cosine Transform)
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?C(x(t))&amp;space;=&amp;space;F^{-1}[log(F[x(t)])]&quot; title=&quot;https://latex.codecogs.com/svg.image?C(x(t)) = F^{-1}[log(F[x(t)])]&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;librosa.feature.mfcc&lt;/p&gt;
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# mfcc
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfccs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;librosa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mfcc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;audio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_mfcc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;feature-comparison&quot;&gt;Feature Comparison&lt;/h3&gt;
+&lt;p&gt;Case 1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Combination
+    &lt;ul&gt;
+      &lt;li&gt;Dataset: ESC-10, ESC-50, UrbanSound8K&lt;/li&gt;
+      &lt;li&gt;Model: AlexNet, GoogLeNet&lt;/li&gt;
+      &lt;li&gt;Sampling rate: 8k, 16k, 32k&lt;/li&gt;
+      &lt;li&gt;Features: Mel spectrogram, MFCC&lt;/li&gt;
+      &lt;li&gt;Frame length: 20, 30, 40, 50ms&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sampling rate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;16 kHz is best for AlexNet and GoogLeNet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Frame length&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;30 ms is best for AlexNet and GoogLeNet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 2&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Features
+    &lt;ul&gt;
+      &lt;li&gt;STFT&lt;/li&gt;
+      &lt;li&gt;Mel-STFT&lt;/li&gt;
+      &lt;li&gt;CQT(Constant-Q Transform)&lt;/li&gt;
+      &lt;li&gt;CWT(Continuous Wavelet transform)&lt;/li&gt;
+      &lt;li&gt;MFC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ESC-50 Recognition Rate Comparison&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mel-STFT is best&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;UrbanSound8K Recognition Rate Comparision&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mel-STFT is best&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;best-feature&quot;&gt;Best Feature?&lt;/h3&gt;
+&lt;p&gt;Optimized Feature&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mel spectroam and MFCC are modeled as it is similar to how huamns perceive audio&lt;/li&gt;
+  &lt;li&gt;There is a need to construct a new feature specific for mic and algorithm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What is Optimized Feature for Machine Learning&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Feature does not need to immitate how humans perceive information&lt;/li&gt;
+  &lt;li&gt;Research for feature specificially for machine learning is neccessary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Audio Feature Extraction Feature Extraction What is feature extraction? tall and big. 4 feet. 5 horns -&amp;gt; giraffe long nose -&amp;gt; elephant Reason for feature extraction decrease in data size increase in recognition</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [3] - Audio Dataset</title>
+      <link href="http://localhost:4000/Speech_3-Audio_Dataset" rel="alternate" type="text/html" title="Speech [3] - Audio Dataset" />
+      <published>2022-05-03T17:40:00+09:00</published>
+      <updated>2022-05-03T17:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_3-Audio_Dataset</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_3-Audio_Dataset">&lt;h3 id=&quot;audio-dataset&quot;&gt;Audio Dataset&lt;/h3&gt;
+&lt;p&gt;Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Traning data for machine learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Manual Recording
+    &lt;ul&gt;
+      &lt;li&gt;Use audio equipment for manual recording&lt;/li&gt;
+      &lt;li&gt;Level of preparation is hardest&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Caution when Recording Manually&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Quality of microphone and recorder&lt;/li&gt;
+  &lt;li&gt;Recording format
+    &lt;ul&gt;
+      &lt;li&gt;wav format. 44.1k / more than 16bits&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Volume
+    &lt;ul&gt;
+      &lt;li&gt;As loud as possible with no distortion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Noise
+    &lt;ul&gt;
+      &lt;li&gt;Get rid of noise as much as possible&lt;/li&gt;
+      &lt;li&gt;Use a large shotgun mic for directivity&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Internet Collection
+    &lt;ul&gt;
+      &lt;li&gt;Download it from the internet and manufacture&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(ex) freesound.org
+    - More convienet than manual recording
+    - Diversified audio quality
+    - Deflective data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Public Dataset
+    &lt;ul&gt;
+      &lt;li&gt;Public dataset provided by someone else&lt;/li&gt;
+      &lt;li&gt;Most convinent&lt;/li&gt;
+      &lt;li&gt;Audio data you want might not be there&lt;/li&gt;
+      &lt;li&gt;Audio dataset are verified&lt;/li&gt;
+      &lt;li&gt;https://paperswithcode.com/datasets?task=audio-classification&amp;amp;page=1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Making My Own Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Choose the most similar public dataset + Music(recorded or downloaded from internet) to it = My Own Dataset&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;public-audio-dataset&quot;&gt;Public Audio Dataset&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://research.google.com/audioset/&quot; target=&quot;_blank&quot;&gt;AudioSet&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;632 audio event classes&lt;/li&gt;
+  &lt;li&gt;2,084,320 human-labeled 10-second sound clips drawn from YouTube videos&lt;/li&gt;
+  &lt;li&gt;The same sound could be annotated as different labels&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/karolpiczak/ESC-50&quot; target=&quot;_blank&quot;&gt;ESC-50&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2000 environment audio recording from Freesound.org&lt;/li&gt;
+  &lt;li&gt;5 sec-clips of 50 different classes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://urbansounddataset.weebly.com/urbansound8k.html&quot; target=&quot;_blank&quot;&gt;UrbanSound8K&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;8732 (&amp;lt;=4s) of urban sounds taken from freesound.org&lt;/li&gt;
+  &lt;li&gt;10 classes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Caution when using UrbanSound8K&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Don’t reshuffle the data! Use the predefined 10 folds and perform 10-fold (not 5-fold) cross validation&lt;/li&gt;
+  &lt;li&gt;Don’t evaluate just on one split! Use 10-fold (not 5-fold) cross validation and average the scores&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;K-fold cross validation&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Split the entire dataset into K and learn it K times and get average recognition rate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Audio Dataset Dataset Traning data for machine learning</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [2] - Deep Learning Model</title>
+      <link href="http://localhost:4000/Speech_2-Deep_Learning_Model" rel="alternate" type="text/html" title="Speech [2] - Deep Learning Model" />
+      <published>2022-05-03T05:40:00+09:00</published>
+      <updated>2022-05-03T05:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_2-Deep_Learning_Model</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_2-Deep_Learning_Model">&lt;h3 id=&quot;deep-learning-neural-network&quot;&gt;Deep Learning Neural Network&lt;/h3&gt;
+&lt;p&gt;Artificial Intelligence, Machine Learning, Deep Learning&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Artificial Intelligence
+    &lt;ul&gt;
+      &lt;li&gt;Machine Learning
+        &lt;ul&gt;
+          &lt;li&gt;Deep Learning&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Neurons&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Humans have 86,000,000,000 neurons in average&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Artificial Neurons
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?y&amp;space;=&amp;space;x_{1}w_{1}&amp;space;&amp;plus;&amp;space;x_{2}w_{2}&amp;space;&amp;plus;&amp;space;...&amp;space;&amp;plus;&amp;space;x_{i}w_{i}&amp;space;&amp;plus;&amp;space;&amp;space;x_{0}w_{0}&quot; title=&quot;https://latex.codecogs.com/svg.image?y = x_{1}w_{1} + x_{2}w_{2} + ... + x_{i}w_{i} + x_{0}w_{0}&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Activation Functions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Logistic, Sigmoid&lt;/li&gt;
+  &lt;li&gt;ReLU(Rectified Linear Unit)&lt;/li&gt;
+  &lt;li&gt;tanh&lt;/li&gt;
+  &lt;li&gt;SELU(Scaled Exponential Linear Unit)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Neural Networks&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;90s neural network model
+    &lt;ul&gt;
+      &lt;li&gt;Solves simple problems&lt;/li&gt;
+      &lt;li&gt;Not commercialized&lt;/li&gt;
+      &lt;li&gt;Not being able to learn with many hidden layers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Deep Nueral Network&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Commericialized
+    &lt;ul&gt;
+      &lt;li&gt;Deep learning&lt;/li&gt;
+      &lt;li&gt;GPU&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Famous Deep NN Model&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AlphaGo&lt;/li&gt;
+  &lt;li&gt;GoogLeNet&lt;/li&gt;
+  &lt;li&gt;VGG16&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learning&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Input data for learning&lt;/li&gt;
+  &lt;li&gt;Compare output with the actual answer&lt;/li&gt;
+  &lt;li&gt;Modify the weights so decrease the error rate
+    &lt;ul&gt;
+      &lt;li&gt;Learning algorithm(Backpropagation base)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;cnnconvolutional-neural-network&quot;&gt;CNN(Convolutional Neural Network)&lt;/h3&gt;
+&lt;p&gt;Structure of CNN&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Input Layer&lt;/li&gt;
+  &lt;li&gt;Convolutional Layer&lt;/li&gt;
+  &lt;li&gt;Pooling Layer&lt;/li&gt;
+  &lt;li&gt;Fully Connected Layer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Convolution Layer&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use Kernel(Filter) to sum up and get Feature Map&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pooling Layer&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Max Pooling: gets the maximum weight from the input tensor(4x4) and get output tensor(2x2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ImageNet Challenge(ILSVRC)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Challenge to sort 14,000,000 pictures which are in one of 20,000 categories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CNN Audio Usage&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Audio recognition, CNN is used to solve classification problem&lt;/li&gt;
+  &lt;li&gt;Transform audio to picture for input&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Deep Learning Neural Network Artificial Intelligence, Machine Learning, Deep Learning Artificial Intelligence Machine Learning Deep Learning</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Speech [1] - Basics of Sound</title>
+      <link href="http://localhost:4000/Speech_1-Basics_of_Sound" rel="alternate" type="text/html" title="Speech [1] - Basics of Sound" />
+      <published>2022-05-03T02:40:00+09:00</published>
+      <updated>2022-05-03T02:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_1-Basics_of_Sound</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_1-Basics_of_Sound">&lt;h3 id=&quot;size-of-sound-and-frequency&quot;&gt;Size of sound and Frequency&lt;/h3&gt;
+&lt;p&gt;Sound&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physical vibration detected by ear which is recognized by human brain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sound Pressure Level&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Humans hear sound presssure between 20uPa ~ 20Pa&lt;/li&gt;
+  &lt;li&gt;Sound pressure level
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?L_{p}&amp;space;=&amp;space;20log_{10}\frac{p}{20\mu}dB_{SPL}&quot; title=&quot;https://latex.codecogs.com/svg.image?L_{p} = 20log_{10}\frac{p}{20\mu}dB_{SPL}&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level of Sound : Frequency&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Transform rate of vibration in air per a seoncd(Hz)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ripple and Tone&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Timbre, Tone, Tone color
+    &lt;ul&gt;
+      &lt;li&gt;Uniqueness of sound&lt;/li&gt;
+      &lt;li&gt;Structure of spectrum harmonics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;psychoacoustics&quot;&gt;Psychoacoustics&lt;/h3&gt;
+&lt;h4 id=&quot;psychoacoustics-1&quot;&gt;Psychoacoustics&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Psycho + Acoustics&lt;/li&gt;
+  &lt;li&gt;The study of psychological recognition by human’s brain and ears when they hear sounds&lt;/li&gt;
+  &lt;li&gt;The physical measurement is different from what humans actually hears&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Structure of Ear and its Characteristics&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Vibration in air is tranmitted to electrical signal which then human ears can recognize&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Loudness&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The size of sound that people hear&lt;/li&gt;
+  &lt;li&gt;People sense sound pressure differently depending on the frequency&lt;/li&gt;
+  &lt;li&gt;Sound Pressure Level
+    &lt;ul&gt;
+      &lt;li&gt;The size of sound measured by machine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Human’s Hearing Range&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;0 ~ 20,000 Hz&lt;/li&gt;
+  &lt;li&gt;0 ~ 140 dB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Physical Quantity and Psychological of Sound&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td&gt;Loudness&lt;/td&gt;
+        &lt;td&gt;Pitch&lt;/td&gt;
+        &lt;td&gt;Timbre&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Sound pressure level&lt;/td&gt;
+        &lt;td&gt;☆☆☆&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Frequency&lt;/td&gt;
+        &lt;td&gt;☆☆&lt;/td&gt;
+        &lt;td&gt;☆☆☆&lt;/td&gt;
+        &lt;td&gt;☆☆&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Spectrum&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+        &lt;td&gt;☆☆☆&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Envelop&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+        &lt;td&gt;☆&lt;/td&gt;
+        &lt;td&gt;☆☆☆&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Masking&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A sound that is not heard because of distruption
+    &lt;ul&gt;
+      &lt;li&gt;Simultaneous Masking&lt;/li&gt;
+      &lt;li&gt;Temporal Masking&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;digital-audio&quot;&gt;Digital Audio&lt;/h3&gt;
+&lt;p&gt;Analog Signal and Digital Signal&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Signal: Pysical wavelength with information&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Digitalization
+Analog Signal –&amp;gt; Sampling –&amp;gt; Quantization –&amp;gt; Coding –&amp;gt; Digital Signal&lt;/p&gt;
+
+&lt;p&gt;Sampling&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Signal extraction with constant time frame&lt;/li&gt;
+  &lt;li&gt;Digital audio sampling frequency
+    &lt;ul&gt;
+      &lt;li&gt;44100 Hz = 44.1kHz&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Caution with audio related machine learning&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A/D transform
+    &lt;ul&gt;
+      &lt;li&gt;Number of sampling frequency&lt;/li&gt;
+      &lt;li&gt;Number of quantization bit&lt;/li&gt;
+      &lt;li&gt;Number of channel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;File format
+    &lt;ul&gt;
+      &lt;li&gt;No compression: WAV&lt;/li&gt;
+      &lt;li&gt;No loss compression: FLAC&lt;/li&gt;
+      &lt;li&gt;Loss compression: MP3, AAC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;machine-learning&quot;&gt;Machine Learning&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data preparation
+    &lt;ul&gt;
+      &lt;li&gt;Data gathering&lt;/li&gt;
+      &lt;li&gt;Data refinement&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Model selection
+    &lt;ul&gt;
+      &lt;li&gt;CNN&lt;/li&gt;
+      &lt;li&gt;RNN&lt;/li&gt;
+      &lt;li&gt;SVM&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Learning
+    &lt;ul&gt;
+      &lt;li&gt;Tranining&lt;/li&gt;
+      &lt;li&gt;Evaluation&lt;/li&gt;
+      &lt;li&gt;Tuning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Usage
+    &lt;ul&gt;
+      &lt;li&gt;PC&lt;/li&gt;
+      &lt;li&gt;Mobile&lt;/li&gt;
+      &lt;li&gt;IoT&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Size of sound and Frequency Sound Physical vibration detected by ear which is recognized by human brain</summary>
       
 
       

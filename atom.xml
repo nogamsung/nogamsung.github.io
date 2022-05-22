@@ -8,6 +8,26 @@
     
       
       <item>
+        <title>Spring [7] - AOP</title>
+        
+          <description>&lt;h3 id=&quot;situations-where-aop-is-needed&quot;&gt;Situations Where AOP is Needed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Measuring all of the method call time&lt;/li&gt;
+  &lt;li&gt;Cross-cutting concern vs. cores concern&lt;/li&gt;
+  &lt;li&gt;Find out member registration time, member lookup time&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 13 May 2022 06:26:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Spring_7-AOP</link>
+        <guid isPermaLink="true">http://localhost:4000/Spring_7-AOP</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring [6] - Spring DB Access Technique</title>
         
           <description>&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
@@ -150,46 +170,189 @@
     
       
       <item>
-        <title>Speech [2] - Mel spectrogram Explanation</title>
+        <title>Speech [6] - Improving Detection Rate</title>
         
-          <description>&lt;h4 id=&quot;tip-&quot;&gt;Tip 👀&lt;/h4&gt;
-&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
+          <description>&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
+&lt;p&gt;Keys that affect detection rate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Feature engineering
+    &lt;ul&gt;
+      &lt;li&gt;Mel spectrogram&lt;/li&gt;
+      &lt;li&gt;MFCC&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Model structure
+    &lt;ul&gt;
+      &lt;li&gt;CNN&lt;/li&gt;
+      &lt;li&gt;RNN&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of auditorial settings
+    &lt;ul&gt;
+      &lt;li&gt;indoor/outdoor&lt;/li&gt;
+      &lt;li&gt;reverberation, reverberation, distance, size of room&lt;/li&gt;
+      &lt;li&gt;masking, noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of audio equipment
+    &lt;ul&gt;
+      &lt;li&gt;microphone feature&lt;/li&gt;
+      &lt;li&gt;recorder feature&lt;/li&gt;
+      &lt;li&gt;A/D transform parameter&lt;/li&gt;
+      &lt;li&gt;noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
-        <pubDate>Tue, 03 May 2022 02:40:00 +0900</pubDate>
+        <pubDate>Tue, 03 May 2022 23:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</guid>
+        http://localhost:4000/Speech_6-Improving_Recognition_Rate</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_6-Improving_Recognition_Rate</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [1] - Overview</title>
+        <title>Speech [7] - Audio Settings Effect</title>
         
-          <description>&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+          <description>&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
+&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 21:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_7-Audio_Settings_Effect</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_7-Audio_Settings_Effect</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Speech [5] - Urban Sound Classification</title>
+        
+          <description>&lt;h4 id=&quot;1-feature-extraction&quot;&gt;1. Feature Extraction&lt;/h4&gt;
+&lt;p&gt;Urban Sound 8K Dataset&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Audio Classification&lt;/li&gt;
-  &lt;li&gt;Speech Recognition&lt;/li&gt;
-  &lt;li&gt;Speaker Verification&lt;/li&gt;
-  &lt;li&gt;Audio Denoising&lt;/li&gt;
-  &lt;li&gt;Audio Upsampling&lt;/li&gt;
-  &lt;li&gt;Music Information Retrieval
-    &lt;ul&gt;
-      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
-      &lt;li&gt;Mood Classification&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;air_conditioner&lt;/li&gt;
+  &lt;li&gt;car_horn&lt;/li&gt;
+  &lt;li&gt;children_playing&lt;/li&gt;
+  &lt;li&gt;dog_bark&lt;/li&gt;
+  &lt;li&gt;drilling&lt;/li&gt;
+  &lt;li&gt;engine_idling&lt;/li&gt;
+  &lt;li&gt;gun_shot&lt;/li&gt;
+  &lt;li&gt;jackhammer&lt;/li&gt;
+  &lt;li&gt;siren&lt;/li&gt;
+  &lt;li&gt;street_music&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
-        <pubDate>Mon, 02 May 2022 03:17:00 +0900</pubDate>
+        <pubDate>Tue, 03 May 2022 21:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_1-Overview</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_1-Overview</guid>
+        http://localhost:4000/Speech_5-Urban_Sound_Classification</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_5-Urban_Sound_Classification</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Speech [4] - Audio Feature Extraction</title>
+        
+          <description>&lt;h3 id=&quot;audio-feature-extraction&quot;&gt;Audio Feature Extraction&lt;/h3&gt;
+&lt;p&gt;Feature Extraction&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is feature extraction?
+    &lt;ul&gt;
+      &lt;li&gt;tall and big. 4 feet. 5 horns -&amp;gt; giraffe&lt;/li&gt;
+      &lt;li&gt;long nose -&amp;gt; elephant&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reason for feature extraction
+    &lt;ul&gt;
+      &lt;li&gt;decrease in data size&lt;/li&gt;
+      &lt;li&gt;increase in recognition&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 19:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_4-Audio_Feature_Extraction</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_4-Audio_Feature_Extraction</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Speech [3] - Audio Dataset</title>
+        
+          <description>&lt;h3 id=&quot;audio-dataset&quot;&gt;Audio Dataset&lt;/h3&gt;
+&lt;p&gt;Dataset&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Traning data for machine learning&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 17:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_3-Audio_Dataset</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_3-Audio_Dataset</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Speech [2] - Deep Learning Model</title>
+        
+          <description>&lt;h3 id=&quot;deep-learning-neural-network&quot;&gt;Deep Learning Neural Network&lt;/h3&gt;
+&lt;p&gt;Artificial Intelligence, Machine Learning, Deep Learning&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Artificial Intelligence
+    &lt;ul&gt;
+      &lt;li&gt;Machine Learning
+        &lt;ul&gt;
+          &lt;li&gt;Deep Learning&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 05:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_2-Deep_Learning_Model</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_2-Deep_Learning_Model</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Speech [1] - Basics of Sound</title>
+        
+          <description>&lt;h3 id=&quot;size-of-sound-and-frequency&quot;&gt;Size of sound and Frequency&lt;/h3&gt;
+&lt;p&gt;Sound&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physical vibration detected by ear which is recognized by human brain&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 03 May 2022 02:40:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/Speech_1-Basics_of_Sound</link>
+        <guid isPermaLink="true">http://localhost:4000/Speech_1-Basics_of_Sound</guid>
       </item>
       
     

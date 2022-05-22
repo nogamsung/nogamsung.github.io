@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-13T16:07:38+09:00</updated>
+  <updated>2022-05-22T21:49:29+09:00</updated>
   <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,163 @@
   
   
 
+  
+    <entry>
+      <title type="html">Spring [7] - AOP</title>
+      <link href="http://localhost:4000/Spring_7-AOP" rel="alternate" type="text/html" title="Spring [7] - AOP" />
+      <published>2022-05-13T06:26:00+09:00</published>
+      <updated>2022-05-13T06:26:00+09:00</updated>
+      <id>http://localhost:4000/Spring_7-AOP</id>
+      <content type="html" xml:base="http://localhost:4000/Spring_7-AOP">&lt;h3 id=&quot;situations-where-aop-is-needed&quot;&gt;Situations Where AOP is Needed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Measuring all of the method call time&lt;/li&gt;
+  &lt;li&gt;Cross-cutting concern vs. cores concern&lt;/li&gt;
+  &lt;li&gt;Find out member registration time, member lookup time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;MemberService member lookup time evaluation&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/service/MemberService.java&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.domain.Member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.repository.MemberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.springframework.transaction.annotation.Transactional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Transactional&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MemberService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MemberRepository&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MemberService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MemberRepository&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;memberRepository&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;validateDuplicateMember&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Verify duplicate member&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;join = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ms&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;validateDuplicateMember&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;findByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ifPresent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IllegalStateException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Existing Member.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;findMembers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;findAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;findMembers = &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ms&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;findOne&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memberRepository&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;findById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memberId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Problem&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Measuring member registration time or member lookup time is not the core concern&lt;/li&gt;
+  &lt;li&gt;Measuring time is corss-cutting concern&lt;/li&gt;
+  &lt;li&gt;Maintenance become difficult due to the mix of time measurement logics and core business logic&lt;/li&gt;
+  &lt;li&gt;It is difficult to create a seperate cross-cutting concern just for the time measurement&lt;/li&gt;
+  &lt;li&gt;In order to change the time measurement logic, you have to change all of the logics.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;aop-application&quot;&gt;AOP Application&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;AOP: Aspect Oriented Programming&lt;/li&gt;
+  &lt;li&gt;Separate cross-cutting concern vs core concern&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Measuring time for AOP Registration&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/aop/TimeTraceAop.java&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello.hellospring.aop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.aspectj.lang.ProceedingJoinPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;org.aspectj.lang.annotation.Aspect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Aspect&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TimeTraceAop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ProceedingJoinPoint&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;joinPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Throwable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;START: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;joinPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;joinPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;proceed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentTimeMillis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;finish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;END: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;joinPoint&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;timeMs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ms&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/main/java/hello.hellospring/SpringConfig.java&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TimeTraceAop&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;timeTraceAop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TimeTraceAop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Solved&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;For member registration, member lookup, and etc., you can separate the core concern logics and the cross-cutting concern logics&lt;/li&gt;
+  &lt;li&gt;Allows the core concern logics to be clean and simple&lt;/li&gt;
+  &lt;li&gt;If you need to change the logics, you can change this one logic only&lt;/li&gt;
+  &lt;li&gt;Application to a sepcfic logic is possible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8&quot; target=&quot;_blank&quot;&gt;https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="backend" />
+      
+
+      
+        <summary type="html">Situations Where AOP is Needed Measuring all of the method call time Cross-cutting concern vs. cores concern Find out member registration time, member lookup time</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Spring [6] - Spring DB Access Technique</title>
@@ -1670,7 +1827,8 @@ Controller&lt;br /&gt;
       &lt;/li&gt;
       &lt;li&gt;spring-boot-starter-logging
   -logback, slf4j
-  #### Test Libraries&lt;/li&gt;
+        &lt;h4 id=&quot;test-libraries&quot;&gt;Test Libraries&lt;/h4&gt;
+      &lt;/li&gt;
       &lt;li&gt;spring-boot-starter-test
         &lt;ul&gt;
           &lt;li&gt;junit: Test framework&lt;/li&gt;
@@ -2087,41 +2245,123 @@ Hello
     </entry>
   
     <entry>
-      <title type="html">Speech [2] - Mel spectrogram Explanation</title>
-      <link href="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation" rel="alternate" type="text/html" title="Speech [2] - Mel spectrogram Explanation" />
-      <published>2022-05-03T02:40:00+09:00</published>
-      <updated>2022-05-03T02:40:00+09:00</updated>
-      <id>http://localhost:4000/Speech_2-Mel_spectrogram_Explanation</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_2-Mel_spectrogram_Explanation">&lt;h4 id=&quot;tip-&quot;&gt;Tip 👀&lt;/h4&gt;
-&lt;p&gt;Humans perceive frequency logarithmically&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-calculate-mel-frequency-using-frequency&quot;&gt;How to calculate Mel frequency using Frequency&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?m&amp;space;=&amp;space;2954&amp;space;*&amp;space;log(1&amp;plus;\frac{f}{500})&quot; title=&quot;https://latex.codecogs.com/svg.image?m = 2954 * log(1+\frac{f}{500})&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-calculate-frequency-using-mel-frequency&quot;&gt;How to calculate Frequency using Mel frequency&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f&amp;space;=&amp;space;700(10^{m/2595}-1)&quot; title=&quot;https://latex.codecogs.com/svg.image?f = 700(10^{m/2595}-1)&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-extract-mel-spectrogram&quot;&gt;How to extract Mel spectrogram&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Extract STFT&lt;/li&gt;
-  &lt;li&gt;Convert amplitude to DBs&lt;/li&gt;
-  &lt;li&gt;Convert frequencies to Mel scale&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;how-to-convert-frequencies-to-mel-scale&quot;&gt;How to convert frequencies to Mel scale&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Choose number of mel bands
+      <title type="html">Speech [6] - Improving Detection Rate</title>
+      <link href="http://localhost:4000/Speech_6-Improving_Recognition_Rate" rel="alternate" type="text/html" title="Speech [6] - Improving Detection Rate" />
+      <published>2022-05-03T23:40:00+09:00</published>
+      <updated>2022-05-03T23:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_6-Improving_Recognition_Rate</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_6-Improving_Recognition_Rate">&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
+&lt;p&gt;Keys that affect detection rate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Feature engineering
     &lt;ul&gt;
-      &lt;li&gt;Number of mel bands(e.g. 40, 60, 90, 128) depends on the problem&lt;/li&gt;
+      &lt;li&gt;Mel spectrogram&lt;/li&gt;
+      &lt;li&gt;MFCC&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Construct mel filter banks&lt;/li&gt;
-  &lt;li&gt;Apply mel filter banks to spectrogram&lt;/li&gt;
-&lt;/ol&gt;
+  &lt;li&gt;Model structure
+    &lt;ul&gt;
+      &lt;li&gt;CNN&lt;/li&gt;
+      &lt;li&gt;RNN&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of auditorial settings
+    &lt;ul&gt;
+      &lt;li&gt;indoor/outdoor&lt;/li&gt;
+      &lt;li&gt;reverberation, reverberation, distance, size of room&lt;/li&gt;
+      &lt;li&gt;masking, noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Affects of audio equipment
+    &lt;ul&gt;
+      &lt;li&gt;microphone feature&lt;/li&gt;
+      &lt;li&gt;recorder feature&lt;/li&gt;
+      &lt;li&gt;A/D transform parameter&lt;/li&gt;
+      &lt;li&gt;noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;h4 id=&quot;data-augmentation&quot;&gt;Data Augmentation&lt;/h4&gt;
+&lt;p&gt;Data Augmentation&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Change the shape of the training dataset to increase the number of training dataset&lt;/li&gt;
+  &lt;li&gt;Category
+    &lt;ul&gt;
+      &lt;li&gt;Random Rotation&lt;/li&gt;
+      &lt;li&gt;Flip(Horizontal and Vertical)&lt;/li&gt;
+      &lt;li&gt;Zoom&lt;/li&gt;
+      &lt;li&gt;Random Shift&lt;/li&gt;
+      &lt;li&gt;Brigthness&lt;/li&gt;
+      &lt;li&gt;Add Noise&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Audio Data Augmentation&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Image&lt;/td&gt;
+        &lt;td&gt;Audio&lt;/td&gt;
+        &lt;td&gt;Usability&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Rotation&lt;/td&gt;
+        &lt;td&gt;?&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Flip(Horizontal)&lt;/td&gt;
+        &lt;td&gt;Reverse play&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Shift (Vertical)&lt;/td&gt;
+        &lt;td&gt;Ptich up/down&lt;/td&gt;
+        &lt;td&gt;△&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Shift (Horizontal)&lt;/td&gt;
+        &lt;td&gt;Time shift&lt;/td&gt;
+        &lt;td&gt;O&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Zoom (Horizontal)&lt;/td&gt;
+        &lt;td&gt;Change speed&lt;/td&gt;
+        &lt;td&gt;△&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Brithness&lt;/td&gt;
+        &lt;td&gt;Volume up/down&lt;/td&gt;
+        &lt;td&gt;O?&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;fusion&quot;&gt;Fusion&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mix a number of feature extraction method to get an accurate result&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 1&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Huang, Zilong, Chen Liu, Hongbo Fei, Wei Li, Jinghu Yu, and Yi Cao. “Urban Sound Classification Based on 2-Order Dense Convolutional Network Using Dual Features.” Applied Acoustics 164 (July 2020)&lt;/li&gt;
+  &lt;li&gt;D-2-DenseNet with [MFCC, GFCC] is best in UrbanSound8K and Dcase2016&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Case 2&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Su, Yu, Ke Zhang, Jingyu Wang, and Kurosh Madani. “Environment Sound Classification Using a Two-Stream CNN Based on Decision-Level Fusion.” Sensor 19, no.7 (April 11, 2019): 1733&lt;/li&gt;
+  &lt;li&gt;TSCNN-DS is best&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -2143,7 +2383,7 @@ Hello
       
 
       
-        <summary type="html">Tip 👀 Humans perceive frequency logarithmically</summary>
+        <summary type="html">Improving Detection Rate Keys that affect detection rate Feature engineering Mel spectrogram MFCC … Model structure CNN RNN … Affects of auditorial settings indoor/outdoor reverberation, reverberation, distance, size of room masking, noise … Affects of audio equipment microphone feature recorder feature A/D transform parameter noise …</summary>
       
 
       
@@ -2151,44 +2391,58 @@ Hello
     </entry>
   
     <entry>
-      <title type="html">Speech [1] - Overview</title>
-      <link href="http://localhost:4000/Speech_1-Overview" rel="alternate" type="text/html" title="Speech [1] - Overview" />
-      <published>2022-05-02T03:17:00+09:00</published>
-      <updated>2022-05-02T03:17:00+09:00</updated>
-      <id>http://localhost:4000/Speech_1-Overview</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_1-Overview">&lt;h3 id=&quot;application&quot;&gt;Application&lt;/h3&gt;
+      <title type="html">Speech [7] - Audio Settings Effect</title>
+      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
+      <published>2022-05-03T21:40:00+09:00</published>
+      <updated>2022-05-03T21:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
+&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
+
+&lt;p&gt;Decrease in Sound&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Audio Classification&lt;/li&gt;
-  &lt;li&gt;Speech Recognition&lt;/li&gt;
-  &lt;li&gt;Speaker Verification&lt;/li&gt;
-  &lt;li&gt;Audio Denoising&lt;/li&gt;
-  &lt;li&gt;Audio Upsampling&lt;/li&gt;
-  &lt;li&gt;Music Information Retrieval
+  &lt;li&gt;The more distance from the audio, the more decrease in sound&lt;/li&gt;
+  &lt;li&gt;Depends on the type of audio
     &lt;ul&gt;
-      &lt;li&gt;Music Instrument Classification&lt;/li&gt;
-      &lt;li&gt;Mood Classification&lt;/li&gt;
+      &lt;li&gt;point sound source&lt;/li&gt;
+      &lt;li&gt;line seismic source&lt;/li&gt;
+      &lt;li&gt;flat seismic source&lt;/li&gt;
+      &lt;li&gt;flat sound source&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;two-stages-for-speech-processing&quot;&gt;Two stages for Speech Processing&lt;/h3&gt;
+&lt;h3 id=&quot;indoor-audio&quot;&gt;Indoor Audio&lt;/h3&gt;
+&lt;p&gt;Indoor audio effects&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Preparing Audio Data&lt;/li&gt;
-  &lt;li&gt;Development &amp;amp; Evaluation of Model&lt;/li&gt;
+  &lt;li&gt;Depends on the shape and ingredient of the wall
+    &lt;ul&gt;
+      &lt;li&gt;absorption, reflection&lt;/li&gt;
+      &lt;li&gt;echo&lt;/li&gt;
+      &lt;li&gt;sound focus&lt;/li&gt;
+      &lt;li&gt;dead point&lt;/li&gt;
+      &lt;li&gt;reverberation&lt;/li&gt;
+      &lt;li&gt;standing wave, room mode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;technology-commonly-used&quot;&gt;Technology commonly used&lt;/h3&gt;
+&lt;p&gt;Direct Sound, Early Reflections, Reverberation&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Python&lt;/li&gt;
-  &lt;li&gt;Tensorflow / PyTorch&lt;/li&gt;
-  &lt;li&gt;Librosa&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
+  &lt;li&gt;Direct Sound: the acutual sound arrive without any reflection&lt;/li&gt;
+  &lt;li&gt;Early Reflection: approx. 20~50ms delay of a single reflection from a single direction&lt;/li&gt;
+  &lt;li&gt;Reverberation: approx. 50ms delay of multiple reflection from various direction&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;p&gt;Critical Distance&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&quot; target=&quot;_blank&quot;&gt;https://www.youtube.com/watch?v=iCwMQJnKk2c&amp;amp;list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Reverberation sound is equal to actual sound&lt;/li&gt;
+  &lt;li&gt;To be continued…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -2210,7 +2464,7 @@ Hello
       
 
       
-        <summary type="html">Application Audio Classification Speech Recognition Speaker Verification Audio Denoising Audio Upsampling Music Information Retrieval Music Instrument Classification Mood Classification …</summary>
+        <summary type="html">Transfer of audio Reflection, Refraction, Diffraction</summary>
       
 
       
