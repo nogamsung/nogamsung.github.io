@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-22T21:49:29+09:00</updated>
+  <updated>2022-05-24T15:04:08+09:00</updated>
   <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
 
   
@@ -2245,6 +2245,87 @@ Hello
     </entry>
   
     <entry>
+      <title type="html">Speech [7] - Audio Settings Effect</title>
+      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
+      <published>2022-05-04T00:40:00+09:00</published>
+      <updated>2022-05-04T00:40:00+09:00</updated>
+      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
+&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
+
+&lt;p&gt;Decrease in Sound&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The more distance from the audio, the more decrease in sound&lt;/li&gt;
+  &lt;li&gt;Depends on the type of audio
+    &lt;ul&gt;
+      &lt;li&gt;point sound source&lt;/li&gt;
+      &lt;li&gt;line seismic source&lt;/li&gt;
+      &lt;li&gt;flat seismic source&lt;/li&gt;
+      &lt;li&gt;flat sound source&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;indoor-audio&quot;&gt;Indoor Audio&lt;/h3&gt;
+&lt;p&gt;Indoor audio effects&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Depends on the shape and ingredient of the wall
+    &lt;ul&gt;
+      &lt;li&gt;absorption, reflection&lt;/li&gt;
+      &lt;li&gt;echo&lt;/li&gt;
+      &lt;li&gt;sound focus&lt;/li&gt;
+      &lt;li&gt;dead point&lt;/li&gt;
+      &lt;li&gt;reverberation&lt;/li&gt;
+      &lt;li&gt;standing wave, room mode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Direct Sound, Early Reflections, Reverberation&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Direct Sound: the acutual sound arrive without any reflection&lt;/li&gt;
+  &lt;li&gt;Early Reflection: approx. 20~50ms delay of a single reflection from a single direction&lt;/li&gt;
+  &lt;li&gt;Reverberation: approx. 50ms delay of multiple reflection from various direction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Critical Distance&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reverberation sound is equal to actual sound&lt;/li&gt;
+  &lt;li&gt;To be continued…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ai" />
+      
+
+      
+        <summary type="html">Transfer of audio Reflection, Refraction, Diffraction</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Speech [6] - Improving Detection Rate</title>
       <link href="http://localhost:4000/Speech_6-Improving_Recognition_Rate" rel="alternate" type="text/html" title="Speech [6] - Improving Detection Rate" />
       <published>2022-05-03T23:40:00+09:00</published>
@@ -2384,87 +2465,6 @@ Hello
 
       
         <summary type="html">Improving Detection Rate Keys that affect detection rate Feature engineering Mel spectrogram MFCC … Model structure CNN RNN … Affects of auditorial settings indoor/outdoor reverberation, reverberation, distance, size of room masking, noise … Affects of audio equipment microphone feature recorder feature A/D transform parameter noise …</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Speech [7] - Audio Settings Effect</title>
-      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
-      <published>2022-05-03T21:40:00+09:00</published>
-      <updated>2022-05-03T21:40:00+09:00</updated>
-      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
-&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
-
-&lt;p&gt;Decrease in Sound&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The more distance from the audio, the more decrease in sound&lt;/li&gt;
-  &lt;li&gt;Depends on the type of audio
-    &lt;ul&gt;
-      &lt;li&gt;point sound source&lt;/li&gt;
-      &lt;li&gt;line seismic source&lt;/li&gt;
-      &lt;li&gt;flat seismic source&lt;/li&gt;
-      &lt;li&gt;flat sound source&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;indoor-audio&quot;&gt;Indoor Audio&lt;/h3&gt;
-&lt;p&gt;Indoor audio effects&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Depends on the shape and ingredient of the wall
-    &lt;ul&gt;
-      &lt;li&gt;absorption, reflection&lt;/li&gt;
-      &lt;li&gt;echo&lt;/li&gt;
-      &lt;li&gt;sound focus&lt;/li&gt;
-      &lt;li&gt;dead point&lt;/li&gt;
-      &lt;li&gt;reverberation&lt;/li&gt;
-      &lt;li&gt;standing wave, room mode&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Direct Sound, Early Reflections, Reverberation&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Direct Sound: the acutual sound arrive without any reflection&lt;/li&gt;
-  &lt;li&gt;Early Reflection: approx. 20~50ms delay of a single reflection from a single direction&lt;/li&gt;
-  &lt;li&gt;Reverberation: approx. 50ms delay of multiple reflection from various direction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Critical Distance&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reverberation sound is equal to actual sound&lt;/li&gt;
-  &lt;li&gt;To be continued…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">Transfer of audio Reflection, Refraction, Diffraction</summary>
       
 
       
