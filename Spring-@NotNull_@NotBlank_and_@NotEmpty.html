@@ -43,17 +43,17 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring - @NotNull, @NotBlank, and @NotEmpty" />
-    <meta property="og:description" content="Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Does not accept: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") private String name; } @NotEmpty Does" />
+    <meta property="og:description" content="Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Rejects: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") // Reject null private String name; } @NotEmpty" />
     <meta property="og:url" content="http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-05-13T06:26:00+09:00" />
-    <meta property="article:modified_time" content="2022-05-13T06:26:00+09:00" />
+    <meta property="article:published_time" content="2022-06-23T23:26:00+09:00" />
+    <meta property="article:modified_time" content="2022-06-23T23:26:00+09:00" />
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring - @NotNull, @NotBlank, and @NotEmpty" />
-    <meta name="twitter:description" content="Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Does not accept: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") private String name; } @NotEmpty Does" />
+    <meta name="twitter:description" content="Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Rejects: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") // Reject null private String name; } @NotEmpty" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -85,7 +85,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty"
     },
-    "description": "Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Does not accept: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") private String name; } @NotEmpty Does"
+    "description": "Difference between @NotNull, @NotEmpty, and @NotBlank @NotNull, @NotEmpty, or @NotBlank are used to validate that the data is not either null, blank or empty. @NotNull Rejects: null Accepts: "" " " public class Request { @NotNull(message = "Name must not be null") // Reject null private String name; } @NotEmpty"
 }
     </script>
 
@@ -160,7 +160,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="13 May 2022">13 May 2022</time>
+                    <time class="post-full-meta-date" datetime="23 June 2022">23 June 2022</time>
                     
                     <span class="date-divider">/</span>
                     
@@ -185,29 +185,35 @@ into the {body} of the default.hbs template -->
 <p><code class="language-plaintext highlighter-rouge">@NotNull</code>, <code class="language-plaintext highlighter-rouge">@NotEmpty</code>, or <code class="language-plaintext highlighter-rouge">@NotBlank</code> are used to validate that the data is not either null, blank or empty.</p>
 
 <h4 id="notnull"><code class="language-plaintext highlighter-rouge">@NotNull</code></h4>
-<p>Does not accept:</p>
+<p>Rejects:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">null</code>
-Accepts:</li>
+  <li><code class="language-plaintext highlighter-rouge">null</code></li>
+</ul>
+
+<p>Accepts:</p>
+<ul>
   <li><code class="language-plaintext highlighter-rouge">""</code></li>
   <li><code class="language-plaintext highlighter-rouge">" "</code></li>
 </ul>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Request</span> <span class="o">{</span>
-    <span class="nd">@NotNull</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be null"</span><span class="o">)</span>
+    <span class="nd">@NotNull</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be null"</span><span class="o">)</span> <span class="c1">// Reject null</span>
     <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <h4 id="notempty"><code class="language-plaintext highlighter-rouge">@NotEmpty</code></h4>
-<p>Does not accept:</p>
+<p>Rejects:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">null</code></li>
-  <li><code class="language-plaintext highlighter-rouge">""</code>
-Accepts:</li>
+  <li><code class="language-plaintext highlighter-rouge">""</code></li>
+</ul>
+
+<p>Accepts:</p>
+<ul>
   <li><code class="language-plaintext highlighter-rouge">" "</code>
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Request</span> <span class="o">{</span>
-  <span class="nd">@NotEmpty</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be empty"</span><span class="o">)</span>
+  <span class="nd">@NotEmpty</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be empty"</span><span class="o">)</span> <span class="c1">// Reject empty</span>
   <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
@@ -215,13 +221,13 @@ Accepts:</li>
 </ul>
 
 <h4 id="notblank"><code class="language-plaintext highlighter-rouge">@NotBlank</code></h4>
-<p>Does not accept:</p>
+<p>Rejects:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">null</code></li>
   <li><code class="language-plaintext highlighter-rouge">""</code></li>
   <li><code class="language-plaintext highlighter-rouge">" "</code>
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Request</span> <span class="o">{</span>
-  <span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be blank"</span><span class="o">)</span>
+  <span class="nd">@NotBlank</span><span class="o">(</span><span class="n">message</span> <span class="o">=</span> <span class="s">"Name must not be blank"</span><span class="o">)</span> <span class="c1">// Reject blank</span>
   <span class="kd">private</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
@@ -333,6 +339,14 @@ Accepts:</li>
                         
                         
                         
+                        
+                         <li><a href="/Spring-@CreatedDate_and_@LastModifiedDate">Spring - @CreatedDate and @LastModifiedDate</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
                             
                             
                         
@@ -354,8 +368,7 @@ Accepts:</li>
                         
                         
                         
-                         <li><a href="/Spring_5-Web_MVC_Development">Spring [5] - Web MVC Development</a></li>
-                            
+                        
                             
                             
                             
@@ -413,7 +426,7 @@ Accepts:</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/backend/">
                         
-                        See all 8 posts →
+                        See all 9 posts →
                         
                     </a>
                 </footer>
@@ -422,6 +435,58 @@ Accepts:</li>
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Spring-@CreatedDate_and_@LastModifiedDate">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/spring-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Spring-@CreatedDate_and_@LastModifiedDate">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Backend</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Spring - @CreatedDate and @LastModifiedDate</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Using @CreatedDate and @LastModifiedDate
+Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->

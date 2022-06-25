@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-06-25T19:25:08+09:00</updated>
+  <updated>2022-06-25T20:48:01+09:00</updated>
   <id>http://localhost:4000/author/gs97ahn/feed.xml</id>
 
   
@@ -32,39 +32,112 @@
 
   
     <entry>
+      <title type="html">Spring - @CreatedDate and @LastModifiedDate</title>
+      <link href="http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate" rel="alternate" type="text/html" title="Spring - @CreatedDate and @LastModifiedDate" />
+      <published>2022-06-24T22:26:00+09:00</published>
+      <updated>2022-06-24T22:26:00+09:00</updated>
+      <id>http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate</id>
+      <content type="html" xml:base="http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate">&lt;h3 id=&quot;using-createddate-and-lastmodifieddate&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt; to avoid the lines of code for implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BaseTimeEntity.java&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Getter&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@MappedSuperclass&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@EntityListeners&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AuditingEntityListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BaseTimeEntity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@CreatedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage created date&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createdDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@LastModifiedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage last modified date&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lastModifiedDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Application.java&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@EnableJpaAuditing&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Enable JPA Auditing&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Use the above BaseTimeEntity class and extend it to the Entity classes, it will automatically manage &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=15871738&quot; target=&quot;_blank&quot;&gt;스프링 부트와 AWS로 혼자 구현하는 웹 서비스&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="backend" />
+      
+
+      
+        <summary type="html">Using @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Spring - @NotNull, @NotBlank, and @NotEmpty</title>
       <link href="http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty" rel="alternate" type="text/html" title="Spring - @NotNull, @NotBlank, and @NotEmpty" />
-      <published>2022-05-13T06:26:00+09:00</published>
-      <updated>2022-05-13T06:26:00+09:00</updated>
+      <published>2022-06-23T23:26:00+09:00</published>
+      <updated>2022-06-23T23:26:00+09:00</updated>
       <id>http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty</id>
       <content type="html" xml:base="http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty">&lt;h3 id=&quot;difference-between-notnull-notempty-and-notblank&quot;&gt;Difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotNull&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotEmpty&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotNull&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotEmpty&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; are used to validate that the data is not either null, blank or empty.&lt;/p&gt;
 
 &lt;h4 id=&quot;notnull&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotNull&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;Does not accept:&lt;/p&gt;
+&lt;p&gt;Rejects:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;
-Accepts:&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Accepts:&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@NotNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be null&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@NotNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be null&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reject null&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;notempty&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotEmpty&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;Does not accept:&lt;/p&gt;
+&lt;p&gt;Rejects:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt;
-Accepts:&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Accepts:&lt;/p&gt;
+&lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt;
     &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@NotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be empty&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@NotEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be empty&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reject empty&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
@@ -72,13 +145,13 @@ Accepts:&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;notblank&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;Does not accept:&lt;/p&gt;
+&lt;p&gt;Rejects:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt;
     &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;nd&quot;&gt;@NotBlank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be blank&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@NotBlank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Name must not be blank&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Reject blank&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
@@ -2323,87 +2396,6 @@ Hello
 
       
         <summary type="html">SQL - Overview Many developers say that SQL is their go-to database when starting a new project, even though SQL is more than 40 years old Billions of dollars were invested to create a new form of database(mongoDB, Cloud Firestore, etc.), but people still love SQL MySQL is an open source database: content management system like wordpress ecommerce platforms like shopify social media giants like twitter CRUD Create Read Update Delete Model and join relational data</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Speech [7] - Audio Settings Effect</title>
-      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
-      <published>2022-05-04T00:40:00+09:00</published>
-      <updated>2022-05-04T00:40:00+09:00</updated>
-      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
-      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
-&lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
-
-&lt;p&gt;Decrease in Sound&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The more distance from the audio, the more decrease in sound&lt;/li&gt;
-  &lt;li&gt;Depends on the type of audio
-    &lt;ul&gt;
-      &lt;li&gt;point sound source&lt;/li&gt;
-      &lt;li&gt;line seismic source&lt;/li&gt;
-      &lt;li&gt;flat seismic source&lt;/li&gt;
-      &lt;li&gt;flat sound source&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;indoor-audio&quot;&gt;Indoor Audio&lt;/h3&gt;
-&lt;p&gt;Indoor audio effects&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Depends on the shape and ingredient of the wall
-    &lt;ul&gt;
-      &lt;li&gt;absorption, reflection&lt;/li&gt;
-      &lt;li&gt;echo&lt;/li&gt;
-      &lt;li&gt;sound focus&lt;/li&gt;
-      &lt;li&gt;dead point&lt;/li&gt;
-      &lt;li&gt;reverberation&lt;/li&gt;
-      &lt;li&gt;standing wave, room mode&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Direct Sound, Early Reflections, Reverberation&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Direct Sound: the acutual sound arrive without any reflection&lt;/li&gt;
-  &lt;li&gt;Early Reflection: approx. 20~50ms delay of a single reflection from a single direction&lt;/li&gt;
-  &lt;li&gt;Reverberation: approx. 50ms delay of multiple reflection from various direction&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Critical Distance&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reverberation sound is equal to actual sound&lt;/li&gt;
-  &lt;li&gt;To be continued…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Acoustics Lecture by &lt;a href=&quot;http://profoh.campushomepage.com/aboutuspage.asp?catalogid=profoh&amp;amp;language=ko&quot; target=&quot;_blank&quot;&gt;Wongeun Oh&lt;/a&gt; in &lt;a href=&quot;https://www.ask.or.kr/&quot; target=&quot;_blank&quot;&gt;The Acoustical Society of Korea&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="ai" />
-      
-
-      
-        <summary type="html">Transfer of audio Reflection, Refraction, Diffraction</summary>
       
 
       

@@ -11,7 +11,7 @@
 
 
 
-    <title>Spring [7] - AOP</title>
+    <title>Spring - @CreatedDate and @LastModifiedDate</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -36,24 +36,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Computer Science & Engineering" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/Spring_7-AOP" />
+    <link rel="canonical" href="http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Spring [7] - AOP" />
-    <meta property="og:description" content="Situations Where AOP is Needed Measuring all of the method call time Cross-cutting concern vs. cores concern Find out member registration time, member lookup time MemberService member lookup time evaluation src/main/java/hello.hellospring/service/MemberService.java package hello.hellospring.service; import hello.hellospring.domain.Member; import hello.hellospring.repository.MemberRepository; import org.springframework.transaction.annotation.Transactional; import java.util.List; import java.util.Optional; @Transactional public class MemberService { private final" />
-    <meta property="og:url" content="http://localhost:4000/Spring_7-AOP" />
+    <meta property="og:title" content="Spring - @CreatedDate and @LastModifiedDate" />
+    <meta property="og:description" content="Using @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } Application.java @EnableJpaAuditing // Enable" />
+    <meta property="og:url" content="http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-05-13T06:26:00+09:00" />
-    <meta property="article:modified_time" content="2022-05-13T06:26:00+09:00" />
+    <meta property="article:published_time" content="2022-06-24T22:26:00+09:00" />
+    <meta property="article:modified_time" content="2022-06-24T22:26:00+09:00" />
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spring [7] - AOP" />
-    <meta name="twitter:description" content="Situations Where AOP is Needed Measuring all of the method call time Cross-cutting concern vs. cores concern Find out member registration time, member lookup time MemberService member lookup time evaluation src/main/java/hello.hellospring/service/MemberService.java package hello.hellospring.service; import hello.hellospring.domain.Member; import hello.hellospring.repository.MemberRepository; import org.springframework.transaction.annotation.Transactional; import java.util.List; import java.util.Optional; @Transactional public class MemberService { private final" />
+    <meta name="twitter:title" content="Spring - @CreatedDate and @LastModifiedDate" />
+    <meta name="twitter:description" content="Using @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } Application.java @EnableJpaAuditing // Enable" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -74,7 +74,7 @@
         "name": "Geomseong Ahn's Blog",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/Spring_7-AOP",
+    "url": "http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/built/images/spring-logo.png",
@@ -83,9 +83,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/Spring_7-AOP"
+        "@id": "http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate"
     },
-    "description": "Situations Where AOP is Needed Measuring all of the method call time Cross-cutting concern vs. cores concern Find out member registration time, member lookup time MemberService member lookup time evaluation src/main/java/hello.hellospring/service/MemberService.java package hello.hellospring.service; import hello.hellospring.domain.Member; import hello.hellospring.repository.MemberRepository; import org.springframework.transaction.annotation.Transactional; import java.util.List; import java.util.Optional; @Transactional public class MemberService { private final"
+    "description": "Using @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } Application.java @EnableJpaAuditing // Enable"
 }
     </script>
 
@@ -98,7 +98,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Spring [7] - AOP" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Spring - @CreatedDate and @LastModifiedDate" href="/feed.xml" />
 
 
 </head>
@@ -160,7 +160,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="13 May 2022">13 May 2022</time>
+                    <time class="post-full-meta-date" datetime="24 June 2022">24 June 2022</time>
                     
                     <span class="date-divider">/</span>
                     
@@ -170,7 +170,7 @@ into the {body} of the default.hbs template -->
                     
                     
                 </section>
-                <h1 class="post-full-title">Spring [7] - AOP</h1>
+                <h1 class="post-full-title">Spring - @CreatedDate and @LastModifiedDate</h1>
             </header>
 
             
@@ -180,129 +180,39 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h3 id="situations-where-aop-is-needed">Situations Where AOP is Needed</h3>
-<ul>
-  <li>Measuring all of the method call time</li>
-  <li>Cross-cutting concern vs. cores concern</li>
-  <li>Find out member registration time, member lookup time</li>
-</ul>
+                    <h3 id="using-createddate-and-lastmodifieddate">Using <code class="language-plaintext highlighter-rouge">@CreatedDate</code> and <code class="language-plaintext highlighter-rouge">@LastModifiedDate</code></h3>
+<p>Use <code class="language-plaintext highlighter-rouge">@CreatedDate</code> and <code class="language-plaintext highlighter-rouge">@LastModifiedDate</code> to avoid the lines of code for implementing <code class="language-plaintext highlighter-rouge">createdDate</code> and <code class="language-plaintext highlighter-rouge">lastModifiedDate</code>.</p>
 
-<p>MemberService member lookup time evaluation<br />
-<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/service/MemberService.java</code></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.service</span><span class="o">;</span>
+<p><code class="language-plaintext highlighter-rouge">BaseTimeEntity.java</code></p>
 
-<span class="kn">import</span> <span class="nn">hello.hellospring.domain.Member</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">hello.hellospring.repository.MemberRepository</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
-
-<span class="nd">@Transactional</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberService</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">;</span>
-
-    <span class="kd">public</span> <span class="nf">MemberService</span><span class="o">(</span><span class="nc">MemberRepository</span> <span class="n">memberRepository</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">this</span><span class="o">.</span><span class="na">memberRepository</span> <span class="o">=</span> <span class="n">memberRepository</span><span class="o">;</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="nc">Long</span> <span class="nf">join</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member</span><span class="o">)</span> <span class="o">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="n">validateDuplicateMember</span><span class="o">(</span><span class="n">member</span><span class="o">);</span> <span class="c1">// Verify duplicate member</span>
-            <span class="n">memberRepository</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
-            <span class="k">return</span> <span class="n">member</span><span class="o">.</span><span class="na">getId</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-            <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-            <span class="kt">long</span> <span class="n">timeMs</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="o">;</span>
-            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"join = "</span> <span class="o">+</span> <span class="n">timeMs</span> <span class="o">+</span> <span class="s">"ms"</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">validateDuplicateMember</span><span class="o">(</span><span class="nc">Member</span> <span class="n">member</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">memberRepository</span><span class="o">.</span><span class="na">findByName</span><span class="o">(</span><span class="n">member</span><span class="o">.</span><span class="na">getName</span><span class="o">())</span>
-            <span class="o">.</span><span class="na">ifPresent</span><span class="o">(</span><span class="n">m</span> <span class="o">-&gt;</span> <span class="o">{</span>
-                <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="s">"Existing Member."</span><span class="o">);</span>
-            <span class="o">});</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findMembers</span><span class="o">()</span> <span class="o">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="n">memberRepository</span><span class="o">.</span><span class="na">findAll</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-            <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-            <span class="kt">long</span> <span class="n">timeMs</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="o">;</span>
-            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"findMembers = "</span> <span class="o">+</span> <span class="n">timeMs</span> <span class="o">+</span> <span class="s">"ms"</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="kd">public</span> <span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="nf">findOne</span><span class="o">(</span><span class="nc">Long</span> <span class="n">memberId</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">memberRepository</span><span class="o">.</span><span class="na">findById</span><span class="o">(</span><span class="n">memberId</span><span class="o">);</span>
-    <span class="o">}</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Getter</span>
+<span class="nd">@MappedSuperclass</span>
+<span class="nd">@EntityListeners</span><span class="o">(</span><span class="nc">AuditingEntityListener</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BaseTimeEntity</span> <span class="o">{</span>
+    <span class="nd">@CreatedDate</span> <span class="c1">// Manage created date</span>
+    <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">createdDate</span><span class="o">;</span>
+    <span class="nd">@LastModifiedDate</span> <span class="c1">// Manage last modified date</span>
+    <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">lastModifiedDate</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Problem</p>
-<ul>
-  <li>Measuring member registration time or member lookup time is not the core concern</li>
-  <li>Measuring time is corss-cutting concern</li>
-  <li>Maintenance become difficult due to the mix of time measurement logics and core business logic</li>
-  <li>It is difficult to create a seperate cross-cutting concern just for the time measurement</li>
-  <li>In order to change the time measurement logic, you have to change all of the logics.</li>
-</ul>
+<p><code class="language-plaintext highlighter-rouge">Application.java</code></p>
 
-<h4 id="aop-application">AOP Application</h4>
-<ul>
-  <li>AOP: Aspect Oriented Programming</li>
-  <li>Separate cross-cutting concern vs core concern</li>
-</ul>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@EnableJpaAuditing</span> <span class="c1">// Enable JPA Auditing</span>
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Application</span> <span class="o">{</span>
 
-<p>Measuring time for AOP Registration<br />
-<code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/aop/TimeTraceAop.java</code></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">hello.hellospring.aop</span><span class="o">;</span>
-
-<span class="kn">import</span> <span class="nn">org.aspectj.lang.ProceedingJoinPoint</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.Aspect</span><span class="o">;</span>
-
-<span class="nd">@Aspect</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimeTraceAop</span> <span class="o">{</span>
-
-    <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">execute</span><span class="o">(</span><span class="nc">ProceedingJoinPoint</span> <span class="n">joinPoint</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Throwable</span> <span class="o">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"START: "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="k">return</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">proceed</span><span class="o">();</span>
-        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-            <span class="kt">long</span> <span class="n">finish</span> <span class="o">=</span> <span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
-            <span class="kt">long</span> <span class="n">timeMs</span> <span class="o">=</span> <span class="n">finish</span> <span class="o">-</span> <span class="n">start</span><span class="o">;</span>
-            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"END: "</span> <span class="o">+</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">toString</span><span class="o">()</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">timeMs</span> <span class="o">+</span> <span class="s">"ms"</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">Application</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">src/main/java/hello.hellospring/SpringConfig.java</code></p>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@Bean</span>
-    <span class="kd">public</span> <span class="nc">TimeTraceAop</span> <span class="nf">timeTraceAop</span><span class="o">()</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">TimeTraceAop</span><span class="o">();</span>
-    <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Solved</p>
-<ul>
-  <li>For member registration, member lookup, and etc., you can separate the core concern logics and the cross-cutting concern logics</li>
-  <li>Allows the core concern logics to be clean and simple</li>
-  <li>If you need to change the logics, you can change this one logic only</li>
-  <li>Application to a sepcfic logic is possible</li>
-</ul>
+<p>Use the above BaseTimeEntity class and extend it to the Entity classes, it will automatically manage <code class="language-plaintext highlighter-rouge">createdDate</code> and <code class="language-plaintext highlighter-rouge">lastModifiedDate</code>.</p>
 
 <h3 id="reference">Reference</h3>
 <ul>
-  <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" target="_blank">https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8</a></li>
+  <li><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=15871738" target="_blank">스프링 부트와 AWS로 혼자 구현하는 웹 서비스</a></li>
 </ul>
 
                 </div>
@@ -361,9 +271,9 @@ into the {body} of the default.hbs template -->
                 <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
-                        var this_page_url = 'http://localhost:4000/Spring_7-AOP';
-                        var this_page_identifier = '/Spring_7-AOP';
-                        var this_page_title = 'Spring [7] - AOP';
+                        var this_page_url = 'http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate';
+                        var this_page_identifier = '/Spring-@CreatedDate_and_@LastModifiedDate';
+                        var this_page_title = 'Spring - @CreatedDate and @LastModifiedDate';
                     };
                     (function () {
                         var d = document, s = d.createElement('script');
@@ -405,10 +315,6 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                        
-                         <li><a href="/Spring-@CreatedDate_and_@LastModifiedDate">Spring - @CreatedDate and @LastModifiedDate</a></li>
-                            
-                            
                             
                             
                         
@@ -421,6 +327,10 @@ into the {body} of the default.hbs template -->
                             
                         
                         
+                        
+                         <li><a href="/Spring_7-AOP">Spring [7] - AOP</a></li>
+                            
+                            
                             
                             
                         
@@ -502,6 +412,9 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
             
 
     <article class="post-card post-template">
@@ -554,61 +467,6 @@ into the {body} of the default.hbs template -->
 
             
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-            
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/Spring_6-Spring_DB_Access_Technique">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/spring-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Spring_6-Spring_DB_Access_Technique">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Backend</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Spring [6] - Spring DB Access Technique</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>H2 Database Installation
-Provide light and convenient DB for development and test purpose
-
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      8 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
         </div>
     </div>
 </aside>
@@ -622,20 +480,20 @@ Provide light and convenient DB for development and test purpose
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Spring [7] - AOP</div>
+    <div class="floating-header-title">Spring - @CreatedDate and @LastModifiedDate</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
         <a class="floating-header-share-tw"
-            href="https://twitter.com/share?text=Spring+%5B7%5D+-+AOP&amp;url=https://gs97ahn.github.io/Spring_7-AOP"
+            href="https://twitter.com/share?text=Spring+-+%40CreatedDate+and+%40LastModifiedDate&amp;url=https://gs97ahn.github.io/Spring-@CreatedDate_and_@LastModifiedDate"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
         <a class="floating-header-share-fb"
-            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Spring_7-AOP"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Spring-@CreatedDate_and_@LastModifiedDate"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
