@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Computer Science &amp; Engineering</description>
     <link>
-    http://localhost:4000</link>
+    </link>
     
       
       <item>
@@ -17,8 +17,8 @@
         
         <pubDate>Fri, 24 Jun 2022 22:26:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring-@CreatedDate_and_@LastModifiedDate</guid>
+        /Spring-@CreatedDate_and_@LastModifiedDate</link>
+        <guid isPermaLink="true">/Spring-@CreatedDate_and_@LastModifiedDate</guid>
       </item>
       
     
@@ -32,8 +32,8 @@
         
         <pubDate>Thu, 23 Jun 2022 23:26:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring-@NotNull_@NotBlank_and_@NotEmpty</guid>
+        /Spring-@NotNull_@NotBlank_and_@NotEmpty</link>
+        <guid isPermaLink="true">/Spring-@NotNull_@NotBlank_and_@NotEmpty</guid>
       </item>
       
     
@@ -52,8 +52,8 @@
         
         <pubDate>Fri, 13 May 2022 06:26:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_7-AOP</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_7-AOP</guid>
+        /Spring_7-AOP</link>
+        <guid isPermaLink="true">/Spring_7-AOP</guid>
       </item>
       
     
@@ -68,8 +68,8 @@
         
         <pubDate>Thu, 12 May 2022 06:26:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_6-Spring_DB_Access_Technique</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_6-Spring_DB_Access_Technique</guid>
+        /Spring_6-Spring_DB_Access_Technique</link>
+        <guid isPermaLink="true">/Spring_6-Spring_DB_Access_Technique</guid>
       </item>
       
     
@@ -85,8 +85,8 @@
         
         <pubDate>Mon, 09 May 2022 06:26:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_5-Web_MVC_Development</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_5-Web_MVC_Development</guid>
+        /Spring_5-Web_MVC_Development</link>
+        <guid isPermaLink="true">/Spring_5-Web_MVC_Development</guid>
       </item>
       
     
@@ -101,8 +101,8 @@
         
         <pubDate>Sat, 07 May 2022 10:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_4-Spring_Bin_and_Dependencies_Relation</guid>
+        /Spring_4-Spring_Bin_and_Dependencies_Relation</link>
+        <guid isPermaLink="true">/Spring_4-Spring_Bin_and_Dependencies_Relation</guid>
       </item>
       
     
@@ -121,8 +121,8 @@
         
         <pubDate>Sat, 07 May 2022 07:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_3-Backend_Development</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_3-Backend_Development</guid>
+        /Spring_3-Backend_Development</link>
+        <guid isPermaLink="true">/Spring_3-Backend_Development</guid>
       </item>
       
     
@@ -140,8 +140,8 @@
         
         <pubDate>Sat, 07 May 2022 06:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_2-Web_Development_Basics</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_2-Web_Development_Basics</guid>
+        /Spring_2-Web_Development_Basics</link>
+        <guid isPermaLink="true">/Spring_2-Web_Development_Basics</guid>
       </item>
       
     
@@ -159,8 +159,8 @@
         
         <pubDate>Sat, 07 May 2022 06:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Spring_1-Project_Environment_Setting</link>
-        <guid isPermaLink="true">http://localhost:4000/Spring_1-Project_Environment_Setting</guid>
+        /Spring_1-Project_Environment_Setting</link>
+        <guid isPermaLink="true">/Spring_1-Project_Environment_Setting</guid>
       </item>
       
     
@@ -194,8 +194,8 @@
         
         <pubDate>Thu, 05 May 2022 21:10:00 +0900</pubDate>
         <link>
-        http://localhost:4000/SQL-Overview</link>
-        <guid isPermaLink="true">http://localhost:4000/SQL-Overview</guid>
+        /SQL-Overview</link>
+        <guid isPermaLink="true">/SQL-Overview</guid>
       </item>
       
     
@@ -210,8 +210,8 @@
         
         <pubDate>Wed, 04 May 2022 00:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_7-Audio_Settings_Effect</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_7-Audio_Settings_Effect</guid>
+        /Speech_7-Audio_Settings_Effect</link>
+        <guid isPermaLink="true">/Speech_7-Audio_Settings_Effect</guid>
       </item>
       
     
@@ -259,8 +259,8 @@
         
         <pubDate>Tue, 03 May 2022 23:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_6-Improving_Recognition_Rate</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_6-Improving_Recognition_Rate</guid>
+        /Speech_6-Improving_Recognition_Rate</link>
+        <guid isPermaLink="true">/Speech_6-Improving_Recognition_Rate</guid>
       </item>
       
     
@@ -287,8 +287,8 @@
         
         <pubDate>Tue, 03 May 2022 21:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_5-Urban_Sound_Classification</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_5-Urban_Sound_Classification</guid>
+        /Speech_5-Urban_Sound_Classification</link>
+        <guid isPermaLink="true">/Speech_5-Urban_Sound_Classification</guid>
       </item>
       
     
@@ -317,8 +317,8 @@
         
         <pubDate>Tue, 03 May 2022 19:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_4-Audio_Feature_Extraction</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_4-Audio_Feature_Extraction</guid>
+        /Speech_4-Audio_Feature_Extraction</link>
+        <guid isPermaLink="true">/Speech_4-Audio_Feature_Extraction</guid>
       </item>
       
     
@@ -336,8 +336,8 @@
         
         <pubDate>Tue, 03 May 2022 17:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_3-Audio_Dataset</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_3-Audio_Dataset</guid>
+        /Speech_3-Audio_Dataset</link>
+        <guid isPermaLink="true">/Speech_3-Audio_Dataset</guid>
       </item>
       
     
@@ -363,8 +363,8 @@
         
         <pubDate>Tue, 03 May 2022 05:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_2-Deep_Learning_Model</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_2-Deep_Learning_Model</guid>
+        /Speech_2-Deep_Learning_Model</link>
+        <guid isPermaLink="true">/Speech_2-Deep_Learning_Model</guid>
       </item>
       
     
@@ -382,8 +382,8 @@
         
         <pubDate>Tue, 03 May 2022 02:40:00 +0900</pubDate>
         <link>
-        http://localhost:4000/Speech_1-Basics_of_Sound</link>
-        <guid isPermaLink="true">http://localhost:4000/Speech_1-Basics_of_Sound</guid>
+        /Speech_1-Basics_of_Sound</link>
+        <guid isPermaLink="true">/Speech_1-Basics_of_Sound</guid>
       </item>
       
     
