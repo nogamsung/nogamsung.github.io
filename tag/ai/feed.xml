@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/https://gs97ahn.github.io/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/https://gs97ahn.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-26T00:30:48+09:00</updated>
-  <id>http://localhost:4000/https://gs97ahn.github.io/tag/ai/feed.xml</id>
+  <link href="http://localhost:4000/tag/ai/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-07-03T17:31:48+09:00</updated>
+  <id>http://localhost:4000/tag/ai/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Speech [7] - Audio Settings Effect</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
+      <link href="http://localhost:4000/Speech_7-Audio_Settings_Effect" rel="alternate" type="text/html" title="Speech [7] - Audio Settings Effect" />
       <published>2022-05-04T00:40:00+09:00</published>
       <updated>2022-05-04T00:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_7-Audio_Settings_Effect</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_7-Audio_Settings_Effect</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_7-Audio_Settings_Effect">&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
 &lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
 
 &lt;p&gt;Decrease in Sound&lt;/p&gt;
@@ -114,11 +114,11 @@
   
     <entry>
       <title type="html">Speech [6] - Improving Detection Rate</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_6-Improving_Recognition_Rate" rel="alternate" type="text/html" title="Speech [6] - Improving Detection Rate" />
+      <link href="http://localhost:4000/Speech_6-Improving_Recognition_Rate" rel="alternate" type="text/html" title="Speech [6] - Improving Detection Rate" />
       <published>2022-05-03T23:40:00+09:00</published>
       <updated>2022-05-03T23:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_6-Improving_Recognition_Rate</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_6-Improving_Recognition_Rate">&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_6-Improving_Recognition_Rate</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_6-Improving_Recognition_Rate">&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
 &lt;p&gt;Keys that affect detection rate&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Feature engineering
@@ -260,11 +260,11 @@
   
     <entry>
       <title type="html">Speech [5] - Urban Sound Classification</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_5-Urban_Sound_Classification" rel="alternate" type="text/html" title="Speech [5] - Urban Sound Classification" />
+      <link href="http://localhost:4000/Speech_5-Urban_Sound_Classification" rel="alternate" type="text/html" title="Speech [5] - Urban Sound Classification" />
       <published>2022-05-03T21:40:00+09:00</published>
       <updated>2022-05-03T21:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_5-Urban_Sound_Classification</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_5-Urban_Sound_Classification">&lt;h4 id=&quot;1-feature-extraction&quot;&gt;1. Feature Extraction&lt;/h4&gt;
+      <id>http://localhost:4000/Speech_5-Urban_Sound_Classification</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_5-Urban_Sound_Classification">&lt;h4 id=&quot;1-feature-extraction&quot;&gt;1. Feature Extraction&lt;/h4&gt;
 &lt;p&gt;Urban Sound 8K Dataset&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;air_conditioner&lt;/li&gt;
@@ -409,11 +409,11 @@
   
     <entry>
       <title type="html">Speech [4] - Audio Feature Extraction</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_4-Audio_Feature_Extraction" rel="alternate" type="text/html" title="Speech [4] - Audio Feature Extraction" />
+      <link href="http://localhost:4000/Speech_4-Audio_Feature_Extraction" rel="alternate" type="text/html" title="Speech [4] - Audio Feature Extraction" />
       <published>2022-05-03T19:40:00+09:00</published>
       <updated>2022-05-03T19:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_4-Audio_Feature_Extraction</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_4-Audio_Feature_Extraction">&lt;h3 id=&quot;audio-feature-extraction&quot;&gt;Audio Feature Extraction&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_4-Audio_Feature_Extraction</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_4-Audio_Feature_Extraction">&lt;h3 id=&quot;audio-feature-extraction&quot;&gt;Audio Feature Extraction&lt;/h3&gt;
 &lt;p&gt;Feature Extraction&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;What is feature extraction?
@@ -649,11 +649,11 @@
   
     <entry>
       <title type="html">Speech [3] - Audio Dataset</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_3-Audio_Dataset" rel="alternate" type="text/html" title="Speech [3] - Audio Dataset" />
+      <link href="http://localhost:4000/Speech_3-Audio_Dataset" rel="alternate" type="text/html" title="Speech [3] - Audio Dataset" />
       <published>2022-05-03T17:40:00+09:00</published>
       <updated>2022-05-03T17:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_3-Audio_Dataset</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_3-Audio_Dataset">&lt;h3 id=&quot;audio-dataset&quot;&gt;Audio Dataset&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_3-Audio_Dataset</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_3-Audio_Dataset">&lt;h3 id=&quot;audio-dataset&quot;&gt;Audio Dataset&lt;/h3&gt;
 &lt;p&gt;Dataset&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Traning data for machine learning&lt;/li&gt;
@@ -781,11 +781,11 @@
   
     <entry>
       <title type="html">Speech [2] - Deep Learning Model</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_2-Deep_Learning_Model" rel="alternate" type="text/html" title="Speech [2] - Deep Learning Model" />
+      <link href="http://localhost:4000/Speech_2-Deep_Learning_Model" rel="alternate" type="text/html" title="Speech [2] - Deep Learning Model" />
       <published>2022-05-03T05:40:00+09:00</published>
       <updated>2022-05-03T05:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_2-Deep_Learning_Model</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_2-Deep_Learning_Model">&lt;h3 id=&quot;deep-learning-neural-network&quot;&gt;Deep Learning Neural Network&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_2-Deep_Learning_Model</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_2-Deep_Learning_Model">&lt;h3 id=&quot;deep-learning-neural-network&quot;&gt;Deep Learning Neural Network&lt;/h3&gt;
 &lt;p&gt;Artificial Intelligence, Machine Learning, Deep Learning&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Artificial Intelligence
@@ -917,11 +917,11 @@
   
     <entry>
       <title type="html">Speech [1] - Basics of Sound</title>
-      <link href="http://localhost:4000/https://gs97ahn.github.io/Speech_1-Basics_of_Sound" rel="alternate" type="text/html" title="Speech [1] - Basics of Sound" />
+      <link href="http://localhost:4000/Speech_1-Basics_of_Sound" rel="alternate" type="text/html" title="Speech [1] - Basics of Sound" />
       <published>2022-05-03T02:40:00+09:00</published>
       <updated>2022-05-03T02:40:00+09:00</updated>
-      <id>http://localhost:4000/https://gs97ahn.github.io/Speech_1-Basics_of_Sound</id>
-      <content type="html" xml:base="http://localhost:4000/https://gs97ahn.github.io/Speech_1-Basics_of_Sound">&lt;h3 id=&quot;size-of-sound-and-frequency&quot;&gt;Size of sound and Frequency&lt;/h3&gt;
+      <id>http://localhost:4000/Speech_1-Basics_of_Sound</id>
+      <content type="html" xml:base="http://localhost:4000/Speech_1-Basics_of_Sound">&lt;h3 id=&quot;size-of-sound-and-frequency&quot;&gt;Size of sound and Frequency&lt;/h3&gt;
 &lt;p&gt;Sound&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Physical vibration detected by ear which is recognized by human brain&lt;/li&gt;
