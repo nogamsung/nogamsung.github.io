@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Spring - build.gradle for Production</title>
+        
+          <description>&lt;h3 id=&quot;code-buildgradle-for-dockerization-and-production&quot;&gt;Code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; for Dockerization and Production&lt;/h3&gt;
+&lt;p&gt;The famous Byeong-Joon Song became a friend of mine recently, and apparently he uses this code for dockerization and production of Spring server. I looked at the code, and it is astonishing.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 03 Jul 2022 22:26:00 +0900</pubDate>
+        <link>
+        /Spring-build_gradle_for_Production</link>
+        <guid isPermaLink="true">/Spring-build_gradle_for_Production</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - @CreatedDate and @LastModifiedDate</title>
         
           <description>&lt;h3 id=&quot;using-createddate-and-lastmodifieddate&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
@@ -384,6 +400,22 @@
         <link>
         /Speech_1-Basics_of_Sound</link>
         <guid isPermaLink="true">/Speech_1-Basics_of_Sound</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Flutter - Video Splash Screen</title>
+        
+          <description>&lt;h3 id=&quot;use-video-as-a-splash-screen&quot;&gt;Use Video as a Splash Screen&lt;/h3&gt;
+&lt;p&gt;In Flutter, you can utilize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.mp4&lt;/code&gt; file for splash screen.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 04 Jul 2000 05:40:00 +0900</pubDate>
+        <link>
+        /Flutter-Video_Spalsh_Screen</link>
+        <guid isPermaLink="true">/Flutter-Video_Spalsh_Screen</guid>
       </item>
       
     

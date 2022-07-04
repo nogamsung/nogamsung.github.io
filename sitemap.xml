@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Spring-build_gradle_for_Production.html</loc>
+        
+        <lastmod>2022-07-03T22:26:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Spring-@CreatedDate_and_@LastModifiedDate.html</loc>
         
         <lastmod>2022-06-24T22:26:00+09:00</lastmod>
@@ -263,6 +279,22 @@
         <loc>/Speech_1-Basics_of_Sound.html</loc>
         
         <lastmod>2022-05-03T02:40:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Flutter-Video_Spalsh_Screen.html</loc>
+        
+        <lastmod>2000-07-04T05:40:00+09:00</lastmod>
         
 
         
