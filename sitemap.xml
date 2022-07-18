@@ -20,7 +20,23 @@
     </url>
     
     <url>
-        <loc>/Spring-@CreatedDate_and_@LastModifiedDate.html</loc>
+        <loc>/Spring-BaseTimeEntity_for_MongoDB.html</loc>
+        
+        <lastmod>2022-06-24T22:26:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Spring-BaseTimeEntity_for_SQL.html</loc>
         
         <lastmod>2022-06-24T22:26:00+09:00</lastmod>
         

@@ -33,8 +33,24 @@
         
         <pubDate>Fri, 24 Jun 2022 22:26:00 +0900</pubDate>
         <link>
-        /Spring-@CreatedDate_and_@LastModifiedDate</link>
-        <guid isPermaLink="true">/Spring-@CreatedDate_and_@LastModifiedDate</guid>
+        /Spring-BaseTimeEntity_for_MongoDB</link>
+        <guid isPermaLink="true">/Spring-BaseTimeEntity_for_MongoDB</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Spring - @CreatedDate and @LastModifiedDate</title>
+        
+          <description>&lt;h3 id=&quot;using-createddate-and-lastmodifieddate&quot;&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt; to avoid the lines of code for implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 24 Jun 2022 22:26:00 +0900</pubDate>
+        <link>
+        /Spring-BaseTimeEntity_for_SQL</link>
+        <guid isPermaLink="true">/Spring-BaseTimeEntity_for_SQL</guid>
       </item>
       
     
