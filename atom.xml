@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Spring - Data Type vs Object</title>
+        
+          <description>&lt;h3 id=&quot;which-one-to-use-char-vs-character&quot;&gt;Which One to Use? char vs Character&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Tue, 19 Jul 2022 00:22:00 +0900</pubDate>
+        <link>
+        /Spring-Data_Type_vs_Object</link>
+        <guid isPermaLink="true">/Spring-Data_Type_vs_Object</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>MongoDB - Versioning Schema</title>
         
           <description>&lt;h3 id=&quot;mongodb-vs-mysql&quot;&gt;MongoDB vs MySQL&lt;/h3&gt;
@@ -15,7 +30,7 @@
 
 </description>
         
-        <pubDate>Tue, 19 Jul 2022 03:15:00 +0900</pubDate>
+        <pubDate>Mon, 18 Jul 2022 22:15:00 +0900</pubDate>
         <link>
         /MongoDB-Versioning_Schema</link>
         <guid isPermaLink="true">/MongoDB-Versioning_Schema</guid>
@@ -31,7 +46,7 @@
 
 </description>
         
-        <pubDate>Tue, 19 Jul 2022 01:29:00 +0900</pubDate>
+        <pubDate>Mon, 18 Jul 2022 01:29:00 +0900</pubDate>
         <link>
         /Spring-BaseTimeEntity_for_MongoDB</link>
         <guid isPermaLink="true">/Spring-BaseTimeEntity_for_MongoDB</guid>

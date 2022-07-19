@@ -4,9 +4,25 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Spring-Data_Type_vs_Object.html</loc>
+        
+        <lastmod>2022-07-19T00:22:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/MongoDB-Versioning_Schema.html</loc>
         
-        <lastmod>2022-07-19T03:15:00+09:00</lastmod>
+        <lastmod>2022-07-18T22:15:00+09:00</lastmod>
         
 
         
@@ -22,7 +38,7 @@
     <url>
         <loc>/Spring-BaseTimeEntity_for_MongoDB.html</loc>
         
-        <lastmod>2022-07-19T01:29:00+09:00</lastmod>
+        <lastmod>2022-07-18T01:29:00+09:00</lastmod>
         
 
         
