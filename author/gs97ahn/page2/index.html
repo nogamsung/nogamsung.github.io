@@ -12,7 +12,7 @@
 
 
 
-    <title>All Posts</title>
+    <title>Author Page</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Web Font Setting -->
@@ -43,19 +43,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Computer Science & Engineering" />
     <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/archive" />
+    <link rel="canonical" href="/author/gs97ahn/page2/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="All Posts" />
+    <meta property="og:title" content="Author Page" />
     <meta property="og:description" content="Computer Science & Engineering" />
-    <meta property="og:url" content="/archive" />
+    <meta property="og:url" content="/author/gs97ahn/page2/" />
     <meta property="og:image" content="/assets/built/images/blog-cover.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="All Posts" />
+    <meta name="twitter:title" content="Author Page" />
     <meta name="twitter:description" content="Computer Science & Engineering" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/built/images/blog-cover.jpg" />
@@ -75,7 +75,7 @@
         "name": "Geomseong Ahn's Blog",
         "logo": "/"
     },
-    "url": "/archive",
+    "url": "/author/gs97ahn/page2/",
     "image": {
         "@type": "ImageObject",
         "url": "/assets/built/images/blog-cover.jpg",
@@ -84,7 +84,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/archive"
+        "@id": "/author/gs97ahn/page2/"
     },
     "description": "Computer Science & Engineering"
 }
@@ -99,24 +99,26 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="All Posts" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Author Page" href="/feed.xml" />
 
 
 </head>
 
 <body
-    class="page-template">
+    class="paged archive-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+        <!-- < default}} -->
+<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
 
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer">
-    <div class="inner">
-        <nav class="site-nav">
+<!-- #author  -->
+<!-- Everything inside the #author tags pulls data from the author -->
+
+    
+    <header class="site-header outer no-cover">
+        <div class="inner">
+            <nav class="site-nav">
     <div class="site-nav-left">
         
         
@@ -150,241 +152,111 @@ into the {body} of the default.hbs template -->
         
     </div>
 </nav>
-    </div>
-</header>
+            <div class="site-header-content">
+                
+                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="gs97ahn" />
+                
+                <h1 class="site-title">Geomseong Ahn</h1>
+                
+                    <h2 class="author-bio"><a href="gs97ahn.github.io/about/">Geomseong Ahn</a></h2>
+                
+                <div class="author-meta">
+                    
+                    <div class="author-stats">
+                        21 posts <span class="bull">&bull;</span>
+                    </div>
+                    
+                    
+                    
+                    <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed//author/gs97ahn/feed.xml" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
 
-<!-- Everything inside the #post tags pulls data from the post -->
-<!-- #post -->
+<!-- /author -->
 
+<!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  post page no-image">
-
-            <header class="post-full-header">
-                <h1 class="post-full-title">All Posts</h1>
-            </header>
-
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
-            <section class="post-full-content">
-                <div class="well article">
 
-    
-        <h2>2022</h2>
-        <ul>
-    
-    <li><span class="post-date">
+    <article class="post-card author-template">
         
-        2022-07-19 </span><a href="./MongoDB-Version_Control" target="_blank">Spring - BaseTimeEntity for MongoDB</a></li>
+            <a class="post-card-image-link" href="/Flutter-Video_Spalsh_Screen">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/flutter-logo.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Flutter-Video_Spalsh_Screen">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Frontend</span>
+                            
+                        
+                    
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-07-19 </span><a href="./Spring-BaseTimeEntity_for_MongoDB" target="_blank">Spring - BaseTimeEntity for MongoDB</a></li>
+                    <h2 class="post-card-title">Flutter - Video Splash Screen</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Use Video as a Splash Screen
+In Flutter, you can utilize .mp4 file for splash screen.
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-07-03 </span><a href="./Spring-build_gradle_for_Production" target="_blank">Spring - build.gradle for Production</a></li>
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="Geomseong Ahn" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">Geomseong Ahn</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-06-24 </span><a href="./Spring-BaseTimeEntity_for_SQL" target="_blank">Spring - BaseTimeEntity for SQL</a></li>
 
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-06-23 </span><a href="./Spring-@NotNull_@NotBlank_and_@NotEmpty" target="_blank">Spring - @NotNull, @NotBlank, and @NotEmpty</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-13 </span><a href="./Spring_7-AOP" target="_blank">Spring [7] - AOP</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-12 </span><a href="./Spring_6-Spring_DB_Access_Technique" target="_blank">Spring [6] - Spring DB Access Technique</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-09 </span><a href="./Spring_5-Web_MVC_Development" target="_blank">Spring [5] - Web MVC Development</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-07 </span><a href="./Spring_4-Spring_Bin_and_Dependencies_Relation" target="_blank">Spring [4] - Spring Bin and Dependencies Relation</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-07 </span><a href="./Spring_3-Backend_Development" target="_blank">Spring [3] - Backend Development</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-07 </span><a href="./Spring_2-Web_Development_Basics" target="_blank">Spring [2] - Web Development Basics</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-07 </span><a href="./Spring_1-Project_Environment_Setting" target="_blank">Spring [1] - Project Environment Setting</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-05 </span><a href="./SQL-Overview" target="_blank">SQL - Overview</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-04 </span><a href="./Speech_7-Audio_Settings_Effect" target="_blank">Speech [7] - Audio Settings Effect</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_6-Improving_Recognition_Rate" target="_blank">Speech [6] - Improving Detection Rate</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_5-Urban_Sound_Classification" target="_blank">Speech [5] - Urban Sound Classification</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_4-Audio_Feature_Extraction" target="_blank">Speech [4] - Audio Feature Extraction</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_3-Audio_Dataset" target="_blank">Speech [3] - Audio Dataset</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_2-Deep_Learning_Model" target="_blank">Speech [2] - Deep Learning Model</a></li>
-
-    
-        
-        
-        
-    
-    <li><span class="post-date">
-        
-        2022-05-03 </span><a href="./Speech_1-Basics_of_Sound" target="_blank">Speech [1] - Basics of Sound</a></li>
-
-    
-        
-        
-        
-            </ul>
-            <h3>2000</h3>
-            <ul>
-        
-    
-    <li><span class="post-date">
-        
-        2000-07-04 </span><a href="./Flutter-Video_Spalsh_Screen" target="_blank">Flutter - Video Splash Screen</a></li>
-
-</ul>
-</div>
-
-            </section>
-
-        </article>
+        </div>
 
     </div>
 </main>
 
-<!-- /post -->
-
-<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
-<script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
-
 
         <!-- Previous/next page links - displayed on every page -->
+        
+        
+        <nav class="pagination" role="pagination">
+    
+        
+            <a class="newer-posts" href="/author/gs97ahn" title="Previous Page">&laquo; Newer Posts</a>
+        
+    
+    <span class="page-number"> Page 2 of 2 </span>
+    
+</nav>
+
+        
         
 
         <!-- The footer at the very bottom of the screen -->
@@ -454,7 +326,7 @@ $(function() {
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('');
+        var maxPages = parseInt('2');
     </script>
     <script src="/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
@@ -477,14 +349,6 @@ $(function() {
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
-    <script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
     
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
