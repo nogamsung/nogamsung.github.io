@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>MongoDB - Versioning Schema</title>
+        
+          <description>&lt;h3 id=&quot;mongodb-vs-mysql&quot;&gt;MongoDB vs MySQL&lt;/h3&gt;
+&lt;p&gt;For my current project &lt;a href=&quot;https://github.com/gabojait/gabojait-spring&quot; target=&quot;_blank&quot;&gt;Gabojait&lt;/a&gt;, I am trying to use MongoDB. The reason why I chose MongoDB is to dael with various changes that can occur with the data in the db in the future. I thought the MongoDB which uses document rather than table, will be better than MySQL which uses tables.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 19 Jul 2022 03:15:00 +0900</pubDate>
+        <link>
+        /MongoDB-Versioning_Schema</link>
+        <guid isPermaLink="true">/MongoDB-Versioning_Schema</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - BaseTimeEntity for MongoDB</title>
         
           <description>&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;
