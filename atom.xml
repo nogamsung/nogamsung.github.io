@@ -17,22 +17,6 @@
         
         <pubDate>Tue, 19 Jul 2022 01:29:00 +0900</pubDate>
         <link>
-        /MongoDB-Version_Control</link>
-        <guid isPermaLink="true">/MongoDB-Version_Control</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Spring - BaseTimeEntity for MongoDB</title>
-        
-          <description>&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;
-&lt;p&gt;I currently am working on a project and I need to use MongoDB. I came to realize that I cannot use JPA anymore and need to setup BaseTimeEntity differently when using MongoDB.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 19 Jul 2022 01:29:00 +0900</pubDate>
-        <link>
         /Spring-BaseTimeEntity_for_MongoDB</link>
         <guid isPermaLink="true">/Spring-BaseTimeEntity_for_MongoDB</guid>
       </item>
