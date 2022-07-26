@@ -50,7 +50,7 @@
     <meta property="og:site_name" content="Geomseong Ahn's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Spring - BaseTimeEntity for SQL" />
-    <meta property="og:description" content="Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } 2️⃣ Enable" />
+    <meta property="og:description" content="Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime modifiedDate; } 2️⃣ Enable" />
     <meta property="og:url" content="/Spring-BaseTimeEntity_for_SQL" />
     <meta property="og:image" content="/assets/built/images/spring-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -60,7 +60,7 @@
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Spring - BaseTimeEntity for SQL" />
-    <meta name="twitter:description" content="Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } 2️⃣ Enable" />
+    <meta name="twitter:description" content="Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime modifiedDate; } 2️⃣ Enable" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/built/images/spring-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -92,7 +92,7 @@
         "@type": "WebPage",
         "@id": "/Spring-BaseTimeEntity_for_SQL"
     },
-    "description": "Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime lastModifiedDate; } 2️⃣ Enable"
+    "description": "Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate. 1️⃣ Create BaseTimeEntity.java @Getter @MappedSuperclass @EntityListeners(AuditingEntityListener.class) public abstract class BaseTimeEntity { @CreatedDate // Manage created date private LocalDateTime createdDate; @LastModifiedDate // Manage last modified date private LocalDateTime modifiedDate; } 2️⃣ Enable"
 }
     </script>
 
@@ -201,7 +201,7 @@ into the {body} of the default.hbs template -->
     <span class="nd">@CreatedDate</span> <span class="c1">// Manage created date</span>
     <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">createdDate</span><span class="o">;</span>
     <span class="nd">@LastModifiedDate</span> <span class="c1">// Manage last modified date</span>
-    <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">lastModifiedDate</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">LocalDateTime</span> <span class="n">modifiedDate</span><span class="o">;</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -333,6 +333,14 @@ into the {body} of the default.hbs template -->
                         
                         
                         
+                         <li><a href="/Spring-@Size_@Length_and_@Column(length=value)">Spring - @Size, @Length, and @Column(length=value)</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Spring-Data_Type_vs_Object">Spring - Data Type vs Object</a></li>
                             
                             
@@ -349,8 +357,7 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Spring-BaseTimeEntity_for_MongoDB">Spring - BaseTimeEntity for MongoDB</a></li>
-                            
+                        
                             
                             
                             
@@ -449,7 +456,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/backend/">
                         
-                        See all 13 posts →
+                        See all 14 posts →
                         
                     </a>
                 </footer>

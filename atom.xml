@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Spring - @Size, @Length, and @Column(length=value)</title>
+        
+          <description>&lt;h3 id=&quot;difference-between-size-length-and-column&quot;&gt;Difference between @Size, @Length, and @Column&lt;/h3&gt;
+&lt;p&gt;For some fields when getting a request from a client, there is a minimum or maximum length of the field. There are three annotations that developers use which are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Length&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Column&lt;/code&gt;. Let’s find the difference between these three annotations.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Jul 2022 10:52:00 +0900</pubDate>
+        <link>
+        /Spring-@Size_@Length_and_@Column(length=value)</link>
+        <guid isPermaLink="true">/Spring-@Size_@Length_and_@Column(length=value)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - Data Type vs Object</title>
         
           <description>&lt;h3 id=&quot;which-one-to-use-char-vs-character&quot;&gt;Which One to Use? char vs Character&lt;/h3&gt;
