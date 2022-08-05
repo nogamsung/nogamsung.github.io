@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Spring - @Email</title>
+        
+          <description>&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
+&lt;p&gt;To validate email, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Email&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 05 Aug 2022 09:44:00 +0900</pubDate>
+        <link>
+        /Spring-@Email</link>
+        <guid isPermaLink="true">/Spring-@Email</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - @Size, @Length, and @Column(length=value)</title>
         
           <description>&lt;h3 id=&quot;difference-between-size-length-and-column&quot;&gt;Difference between @Size, @Length, and @Column&lt;/h3&gt;
