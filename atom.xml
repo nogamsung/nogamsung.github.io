@@ -71,6 +71,29 @@
     
       
       <item>
+        <title>MongoDB - What is MongoDB</title>
+        
+          <description>&lt;h3 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;MongoDB is a noSQL document database&lt;/li&gt;
+  &lt;li&gt;MongoDB is a json like database(bson).
+    &lt;ul&gt;
+      &lt;li&gt;Bson is similiar to json but it basically a json in binary.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 18 Jul 2022 21:56:00 +0900</pubDate>
+        <link>
+        /MongoDB-What_is_MongoDB</link>
+        <guid isPermaLink="true">/MongoDB-What_is_MongoDB</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - BaseTimeEntity for MongoDB</title>
         
           <description>&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;

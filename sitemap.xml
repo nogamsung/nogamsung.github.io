@@ -68,6 +68,22 @@
     </url>
     
     <url>
+        <loc>/MongoDB-What_is_MongoDB.html</loc>
+        
+        <lastmod>2022-07-18T21:56:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Spring-BaseTimeEntity_for_MongoDB.html</loc>
         
         <lastmod>2022-07-18T01:29:00+09:00</lastmod>
