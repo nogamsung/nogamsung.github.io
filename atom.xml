@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Spring - Validation Sequence</title>
+        
+          <description>&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
+&lt;p&gt;When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, you probably want to validate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;. In this case you need to validate data in a specific sequence.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 19 Aug 2022 01:12:00 +0900</pubDate>
+        <link>
+        /Spring-Validation_Sequence</link>
+        <guid isPermaLink="true">/Spring-Validation_Sequence</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - @Email</title>
         
           <description>&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
