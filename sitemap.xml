@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/AWS_EC2-Setting_Up_AWS_EC2.html</loc>
+        
+        <lastmod>2022-08-24T14:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Spring-Validation_Sequence.html</loc>
         
         <lastmod>2022-08-19T01:12:00+09:00</lastmod>

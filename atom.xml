@@ -8,6 +8,24 @@
     
       
       <item>
+        <title>AWS EC2 - Setting Up AWS EC2</title>
+        
+          <description>&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;
+&lt;p&gt;In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅.
+This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific 
+pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;rental server&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 24 Aug 2022 14:00:00 +0900</pubDate>
+        <link>
+        /AWS_EC2-Setting_Up_AWS_EC2</link>
+        <guid isPermaLink="true">/AWS_EC2-Setting_Up_AWS_EC2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring - Validation Sequence</title>
         
           <description>&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
