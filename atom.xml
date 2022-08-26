@@ -8,6 +8,23 @@
     
       
       <item>
+        <title>Spring - Sending Email</title>
+        
+          <description>&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
+&lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
+just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spring-boot-starter-mail&lt;/code&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 26 Aug 2022 11:26:00 +0900</pubDate>
+        <link>
+        /Spring-Sending_Email</link>
+        <guid isPermaLink="true">/Spring-Sending_Email</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>AWS EC2 - Setting Up AWS EC2</title>
         
           <description>&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;

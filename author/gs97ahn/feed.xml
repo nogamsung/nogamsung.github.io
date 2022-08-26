@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-08-25T16:10:23+09:00</updated>
+  <updated>2022-08-27T02:50:13+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,121 @@
   
   
 
+  
+    <entry>
+      <title type="html">Spring - Sending Email</title>
+      <link href="/Spring-Sending_Email" rel="alternate" type="text/html" title="Spring - Sending Email" />
+      <published>2022-08-26T11:26:00+09:00</published>
+      <updated>2022-08-26T11:26:00+09:00</updated>
+      <id>/Spring-Sending_Email</id>
+      <content type="html" xml:base="/Spring-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
+&lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
+just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spring-boot-starter-mail&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;dependency&quot;&gt;Dependency&lt;/h4&gt;
+
+&lt;p&gt;build.gradle&lt;/p&gt;
+
+&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'org.springframework.boot:spring-boot-starter-mail'&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;application.properties&lt;/p&gt;
+
+&lt;div class=&quot;language-properties highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;py&quot;&gt;spring.mail.host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_HOST} # smtp.gmail.com # if you want to use gamil&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_PORT} # 587&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_USERNAME} # username@gmail.com # change username to your username&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_PASSWORD} # this is not the password you would usually use to login&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.default-encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;UTF-8&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.properties.mail.smtp.auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;py&quot;&gt;spring.mail.properties.mail.smtp.starttls.enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+&lt;p&gt;These are the steps to get the mail password from gmail.&lt;/p&gt;
+
+&lt;p&gt;1️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage your Google Account&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Security&lt;/code&gt; from the left menu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;3️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App passwords&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;4️⃣ Select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Other (Custom name)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;5️⃣ Name the app password and click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GENERATE&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;6️⃣ Finally, you will get your app password&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@RequiredArgsConstructor&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmailService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaMailSender&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Async&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;MimeMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createMimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;nc&quot;&gt;MimeMessageHelper&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;example@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MessagingException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QwQuro7ekvc&quot; target=&quot;_blank&quot;&gt;Amigoscode in Youtube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="backend" />
+      
+
+      
+        <summary type="html">How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">AWS EC2 - Setting Up AWS EC2</title>
@@ -879,73 +994,6 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
 
       
         <summary type="html">Code build.gradle for Dockerization and Production The famous Byeong-Joon Song became a friend of mine recently, and apparently he uses this code for dockerization and production of Spring server. I looked at the code, and it is astonishing.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Spring - BaseTimeEntity for SQL</title>
-      <link href="/Spring-BaseTimeEntity_for_SQL" rel="alternate" type="text/html" title="Spring - BaseTimeEntity for SQL" />
-      <published>2022-06-24T22:26:00+09:00</published>
-      <updated>2022-06-24T22:26:00+09:00</updated>
-      <id>/Spring-BaseTimeEntity_for_SQL</id>
-      <content type="html" xml:base="/Spring-BaseTimeEntity_for_SQL">&lt;h3 id=&quot;use-createddate-and-lastmodifieddate&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt; to avoid the lines of code for implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;1️⃣-create-basetimeentityjava&quot;&gt;1️⃣ Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BaseTimeEntity.java&lt;/code&gt;&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Getter&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@MappedSuperclass&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@EntityListeners&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AuditingEntityListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BaseTimeEntity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@CreatedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage created date&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createdDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@LastModifiedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage last modified date&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;2️⃣-enable-jpa-auditing-in-applicationjava&quot;&gt;2️⃣ Enable JPA Auditing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Application.java&lt;/code&gt;&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@EnableJpaAuditing&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Use the above BaseTimeEntity class and extend it to the Entity classes, it will automatically manage &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=15871738&quot; target=&quot;_blank&quot;&gt;이동욱 in 스프링 부트와 AWS로 혼자 구현하는 웹 서비스&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="backend" />
-      
-
-      
-        <summary type="html">Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate.</summary>
       
 
       
