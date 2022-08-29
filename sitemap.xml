@@ -4,7 +4,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>/Spring-Sending_Email.html</loc>
+        <loc>/Spring_Boot-Sending_Email.html</loc>
         
         <lastmod>2022-08-26T11:26:00+09:00</lastmod>
         
@@ -36,7 +36,7 @@
     </url>
     
     <url>
-        <loc>/Spring-Validation_Sequence.html</loc>
+        <loc>/Spring_Boot-Validation_Sequence.html</loc>
         
         <lastmod>2022-08-19T01:12:00+09:00</lastmod>
         
@@ -52,7 +52,7 @@
     </url>
     
     <url>
-        <loc>/Spring-@Email.html</loc>
+        <loc>/Spring_Boot-@Email.html</loc>
         
         <lastmod>2022-08-05T09:44:00+09:00</lastmod>
         
@@ -68,7 +68,7 @@
     </url>
     
     <url>
-        <loc>/Spring-@Size_@Length_and_@Column(length=value).html</loc>
+        <loc>/Spring_Boot-@Size_@Length_and_@Column(length=value).html</loc>
         
         <lastmod>2022-07-26T10:52:00+09:00</lastmod>
         
@@ -84,7 +84,7 @@
     </url>
     
     <url>
-        <loc>/Spring-Data_Type_vs_Object.html</loc>
+        <loc>/Spring_Boot-Data_Type_vs_Object.html</loc>
         
         <lastmod>2022-07-19T00:22:00+09:00</lastmod>
         
@@ -132,7 +132,7 @@
     </url>
     
     <url>
-        <loc>/Spring-BaseTimeEntity_for_MongoDB.html</loc>
+        <loc>/Spring_Boot-BaseTimeEntity_for_MongoDB.html</loc>
         
         <lastmod>2022-07-18T01:29:00+09:00</lastmod>
         
@@ -148,7 +148,7 @@
     </url>
     
     <url>
-        <loc>/Spring-build_gradle_for_Production.html</loc>
+        <loc>/Spring_Boot-build_gradle_for_Production.html</loc>
         
         <lastmod>2022-07-03T22:26:00+09:00</lastmod>
         
@@ -164,7 +164,7 @@
     </url>
     
     <url>
-        <loc>/Spring-BaseTimeEntity_for_SQL.html</loc>
+        <loc>/Spring_Boot-BaseTimeEntity_for_SQL.html</loc>
         
         <lastmod>2022-06-24T22:26:00+09:00</lastmod>
         
@@ -180,7 +180,7 @@
     </url>
     
     <url>
-        <loc>/Spring-@NotNull_@NotBlank_and_@NotEmpty.html</loc>
+        <loc>/Spring_Boot-@NotNull_@NotBlank_and_@NotEmpty.html</loc>
         
         <lastmod>2022-06-23T23:26:00+09:00</lastmod>
         
@@ -196,7 +196,7 @@
     </url>
     
     <url>
-        <loc>/Spring_7-AOP.html</loc>
+        <loc>/Spring_Boot_7-AOP.html</loc>
         
         <lastmod>2022-05-13T06:26:00+09:00</lastmod>
         
@@ -212,7 +212,7 @@
     </url>
     
     <url>
-        <loc>/Spring_6-Spring_DB_Access_Technique.html</loc>
+        <loc>/Spring_Boot_6-Spring_DB_Access_Technique.html</loc>
         
         <lastmod>2022-05-12T06:26:00+09:00</lastmod>
         
@@ -228,7 +228,7 @@
     </url>
     
     <url>
-        <loc>/Spring_5-Web_MVC_Development.html</loc>
+        <loc>/Spring_Boot_5-Web_MVC_Development.html</loc>
         
         <lastmod>2022-05-09T06:26:00+09:00</lastmod>
         
@@ -244,7 +244,7 @@
     </url>
     
     <url>
-        <loc>/Spring_4-Spring_Bin_and_Dependencies_Relation.html</loc>
+        <loc>/Spring_Boot_4-Spring_Bin_and_Dependencies_Relation.html</loc>
         
         <lastmod>2022-05-07T10:10:00+09:00</lastmod>
         
@@ -260,7 +260,7 @@
     </url>
     
     <url>
-        <loc>/Spring_3-Backend_Development.html</loc>
+        <loc>/Spring_Boot_3-Backend_Development.html</loc>
         
         <lastmod>2022-05-07T07:10:00+09:00</lastmod>
         
@@ -276,7 +276,7 @@
     </url>
     
     <url>
-        <loc>/Spring_2-Web_Development_Basics.html</loc>
+        <loc>/Spring_Boot_2-Web_Development_Basics.html</loc>
         
         <lastmod>2022-05-07T06:10:00+09:00</lastmod>
         
@@ -292,7 +292,7 @@
     </url>
     
     <url>
-        <loc>/Spring_1-Project_Environment_Setting.html</loc>
+        <loc>/Spring_Boot_1-Project_Environment_Setting.html</loc>
         
         <lastmod>2022-05-07T06:00:00+09:00</lastmod>
         
