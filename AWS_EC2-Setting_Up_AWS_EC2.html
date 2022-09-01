@@ -57,7 +57,7 @@
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2022-08-24T14:00:00+09:00" />
     <meta property="article:modified_time" content="2022-08-24T14:00:00+09:00" />
-    <meta property="article:tag" content="Backend" />
+    <meta property="article:tag" content="Devops" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="AWS EC2 - Setting Up AWS EC2" />
     <meta name="twitter:description" content="What is AWS EC2 In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅. This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific pricing that" />
@@ -66,7 +66,7 @@
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Geomseong Ahn's Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Backend" />
+    <meta name="twitter:data2" content="Devops" />
     <meta name="twitter:site" content="@" />
     <meta name="twitter:creator" content="@" />
     <meta property="og:image:width" content="1400" />
@@ -165,7 +165,7 @@ into the {body} of the default.hbs template -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
 
-        <article class="post-full  tag-backend post tag-backend ">
+        <article class="post-full  tag-devops post tag-devops ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
@@ -174,7 +174,7 @@ into the {body} of the default.hbs template -->
                     <span class="date-divider">/</span>
                     
                     
-                    <a href='/tag/backend/'>BACKEND</a>
+                    <a href='/tag/devops/'>DEVOPS</a>
                     
                     
                     
@@ -206,19 +206,19 @@ possible.</p>
 
 <p>I am currently trying to have a service in South Korea. Therefore, I will be selecting Seoul(ap-northeast-2).</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-1.png" alt="screenshot-1" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-1.png" alt="screenshot-1" /></p>
 
 <h3 id="step-2️⃣">Step 2️⃣</h3>
 <p>Select launch instance from the EC2 Dashboard.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-2.png" alt="screenshot-2" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-2.png" alt="screenshot-2" /></p>
 
 <h3 id="step-3️⃣">Step 3️⃣</h3>
 <p>Name your instance and choose the operating system you would like.</p>
 
 <p>For my specific example, I will be choosing ubuntu 22.04 as it is eligible for free tier.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-3.png" alt="screenshot-3" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-3.png" alt="screenshot-3" /></p>
 
 <h3 id="step-4️⃣">Step 4️⃣</h3>
 <p>Select the instance type that you would like. Depending on the computing power that you need, this may vary. Of course,
@@ -227,14 +227,14 @@ if you choose a powerful instance, you would need to pay more for the usage.</p>
 <p>For my specific example, I will be selecting t2.micro which has 1vCPU, 1GiB memory. This instance is eligible for free
 tier usage.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-4.png" alt="screenshot-4" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-4.png" alt="screenshot-4" /></p>
 
 <h3 id="step-5️⃣">Step 5️⃣</h3>
 <p>Set up a key pair. This is not required, however it is important that you need to set this up for security reasons as
 <strong>you do not want anyone else to access your ec2 instance</strong>. Click on the “Create new key pair” if you do not have a key
 pair already.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-5.png" alt="screenshot-5" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-5.png" alt="screenshot-5" /></p>
 
 <p>After clicking on the “Create new key pair”, name your key pair and select the options that you need.</p>
 
@@ -248,7 +248,7 @@ get into your ec2 instance ever again</strong>.</p>
 
 <p>For the sake of my example, I am going to select RSA and .pem format.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-6.png" alt="screenshot-6" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-6.png" alt="screenshot-6" /></p>
 
 <h3 id="step-6️⃣">Step 6️⃣</h3>
 <p>Next is setting up the network settings. If you have a constant IP address, and you will want to access the EC2 instance
@@ -261,7 +261,7 @@ This is your clients accessing your server for requests and responses.</p>
 <p>For my example, I am going to run a Spring Boot application, so I am going to allow HTTP traffic only. Also, I am going
 to allow SSH traffic from Anywhere.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-7.png" alt="screenshot-7" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-7.png" alt="screenshot-7" /></p>
 
 <h3 id="step-7️⃣">Step 7️⃣</h3>
 <p>Next step is setting up storage. For free tier, AWS allows you to have upto 30GB, but you probably would like to check
@@ -269,21 +269,21 @@ on the pricing to reduce surprises that you might encounter in the future.</p>
 
 <p>For my example, I am going to give 10GiB to my storage.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-8.png" alt="screenshot-8" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-8.png" alt="screenshot-8" /></p>
 
 <h3 id="step-8️⃣">Step 8️⃣</h3>
 <p>If you want your instance to have GPU or other advanced setting, you can configure it in “Advanced details”.</p>
 
 <p>For my example, I do need any of the advanced settings for now, so I am just going to ignore this part.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-9.png" alt="screenshot-9" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-9.png" alt="screenshot-9" /></p>
 
 <h3 id="step-9️⃣">Step 9️⃣</h3>
 <p>Last but not least, you need to select how many instance, meaning how many server computer that you are going run.</p>
 
 <p>I am going to select just one for the sake of this example.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-10.png" alt="screenshot-10" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-10.png" alt="screenshot-10" /></p>
 
 <p>Finally, click on the “Launch instance”, and AWS will prepare you for your EC2 instance. Congrats! 🎉</p>
 
@@ -302,7 +302,7 @@ on the pricing to reduce surprises that you might encounter in the future.</p>
 <p>And of course, as it is default to be “On Demand”, you can stop your server, or get rid of it any time you would like.
 However, you need to acknowledge that everytime you stop and re-run your instance, the EC2 IP address will change.</p>
 
-<p><img src="assets/screenshots/2022-08-24/screenshot-11.png" alt="screenshot-11" /></p>
+<p><img src="../../assets/screenshots/2022-08-24/screenshot-11.png" alt="screenshot-11" /></p>
 
 <h3 id="reference">Reference</h3>
 <ul>
@@ -406,7 +406,7 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                 <header class="read-next-card-header">
                     <small class="read-next-card-header-sitetitle">&mdash; Geomseong Ahn's Blog &mdash;</small>
                     
-                    <h3 class="read-next-card-header-title"><a href="/tag/backend/">Backend</a></h3>
+                    <h3 class="read-next-card-header-title"><a href="/tag/devops/">Devops</a></h3>
                     
                 </header>
                 <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -416,9 +416,13 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                         
                         
                         
+                            
+                        
+                            
                         
                         
-                         <li><a href="/Spring_Boot-Sending_Email">Spring Boot - Sending Email</a></li>
+                        
+                         <li><a href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">GitHub Actions - CI Pipeline for Spring Boot</a></li>
                             
                             
                             
@@ -428,132 +432,40 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                             
                             
                         
-                        
-                        
-                         <li><a href="/Spring_Boot-Validation_Sequence">Spring Boot - Validation Sequence</a></li>
-                            
-                            
-                            
                             
                         
-                        
-                        
-                         <li><a href="/Spring_Boot-@Email">Spring Boot - @Email</a></li>
-                            
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
-                        
-                        
-                        
-                            
-                            
                             
                         
                             
@@ -574,9 +486,9 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                     </ul>
                 </div>
                 <footer class="read-next-card-footer">
-                    <a href="/tag/backend/">
+                    <a href="/tag/devops/">
                         
-                        See all 19 posts →
+                        See all 1 posts →
                         
                     </a>
                 </footer>
@@ -590,26 +502,26 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Spring_Boot-Sending_Email">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/spring-boot-logo.png)"></div>
+            <a class="post-card-image-link" href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/github-actions-logo.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Spring_Boot-Sending_Email">
+            <a class="post-card-content-link" href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Backend</span>
+                                <span class="post-card-tags">Devops</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Spring Boot - Sending Email</h2>
+                    <h2 class="post-card-title">GitHub Actions - CI Pipeline for Spring Boot</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</p>
+                        <p>What is GitHub Actions GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot project. In this post, I am going to go through the</p>
                     
                 </section>
             </a>
@@ -627,7 +539,7 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                 <span class="reading-time">
                     
                     
-                      1 min read
+                      2 min read
                     
                 </span>
             </footer>

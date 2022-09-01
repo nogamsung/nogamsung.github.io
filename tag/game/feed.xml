@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="/tag/game/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2022-09-01T14:29:17+09:00</updated>
+  <id>/tag/game/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Geomseong Ahn’s Blog | </title>
+  
+
+  
+    <subtitle>Computer Science &amp; Engineering</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Unreal Engine - Installing Unreal Engine</title>
+      <link href="/Unreal_Engine-Installing_Unreal_Engine" rel="alternate" type="text/html" title="Unreal Engine - Installing Unreal Engine" />
+      <published>2022-08-31T20:00:00+09:00</published>
+      <updated>2022-08-31T20:00:00+09:00</updated>
+      <id>/Unreal_Engine-Installing_Unreal_Engine</id>
+      <content type="html" xml:base="/Unreal_Engine-Installing_Unreal_Engine">&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
+&lt;h3 id=&quot;unity&quot;&gt;Unity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Easy to learn&lt;/li&gt;
+  &lt;li&gt;Easy to program 2D mobile game&lt;/li&gt;
+  &lt;li&gt;Various assets in stored contents
+    &lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open Source&lt;/li&gt;
+  &lt;li&gt;Allows C++&lt;/li&gt;
+  &lt;li&gt;Provides high graphic quality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;installing&quot;&gt;Installing&lt;/h2&gt;
+&lt;h3 id=&quot;step-1️⃣&quot;&gt;Step 1️⃣&lt;/h3&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://www.unrealengine.com/en-US/download&quot; target=&quot;_blank&quot;&gt;Unreal Engine Downalods&lt;/a&gt; and click 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DONWLOAD LAUNCHER&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
+
+&lt;p&gt;After downloading the launcher, sign up with one of the options.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
+
+&lt;p&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unreal Engine&lt;/code&gt; in the left menu tab.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
+
+&lt;p&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Library&lt;/code&gt; on the top menu tab.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
+
+&lt;p&gt;Finally Click on the version you would like to download and click install. This would take a long time as it is 
+approximately 20GB.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Unity vs Unreal Engine Unity Easy to learn Easy to program 2D mobile game Various assets in stored contents Unreal Engine Open Source Allows C++ Provides high graphic quality</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

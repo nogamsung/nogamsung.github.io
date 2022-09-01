@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-08-29T15:01:37+09:00</updated>
+  <updated>2022-09-01T14:29:17+09:00</updated>
   <id>/tag/backend/feed.xml</id>
 
   
@@ -140,158 +140,6 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
 
       
         <summary type="html">How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">AWS EC2 - Setting Up AWS EC2</title>
-      <link href="/AWS_EC2-Setting_Up_AWS_EC2" rel="alternate" type="text/html" title="AWS EC2 - Setting Up AWS EC2" />
-      <published>2022-08-24T14:00:00+09:00</published>
-      <updated>2022-08-24T14:00:00+09:00</updated>
-      <id>/AWS_EC2-Setting_Up_AWS_EC2</id>
-      <content type="html" xml:base="/AWS_EC2-Setting_Up_AWS_EC2">&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;
-&lt;p&gt;In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅.
-This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific 
-pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;rental server&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-0️⃣&quot;&gt;Step 0️⃣&lt;/h3&gt;
-&lt;p&gt;First you need to have an AWS account. So sign up and get free tier for your practice.&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-&quot;&gt;Tip ❗&lt;/h4&gt;
-&lt;p&gt;If you are not prepared with your server application. Code First! Because you want to have your free tier as long as
-possible.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1️⃣&quot;&gt;Step 1️⃣&lt;/h3&gt;
-&lt;p&gt;Select the region from the top navigation bar. This region should be closest to your client’s region.&lt;/p&gt;
-
-&lt;p&gt;I am currently trying to have a service in South Korea. Therefore, I will be selecting Seoul(ap-northeast-2).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
-&lt;p&gt;Select launch instance from the EC2 Dashboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
-&lt;p&gt;Name your instance and choose the operating system you would like.&lt;/p&gt;
-
-&lt;p&gt;For my specific example, I will be choosing ubuntu 22.04 as it is eligible for free tier.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
-&lt;p&gt;Select the instance type that you would like. Depending on the computing power that you need, this may vary. Of course,
-if you choose a powerful instance, you would need to pay more for the usage.&lt;/p&gt;
-
-&lt;p&gt;For my specific example, I will be selecting t2.micro which has 1vCPU, 1GiB memory. This instance is eligible for free
-tier usage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
-&lt;p&gt;Set up a key pair. This is not required, however it is important that you need to set this up for security reasons as
-&lt;strong&gt;you do not want anyone else to access your ec2 instance&lt;/strong&gt;. Click on the “Create new key pair” if you do not have a key
-pair already.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After clicking on the “Create new key pair”, name your key pair and select the options that you need.&lt;/p&gt;
-
-&lt;p&gt;You should probably stick with RSA because ED25519 is not supported for Windows instance in case you are need Windows
-instance.&lt;/p&gt;
-
-&lt;p&gt;For private key file format, depending on your favor, whether it is OpenSSH or PuTTy, select the option.&lt;/p&gt;
-
-&lt;p&gt;Finally, click Create key pair and &lt;strong&gt;keep the file somewhere secure&lt;/strong&gt;. &lt;strong&gt;If you lose this file, you will not be able to
-get into your ec2 instance ever again&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;For the sake of my example, I am going to select RSA and .pem format.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-6️⃣&quot;&gt;Step 6️⃣&lt;/h3&gt;
-&lt;p&gt;Next is setting up the network settings. If you have a constant IP address, and you will want to access the EC2 instance
-only from the specific computer, Click on the Anywhere 0.0.0.0/0 and customize it or select “My IP” which would be your
-current IP address.&lt;/p&gt;
-
-&lt;p&gt;If you are having a backend application in the EC2, you need to allow HTTPs or HTTP or both traffic from the internet.
-This is your clients accessing your server for requests and responses.&lt;/p&gt;
-
-&lt;p&gt;For my example, I am going to run a Spring Boot application, so I am going to allow HTTP traffic only. Also, I am going
-to allow SSH traffic from Anywhere.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-7️⃣&quot;&gt;Step 7️⃣&lt;/h3&gt;
-&lt;p&gt;Next step is setting up storage. For free tier, AWS allows you to have upto 30GB, but you probably would like to check
-on the pricing to reduce surprises that you might encounter in the future.&lt;/p&gt;
-
-&lt;p&gt;For my example, I am going to give 10GiB to my storage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-8️⃣&quot;&gt;Step 8️⃣&lt;/h3&gt;
-&lt;p&gt;If you want your instance to have GPU or other advanced setting, you can configure it in “Advanced details”.&lt;/p&gt;
-
-&lt;p&gt;For my example, I do need any of the advanced settings for now, so I am just going to ignore this part.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-9️⃣&quot;&gt;Step 9️⃣&lt;/h3&gt;
-&lt;p&gt;Last but not least, you need to select how many instance, meaning how many server computer that you are going run.&lt;/p&gt;
-
-&lt;p&gt;I am going to select just one for the sake of this example.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, click on the “Launch instance”, and AWS will prepare you for your EC2 instance. Congrats! 🎉&lt;/p&gt;
-
-&lt;h3 id=&quot;step-&quot;&gt;Step 🔟&lt;/h3&gt;
-
-&lt;p&gt;You have various ways to connect to your EC2 instance:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;EC2 Instance Connect&lt;/li&gt;
-  &lt;li&gt;Session Manager&lt;/li&gt;
-  &lt;li&gt;SSH client&lt;/li&gt;
-  &lt;li&gt;EC2 serial console&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I usually use EC2 Instance Connect or SSH client as it is my favor of usage.&lt;/p&gt;
-
-&lt;p&gt;And of course, as it is default to be “On Demand”, you can stop your server, or get rid of it any time you would like.
-However, you need to acknowledge that everytime you stop and re-run your instance, the EC2 IP address will change.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-24/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Pv2yDJ2NKQA&amp;amp;t=323s&quot; target=&quot;_blank&quot;&gt;생활코딩 in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Geomseong Ahn</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="backend" />
-      
-
-      
-        <summary type="html">What is AWS EC2 In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅. This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific pricing that AWS provide. Basically, you can understand it as a rental server.</summary>
       
 
       
@@ -994,6 +842,73 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
 
       
         <summary type="html">Code build.gradle for Dockerization and Production The famous Byeong-Joon Song became a friend of mine recently, and apparently he uses this code for dockerization and production of Spring server. I looked at the code, and it is astonishing.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Spring Boot - BaseTimeEntity for SQL</title>
+      <link href="/Spring_Boot-BaseTimeEntity_for_SQL" rel="alternate" type="text/html" title="Spring Boot - BaseTimeEntity for SQL" />
+      <published>2022-06-24T22:26:00+09:00</published>
+      <updated>2022-06-24T22:26:00+09:00</updated>
+      <id>/Spring_Boot-BaseTimeEntity_for_SQL</id>
+      <content type="html" xml:base="/Spring_Boot-BaseTimeEntity_for_SQL">&lt;h3 id=&quot;use-createddate-and-lastmodifieddate&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt; to avoid the lines of code for implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;1️⃣-create-basetimeentityjava&quot;&gt;1️⃣ Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BaseTimeEntity.java&lt;/code&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Getter&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@MappedSuperclass&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@EntityListeners&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;AuditingEntityListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BaseTimeEntity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@CreatedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage created date&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createdDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@LastModifiedDate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Manage last modified date&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LocalDateTime&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;2️⃣-enable-jpa-auditing-in-applicationjava&quot;&gt;2️⃣ Enable JPA Auditing in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Application.java&lt;/code&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@EnableJpaAuditing&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Application&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Use the above BaseTimeEntity class and extend it to the Entity classes, it will automatically manage &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://book.naver.com/bookdb/book_detail.nhn?bid=15871738&quot; target=&quot;_blank&quot;&gt;이동욱 in 스프링 부트와 AWS로 혼자 구현하는 웹 서비스&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="backend" />
+      
+
+      
+        <summary type="html">Use @CreatedDate and @LastModifiedDate Use @CreatedDate and @LastModifiedDate to avoid the lines of code for implementing createdDate and lastModifiedDate.</summary>
       
 
       

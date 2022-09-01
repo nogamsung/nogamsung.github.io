@@ -4,9 +4,41 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Unreal_Engine-Installing_Unreal_Engine.html</loc>
+        
+        <lastmod>2022-08-31T20:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Spring_Boot-Sending_Email.html</loc>
         
         <lastmod>2022-08-26T11:26:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/GitHub_Actions-CI_Pipeline_for_Spring_Boot.html</loc>
+        
+        <lastmod>2022-08-24T14:00:00+09:00</lastmod>
         
 
         

@@ -8,6 +8,32 @@
     
       
       <item>
+        <title>Unreal Engine - Installing Unreal Engine</title>
+        
+          <description>&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
+&lt;h3 id=&quot;unity&quot;&gt;Unity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Easy to learn&lt;/li&gt;
+  &lt;li&gt;Easy to program 2D mobile game&lt;/li&gt;
+  &lt;li&gt;Various assets in stored contents
+    &lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open Source&lt;/li&gt;
+  &lt;li&gt;Allows C++&lt;/li&gt;
+  &lt;li&gt;Provides high graphic quality&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 31 Aug 2022 20:00:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Installing_Unreal_Engine</link>
+        <guid isPermaLink="true">/Unreal_Engine-Installing_Unreal_Engine</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring Boot - Sending Email</title>
         
           <description>&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
@@ -20,6 +46,23 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
         <link>
         /Spring_Boot-Sending_Email</link>
         <guid isPermaLink="true">/Spring_Boot-Sending_Email</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>GitHub Actions - CI Pipeline for Spring Boot</title>
+        
+          <description>&lt;h2 id=&quot;what-is-github-actions&quot;&gt;What is GitHub Actions&lt;/h2&gt;
+&lt;p&gt;GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot 
+project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 24 Aug 2022 14:00:00 +0900</pubDate>
+        <link>
+        /GitHub_Actions-CI_Pipeline_for_Spring_Boot</link>
+        <guid isPermaLink="true">/GitHub_Actions-CI_Pipeline_for_Spring_Boot</guid>
       </item>
       
     
