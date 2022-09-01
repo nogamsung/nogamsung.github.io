@@ -245,20 +245,27 @@ to be in this specific path: <code class="language-plaintext highlighter-rouge">
         <span class="na">run</span><span class="pi">:</span> <span class="s">./gradlew build -x test</span>
         <span class="na">env</span><span class="pi">:</span>
           <span class="na">DB_NAME</span><span class="pi">:</span> <span class="s">${ { secrets.DB_NAME } }</span>
-          <span class="na">DB_PORT</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">DB_HOST</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">DB_USERNAME</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">DB_PASSWORD</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">DB_PORT</span><span class="pi">:</span> <span class="s">${ { secrets.DB_PORT } }</span>
+          <span class="na">DB_HOST</span><span class="pi">:</span> <span class="s">${ { secrets.DB_HOST } }</span>
+          <span class="na">DB_USERNAME</span><span class="pi">:</span> <span class="s">${ { secrets.DB_USERNAME }}</span>
+          <span class="na">DB_PASSWORD</span><span class="pi">:</span> <span class="s">${ { secrets.DB_PASSWORD } }</span>
 
       <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build and push Docker image</span>
         <span class="na">uses</span><span class="pi">:</span> <span class="s">mr-smithers-excellent/docker-build-push@v5</span>
         <span class="na">with</span><span class="pi">:</span>
           <span class="na">image</span><span class="pi">:</span> <span class="s">gs97ahn/server</span>
-          <span class="na">tags</span><span class="pi">:</span> <span class="s">server-latest</span>
+          <span class="na">tags</span><span class="pi">:</span> <span class="s">example-latest</span>
           <span class="na">registry</span><span class="pi">:</span> <span class="s">docker.io</span>
-          <span class="na">username</span><span class="pi">:</span> <span class="s">$</span>
-          <span class="na">password</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">username</span><span class="pi">:</span> <span class="s">${ { secrets.DOCKER_USERNAME } }</span>
+          <span class="na">password</span><span class="pi">:</span> <span class="s">${ { secrets.DOCKER_PASSWORD } }</span>
 </code></pre></div></div>
+
+<h4 id="important-️">Important ❗️</h4>
+<p>In the example above, I have spacing between the curly brace. However, it should be not have spacing.</p>
+
+<p>👎🏻 -&gt; <code class="language-plaintext highlighter-rouge">${ { secrets.EXAMPLE } }</code></p>
+
+<p>👍🏻 -&gt; <code class="language-plaintext highlighter-rouge">$</code></p>
 
 <h4 id="workflow-code-explanation">Workflow Code Explanation</h4>
 <p>This workflow will run everytime a <code class="language-plaintext highlighter-rouge">push</code> or <code class="language-plaintext highlighter-rouge">pull request</code> is triggered in <code class="language-plaintext highlighter-rouge">develop</code> branch. It will do specific tasks
@@ -285,7 +292,7 @@ below:</p>
   <li>database passwords</li>
 </ul>
 
-<h4 id="important-️">Important ❗️</h4>
+<h4 id="important-️-1">Important ❗️</h4>
 <p>If you do not set up this secrets in your github, you will encounter error because your code will require these secrets
 everytime the code is compiling.</p>
 

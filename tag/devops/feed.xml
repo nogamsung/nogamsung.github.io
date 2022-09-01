@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/devops/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-01T22:03:12+09:00</updated>
+  <updated>2022-09-01T22:12:34+09:00</updated>
   <id>/tag/devops/feed.xml</id>
 
   
@@ -91,20 +91,27 @@ to be in this specific path: &lt;code class=&quot;language-plaintext highlighter
         &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew build -x test&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;DB_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_NAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PORT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_HOST&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_PORT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PORT } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_HOST&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_HOST } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_USERNAME }}&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PASSWORD } }&lt;/span&gt;
 
       &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build and push Docker image&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mr-smithers-excellent/docker-build-push@v5&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gs97ahn/server&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;server-latest&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example-latest&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker.io&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_USERNAME } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_PASSWORD } }&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
+&lt;p&gt;In the example above, I have spacing between the curly brace. However, it should be not have spacing.&lt;/p&gt;
+
+&lt;p&gt;👎🏻 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${ { secrets.EXAMPLE } }&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;👍🏻 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;workflow-code-explanation&quot;&gt;Workflow Code Explanation&lt;/h4&gt;
 &lt;p&gt;This workflow will run everytime a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull request&lt;/code&gt; is triggered in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch. It will do specific tasks
@@ -131,7 +138,7 @@ below:&lt;/p&gt;
   &lt;li&gt;database passwords&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
+&lt;h4 id=&quot;important-️-1&quot;&gt;Important ❗️&lt;/h4&gt;
 &lt;p&gt;If you do not set up this secrets in your github, you will encounter error because your code will require these secrets
 everytime the code is compiling.&lt;/p&gt;
 
