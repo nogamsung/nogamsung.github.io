@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/devops/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-01T22:12:34+09:00</updated>
+  <updated>2022-09-01T22:15:08+09:00</updated>
   <id>/tag/devops/feed.xml</id>
 
   
@@ -108,10 +108,6 @@ to be in this specific path: &lt;code class=&quot;language-plaintext highlighter
 
 &lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
 &lt;p&gt;In the example above, I have spacing between the curly brace. However, it should be not have spacing.&lt;/p&gt;
-
-&lt;p&gt;👎🏻 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${ { secrets.EXAMPLE } }&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;👍🏻 -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;workflow-code-explanation&quot;&gt;Workflow Code Explanation&lt;/h4&gt;
 &lt;p&gt;This workflow will run everytime a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull request&lt;/code&gt; is triggered in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch. It will do specific tasks
