@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2022-09-02T15:50:20+09:00</updated>
+  <id>/tag/comsci/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Geomseong Ahn’s Blog | </title>
+  
+
+  
+    <subtitle>Computer Science &amp; Engineering</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Computer Network - What is the Internet</title>
+      <link href="/Computer_Network-What_is_the_Internet" rel="alternate" type="text/html" title="Computer Network - What is the Internet" />
+      <published>2022-09-02T00:00:00+09:00</published>
+      <updated>2022-09-02T00:00:00+09:00</updated>
+      <id>/Computer_Network-What_is_the_Internet</id>
+      <content type="html" xml:base="/Computer_Network-What_is_the_Internet">&lt;h2 id=&quot;111-a-nuts-and-bolts-description&quot;&gt;1.1.1 A Nuts-and-Bolts Description&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Internet&lt;/strong&gt;: A computer network that interconnects billions of computing devices.
+    &lt;ul&gt;
+      &lt;li&gt;Today, approximately half of the world’s population are active mobile Internet users.&lt;/li&gt;
+      &lt;li&gt;By 2025, users in the Internet is expected to increase upto 75%.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hosts&lt;/strong&gt; or &lt;strong&gt;End system&lt;/strong&gt;: Devices that have Internet connection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Communication links&lt;/strong&gt; and &lt;strong&gt;Packet switches&lt;/strong&gt;: Network that connects end systems together.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transmission rate&lt;/strong&gt;: Rate that different links can transmit data, measured in bits/seconds.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packets&lt;/strong&gt;: The resulting packages of information that are sent through the network to the destination end system,
+where they are reassembled into the original data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Routers&lt;/strong&gt; and &lt;strong&gt;Link-layer switches&lt;/strong&gt;: Two most prominent types of packet switches. They forward packets toward 
+their ultimate destinations.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Route&lt;/strong&gt; or &lt;strong&gt;Path&lt;/strong&gt;: The sequence of communication links and packet switches traverse.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internet Service Providers(ISPs)&lt;/strong&gt;: Provide a variety of types of network access to the end systems.
+    &lt;ul&gt;
+      &lt;li&gt;Each ISP network, whether upper-tier or lower-tier, is managed independently, runs th IP protocol, and conforms to
+certain naming and address conventions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Protocols&lt;/strong&gt;: Control the sending and receiving of information within the Internet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transmission Control Protocol(TCP)&lt;/strong&gt; and &lt;strong&gt;Internet Protocol(IP)&lt;/strong&gt;: Two of the most important protocols in the 
+Internet.
+    &lt;ul&gt;
+      &lt;li&gt;IP: Specifies the format of the packets that are sent and received among routers and end systems.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;: The Internet’s principal protocols.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internet standards&lt;/strong&gt;: A standard that everyone agree on what each and every protocol does.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Requests for comments(RFCs)&lt;/strong&gt;: Standards documents that the Internet Engineering Task Force(IETF) developed.
+    &lt;ul&gt;
+      &lt;li&gt;There are currently nearly 9000 RFCs that define protocols such as TCP, IP, HTTP(for the Web), and SMTP(for e-mail).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;112-a-services-description&quot;&gt;1.1.2 A Services Description&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distributed applications&lt;/strong&gt;: Multiple end systems that exchange data with each other.
+    &lt;ul&gt;
+      &lt;li&gt;Internet applications run on end systems and NOT in packet switches in network core.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Socket interface&lt;/strong&gt;: Set of rules that the sending program must follow so that the Internet can deliver the data to
+the destination program.
+    &lt;ul&gt;
+      &lt;li&gt;This is similar to the postal service, which you need to follow certain rules such as putting the stamp, having the
+sender’s and receiver’s postal code, address, and etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;113-what-is-a-protocol&quot;&gt;1.1.3 What is a Protocol?&lt;/h2&gt;
+
+&lt;h3 id=&quot;human-analogy&quot;&gt;Human Analogy&lt;/h3&gt;
+&lt;p&gt;Computer network protocols are similar to how humans interact.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;network-protocols&quot;&gt;Network Protocols&lt;/h3&gt;
+&lt;p&gt;Similar to human protocols, network protocols communicate through “wire” by controlling the flow of bits.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well
+as the actions taken on the transmission and/or receipt of a message or other event.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Geomseong Ahn</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1.1.1 A Nuts-and-Bolts Description</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

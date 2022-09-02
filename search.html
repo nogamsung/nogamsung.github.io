@@ -132,6 +132,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
     <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
     <li class="nav-backend" role="menuitem"><a href="/tag/game/">Game</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
     <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -179,6 +180,15 @@ into the {body} of the default.hbs template -->
 
 <script>
     window.store = {
+    
+    "computer-network-what-is-the-internet": {
+        "title": "Computer Network - What is the Internet",
+            "author": "gs97ahn",
+                "category": "",
+                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
+        "url": "/Computer_Network-What_is_the_Internet"
+    }
+    , 
     
     "unreal-engine-installing-unreal-engine": {
         "title": "Unreal Engine - Installing Unreal Engine",
@@ -276,6 +286,15 @@ into the {body} of the default.hbs template -->
                 "category": "",
                     "content": { { post.content | strip_html | strip_newlines | jsonify } },
         "url": "/Spring_Boot-BaseTimeEntity_for_MongoDB"
+    }
+    , 
+    
+    "flutter-video-spalsh-screen": {
+        "title": "Flutter - Video Splash Screen",
+            "author": "gs97ahn",
+                "category": "",
+                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
+        "url": "/Flutter-Video_Spalsh_Screen"
     }
     , 
     
@@ -438,15 +457,6 @@ into the {body} of the default.hbs template -->
                 "category": "",
                     "content": { { post.content | strip_html | strip_newlines | jsonify } },
         "url": "/Speech_1-Basics_of_Sound"
-    }
-    , 
-    
-    "flutter-video-spalsh-screen": {
-        "title": "Flutter - Video Splash Screen",
-            "author": "gs97ahn",
-                "category": "",
-                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
-        "url": "/Flutter-Video_Spalsh_Screen"
     }
     
     

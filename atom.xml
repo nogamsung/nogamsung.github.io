@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Computer Network - What is the Internet</title>
+        
+          <description>&lt;h2 id=&quot;111-a-nuts-and-bolts-description&quot;&gt;1.1.1 A Nuts-and-Bolts Description&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 02 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-What_is_the_Internet</link>
+        <guid isPermaLink="true">/Computer_Network-What_is_the_Internet</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Installing Unreal Engine</title>
         
           <description>&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
@@ -15,12 +30,7 @@
 &lt;ul&gt;
   &lt;li&gt;Easy to learn&lt;/li&gt;
   &lt;li&gt;Easy to program 2D mobile game&lt;/li&gt;
-  &lt;li&gt;Various assets in stored contents
-    &lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Open Source&lt;/li&gt;
-  &lt;li&gt;Allows C++&lt;/li&gt;
-  &lt;li&gt;Provides high graphic quality&lt;/li&gt;
+  &lt;li&gt;Various assets in stored contents&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -199,6 +209,22 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         <link>
         /Spring_Boot-BaseTimeEntity_for_MongoDB</link>
         <guid isPermaLink="true">/Spring_Boot-BaseTimeEntity_for_MongoDB</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Flutter - Video Splash Screen</title>
+        
+          <description>&lt;h3 id=&quot;use-video-as-a-splash-screen&quot;&gt;Use Video as a Splash Screen&lt;/h3&gt;
+&lt;p&gt;In Flutter, you can utilize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.mp4&lt;/code&gt; file for splash screen.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 04 Jul 2022 05:40:00 +0900</pubDate>
+        <link>
+        /Flutter-Video_Spalsh_Screen</link>
+        <guid isPermaLink="true">/Flutter-Video_Spalsh_Screen</guid>
       </item>
       
     
@@ -596,22 +622,6 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         <link>
         /Speech_1-Basics_of_Sound</link>
         <guid isPermaLink="true">/Speech_1-Basics_of_Sound</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Flutter - Video Splash Screen</title>
-        
-          <description>&lt;h3 id=&quot;use-video-as-a-splash-screen&quot;&gt;Use Video as a Splash Screen&lt;/h3&gt;
-&lt;p&gt;In Flutter, you can utilize &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.mp4&lt;/code&gt; file for splash screen.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 04 Jul 2000 05:40:00 +0900</pubDate>
-        <link>
-        /Flutter-Video_Spalsh_Screen</link>
-        <guid isPermaLink="true">/Flutter-Video_Spalsh_Screen</guid>
       </item>
       
     

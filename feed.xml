@@ -1,11 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-01T22:32:36+09:00</updated><id>/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Installing Unreal Engine</title><link href="/Unreal_Engine-Installing_Unreal_Engine" rel="alternate" type="text/html" title="Unreal Engine - Installing Unreal Engine" /><published>2022-08-31T20:00:00+09:00</published><updated>2022-08-31T20:00:00+09:00</updated><id>/Unreal_Engine-Installing_Unreal_Engine</id><content type="html" xml:base="/Unreal_Engine-Installing_Unreal_Engine">&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-02T15:50:20+09:00</updated><id>/feed.xml</id><title type="html">Geomseong Ahn’s Blog</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - What is the Internet</title><link href="/Computer_Network-What_is_the_Internet" rel="alternate" type="text/html" title="Computer Network - What is the Internet" /><published>2022-09-02T00:00:00+09:00</published><updated>2022-09-02T00:00:00+09:00</updated><id>/Computer_Network-What_is_the_Internet</id><content type="html" xml:base="/Computer_Network-What_is_the_Internet">&lt;h2 id=&quot;111-a-nuts-and-bolts-description&quot;&gt;1.1.1 A Nuts-and-Bolts Description&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The Internet&lt;/strong&gt;: A computer network that interconnects billions of computing devices.
+    &lt;ul&gt;
+      &lt;li&gt;Today, approximately half of the world’s population are active mobile Internet users.&lt;/li&gt;
+      &lt;li&gt;By 2025, users in the Internet is expected to increase upto 75%.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hosts&lt;/strong&gt; or &lt;strong&gt;End system&lt;/strong&gt;: Devices that have Internet connection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Communication links&lt;/strong&gt; and &lt;strong&gt;Packet switches&lt;/strong&gt;: Network that connects end systems together.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transmission rate&lt;/strong&gt;: Rate that different links can transmit data, measured in bits/seconds.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packets&lt;/strong&gt;: The resulting packages of information that are sent through the network to the destination end system,
+where they are reassembled into the original data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Routers&lt;/strong&gt; and &lt;strong&gt;Link-layer switches&lt;/strong&gt;: Two most prominent types of packet switches. They forward packets toward 
+their ultimate destinations.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Route&lt;/strong&gt; or &lt;strong&gt;Path&lt;/strong&gt;: The sequence of communication links and packet switches traverse.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internet Service Providers(ISPs)&lt;/strong&gt;: Provide a variety of types of network access to the end systems.
+    &lt;ul&gt;
+      &lt;li&gt;Each ISP network, whether upper-tier or lower-tier, is managed independently, runs th IP protocol, and conforms to
+certain naming and address conventions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Protocols&lt;/strong&gt;: Control the sending and receiving of information within the Internet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transmission Control Protocol(TCP)&lt;/strong&gt; and &lt;strong&gt;Internet Protocol(IP)&lt;/strong&gt;: Two of the most important protocols in the 
+Internet.
+    &lt;ul&gt;
+      &lt;li&gt;IP: Specifies the format of the packets that are sent and received among routers and end systems.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;: The Internet’s principal protocols.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internet standards&lt;/strong&gt;: A standard that everyone agree on what each and every protocol does.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Requests for comments(RFCs)&lt;/strong&gt;: Standards documents that the Internet Engineering Task Force(IETF) developed.
+    &lt;ul&gt;
+      &lt;li&gt;There are currently nearly 9000 RFCs that define protocols such as TCP, IP, HTTP(for the Web), and SMTP(for e-mail).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;112-a-services-description&quot;&gt;1.1.2 A Services Description&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distributed applications&lt;/strong&gt;: Multiple end systems that exchange data with each other.
+    &lt;ul&gt;
+      &lt;li&gt;Internet applications run on end systems and NOT in packet switches in network core.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Socket interface&lt;/strong&gt;: Set of rules that the sending program must follow so that the Internet can deliver the data to
+the destination program.
+    &lt;ul&gt;
+      &lt;li&gt;This is similar to the postal service, which you need to follow certain rules such as putting the stamp, having the
+sender’s and receiver’s postal code, address, and etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;113-what-is-a-protocol&quot;&gt;1.1.3 What is a Protocol?&lt;/h2&gt;
+
+&lt;h3 id=&quot;human-analogy&quot;&gt;Human Analogy&lt;/h3&gt;
+&lt;p&gt;Computer network protocols are similar to how humans interact.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;network-protocols&quot;&gt;Network Protocols&lt;/h3&gt;
+&lt;p&gt;Similar to human protocols, network protocols communicate through “wire” by controlling the flow of bits.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well
+as the actions taken on the transmission and/or receipt of a message or other event.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="comsci" /><summary type="html">1.1.1 A Nuts-and-Bolts Description</summary></entry><entry><title type="html">Unreal Engine - Installing Unreal Engine</title><link href="/Unreal_Engine-Installing_Unreal_Engine" rel="alternate" type="text/html" title="Unreal Engine - Installing Unreal Engine" /><published>2022-08-31T20:00:00+09:00</published><updated>2022-08-31T20:00:00+09:00</updated><id>/Unreal_Engine-Installing_Unreal_Engine</id><content type="html" xml:base="/Unreal_Engine-Installing_Unreal_Engine">&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
 &lt;h3 id=&quot;unity&quot;&gt;Unity&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Easy to learn&lt;/li&gt;
   &lt;li&gt;Easy to program 2D mobile game&lt;/li&gt;
-  &lt;li&gt;Various assets in stored contents
-    &lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Various assets in stored contents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
+&lt;ul&gt;
   &lt;li&gt;Open Source&lt;/li&gt;
   &lt;li&gt;Allows C++&lt;/li&gt;
   &lt;li&gt;Provides high graphic quality&lt;/li&gt;
@@ -42,7 +121,7 @@
 &lt;p&gt;Finally Click on the version you would like to download and click install. This would take a long time as it is 
 approximately 20GB.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;</content><author><name>Geomseong Ahn</name></author><category term="game" /><summary type="html">Unity vs Unreal Engine Unity Easy to learn Easy to program 2D mobile game Various assets in stored contents Unreal Engine Open Source Allows C++ Provides high graphic quality</summary></entry><entry><title type="html">Spring Boot - Sending Email</title><link href="/Spring_Boot-Sending_Email" rel="alternate" type="text/html" title="Spring Boot - Sending Email" /><published>2022-08-26T11:26:00+09:00</published><updated>2022-08-26T11:26:00+09:00</updated><id>/Spring_Boot-Sending_Email</id><content type="html" xml:base="/Spring_Boot-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;</content><author><name>Geomseong Ahn</name></author><category term="game" /><summary type="html">Unity vs Unreal Engine Unity Easy to learn Easy to program 2D mobile game Various assets in stored contents</summary></entry><entry><title type="html">Spring Boot - Sending Email</title><link href="/Spring_Boot-Sending_Email" rel="alternate" type="text/html" title="Spring Boot - Sending Email" /><published>2022-08-26T11:26:00+09:00</published><updated>2022-08-26T11:26:00+09:00</updated><id>/Spring_Boot-Sending_Email</id><content type="html" xml:base="/Spring_Boot-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
 &lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
 just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spring-boot-starter-mail&lt;/code&gt;.&lt;/p&gt;
 
@@ -123,7 +202,144 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QwQuro7ekvc&quot; target=&quot;_blank&quot;&gt;Amigoscode in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</summary></entry><entry><title type="html">AWS EC2 - Setting Up AWS EC2</title><link href="/AWS_EC2-Setting_Up_AWS_EC2" rel="alternate" type="text/html" title="AWS EC2 - Setting Up AWS EC2" /><published>2022-08-24T14:00:00+09:00</published><updated>2022-08-24T14:00:00+09:00</updated><id>/AWS_EC2-Setting_Up_AWS_EC2</id><content type="html" xml:base="/AWS_EC2-Setting_Up_AWS_EC2">&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</summary></entry><entry><title type="html">GitHub Actions - CI Pipeline for Spring Boot</title><link href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot" rel="alternate" type="text/html" title="GitHub Actions - CI Pipeline for Spring Boot" /><published>2022-08-24T14:00:00+09:00</published><updated>2022-08-24T14:00:00+09:00</updated><id>/GitHub_Actions-CI_Pipeline_for_Spring_Boot</id><content type="html" xml:base="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">&lt;h2 id=&quot;what-is-github-actions&quot;&gt;What is GitHub Actions&lt;/h2&gt;
+&lt;p&gt;GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot 
+project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.&lt;/p&gt;
+
+&lt;h3 id=&quot;1️⃣-setting-in-github&quot;&gt;1️⃣ Setting in GitHub&lt;/h3&gt;
+&lt;p&gt;First go to your project repository and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; in the menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2️⃣-set-up-a-workflow&quot;&gt;2️⃣ Set up a workflow&lt;/h3&gt;
+
+&lt;p&gt;If you want to start from scratch, click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set up a workflow yourself -&amp;gt;&lt;/code&gt;, otherwise, click on the specific
+configuration you need.&lt;/p&gt;
+
+&lt;p&gt;I am going to set up from the scratch for the example.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3️⃣-workflow-code&quot;&gt;3️⃣ Workflow Code&lt;/h3&gt;
+
+&lt;p&gt;For the sake of the example, I am going to use IntelliJ IDEA. To do this, you just need to add the workflow file. In the
+root of your project folder, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/develop-ci.yaml&lt;/code&gt;. I have named the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop-ci.yaml&lt;/code&gt; because I am 
+going to build a CI(Continuous Integration) pipeline, but you can name it whatever you want. Nevertheless, the file has 
+to be in this specific path: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The whole workflow code is going to look like this&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Develop - CI&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;pull_request&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
+
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v3&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Set up JDK&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/setup-java@v3&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;distribution&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;adopt'&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;java-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;11'&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Grant execute permission for Gradlew&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;chmod +x gradlew&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build with Gradle&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew build -x test&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_NAME } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_PORT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PORT } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_HOST&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_HOST } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_USERNAME } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;DB_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PASSWORD } }&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build and push Docker image&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mr-smithers-excellent/docker-build-push@v5&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gs97ahn/server&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example-latest&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker.io&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_USERNAME } }&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_PASSWORD } }&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
+&lt;p&gt;In the example above, I have spacing between the curly brace. However, it should be not have spacing.&lt;/p&gt;
+
+&lt;h4 id=&quot;workflow-code-explanation&quot;&gt;Workflow Code Explanation&lt;/h4&gt;
+&lt;p&gt;This workflow will run everytime a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull request&lt;/code&gt; is triggered in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch. It will do specific tasks
+given in the ubuntu-latest environment. Theses are the specific steps that it will go through:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set up JDK&lt;/li&gt;
+  &lt;li&gt;Grant execute permission for Gradlew&lt;/li&gt;
+  &lt;li&gt;Build with Gradle&lt;/li&gt;
+  &lt;li&gt;Build and push Docker image&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Basically, it will set up jdk and test the code with the test codes that you have. Afterwards, it will build it to your
+docker repository.&lt;/p&gt;
+
+&lt;h3 id=&quot;4️⃣-setting-up-secrets&quot;&gt;4️⃣ Setting up Secrets&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${ { secrets } }&lt;/code&gt; in the code is the environment variable that you give when you compile and run the program. The
+reason for being secret is because there are certain variables that you would want it to be secrets like the example
+below:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;port number&lt;/li&gt;
+  &lt;li&gt;docker repository username&lt;/li&gt;
+  &lt;li&gt;docker repository password&lt;/li&gt;
+  &lt;li&gt;database username&lt;/li&gt;
+  &lt;li&gt;database passwords&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;important-️-1&quot;&gt;Important ❗️&lt;/h4&gt;
+&lt;p&gt;If you do not set up this secrets in your github, you will encounter error because your code will require these secrets
+everytime the code is compiling.&lt;/p&gt;
+
+&lt;h4 id=&quot;4️⃣---1️⃣&quot;&gt;4️⃣ - 1️⃣&lt;/h4&gt;
+&lt;p&gt;To set up secrets, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; in your project repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4️⃣---2️⃣&quot;&gt;4️⃣ - 2️⃣&lt;/h4&gt;
+&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt; in the left menu bar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4️⃣---3️⃣&quot;&gt;4️⃣ - 3️⃣&lt;/h4&gt;
+&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4️⃣---4️⃣&quot;&gt;4️⃣ - 4️⃣&lt;/h4&gt;
+&lt;p&gt;Finally name the secret and write the value. Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add secret&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5️⃣-done&quot;&gt;5️⃣ Done&lt;/h3&gt;
+&lt;p&gt;Try pushing your work to the branch to see github actions in work.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;[CHORE] CI pipeline configured&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can find the github actions in work by going to actions menu in your github repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-12.png&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=R8_veQiYBjI&amp;amp;t=1742s&quot; target=&quot;_blank&quot;&gt;TechWorld with Nana in Youtube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="devops" /><summary type="html">What is GitHub Actions GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.</summary></entry><entry><title type="html">AWS EC2 - Setting Up AWS EC2</title><link href="/AWS_EC2-Setting_Up_AWS_EC2" rel="alternate" type="text/html" title="AWS EC2 - Setting Up AWS EC2" /><published>2022-08-24T14:00:00+09:00</published><updated>2022-08-24T14:00:00+09:00</updated><id>/AWS_EC2-Setting_Up_AWS_EC2</id><content type="html" xml:base="/AWS_EC2-Setting_Up_AWS_EC2">&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;
 &lt;p&gt;In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅.
 This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific 
 pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;rental server&lt;/strong&gt;.&lt;/p&gt;
@@ -241,144 +457,7 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Pv2yDJ2NKQA&amp;amp;t=323s&quot; target=&quot;_blank&quot;&gt;생활코딩 in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="devops" /><summary type="html">What is AWS EC2 In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅. This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific pricing that AWS provide. Basically, you can understand it as a rental server.</summary></entry><entry><title type="html">GitHub Actions - CI Pipeline for Spring Boot</title><link href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot" rel="alternate" type="text/html" title="GitHub Actions - CI Pipeline for Spring Boot" /><published>2022-08-24T14:00:00+09:00</published><updated>2022-08-24T14:00:00+09:00</updated><id>/GitHub_Actions-CI_Pipeline_for_Spring_Boot</id><content type="html" xml:base="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">&lt;h2 id=&quot;what-is-github-actions&quot;&gt;What is GitHub Actions&lt;/h2&gt;
-&lt;p&gt;GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot 
-project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.&lt;/p&gt;
-
-&lt;h3 id=&quot;1️⃣-setting-in-github&quot;&gt;1️⃣ Setting in GitHub&lt;/h3&gt;
-&lt;p&gt;First go to your project repository and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; in the menu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2️⃣-set-up-a-workflow&quot;&gt;2️⃣ Set up a workflow&lt;/h3&gt;
-
-&lt;p&gt;If you want to start from scratch, click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set up a workflow yourself -&amp;gt;&lt;/code&gt;, otherwise, click on the specific
-configuration you need.&lt;/p&gt;
-
-&lt;p&gt;I am going to set up from the scratch for the example.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3️⃣-workflow-code&quot;&gt;3️⃣ Workflow Code&lt;/h3&gt;
-
-&lt;p&gt;For the sake of the example, I am going to use IntelliJ IDEA. To do this, you just need to add the workflow file. In the
-root of your project folder, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/develop-ci.yaml&lt;/code&gt;. I have named the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop-ci.yaml&lt;/code&gt; because I am 
-going to build a CI(Continuous Integration) pipeline, but you can name it whatever you want. Nevertheless, the file has 
-to be in this specific path: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The whole workflow code is going to look like this&lt;/p&gt;
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Develop - CI&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;pull_request&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v3&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Set up JDK&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/setup-java@v3&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;distribution&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;adopt'&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;java-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;11'&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Grant execute permission for Gradlew&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;chmod +x gradlew&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build with Gradle&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew build -x test&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_NAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PORT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PORT } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_HOST&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_HOST } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_USERNAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PASSWORD } }&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build and push Docker image&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mr-smithers-excellent/docker-build-push@v5&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gs97ahn/server&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example-latest&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker.io&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_USERNAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_PASSWORD } }&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
-&lt;p&gt;In the example above, I have spacing between the curly brace. However, it should be not have spacing.&lt;/p&gt;
-
-&lt;h4 id=&quot;workflow-code-explanation&quot;&gt;Workflow Code Explanation&lt;/h4&gt;
-&lt;p&gt;This workflow will run everytime a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull request&lt;/code&gt; is triggered in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch. It will do specific tasks
-given in the ubuntu-latest environment. Theses are the specific steps that it will go through:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set up JDK&lt;/li&gt;
-  &lt;li&gt;Grant execute permission for Gradlew&lt;/li&gt;
-  &lt;li&gt;Build with Gradle&lt;/li&gt;
-  &lt;li&gt;Build and push Docker image&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Basically, it will set up jdk and test the code with the test codes that you have. Afterwards, it will build it to your
-docker repository.&lt;/p&gt;
-
-&lt;h3 id=&quot;4️⃣-setting-up-secrets&quot;&gt;4️⃣ Setting up Secrets&lt;/h3&gt;
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; in the code is the environment variable that you give when you compile and run the program. The
-reason for being secret is because there are certain variables that you would want it to be secrets like the example
-below:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;port number&lt;/li&gt;
-  &lt;li&gt;docker repository username&lt;/li&gt;
-  &lt;li&gt;docker repository password&lt;/li&gt;
-  &lt;li&gt;database username&lt;/li&gt;
-  &lt;li&gt;database passwords&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;important-️-1&quot;&gt;Important ❗️&lt;/h4&gt;
-&lt;p&gt;If you do not set up this secrets in your github, you will encounter error because your code will require these secrets
-everytime the code is compiling.&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---1️⃣&quot;&gt;4️⃣ - 1️⃣&lt;/h4&gt;
-&lt;p&gt;To set up secrets, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; in your project repository.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---2️⃣&quot;&gt;4️⃣ - 2️⃣&lt;/h4&gt;
-&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt; in the left menu bar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---3️⃣&quot;&gt;4️⃣ - 3️⃣&lt;/h4&gt;
-&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---4️⃣&quot;&gt;4️⃣ - 4️⃣&lt;/h4&gt;
-&lt;p&gt;Finally name the secret and write the value. Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add secret&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;5️⃣-done&quot;&gt;5️⃣ Done&lt;/h3&gt;
-&lt;p&gt;Try pushing your work to the branch to see github actions in work.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;[CHORE] CI pipeline configured&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can find the github actions in work by going to actions menu in your github repository.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-12.png&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=R8_veQiYBjI&amp;amp;t=1742s&quot; target=&quot;_blank&quot;&gt;TechWorld with Nana in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="devops" /><summary type="html">What is GitHub Actions GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.</summary></entry><entry><title type="html">Spring Boot - Validation Sequence</title><link href="/Spring_Boot-Validation_Sequence" rel="alternate" type="text/html" title="Spring Boot - Validation Sequence" /><published>2022-08-19T01:12:00+09:00</published><updated>2022-08-19T01:12:00+09:00</updated><id>/Spring_Boot-Validation_Sequence</id><content type="html" xml:base="/Spring_Boot-Validation_Sequence">&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="devops" /><summary type="html">What is AWS EC2 In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅. This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific pricing that AWS provide. Basically, you can understand it as a rental server.</summary></entry><entry><title type="html">Spring Boot - Validation Sequence</title><link href="/Spring_Boot-Validation_Sequence" rel="alternate" type="text/html" title="Spring Boot - Validation Sequence" /><published>2022-08-19T01:12:00+09:00</published><updated>2022-08-19T01:12:00+09:00</updated><id>/Spring_Boot-Validation_Sequence</id><content type="html" xml:base="/Spring_Boot-Validation_Sequence">&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
 &lt;p&gt;When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, you probably want to validate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;. In this case you need to validate data in a specific sequence.&lt;/p&gt;
 
 &lt;h4 id=&quot;dependency&quot;&gt;Dependency&lt;/h4&gt;
@@ -565,78 +644,4 @@ everytime the code is compiling.&lt;/p&gt;
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3GHZd0zv170&amp;amp;t=961&quot; target=&quot;_blank&quot;&gt;MongoDB in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">MongoDB vs MySQL For my current project Gabojait, I am trying to use MongoDB. The reason why I chose MongoDB is to dael with various changes that can occur with the data in the db in the future. I thought the MongoDB which uses document rather than table, will be better than MySQL which uses tables.</summary></entry><entry><title type="html">MongoDB - What is MongoDB</title><link href="/MongoDB-What_is_MongoDB" rel="alternate" type="text/html" title="MongoDB - What is MongoDB" /><published>2022-07-18T21:56:00+09:00</published><updated>2022-07-18T21:56:00+09:00</updated><id>/MongoDB-What_is_MongoDB</id><content type="html" xml:base="/MongoDB-What_is_MongoDB">&lt;h3 id=&quot;mongodb&quot;&gt;MongoDB&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;MongoDB is a noSQL document database&lt;/li&gt;
-  &lt;li&gt;MongoDB is a json like database(bson).
-    &lt;ul&gt;
-      &lt;li&gt;Bson is similiar to json but it basically a json in binary.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;mongodb-terms&quot;&gt;MongoDB Terms&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;SQL&lt;/th&gt;
-      &lt;th&gt;MongoDB&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Database&lt;/td&gt;
-      &lt;td&gt;Database&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Table&lt;/td&gt;
-      &lt;td&gt;Collection&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Column&lt;/td&gt;
-      &lt;td&gt;Field&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Row&lt;/td&gt;
-      &lt;td&gt;Document&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Foreign Key&lt;/td&gt;
-      &lt;td&gt;Sub Document(Reference)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&quot;collection-example&quot;&gt;Collection Example&lt;/h4&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;John&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;date_of_birth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1990-01-14&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;department&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;department_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Computer Science&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;location&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;INDIA&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;subjects&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;subejct_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Java&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;marks_obtained&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;subject_name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MongoDB&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;marks_obtained&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;In this collection example:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;“department” is a sub document.&lt;/li&gt;
-  &lt;li&gt;“subjects” is an area of sub document, meaning that it can have many sub document.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.udemy.com/course/mongodb-with-spring-boot-spring-data-mongorepository-mlab-cloudfoundry/&quot; target=&quot;_blank&quot;&gt;Infybuzz Learning in udemy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">MongoDB MongoDB is a noSQL document database MongoDB is a json like database(bson). Bson is similiar to json but it basically a json in binary.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Geomseong Ahn</name></author><category term="backend" /><summary type="html">MongoDB vs MySQL For my current project Gabojait, I am trying to use MongoDB. The reason why I chose MongoDB is to dael with various changes that can occur with the data in the db in the future. I thought the MongoDB which uses document rather than table, will be better than MySQL which uses tables.</summary></entry></feed>

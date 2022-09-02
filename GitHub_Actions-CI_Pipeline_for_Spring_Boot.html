@@ -138,6 +138,7 @@ into the {body} of the default.hbs template -->
     <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
     <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
     <li class="nav-backend" role="menuitem"><a href="/tag/game/">Game</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
     <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
@@ -277,7 +278,7 @@ given in the ubuntu-latest environment. Theses are the specific steps that it wi
 docker repository.</p>
 
 <h3 id="4️⃣-setting-up-secrets">4️⃣ Setting up Secrets</h3>
-<p>The <code class="language-plaintext highlighter-rouge">$</code> in the code is the environment variable that you give when you compile and run the program. The
+<p>The <code class="language-plaintext highlighter-rouge">${ { secrets } }</code> in the code is the environment variable that you give when you compile and run the program. The
 reason for being secret is because there are certain variables that you would want it to be secrets like the example
 below:</p>
 <ul>
@@ -436,6 +437,8 @@ everytime the code is compiling.</p>
                     <ul>
                         
                         
+                        
+                            
                         
                             
                         
