@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-07T11:50:54+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Level Editor</title><link href="/Unreal_Engine-Level_Editor" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" /><published>2022-09-06T01:30:00+09:00</published><updated>2022-09-06T01:30:00+09:00</updated><id>/Unreal_Engine-Level_Editor</id><content type="html" xml:base="/Unreal_Engine-Level_Editor">&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-07T15:35:51+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Level Editor</title><link href="/Unreal_Engine-Level_Editor" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" /><published>2022-09-06T01:30:00+09:00</published><updated>2022-09-06T01:30:00+09:00</updated><id>/Unreal_Engine-Level_Editor</id><content type="html" xml:base="/Unreal_Engine-Level_Editor">&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Unreal Editor: Development environment for Unreal engine.&lt;/li&gt;
   &lt;li&gt;Level Editor: An interface used for the design and construction of game levels and environments.&lt;/li&gt;
@@ -51,7 +51,82 @@ bring the desired experience to a player.&lt;/li&gt;
   &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="game" /><summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary></entry><entry><title type="html">Big Data - Data Mining Research</title><link href="/Big_Data-Mining_Research" rel="alternate" type="text/html" title="Big Data - Data Mining Research" /><published>2022-09-05T22:30:00+09:00</published><updated>2022-09-05T22:30:00+09:00</updated><id>/Big_Data-Mining_Research</id><content type="html" xml:base="/Big_Data-Mining_Research">&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="game" /><summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary></entry><entry><title type="html">Intelligent_information_systems Environment_setting</title><link href="/Intelligent_Information_Systems-Environment_Setting" rel="alternate" type="text/html" title="Intelligent_information_systems Environment_setting" /><published>2022-09-06T00:00:00+09:00</published><updated>2022-09-06T00:00:00+09:00</updated><id>/Intelligent_Information_Systems-Environment_Setting</id><content type="html" xml:base="/Intelligent_Information_Systems-Environment_Setting">&lt;p&gt;_—
+layout: post
+current: post
+cover:  assets/built/images/intelligent-information-systems-logo.jpeg
+navigation: True
+title: Intelligent Information Systems - Environment Setting
+date: 2022-09-06 15:00:00
+tags: [comsci]
+class: post-template
+subclass: ‘post tag-comsci’
+author: gs97ahn
+—&lt;/p&gt;
+
+&lt;h2 id=&quot;data-analysis-in-computer&quot;&gt;Data analysis in computer&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For data analysis use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Python is high level programming language that was published in 1997 by &lt;em&gt;Gudio van Raossum&lt;/em&gt;. He named it python 
+because of his favorite comedy TV show &lt;em&gt;Monty Python’s Flying Circus&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tools-used-for-data-analysis&quot;&gt;Tools used for data analysis&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/products/distribution&quot; target=&quot;_blank&quot;&gt;Anaconda&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Named anaconda because there are many projects or packages that are related to snakes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jupyter.org/install&quot; target=&quot;_blank&quot;&gt;Jupyter notebook&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Open source web application&lt;/li&gt;
+      &lt;li&gt;Run partial codes and check the output&lt;/li&gt;
+      &lt;li&gt;Named jupyter because of three main languages &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Julia&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;anaconda-commands&quot;&gt;Anaconda commands&lt;/h3&gt;
+
+&lt;h4 id=&quot;create-virtual-environment&quot;&gt;Create virtual environment&lt;/h4&gt;
+
+&lt;p&gt;Get a list of all my environments&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Create a new environment named py35, install Python 3.5&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create --name py35 python=3.5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Active a existing environment named py35&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda activate py35
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Delete an environment named py35 and everything in it&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env remove --name py35
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;jupyter-notebook-commands&quot;&gt;Jupyter notebook commands&lt;/h4&gt;
+
+&lt;p&gt;Run jupyter notebook&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf&quot; target=&quot;_blank&quot;&gt;Conda Cheat Sheet by Conda&lt;/a&gt;_&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">_— layout: post current: post cover: assets/built/images/intelligent-information-systems-logo.jpeg navigation: True title: Intelligent Information Systems - Environment Setting date: 2022-09-06 15:00:00 tags: [comsci] class: post-template subclass: ‘post tag-comsci’ author: gs97ahn —</summary></entry><entry><title type="html">Big Data - Data Mining Research</title><link href="/Big_Data-Mining_Research" rel="alternate" type="text/html" title="Big Data - Data Mining Research" /><published>2022-09-05T22:30:00+09:00</published><updated>2022-09-05T22:30:00+09:00</updated><id>/Big_Data-Mining_Research</id><content type="html" xml:base="/Big_Data-Mining_Research">&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
 &lt;h3 id=&quot;what-is-data-miningdm&quot;&gt;What is Data Mining(DM)?&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;data mining&lt;/strong&gt;: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern
@@ -278,7 +353,7 @@ sequence analysis, biological network analysis&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="ai" /><summary type="html">Introduction to Data Mining What is Data Mining(DM)? data mining: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern or knowledge from huge amount of data. aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive Analysis, etc.</summary></entry><entry><title type="html">Computer Network - The Network Edge</title><link href="/Computer_Network-The_Network_Edge" rel="alternate" type="text/html" title="Computer Network - The Network Edge" /><published>2022-09-05T19:30:00+09:00</published><updated>2022-09-05T19:30:00+09:00</updated><id>/Computer_Network-The_Network_Edge</id><content type="html" xml:base="/Computer_Network-The_Network_Edge">&lt;p&gt;Hosts are divided into two categories: &lt;strong&gt;clients&lt;/strong&gt; and &lt;strong&gt;server&lt;/strong&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Introduction to Data Mining What is Data Mining(DM)? data mining: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern or knowledge from huge amount of data. aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive Analysis, etc.</summary></entry><entry><title type="html">Computer Network - The Network Edge</title><link href="/Computer_Network-The_Network_Edge" rel="alternate" type="text/html" title="Computer Network - The Network Edge" /><published>2022-09-05T19:30:00+09:00</published><updated>2022-09-05T19:30:00+09:00</updated><id>/Computer_Network-The_Network_Edge</id><content type="html" xml:base="/Computer_Network-The_Network_Edge">&lt;p&gt;Hosts are divided into two categories: &lt;strong&gt;clients&lt;/strong&gt; and &lt;strong&gt;server&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;clients&lt;/strong&gt;: desktop, laptops, smartphones, and so on.&lt;/li&gt;
@@ -938,22 +1013,4 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://javapointers.com/spring/spring-mvc/spring-mvc-validation-order-example/&quot; target=&quot;_blank&quot;&gt;JavaPointer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="backend" /><summary type="html">Why Validation Sequence is Necessary? When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use @NotBlank and @Size, you probably want to validate the @NotBlank before @Size. In this case you need to validate data in a specific sequence.</summary></entry><entry><title type="html">Spring Boot - @Email</title><link href="/Spring_Boot-@Email" rel="alternate" type="text/html" title="Spring Boot - @Email" /><published>2022-08-05T09:44:00+09:00</published><updated>2022-08-05T09:44:00+09:00</updated><id>/Spring_Boot-@Email</id><content type="html" xml:base="/Spring_Boot-@Email">&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
-&lt;p&gt;To validate email, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Email&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;problem-with-email&quot;&gt;Problem with @Email&lt;/h4&gt;
-&lt;p&gt;The problem with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Email&lt;/code&gt; is that even &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; is given as email, it does not detect any problem. Therefore, you probably would like to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; with it.&lt;/p&gt;
-
-&lt;h4 id=&quot;email&quot;&gt;@Email&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@NotBlank&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Email is required.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Email&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Email must be valid.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.baeldung.com/javax-validation&quot; target=&quot;_blank&quot;&gt;baeldung in Baeldung&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="backend" /><summary type="html">@Email in use To validate email, you can use @Email.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="backend" /><summary type="html">Why Validation Sequence is Necessary? When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use @NotBlank and @Size, you probably want to validate the @NotBlank before @Size. In this case you need to validate data in a specific sequence.</summary></entry></feed>

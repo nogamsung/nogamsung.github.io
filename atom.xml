@@ -31,6 +31,32 @@ bring the desired experience to a player.&lt;/li&gt;
     
       
       <item>
+        <title>Intelligent_information_systems Environment_setting</title>
+        
+          <description>&lt;p&gt;_—
+layout: post
+current: post
+cover:  assets/built/images/intelligent-information-systems-logo.jpeg
+navigation: True
+title: Intelligent Information Systems - Environment Setting
+date: 2022-09-06 15:00:00
+tags: [comsci]
+class: post-template
+subclass: ‘post tag-comsci’
+author: gs97ahn
+—&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 06 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Environment_Setting</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Environment_Setting</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Big Data - Data Mining Research</title>
         
           <description>&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
