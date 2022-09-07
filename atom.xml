@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Intelligent Information Systems - Environment Setting</title>
+        
+          <description>&lt;h2 id=&quot;data-analysis-in-computer&quot;&gt;Data analysis in computer&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Environment_Setting</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Environment_Setting</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Level Editor</title>
         
           <description>&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
@@ -26,32 +41,6 @@ bring the desired experience to a player.&lt;/li&gt;
         <link>
         /Unreal_Engine-Level_Editor</link>
         <guid isPermaLink="true">/Unreal_Engine-Level_Editor</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Intelligent_information_systems Environment_setting</title>
-        
-          <description>&lt;p&gt;_—
-layout: post
-current: post
-cover:  assets/built/images/intelligent-information-systems-logo.jpeg
-navigation: True
-title: Intelligent Information Systems - Environment Setting
-date: 2022-09-06 15:00:00
-tags: [comsci]
-class: post-template
-subclass: ‘post tag-comsci’
-author: gs97ahn
-—&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Tue, 06 Sep 2022 00:00:00 +0900</pubDate>
-        <link>
-        /Intelligent_Information_Systems-Environment_Setting</link>
-        <guid isPermaLink="true">/Intelligent_Information_Systems-Environment_Setting</guid>
       </item>
       
     
