@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-03T16:51:03+09:00</updated>
+  <updated>2022-09-07T11:50:54+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,194 @@
   
   
 
+  
+    <entry>
+      <title type="html">Computer Network - The Network Edge</title>
+      <link href="/Computer_Network-The_Network_Edge" rel="alternate" type="text/html" title="Computer Network - The Network Edge" />
+      <published>2022-09-05T19:30:00+09:00</published>
+      <updated>2022-09-05T19:30:00+09:00</updated>
+      <id>/Computer_Network-The_Network_Edge</id>
+      <content type="html" xml:base="/Computer_Network-The_Network_Edge">&lt;p&gt;Hosts are divided into two categories: &lt;strong&gt;clients&lt;/strong&gt; and &lt;strong&gt;server&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;clients&lt;/strong&gt;: desktop, laptops, smartphones, and so on.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;servers&lt;/strong&gt;: powerful machines that store and distribute Web pages, stream videos, relay email, and so on.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;data centers&lt;/strong&gt;: stores most of the servers from which we receive search results, email, Web pages, videos, and so 
+on.&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-access-networks&quot;&gt;1️⃣ Access Networks&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;edge router&lt;/strong&gt;: the network that physically connects an end system to the first router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;home-access-dls-cable-ftth-and-5g-fixed-wireless&quot;&gt;Home Access: DLS, Cable, FTTH, and 5G Fixed Wireless&lt;/h3&gt;
+
+&lt;p&gt;Two most prevalent types of broadband residential access today: &lt;strong&gt;digital subscriber line(DLS)&lt;/strong&gt; and &lt;strong&gt;cable&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;digital subscriber line(DSL)&lt;/strong&gt;: uses the existing telephone line exchange data with a digital subscriber line access 
+multiplexer(DLAM)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The residential telephone line carries both &lt;em&gt;data&lt;/em&gt; and &lt;em&gt;traditional telephone signals&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A high-speed downstream channel: 50 kHz ~ 1 MHz&lt;/li&gt;
+  &lt;li&gt;A medium-speed upstream channel: 4 kHz ~ 50 kHz&lt;/li&gt;
+  &lt;li&gt;An ordinary two-way telephone channel: 0 ~ 4 kHz&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;cable Internet access&lt;/strong&gt;: makes use of the television company’s existing cable television infrastructure.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The downstream channel and upstream channel all depends on &lt;em&gt;how many users are active&lt;/em&gt;, because users in the same
+network share a single channel.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;fiber to the home(FTTH)&lt;/strong&gt;: an up-and-coming technology that provides even higher speed.
+    &lt;ul&gt;
+      &lt;li&gt;FTTH provide an optical fiber path from the CO directly to the home and allow gigabits per second range.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are two competing optical-distribution network architectures: &lt;strong&gt;active optical networks(AONs)&lt;/strong&gt; and
+&lt;strong&gt;passive optical networks(PONs)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;active optical networks(AON)&lt;/strong&gt;: switched Ethernet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;passive optical networks(PONs)&lt;/strong&gt;: Figure 1.7 shows FTTH using PON distribution architecture.
+    &lt;ul&gt;
+      &lt;li&gt;Each home has optical network terminator(ONT)&lt;/li&gt;
+      &lt;li&gt;The ONTs are connected by dedicated optical fiber to a neighborhood splitter and combines them into a single shared
+optical fiber&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;5G fixed wireless&lt;/strong&gt;: uses beam-forming technology and send data wirelessly from a provider’s base station to the a
+modem at home.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;access-in-the-enterprise-and-the-home-ethernet-and-wifi&quot;&gt;Access in the Enterprise (and the Home): Ethernet and WiFi&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ethernet&lt;/strong&gt;: twisted-pair copper wire to connect to an Ethernet switch.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;WiFi&lt;/strong&gt;: wireless LAN access based on IEEE 802.11 technology.
+    &lt;ul&gt;
+      &lt;li&gt;802.11 today provides a shared transmission rate of up to &amp;lt; 100 Mbps.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-physical-media&quot;&gt;2️⃣ Physical Media&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;physical medium&lt;/strong&gt;: allows data to be sent by propagating electromagnetic waves or optical pulses across.&lt;/li&gt;
+  &lt;li&gt;There are two types of physical media: &lt;strong&gt;guided media&lt;/strong&gt; and &lt;strong&gt;unguided media&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;guided media&lt;/strong&gt;: the waves are guided along a solid medium such as a fiber-optic cable, a twisted-pair copper wire,
+or a coaxial cable&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;unguided media&lt;/strong&gt;: the waves propagate in the atmosphere and in outer space such as in a wireless LAN or digital
+satellite channel.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;twisted-pair-copper-wire&quot;&gt;Twisted-Pair Copper Wire&lt;/h3&gt;
+
+&lt;p&gt;Twisted-pair copper wire is the least expensive and most commonly used guided transmission medium.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Unshielded twisted pair(UTP)&lt;/strong&gt;: commonly used for computer networks within a building, LANs for instance.
+    &lt;ul&gt;
+      &lt;li&gt;Range 10 Mbps - 10 Gbps, depending on the thickness of the wire and the distance between the transmitter and 
+receiver.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;coaxial-cable&quot;&gt;Coaxial Cable&lt;/h3&gt;
+
+&lt;p&gt;Coaxial cable is commonly used for television systems, which has been coupled with cable modems to provide Internet
+access.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;shared medium&lt;/strong&gt;: more than one receiver are hooked up to the transmitter.
+    &lt;ul&gt;
+      &lt;li&gt;In this case, transmitter shifts the digital signal to a specific frequency band which different end systems can
+receive.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;fiber-optics&quot;&gt;Fiber Optics&lt;/h3&gt;
+
+&lt;p&gt;Optics fiber is thin and flexible medium that conduct pulses of light, with each pulse representing a bit. It also is
+the prevalent in the backbone of the Internet, but it is expensive. Its speed range 51.8 Mbps to 39.8 Gbps.&lt;/p&gt;
+
+&lt;h3 id=&quot;terrestrial-radio-channels&quot;&gt;Terrestrial Radio Channels&lt;/h3&gt;
+
+&lt;p&gt;Terrestrial radio channels carry signals in the electromagnetic spectrum. They do not require physical wire to be
+installed.&lt;/p&gt;
+
+&lt;h3 id=&quot;satellite-radio-channels&quot;&gt;Satellite Radio Channels&lt;/h3&gt;
+
+&lt;p&gt;Satellite links two or more Earth-based microwave transmitter/receiver.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;geostationary satellites&lt;/strong&gt;: permanently remains above the same spot on Earth. It is often used in areas without 
+access to DLS or cable-based Internet access, but have substantial signal propagation delay of 280 ms.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;low-earth orbiting(LEO)&lt;/strong&gt;: placed much closer to Earth compared to geostationary satellites and do not remain
+permanently above one spot on Earth. It could be the technology for Internet access in the future.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Hosts are divided into two categories: clients and server</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Computer Network - What is the Internet</title>
@@ -114,6 +302,7 @@ as the actions taken on the transmission and/or receipt of a message or other ev
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       

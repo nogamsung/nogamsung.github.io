@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/game/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-03T16:51:03+09:00</updated>
+  <updated>2022-09-07T11:50:54+09:00</updated>
   <id>/tag/game/feed.xml</id>
 
   
@@ -30,6 +30,93 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Level Editor</title>
+      <link href="/Unreal_Engine-Level_Editor" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
+      <published>2022-09-06T01:30:00+09:00</published>
+      <updated>2022-09-06T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Level_Editor</id>
+      <content type="html" xml:base="/Unreal_Engine-Level_Editor">&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unreal Editor: Development environment for Unreal engine.&lt;/li&gt;
+  &lt;li&gt;Level Editor: An interface used for the design and construction of game levels and environments.&lt;/li&gt;
+  &lt;li&gt;Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to
+bring the desired experience to a player.&lt;/li&gt;
+  &lt;li&gt;Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file.&lt;/li&gt;
+  &lt;li&gt;Actor: Object in level such as a camera, static mesh, or player start location.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;default-interface&quot;&gt;Default Interface&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;coordinates&quot;&gt;Coordinates&lt;/h2&gt;
+
+&lt;p&gt;The coordinates follow &lt;em&gt;left hand rule&lt;/em&gt; as you may have learned in high school physics class.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;thumb: Points upward and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-coordinate&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;index finger: Points towards and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y-coordinate&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;middle finger: Points to the right and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x-coordinate&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;camera-control-in-view-port&quot;&gt;Camera control in view port&lt;/h2&gt;
+
+&lt;p&gt;Move the camera around using these keys:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w/s&lt;/code&gt;: move forward/backward&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a/d&lt;/code&gt;: move left/right&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q/e&lt;/code&gt;: move upward/downward&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z/c&lt;/code&gt;: zoom out/in&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right, move forward/backward horizontally&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right/upwards/downwards&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally, move upwards/downwards in perpendicular&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move around centering a pivot&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move towards/away from a pivot&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally and forward/backward in perpendicular&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;select an object&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;: focus the object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Installing Unreal Engine</title>
@@ -83,7 +170,14 @@
 &lt;p&gt;Finally Click on the version you would like to download and click install. This would take a long time as it is 
 approximately 20GB.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       

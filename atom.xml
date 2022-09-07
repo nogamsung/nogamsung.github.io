@@ -8,6 +8,69 @@
     
       
       <item>
+        <title>Unreal Engine - Level Editor</title>
+        
+          <description>&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unreal Editor: Development environment for Unreal engine.&lt;/li&gt;
+  &lt;li&gt;Level Editor: An interface used for the design and construction of game levels and environments.&lt;/li&gt;
+  &lt;li&gt;Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to
+bring the desired experience to a player.&lt;/li&gt;
+  &lt;li&gt;Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file.&lt;/li&gt;
+  &lt;li&gt;Actor: Object in level such as a camera, static mesh, or player start location.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 06 Sep 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Level_Editor</link>
+        <guid isPermaLink="true">/Unreal_Engine-Level_Editor</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Data Mining Research</title>
+        
+          <description>&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
+&lt;h3 id=&quot;what-is-data-miningdm&quot;&gt;What is Data Mining(DM)?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;data mining&lt;/strong&gt;: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern
+or knowledge from huge amount of data.
+    &lt;ul&gt;
+      &lt;li&gt;aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive
+Analysis, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 05 Sep 2022 22:30:00 +0900</pubDate>
+        <link>
+        /Big_Data-Mining_Research</link>
+        <guid isPermaLink="true">/Big_Data-Mining_Research</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - The Network Edge</title>
+        
+          <description>&lt;p&gt;Hosts are divided into two categories: &lt;strong&gt;clients&lt;/strong&gt; and &lt;strong&gt;server&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 05 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-The_Network_Edge</link>
+        <guid isPermaLink="true">/Computer_Network-The_Network_Edge</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Computer Network - What is the Internet</title>
         
           <description>&lt;h2 id=&quot;1️⃣-a-nuts-and-bolts-description&quot;&gt;1️⃣ A Nuts-and-Bolts Description&lt;/h2&gt;
@@ -277,7 +340,7 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
     
       
       <item>
-        <title>Spring Boot [7] - AOP</title>
+        <title>Spring Boot - AOP</title>
         
           <description>&lt;h3 id=&quot;situations-where-aop-is-needed&quot;&gt;Situations Where AOP is Needed&lt;/h3&gt;
 &lt;ul&gt;
@@ -290,14 +353,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Fri, 13 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot_7-AOP</link>
-        <guid isPermaLink="true">/Spring_Boot_7-AOP</guid>
+        /Spring_Boot-AOP</link>
+        <guid isPermaLink="true">/Spring_Boot-AOP</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [6] - Spring DB Access Technique</title>
+        <title>Spring Boot - Spring DB Access Technique</title>
         
           <description>&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
 &lt;p&gt;Provide light and convenient DB for development and test purpose&lt;/p&gt;
@@ -306,14 +369,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Thu, 12 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot_6-Spring_DB_Access_Technique</link>
-        <guid isPermaLink="true">/Spring_Boot_6-Spring_DB_Access_Technique</guid>
+        /Spring_Boot-Spring_DB_Access_Technique</link>
+        <guid isPermaLink="true">/Spring_Boot-Spring_DB_Access_Technique</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [5] - Web MVC Development</title>
+        <title>Spring Boot - Web MVC Development</title>
         
           <description>&lt;h3 id=&quot;member-web-function---add-home-controller&quot;&gt;Member Web Function - Add Home Controller&lt;/h3&gt;
 &lt;p&gt;Add Home Controller&lt;br /&gt;
@@ -323,14 +386,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Mon, 09 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot_5-Web_MVC_Development</link>
-        <guid isPermaLink="true">/Spring_Boot_5-Web_MVC_Development</guid>
+        /Spring_Boot-Web_MVC_Development</link>
+        <guid isPermaLink="true">/Spring_Boot-Web_MVC_Development</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [4] - Spring Bin and Dependencies Relation</title>
+        <title>Spring Boot - Spring Bin and Dependencies Relation</title>
         
           <description>&lt;h3 id=&quot;register-srping-bin-and-set-dependencies-relation&quot;&gt;Register Srping Bin and Set Dependencies Relation&lt;/h3&gt;
 &lt;p&gt;Set dependcies relation for member controller to use member service and member repository&lt;/p&gt;
@@ -339,14 +402,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 10:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot_4-Spring_Bin_and_Dependencies_Relation</link>
-        <guid isPermaLink="true">/Spring_Boot_4-Spring_Bin_and_Dependencies_Relation</guid>
+        /Spring_Boot-Spring_Bin_and_Dependencies_Relation</link>
+        <guid isPermaLink="true">/Spring_Boot-Spring_Bin_and_Dependencies_Relation</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [3] - Backend Development</title>
+        <title>Spring Boot - Backend Development</title>
         
           <description>&lt;h3 id=&quot;business-requirements&quot;&gt;Business Requirements&lt;/h3&gt;
 &lt;ul&gt;
@@ -359,14 +422,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 07:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot_3-Backend_Development</link>
-        <guid isPermaLink="true">/Spring_Boot_3-Backend_Development</guid>
+        /Spring_Boot-Backend_Development</link>
+        <guid isPermaLink="true">/Spring_Boot-Backend_Development</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [2] - Web Development Basics</title>
+        <title>Spring Boot - Web Development Basics</title>
         
           <description>&lt;ul&gt;
   &lt;li&gt;Static Contents&lt;/li&gt;
@@ -378,14 +441,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 06:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot_2-Web_Development_Basics</link>
-        <guid isPermaLink="true">/Spring_Boot_2-Web_Development_Basics</guid>
+        /Spring_Boot-Web_Development_Basics</link>
+        <guid isPermaLink="true">/Spring_Boot-Web_Development_Basics</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot [1] - Project Environment Setting</title>
+        <title>Spring Boot - Project Environment Setting</title>
         
           <description>&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
 &lt;ul&gt;
@@ -397,8 +460,8 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 06:00:00 +0900</pubDate>
         <link>
-        /Spring_Boot_1-Project_Environment_Setting</link>
-        <guid isPermaLink="true">/Spring_Boot_1-Project_Environment_Setting</guid>
+        /Spring_Boot-Project_Environment_Setting</link>
+        <guid isPermaLink="true">/Spring_Boot-Project_Environment_Setting</guid>
       </item>
       
     
@@ -439,7 +502,7 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
     
       
       <item>
-        <title>Speech [7] - Audio Settings Effect</title>
+        <title>Speech - Audio Settings Effect</title>
         
           <description>&lt;h3 id=&quot;transfer-of-audio&quot;&gt;Transfer of audio&lt;/h3&gt;
 &lt;p&gt;Reflection, Refraction, Diffraction&lt;/p&gt;
@@ -448,14 +511,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Wed, 04 May 2022 00:40:00 +0900</pubDate>
         <link>
-        /Speech_7-Audio_Settings_Effect</link>
-        <guid isPermaLink="true">/Speech_7-Audio_Settings_Effect</guid>
+        /Speech-Audio_Settings_Effect</link>
+        <guid isPermaLink="true">/Speech-Audio_Settings_Effect</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [6] - Improving Detection Rate</title>
+        <title>Speech - Improving Detection Rate</title>
         
           <description>&lt;h3 id=&quot;improving-detection-rate&quot;&gt;Improving Detection Rate&lt;/h3&gt;
 &lt;p&gt;Keys that affect detection rate&lt;/p&gt;
@@ -497,14 +560,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 23:40:00 +0900</pubDate>
         <link>
-        /Speech_6-Improving_Recognition_Rate</link>
-        <guid isPermaLink="true">/Speech_6-Improving_Recognition_Rate</guid>
+        /Speech-Improving_Recognition_Rate</link>
+        <guid isPermaLink="true">/Speech-Improving_Recognition_Rate</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [5] - Urban Sound Classification</title>
+        <title>Speech - Urban Sound Classification</title>
         
           <description>&lt;h4 id=&quot;1-feature-extraction&quot;&gt;1. Feature Extraction&lt;/h4&gt;
 &lt;p&gt;Urban Sound 8K Dataset&lt;/p&gt;
@@ -525,14 +588,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 21:40:00 +0900</pubDate>
         <link>
-        /Speech_5-Urban_Sound_Classification</link>
-        <guid isPermaLink="true">/Speech_5-Urban_Sound_Classification</guid>
+        /Speech-Urban_Sound_Classification</link>
+        <guid isPermaLink="true">/Speech-Urban_Sound_Classification</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [4] - Audio Feature Extraction</title>
+        <title>Speech - Audio Feature Extraction</title>
         
           <description>&lt;h3 id=&quot;audio-feature-extraction&quot;&gt;Audio Feature Extraction&lt;/h3&gt;
 &lt;p&gt;Feature Extraction&lt;/p&gt;
@@ -555,14 +618,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 19:40:00 +0900</pubDate>
         <link>
-        /Speech_4-Audio_Feature_Extraction</link>
-        <guid isPermaLink="true">/Speech_4-Audio_Feature_Extraction</guid>
+        /Speech-Audio_Feature_Extraction</link>
+        <guid isPermaLink="true">/Speech-Audio_Feature_Extraction</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [3] - Audio Dataset</title>
+        <title>Speech - Audio Dataset</title>
         
           <description>&lt;h3 id=&quot;audio-dataset&quot;&gt;Audio Dataset&lt;/h3&gt;
 &lt;p&gt;Dataset&lt;/p&gt;
@@ -574,14 +637,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 17:40:00 +0900</pubDate>
         <link>
-        /Speech_3-Audio_Dataset</link>
-        <guid isPermaLink="true">/Speech_3-Audio_Dataset</guid>
+        /Speech-Audio_Dataset</link>
+        <guid isPermaLink="true">/Speech-Audio_Dataset</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [2] - Deep Learning Model</title>
+        <title>Speech - Deep Learning Model</title>
         
           <description>&lt;h3 id=&quot;deep-learning-neural-network&quot;&gt;Deep Learning Neural Network&lt;/h3&gt;
 &lt;p&gt;Artificial Intelligence, Machine Learning, Deep Learning&lt;/p&gt;
@@ -601,14 +664,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 05:40:00 +0900</pubDate>
         <link>
-        /Speech_2-Deep_Learning_Model</link>
-        <guid isPermaLink="true">/Speech_2-Deep_Learning_Model</guid>
+        /Speech-Deep_Learning_Model</link>
+        <guid isPermaLink="true">/Speech-Deep_Learning_Model</guid>
       </item>
       
     
       
       <item>
-        <title>Speech [1] - Basics of Sound</title>
+        <title>Speech - Basics of Sound</title>
         
           <description>&lt;h3 id=&quot;size-of-sound-and-frequency&quot;&gt;Size of sound and Frequency&lt;/h3&gt;
 &lt;p&gt;Sound&lt;/p&gt;
@@ -620,8 +683,8 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 03 May 2022 02:40:00 +0900</pubDate>
         <link>
-        /Speech_1-Basics_of_Sound</link>
-        <guid isPermaLink="true">/Speech_1-Basics_of_Sound</guid>
+        /Speech-Basics_of_Sound</link>
+        <guid isPermaLink="true">/Speech-Basics_of_Sound</guid>
       </item>
       
     
