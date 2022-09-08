@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Spring Boot - Injecting Data using Implemented Service</title>
+        
+          <description>&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one
+of the options that I had was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CommandLineRunner&lt;/code&gt;. However, I wanted to make my &lt;strong&gt;code clean&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 07 Sep 2022 09:08:00 +0900</pubDate>
+        <link>
+        /Spring_Boot-Injecting_Data_using_Implemented_Service</link>
+        <guid isPermaLink="true">/Spring_Boot-Injecting_Data_using_Implemented_Service</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Intelligent Information Systems - Environment Setting</title>
         
           <description>&lt;h2 id=&quot;data-analysis-in-computer&quot;&gt;Data analysis in computer&lt;/h2&gt;

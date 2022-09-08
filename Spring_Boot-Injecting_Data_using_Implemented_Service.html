@@ -12,7 +12,7 @@
 
 
 
-    <title>Spring Boot - Sending Email</title>
+    <title>Spring Boot - Injecting Data using Implemented Service</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Web Font Setting -->
@@ -43,24 +43,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Computer Science & Engineering" />
     <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/Spring_Boot-Sending_Email" />
+    <link rel="canonical" href="/Spring_Boot-Injecting_Data_using_Implemented_Service" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nogamsung" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Spring Boot - Sending Email" />
-    <meta property="og:description" content="How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail. Dependency build.gradle dependencies { implementation 'org.springframework.boot:spring-boot-starter-mail' } application.properties spring.mail.host=${MAIL_HOST} # smtp.gmail.com # if you want to use" />
-    <meta property="og:url" content="/Spring_Boot-Sending_Email" />
+    <meta property="og:title" content="Spring Boot - Injecting Data using Implemented Service" />
+    <meta property="og:description" content="I needed to inject some data that are in .csv format when starting Spring Boot using the service. I know that one of the options that I had was CommandLineRunner. However, I wanted to make my code clean. CommandLineRunner Example @EnableJpaAuditing @SpringBootApplication public class SpringApplication { public static void main(String[]" />
+    <meta property="og:url" content="/Spring_Boot-Injecting_Data_using_Implemented_Service" />
     <meta property="og:image" content="/assets/built/images/spring-boot-logo.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-08-26T11:26:00+09:00" />
-    <meta property="article:modified_time" content="2022-08-26T11:26:00+09:00" />
+    <meta property="article:published_time" content="2022-09-07T09:08:00+09:00" />
+    <meta property="article:modified_time" content="2022-09-07T09:08:00+09:00" />
     <meta property="article:tag" content="Backend" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spring Boot - Sending Email" />
-    <meta name="twitter:description" content="How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail. Dependency build.gradle dependencies { implementation 'org.springframework.boot:spring-boot-starter-mail' } application.properties spring.mail.host=${MAIL_HOST} # smtp.gmail.com # if you want to use" />
+    <meta name="twitter:title" content="Spring Boot - Injecting Data using Implemented Service" />
+    <meta name="twitter:description" content="I needed to inject some data that are in .csv format when starting Spring Boot using the service. I know that one of the options that I had was CommandLineRunner. However, I wanted to make my code clean. CommandLineRunner Example @EnableJpaAuditing @SpringBootApplication public class SpringApplication { public static void main(String[]" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/built/images/spring-boot-logo.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -81,7 +81,7 @@
         "name": "nogamsung",
         "logo": "/"
     },
-    "url": "/Spring_Boot-Sending_Email",
+    "url": "/Spring_Boot-Injecting_Data_using_Implemented_Service",
     "image": {
         "@type": "ImageObject",
         "url": "/assets/built/images/spring-boot-logo.png",
@@ -90,9 +90,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/Spring_Boot-Sending_Email"
+        "@id": "/Spring_Boot-Injecting_Data_using_Implemented_Service"
     },
-    "description": "How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail. Dependency build.gradle dependencies { implementation 'org.springframework.boot:spring-boot-starter-mail' } application.properties spring.mail.host=${MAIL_HOST} # smtp.gmail.com # if you want to use"
+    "description": "I needed to inject some data that are in .csv format when starting Spring Boot using the service. I know that one of the options that I had was CommandLineRunner. However, I wanted to make my code clean. CommandLineRunner Example @EnableJpaAuditing @SpringBootApplication public class SpringApplication { public static void main(String[]"
 }
     </script>
 
@@ -105,7 +105,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Spring Boot - Sending Email" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Spring Boot - Injecting Data using Implemented Service" href="/feed.xml" />
 
 
 </head>
@@ -172,7 +172,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="26 August 2022">26 August 2022</time>
+                    <time class="post-full-meta-date" datetime=" 7 September 2022"> 7 September 2022</time>
                     
                     <span class="date-divider">/</span>
                     
@@ -182,7 +182,7 @@ into the {body} of the default.hbs template -->
                     
                     
                 </section>
-                <h1 class="post-full-title">Spring Boot - Sending Email</h1>
+                <h1 class="post-full-title">Spring Boot - Injecting Data using Implemented Service</h1>
             </header>
 
             
@@ -192,87 +192,53 @@ into the {body} of the default.hbs template -->
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h3 id="how-would-you-send-email-using-spring-boot">How would you send email using Spring Boot?</h3>
-<p>Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
-just use <code class="language-plaintext highlighter-rouge">spring-boot-starter-mail</code>.</p>
+                    <p>I needed to inject some data that are in <code class="language-plaintext highlighter-rouge">.csv</code> format when starting Spring Boot using the <strong>service</strong>. I know that one
+of the options that I had was <code class="language-plaintext highlighter-rouge">CommandLineRunner</code>. However, I wanted to make my <strong>code clean</strong>.</p>
 
-<h4 id="dependency">Dependency</h4>
+<h4 id="commandlinerunner-example">CommandLineRunner Example</h4>
 
-<p>build.gradle</p>
-
-<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">dependencies</span> <span class="o">{</span>
-	<span class="n">implementation</span> <span class="s1">'org.springframework.boot:spring-boot-starter-mail'</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@EnableJpaAuditing</span>
+<span class="nd">@SpringBootApplication</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpringApplication</span> <span class="o">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SpringApplication</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="nc">SpringApplication</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Bean</span>
+    <span class="nc">CommandLineRunner</span> <span class="nf">runner</span><span class="o">(</span><span class="nc">ExampleService</span> <span class="n">service</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">args</span> <span class="o">-&gt;</span> <span class="o">{</span>
+            <span class="n">service</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"example"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>application.properties</p>
+<p>I found another choice which was using <code class="language-plaintext highlighter-rouge">ApplicationRunner</code>. I chose this method because I was able to separate the 
+specific codes that I need for inserting data. Also, I personally think that this way of structuring code is cleaner.</p>
 
-<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.mail.host</span><span class="p">=</span><span class="s">${MAIL_HOST} # smtp.gmail.com # if you want to use gamil</span>
-<span class="py">spring.mail.port</span><span class="p">=</span><span class="s">${MAIL_PORT} # 587</span>
-<span class="py">spring.mail.username</span><span class="p">=</span><span class="s">${MAIL_USERNAME} # username@gmail.com # change username to your username</span>
-<span class="py">spring.mail.password</span><span class="p">=</span><span class="s">${MAIL_PASSWORD} # this is not the password you would usually use to login</span>
-<span class="py">spring.mail.default-encoding</span><span class="p">=</span><span class="s">UTF-8</span>
-<span class="py">spring.mail.properties.mail.smtp.auth</span><span class="p">=</span><span class="s">true</span>
-<span class="py">spring.mail.properties.mail.smtp.starttls.enable</span><span class="p">=</span><span class="s">true</span>
-</code></pre></div></div>
+<h4 id="applicationrunner-example">ApplicationRunner Example</h4>
 
-<h4 id="tip-️">Tip ❗️</h4>
-<p>These are the steps to get the mail password from gmail.</p>
-
-<p>1️⃣ Click on <code class="language-plaintext highlighter-rouge">Manage your Google Account</code></p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-1.png" alt="screenshot-1" /></p>
-
-<p>2️⃣ Click on <code class="language-plaintext highlighter-rouge">Security</code> from the left menu</p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-2.png" alt="screenshot-2" /></p>
-
-<p>3️⃣ Click on <code class="language-plaintext highlighter-rouge">App passwords</code></p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-3.png" alt="screenshot-3" /></p>
-
-<p>4️⃣ Select <code class="language-plaintext highlighter-rouge">Other (Custom name)</code></p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-4.png" alt="screenshot-4" /></p>
-
-<p>5️⃣ Name the app password and click <code class="language-plaintext highlighter-rouge">GENERATE</code></p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-5.png" alt="screenshot-5" /></p>
-
-<p>6️⃣ Finally, you will get your app password</p>
-
-<p><img src="assets/screenshots/2022-08-26/screenshot-6.png" alt="screenshot-6" /></p>
-
-<h4 id="usage">Usage</h4>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Component</span>
 <span class="nd">@RequiredArgsConstructor</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmailService</span> <span class="o">{</span>
-
-    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">JavaMailSender</span> <span class="n">javaMailSender</span><span class="o">;</span>
-
-    <span class="nd">@Async</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sendEmail</span><span class="o">(</span><span class="nc">String</span> <span class="n">receiver</span><span class="o">,</span> <span class="nc">String</span> <span class="n">title</span><span class="o">,</span> <span class="nc">String</span> <span class="n">content</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">MessagingException</span> <span class="o">{</span>
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="nc">MimeMessage</span> <span class="n">mimeMessage</span> <span class="o">=</span> <span class="n">javaMailSender</span><span class="o">.</span><span class="na">createMimeMessage</span><span class="o">();</span>
-            <span class="nc">MimeMessageHelper</span> <span class="n">mimeMessageHelper</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MimeMessageHelper</span><span class="o">(</span><span class="n">mimeMessage</span><span class="o">,</span> <span class="s">"utf-8"</span><span class="o">);</span>
-
-            <span class="n">mimeMessageHelper</span><span class="o">.</span><span class="na">setTo</span><span class="o">(</span><span class="n">receiver</span><span class="o">);</span>
-            <span class="n">mimeMessageHelper</span><span class="o">.</span><span class="na">setSubject</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
-            <span class="n">mimeMessageHelper</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">content</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
-            <span class="n">mimeMessageHelper</span><span class="o">.</span><span class="na">setFrom</span><span class="o">(</span><span class="s">"example@gmail.com"</span><span class="o">);</span>
-
-            <span class="n">javaMailSender</span><span class="o">.</span><span class="na">send</span><span class="o">(</span><span class="n">mimeMessage</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">MessagingException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">throw</span> <span class="k">new</span> <span class="nf">MessagingException</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
-        <span class="o">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">InitialDataInsert</span> <span class="kd">implements</span> <span class="nc">ApplicationRunner</span> <span class="o">{</span>
+    
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">ExampleService</span> <span class="n">service</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertData</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">service</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="s">"example"</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">(</span><span class="nc">ApplicationArguments</span> <span class="n">args</span><span class="o">)</span> <span class="k">throw</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="n">insertData</span><span class="o">();</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="reference">Reference</h3>
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=QwQuro7ekvc" target="_blank">Amigoscode in Youtube</a></li>
+  <li><a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/ApplicationRunner.html" target="_blank">Application Runner in Spring Document</a></li>
 </ul>
 
                 </div>
@@ -339,9 +305,9 @@ just use <code class="language-plaintext highlighter-rouge">spring-boot-starter-
                 <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
-                        var this_page_url = '/Spring_Boot-Sending_Email';
-                        var this_page_identifier = '/Spring_Boot-Sending_Email';
-                        var this_page_title = 'Spring Boot - Sending Email';
+                        var this_page_url = '/Spring_Boot-Injecting_Data_using_Implemented_Service';
+                        var this_page_identifier = '/Spring_Boot-Injecting_Data_using_Implemented_Service';
+                        var this_page_title = 'Spring Boot - Injecting Data using Implemented Service';
                     };
                     (function () {
                         var d = document, s = d.createElement('script');
@@ -383,10 +349,6 @@ just use <code class="language-plaintext highlighter-rouge">spring-boot-starter-
                         
                         
                         
-                        
-                         <li><a href="/Spring_Boot-Injecting_Data_using_Implemented_Service">Spring Boot - Injecting Data using Implemented Service</a></li>
-                            
-                            
                             
                             
                         
@@ -403,6 +365,10 @@ just use <code class="language-plaintext highlighter-rouge">spring-boot-starter-
                             
                         
                         
+                        
+                         <li><a href="/Spring_Boot-Sending_Email">Spring Boot - Sending Email</a></li>
+                            
+                            
                             
                             
                         
@@ -568,36 +534,33 @@ just use <code class="language-plaintext highlighter-rouge">spring-boot-starter-
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
             
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Unreal_Engine-Installing_Unreal_Engine">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/unreal-engine-logo.jpeg)"></div>
+            <a class="post-card-image-link" href="/Intelligent_Information_Systems-Environment_Setting">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Unreal_Engine-Installing_Unreal_Engine">
+            <a class="post-card-content-link" href="/Intelligent_Information_Systems-Environment_Setting">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Game</span>
+                                <span class="post-card-tags">Comsci</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Unreal Engine - Installing Unreal Engine</h2>
+                    <h2 class="post-card-title">Intelligent Information Systems - Environment Setting</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>Unity vs Unreal Engine
-Unity
-
-  Easy to learn
-  Easy to program 2D mobile game
-  Various assets in stored contents
-
+                        <p>Data analysis in computer
 
 </p>
                     
@@ -626,58 +589,6 @@ Unity
 
             
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-            
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/github-actions-logo.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Devops</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">GitHub Actions - CI Pipeline for Spring Boot</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>What is GitHub Actions GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot project. In this post, I am going to go through the</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/gs97ahn/">nogamsung</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      2 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
         </div>
     </div>
 </aside>
@@ -691,20 +602,20 @@ Unity
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Spring Boot - Sending Email</div>
+    <div class="floating-header-title">Spring Boot - Injecting Data using Implemented Service</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
         <a class="floating-header-share-tw"
-            href="https://twitter.com/share?text=Spring+Boot+-+Sending+Email&amp;url=https://gs97ahn.github.io/Spring_Boot-Sending_Email"
+            href="https://twitter.com/share?text=Spring+Boot+-+Injecting+Data+using+Implemented+Service&amp;url=https://gs97ahn.github.io/Spring_Boot-Injecting_Data_using_Implemented_Service"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
         <a class="floating-header-share-fb"
-            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Spring_Boot-Sending_Email"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Spring_Boot-Injecting_Data_using_Implemented_Service"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
