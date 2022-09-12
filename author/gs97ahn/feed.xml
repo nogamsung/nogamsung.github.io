@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-08T10:44:57+09:00</updated>
+  <updated>2022-09-13T01:22:55+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,319 @@
   
   
 
+  
+    <entry>
+      <title type="html">Big Data - Map Reduce</title>
+      <link href="/Big_Data-Map_Reduce" rel="alternate" type="text/html" title="Big Data - Map Reduce" />
+      <published>2022-09-12T00:00:00+09:00</published>
+      <updated>2022-09-12T00:00:00+09:00</updated>
+      <id>/Big_Data-Map_Reduce</id>
+      <content type="html" xml:base="/Big_Data-Map_Reduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Process a lot of data to produce other data&lt;/li&gt;
+  &lt;li&gt;Requirements
+    &lt;ul&gt;
+      &lt;li&gt;CPU, Memory, HDD, …&lt;/li&gt;
+      &lt;li&gt;Multiple machine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cluster-architecture&quot;&gt;Cluster Architecture&lt;/h3&gt;
+
+&lt;p&gt;Fat-tree Architecture&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mining big data requires large-scale computing whose key component is &lt;strong&gt;parallel programming&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;basic-operation-mapreduce&quot;&gt;Basic Operation: MapReduce&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Created by Google (Jeffry Dean and Sanjay Chemawat) in 2004&lt;/li&gt;
+  &lt;li&gt;Inspired from LISP
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Applies the given function to each element of the set&lt;/li&gt;
+          &lt;li&gt;(map ‘length’(() (a) (a b) (a b c)) =&amp;gt; (0 1 2 3)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;(reduce #’+’(1 2 3 4 5)) =&amp;gt; 15&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-is-also-framework&quot;&gt;MapReduce is also Framework&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apache Hadoop MapReduce, Amazon Elastic MapReduce&lt;/li&gt;
+  &lt;li&gt;Framework for parallel computing
+    &lt;ul&gt;
+      &lt;li&gt;Parallelization&lt;/li&gt;
+      &lt;li&gt;Data distribution&lt;/li&gt;
+      &lt;li&gt;Load balancing&lt;/li&gt;
+      &lt;li&gt;Fault tolerance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Programmers get simple API&lt;/li&gt;
+  &lt;li&gt;Allows one to process hug amount of data on thousands of processors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-as-programming-model&quot;&gt;MapReduce as Programming Model&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sample problem
+    &lt;ul&gt;
+      &lt;li&gt;Find top 10URLs by access frequency by analyzing log files from web server(s)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The problem can be converted as WordCount
+    &lt;ul&gt;
+      &lt;li&gt;Counting words in a huge text document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wordcount&quot;&gt;WordCount&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assume that a file is too large for memory, but all &amp;lt;word, count&amp;gt; pairs fit in memory
+    &lt;ol&gt;
+      &lt;li&gt;load a part of the file - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;count word - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;merge - &lt;strong&gt;Reduce&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Each sub-task can be run in parallel
+    &lt;ul&gt;
+      &lt;li&gt;Reduce not only the resource usage, but execution time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generalize-formally&quot;&gt;Generalize Formally&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: a set of key-value pairs&lt;/li&gt;
+  &lt;li&gt;2 methods:
+    &lt;ul&gt;
+      &lt;li&gt;Map(k, v) -&amp;gt; &amp;lt;k’, v’&amp;gt;*&lt;/li&gt;
+      &lt;li&gt;Reduce( k’, &amp;lt;v’&amp;gt;* ) -&amp;gt; &amp;lt;k’, v’’&amp;gt;*&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-a-logical-diagram&quot;&gt;MapReduce: A Logical Diagram&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mapreduce-environment&quot;&gt;MapReduce: Environment&lt;/h3&gt;
+
+&lt;p&gt;MapReduce environment takes care of the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Partitioning&lt;/strong&gt; the input data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scheduling&lt;/strong&gt; the program’s execution across a set of machines&lt;/li&gt;
+  &lt;li&gt;Performing the &lt;strong&gt;group by key&lt;/strong&gt; step&lt;/li&gt;
+  &lt;li&gt;Handling machine &lt;strong&gt;failures&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Managing required inter-machine &lt;strong&gt;communication&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-a-physical-diagram&quot;&gt;MapReduce: A Physical Diagram&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Large Scale Computing for Data Mining</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Reading CSV File</title>
+      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
+      <published>2022-09-11T19:30:00+09:00</published>
+      <updated>2022-09-11T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get public data
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;API
+    &lt;ul&gt;
+      &lt;li&gt;Naver API&lt;/li&gt;
+      &lt;li&gt;Twitter API&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Web Scrapping/Crawling
+    &lt;ul&gt;
+      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
+
+&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">How to GET data</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - AI and DS</title>
+      <link href="/Intelligent_Information_Systems-AI_and_DS" rel="alternate" type="text/html" title="Intelligent Information Systems - AI and DS" />
+      <published>2022-09-11T19:30:00+09:00</published>
+      <updated>2022-09-11T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-AI_and_DS</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-AI_and_DS">&lt;h3 id=&quot;where-is-data-created&quot;&gt;Where is “Data” created?&lt;/h3&gt;
+
+&lt;p&gt;Data is created my the Internet, smartphones, smart sensors, GPS, and etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;AI: Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;ML: Machine Learning&lt;/li&gt;
+  &lt;li&gt;DL: Deep Learning&lt;/li&gt;
+  &lt;li&gt;DS: Data Science&lt;/li&gt;
+  &lt;li&gt;BD: Big Data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-is-big-data&quot;&gt;What is Big Data?&lt;/h2&gt;
+
+&lt;h3 id=&quot;characteristics-of-big-data-3v&quot;&gt;Characteristics of Big Data (3V)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Volume
+    &lt;ul&gt;
+      &lt;li&gt;normally, terabytes or more&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Velocity
+    &lt;ul&gt;
+      &lt;li&gt;produced fast&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variety
+    &lt;ul&gt;
+      &lt;li&gt;various types of data such as text, image, and video&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;AI = A variety of automation&lt;/p&gt;
+
+&lt;p&gt;DS = Opinions collected -&amp;gt; Thesis -&amp;gt; Make Decision&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Where is “Data” created?</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Spring Boot - Injecting Data using Implemented Service</title>
@@ -937,444 +1250,6 @@ approximately 20GB.&lt;/p&gt;
 
       
         <summary type="html">Unity vs Unreal Engine Unity Easy to learn Easy to program 2D mobile game Various assets in stored contents</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Spring Boot - Sending Email</title>
-      <link href="/Spring_Boot-Sending_Email" rel="alternate" type="text/html" title="Spring Boot - Sending Email" />
-      <published>2022-08-26T11:26:00+09:00</published>
-      <updated>2022-08-26T11:26:00+09:00</updated>
-      <id>/Spring_Boot-Sending_Email</id>
-      <content type="html" xml:base="/Spring_Boot-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
-&lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
-just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spring-boot-starter-mail&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;dependency&quot;&gt;Dependency&lt;/h4&gt;
-
-&lt;p&gt;build.gradle&lt;/p&gt;
-
-&lt;div class=&quot;language-gradle highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'org.springframework.boot:spring-boot-starter-mail'&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;application.properties&lt;/p&gt;
-
-&lt;div class=&quot;language-properties highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;py&quot;&gt;spring.mail.host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_HOST} # smtp.gmail.com # if you want to use gamil&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_PORT} # 587&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_USERNAME} # username@gmail.com # change username to your username&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${MAIL_PASSWORD} # this is not the password you would usually use to login&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.default-encoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;UTF-8&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.properties.mail.smtp.auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;spring.mail.properties.mail.smtp.starttls.enable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-&lt;p&gt;These are the steps to get the mail password from gmail.&lt;/p&gt;
-
-&lt;p&gt;1️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage your Google Account&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Security&lt;/code&gt; from the left menu&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App passwords&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;4️⃣ Select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Other (Custom name)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;5️⃣ Name the app password and click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GENERATE&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;6️⃣ Finally, you will get your app password&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-08-26/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@RequiredArgsConstructor&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmailService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JavaMailSender&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;nd&quot;&gt;@Async&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sendEmail&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MimeMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;createMimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;MimeMessageHelper&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;mimeMessageHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;example@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-            &lt;span class=&quot;n&quot;&gt;javaMailSender&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mimeMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;MessagingException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MessagingException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=QwQuro7ekvc&quot; target=&quot;_blank&quot;&gt;Amigoscode in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="backend" />
-      
-
-      
-        <summary type="html">How would you send email using Spring Boot? Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you just use spring-boot-starter-mail.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">GitHub Actions - CI Pipeline for Spring Boot</title>
-      <link href="/GitHub_Actions-CI_Pipeline_for_Spring_Boot" rel="alternate" type="text/html" title="GitHub Actions - CI Pipeline for Spring Boot" />
-      <published>2022-08-24T14:00:00+09:00</published>
-      <updated>2022-08-24T14:00:00+09:00</updated>
-      <id>/GitHub_Actions-CI_Pipeline_for_Spring_Boot</id>
-      <content type="html" xml:base="/GitHub_Actions-CI_Pipeline_for_Spring_Boot">&lt;h2 id=&quot;what-is-github-actions&quot;&gt;What is GitHub Actions&lt;/h2&gt;
-&lt;p&gt;GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot 
-project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.&lt;/p&gt;
-
-&lt;h3 id=&quot;1️⃣-setting-in-github&quot;&gt;1️⃣ Setting in GitHub&lt;/h3&gt;
-&lt;p&gt;First go to your project repository and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; in the menu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2️⃣-set-up-a-workflow&quot;&gt;2️⃣ Set up a workflow&lt;/h3&gt;
-
-&lt;p&gt;If you want to start from scratch, click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set up a workflow yourself -&amp;gt;&lt;/code&gt;, otherwise, click on the specific
-configuration you need.&lt;/p&gt;
-
-&lt;p&gt;I am going to set up from the scratch for the example.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;3️⃣-workflow-code&quot;&gt;3️⃣ Workflow Code&lt;/h3&gt;
-
-&lt;p&gt;For the sake of the example, I am going to use IntelliJ IDEA. To do this, you just need to add the workflow file. In the
-root of your project folder, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/develop-ci.yaml&lt;/code&gt;. I have named the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop-ci.yaml&lt;/code&gt; because I am 
-going to build a CI(Continuous Integration) pipeline, but you can name it whatever you want. Nevertheless, the file has 
-to be in this specific path: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/.github/workflows/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The whole workflow code is going to look like this&lt;/p&gt;
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Develop - CI&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;pull_request&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;develop&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
-
-    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v3&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Set up JDK&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/setup-java@v3&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;distribution&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;adopt'&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;java-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;11'&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Grant execute permission for Gradlew&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;chmod +x gradlew&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build with Gradle&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew build -x test&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_NAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PORT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PORT } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_HOST&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_HOST } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_USERNAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_USERNAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;DB_PASSWORD&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DB_PASSWORD } }&lt;/span&gt;
-
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build and push Docker image&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mr-smithers-excellent/docker-build-push@v5&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gs97ahn/server&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example-latest&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;registry&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;docker.io&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_USERNAME } }&lt;/span&gt;
-          &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;${ { secrets.DOCKER_PASSWORD } }&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;important-️&quot;&gt;Important ❗️&lt;/h4&gt;
-&lt;p&gt;In the example above, I have spacing between the curly brace. However, it should be not have spacing.&lt;/p&gt;
-
-&lt;h4 id=&quot;workflow-code-explanation&quot;&gt;Workflow Code Explanation&lt;/h4&gt;
-&lt;p&gt;This workflow will run everytime a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull request&lt;/code&gt; is triggered in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch. It will do specific tasks
-given in the ubuntu-latest environment. Theses are the specific steps that it will go through:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set up JDK&lt;/li&gt;
-  &lt;li&gt;Grant execute permission for Gradlew&lt;/li&gt;
-  &lt;li&gt;Build with Gradle&lt;/li&gt;
-  &lt;li&gt;Build and push Docker image&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Basically, it will set up jdk and test the code with the test codes that you have. Afterwards, it will build it to your
-docker repository.&lt;/p&gt;
-
-&lt;h3 id=&quot;4️⃣-setting-up-secrets&quot;&gt;4️⃣ Setting up Secrets&lt;/h3&gt;
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;${ { secrets } }&lt;/code&gt; in the code is the environment variable that you give when you compile and run the program. The
-reason for being secret is because there are certain variables that you would want it to be secrets like the example
-below:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;port number&lt;/li&gt;
-  &lt;li&gt;docker repository username&lt;/li&gt;
-  &lt;li&gt;docker repository password&lt;/li&gt;
-  &lt;li&gt;database username&lt;/li&gt;
-  &lt;li&gt;database passwords&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;important-️-1&quot;&gt;Important ❗️&lt;/h4&gt;
-&lt;p&gt;If you do not set up this secrets in your github, you will encounter error because your code will require these secrets
-everytime the code is compiling.&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---1️⃣&quot;&gt;4️⃣ - 1️⃣&lt;/h4&gt;
-&lt;p&gt;To set up secrets, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; in your project repository.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---2️⃣&quot;&gt;4️⃣ - 2️⃣&lt;/h4&gt;
-&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt; in the left menu bar.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---3️⃣&quot;&gt;4️⃣ - 3️⃣&lt;/h4&gt;
-&lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;4️⃣---4️⃣&quot;&gt;4️⃣ - 4️⃣&lt;/h4&gt;
-&lt;p&gt;Finally name the secret and write the value. Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add secret&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;5️⃣-done&quot;&gt;5️⃣ Done&lt;/h3&gt;
-&lt;p&gt;Try pushing your work to the branch to see github actions in work.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit -m &quot;[CHORE] CI pipeline configured&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can find the github actions in work by going to actions menu in your github repository.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-12.png&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=R8_veQiYBjI&amp;amp;t=1742s&quot; target=&quot;_blank&quot;&gt;TechWorld with Nana in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="devops" />
-      
-
-      
-        <summary type="html">What is GitHub Actions GitHub Actions allows developers to automate various tasks. For example, we can build CI pipelines for Spring Boot project. In this post, I am going to go through the steps to build CI pipeline for Spring Boot.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">AWS EC2 - Setting Up AWS EC2</title>
-      <link href="/AWS_EC2-Setting_Up_AWS_EC2" rel="alternate" type="text/html" title="AWS EC2 - Setting Up AWS EC2" />
-      <published>2022-08-24T14:00:00+09:00</published>
-      <updated>2022-08-24T14:00:00+09:00</updated>
-      <id>/AWS_EC2-Setting_Up_AWS_EC2</id>
-      <content type="html" xml:base="/AWS_EC2-Setting_Up_AWS_EC2">&lt;h2 id=&quot;what-is-aws-ec2&quot;&gt;What is AWS EC2&lt;/h2&gt;
-&lt;p&gt;In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅.
-This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific 
-pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;rental server&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-0️⃣&quot;&gt;Step 0️⃣&lt;/h3&gt;
-&lt;p&gt;First you need to have an AWS account. So sign up and get free tier for your practice.&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-&quot;&gt;Tip ❗&lt;/h4&gt;
-&lt;p&gt;If you are not prepared with your server application. Code First! Because you want to have your free tier as long as
-possible.&lt;/p&gt;
-
-&lt;h3 id=&quot;step-1️⃣&quot;&gt;Step 1️⃣&lt;/h3&gt;
-&lt;p&gt;Select the region from the top navigation bar. This region should be closest to your client’s region.&lt;/p&gt;
-
-&lt;p&gt;I am currently trying to have a service in South Korea. Therefore, I will be selecting Seoul(ap-northeast-2).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
-&lt;p&gt;Select launch instance from the EC2 Dashboard.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
-&lt;p&gt;Name your instance and choose the operating system you would like.&lt;/p&gt;
-
-&lt;p&gt;For my specific example, I will be choosing ubuntu 22.04 as it is eligible for free tier.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
-&lt;p&gt;Select the instance type that you would like. Depending on the computing power that you need, this may vary. Of course,
-if you choose a powerful instance, you would need to pay more for the usage.&lt;/p&gt;
-
-&lt;p&gt;For my specific example, I will be selecting t2.micro which has 1vCPU, 1GiB memory. This instance is eligible for free
-tier usage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
-&lt;p&gt;Set up a key pair. This is not required, however it is important that you need to set this up for security reasons as
-&lt;strong&gt;you do not want anyone else to access your ec2 instance&lt;/strong&gt;. Click on the “Create new key pair” if you do not have a key
-pair already.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After clicking on the “Create new key pair”, name your key pair and select the options that you need.&lt;/p&gt;
-
-&lt;p&gt;You should probably stick with RSA because ED25519 is not supported for Windows instance in case you are need Windows
-instance.&lt;/p&gt;
-
-&lt;p&gt;For private key file format, depending on your favor, whether it is OpenSSH or PuTTy, select the option.&lt;/p&gt;
-
-&lt;p&gt;Finally, click Create key pair and &lt;strong&gt;keep the file somewhere secure&lt;/strong&gt;. &lt;strong&gt;If you lose this file, you will not be able to
-get into your ec2 instance ever again&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;For the sake of my example, I am going to select RSA and .pem format.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-6️⃣&quot;&gt;Step 6️⃣&lt;/h3&gt;
-&lt;p&gt;Next is setting up the network settings. If you have a constant IP address, and you will want to access the EC2 instance
-only from the specific computer, Click on the Anywhere 0.0.0.0/0 and customize it or select “My IP” which would be your
-current IP address.&lt;/p&gt;
-
-&lt;p&gt;If you are having a backend application in the EC2, you need to allow HTTPs or HTTP or both traffic from the internet.
-This is your clients accessing your server for requests and responses.&lt;/p&gt;
-
-&lt;p&gt;For my example, I am going to run a Spring Boot application, so I am going to allow HTTP traffic only. Also, I am going
-to allow SSH traffic from Anywhere.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-7️⃣&quot;&gt;Step 7️⃣&lt;/h3&gt;
-&lt;p&gt;Next step is setting up storage. For free tier, AWS allows you to have upto 30GB, but you probably would like to check
-on the pricing to reduce surprises that you might encounter in the future.&lt;/p&gt;
-
-&lt;p&gt;For my example, I am going to give 10GiB to my storage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-8️⃣&quot;&gt;Step 8️⃣&lt;/h3&gt;
-&lt;p&gt;If you want your instance to have GPU or other advanced setting, you can configure it in “Advanced details”.&lt;/p&gt;
-
-&lt;p&gt;For my example, I do need any of the advanced settings for now, so I am just going to ignore this part.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-9️⃣&quot;&gt;Step 9️⃣&lt;/h3&gt;
-&lt;p&gt;Last but not least, you need to select how many instance, meaning how many server computer that you are going run.&lt;/p&gt;
-
-&lt;p&gt;I am going to select just one for the sake of this example.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, click on the “Launch instance”, and AWS will prepare you for your EC2 instance. Congrats! 🎉&lt;/p&gt;
-
-&lt;h3 id=&quot;step-&quot;&gt;Step 🔟&lt;/h3&gt;
-
-&lt;p&gt;You have various ways to connect to your EC2 instance:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;EC2 Instance Connect&lt;/li&gt;
-  &lt;li&gt;Session Manager&lt;/li&gt;
-  &lt;li&gt;SSH client&lt;/li&gt;
-  &lt;li&gt;EC2 serial console&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I usually use EC2 Instance Connect or SSH client as it is my favor of usage.&lt;/p&gt;
-
-&lt;p&gt;And of course, as it is default to be “On Demand”, you can stop your server, or get rid of it any time you would like.
-However, you need to acknowledge that everytime you stop and re-run your instance, the EC2 IP address will change.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Pv2yDJ2NKQA&amp;amp;t=323s&quot; target=&quot;_blank&quot;&gt;생활코딩 in Youtube&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="devops" />
-      
-
-      
-        <summary type="html">What is AWS EC2 In order to have a backend application. You need to have a server. Not everyone has a server computer in their home😅. This is when you use AWS EC2. EC2 stands for Elastic Compute Cloud. You can borrow a server computer with a specific pricing that AWS provide. Basically, you can understand it as a rental server.</summary>
       
 
       

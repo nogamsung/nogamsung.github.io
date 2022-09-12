@@ -8,6 +8,51 @@
     
       
       <item>
+        <title>Big Data - Map Reduce</title>
+        
+          <description>&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 12 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Big_Data-Map_Reduce</link>
+        <guid isPermaLink="true">/Big_Data-Map_Reduce</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - Reading CSV File</title>
+        
+          <description>&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sun, 11 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Reading_CSV_File</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Reading_CSV_File</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - AI and DS</title>
+        
+          <description>&lt;h3 id=&quot;where-is-data-created&quot;&gt;Where is “Data” created?&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Sun, 11 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-AI_and_DS</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-AI_and_DS</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Spring Boot - Injecting Data using Implemented Service</title>
         
           <description>&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one

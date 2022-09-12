@@ -4,6 +4,54 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Big_Data-Map_Reduce.html</loc>
+        
+        <lastmod>2022-09-12T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Intelligent_Information_Systems-Reading_CSV_File.html</loc>
+        
+        <lastmod>2022-09-11T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Intelligent_Information_Systems-AI_and_DS.html</loc>
+        
+        <lastmod>2022-09-11T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Spring_Boot-Injecting_Data_using_Implemented_Service.html</loc>
         
         <lastmod>2022-09-07T09:08:00+09:00</lastmod>

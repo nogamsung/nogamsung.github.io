@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-08T10:44:57+09:00</updated>
+  <updated>2022-09-13T01:22:55+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,319 @@
   
   
 
+  
+    <entry>
+      <title type="html">Big Data - Map Reduce</title>
+      <link href="/Big_Data-Map_Reduce" rel="alternate" type="text/html" title="Big Data - Map Reduce" />
+      <published>2022-09-12T00:00:00+09:00</published>
+      <updated>2022-09-12T00:00:00+09:00</updated>
+      <id>/Big_Data-Map_Reduce</id>
+      <content type="html" xml:base="/Big_Data-Map_Reduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Process a lot of data to produce other data&lt;/li&gt;
+  &lt;li&gt;Requirements
+    &lt;ul&gt;
+      &lt;li&gt;CPU, Memory, HDD, …&lt;/li&gt;
+      &lt;li&gt;Multiple machine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cluster-architecture&quot;&gt;Cluster Architecture&lt;/h3&gt;
+
+&lt;p&gt;Fat-tree Architecture&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mining big data requires large-scale computing whose key component is &lt;strong&gt;parallel programming&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;basic-operation-mapreduce&quot;&gt;Basic Operation: MapReduce&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Created by Google (Jeffry Dean and Sanjay Chemawat) in 2004&lt;/li&gt;
+  &lt;li&gt;Inspired from LISP
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Applies the given function to each element of the set&lt;/li&gt;
+          &lt;li&gt;(map ‘length’(() (a) (a b) (a b c)) =&amp;gt; (0 1 2 3)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;(reduce #’+’(1 2 3 4 5)) =&amp;gt; 15&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-is-also-framework&quot;&gt;MapReduce is also Framework&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apache Hadoop MapReduce, Amazon Elastic MapReduce&lt;/li&gt;
+  &lt;li&gt;Framework for parallel computing
+    &lt;ul&gt;
+      &lt;li&gt;Parallelization&lt;/li&gt;
+      &lt;li&gt;Data distribution&lt;/li&gt;
+      &lt;li&gt;Load balancing&lt;/li&gt;
+      &lt;li&gt;Fault tolerance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Programmers get simple API&lt;/li&gt;
+  &lt;li&gt;Allows one to process hug amount of data on thousands of processors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-as-programming-model&quot;&gt;MapReduce as Programming Model&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sample problem
+    &lt;ul&gt;
+      &lt;li&gt;Find top 10URLs by access frequency by analyzing log files from web server(s)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The problem can be converted as WordCount
+    &lt;ul&gt;
+      &lt;li&gt;Counting words in a huge text document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wordcount&quot;&gt;WordCount&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assume that a file is too large for memory, but all &amp;lt;word, count&amp;gt; pairs fit in memory
+    &lt;ol&gt;
+      &lt;li&gt;load a part of the file - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;count word - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;merge - &lt;strong&gt;Reduce&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Each sub-task can be run in parallel
+    &lt;ul&gt;
+      &lt;li&gt;Reduce not only the resource usage, but execution time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generalize-formally&quot;&gt;Generalize Formally&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input: a set of key-value pairs&lt;/li&gt;
+  &lt;li&gt;2 methods:
+    &lt;ul&gt;
+      &lt;li&gt;Map(k, v) -&amp;gt; &amp;lt;k’, v’&amp;gt;*&lt;/li&gt;
+      &lt;li&gt;Reduce( k’, &amp;lt;v’&amp;gt;* ) -&amp;gt; &amp;lt;k’, v’’&amp;gt;*&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-a-logical-diagram&quot;&gt;MapReduce: A Logical Diagram&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;mapreduce-environment&quot;&gt;MapReduce: Environment&lt;/h3&gt;
+
+&lt;p&gt;MapReduce environment takes care of the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Partitioning&lt;/strong&gt; the input data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Scheduling&lt;/strong&gt; the program’s execution across a set of machines&lt;/li&gt;
+  &lt;li&gt;Performing the &lt;strong&gt;group by key&lt;/strong&gt; step&lt;/li&gt;
+  &lt;li&gt;Handling machine &lt;strong&gt;failures&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Managing required inter-machine &lt;strong&gt;communication&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mapreduce-a-physical-diagram&quot;&gt;MapReduce: A Physical Diagram&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Large Scale Computing for Data Mining</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Reading CSV File</title>
+      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
+      <published>2022-09-11T19:30:00+09:00</published>
+      <updated>2022-09-11T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get public data
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;API
+    &lt;ul&gt;
+      &lt;li&gt;Naver API&lt;/li&gt;
+      &lt;li&gt;Twitter API&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Web Scrapping/Crawling
+    &lt;ul&gt;
+      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
+
+&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">How to GET data</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - AI and DS</title>
+      <link href="/Intelligent_Information_Systems-AI_and_DS" rel="alternate" type="text/html" title="Intelligent Information Systems - AI and DS" />
+      <published>2022-09-11T19:30:00+09:00</published>
+      <updated>2022-09-11T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-AI_and_DS</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-AI_and_DS">&lt;h3 id=&quot;where-is-data-created&quot;&gt;Where is “Data” created?&lt;/h3&gt;
+
+&lt;p&gt;Data is created my the Internet, smartphones, smart sensors, GPS, and etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;AI: Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;ML: Machine Learning&lt;/li&gt;
+  &lt;li&gt;DL: Deep Learning&lt;/li&gt;
+  &lt;li&gt;DS: Data Science&lt;/li&gt;
+  &lt;li&gt;BD: Big Data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-is-big-data&quot;&gt;What is Big Data?&lt;/h2&gt;
+
+&lt;h3 id=&quot;characteristics-of-big-data-3v&quot;&gt;Characteristics of Big Data (3V)&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Volume
+    &lt;ul&gt;
+      &lt;li&gt;normally, terabytes or more&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Velocity
+    &lt;ul&gt;
+      &lt;li&gt;produced fast&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variety
+    &lt;ul&gt;
+      &lt;li&gt;various types of data such as text, image, and video&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;AI = A variety of automation&lt;/p&gt;
+
+&lt;p&gt;DS = Opinions collected -&amp;gt; Thesis -&amp;gt; Make Decision&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Where is “Data” created?</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Intelligent Information Systems - Environment Setting</title>
