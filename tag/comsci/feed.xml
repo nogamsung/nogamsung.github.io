@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-13T01:22:55+09:00</updated>
+  <updated>2022-09-16T15:30:29+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -32,12 +32,216 @@
 
   
     <entry>
-      <title type="html">Big Data - Map Reduce</title>
-      <link href="/Big_Data-Map_Reduce" rel="alternate" type="text/html" title="Big Data - Map Reduce" />
+      <title type="html">Computer Network - The Network Core</title>
+      <link href="/Computer_Network-The_Network_Core" rel="alternate" type="text/html" title="Computer Network - The Network Core" />
+      <published>2022-09-12T19:30:00+09:00</published>
+      <updated>2022-09-12T19:30:00+09:00</updated>
+      <id>/Computer_Network-The_Network_Core</id>
+      <content type="html" xml:base="/Computer_Network-The_Network_Core">&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1️⃣-packet-switching&quot;&gt;1️⃣ Packet Switching&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Messages&lt;/strong&gt;: Anything the application designer wants which are exchanged by end systems.
+    &lt;ul&gt;
+      &lt;li&gt;May contain data such as an e-mail message, a JPEG image, or an MP3 audio file.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packets&lt;/strong&gt;: A format which a long messages are broken down to.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packet switches&lt;/strong&gt;: A tool that packet travels.
+    &lt;ul&gt;
+      &lt;li&gt;There are two predominant types of packet switches: &lt;strong&gt;routers&lt;/strong&gt; and &lt;strong&gt;link-layer switches&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Packets are transmitted over each communication link at a rate equal to full transmission rate of link.&lt;/li&gt;
+      &lt;li&gt;e.g. Source system or a packet switch is sending a packet of &lt;em&gt;L&lt;/em&gt; bits over a link with transmission rate R bit/sec
+-&amp;gt; packet is transmitted at L/R seconds&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;store-and-forward-transmission&quot;&gt;Store-and-Forward Transmission&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Store-and-forward transmission&lt;/strong&gt;: The packet switch must receive the entire packet before it can begin to transmit
+the first bit of the packet onto the outbound link.
+    &lt;ul&gt;
+      &lt;li&gt;To explore in more detail, consider a simple network consisting of two end systems connected by a single router, as 
+shown below. A router will typically have many incident links, since its job is to switch an incoming packet onto an 
+ongoing link; in this simple example, the router has the rather simple task of transferring a packet from one (input) 
+link to the only other attached link. In this example, the source has three packets, each consisting of &lt;em&gt;L&lt;/em&gt; bits, to 
+send to the destination. At the snapshot of the time shown below, the source has transmitted some of packet 1, and the
+front of packet 1 has already arrived at the router. Because the router employs store-and-forwarding, at this instant of
+time, the router cannot transmit the bits it has received; instead it must first buffer the packet’s bits. Only after
+the router has received all of the packet’s bits can it begin to transmit the packet onto the outbound link. To gain
+some insight into store-and-forward transmission, let’s now calculate the amount of time that elapses from when the
+source begins to send the packet until the destination has received the entire packet. The source begins to transmit at
+time 0; at time &lt;em&gt;L/R&lt;/em&gt; seconds, the source has transmitted the entire packet, and the entire packet has been received and
+stored at the router. At time &lt;em&gt;L/R&lt;/em&gt; seconds, since the router has just received and stored at the router. At time &lt;em&gt;L/R&lt;/em&gt;
+seconds, since the router has just received the entire packet, it can begin to transmit the packet onto the outbound
+link towards the destination; at time 2&lt;em&gt;L/R&lt;/em&gt;, the router has transmitted the entire packet, and the entire packet has
+been received by the destination. Thus, the total delay is 2&lt;em&gt;L/R&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s now consider the general case of sending one packet from source to destination over a path consisting of &lt;em&gt;N&lt;/em&gt; links
+each of rate &lt;em&gt;R&lt;/em&gt; (thus, there are N-1 routers between source and destination). Applying the same logic as above, we see
+that end-to-end delay is:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{end-to-end}&amp;space;=&amp;space;N\tfrac{L}{R}&quot; alt=&quot;equation&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;queuing-delays-and-packet-loss&quot;&gt;Queuing Delays and Packet Loss&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Output buffer(a.k.a. output queue)&lt;/strong&gt;: Stores packets that the router is about to send into that link.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Queuing delays&lt;/strong&gt;: Variable and depend on the level of congestion in the network.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packet loss&lt;/strong&gt;: The arriving packet or one of already-queued packets will be dropped since the buffer is already
+completely full.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;forwarding-tables-and-routing-protocols&quot;&gt;Forwarding Tables and Routing Protocols&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Forwarding table&lt;/strong&gt;: Maps destination addresses to that router’s outbound links.
+&lt;strong&gt;Routing protocols&lt;/strong&gt;: Used to automatically set the forwarding tables.&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-circuit-switching&quot;&gt;2️⃣ Circuit Switching&lt;/h2&gt;
+
+&lt;p&gt;There are 2 fundamental approaches to moving data through a network of links and switches: &lt;strong&gt;circuit switching&lt;/strong&gt; and
+&lt;strong&gt;packet switching&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Circuit-switched network&lt;/th&gt;
+      &lt;th&gt;Packet-switched network&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Resources needed along a path to provide communication between the end systems are &lt;strong&gt;&lt;em&gt;reserved&lt;/em&gt;&lt;/strong&gt; for commuication between the end systems&lt;/td&gt;
+      &lt;td&gt;Resources needed along a path to provide communication between the end systems are &lt;strong&gt;&lt;em&gt;not reserved&lt;/em&gt;&lt;/strong&gt; for commuication between the end systems&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;End-to-end connection&lt;/strong&gt;: The network must first reserve one circuit on each of two links.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;multiplexing-in-circuit-switched-networks&quot;&gt;Multiplexing in Circuit-Switched Networks&lt;/h3&gt;
+
+&lt;p&gt;A circuit in a link is implemented with either &lt;strong&gt;frequency-division multiplexing(FDM)&lt;/strong&gt; or 
+&lt;strong&gt;time-division multiplexing(TDM)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Frequency-division multiplexing(FDM)&lt;/strong&gt;: The frequency spectrum of a link is divided up among the connections
+established across the link.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Time-division multiplexing(TDM)&lt;/strong&gt;: Time is divided of fixed duration and each frame is divided into a fixed number
+of time slots.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;bandwidth&lt;/strong&gt;: The width of the frequency band.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;silent period&lt;/strong&gt;: A period of silent in circuit switching when network resources are allocated to the connection but 
+are not used.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-a-network-of-networks&quot;&gt;3️⃣ A Network of Networks&lt;/h2&gt;
+
+&lt;h4 id=&quot;network-structure-1&quot;&gt;Network Structure 1&lt;/h4&gt;
+
+&lt;p&gt;Interconnects all of the access ISPs with a single global transit ISP.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Customer&lt;/strong&gt;: The access ISP&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: The global transit ISP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;network-structure-2&quot;&gt;Network Structure 2&lt;/h4&gt;
+
+&lt;p&gt;Two-tier hierarchy with global transit providers residing at the top tier and access ISPs at the bottom tier.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Regional ISP&lt;/strong&gt;: The access ISPs in the region connect.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tier-1 ISPs&lt;/strong&gt;: Similar to (imaginary) global transit ISP.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. Level 3 Communications, AT&amp;amp;T, Sprint, and NTT.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;There is a customer-provider relationship at each level of the hierarchy. The tier-1 ISPs do not pay anyone as they are 
+at the top of the hierarchy.&lt;/p&gt;
+
+&lt;h4 id=&quot;network-structure-3&quot;&gt;Network Structure 3&lt;/h4&gt;
+
+&lt;p&gt;Multi-tier hierarchy, which is still only a crude approximation of today’s Internet.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Points of Presence(PoPs)&lt;/strong&gt;: A group of one or more routers in the provider’s network where customer ISPs can connect
+into the provider ISP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multi-home&lt;/strong&gt; Connect two or more provider ISPs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Peer&lt;/strong&gt;: A pair of nearby ISPs at the same level of hierarchy, directly connecting their networks together so that 
+all traffic between them passes over the direct connection to reduce the cost.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Internet ExchangePoint(IXP)&lt;/strong&gt;: A meeting point where multiple ISPs can peer together.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;network-structure-4&quot;&gt;Network Structure 4&lt;/h4&gt;
+
+&lt;p&gt;Ecosystem consisting of access ISPs, regional ISPs, tier-1 ISPs, PoPs, multi-homing, peering, and IXPs&lt;/p&gt;
+
+&lt;h4 id=&quot;network-structure-5&quot;&gt;Network Structure 5&lt;/h4&gt;
+
+&lt;p&gt;Builds on top of Network Structure 4 by adding content-provider networks&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Big Data - MapReduce</title>
+      <link href="/Big_Data-MapReduce" rel="alternate" type="text/html" title="Big Data - MapReduce" />
       <published>2022-09-12T00:00:00+09:00</published>
       <updated>2022-09-12T00:00:00+09:00</updated>
-      <id>/Big_Data-Map_Reduce</id>
-      <content type="html" xml:base="/Big_Data-Map_Reduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
+      <id>/Big_Data-MapReduce</id>
+      <content type="html" xml:base="/Big_Data-MapReduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Process a lot of data to produce other data&lt;/li&gt;
@@ -158,6 +362,124 @@
 &lt;h3 id=&quot;mapreduce-a-physical-diagram&quot;&gt;MapReduce: A Physical Diagram&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problems-suited-for-mapreduce&quot;&gt;Problems Suited for MapReduce&lt;/h2&gt;
+
+&lt;h4 id=&quot;host-size-example&quot;&gt;Host Size Example&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose we have a large web corpus&lt;/li&gt;
+  &lt;li&gt;Look at the metadata file
+    &lt;ul&gt;
+      &lt;li&gt;lines of the form: URL, size, date, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For each host, find the total of number of bytes
+    &lt;ul&gt;
+      &lt;li&gt;sum of the page sizes for all URLs from the particular host&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;language-model-example&quot;&gt;Language Model Example&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Statistical machine translation:
+    &lt;ul&gt;
+      &lt;li&gt;need to count number of times every 5-word sequence occurs in a large corpus of documents&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Very easy with MapReduce:
+    &lt;ul&gt;
+      &lt;li&gt;Map: extract(5-word sequence, count) from document&lt;/li&gt;
+      &lt;li&gt;Reduce: combine the counts&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;join-by-mapreduce-example&quot;&gt;Join By MapReduce Example&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Compute the natural (a.k.a. inner) join&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;R&lt;/em&gt; and &lt;em&gt;S&lt;/em&gt; are each stored in files&lt;/li&gt;
+  &lt;li&gt;Tuples are pairs &lt;em&gt;(a,b)&lt;/em&gt; or &lt;em&gt;(b,c)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use a hash function &lt;em&gt;h&lt;/em&gt; from B-values to 1…k&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A Map process turns&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Each input tuple &lt;em&gt;R(a,b)&lt;/em&gt; into key-value pair &lt;em&gt;(b,(a,R))&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Each input tuple &lt;em&gt;S(b,c)&lt;/em&gt; into &lt;em&gt;(b,(c,S))&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Map processes send each key-value pair with key &lt;em&gt;b&lt;/em&gt; to Reduce process &lt;em&gt;h(b)&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Hadoop does this automatically; just tell it what &lt;em&gt;k&lt;/em&gt; is.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Each Reduce process matches all the pairs &lt;em&gt;(b,(a,R))&lt;/em&gt; with all &lt;em&gt;(b,(c,S))&lt;/em&gt; and outputs &lt;em&gt;(a,b,c,)&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cost-measures-for-algorithms&quot;&gt;Cost Measures for Algorithms&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In MapReduce we quantify the cost of an algorithm using
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Communication cost&lt;/strong&gt; = total I/O of all processes&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Elapsed communication cost&lt;/strong&gt; = max of I/O along any path&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;(Elapsed) computation cost&lt;/strong&gt; analogous, but count only running time of processes&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note that big-O notation is not the most useful, because adding more machine is always an option.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-cost-measures-mean&quot;&gt;What Cost Measures Mean&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Either the I/O (communication) or processing (computation) cost dominates
+    &lt;ul&gt;
+      &lt;li&gt;Ignore one or the other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Total cost tells what you pay in rent from your friendly neighborhood cloud&lt;/li&gt;
+  &lt;li&gt;Elapsed cost is wall-clock time using parallelism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;design-mapreduce-framework&quot;&gt;Design MapReduce Framework&lt;/h2&gt;
+
+&lt;h3 id=&quot;using-mapreduce-framework&quot;&gt;Using MapReduce Framework&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Programmer specifies: Map and Reduce and input files&lt;/li&gt;
+  &lt;li&gt;Workflow:
+    &lt;ul&gt;
+      &lt;li&gt;Read inputs as a set of key-value-pairs&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt; transforms input kv-pairs into a new set of k’v’-pairs&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Sorts &amp;amp; Shuffles&lt;/strong&gt; the k’v’-pairs to output nodes&lt;/li&gt;
+      &lt;li&gt;All k’v’-pairs with a given k’ are sent to the same &lt;strong&gt;reduce&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt; processes all k’v’-pairs grouped by key into new k’‘v’‘-pairs&lt;/li&gt;
+      &lt;li&gt;Write the resulting pairs to files&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;All phases are distributed with many tasks doing the work&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;data-flow&quot;&gt;Data Flow&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Input and final output&lt;/strong&gt; are stored on a &lt;strong&gt;distributed file system(DFS)&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Scheduler tries to schedule map tasks “close” to physical storage location of input data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -714,7 +1036,6 @@ sequence analysis, biological network analysis&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;servers&lt;/strong&gt;: powerful machines that store and distribute Web pages, stream videos, relay email, and so on.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;data centers&lt;/strong&gt;: stores most of the servers from which we receive search results, email, Web pages, videos, and so 
 on.&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;1️⃣-access-networks&quot;&gt;1️⃣ Access Networks&lt;/h2&gt;
@@ -725,9 +1046,9 @@ on.&lt;/li&gt;
 
 &lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;home-access-dls-cable-ftth-and-5g-fixed-wireless&quot;&gt;Home Access: DLS, Cable, FTTH, and 5G Fixed Wireless&lt;/h3&gt;
+&lt;h3 id=&quot;home-access-dsl-cable-ftth-and-5g-fixed-wireless&quot;&gt;Home Access: DSL, Cable, FTTH, and 5G Fixed Wireless&lt;/h3&gt;
 
-&lt;p&gt;Two most prevalent types of broadband residential access today: &lt;strong&gt;digital subscriber line(DLS)&lt;/strong&gt; and &lt;strong&gt;cable&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Two most prevalent types of broadband residential access today: &lt;strong&gt;digital subscriber line(DSL)&lt;/strong&gt; and &lt;strong&gt;cable&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;digital subscriber line(DSL)&lt;/strong&gt;: uses the existing telephone line exchange data with a digital subscriber line access 
@@ -852,7 +1173,7 @@ installed.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;geostationary satellites&lt;/strong&gt;: permanently remains above the same spot on Earth. It is often used in areas without 
-access to DLS or cable-based Internet access, but have substantial signal propagation delay of 280 ms.&lt;/li&gt;
+access to DSL or cable-based Internet access, but have substantial signal propagation delay of 280 ms.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;low-earth orbiting(LEO)&lt;/strong&gt;: placed much closer to Earth compared to geostationary satellites and do not remain
 permanently above one spot on Earth. It could be the technology for Internet access in the future.&lt;/li&gt;
 &lt;/ul&gt;

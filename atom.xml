@@ -8,7 +8,52 @@
     
       
       <item>
-        <title>Big Data - Map Reduce</title>
+        <title>Unreal Engine - Asset</title>
+        
+          <description>&lt;h2 id=&quot;making-mesh&quot;&gt;Making Mesh&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 15 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Asset</link>
+        <guid isPermaLink="true">/Unreal_Engine-Asset</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Unreal Engine - Level Editor</title>
+        
+          <description>&lt;h2 id=&quot;the-general-sequence-of-game-programming&quot;&gt;The General Sequence of Game Programming&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 13 Sep 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Level_Edit</link>
+        <guid isPermaLink="true">/Unreal_Engine-Level_Edit</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - The Network Core</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 12 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-The_Network_Core</link>
+        <guid isPermaLink="true">/Computer_Network-The_Network_Core</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - MapReduce</title>
         
           <description>&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
 
@@ -16,8 +61,8 @@
         
         <pubDate>Mon, 12 Sep 2022 00:00:00 +0900</pubDate>
         <link>
-        /Big_Data-Map_Reduce</link>
-        <guid isPermaLink="true">/Big_Data-Map_Reduce</guid>
+        /Big_Data-MapReduce</link>
+        <guid isPermaLink="true">/Big_Data-MapReduce</guid>
       </item>
       
     

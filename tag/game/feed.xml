@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/game/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-13T01:22:55+09:00</updated>
+  <updated>2022-09-16T15:30:29+09:00</updated>
   <id>/tag/game/feed.xml</id>
 
   
@@ -30,6 +30,220 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Asset</title>
+      <link href="/Unreal_Engine-Asset" rel="alternate" type="text/html" title="Unreal Engine - Asset" />
+      <published>2022-09-15T19:30:00+09:00</published>
+      <updated>2022-09-15T19:30:00+09:00</updated>
+      <id>/Unreal_Engine-Asset</id>
+      <content type="html" xml:base="/Unreal_Engine-Asset">&lt;h2 id=&quot;making-mesh&quot;&gt;Making Mesh&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You can make mesh using &lt;a href=&quot;https://www.blender.org/support/tutorials/&quot; target=&quot;_blank&quot;&gt;blender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;importing-mesh&quot;&gt;Importing Mesh&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Import: Unreal Engine reads the format that is externally created
+    &lt;ul&gt;
+      &lt;li&gt;You must import the asset to the &lt;strong&gt;Content Browser&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;collision-volume&quot;&gt;Collision Volume&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There are 2 types of collision volume
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Simple Collision&lt;/strong&gt; volume
+        &lt;ul&gt;
+          &lt;li&gt;box, sphere, capsule, and primitive like convex hull&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Complex Collision&lt;/strong&gt; volume
+        &lt;ul&gt;
+          &lt;li&gt;trimesh&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to request collision test within Unreal Engine using &lt;strong&gt;PhysX&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;simple query: request simple collision test&lt;/li&gt;
+      &lt;li&gt;complex query: request complex collision test&lt;/li&gt;
+      &lt;li&gt;default action: simple query for simple collision and complex query for complex collision&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Making Mesh</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Unreal Engine - Level Editor</title>
+      <link href="/Unreal_Engine-Level_Edit" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
+      <published>2022-09-13T01:30:00+09:00</published>
+      <updated>2022-09-13T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Level_Edit</id>
+      <content type="html" xml:base="/Unreal_Engine-Level_Edit">&lt;h2 id=&quot;the-general-sequence-of-game-programming&quot;&gt;The General Sequence of Game Programming&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Prototyping
+    &lt;ul&gt;
+      &lt;li&gt;Verify that the game that you are making has value&lt;/li&gt;
+      &lt;li&gt;Use “greyboxing” to quickly construct maps
+        &lt;ul&gt;
+          &lt;li&gt;Do not worry about the design, quickly construct map to test playing&lt;/li&gt;
+          &lt;li&gt;Afterwards, you need to change the mesh template to actual assets. This process is called “meshing”.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pre-production
+    &lt;ul&gt;
+      &lt;li&gt;A rehearsal stage to bring the level of game to production level&lt;/li&gt;
+      &lt;li&gt;This is stage that proves the entire ‘workflow’ of the game.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Production
+    &lt;ul&gt;
+      &lt;li&gt;Finish the last bits for official deployment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;making-simple-levels&quot;&gt;Making simple levels&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Look for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Engine Contents&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BasicShapes&lt;/code&gt; folder&lt;/li&gt;
+  &lt;li&gt;Drag the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cube&lt;/code&gt; static mesh&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;play-modes&quot;&gt;Play modes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Selected Viewport Mode&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;It is a play mode in viewport&lt;/li&gt;
+      &lt;li&gt;Quickly play to check everything&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mobile Free View Mode&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Simulate the play in a mobile environment (The preparation time is slow)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;New Editor Screen (PIE) Mode&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Play in a new screen (The screen resolution and ratio that you set are applied)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Simulated Mode&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;It is not a mode to play, it is a mode to observe the levels
+        &lt;ul&gt;
+          &lt;li&gt;You can see all the screen view that a player would see, but not be able to perform any game related functions&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Use mouse and keyboard to look around the level freely
+        &lt;ul&gt;
+          &lt;li&gt;Conveniently place a particle effect or physical objects&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;making-levels-using-brush&quot;&gt;Making levels using brush&lt;/h2&gt;
+
+&lt;p&gt;Brush is a tool provided by unreal for greyboxing&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Do not need to use external DCC and just use internal unreal editor tool to make mesh&lt;/li&gt;
+  &lt;li&gt;Using ‘brush’ is not a common method to use
+    &lt;ul&gt;
+      &lt;li&gt;‘Static mesh’ is commonly used&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;However, brush is very convenient to use, so use it when you need it
+    &lt;ul&gt;
+      &lt;li&gt;Used to make the entire outline and it is replaced with static mesh afterwards&lt;/li&gt;
+      &lt;li&gt;Early stage prototyping for test usage&lt;/li&gt;
+      &lt;li&gt;It is also usable for final mesh&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">The General Sequence of Game Programming</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Level Editor</title>
