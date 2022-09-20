@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-16T15:30:29+09:00</updated>
+  <updated>2022-09-20T23:29:46+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,625 @@
   
   
 
+  
+    <entry>
+      <title type="html">Computer Network - Protocol Layers and Their Service Models</title>
+      <link href="/Computer_Network-Protocol_Layers_and_Their_Service_Models" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" />
+      <published>2022-09-19T20:15:00+09:00</published>
+      <updated>2022-09-19T20:15:00+09:00</updated>
+      <id>/Computer_Network-Protocol_Layers_and_Their_Service_Models</id>
+      <content type="html" xml:base="/Computer_Network-Protocol_Layers_and_Their_Service_Models">&lt;h2 id=&quot;1️⃣-layered-architecture&quot;&gt;1️⃣ Layered Architecture&lt;/h2&gt;
+
+&lt;h3 id=&quot;protocol-layering&quot;&gt;Protocol Layering&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Layer&lt;/strong&gt;: Mixed implementation of hardware and software.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Services (a.k.a. service model)&lt;/strong&gt;: A specific task that is taken in a layer.
+    &lt;ul&gt;
+      &lt;li&gt;Performs a certain actions within that layer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;An example of application-layer protocols are: &lt;strong&gt;HTTP&lt;/strong&gt; and &lt;strong&gt;SMTP&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;These are implemented in software in the end systems; so are transport-layer protocols.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;There are drawbacks of layering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;One layer may duplicate low-layer functionality.&lt;/li&gt;
+  &lt;li&gt;Functionality at one layer may need information that is present only in another layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Protocol stack&lt;/strong&gt;: The protocols of the various layers&lt;/li&gt;
+  &lt;li&gt;The Internet protocol stack consists of five layers:
+    &lt;ul&gt;
+      &lt;li&gt;Physical Layer&lt;/li&gt;
+      &lt;li&gt;Link Layer&lt;/li&gt;
+      &lt;li&gt;Network Layer&lt;/li&gt;
+      &lt;li&gt;Transport Layer&lt;/li&gt;
+      &lt;li&gt;Application Layer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;application-layer&quot;&gt;Application Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;: Packet of information at the application layer.&lt;/li&gt;
+  &lt;li&gt;Includes many protocols, such as the &lt;strong&gt;&lt;em&gt;HTTP&lt;/em&gt;&lt;/strong&gt; (Web document request and transfer), &lt;strong&gt;&lt;em&gt;SMTP&lt;/em&gt;&lt;/strong&gt; (transfer of e-mail 
+messages), and &lt;strong&gt;&lt;em&gt;FTP&lt;/em&gt;&lt;/strong&gt; (Transfer of files between two end systems).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: Allows human-friendly names for Internet end systems in application layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transport-layer&quot;&gt;Transport Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Segment&lt;/strong&gt;: Transport-layer packet.&lt;/li&gt;
+  &lt;li&gt;Transports application-layer messages between application endpoints.&lt;/li&gt;
+  &lt;li&gt;There are two transport protocols
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;TCP&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Provides a connection-oriented service to its applications.&lt;/li&gt;
+          &lt;li&gt;Guaranteed delivery of application-layer message to the destination and flow control.&lt;/li&gt;
+          &lt;li&gt;Breaks long messages into shorter segments and provides a congestion-control mechanism.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;UDP&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Provides a connectionless service to its applications.&lt;/li&gt;
+          &lt;li&gt;No-frills service that provides no reliability, no flow control, and no congestion control.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;network-layer&quot;&gt;Network Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Datagrams&lt;/strong&gt;: Network-layer packet.&lt;/li&gt;
+  &lt;li&gt;Provides the service of delivering the segment to the transport layer in the destination host&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP protocol&lt;/strong&gt;: Defines the fields in the datagram as well as how the end systems and routers act on these fields.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;link-layer&quot;&gt;Link Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Frames&lt;/strong&gt;: Link-layer packet.&lt;/li&gt;
+  &lt;li&gt;Depend on specific link-layer protocol that is employed over the link.&lt;/li&gt;
+  &lt;li&gt;Examples of link-layer protocols
+    &lt;ul&gt;
+      &lt;li&gt;Ethernet protocol&lt;/li&gt;
+      &lt;li&gt;WiFi protocol&lt;/li&gt;
+      &lt;li&gt;Cable access network’s DOCSIS protocol&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-layer&quot;&gt;Physical Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Move entire frames from one network element to an adjacent network element.&lt;/li&gt;
+  &lt;li&gt;Examples of transmission medium of link
+    &lt;ul&gt;
+      &lt;li&gt;Twisted-pair copper wire&lt;/li&gt;
+      &lt;li&gt;Single-mode fiber optics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-encapsulation&quot;&gt;2️⃣ Encapsulation&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Layered Architecture</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks</title>
+      <link href="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks" rel="alternate" type="text/html" title="Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks" />
+      <published>2022-09-19T19:30:00+09:00</published>
+      <updated>2022-09-19T19:30:00+09:00</updated>
+      <id>/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks</id>
+      <content type="html" xml:base="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks">&lt;h2 id=&quot;1️⃣-overview-of-delay-in-packet-switched-networks&quot;&gt;1️⃣ Overview of Delay in Packet-Switched Networks&lt;/h2&gt;
+
+&lt;p&gt;The most important delays when packet travels are &lt;strong&gt;nodal processing delay&lt;/strong&gt;, &lt;strong&gt;queueing delay&lt;/strong&gt;,
+&lt;strong&gt;transmission delay&lt;/strong&gt;, and &lt;strong&gt;propagation delay&lt;/strong&gt;; As a whole, they accumulate and give a &lt;strong&gt;total nodal delay&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;types-of-delay&quot;&gt;Types of Delay&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;processing-delay&quot;&gt;Processing Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The time required to examine the packet’s header and determine where to direct the packet.&lt;/li&gt;
+  &lt;li&gt;The time needed to check for bit-level errors in the packet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;queuing-delay&quot;&gt;Queuing Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Depends on the number of earlier-arriving packets that are queued and waiting for transmission on the link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transmission-delay&quot;&gt;Transmission Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amount of time required to push all of the packet’s bits into the link.&lt;/li&gt;
+  &lt;li&gt;e.g. A 10 Mbps Ethernet link, the rate is R = 10 Mbps; for a 100 Mbps Ethernet link, the rate is R = 100 Mbps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;propagation-delay&quot;&gt;Propagation Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The time required to propagate from the beginning of the link to next router.&lt;/li&gt;
+  &lt;li&gt;The bit propagates at the propagation speed of the link.&lt;/li&gt;
+  &lt;li&gt;The range of propagation speed is:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?2\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-1&quot; /&gt; - &lt;img src=&quot;https://latex.codecogs.com/svg.image?3\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;e.g. propagation delay is the distance between two routers divided by the propagation speed.
+    &lt;ul&gt;
+      &lt;li&gt;The propagation delay is &lt;strong&gt;&lt;em&gt;d/s&lt;/em&gt;&lt;/strong&gt;, where &lt;strong&gt;&lt;em&gt;d&lt;/em&gt;&lt;/strong&gt; is the distance between the router A and router B and &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; is 
+the propagation speed of the link.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;comparing-transmission-and-propagation-delay&quot;&gt;Comparing Transmission and Propagation Delay&lt;/h3&gt;
+
+&lt;p&gt;The difference between transmission delay and propagation delay is subtle but important.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Transmission Delay&lt;/th&gt;
+      &lt;th&gt;Propagation Delay&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;The amount of time required for the router to push out the packet&lt;/td&gt;
+      &lt;td&gt;The time it takes a bit to propagate from one router to the next&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A function of the packet’s length and the transmission rate of the link&lt;/td&gt;
+      &lt;td&gt;A function of the distance between the two routers&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;If we let,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{proc}&amp;space;=&amp;space;processing,&amp;space;d_{queue}&amp;space;=&amp;space;queuing,&amp;space;d_{trans}&amp;space;=&amp;space;transmission&amp;space;delay,&amp;space;d_{prop}&amp;space;=&amp;space;propagation&amp;space;dely,&amp;space;d_{nodal}&amp;space;=&amp;space;total&amp;space;nodal&amp;space;delay&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The total nodal delay is given by,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{nodal}&amp;space;=&amp;space;d_{proc}&amp;space;&amp;plus;&amp;space;d_{queue}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-queuing-delay-and-packet-loss&quot;&gt;2️⃣ Queuing Delay and Packet Loss&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Queuing delay may vary from packet to packet.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. if 10 packets arrive to an empty queue simultaneously, the first packet will not have any delay while the last
+packet suffer a relatively large queuing delay.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;traffic intensity&lt;/strong&gt;: &lt;em&gt;La/R&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;L&lt;/em&gt;: number of bits that all packets consist of.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;a&lt;/em&gt;: average rate at which packets arrive at the queue.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;R&lt;/em&gt;: transmission rate(bits/sec) at which bits are pushed out of the queue.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;gt; 1, then the average rate at which bits arrive the queue exceeds the rate at which the bits can be
+transmitted from the queue.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive periodically, then every packet will arrive at an empty queue and there will
+be no queuing delay.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive in burst, then the first packet will not have any queuing delay, while &lt;em&gt;n&lt;/em&gt;th
+packet has &lt;em&gt;(n-1)L/R&lt;/em&gt; seconds of delay.&lt;/li&gt;
+      &lt;li&gt;For realistic case, the average queuing delay will depend on the &lt;em&gt;La/R&lt;/em&gt; and can be shown with &lt;strong&gt;Figure 1.18&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;packet-loss&quot;&gt;Packet Loss&lt;/h3&gt;
+
+&lt;p&gt;If a packet arrives to a router, that has reached its capacity limit, it will &lt;strong&gt;drop&lt;/strong&gt; the packet and the packet will be
+&lt;strong&gt;lost&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-end-to-end-delay&quot;&gt;3️⃣ End-to-End Delay&lt;/h2&gt;
+
+&lt;p&gt;The total delay from a source to a destination can be calculated by equation below, assuming that there are &lt;em&gt;N-1&lt;/em&gt;
+routers between the source host and destination host.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{end-end}&amp;space;=&amp;space;N(d_{proc}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop})&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;traceroute&quot;&gt;Traceroute&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Traceroute&lt;/strong&gt;: A simple program that can run in any Internet host. It sends a special packets toward a destination,
+and as the packets work their way toward the destination, they pass through a series of router. When a router receives
+one of these special packets, it sends back to the source a short message that contains the name and address of the
+router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is an example of the output of the Traceroute program, where the route was being traced from the source host
+gaia.cs.umass.edu to a host in the computer science department ate the University of Sorbonne is Paris.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-throughput-in-computer-network&quot;&gt;4️⃣ Throughput in Computer Network&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Instantaneous throughput&lt;/strong&gt;: At any instant of time is the rate (in bits/sec) at which the destination host is
+receiving.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Average throughput&lt;/strong&gt;: &lt;em&gt;F/T&lt;/em&gt; bits/sec
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;F&lt;/em&gt; is the number of bits a file consists of.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;T&lt;/em&gt; is the time it takes for the destination host to receive.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Overview of Delay in Packet-Switched Networks</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Big Data - Stream</title>
+      <link href="/Big_Data-Stream" rel="alternate" type="text/html" title="Big Data - Stream" />
+      <published>2022-09-19T00:00:00+09:00</published>
+      <updated>2022-09-19T00:00:00+09:00</updated>
+      <id>/Big_Data-Stream</id>
+      <content type="html" xml:base="/Big_Data-Stream">&lt;h3 id=&quot;characteristics-of-stream-data&quot;&gt;Characteristics of Stream Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Infinite, Burst, and Non-stationary
+    &lt;ul&gt;
+      &lt;li&gt;The size of the entire data set is unknown&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Only &lt;strong&gt;INSTANTLY&lt;/strong&gt; accessible&lt;/li&gt;
+  &lt;li&gt;Stream management is important when the input rate is controlled externally:
+    &lt;ul&gt;
+      &lt;li&gt;Google queries&lt;/li&gt;
+      &lt;li&gt;Twitter or Facebook status updates&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mining query streams
+    &lt;ul&gt;
+      &lt;li&gt;Google wants to know what queries are more frequent today than yesterday&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mining lick streams
+    &lt;ul&gt;
+      &lt;li&gt;Yahoo wants know which of its pages are getting an unusual number of hits in the past hour&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mining social network news feeds
+    &lt;ul&gt;
+      &lt;li&gt;e.g. look for trending topics on Twitter or Facebook&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sensor Networks
+    &lt;ul&gt;
+      &lt;li&gt;Many sensors feeding into a central controller&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;IP packets monitored at a switch
+    &lt;ul&gt;
+      &lt;li&gt;Gather information for optimal routing&lt;/li&gt;
+      &lt;li&gt;Detect denial-of-service(DOS) attacks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-stream-model&quot;&gt;The Stream Model&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input &lt;strong&gt;elements&lt;/strong&gt; enter at a rapid rate, at one or more input ports
+    &lt;ul&gt;
+      &lt;li&gt;We call elements of the stream tuples&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The system cannot store the entire stream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;general-stream-processing-model&quot;&gt;General Stream Processing Model&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;operations-on-data-streams&quot;&gt;Operations on Data Streams&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A subset of input streams
+    &lt;ul&gt;
+      &lt;li&gt;Sampling data from a stream
+        &lt;ul&gt;
+          &lt;li&gt;Construct a random sample&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Queries over sliding windows
+        &lt;ul&gt;
+          &lt;li&gt;Number of items of type &lt;em&gt;x&lt;/em&gt; in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Filtering a data stream
+        &lt;ul&gt;
+          &lt;li&gt;Select elements with property &lt;em&gt;x&lt;/em&gt; from the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Counting distinct elements
+        &lt;ul&gt;
+          &lt;li&gt;Number of distinct elements in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Estimating moments
+        &lt;ul&gt;
+          &lt;li&gt;Estimate avg./std. dev. of the last &lt;em&gt;k&lt;/em&gt; elements&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;start-from-sampling&quot;&gt;Start from sampling&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sample a fixed proportion of elements in the stream&lt;/li&gt;
+  &lt;li&gt;Maintain a random sample of fixed size over a potentially infinite stream
+    &lt;ul&gt;
+      &lt;li&gt;At any “time” &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; we would like a random sample of &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; elements&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-proportion&quot;&gt;Sampling from a Data Stream: Sampling a fixed proportion&lt;/h2&gt;
+
+&lt;h3 id=&quot;sampling-a-fixed-proportion&quot;&gt;Sampling a Fixed Proportion&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scenario: Search engine query stream
+    &lt;ul&gt;
+      &lt;li&gt;Stream of tuples: (user, query, time)&lt;/li&gt;
+      &lt;li&gt;Answer questions such as: How often did a user run the same query in a single day&lt;/li&gt;
+      &lt;li&gt;Have space to store 1/10 of query stream&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Naive solution
+    &lt;ul&gt;
+      &lt;li&gt;Generate a random integer for each query&lt;/li&gt;
+      &lt;li&gt;Store the query if the integer is 0, otherwise discard&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;problem-with-naive-approach&quot;&gt;Problem with Naive Approach&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Question: What fraction of queries by an user are duplicates?
+    &lt;ul&gt;
+      &lt;li&gt;Suppose each user issues &lt;em&gt;x&lt;/em&gt; queries once and &lt;em&gt;d&lt;/em&gt; queries twice.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Solution: Keep 10% of the queries.
+    &lt;ul&gt;
+      &lt;li&gt;Sample will contain &lt;em&gt;x/10&lt;/em&gt; of the singleton queries and &lt;em&gt;2d/10&lt;/em&gt; of the duplicate queries at least once.&lt;/li&gt;
+      &lt;li&gt;But only &lt;em&gt;d/100&lt;/em&gt; pairs of duplicates
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;d/100 = 1/10 * 1/10 * d&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Of &lt;em&gt;d&lt;/em&gt; “duplicates” &lt;em&gt;18d/100&lt;/em&gt; appear exactly once
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;18d/100 = ((1/10 * 9/10) + (9/10 * 1/10)) * d&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sample-based answer is the following:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\frac{d}{100}}{\frac{x}{10}&amp;space;&amp;plus;&amp;space;\frac{d}{100}&amp;space;&amp;plus;&amp;space;\frac{18d}{100}}&amp;space;=&amp;space;\frac{d}{10x&amp;space;&amp;plus;&amp;space;19d}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Problem&lt;/strong&gt;: Error would occur from “Probability of selection”.
+    &lt;ul&gt;
+      &lt;li&gt;Possible solution: Sampling user, not query
+        &lt;ul&gt;
+          &lt;li&gt;Pick &lt;em&gt;1/10th&lt;/em&gt; of users and take all their searches in the sample&lt;/li&gt;
+          &lt;li&gt;Use a hash function that hashes the user name or user id uniformly into 10 buckets&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Generalized Solution&lt;/strong&gt;: Use stream of tuples with keys
+        &lt;ul&gt;
+          &lt;li&gt;Key is a subset of each tuple’s component&lt;/li&gt;
+          &lt;li&gt;Choice of key depends on application&lt;/li&gt;
+          &lt;li&gt;To get a sample &lt;em&gt;a/b&lt;/em&gt; fraction of the stream:
+            &lt;ul&gt;
+              &lt;li&gt;Hash each tuple’s key uniformly into &lt;strong&gt;b&lt;/strong&gt; buckets&lt;/li&gt;
+              &lt;li&gt;Pick the tuple if its hash value is at most &lt;strong&gt;a&lt;/strong&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-sized-tuples&quot;&gt;Sampling from a Data Stream: Sampling a fixed-sized tuples&lt;/h2&gt;
+
+&lt;h3 id=&quot;maintaining-a-fixed-size-sample&quot;&gt;Maintaining a fixed-size sample&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose we need to maintain a random sample &lt;em&gt;S&lt;/em&gt; of size exactly &lt;em&gt;s&lt;/em&gt; tuples due to the main memory size constraint 
+because the length of the stream is unknown.&lt;/li&gt;
+  &lt;li&gt;Suppose at time &lt;em&gt;n&lt;/em&gt; we have seen &lt;em&gt;s&lt;/em&gt; items.
+    &lt;ul&gt;
+      &lt;li&gt;Goal: Each item is in the sample &lt;em&gt;S&lt;/em&gt; with equal probability of &lt;em&gt;s/n&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;illustration-s--2&quot;&gt;Illustration (s = 2)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stream: a x c y z k c d e g&lt;/li&gt;
+  &lt;li&gt;At &lt;strong&gt;n = 5&lt;/strong&gt;, each of the first 5 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
+  &lt;li&gt;At &lt;strong&gt;n = 7&lt;/strong&gt;, each of the first 7 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
+  &lt;li&gt;Impractical solution would be to store all the &lt;em&gt;n&lt;/em&gt; tuples seen so far and out of them pick &lt;strong&gt;s&lt;/strong&gt; at random.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;solution-reservoir-sampling&quot;&gt;Solution: Reservoir Sampling&lt;/h3&gt;
+
+&lt;h4 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Store all the first &lt;strong&gt;s&lt;/strong&gt; elements of the stream to &lt;strong&gt;S&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Suppose we have seen &lt;strong&gt;n-1&lt;/strong&gt; elements, and now the &lt;strong&gt;n th&lt;/strong&gt; element arrives &lt;strong&gt;(n &amp;gt; s)&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;With probability &lt;strong&gt;s/n&lt;/strong&gt;, keep the &lt;strong&gt;n th&lt;/strong&gt; element, then it replaces one of the &lt;strong&gt;s&lt;/strong&gt; elements in the sample &lt;strong&gt;S&lt;/strong&gt;,
+picked uniformly at random&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;claim&quot;&gt;Claim&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This algorithm maintains a sample &lt;strong&gt;S&lt;/strong&gt; with the desired property. After &lt;strong&gt;n&lt;/strong&gt; elements, the sample contains each
+element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;proof-of-reservoir-sampling-by-induction&quot;&gt;Proof of Reservoir Sampling By Induction&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;queries-over-a-long-sliding-window&quot;&gt;Queries over a (long) Sliding Window&lt;/h2&gt;
+
+&lt;h3 id=&quot;sliding-windows&quot;&gt;Sliding Windows&lt;/h3&gt;
+
+&lt;h3 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h3&gt;
+
+&lt;h4 id=&quot;simple-solution&quot;&gt;Simple Solution&lt;/h4&gt;
+
+&lt;h4 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Does NOT assume uniformity&lt;/li&gt;
+  &lt;li&gt;Store O(logN) bits per stream&lt;/li&gt;
+  &lt;li&gt;Gives approximate answer, never off by more than 50%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Characteristics of Stream Data</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Computer Network - The Network Core</title>
@@ -478,7 +1097,185 @@ all traffic between them passes over the direct connection to reduce the cost.&l
       &lt;li&gt;Scheduler tries to schedule map tasks “close” to physical storage location of input data&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Intermediate results&lt;/strong&gt; are stored on &lt;strong&gt;local File System(FS)&lt;/strong&gt; of Map and Reduce workers&lt;/li&gt;
+  &lt;li&gt;Output is often input to another MapReduce task&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;map-and-reduce-job-example&quot;&gt;Map and Reduce job Example&lt;/h4&gt;
+
+&lt;p&gt;For &lt;em&gt;M&lt;/em&gt; map tasks and &lt;em&gt;R&lt;/em&gt; reduce tasks&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make &lt;em&gt;M&lt;/em&gt; much larger than the number of nodes in the cluster&lt;/li&gt;
+  &lt;li&gt;One DFS chunk per map is common&lt;/li&gt;
+  &lt;li&gt;Improves dynamic load balancing and speeds up recovery from worker failures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; is usually &lt;strong&gt;smaller&lt;/strong&gt; than &lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;, because the output is spread across &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; files.&lt;/p&gt;
+
+&lt;h4 id=&quot;task-granularity--pipelining&quot;&gt;Task Granularity &amp;amp; Pipelining&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fine granularity tasks: map tasks &amp;gt; machines
+    &lt;ul&gt;
+      &lt;li&gt;Minimizes time for fault recovery&lt;/li&gt;
+      &lt;li&gt;Able to pipeline shuffling with map execution&lt;/li&gt;
+      &lt;li&gt;Better dynamic load balancing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;coordination-master&quot;&gt;Coordination: Master&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Master node takes care of:
+    &lt;ul&gt;
+      &lt;li&gt;Task status: (idle, in-progress, completed)&lt;/li&gt;
+      &lt;li&gt;Idle tasks get scheduled as workers become available&lt;/li&gt;
+      &lt;li&gt;Sends the master the location and sizes of its R intermediate files to reducer when a map task completes&lt;/li&gt;
+      &lt;li&gt;Pings workers periodically to detect failures&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dealing-with-failures&quot;&gt;Dealing with Failures&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Map worker failure
+    &lt;ul&gt;
+      &lt;li&gt;Map tasks completed or in-progress at worker are reset to idle&lt;/li&gt;
+      &lt;li&gt;Reduce workers are notified when task is rescheduled on an other worker&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reduce worker failure
+    &lt;ul&gt;
+      &lt;li&gt;Only in-progress tasks are reset to idle&lt;/li&gt;
+      &lt;li&gt;Reduce task is restarted&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Master failure
+    &lt;ul&gt;
+      &lt;li&gt;mapReduce task is aborted and client is notified&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;refinements-backup-tasks&quot;&gt;Refinements: Backup Tasks&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Slow workers significantly lengthen the job completion time:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Other jobs on the machine&lt;/li&gt;
+  &lt;li&gt;Bad disks&lt;/li&gt;
+  &lt;li&gt;Unknown&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Near end of phase, spawn backup copies of tasks. Whichever one finishes first “wins”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Effect&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dramatically shortens jobs completion time.&lt;/p&gt;
+
+&lt;h4 id=&quot;refinement-combiners&quot;&gt;Refinement: Combiners&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Often a Map task will produce many pairs of the form &lt;em&gt;(k, v1)&lt;/em&gt;, &lt;em&gt;(k, v2)&lt;/em&gt;, … for the same key &lt;em&gt;k&lt;/em&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. popular words in the word count&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Save network time by pre-aggregating values in the mapper:
+    &lt;ul&gt;
+      &lt;li&gt;combine(k, list(v1)) -&amp;gt; v2&lt;/li&gt;
+      &lt;li&gt;combiner is usually same as the reduce function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Works only if reduce function is commutative and associative&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If combiner combines the values of all keys of a single mapper(single machine), much less data will be copied and 
+shuffled&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;refinement-partition-function&quot;&gt;Refinement: Partition Function&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Control how keys get partitioned
+    &lt;ul&gt;
+      &lt;li&gt;Inputs to map tasks are created by contiguous split of input file&lt;/li&gt;
+      &lt;li&gt;Reduce needs to ensure that records with the same intermediate key end up at the same worker&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;System uses a default partition function:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(key) mod(%) R&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;It is useful to override the hash function:
+    &lt;ul&gt;
+      &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(hostname(URL)) mod R&lt;/code&gt; ensures URLs from a host end up in the same output file&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;storage-infrastructure&quot;&gt;Storage Infrastructure&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;
+If nodes fail, how can we store data persistently?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt;
+Distributed File System&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provides global file namespace&lt;/li&gt;
+  &lt;li&gt;Google GFS; Hadoop HDFS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Typical usage pattern&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Huge files(100s of GB to TB)&lt;/li&gt;
+  &lt;li&gt;Data is rarely updated in place&lt;/li&gt;
+  &lt;li&gt;Reads and appends are common&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;distributed-file-system&quot;&gt;Distributed File System&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reliable distributed file system&lt;/li&gt;
+  &lt;li&gt;Data kept in “chunks” spread across machines&lt;/li&gt;
+  &lt;li&gt;Each chunk replicated on different machines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chunk servers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;File is split into contiguous chunks&lt;/li&gt;
+  &lt;li&gt;Typically each chunk is 16-64MB&lt;/li&gt;
+  &lt;li&gt;Each chunk replicated (usually 2x or 3x)&lt;/li&gt;
+  &lt;li&gt;Try to keep replicas in different racks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Master node&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a.k.a. name node in Hadoop’s HDFS&lt;/li&gt;
+  &lt;li&gt;Stores metadata about where files are stored&lt;/li&gt;
+  &lt;li&gt;Might be replicated&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Client library for file access&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Talks to master to find chunk servers&lt;/li&gt;
+  &lt;li&gt;Connects directly chunk servers to access data&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
@@ -1204,118 +2001,6 @@ permanently above one spot on Earth. It could be the technology for Internet acc
 
       
         <summary type="html">Hosts are divided into two categories: clients and server</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - What is the Internet</title>
-      <link href="/Computer_Network-What_is_the_Internet" rel="alternate" type="text/html" title="Computer Network - What is the Internet" />
-      <published>2022-09-02T00:00:00+09:00</published>
-      <updated>2022-09-02T00:00:00+09:00</updated>
-      <id>/Computer_Network-What_is_the_Internet</id>
-      <content type="html" xml:base="/Computer_Network-What_is_the_Internet">&lt;h2 id=&quot;1️⃣-a-nuts-and-bolts-description&quot;&gt;1️⃣ A Nuts-and-Bolts Description&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;The Internet&lt;/strong&gt;: A computer network that interconnects billions of computing devices.
-    &lt;ul&gt;
-      &lt;li&gt;Today, approximately half of the world’s population are active mobile Internet users.&lt;/li&gt;
-      &lt;li&gt;By 2025, users in the Internet is expected to increase upto 75%.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Hosts&lt;/strong&gt; or &lt;strong&gt;End system&lt;/strong&gt;: Devices that have Internet connection.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Communication links&lt;/strong&gt; and &lt;strong&gt;Packet switches&lt;/strong&gt;: Network that connects end systems together.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Transmission rate&lt;/strong&gt;: Rate that different links can transmit data, measured in bits/seconds.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Packets&lt;/strong&gt;: The resulting packages of information that are sent through the network to the destination end system,
-where they are reassembled into the original data.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Routers&lt;/strong&gt; and &lt;strong&gt;Link-layer switches&lt;/strong&gt;: Two most prominent types of packet switches. They forward packets toward 
-their ultimate destinations.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Route&lt;/strong&gt; or &lt;strong&gt;Path&lt;/strong&gt;: The sequence of communication links and packet switches traverse.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Internet Service Providers(ISPs)&lt;/strong&gt;: Provide a variety of types of network access to the end systems.
-    &lt;ul&gt;
-      &lt;li&gt;Each ISP network, whether upper-tier or lower-tier, is managed independently, runs th IP protocol, and conforms to
-certain naming and address conventions.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Protocols&lt;/strong&gt;: Control the sending and receiving of information within the Internet.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Transmission Control Protocol(TCP)&lt;/strong&gt; and &lt;strong&gt;Internet Protocol(IP)&lt;/strong&gt;: Two of the most important protocols in the 
-Internet.
-    &lt;ul&gt;
-      &lt;li&gt;IP: Specifies the format of the packets that are sent and received among routers and end systems.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;TCP/IP&lt;/strong&gt;: The Internet’s principal protocols.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Internet standards&lt;/strong&gt;: A standard that everyone agree on what each and every protocol does.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Requests for comments(RFCs)&lt;/strong&gt;: Standards documents that the Internet Engineering Task Force(IETF) developed.
-    &lt;ul&gt;
-      &lt;li&gt;There are currently nearly 9000 RFCs that define protocols such as TCP, IP, HTTP(for the Web), and SMTP(for e-mail).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2️⃣-a-services-description&quot;&gt;2️⃣ A Services Description&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Distributed applications&lt;/strong&gt;: Multiple end systems that exchange data with each other.
-    &lt;ul&gt;
-      &lt;li&gt;Internet applications run on end systems and NOT in packet switches in network core.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Socket interface&lt;/strong&gt;: Set of rules that the sending program must follow so that the Internet can deliver the data to
-the destination program.
-    &lt;ul&gt;
-      &lt;li&gt;This is similar to the postal service, which you need to follow certain rules such as putting the stamp, having the
-sender’s and receiver’s postal code, address, and etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-what-is-a-protocol&quot;&gt;3️⃣ What is a Protocol?&lt;/h2&gt;
-
-&lt;h3 id=&quot;human-analogy&quot;&gt;Human Analogy&lt;/h3&gt;
-&lt;p&gt;Computer network protocols are similar to how humans interact.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-01/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;network-protocols&quot;&gt;Network Protocols&lt;/h3&gt;
-&lt;p&gt;Similar to human protocols, network protocols communicate through “wire” by controlling the flow of bits.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;A protocol defines the format and the order of messages exchanged between two or more communicating entities, as well
-as the actions taken on the transmission and/or receipt of a message or other event.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">1️⃣ A Nuts-and-Bolts Description</summary>
       
 
       

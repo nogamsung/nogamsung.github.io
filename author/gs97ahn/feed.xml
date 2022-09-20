@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-16T15:30:29+09:00</updated>
+  <updated>2022-09-20T23:29:46+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,781 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Game Mode and Pawn</title>
+      <link href="/Unreal_Engine-Game_Mode_and_Pawn" rel="alternate" type="text/html" title="Unreal Engine - Game Mode and Pawn" />
+      <published>2022-09-20T01:30:00+09:00</published>
+      <updated>2022-09-20T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Game_Mode_and_Pawn</id>
+      <content type="html" xml:base="/Unreal_Engine-Game_Mode_and_Pawn">&lt;h2 id=&quot;concept-of-class&quot;&gt;Concept of Class&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is &lt;strong&gt;Class&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;C++: expressed in object as it is an object-oriented language&lt;/li&gt;
+      &lt;li&gt;Object is implemented in class&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt; is a part that is implemented in class&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is &lt;strong&gt;Blueprint&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;In Unreal Engine, you can use &lt;strong&gt;blueprint&lt;/strong&gt;, similar to C++, it is a visual script language&lt;/li&gt;
+      &lt;li&gt;The blueprint is a C++ class internally&lt;/li&gt;
+      &lt;li&gt;Therefore, C++ class and blueprint class is similar in characteristic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ways to implement class: C++ or Blueprint
+    &lt;ul&gt;
+      &lt;li&gt;The way it to implement is not essential&lt;/li&gt;
+      &lt;li&gt;Categorized into &lt;strong&gt;C++ class&lt;/strong&gt; or &lt;strong&gt;blueprint class&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Example of Class
+    &lt;ul&gt;
+      &lt;li&gt;Object class, Actor class, pawn class, and so on&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;game-framework&quot;&gt;Game Framework&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every game needs to have basic structure
+    &lt;ul&gt;
+      &lt;li&gt;Player character, player controller, camera, and so on&lt;/li&gt;
+      &lt;li&gt;Even if you use an empty template, you need include a minimum game structure&lt;/li&gt;
+      &lt;li&gt;The game structure in UE is “Game Framework”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Game Mode
+    &lt;ul&gt;
+      &lt;li&gt;Object that express the rules for a game to be played&lt;/li&gt;
+      &lt;li&gt;Decides the player and camera in a map during the “Game Mode”&lt;/li&gt;
+      &lt;li&gt;If it is not altered, the standard game mode is set to default&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;core-class&quot;&gt;Core Class&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Core classes in UE
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: A class located at the top of all class, all of the classes are derived from this class.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt;: Place a class in level. It is a child class of an object.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Pawn&lt;/strong&gt;: A class that has a physical looks, such as player or A.I. It is child class of an actor.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Character&lt;/strong&gt;: A class that is able to walk or do any type of movement function. It is a child class of a pawn.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Player controller&lt;/strong&gt;: A class that controls a player’s pawn. It is a child class of an actor.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Game mode&lt;/strong&gt;: A class that express the rules for a game. It is a child class of an actor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Name of the core class
+    &lt;ul&gt;
+      &lt;li&gt;Class is usually omitted. So just say object, actor, pawn, player controller, and character.&lt;/li&gt;
+      &lt;li&gt;Name of the class implemented in C++: UObject, APawn, ACharacter, APlayerController, AGameMode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;blueprint&quot;&gt;Blueprint&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is blueprint?
+    &lt;ul&gt;
+      &lt;li&gt;Visual script system provided by UE
+        &lt;ul&gt;
+          &lt;li&gt;Node based development environment that uses the mouse to connect commands.&lt;/li&gt;
+          &lt;li&gt;Easy. -&amp;gt; All producers can participate in development.&lt;/li&gt;
+          &lt;li&gt;Block assemble form that reduces the grammatical error.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Good when making interactive assets
+        &lt;ul&gt;
+          &lt;li&gt;Event process script&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Easy to combine various functions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Making blueprint object
+    &lt;ul&gt;
+      &lt;li&gt;You can use C++ to make a class or use the blueprint.&lt;/li&gt;
+      &lt;li&gt;Blueprint class is a powerful means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;concept-of-component&quot;&gt;Concept of Component&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Component
+    &lt;ul&gt;
+      &lt;li&gt;A single blueprint class has many component inside a component container&lt;/li&gt;
+      &lt;li&gt;Component is added to a blueprint class to act as a class&lt;/li&gt;
+      &lt;li&gt;Different components do different tasks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Types of component
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Actor component&lt;/strong&gt;: A base class component that does not have any transform data.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Scene Component&lt;/strong&gt;: A child class of an actor component that has transform data.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Primitive component&lt;/strong&gt;: A child class of a scene component that has graphic expression.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Concept of Class</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Protocol Layers and Their Service Models</title>
+      <link href="/Computer_Network-Protocol_Layers_and_Their_Service_Models" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" />
+      <published>2022-09-19T20:15:00+09:00</published>
+      <updated>2022-09-19T20:15:00+09:00</updated>
+      <id>/Computer_Network-Protocol_Layers_and_Their_Service_Models</id>
+      <content type="html" xml:base="/Computer_Network-Protocol_Layers_and_Their_Service_Models">&lt;h2 id=&quot;1️⃣-layered-architecture&quot;&gt;1️⃣ Layered Architecture&lt;/h2&gt;
+
+&lt;h3 id=&quot;protocol-layering&quot;&gt;Protocol Layering&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Layer&lt;/strong&gt;: Mixed implementation of hardware and software.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Services (a.k.a. service model)&lt;/strong&gt;: A specific task that is taken in a layer.
+    &lt;ul&gt;
+      &lt;li&gt;Performs a certain actions within that layer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;An example of application-layer protocols are: &lt;strong&gt;HTTP&lt;/strong&gt; and &lt;strong&gt;SMTP&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;These are implemented in software in the end systems; so are transport-layer protocols.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;There are drawbacks of layering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;One layer may duplicate low-layer functionality.&lt;/li&gt;
+  &lt;li&gt;Functionality at one layer may need information that is present only in another layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Protocol stack&lt;/strong&gt;: The protocols of the various layers&lt;/li&gt;
+  &lt;li&gt;The Internet protocol stack consists of five layers:
+    &lt;ul&gt;
+      &lt;li&gt;Physical Layer&lt;/li&gt;
+      &lt;li&gt;Link Layer&lt;/li&gt;
+      &lt;li&gt;Network Layer&lt;/li&gt;
+      &lt;li&gt;Transport Layer&lt;/li&gt;
+      &lt;li&gt;Application Layer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;application-layer&quot;&gt;Application Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;: Packet of information at the application layer.&lt;/li&gt;
+  &lt;li&gt;Includes many protocols, such as the &lt;strong&gt;&lt;em&gt;HTTP&lt;/em&gt;&lt;/strong&gt; (Web document request and transfer), &lt;strong&gt;&lt;em&gt;SMTP&lt;/em&gt;&lt;/strong&gt; (transfer of e-mail 
+messages), and &lt;strong&gt;&lt;em&gt;FTP&lt;/em&gt;&lt;/strong&gt; (Transfer of files between two end systems).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: Allows human-friendly names for Internet end systems in application layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transport-layer&quot;&gt;Transport Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Segment&lt;/strong&gt;: Transport-layer packet.&lt;/li&gt;
+  &lt;li&gt;Transports application-layer messages between application endpoints.&lt;/li&gt;
+  &lt;li&gt;There are two transport protocols
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;TCP&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Provides a connection-oriented service to its applications.&lt;/li&gt;
+          &lt;li&gt;Guaranteed delivery of application-layer message to the destination and flow control.&lt;/li&gt;
+          &lt;li&gt;Breaks long messages into shorter segments and provides a congestion-control mechanism.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;UDP&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Provides a connectionless service to its applications.&lt;/li&gt;
+          &lt;li&gt;No-frills service that provides no reliability, no flow control, and no congestion control.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;network-layer&quot;&gt;Network Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Datagrams&lt;/strong&gt;: Network-layer packet.&lt;/li&gt;
+  &lt;li&gt;Provides the service of delivering the segment to the transport layer in the destination host&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP protocol&lt;/strong&gt;: Defines the fields in the datagram as well as how the end systems and routers act on these fields.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;link-layer&quot;&gt;Link Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Frames&lt;/strong&gt;: Link-layer packet.&lt;/li&gt;
+  &lt;li&gt;Depend on specific link-layer protocol that is employed over the link.&lt;/li&gt;
+  &lt;li&gt;Examples of link-layer protocols
+    &lt;ul&gt;
+      &lt;li&gt;Ethernet protocol&lt;/li&gt;
+      &lt;li&gt;WiFi protocol&lt;/li&gt;
+      &lt;li&gt;Cable access network’s DOCSIS protocol&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-layer&quot;&gt;Physical Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Move entire frames from one network element to an adjacent network element.&lt;/li&gt;
+  &lt;li&gt;Examples of transmission medium of link
+    &lt;ul&gt;
+      &lt;li&gt;Twisted-pair copper wire&lt;/li&gt;
+      &lt;li&gt;Single-mode fiber optics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-encapsulation&quot;&gt;2️⃣ Encapsulation&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Layered Architecture</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks</title>
+      <link href="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks" rel="alternate" type="text/html" title="Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks" />
+      <published>2022-09-19T19:30:00+09:00</published>
+      <updated>2022-09-19T19:30:00+09:00</updated>
+      <id>/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks</id>
+      <content type="html" xml:base="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks">&lt;h2 id=&quot;1️⃣-overview-of-delay-in-packet-switched-networks&quot;&gt;1️⃣ Overview of Delay in Packet-Switched Networks&lt;/h2&gt;
+
+&lt;p&gt;The most important delays when packet travels are &lt;strong&gt;nodal processing delay&lt;/strong&gt;, &lt;strong&gt;queueing delay&lt;/strong&gt;,
+&lt;strong&gt;transmission delay&lt;/strong&gt;, and &lt;strong&gt;propagation delay&lt;/strong&gt;; As a whole, they accumulate and give a &lt;strong&gt;total nodal delay&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;types-of-delay&quot;&gt;Types of Delay&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;processing-delay&quot;&gt;Processing Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The time required to examine the packet’s header and determine where to direct the packet.&lt;/li&gt;
+  &lt;li&gt;The time needed to check for bit-level errors in the packet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;queuing-delay&quot;&gt;Queuing Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Depends on the number of earlier-arriving packets that are queued and waiting for transmission on the link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transmission-delay&quot;&gt;Transmission Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Amount of time required to push all of the packet’s bits into the link.&lt;/li&gt;
+  &lt;li&gt;e.g. A 10 Mbps Ethernet link, the rate is R = 10 Mbps; for a 100 Mbps Ethernet link, the rate is R = 100 Mbps.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;propagation-delay&quot;&gt;Propagation Delay&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The time required to propagate from the beginning of the link to next router.&lt;/li&gt;
+  &lt;li&gt;The bit propagates at the propagation speed of the link.&lt;/li&gt;
+  &lt;li&gt;The range of propagation speed is:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?2\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-1&quot; /&gt; - &lt;img src=&quot;https://latex.codecogs.com/svg.image?3\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;e.g. propagation delay is the distance between two routers divided by the propagation speed.
+    &lt;ul&gt;
+      &lt;li&gt;The propagation delay is &lt;strong&gt;&lt;em&gt;d/s&lt;/em&gt;&lt;/strong&gt;, where &lt;strong&gt;&lt;em&gt;d&lt;/em&gt;&lt;/strong&gt; is the distance between the router A and router B and &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; is 
+the propagation speed of the link.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;comparing-transmission-and-propagation-delay&quot;&gt;Comparing Transmission and Propagation Delay&lt;/h3&gt;
+
+&lt;p&gt;The difference between transmission delay and propagation delay is subtle but important.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Transmission Delay&lt;/th&gt;
+      &lt;th&gt;Propagation Delay&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;The amount of time required for the router to push out the packet&lt;/td&gt;
+      &lt;td&gt;The time it takes a bit to propagate from one router to the next&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A function of the packet’s length and the transmission rate of the link&lt;/td&gt;
+      &lt;td&gt;A function of the distance between the two routers&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;If we let,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{proc}&amp;space;=&amp;space;processing,&amp;space;d_{queue}&amp;space;=&amp;space;queuing,&amp;space;d_{trans}&amp;space;=&amp;space;transmission&amp;space;delay,&amp;space;d_{prop}&amp;space;=&amp;space;propagation&amp;space;dely,&amp;space;d_{nodal}&amp;space;=&amp;space;total&amp;space;nodal&amp;space;delay&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The total nodal delay is given by,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{nodal}&amp;space;=&amp;space;d_{proc}&amp;space;&amp;plus;&amp;space;d_{queue}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-queuing-delay-and-packet-loss&quot;&gt;2️⃣ Queuing Delay and Packet Loss&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Queuing delay may vary from packet to packet.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. if 10 packets arrive to an empty queue simultaneously, the first packet will not have any delay while the last
+packet suffer a relatively large queuing delay.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;traffic intensity&lt;/strong&gt;: &lt;em&gt;La/R&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;L&lt;/em&gt;: number of bits that all packets consist of.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;a&lt;/em&gt;: average rate at which packets arrive at the queue.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;R&lt;/em&gt;: transmission rate(bits/sec) at which bits are pushed out of the queue.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;gt; 1, then the average rate at which bits arrive the queue exceeds the rate at which the bits can be
+transmitted from the queue.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive periodically, then every packet will arrive at an empty queue and there will
+be no queuing delay.&lt;/li&gt;
+      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive in burst, then the first packet will not have any queuing delay, while &lt;em&gt;n&lt;/em&gt;th
+packet has &lt;em&gt;(n-1)L/R&lt;/em&gt; seconds of delay.&lt;/li&gt;
+      &lt;li&gt;For realistic case, the average queuing delay will depend on the &lt;em&gt;La/R&lt;/em&gt; and can be shown with &lt;strong&gt;Figure 1.18&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;packet-loss&quot;&gt;Packet Loss&lt;/h3&gt;
+
+&lt;p&gt;If a packet arrives to a router, that has reached its capacity limit, it will &lt;strong&gt;drop&lt;/strong&gt; the packet and the packet will be
+&lt;strong&gt;lost&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-end-to-end-delay&quot;&gt;3️⃣ End-to-End Delay&lt;/h2&gt;
+
+&lt;p&gt;The total delay from a source to a destination can be calculated by equation below, assuming that there are &lt;em&gt;N-1&lt;/em&gt;
+routers between the source host and destination host.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{end-end}&amp;space;=&amp;space;N(d_{proc}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop})&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;traceroute&quot;&gt;Traceroute&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Traceroute&lt;/strong&gt;: A simple program that can run in any Internet host. It sends a special packets toward a destination,
+and as the packets work their way toward the destination, they pass through a series of router. When a router receives
+one of these special packets, it sends back to the source a short message that contains the name and address of the
+router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is an example of the output of the Traceroute program, where the route was being traced from the source host
+gaia.cs.umass.edu to a host in the computer science department ate the University of Sorbonne is Paris.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-throughput-in-computer-network&quot;&gt;4️⃣ Throughput in Computer Network&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Instantaneous throughput&lt;/strong&gt;: At any instant of time is the rate (in bits/sec) at which the destination host is
+receiving.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Average throughput&lt;/strong&gt;: &lt;em&gt;F/T&lt;/em&gt; bits/sec
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;F&lt;/em&gt; is the number of bits a file consists of.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;T&lt;/em&gt; is the time it takes for the destination host to receive.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Overview of Delay in Packet-Switched Networks</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Big Data - Stream</title>
+      <link href="/Big_Data-Stream" rel="alternate" type="text/html" title="Big Data - Stream" />
+      <published>2022-09-19T00:00:00+09:00</published>
+      <updated>2022-09-19T00:00:00+09:00</updated>
+      <id>/Big_Data-Stream</id>
+      <content type="html" xml:base="/Big_Data-Stream">&lt;h3 id=&quot;characteristics-of-stream-data&quot;&gt;Characteristics of Stream Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Infinite, Burst, and Non-stationary
+    &lt;ul&gt;
+      &lt;li&gt;The size of the entire data set is unknown&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Only &lt;strong&gt;INSTANTLY&lt;/strong&gt; accessible&lt;/li&gt;
+  &lt;li&gt;Stream management is important when the input rate is controlled externally:
+    &lt;ul&gt;
+      &lt;li&gt;Google queries&lt;/li&gt;
+      &lt;li&gt;Twitter or Facebook status updates&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mining query streams
+    &lt;ul&gt;
+      &lt;li&gt;Google wants to know what queries are more frequent today than yesterday&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mining lick streams
+    &lt;ul&gt;
+      &lt;li&gt;Yahoo wants know which of its pages are getting an unusual number of hits in the past hour&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mining social network news feeds
+    &lt;ul&gt;
+      &lt;li&gt;e.g. look for trending topics on Twitter or Facebook&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sensor Networks
+    &lt;ul&gt;
+      &lt;li&gt;Many sensors feeding into a central controller&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;IP packets monitored at a switch
+    &lt;ul&gt;
+      &lt;li&gt;Gather information for optimal routing&lt;/li&gt;
+      &lt;li&gt;Detect denial-of-service(DOS) attacks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-stream-model&quot;&gt;The Stream Model&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input &lt;strong&gt;elements&lt;/strong&gt; enter at a rapid rate, at one or more input ports
+    &lt;ul&gt;
+      &lt;li&gt;We call elements of the stream tuples&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The system cannot store the entire stream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;general-stream-processing-model&quot;&gt;General Stream Processing Model&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;operations-on-data-streams&quot;&gt;Operations on Data Streams&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A subset of input streams
+    &lt;ul&gt;
+      &lt;li&gt;Sampling data from a stream
+        &lt;ul&gt;
+          &lt;li&gt;Construct a random sample&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Queries over sliding windows
+        &lt;ul&gt;
+          &lt;li&gt;Number of items of type &lt;em&gt;x&lt;/em&gt; in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Filtering a data stream
+        &lt;ul&gt;
+          &lt;li&gt;Select elements with property &lt;em&gt;x&lt;/em&gt; from the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Counting distinct elements
+        &lt;ul&gt;
+          &lt;li&gt;Number of distinct elements in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Estimating moments
+        &lt;ul&gt;
+          &lt;li&gt;Estimate avg./std. dev. of the last &lt;em&gt;k&lt;/em&gt; elements&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;start-from-sampling&quot;&gt;Start from sampling&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sample a fixed proportion of elements in the stream&lt;/li&gt;
+  &lt;li&gt;Maintain a random sample of fixed size over a potentially infinite stream
+    &lt;ul&gt;
+      &lt;li&gt;At any “time” &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; we would like a random sample of &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; elements&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-proportion&quot;&gt;Sampling from a Data Stream: Sampling a fixed proportion&lt;/h2&gt;
+
+&lt;h3 id=&quot;sampling-a-fixed-proportion&quot;&gt;Sampling a Fixed Proportion&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Scenario: Search engine query stream
+    &lt;ul&gt;
+      &lt;li&gt;Stream of tuples: (user, query, time)&lt;/li&gt;
+      &lt;li&gt;Answer questions such as: How often did a user run the same query in a single day&lt;/li&gt;
+      &lt;li&gt;Have space to store 1/10 of query stream&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Naive solution
+    &lt;ul&gt;
+      &lt;li&gt;Generate a random integer for each query&lt;/li&gt;
+      &lt;li&gt;Store the query if the integer is 0, otherwise discard&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;problem-with-naive-approach&quot;&gt;Problem with Naive Approach&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Question: What fraction of queries by an user are duplicates?
+    &lt;ul&gt;
+      &lt;li&gt;Suppose each user issues &lt;em&gt;x&lt;/em&gt; queries once and &lt;em&gt;d&lt;/em&gt; queries twice.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Solution: Keep 10% of the queries.
+    &lt;ul&gt;
+      &lt;li&gt;Sample will contain &lt;em&gt;x/10&lt;/em&gt; of the singleton queries and &lt;em&gt;2d/10&lt;/em&gt; of the duplicate queries at least once.&lt;/li&gt;
+      &lt;li&gt;But only &lt;em&gt;d/100&lt;/em&gt; pairs of duplicates
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;d/100 = 1/10 * 1/10 * d&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Of &lt;em&gt;d&lt;/em&gt; “duplicates” &lt;em&gt;18d/100&lt;/em&gt; appear exactly once
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;18d/100 = ((1/10 * 9/10) + (9/10 * 1/10)) * d&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sample-based answer is the following:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\frac{d}{100}}{\frac{x}{10}&amp;space;&amp;plus;&amp;space;\frac{d}{100}&amp;space;&amp;plus;&amp;space;\frac{18d}{100}}&amp;space;=&amp;space;\frac{d}{10x&amp;space;&amp;plus;&amp;space;19d}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Problem&lt;/strong&gt;: Error would occur from “Probability of selection”.
+    &lt;ul&gt;
+      &lt;li&gt;Possible solution: Sampling user, not query
+        &lt;ul&gt;
+          &lt;li&gt;Pick &lt;em&gt;1/10th&lt;/em&gt; of users and take all their searches in the sample&lt;/li&gt;
+          &lt;li&gt;Use a hash function that hashes the user name or user id uniformly into 10 buckets&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Generalized Solution&lt;/strong&gt;: Use stream of tuples with keys
+        &lt;ul&gt;
+          &lt;li&gt;Key is a subset of each tuple’s component&lt;/li&gt;
+          &lt;li&gt;Choice of key depends on application&lt;/li&gt;
+          &lt;li&gt;To get a sample &lt;em&gt;a/b&lt;/em&gt; fraction of the stream:
+            &lt;ul&gt;
+              &lt;li&gt;Hash each tuple’s key uniformly into &lt;strong&gt;b&lt;/strong&gt; buckets&lt;/li&gt;
+              &lt;li&gt;Pick the tuple if its hash value is at most &lt;strong&gt;a&lt;/strong&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-sized-tuples&quot;&gt;Sampling from a Data Stream: Sampling a fixed-sized tuples&lt;/h2&gt;
+
+&lt;h3 id=&quot;maintaining-a-fixed-size-sample&quot;&gt;Maintaining a fixed-size sample&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose we need to maintain a random sample &lt;em&gt;S&lt;/em&gt; of size exactly &lt;em&gt;s&lt;/em&gt; tuples due to the main memory size constraint 
+because the length of the stream is unknown.&lt;/li&gt;
+  &lt;li&gt;Suppose at time &lt;em&gt;n&lt;/em&gt; we have seen &lt;em&gt;s&lt;/em&gt; items.
+    &lt;ul&gt;
+      &lt;li&gt;Goal: Each item is in the sample &lt;em&gt;S&lt;/em&gt; with equal probability of &lt;em&gt;s/n&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;illustration-s--2&quot;&gt;Illustration (s = 2)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stream: a x c y z k c d e g&lt;/li&gt;
+  &lt;li&gt;At &lt;strong&gt;n = 5&lt;/strong&gt;, each of the first 5 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
+  &lt;li&gt;At &lt;strong&gt;n = 7&lt;/strong&gt;, each of the first 7 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
+  &lt;li&gt;Impractical solution would be to store all the &lt;em&gt;n&lt;/em&gt; tuples seen so far and out of them pick &lt;strong&gt;s&lt;/strong&gt; at random.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;solution-reservoir-sampling&quot;&gt;Solution: Reservoir Sampling&lt;/h3&gt;
+
+&lt;h4 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Store all the first &lt;strong&gt;s&lt;/strong&gt; elements of the stream to &lt;strong&gt;S&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Suppose we have seen &lt;strong&gt;n-1&lt;/strong&gt; elements, and now the &lt;strong&gt;n th&lt;/strong&gt; element arrives &lt;strong&gt;(n &amp;gt; s)&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;With probability &lt;strong&gt;s/n&lt;/strong&gt;, keep the &lt;strong&gt;n th&lt;/strong&gt; element, then it replaces one of the &lt;strong&gt;s&lt;/strong&gt; elements in the sample &lt;strong&gt;S&lt;/strong&gt;,
+picked uniformly at random&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;claim&quot;&gt;Claim&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This algorithm maintains a sample &lt;strong&gt;S&lt;/strong&gt; with the desired property. After &lt;strong&gt;n&lt;/strong&gt; elements, the sample contains each
+element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;proof-of-reservoir-sampling-by-induction&quot;&gt;Proof of Reservoir Sampling By Induction&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;queries-over-a-long-sliding-window&quot;&gt;Queries over a (long) Sliding Window&lt;/h2&gt;
+
+&lt;h3 id=&quot;sliding-windows&quot;&gt;Sliding Windows&lt;/h3&gt;
+
+&lt;h3 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h3&gt;
+
+&lt;h4 id=&quot;simple-solution&quot;&gt;Simple Solution&lt;/h4&gt;
+
+&lt;h4 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Does NOT assume uniformity&lt;/li&gt;
+  &lt;li&gt;Store O(logN) bits per stream&lt;/li&gt;
+  &lt;li&gt;Gives approximate answer, never off by more than 50%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Characteristics of Stream Data</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Asset</title>
@@ -692,7 +1467,185 @@ all traffic between them passes over the direct connection to reduce the cost.&l
       &lt;li&gt;Scheduler tries to schedule map tasks “close” to physical storage location of input data&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Intermediate results&lt;/strong&gt; are stored on &lt;strong&gt;local File System(FS)&lt;/strong&gt; of Map and Reduce workers&lt;/li&gt;
+  &lt;li&gt;Output is often input to another MapReduce task&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;map-and-reduce-job-example&quot;&gt;Map and Reduce job Example&lt;/h4&gt;
+
+&lt;p&gt;For &lt;em&gt;M&lt;/em&gt; map tasks and &lt;em&gt;R&lt;/em&gt; reduce tasks&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make &lt;em&gt;M&lt;/em&gt; much larger than the number of nodes in the cluster&lt;/li&gt;
+  &lt;li&gt;One DFS chunk per map is common&lt;/li&gt;
+  &lt;li&gt;Improves dynamic load balancing and speeds up recovery from worker failures&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; is usually &lt;strong&gt;smaller&lt;/strong&gt; than &lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;, because the output is spread across &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; files.&lt;/p&gt;
+
+&lt;h4 id=&quot;task-granularity--pipelining&quot;&gt;Task Granularity &amp;amp; Pipelining&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fine granularity tasks: map tasks &amp;gt; machines
+    &lt;ul&gt;
+      &lt;li&gt;Minimizes time for fault recovery&lt;/li&gt;
+      &lt;li&gt;Able to pipeline shuffling with map execution&lt;/li&gt;
+      &lt;li&gt;Better dynamic load balancing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;coordination-master&quot;&gt;Coordination: Master&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Master node takes care of:
+    &lt;ul&gt;
+      &lt;li&gt;Task status: (idle, in-progress, completed)&lt;/li&gt;
+      &lt;li&gt;Idle tasks get scheduled as workers become available&lt;/li&gt;
+      &lt;li&gt;Sends the master the location and sizes of its R intermediate files to reducer when a map task completes&lt;/li&gt;
+      &lt;li&gt;Pings workers periodically to detect failures&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dealing-with-failures&quot;&gt;Dealing with Failures&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Map worker failure
+    &lt;ul&gt;
+      &lt;li&gt;Map tasks completed or in-progress at worker are reset to idle&lt;/li&gt;
+      &lt;li&gt;Reduce workers are notified when task is rescheduled on an other worker&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reduce worker failure
+    &lt;ul&gt;
+      &lt;li&gt;Only in-progress tasks are reset to idle&lt;/li&gt;
+      &lt;li&gt;Reduce task is restarted&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Master failure
+    &lt;ul&gt;
+      &lt;li&gt;mapReduce task is aborted and client is notified&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;refinements-backup-tasks&quot;&gt;Refinements: Backup Tasks&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Slow workers significantly lengthen the job completion time:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Other jobs on the machine&lt;/li&gt;
+  &lt;li&gt;Bad disks&lt;/li&gt;
+  &lt;li&gt;Unknown&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Near end of phase, spawn backup copies of tasks. Whichever one finishes first “wins”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Effect&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Dramatically shortens jobs completion time.&lt;/p&gt;
+
+&lt;h4 id=&quot;refinement-combiners&quot;&gt;Refinement: Combiners&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Often a Map task will produce many pairs of the form &lt;em&gt;(k, v1)&lt;/em&gt;, &lt;em&gt;(k, v2)&lt;/em&gt;, … for the same key &lt;em&gt;k&lt;/em&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. popular words in the word count&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Save network time by pre-aggregating values in the mapper:
+    &lt;ul&gt;
+      &lt;li&gt;combine(k, list(v1)) -&amp;gt; v2&lt;/li&gt;
+      &lt;li&gt;combiner is usually same as the reduce function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Works only if reduce function is commutative and associative&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If combiner combines the values of all keys of a single mapper(single machine), much less data will be copied and 
+shuffled&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;refinement-partition-function&quot;&gt;Refinement: Partition Function&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Control how keys get partitioned
+    &lt;ul&gt;
+      &lt;li&gt;Inputs to map tasks are created by contiguous split of input file&lt;/li&gt;
+      &lt;li&gt;Reduce needs to ensure that records with the same intermediate key end up at the same worker&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;System uses a default partition function:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(key) mod(%) R&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;It is useful to override the hash function:
+    &lt;ul&gt;
+      &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(hostname(URL)) mod R&lt;/code&gt; ensures URLs from a host end up in the same output file&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;storage-infrastructure&quot;&gt;Storage Infrastructure&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;
+If nodes fail, how can we store data persistently?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt;
+Distributed File System&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Provides global file namespace&lt;/li&gt;
+  &lt;li&gt;Google GFS; Hadoop HDFS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Typical usage pattern&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Huge files(100s of GB to TB)&lt;/li&gt;
+  &lt;li&gt;Data is rarely updated in place&lt;/li&gt;
+  &lt;li&gt;Reads and appends are common&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;distributed-file-system&quot;&gt;Distributed File System&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reliable distributed file system&lt;/li&gt;
+  &lt;li&gt;Data kept in “chunks” spread across machines&lt;/li&gt;
+  &lt;li&gt;Each chunk replicated on different machines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chunk servers&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;File is split into contiguous chunks&lt;/li&gt;
+  &lt;li&gt;Typically each chunk is 16-64MB&lt;/li&gt;
+  &lt;li&gt;Each chunk replicated (usually 2x or 3x)&lt;/li&gt;
+  &lt;li&gt;Try to keep replicas in different racks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Master node&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a.k.a. name node in Hadoop’s HDFS&lt;/li&gt;
+  &lt;li&gt;Stores metadata about where files are stored&lt;/li&gt;
+  &lt;li&gt;Might be replicated&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Client library for file access&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Talks to master to find chunk servers&lt;/li&gt;
+  &lt;li&gt;Connects directly chunk servers to access data&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
@@ -721,83 +1674,6 @@ all traffic between them passes over the direct connection to reduce the cost.&l
 
       
         <summary type="html">Large Scale Computing for Data Mining</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Reading CSV File</title>
-      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
-      <published>2022-09-11T19:30:00+09:00</published>
-      <updated>2022-09-11T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Get public data
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;API
-    &lt;ul&gt;
-      &lt;li&gt;Naver API&lt;/li&gt;
-      &lt;li&gt;Twitter API&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Web Scrapping/Crawling
-    &lt;ul&gt;
-      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
-
-&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">How to GET data</summary>
       
 
       
@@ -881,154 +1757,54 @@ all traffic between them passes over the direct connection to reduce the cost.&l
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - Injecting Data using Implemented Service</title>
-      <link href="/Spring_Boot-Injecting_Data_using_Implemented_Service" rel="alternate" type="text/html" title="Spring Boot - Injecting Data using Implemented Service" />
-      <published>2022-09-07T09:08:00+09:00</published>
-      <updated>2022-09-07T09:08:00+09:00</updated>
-      <id>/Spring_Boot-Injecting_Data_using_Implemented_Service</id>
-      <content type="html" xml:base="/Spring_Boot-Injecting_Data_using_Implemented_Service">&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one
-of the options that I had was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CommandLineRunner&lt;/code&gt;. However, I wanted to make my &lt;strong&gt;code clean&lt;/strong&gt;.&lt;/p&gt;
+      <title type="html">Intelligent Information Systems - Reading CSV File</title>
+      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
+      <published>2022-09-11T19:30:00+09:00</published>
+      <updated>2022-09-11T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
 
-&lt;h4 id=&quot;commandlinerunner-example&quot;&gt;CommandLineRunner Example&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@EnableJpaAuditing&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@SpringBootApplication&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;SpringApplication&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    
-    &lt;span class=&quot;nd&quot;&gt;@Bean&lt;/span&gt;
-    &lt;span class=&quot;nc&quot;&gt;CommandLineRunner&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;runner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ExampleService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;example&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I found another choice which was using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ApplicationRunner&lt;/code&gt;. I chose this method because I was able to separate the 
-specific codes that I need for inserting data. Also, I personally think that this way of structuring code is cleaner.&lt;/p&gt;
-
-&lt;h4 id=&quot;applicationrunner-example&quot;&gt;ApplicationRunner Example&lt;/h4&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@RequiredArgsConstructor&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;InitialDataInsert&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApplicationRunner&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ExampleService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insertData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;example&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ApplicationArguments&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;insertData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/ApplicationRunner.html&quot; target=&quot;_blank&quot;&gt;Application Runner in Spring Document&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="backend" />
-      
-
-      
-        <summary type="html">I needed to inject some data that are in .csv format when starting Spring Boot using the service. I know that one of the options that I had was CommandLineRunner. However, I wanted to make my code clean.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Environment Setting</title>
-      <link href="/Intelligent_Information_Systems-Environment_Setting" rel="alternate" type="text/html" title="Intelligent Information Systems - Environment Setting" />
-      <published>2022-09-07T00:00:00+09:00</published>
-      <updated>2022-09-07T00:00:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Environment_Setting</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Environment_Setting">&lt;h2 id=&quot;data-analysis-in-computer&quot;&gt;Data analysis in computer&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For data analysis use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;
+&lt;ol&gt;
+  &lt;li&gt;Get public data
     &lt;ul&gt;
-      &lt;li&gt;Python is high level programming language that was published in 1997 by &lt;em&gt;Gudio van Raossum&lt;/em&gt;. He named it python 
-because of his favorite comedy TV show &lt;em&gt;Monty Python’s Flying Circus&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tools-used-for-data-analysis&quot;&gt;Tools used for data analysis&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/products/distribution&quot; target=&quot;_blank&quot;&gt;Anaconda&lt;/a&gt;
+  &lt;li&gt;API
     &lt;ul&gt;
-      &lt;li&gt;Named anaconda because there are many projects or packages that are related to snakes.&lt;/li&gt;
+      &lt;li&gt;Naver API&lt;/li&gt;
+      &lt;li&gt;Twitter API&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jupyter.org/install&quot; target=&quot;_blank&quot;&gt;Jupyter notebook&lt;/a&gt;
+  &lt;li&gt;Web Scrapping/Crawling
     &lt;ul&gt;
-      &lt;li&gt;Open source web application&lt;/li&gt;
-      &lt;li&gt;Run partial codes and check the output&lt;/li&gt;
-      &lt;li&gt;Named jupyter because of three main languages &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Julia&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 
-&lt;h3 id=&quot;anaconda-commands&quot;&gt;Anaconda commands&lt;/h3&gt;
+&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
 
-&lt;h4 id=&quot;create-virtual-environment&quot;&gt;Create virtual environment&lt;/h4&gt;
+&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Get a list of all my environments&lt;/p&gt;
+&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
 
-&lt;p&gt;Create a new environment named py35, install Python 3.5&lt;/p&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create --name py35 python=3.5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;p&gt;Active a existing environment named py35&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda activate py35
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Delete an environment named py35 and everything in it&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env remove --name py35
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;jupyter-notebook-commands&quot;&gt;Jupyter notebook commands&lt;/h4&gt;
-
-&lt;p&gt;Run jupyter notebook&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf&quot; target=&quot;_blank&quot;&gt;Conda Cheat Sheet by Conda&lt;/a&gt;_&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -1050,355 +1826,7 @@ because of his favorite comedy TV show &lt;em&gt;Monty Python’s Flying Circus&
       
 
       
-        <summary type="html">Data analysis in computer</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Level Editor</title>
-      <link href="/Unreal_Engine-Level_Editor" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
-      <published>2022-09-06T01:30:00+09:00</published>
-      <updated>2022-09-06T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Level_Editor</id>
-      <content type="html" xml:base="/Unreal_Engine-Level_Editor">&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unreal Editor: Development environment for Unreal engine.&lt;/li&gt;
-  &lt;li&gt;Level Editor: An interface used for the design and construction of game levels and environments.&lt;/li&gt;
-  &lt;li&gt;Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to
-bring the desired experience to a player.&lt;/li&gt;
-  &lt;li&gt;Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file.&lt;/li&gt;
-  &lt;li&gt;Actor: Object in level such as a camera, static mesh, or player start location.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;default-interface&quot;&gt;Default Interface&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;coordinates&quot;&gt;Coordinates&lt;/h2&gt;
-
-&lt;p&gt;The coordinates follow &lt;em&gt;left hand rule&lt;/em&gt; as you may have learned in high school physics class.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;thumb: Points upward and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-coordinate&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;index finger: Points towards and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y-coordinate&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;middle finger: Points to the right and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x-coordinate&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;camera-control-in-view-port&quot;&gt;Camera control in view port&lt;/h2&gt;
-
-&lt;p&gt;Move the camera around using these keys:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w/s&lt;/code&gt;: move forward/backward&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a/d&lt;/code&gt;: move left/right&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q/e&lt;/code&gt;: move upward/downward&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z/c&lt;/code&gt;: zoom out/in&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right, move forward/backward horizontally&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right/upwards/downwards&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally, move upwards/downwards in perpendicular&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move around centering a pivot&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move towards/away from a pivot&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally and forward/backward in perpendicular&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;select an object&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;: focus the object&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="game" />
-      
-
-      
-        <summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Data Mining Research</title>
-      <link href="/Big_Data-Mining_Research" rel="alternate" type="text/html" title="Big Data - Data Mining Research" />
-      <published>2022-09-05T22:30:00+09:00</published>
-      <updated>2022-09-05T22:30:00+09:00</updated>
-      <id>/Big_Data-Mining_Research</id>
-      <content type="html" xml:base="/Big_Data-Mining_Research">&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
-&lt;h3 id=&quot;what-is-data-miningdm&quot;&gt;What is Data Mining(DM)?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;data mining&lt;/strong&gt;: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern
-or knowledge from huge amount of data.
-    &lt;ul&gt;
-      &lt;li&gt;aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive
-Analysis, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;kdd-process&quot;&gt;KDD Process&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;key-components-in-data-mining&quot;&gt;Key Components in Data Mining&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data &amp;amp; Datatype
-    &lt;ul&gt;
-      &lt;li&gt;Database Data (extended-relational, object-oriented, heterogeneous, legacy), Data Warehouse, Transactional Data, 
-Stream, Spatio-temporal, Time-series, Sequence, Text and Web, Multi-media, Graphs &amp;amp; Social and Information Networks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data Mining Functions
-    &lt;ul&gt;
-      &lt;li&gt;Characterization, Discrimination, Association, Classification, Clustering, Trend/Deviation, Outlier Analysis, etc.&lt;/li&gt;
-      &lt;li&gt;Descriptive vs Predictive Data Mining&lt;/li&gt;
-      &lt;li&gt;Multiple/Integrated Functions and Mining at Multiple Levels&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Techniques Utilized
-    &lt;ul&gt;
-      &lt;li&gt;Data-intensive, Machine Learning, Statistics, Pattern Recognition, Visualization, High-performance, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Applications Adapted
-    &lt;ul&gt;
-      &lt;li&gt;Retail, Telecommunication, Banking, Fraud Analysis, Bio-data Mining, Stock Market Analysis, Health Care, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dm-component-data--datatype&quot;&gt;DM Component: Data &amp;amp; Datatype&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Database-oriented datasets and applications
-    &lt;ul&gt;
-      &lt;li&gt;Relational database, data warehouse, transactional database&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Advanced Datasets and advanced applications
-    &lt;ul&gt;
-      &lt;li&gt;Data streams and sensor data&lt;/li&gt;
-      &lt;li&gt;Time-series data, temporal data, sequence data (including bio-sequences)&lt;/li&gt;
-      &lt;li&gt;Structure data, graphs, social networks and multi-linked data&lt;/li&gt;
-      &lt;li&gt;Spatial data and spatio-temporal data&lt;/li&gt;
-      &lt;li&gt;Multimedia database&lt;/li&gt;
-      &lt;li&gt;Text databases&lt;/li&gt;
-      &lt;li&gt;The World-Wide Web&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generalization
-    &lt;ul&gt;
-      &lt;li&gt;Multidimensional concept description: Characterization and discrimination&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Association and Correlation Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Frequent patterns or frequent item sets&lt;/li&gt;
-      &lt;li&gt;How to mine such patterns and rules efficiently in large datasets?&lt;/li&gt;
-      &lt;li&gt;How to use such pattern for classification, clustering, and other applications?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Classification
-    &lt;ul&gt;
-      &lt;li&gt;Construct models based on some training examples&lt;/li&gt;
-      &lt;li&gt;Describe and distinguish classes or concepts for future prediction
-        &lt;ul&gt;
-          &lt;li&gt;e.g. Classify countries based on climate, or classify cars based on gas mileage&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Predict some unknown class labels&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cluster Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Unsupervised learning&lt;/li&gt;
-      &lt;li&gt;Group data to form new categories&lt;/li&gt;
-      &lt;li&gt;Principle: Maximizing intra-class similarity &amp;amp; minimizing inter-class similarity&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Outlier Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Outlier: A data object that does not comply with the general behavior of the data&lt;/li&gt;
-      &lt;li&gt;Noise or exception&lt;/li&gt;
-      &lt;li&gt;Useful in fraud detection, rare events analysis&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dm-component-techniques-to-be-used&quot;&gt;DM Component: Techniques to be used&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;dm-component-applications-adapted&quot;&gt;DM Component: Applications adapted&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Web Analysis
-    &lt;ul&gt;
-      &lt;li&gt;e.g. from web page classification, clustering to PageRank algorithms&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Collaborative analysis &amp;amp; recommender system&lt;/li&gt;
-  &lt;li&gt;Basket data analysis to targeted marketing&lt;/li&gt;
-  &lt;li&gt;Biological and medical data analysis: classification, cluster analysis, biological sequence analysis, biological
-sequence analysis, biological network analysis&lt;/li&gt;
-  &lt;li&gt;Social networks&lt;/li&gt;
-  &lt;li&gt;Journalism&lt;/li&gt;
-  &lt;li&gt;Culture &amp;amp; Society&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;diverse-issues-in-dm&quot;&gt;Diverse Issues in DM&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining Methodology
-    &lt;ul&gt;
-      &lt;li&gt;Mining various and new kinds of knowledge&lt;/li&gt;
-      &lt;li&gt;Mining knowledge in multidimensional space&lt;/li&gt;
-      &lt;li&gt;Boosting the power of discovery in a networked environment&lt;/li&gt;
-      &lt;li&gt;Handling noise, uncertainty, and incompleteness of data&lt;/li&gt;
-      &lt;li&gt;Pattern evaluation and pattern- or constraint-guided mining&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;User Interaction
-    &lt;ul&gt;
-      &lt;li&gt;Interactive mining&lt;/li&gt;
-      &lt;li&gt;Incorporation of background knowledge&lt;/li&gt;
-      &lt;li&gt;Presentation and visualization of data mining results&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Efficiency and Scalability
-    &lt;ul&gt;
-      &lt;li&gt;Efficiency and scalability of data mining algorithms&lt;/li&gt;
-      &lt;li&gt;Parallel, distributed, stream, and incremental mining methods&lt;/li&gt;
-      &lt;li&gt;Diversity of data types&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Handling complex types of data
-    &lt;ul&gt;
-      &lt;li&gt;Mining dynamic, networked, and global data repositories&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data mining and society
-    &lt;ul&gt;
-      &lt;li&gt;Social impacts of data mining&lt;/li&gt;
-      &lt;li&gt;Privacy-preserving data mining&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;practical-tips-for-starting-data-mining&quot;&gt;Practical Tips for Starting Data Mining&lt;/h2&gt;
-
-&lt;h4 id=&quot;think-the-process-first&quot;&gt;Think the process first!&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is the exact problem?&lt;/li&gt;
-  &lt;li&gt;What data do we need? Is the data available?&lt;/li&gt;
-  &lt;li&gt;How can we represent the data?&lt;/li&gt;
-  &lt;li&gt;What DM functions/techniques will you use?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1️⃣-step-problem-definition&quot;&gt;1️⃣ step: Problem Definition&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Define the problem as a scientific form
-    &lt;ul&gt;
-      &lt;li&gt;From a rough, uncertain, and undetailed problem to a clear and specific problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Require domain knowledge as well as scientific problem-solving capability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2️⃣-step-data-collection&quot;&gt;2️⃣ step: Data Collection&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Collecting data via
-    &lt;ul&gt;
-      &lt;li&gt;e.g. devices collection, web crawling, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3️⃣-step-data-representation&quot;&gt;3️⃣ step: Data Representation&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Transforming a high-dimensional raw data into problem-relevant data&lt;/li&gt;
-  &lt;li&gt;Quantifying data with various techniques
-    &lt;ul&gt;
-      &lt;li&gt;Based on information theory, algorithm, and domain knowledge&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;applying-dm-functionstechniques&quot;&gt;Applying DM Functions/Techniques&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Applying appropriate DM techniques
-    &lt;ul&gt;
-      &lt;li&gt;e.g. machine learning, statistical analysis, time-series analysis&lt;/li&gt;
-      &lt;li&gt;multiple techniques can be applied together&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Quantitative vs Qualitative -&amp;gt; Complementary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;-summary&quot;&gt;✅ Summary&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;One cycle is “ALWAYS” not enough! You need to go many (= hundreds or even thousands) cycles to conclude a claim.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Introduction to Data Mining What is Data Mining(DM)? data mining: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern or knowledge from huge amount of data. aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive Analysis, etc.</summary>
+        <summary type="html">How to GET data</summary>
       
 
       

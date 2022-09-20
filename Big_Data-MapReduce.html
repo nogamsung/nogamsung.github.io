@@ -429,7 +429,185 @@ into the {body} of the default.hbs template -->
       <li>Scheduler tries to schedule map tasks “close” to physical storage location of input data</li>
     </ul>
   </li>
-  <li></li>
+  <li><strong>Intermediate results</strong> are stored on <strong>local File System(FS)</strong> of Map and Reduce workers</li>
+  <li>Output is often input to another MapReduce task</li>
+</ul>
+
+<h4 id="map-and-reduce-job-example">Map and Reduce job Example</h4>
+
+<p>For <em>M</em> map tasks and <em>R</em> reduce tasks</p>
+
+<ul>
+  <li>Make <em>M</em> much larger than the number of nodes in the cluster</li>
+  <li>One DFS chunk per map is common</li>
+  <li>Improves dynamic load balancing and speeds up recovery from worker failures</li>
+</ul>
+
+<h4 id="tip️">Tip❗️</h4>
+
+<p><strong><em>R</em></strong> is usually <strong>smaller</strong> than <strong><em>M</em></strong>, because the output is spread across <strong><em>R</em></strong> files.</p>
+
+<h4 id="task-granularity--pipelining">Task Granularity &amp; Pipelining</h4>
+
+<ul>
+  <li>Fine granularity tasks: map tasks &gt; machines
+    <ul>
+      <li>Minimizes time for fault recovery</li>
+      <li>Able to pipeline shuffling with map execution</li>
+      <li>Better dynamic load balancing</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022-09-11/screenshot-6.jpeg" alt="screenshot-6" /></p>
+
+<h4 id="coordination-master">Coordination: Master</h4>
+
+<ul>
+  <li>Master node takes care of:
+    <ul>
+      <li>Task status: (idle, in-progress, completed)</li>
+      <li>Idle tasks get scheduled as workers become available</li>
+      <li>Sends the master the location and sizes of its R intermediate files to reducer when a map task completes</li>
+      <li>Pings workers periodically to detect failures</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="dealing-with-failures">Dealing with Failures</h4>
+
+<ul>
+  <li>Map worker failure
+    <ul>
+      <li>Map tasks completed or in-progress at worker are reset to idle</li>
+      <li>Reduce workers are notified when task is rescheduled on an other worker</li>
+    </ul>
+  </li>
+  <li>Reduce worker failure
+    <ul>
+      <li>Only in-progress tasks are reset to idle</li>
+      <li>Reduce task is restarted</li>
+    </ul>
+  </li>
+  <li>Master failure
+    <ul>
+      <li>mapReduce task is aborted and client is notified</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="refinements-backup-tasks">Refinements: Backup Tasks</h4>
+
+<p><strong>Problem</strong></p>
+
+<p>Slow workers significantly lengthen the job completion time:</p>
+<ul>
+  <li>Other jobs on the machine</li>
+  <li>Bad disks</li>
+  <li>Unknown</li>
+</ul>
+
+<p><strong>Solution</strong></p>
+
+<p>Near end of phase, spawn backup copies of tasks. Whichever one finishes first “wins”.</p>
+
+<p><strong>Effect</strong></p>
+
+<p>Dramatically shortens jobs completion time.</p>
+
+<h4 id="refinement-combiners">Refinement: Combiners</h4>
+
+<ul>
+  <li>Often a Map task will produce many pairs of the form <em>(k, v1)</em>, <em>(k, v2)</em>, … for the same key <em>k</em>.
+    <ul>
+      <li>e.g. popular words in the word count</li>
+    </ul>
+  </li>
+  <li>Save network time by pre-aggregating values in the mapper:
+    <ul>
+      <li>combine(k, list(v1)) -&gt; v2</li>
+      <li>combiner is usually same as the reduce function</li>
+    </ul>
+  </li>
+  <li>Works only if reduce function is commutative and associative</li>
+</ul>
+
+<p><img src="assets/screenshots/2022-09-11/screenshot-7.jpeg" alt="screenshot-7" /></p>
+
+<p>If combiner combines the values of all keys of a single mapper(single machine), much less data will be copied and 
+shuffled</p>
+
+<p><img src="assets/screenshots/2022-09-11/screenshot-8.png" alt="screenshot-8" /></p>
+
+<h4 id="refinement-partition-function">Refinement: Partition Function</h4>
+
+<ul>
+  <li>Control how keys get partitioned
+    <ul>
+      <li>Inputs to map tasks are created by contiguous split of input file</li>
+      <li>Reduce needs to ensure that records with the same intermediate key end up at the same worker</li>
+    </ul>
+  </li>
+  <li>System uses a default partition function:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">hash(key) mod(%) R</code></li>
+    </ul>
+  </li>
+  <li>It is useful to override the hash function:
+    <ul>
+      <li>e.g. <code class="language-plaintext highlighter-rouge">hash(hostname(URL)) mod R</code> ensures URLs from a host end up in the same output file</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="storage-infrastructure">Storage Infrastructure</h4>
+
+<p><strong>Problem</strong>
+If nodes fail, how can we store data persistently?</p>
+
+<p><strong>Answer</strong>
+Distributed File System</p>
+<ul>
+  <li>Provides global file namespace</li>
+  <li>Google GFS; Hadoop HDFS</li>
+</ul>
+
+<p><strong>Typical usage pattern</strong></p>
+<ul>
+  <li>Huge files(100s of GB to TB)</li>
+  <li>Data is rarely updated in place</li>
+  <li>Reads and appends are common</li>
+</ul>
+
+<h4 id="distributed-file-system">Distributed File System</h4>
+
+<ul>
+  <li>Reliable distributed file system</li>
+  <li>Data kept in “chunks” spread across machines</li>
+  <li>Each chunk replicated on different machines</li>
+</ul>
+
+<p><img src="assets/screenshots/2022-09-11/screenshot-9.png" alt="screenshot-9" /></p>
+
+<p><strong>Chunk servers</strong></p>
+<ul>
+  <li>File is split into contiguous chunks</li>
+  <li>Typically each chunk is 16-64MB</li>
+  <li>Each chunk replicated (usually 2x or 3x)</li>
+  <li>Try to keep replicas in different racks</li>
+</ul>
+
+<p><strong>Master node</strong></p>
+<ul>
+  <li>a.k.a. name node in Hadoop’s HDFS</li>
+  <li>Stores metadata about where files are stored</li>
+  <li>Might be replicated</li>
+</ul>
+
+<p><strong>Client library for file access</strong></p>
+<ul>
+  <li>Talks to master to find chunk servers</li>
+  <li>Connects directly chunk servers to access data</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
@@ -547,23 +725,9 @@ into the {body} of the default.hbs template -->
                         
                             
                         
-                            
                         
                         
-                        
-                         <li><a href="/Computer_Network-The_Network_Core">Computer Network - The Network Core</a></li>
-                            
-                            
-                            
-                            
-                        
-                        
-                            
-                            
-                        
-                        
-                        
-                         <li><a href="/Intelligent_Information_Systems-Reading_CSV_File">Intelligent Information Systems - Reading CSV File</a></li>
+                         <li><a href="/Computer_Network-Protocol_Layers_and_Their_Service_Models">Computer Network - Protocol Layers and Their Service Models</a></li>
                             
                             
                             
@@ -571,8 +735,45 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-AI_and_DS">Intelligent Information Systems - AI and DS</a></li>
+                         <li><a href="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks">Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks</a></li>
                             
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Stream">Big Data - Stream</a></li>
+                            
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -673,7 +874,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 7 posts →
+                        See all 10 posts →
                         
                     </a>
                 </footer>

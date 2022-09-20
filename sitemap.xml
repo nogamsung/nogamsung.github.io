@@ -4,6 +4,70 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Unreal_Engine-Game_Mode_and_Pawn.html</loc>
+        
+        <lastmod>2022-09-20T01:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Protocol_Layers_and_Their_Service_Models.html</loc>
+        
+        <lastmod>2022-09-19T20:15:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks.html</loc>
+        
+        <lastmod>2022-09-19T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Big_Data-Stream.html</loc>
+        
+        <lastmod>2022-09-19T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Asset.html</loc>
         
         <lastmod>2022-09-15T19:30:00+09:00</lastmod>
