@@ -4,6 +4,54 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Unreal_Engine-Input_Process.html</loc>
+        
+        <lastmod>2022-09-21T20:15:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Unreal_Engine-Blueprint_Script.html</loc>
+        
+        <lastmod>2022-09-21T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Intelligent_Information_Systems-Visualizing_Data.html</loc>
+        
+        <lastmod>2022-09-21T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Game_Mode_and_Pawn.html</loc>
         
         <lastmod>2022-09-20T01:30:00+09:00</lastmod>

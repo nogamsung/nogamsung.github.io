@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T23:29:46+09:00</updated>
+  <updated>2022-09-22T22:58:44+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,398 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Input Process</title>
+      <link href="/Unreal_Engine-Input_Process" rel="alternate" type="text/html" title="Unreal Engine - Input Process" />
+      <published>2022-09-21T20:15:00+09:00</published>
+      <updated>2022-09-21T20:15:00+09:00</updated>
+      <id>/Unreal_Engine-Input_Process</id>
+      <content type="html" xml:base="/Unreal_Engine-Input_Process">&lt;h2 id=&quot;input-process&quot;&gt;Input Process&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Game must be interactive: A user must be able to input control&lt;/li&gt;
+  &lt;li&gt;Most of the input process method including UE is event driven
+    &lt;ul&gt;
+      &lt;li&gt;First, event input must be defined&lt;/li&gt;
+      &lt;li&gt;Next, when this event occurs, a callback function that process the task must be implemented&lt;/li&gt;
+      &lt;li&gt;Next, the callback function must be bind to the event&lt;/li&gt;
+      &lt;li&gt;When it runs, the callback function must be automatically called when the event occurs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hardware-input&quot;&gt;Hardware Input&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hardware input
+    &lt;ul&gt;
+      &lt;li&gt;Keyboard: keyboard, smartphone/tablet touch input, accelerator sensor input&lt;/li&gt;
+      &lt;li&gt;Gamepad: PS, Xbox&lt;/li&gt;
+      &lt;li&gt;Mouse, mouse movement, scroll&lt;/li&gt;
+      &lt;li&gt;Smartphone sensor event: touch, accelerator, spin speed, gravity&lt;/li&gt;
+      &lt;li&gt;HMD: Oculus Rift&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;input-mapping&quot;&gt;Input mapping&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Primary input function
+    &lt;ul&gt;
+      &lt;li&gt;Player’s movement, player camera’s spin&lt;/li&gt;
+      &lt;li&gt;Player’s action&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Input mapping
+    &lt;ul&gt;
+      &lt;li&gt;When a player hardware input is triggered, it understands and transforms into a data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pros
+    &lt;ul&gt;
+      &lt;li&gt;Use a single logic for multiple devices&lt;/li&gt;
+      &lt;li&gt;Game logic&lt;/li&gt;
+      &lt;li&gt;Easy spec change&lt;/li&gt;
+      &lt;li&gt;Convenient key settings and button settings&lt;/li&gt;
+      &lt;li&gt;C++ or blueprint readability increases&lt;/li&gt;
+      &lt;li&gt;Transformable digital input and virtual analog input&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;input-event&quot;&gt;Input event&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Two types of input
+    &lt;ul&gt;
+      &lt;li&gt;Digital input: There are two settings of input which are “on” and “off”
+        &lt;ul&gt;
+          &lt;li&gt;keyboard key, gamepad, mouse button, etc.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Analog input: Input value has multiple stages
+        &lt;ul&gt;
+          &lt;li&gt;Mouse movement distance, Analog stick of a gamepad, etc.&lt;/li&gt;
+          &lt;li&gt;Most input are expressed in “float”&lt;/li&gt;
+          &lt;li&gt;The opposite direction is expressed with negative value&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Input mapping types
+    &lt;ul&gt;
+      &lt;li&gt;Action mapping: Digital input event&lt;/li&gt;
+      &lt;li&gt;Axis mapping: Analog input event&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Category of events
+    &lt;ul&gt;
+      &lt;li&gt;Begin Play, Tick event&lt;/li&gt;
+      &lt;li&gt;Input event&lt;/li&gt;
+      &lt;li&gt;etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Input Process</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Unreal Engine - Blueprint Script</title>
+      <link href="/Unreal_Engine-Blueprint_Script" rel="alternate" type="text/html" title="Unreal Engine - Blueprint Script" />
+      <published>2022-09-21T19:30:00+09:00</published>
+      <updated>2022-09-21T19:30:00+09:00</updated>
+      <id>/Unreal_Engine-Blueprint_Script</id>
+      <content type="html" xml:base="/Unreal_Engine-Blueprint_Script">&lt;h2 id=&quot;blueprint&quot;&gt;Blueprint&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Class
+    &lt;ul&gt;
+      &lt;li&gt;Object is implemented in a class form (C++, Java, C#, and etc.)&lt;/li&gt;
+      &lt;li&gt;In UE, Object is implemented in C++ class -&amp;gt; &lt;strong&gt;C++ Class&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Blueprint class
+    &lt;ul&gt;
+      &lt;li&gt;In UE, you can implement blueprint object -&amp;gt; &lt;strong&gt;Blueprint class&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Blueprint class that is implemented is a single asset and is saved as a independent asset file&lt;/li&gt;
+      &lt;li&gt;Blueprint class is reusable in different levels&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Level blueprint
+    &lt;ul&gt;
+      &lt;li&gt;Level blueprint
+        &lt;ul&gt;
+          &lt;li&gt;Blueprint saved with the map&lt;/li&gt;
+          &lt;li&gt;A specific scenario can be shown using an actor located in the map, or express a equipment&lt;/li&gt;
+          &lt;li&gt;It is subordinate to a single map, not reusable in different map&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Blueprint class
+        &lt;ul&gt;
+          &lt;li&gt;Asset&lt;/li&gt;
+          &lt;li&gt;Reusable in different maps&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="game" />
+      
+
+      
+        <summary type="html">Blueprint</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Visualizing Data</title>
+      <link href="/Intelligent_Information_Systems-Visualizing_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Visualizing Data" />
+      <published>2022-09-21T00:00:00+09:00</published>
+      <updated>2022-09-21T00:00:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Visualizing_Data</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Visualizing_Data">&lt;h2 id=&quot;matplotlib-packagelibrary&quot;&gt;matplotlib package/library&lt;/h2&gt;
+
+&lt;p&gt;The most used python library to visualize data such as 2d graph, image, and so on.&lt;/p&gt;
+
+&lt;h4 id=&quot;import-pyplot-module-in-matplotlib-library-as-plt&quot;&gt;Import ‘pyplot’ module in ‘matplotlib’ library as ‘plt’&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;data-visualization&quot;&gt;Data Visualization&lt;/h2&gt;
+
+&lt;h4 id=&quot;input-a-list-to-the-plot-function&quot;&gt;Input a list to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; function&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; value is the value in the list and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; value increase by 1&lt;/p&gt;
+
+&lt;h4 id=&quot;input-two-lists-to-the-plot-function&quot;&gt;Input two lists to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; function&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The two list are separated by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;add-options-to-the-graph&quot;&gt;Add options to the graph&lt;/h2&gt;
+
+&lt;h3 id=&quot;add-a-title-to-the-graph&quot;&gt;Add a title to the graph&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+
+&lt;p&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Malgun Gothic&lt;/code&gt; as font in order for title to support Korean&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'font'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Malgun Gothic'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'플로팅'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;add-labels-to-the-graph&quot;&gt;Add labels to the graph&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;change-location-of-the-legend&quot;&gt;Change location of the legend&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;change-graph-color&quot;&gt;Change graph color&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;p&gt;Find different colors to use as the graph color from:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/gallery/color/named_colors.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/gallery/color/named_colors.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;change-the-shape-of-line&quot;&gt;Change the shape of line&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linestyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'--'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tip️-1&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;p&gt;Find different lines to use as the graph line from:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;change-shape-of-the-marker&quot;&gt;Change shape of the marker&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linestyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'--'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'v'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'o'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;tip️-2&quot;&gt;Tip❗️&lt;/h4&gt;
+
+&lt;p&gt;Find different markers to use from:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/api/markers_api.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/api/markers_api.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">matplotlib package/library</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Game Mode and Pawn</title>
@@ -758,22 +1150,6 @@ element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt
 
 &lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;queries-over-a-long-sliding-window&quot;&gt;Queries over a (long) Sliding Window&lt;/h2&gt;
-
-&lt;h3 id=&quot;sliding-windows&quot;&gt;Sliding Windows&lt;/h3&gt;
-
-&lt;h3 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h3&gt;
-
-&lt;h4 id=&quot;simple-solution&quot;&gt;Simple Solution&lt;/h4&gt;
-
-&lt;h4 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Does NOT assume uniformity&lt;/li&gt;
-  &lt;li&gt;Store O(logN) bits per stream&lt;/li&gt;
-  &lt;li&gt;Gives approximate answer, never off by more than 50%&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
@@ -1218,615 +1594,6 @@ all traffic between them passes over the direct connection to reduce the cost.&l
 
       
         <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - MapReduce</title>
-      <link href="/Big_Data-MapReduce" rel="alternate" type="text/html" title="Big Data - MapReduce" />
-      <published>2022-09-12T00:00:00+09:00</published>
-      <updated>2022-09-12T00:00:00+09:00</updated>
-      <id>/Big_Data-MapReduce</id>
-      <content type="html" xml:base="/Big_Data-MapReduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Process a lot of data to produce other data&lt;/li&gt;
-  &lt;li&gt;Requirements
-    &lt;ul&gt;
-      &lt;li&gt;CPU, Memory, HDD, …&lt;/li&gt;
-      &lt;li&gt;Multiple machine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cluster-architecture&quot;&gt;Cluster Architecture&lt;/h3&gt;
-
-&lt;p&gt;Fat-tree Architecture&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining big data requires large-scale computing whose key component is &lt;strong&gt;parallel programming&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;basic-operation-mapreduce&quot;&gt;Basic Operation: MapReduce&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Created by Google (Jeffry Dean and Sanjay Chemawat) in 2004&lt;/li&gt;
-  &lt;li&gt;Inspired from LISP
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Applies the given function to each element of the set&lt;/li&gt;
-          &lt;li&gt;(map ‘length’(() (a) (a b) (a b c)) =&amp;gt; (0 1 2 3)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;(reduce #’+’(1 2 3 4 5)) =&amp;gt; 15&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-is-also-framework&quot;&gt;MapReduce is also Framework&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Apache Hadoop MapReduce, Amazon Elastic MapReduce&lt;/li&gt;
-  &lt;li&gt;Framework for parallel computing
-    &lt;ul&gt;
-      &lt;li&gt;Parallelization&lt;/li&gt;
-      &lt;li&gt;Data distribution&lt;/li&gt;
-      &lt;li&gt;Load balancing&lt;/li&gt;
-      &lt;li&gt;Fault tolerance&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Programmers get simple API&lt;/li&gt;
-  &lt;li&gt;Allows one to process hug amount of data on thousands of processors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-as-programming-model&quot;&gt;MapReduce as Programming Model&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sample problem
-    &lt;ul&gt;
-      &lt;li&gt;Find top 10URLs by access frequency by analyzing log files from web server(s)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The problem can be converted as WordCount
-    &lt;ul&gt;
-      &lt;li&gt;Counting words in a huge text document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;wordcount&quot;&gt;WordCount&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Assume that a file is too large for memory, but all &amp;lt;word, count&amp;gt; pairs fit in memory
-    &lt;ol&gt;
-      &lt;li&gt;load a part of the file - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;count word - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;merge - &lt;strong&gt;Reduce&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Each sub-task can be run in parallel
-    &lt;ul&gt;
-      &lt;li&gt;Reduce not only the resource usage, but execution time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;generalize-formally&quot;&gt;Generalize Formally&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: a set of key-value pairs&lt;/li&gt;
-  &lt;li&gt;2 methods:
-    &lt;ul&gt;
-      &lt;li&gt;Map(k, v) -&amp;gt; &amp;lt;k’, v’&amp;gt;*&lt;/li&gt;
-      &lt;li&gt;Reduce( k’, &amp;lt;v’&amp;gt;* ) -&amp;gt; &amp;lt;k’, v’’&amp;gt;*&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-a-logical-diagram&quot;&gt;MapReduce: A Logical Diagram&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;mapreduce-environment&quot;&gt;MapReduce: Environment&lt;/h3&gt;
-
-&lt;p&gt;MapReduce environment takes care of the following:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Partitioning&lt;/strong&gt; the input data&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Scheduling&lt;/strong&gt; the program’s execution across a set of machines&lt;/li&gt;
-  &lt;li&gt;Performing the &lt;strong&gt;group by key&lt;/strong&gt; step&lt;/li&gt;
-  &lt;li&gt;Handling machine &lt;strong&gt;failures&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Managing required inter-machine &lt;strong&gt;communication&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-a-physical-diagram&quot;&gt;MapReduce: A Physical Diagram&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problems-suited-for-mapreduce&quot;&gt;Problems Suited for MapReduce&lt;/h2&gt;
-
-&lt;h4 id=&quot;host-size-example&quot;&gt;Host Size Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose we have a large web corpus&lt;/li&gt;
-  &lt;li&gt;Look at the metadata file
-    &lt;ul&gt;
-      &lt;li&gt;lines of the form: URL, size, date, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;For each host, find the total of number of bytes
-    &lt;ul&gt;
-      &lt;li&gt;sum of the page sizes for all URLs from the particular host&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;language-model-example&quot;&gt;Language Model Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Statistical machine translation:
-    &lt;ul&gt;
-      &lt;li&gt;need to count number of times every 5-word sequence occurs in a large corpus of documents&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Very easy with MapReduce:
-    &lt;ul&gt;
-      &lt;li&gt;Map: extract(5-word sequence, count) from document&lt;/li&gt;
-      &lt;li&gt;Reduce: combine the counts&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;join-by-mapreduce-example&quot;&gt;Join By MapReduce Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Compute the natural (a.k.a. inner) join&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;R&lt;/em&gt; and &lt;em&gt;S&lt;/em&gt; are each stored in files&lt;/li&gt;
-  &lt;li&gt;Tuples are pairs &lt;em&gt;(a,b)&lt;/em&gt; or &lt;em&gt;(b,c)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use a hash function &lt;em&gt;h&lt;/em&gt; from B-values to 1…k&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;A Map process turns&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Each input tuple &lt;em&gt;R(a,b)&lt;/em&gt; into key-value pair &lt;em&gt;(b,(a,R))&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Each input tuple &lt;em&gt;S(b,c)&lt;/em&gt; into &lt;em&gt;(b,(c,S))&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Map processes send each key-value pair with key &lt;em&gt;b&lt;/em&gt; to Reduce process &lt;em&gt;h(b)&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Hadoop does this automatically; just tell it what &lt;em&gt;k&lt;/em&gt; is.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Each Reduce process matches all the pairs &lt;em&gt;(b,(a,R))&lt;/em&gt; with all &lt;em&gt;(b,(c,S))&lt;/em&gt; and outputs &lt;em&gt;(a,b,c,)&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cost-measures-for-algorithms&quot;&gt;Cost Measures for Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In MapReduce we quantify the cost of an algorithm using
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Communication cost&lt;/strong&gt; = total I/O of all processes&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Elapsed communication cost&lt;/strong&gt; = max of I/O along any path&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;(Elapsed) computation cost&lt;/strong&gt; analogous, but count only running time of processes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Note that big-O notation is not the most useful, because adding more machine is always an option.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-cost-measures-mean&quot;&gt;What Cost Measures Mean&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Either the I/O (communication) or processing (computation) cost dominates
-    &lt;ul&gt;
-      &lt;li&gt;Ignore one or the other&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Total cost tells what you pay in rent from your friendly neighborhood cloud&lt;/li&gt;
-  &lt;li&gt;Elapsed cost is wall-clock time using parallelism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;design-mapreduce-framework&quot;&gt;Design MapReduce Framework&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-mapreduce-framework&quot;&gt;Using MapReduce Framework&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Programmer specifies: Map and Reduce and input files&lt;/li&gt;
-  &lt;li&gt;Workflow:
-    &lt;ul&gt;
-      &lt;li&gt;Read inputs as a set of key-value-pairs&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt; transforms input kv-pairs into a new set of k’v’-pairs&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Sorts &amp;amp; Shuffles&lt;/strong&gt; the k’v’-pairs to output nodes&lt;/li&gt;
-      &lt;li&gt;All k’v’-pairs with a given k’ are sent to the same &lt;strong&gt;reduce&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt; processes all k’v’-pairs grouped by key into new k’‘v’‘-pairs&lt;/li&gt;
-      &lt;li&gt;Write the resulting pairs to files&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;All phases are distributed with many tasks doing the work&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;data-flow&quot;&gt;Data Flow&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Input and final output&lt;/strong&gt; are stored on a &lt;strong&gt;distributed file system(DFS)&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Scheduler tries to schedule map tasks “close” to physical storage location of input data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intermediate results&lt;/strong&gt; are stored on &lt;strong&gt;local File System(FS)&lt;/strong&gt; of Map and Reduce workers&lt;/li&gt;
-  &lt;li&gt;Output is often input to another MapReduce task&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;map-and-reduce-job-example&quot;&gt;Map and Reduce job Example&lt;/h4&gt;
-
-&lt;p&gt;For &lt;em&gt;M&lt;/em&gt; map tasks and &lt;em&gt;R&lt;/em&gt; reduce tasks&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Make &lt;em&gt;M&lt;/em&gt; much larger than the number of nodes in the cluster&lt;/li&gt;
-  &lt;li&gt;One DFS chunk per map is common&lt;/li&gt;
-  &lt;li&gt;Improves dynamic load balancing and speeds up recovery from worker failures&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; is usually &lt;strong&gt;smaller&lt;/strong&gt; than &lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;, because the output is spread across &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; files.&lt;/p&gt;
-
-&lt;h4 id=&quot;task-granularity--pipelining&quot;&gt;Task Granularity &amp;amp; Pipelining&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fine granularity tasks: map tasks &amp;gt; machines
-    &lt;ul&gt;
-      &lt;li&gt;Minimizes time for fault recovery&lt;/li&gt;
-      &lt;li&gt;Able to pipeline shuffling with map execution&lt;/li&gt;
-      &lt;li&gt;Better dynamic load balancing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;coordination-master&quot;&gt;Coordination: Master&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Master node takes care of:
-    &lt;ul&gt;
-      &lt;li&gt;Task status: (idle, in-progress, completed)&lt;/li&gt;
-      &lt;li&gt;Idle tasks get scheduled as workers become available&lt;/li&gt;
-      &lt;li&gt;Sends the master the location and sizes of its R intermediate files to reducer when a map task completes&lt;/li&gt;
-      &lt;li&gt;Pings workers periodically to detect failures&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;dealing-with-failures&quot;&gt;Dealing with Failures&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Map worker failure
-    &lt;ul&gt;
-      &lt;li&gt;Map tasks completed or in-progress at worker are reset to idle&lt;/li&gt;
-      &lt;li&gt;Reduce workers are notified when task is rescheduled on an other worker&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reduce worker failure
-    &lt;ul&gt;
-      &lt;li&gt;Only in-progress tasks are reset to idle&lt;/li&gt;
-      &lt;li&gt;Reduce task is restarted&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Master failure
-    &lt;ul&gt;
-      &lt;li&gt;mapReduce task is aborted and client is notified&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;refinements-backup-tasks&quot;&gt;Refinements: Backup Tasks&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Slow workers significantly lengthen the job completion time:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Other jobs on the machine&lt;/li&gt;
-  &lt;li&gt;Bad disks&lt;/li&gt;
-  &lt;li&gt;Unknown&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Near end of phase, spawn backup copies of tasks. Whichever one finishes first “wins”.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Effect&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Dramatically shortens jobs completion time.&lt;/p&gt;
-
-&lt;h4 id=&quot;refinement-combiners&quot;&gt;Refinement: Combiners&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Often a Map task will produce many pairs of the form &lt;em&gt;(k, v1)&lt;/em&gt;, &lt;em&gt;(k, v2)&lt;/em&gt;, … for the same key &lt;em&gt;k&lt;/em&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;e.g. popular words in the word count&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Save network time by pre-aggregating values in the mapper:
-    &lt;ul&gt;
-      &lt;li&gt;combine(k, list(v1)) -&amp;gt; v2&lt;/li&gt;
-      &lt;li&gt;combiner is usually same as the reduce function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Works only if reduce function is commutative and associative&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If combiner combines the values of all keys of a single mapper(single machine), much less data will be copied and 
-shuffled&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;refinement-partition-function&quot;&gt;Refinement: Partition Function&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Control how keys get partitioned
-    &lt;ul&gt;
-      &lt;li&gt;Inputs to map tasks are created by contiguous split of input file&lt;/li&gt;
-      &lt;li&gt;Reduce needs to ensure that records with the same intermediate key end up at the same worker&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;System uses a default partition function:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(key) mod(%) R&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;It is useful to override the hash function:
-    &lt;ul&gt;
-      &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(hostname(URL)) mod R&lt;/code&gt; ensures URLs from a host end up in the same output file&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;storage-infrastructure&quot;&gt;Storage Infrastructure&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;
-If nodes fail, how can we store data persistently?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt;
-Distributed File System&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Provides global file namespace&lt;/li&gt;
-  &lt;li&gt;Google GFS; Hadoop HDFS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Typical usage pattern&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Huge files(100s of GB to TB)&lt;/li&gt;
-  &lt;li&gt;Data is rarely updated in place&lt;/li&gt;
-  &lt;li&gt;Reads and appends are common&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;distributed-file-system&quot;&gt;Distributed File System&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Reliable distributed file system&lt;/li&gt;
-  &lt;li&gt;Data kept in “chunks” spread across machines&lt;/li&gt;
-  &lt;li&gt;Each chunk replicated on different machines&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Chunk servers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;File is split into contiguous chunks&lt;/li&gt;
-  &lt;li&gt;Typically each chunk is 16-64MB&lt;/li&gt;
-  &lt;li&gt;Each chunk replicated (usually 2x or 3x)&lt;/li&gt;
-  &lt;li&gt;Try to keep replicas in different racks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Master node&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a.k.a. name node in Hadoop’s HDFS&lt;/li&gt;
-  &lt;li&gt;Stores metadata about where files are stored&lt;/li&gt;
-  &lt;li&gt;Might be replicated&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Client library for file access&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Talks to master to find chunk servers&lt;/li&gt;
-  &lt;li&gt;Connects directly chunk servers to access data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Large Scale Computing for Data Mining</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - AI and DS</title>
-      <link href="/Intelligent_Information_Systems-AI_and_DS" rel="alternate" type="text/html" title="Intelligent Information Systems - AI and DS" />
-      <published>2022-09-11T19:30:00+09:00</published>
-      <updated>2022-09-11T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-AI_and_DS</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-AI_and_DS">&lt;h3 id=&quot;where-is-data-created&quot;&gt;Where is “Data” created?&lt;/h3&gt;
-
-&lt;p&gt;Data is created my the Internet, smartphones, smart sensors, GPS, and etc.&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;AI: Artificial Intelligence&lt;/li&gt;
-  &lt;li&gt;ML: Machine Learning&lt;/li&gt;
-  &lt;li&gt;DL: Deep Learning&lt;/li&gt;
-  &lt;li&gt;DS: Data Science&lt;/li&gt;
-  &lt;li&gt;BD: Big Data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;what-is-big-data&quot;&gt;What is Big Data?&lt;/h2&gt;
-
-&lt;h3 id=&quot;characteristics-of-big-data-3v&quot;&gt;Characteristics of Big Data (3V)&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Volume
-    &lt;ul&gt;
-      &lt;li&gt;normally, terabytes or more&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Velocity
-    &lt;ul&gt;
-      &lt;li&gt;produced fast&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variety
-    &lt;ul&gt;
-      &lt;li&gt;various types of data such as text, image, and video&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;AI = A variety of automation&lt;/p&gt;
-
-&lt;p&gt;DS = Opinions collected -&amp;gt; Thesis -&amp;gt; Make Decision&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Where is “Data” created?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Reading CSV File</title>
-      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
-      <published>2022-09-11T19:30:00+09:00</published>
-      <updated>2022-09-11T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Get public data
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;API
-    &lt;ul&gt;
-      &lt;li&gt;Naver API&lt;/li&gt;
-      &lt;li&gt;Twitter API&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Web Scrapping/Crawling
-    &lt;ul&gt;
-      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
-
-&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">How to GET data</summary>
       
 
       
