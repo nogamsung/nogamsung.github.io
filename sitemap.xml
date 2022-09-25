@@ -4,6 +4,38 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Computer_Network-The_Web_and_HTTP.html</loc>
+        
+        <lastmod>2022-09-23T00:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Principles_of_Network_Applications.html</loc>
+        
+        <lastmod>2022-09-23T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Input_Process.html</loc>
         
         <lastmod>2022-09-21T20:15:00+09:00</lastmod>
@@ -55,6 +87,38 @@
         <loc>/Unreal_Engine-Game_Mode_and_Pawn.html</loc>
         
         <lastmod>2022-09-20T01:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-History_of_Computer_Networking_and_the_Internet.html</loc>
+        
+        <lastmod>2022-09-19T20:45:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Networks_Under_Attack.html</loc>
+        
+        <lastmod>2022-09-19T20:30:00+09:00</lastmod>
         
 
         

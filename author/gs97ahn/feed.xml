@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-22T22:58:44+09:00</updated>
+  <updated>2022-09-25T15:23:39+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,290 @@
   
   
 
+  
+    <entry>
+      <title type="html">Computer Network - The Web and HTTP</title>
+      <link href="/Computer_Network-The_Web_and_HTTP" rel="alternate" type="text/html" title="Computer Network - The Web and HTTP" />
+      <published>2022-09-23T00:30:00+09:00</published>
+      <updated>2022-09-23T00:30:00+09:00</updated>
+      <id>/Computer_Network-The_Web_and_HTTP</id>
+      <content type="html" xml:base="/Computer_Network-The_Web_and_HTTP">&lt;h2 id=&quot;1️⃣-overview-of-http&quot;&gt;1️⃣ Overview of HTTP&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HyperText Transfer Protocol (HTTP)&lt;/strong&gt;: the Web’s application-layer protocol, a.k.a. the heart of the Web.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web page&lt;/strong&gt;: Document that consists of objects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: a file - such as an HTML file, a JPEG image, a Javascript file, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;base HTML file&lt;/strong&gt;: a HTML file that references the other objects in the page with objects’ URLs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web browsers&lt;/strong&gt;: Client side of HTTP, in the context of the Web.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web servers&lt;/strong&gt;: Server side of HTTP, house Web objects, each addressable by a URL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Stateless protocol&lt;/strong&gt;: An HTTP server maintains no information about the clients&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-non-persistent-and-persistent-connections&quot;&gt;2️⃣ Non-Persistent and Persistent Connections&lt;/h2&gt;
+
+&lt;h3 id=&quot;http-with-non-persistent-connections&quot;&gt;HTTP with Non-Persistent Connections&lt;/h3&gt;
+
+&lt;p&gt;Each TCP connections is closed after the server sends the object - the connection does not persist for other objects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Round-trip time (RTT)&lt;/strong&gt;: The time it takes for a small packet to travel from client to server and then back to the
+client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;http-with-persistent-connections&quot;&gt;HTTP with Persistent Connections&lt;/h3&gt;
+
+&lt;p&gt;A brand-new connection must be established and maintained for each requested object. For each of these connections, TCP
+buffers must be allocated and TCP variables must be kept in both the client and server, which may be serving requests 
+from hundreds of different clients simultaneously. Next, each object suffers a delivery delay of two RTTs - one RTT to 
+establish the TCP connection and one RTT to request and receive an object.&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-http-message-format&quot;&gt;3️⃣ HTTP Message Format&lt;/h2&gt;
+
+&lt;h3 id=&quot;http-request-message&quot;&gt;HTTP Request Message&lt;/h3&gt;
+
+&lt;p&gt;A typical HTTP request message:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Request line&lt;/strong&gt;: The first line of an HTTP request message.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Header lines&lt;/strong&gt;: The lines after the first line of an HTTP request message.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Host: www.someschool.edu&lt;/em&gt;: Specifies the host on which the object resides.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Connection: close&lt;/em&gt;: The browser is telling the server that it doesn’t want to bother with persistent connections; 
+it wants the server to close the connection after sending the requested object.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;User-agent&lt;/em&gt;: Specifies the user agent that the browser type that is making the request to the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Accept-language&lt;/em&gt;: One of many content negotiation headers available in HTTP.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;HTTP methods&lt;/strong&gt;: &lt;em&gt;GET&lt;/em&gt;, &lt;em&gt;POST&lt;/em&gt;, &lt;em&gt;HEAD&lt;/em&gt;, &lt;em&gt;PUT&lt;/em&gt;, and &lt;em&gt;DELETE&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Entity body&lt;/strong&gt;: Empty with the &lt;em&gt;GET&lt;/em&gt; method, but is used with the &lt;em&gt;POST&lt;/em&gt; method. An HTTP client often uses the &lt;em&gt;POST&lt;/em&gt;
+method when the user fills out a form.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;http-response-message&quot;&gt;HTTP Response Message&lt;/h3&gt;
+
+&lt;p&gt;A typical HTTP response message:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has three sections: an initial &lt;strong&gt;status line&lt;/strong&gt;, six &lt;strong&gt;header lines&lt;/strong&gt;, and the &lt;strong&gt;entity body&lt;/strong&gt;, containing the 
+requested object itself.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Header lines&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Connection: close&lt;/em&gt;: Tell the client that it is going to close the TCP connection after sending the message.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Indicates the time and date when the HTTP response was created and sent by the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Server&lt;/em&gt;: Indicates that the message was generated by an Apache Web server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;User-agent&lt;/em&gt;: Header line in the HTTP request message.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Last-Modified&lt;/em&gt;: Indicates the time and date when the object was created or last modified.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Content-Length&lt;/em&gt;: Indicates the number of bytes in the object being sent.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Content-Type&lt;/em&gt;: Indicates that the object in the entity body is HTML text.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Status Code&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;200 OK&lt;/em&gt;: Request succeeded and the information is returned in the response.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;301 Moved Permanently&lt;/em&gt;: Requested object has been permanently moved; the new URL is specified in &lt;em&gt;Location&lt;/em&gt;. The
+client software will automatically retrieve the new URL.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;400 Bad Request&lt;/em&gt;: A generic error code indicating that the request could not be understood by the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;404 Not Found&lt;/em&gt;: The requested document does not exist on this server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;505 HTTP Version Not Supported&lt;/em&gt;: The requested HTTP protocol version is not supported by the server.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-user-server-interaction-cookies&quot;&gt;4️⃣ User-Server Interaction: Cookies&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Overview of HTTP</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Protocol Layers and Their Service Models</title>
+      <link href="/Computer_Network-Principles_of_Network_Applications" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" />
+      <published>2022-09-23T00:00:00+09:00</published>
+      <updated>2022-09-23T00:00:00+09:00</updated>
+      <id>/Computer_Network-Principles_of_Network_Applications</id>
+      <content type="html" xml:base="/Computer_Network-Principles_of_Network_Applications">&lt;h2 id=&quot;1️⃣-network-application-architectures&quot;&gt;1️⃣ Network Application Architectures&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Application architecture&lt;/strong&gt;: Designed by the application developer and dictates how the application is structured
+over the various end systems.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Client-server architecture&lt;/strong&gt;: An always-on host, called the &lt;em&gt;server&lt;/em&gt;, which services requests from many other hosts,
+called &lt;em&gt;clients&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data center&lt;/strong&gt;: Housing a large number of hosts, is often used to create a powerful virtual server.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;P2P architecture&lt;/strong&gt;: the application exploits direct communication between paris of intermittently connected hosts,
+called &lt;em&gt;peers&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-scalability&lt;/strong&gt;: Although each peer generates workload by requesting files, each peer also adds service capacity
+to the system by distributing files to other peers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-processes-communicating&quot;&gt;2️⃣ Processes Communicating&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Processes&lt;/strong&gt;: A program that is running within an end system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-interface-between-the-process-and-the-computer-network&quot;&gt;The Interface Between the Process and the Computer Network&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Socket&lt;/strong&gt;: A software between the application process and the transport-layer protocol.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Application Programming Interface (API)&lt;/strong&gt;: A socket is the interface between the application layer and the transport
+layer within a host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;addressing-processes&quot;&gt;Addressing Processes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IP address&lt;/strong&gt;: An identification of a host.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: Used to identify the host network application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-transport-services-available-to-applications&quot;&gt;3️⃣ Transport Services Available to Applications&lt;/h2&gt;
+
+&lt;h3 id=&quot;reliable-data-transfer&quot;&gt;Reliable Data Transfer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer&lt;/strong&gt;: A protocol provides such a guaranteed data delivery service.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Loss-tolerant applications&lt;/strong&gt;: A transport-layer protocol doesn’t provide reliable data transfer, some of the data
+sent by the sending process may never arrive at the receiving process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;throughput&quot;&gt;Throughput&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Bandwidth-sensitive applications&lt;/strong&gt;: Applications that have throughput requirements.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Elastic applications&lt;/strong&gt;: Makes use of as much, or as little, throughput as happens to be available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;timing&quot;&gt;Timing&lt;/h3&gt;
+
+&lt;p&gt;A transport-layer protocol can also provide timing guarantees.&lt;/p&gt;
+
+&lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;
+
+&lt;p&gt;A transport protocol can provide an application with one or more secuirty services.&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-transport-services-provided-by-the-internet&quot;&gt;4️⃣ Transport Services Provided by the Internet&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tcp-services&quot;&gt;TCP Services&lt;/h3&gt;
+
+&lt;p&gt;TCP service model includes a &lt;strong&gt;connection-oriented service&lt;/strong&gt; and a &lt;strong&gt;reliable data transfer service&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-oriented service&lt;/strong&gt;: TCP has the client and server exchange transport-layer control information with each
+other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client and
+server, allowing them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to
+exist between the sockets of the two processes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: The communicating processes can rely on TCP to deliver all data sent without error
+and in the proper order. When on side of the application passes a stream of bytes into a socket, it can count on TCP to
+deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Congesting-control mechanism&lt;/strong&gt;: A service for the general welfare of the Internet rather than for the communicating
+processes. it throttles a sending process when the network is congested between sender and receiver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;udp-services&quot;&gt;UDP Services&lt;/h3&gt;
+
+&lt;p&gt;UDP is no-frills, lightweight transport protocol, providing minimal services. It is connectionless, so there is no
+handshaking before the two processes start to communicate. It provides an unreliable data transfer service, meaning that
+when a process sends a message into a UDP socket, it provides no guarantee that the message will ever reach the
+receiving process. Also, messages that do arrives at the receiving process may arrive not in order. Lastly, UDP does not
+include a congestion-control mechanism,, so the sending side of UDP can pump data into the layer below at any rate.&lt;/p&gt;
+
+&lt;h3 id=&quot;services-not-provided-by-internet-transport-protocols&quot;&gt;Services Not Provided by Internet Transport Protocols&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5️⃣-application-layer-protocols&quot;&gt;5️⃣ Application-Layer Protocols&lt;/h2&gt;
+
+&lt;p&gt;Application-layer protocols Defines how an application’s processes, running on different end systems, pass messages to 
+each other. In particular, it defines:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The types of messages exchanged, for example, request messages and response messages.&lt;/li&gt;
+  &lt;li&gt;The syntax of the various message types, such as the fields in the message and how the fields are delineated.&lt;/li&gt;
+  &lt;li&gt;The semantics of the fields, that is, the meaning of the information in the fields.&lt;/li&gt;
+  &lt;li&gt;Rules for determining when and how a process sends messages and responds to messages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Network Application Architectures</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Input Process</title>
@@ -147,7 +431,7 @@
       
 
       
-        <category term="game" />
+        <category term="etc" />
       
 
       
@@ -221,7 +505,7 @@
       
 
       
-        <category term="game" />
+        <category term="etc" />
       
 
       
@@ -568,11 +852,133 @@
       
 
       
-        <category term="game" />
+        <category term="etc" />
       
 
       
         <summary type="html">Concept of Class</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - History of Computer Networking and the Internet</title>
+      <link href="/Computer_Network-History_of_Computer_Networking_and_the_Internet" rel="alternate" type="text/html" title="Computer Network - History of Computer Networking and the Internet" />
+      <published>2022-09-19T20:45:00+09:00</published>
+      <updated>2022-09-19T20:45:00+09:00</updated>
+      <id>/Computer_Network-History_of_Computer_Networking_and_the_Internet</id>
+      <content type="html" xml:base="/Computer_Network-History_of_Computer_Networking_and_the_Internet">&lt;h2 id=&quot;1️⃣-the-development-of-packet-switching-1961---1972&quot;&gt;1️⃣ The Development of Packet Switching: 1961 - 1972&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ The Development of Packet Switching: 1961 - 1972</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Networks Under Attack</title>
+      <link href="/Computer_Network-Networks_Under_Attack" rel="alternate" type="text/html" title="Computer Network - Networks Under Attack" />
+      <published>2022-09-19T20:30:00+09:00</published>
+      <updated>2022-09-19T20:30:00+09:00</updated>
+      <id>/Computer_Network-Networks_Under_Attack</id>
+      <content type="html" xml:base="/Computer_Network-Networks_Under_Attack">&lt;h3 id=&quot;the-bad-guys-can-put-malware-into-your-host-via-the-internet&quot;&gt;The Bad Guys can put Malware into your Host via the Internet&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Malware&lt;/strong&gt;: Infectious data that comes with the actual requested data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Botnet&lt;/strong&gt;: What bad guys control and leverage for spam e-mail distribution or distributed denial-of-service attacks.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-replicating&lt;/strong&gt;: Once it infects one host, fromm that host it seeks entry into other hosts over the Internet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-attack-servers-and-network-infrastructure&quot;&gt;The Bad Guys can Attack Servers and Network Infrastructure&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Denial-of-service (DOS) attacks&lt;/strong&gt;: Renders a network, host, or other piece of infrastructure unusable by legitimate 
+users.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Vulnerability attack&lt;/em&gt;: Sends few well-crafted messages to vulnerable application or operating system running on
+targeted host. If the right sequence of packets is sent to vulnerable application or operating system, the service can
+stop or, worse, the host can crash.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Bandwidth flooding&lt;/em&gt;: The attacker sends a deluge of packets to the targeted host - so many packets that the
+target’s access link becomes clogged, preventing legitimate packets from reaching the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Connection flooding&lt;/em&gt;: The attacker establishes a large number of half-open or fully open TCP connections at the
+target host. The host can become so bogged down with these bogus connections that it stops accepting legitimate
+connections.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distributed DoS (DDoS) attack&lt;/strong&gt;: Attacker controls multiple sources and has each source blast traffic at the target.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-sniff-packets&quot;&gt;The Bad Guys can Sniff Packets&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Packet sniffer&lt;/strong&gt;: A passive receiver that records a copy of every packet that flies by.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-masquerade-as-someone-you-trust&quot;&gt;The Bad Guys can Masquerade as Someone You Trust&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IP spoofing&lt;/strong&gt;: Inject packets into the Internet with a false source address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">The Bad Guys can put Malware into your Host via the Internet</summary>
       
 
       
@@ -908,692 +1314,6 @@ receiving.&lt;/li&gt;
 
       
         <summary type="html">1️⃣ Overview of Delay in Packet-Switched Networks</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Stream</title>
-      <link href="/Big_Data-Stream" rel="alternate" type="text/html" title="Big Data - Stream" />
-      <published>2022-09-19T00:00:00+09:00</published>
-      <updated>2022-09-19T00:00:00+09:00</updated>
-      <id>/Big_Data-Stream</id>
-      <content type="html" xml:base="/Big_Data-Stream">&lt;h3 id=&quot;characteristics-of-stream-data&quot;&gt;Characteristics of Stream Data&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Infinite, Burst, and Non-stationary
-    &lt;ul&gt;
-      &lt;li&gt;The size of the entire data set is unknown&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Only &lt;strong&gt;INSTANTLY&lt;/strong&gt; accessible&lt;/li&gt;
-  &lt;li&gt;Stream management is important when the input rate is controlled externally:
-    &lt;ul&gt;
-      &lt;li&gt;Google queries&lt;/li&gt;
-      &lt;li&gt;Twitter or Facebook status updates&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining query streams
-    &lt;ul&gt;
-      &lt;li&gt;Google wants to know what queries are more frequent today than yesterday&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Mining lick streams
-    &lt;ul&gt;
-      &lt;li&gt;Yahoo wants know which of its pages are getting an unusual number of hits in the past hour&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Mining social network news feeds
-    &lt;ul&gt;
-      &lt;li&gt;e.g. look for trending topics on Twitter or Facebook&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sensor Networks
-    &lt;ul&gt;
-      &lt;li&gt;Many sensors feeding into a central controller&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;IP packets monitored at a switch
-    &lt;ul&gt;
-      &lt;li&gt;Gather information for optimal routing&lt;/li&gt;
-      &lt;li&gt;Detect denial-of-service(DOS) attacks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-stream-model&quot;&gt;The Stream Model&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input &lt;strong&gt;elements&lt;/strong&gt; enter at a rapid rate, at one or more input ports
-    &lt;ul&gt;
-      &lt;li&gt;We call elements of the stream tuples&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The system cannot store the entire stream&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;general-stream-processing-model&quot;&gt;General Stream Processing Model&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;operations-on-data-streams&quot;&gt;Operations on Data Streams&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A subset of input streams
-    &lt;ul&gt;
-      &lt;li&gt;Sampling data from a stream
-        &lt;ul&gt;
-          &lt;li&gt;Construct a random sample&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Queries over sliding windows
-        &lt;ul&gt;
-          &lt;li&gt;Number of items of type &lt;em&gt;x&lt;/em&gt; in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Filtering a data stream
-        &lt;ul&gt;
-          &lt;li&gt;Select elements with property &lt;em&gt;x&lt;/em&gt; from the stream&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Counting distinct elements
-        &lt;ul&gt;
-          &lt;li&gt;Number of distinct elements in the last &lt;em&gt;k&lt;/em&gt; elements of the stream&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Estimating moments
-        &lt;ul&gt;
-          &lt;li&gt;Estimate avg./std. dev. of the last &lt;em&gt;k&lt;/em&gt; elements&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;start-from-sampling&quot;&gt;Start from sampling&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sample a fixed proportion of elements in the stream&lt;/li&gt;
-  &lt;li&gt;Maintain a random sample of fixed size over a potentially infinite stream
-    &lt;ul&gt;
-      &lt;li&gt;At any “time” &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; we would like a random sample of &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; elements&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-proportion&quot;&gt;Sampling from a Data Stream: Sampling a fixed proportion&lt;/h2&gt;
-
-&lt;h3 id=&quot;sampling-a-fixed-proportion&quot;&gt;Sampling a Fixed Proportion&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Scenario: Search engine query stream
-    &lt;ul&gt;
-      &lt;li&gt;Stream of tuples: (user, query, time)&lt;/li&gt;
-      &lt;li&gt;Answer questions such as: How often did a user run the same query in a single day&lt;/li&gt;
-      &lt;li&gt;Have space to store 1/10 of query stream&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Naive solution
-    &lt;ul&gt;
-      &lt;li&gt;Generate a random integer for each query&lt;/li&gt;
-      &lt;li&gt;Store the query if the integer is 0, otherwise discard&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;problem-with-naive-approach&quot;&gt;Problem with Naive Approach&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Question: What fraction of queries by an user are duplicates?
-    &lt;ul&gt;
-      &lt;li&gt;Suppose each user issues &lt;em&gt;x&lt;/em&gt; queries once and &lt;em&gt;d&lt;/em&gt; queries twice.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Solution: Keep 10% of the queries.
-    &lt;ul&gt;
-      &lt;li&gt;Sample will contain &lt;em&gt;x/10&lt;/em&gt; of the singleton queries and &lt;em&gt;2d/10&lt;/em&gt; of the duplicate queries at least once.&lt;/li&gt;
-      &lt;li&gt;But only &lt;em&gt;d/100&lt;/em&gt; pairs of duplicates
-        &lt;ul&gt;
-          &lt;li&gt;&lt;em&gt;d/100 = 1/10 * 1/10 * d&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Of &lt;em&gt;d&lt;/em&gt; “duplicates” &lt;em&gt;18d/100&lt;/em&gt; appear exactly once
-        &lt;ul&gt;
-          &lt;li&gt;&lt;em&gt;18d/100 = ((1/10 * 9/10) + (9/10 * 1/10)) * d&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sample-based answer is the following:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\frac{d}{100}}{\frac{x}{10}&amp;space;&amp;plus;&amp;space;\frac{d}{100}&amp;space;&amp;plus;&amp;space;\frac{18d}{100}}&amp;space;=&amp;space;\frac{d}{10x&amp;space;&amp;plus;&amp;space;19d}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Problem&lt;/strong&gt;: Error would occur from “Probability of selection”.
-    &lt;ul&gt;
-      &lt;li&gt;Possible solution: Sampling user, not query
-        &lt;ul&gt;
-          &lt;li&gt;Pick &lt;em&gt;1/10th&lt;/em&gt; of users and take all their searches in the sample&lt;/li&gt;
-          &lt;li&gt;Use a hash function that hashes the user name or user id uniformly into 10 buckets&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Generalized Solution&lt;/strong&gt;: Use stream of tuples with keys
-        &lt;ul&gt;
-          &lt;li&gt;Key is a subset of each tuple’s component&lt;/li&gt;
-          &lt;li&gt;Choice of key depends on application&lt;/li&gt;
-          &lt;li&gt;To get a sample &lt;em&gt;a/b&lt;/em&gt; fraction of the stream:
-            &lt;ul&gt;
-              &lt;li&gt;Hash each tuple’s key uniformly into &lt;strong&gt;b&lt;/strong&gt; buckets&lt;/li&gt;
-              &lt;li&gt;Pick the tuple if its hash value is at most &lt;strong&gt;a&lt;/strong&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sampling-from-a-data-stream-sampling-a-fixed-sized-tuples&quot;&gt;Sampling from a Data Stream: Sampling a fixed-sized tuples&lt;/h2&gt;
-
-&lt;h3 id=&quot;maintaining-a-fixed-size-sample&quot;&gt;Maintaining a fixed-size sample&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose we need to maintain a random sample &lt;em&gt;S&lt;/em&gt; of size exactly &lt;em&gt;s&lt;/em&gt; tuples due to the main memory size constraint 
-because the length of the stream is unknown.&lt;/li&gt;
-  &lt;li&gt;Suppose at time &lt;em&gt;n&lt;/em&gt; we have seen &lt;em&gt;s&lt;/em&gt; items.
-    &lt;ul&gt;
-      &lt;li&gt;Goal: Each item is in the sample &lt;em&gt;S&lt;/em&gt; with equal probability of &lt;em&gt;s/n&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;illustration-s--2&quot;&gt;Illustration (s = 2)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Stream: a x c y z k c d e g&lt;/li&gt;
-  &lt;li&gt;At &lt;strong&gt;n = 5&lt;/strong&gt;, each of the first 5 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
-  &lt;li&gt;At &lt;strong&gt;n = 7&lt;/strong&gt;, each of the first 7 tuples is included in the sample &lt;strong&gt;S&lt;/strong&gt; with equal probability.&lt;/li&gt;
-  &lt;li&gt;Impractical solution would be to store all the &lt;em&gt;n&lt;/em&gt; tuples seen so far and out of them pick &lt;strong&gt;s&lt;/strong&gt; at random.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;solution-reservoir-sampling&quot;&gt;Solution: Reservoir Sampling&lt;/h3&gt;
-
-&lt;h4 id=&quot;algorithm&quot;&gt;Algorithm&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Store all the first &lt;strong&gt;s&lt;/strong&gt; elements of the stream to &lt;strong&gt;S&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Suppose we have seen &lt;strong&gt;n-1&lt;/strong&gt; elements, and now the &lt;strong&gt;n th&lt;/strong&gt; element arrives &lt;strong&gt;(n &amp;gt; s)&lt;/strong&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;With probability &lt;strong&gt;s/n&lt;/strong&gt;, keep the &lt;strong&gt;n th&lt;/strong&gt; element, then it replaces one of the &lt;strong&gt;s&lt;/strong&gt; elements in the sample &lt;strong&gt;S&lt;/strong&gt;,
-picked uniformly at random&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;claim&quot;&gt;Claim&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;This algorithm maintains a sample &lt;strong&gt;S&lt;/strong&gt; with the desired property. After &lt;strong&gt;n&lt;/strong&gt; elements, the sample contains each
-element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;proof-of-reservoir-sampling-by-induction&quot;&gt;Proof of Reservoir Sampling By Induction&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Characteristics of Stream Data</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Asset</title>
-      <link href="/Unreal_Engine-Asset" rel="alternate" type="text/html" title="Unreal Engine - Asset" />
-      <published>2022-09-15T19:30:00+09:00</published>
-      <updated>2022-09-15T19:30:00+09:00</updated>
-      <id>/Unreal_Engine-Asset</id>
-      <content type="html" xml:base="/Unreal_Engine-Asset">&lt;h2 id=&quot;making-mesh&quot;&gt;Making Mesh&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You can make mesh using &lt;a href=&quot;https://www.blender.org/support/tutorials/&quot; target=&quot;_blank&quot;&gt;blender&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;importing-mesh&quot;&gt;Importing Mesh&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Import: Unreal Engine reads the format that is externally created
-    &lt;ul&gt;
-      &lt;li&gt;You must import the asset to the &lt;strong&gt;Content Browser&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;collision-volume&quot;&gt;Collision Volume&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There are 2 types of collision volume
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Simple Collision&lt;/strong&gt; volume
-        &lt;ul&gt;
-          &lt;li&gt;box, sphere, capsule, and primitive like convex hull&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Complex Collision&lt;/strong&gt; volume
-        &lt;ul&gt;
-          &lt;li&gt;trimesh&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to request collision test within Unreal Engine using &lt;strong&gt;PhysX&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;simple query: request simple collision test&lt;/li&gt;
-      &lt;li&gt;complex query: request complex collision test&lt;/li&gt;
-      &lt;li&gt;default action: simple query for simple collision and complex query for complex collision&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="game" />
-      
-
-      
-        <summary type="html">Making Mesh</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Level Editor</title>
-      <link href="/Unreal_Engine-Level_Edit" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
-      <published>2022-09-13T01:30:00+09:00</published>
-      <updated>2022-09-13T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Level_Edit</id>
-      <content type="html" xml:base="/Unreal_Engine-Level_Edit">&lt;h2 id=&quot;the-general-sequence-of-game-programming&quot;&gt;The General Sequence of Game Programming&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Prototyping
-    &lt;ul&gt;
-      &lt;li&gt;Verify that the game that you are making has value&lt;/li&gt;
-      &lt;li&gt;Use “greyboxing” to quickly construct maps
-        &lt;ul&gt;
-          &lt;li&gt;Do not worry about the design, quickly construct map to test playing&lt;/li&gt;
-          &lt;li&gt;Afterwards, you need to change the mesh template to actual assets. This process is called “meshing”.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pre-production
-    &lt;ul&gt;
-      &lt;li&gt;A rehearsal stage to bring the level of game to production level&lt;/li&gt;
-      &lt;li&gt;This is stage that proves the entire ‘workflow’ of the game.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Production
-    &lt;ul&gt;
-      &lt;li&gt;Finish the last bits for official deployment&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;making-simple-levels&quot;&gt;Making simple levels&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Look for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Engine Contents&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BasicShapes&lt;/code&gt; folder&lt;/li&gt;
-  &lt;li&gt;Drag the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cube&lt;/code&gt; static mesh&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;play-modes&quot;&gt;Play modes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Selected Viewport Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;It is a play mode in viewport&lt;/li&gt;
-      &lt;li&gt;Quickly play to check everything&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Mobile Free View Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Simulate the play in a mobile environment (The preparation time is slow)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;New Editor Screen (PIE) Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Play in a new screen (The screen resolution and ratio that you set are applied)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Simulated Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;It is not a mode to play, it is a mode to observe the levels
-        &lt;ul&gt;
-          &lt;li&gt;You can see all the screen view that a player would see, but not be able to perform any game related functions&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Use mouse and keyboard to look around the level freely
-        &lt;ul&gt;
-          &lt;li&gt;Conveniently place a particle effect or physical objects&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;making-levels-using-brush&quot;&gt;Making levels using brush&lt;/h2&gt;
-
-&lt;p&gt;Brush is a tool provided by unreal for greyboxing&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Do not need to use external DCC and just use internal unreal editor tool to make mesh&lt;/li&gt;
-  &lt;li&gt;Using ‘brush’ is not a common method to use
-    &lt;ul&gt;
-      &lt;li&gt;‘Static mesh’ is commonly used&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;However, brush is very convenient to use, so use it when you need it
-    &lt;ul&gt;
-      &lt;li&gt;Used to make the entire outline and it is replaced with static mesh afterwards&lt;/li&gt;
-      &lt;li&gt;Early stage prototyping for test usage&lt;/li&gt;
-      &lt;li&gt;It is also usable for final mesh&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="game" />
-      
-
-      
-        <summary type="html">The General Sequence of Game Programming</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - The Network Core</title>
-      <link href="/Computer_Network-The_Network_Core" rel="alternate" type="text/html" title="Computer Network - The Network Core" />
-      <published>2022-09-12T19:30:00+09:00</published>
-      <updated>2022-09-12T19:30:00+09:00</updated>
-      <id>/Computer_Network-The_Network_Core</id>
-      <content type="html" xml:base="/Computer_Network-The_Network_Core">&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1️⃣-packet-switching&quot;&gt;1️⃣ Packet Switching&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Messages&lt;/strong&gt;: Anything the application designer wants which are exchanged by end systems.
-    &lt;ul&gt;
-      &lt;li&gt;May contain data such as an e-mail message, a JPEG image, or an MP3 audio file.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Packets&lt;/strong&gt;: A format which a long messages are broken down to.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Packet switches&lt;/strong&gt;: A tool that packet travels.
-    &lt;ul&gt;
-      &lt;li&gt;There are two predominant types of packet switches: &lt;strong&gt;routers&lt;/strong&gt; and &lt;strong&gt;link-layer switches&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Packets are transmitted over each communication link at a rate equal to full transmission rate of link.&lt;/li&gt;
-      &lt;li&gt;e.g. Source system or a packet switch is sending a packet of &lt;em&gt;L&lt;/em&gt; bits over a link with transmission rate R bit/sec
--&amp;gt; packet is transmitted at L/R seconds&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;store-and-forward-transmission&quot;&gt;Store-and-Forward Transmission&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Store-and-forward transmission&lt;/strong&gt;: The packet switch must receive the entire packet before it can begin to transmit
-the first bit of the packet onto the outbound link.
-    &lt;ul&gt;
-      &lt;li&gt;To explore in more detail, consider a simple network consisting of two end systems connected by a single router, as 
-shown below. A router will typically have many incident links, since its job is to switch an incoming packet onto an 
-ongoing link; in this simple example, the router has the rather simple task of transferring a packet from one (input) 
-link to the only other attached link. In this example, the source has three packets, each consisting of &lt;em&gt;L&lt;/em&gt; bits, to 
-send to the destination. At the snapshot of the time shown below, the source has transmitted some of packet 1, and the
-front of packet 1 has already arrived at the router. Because the router employs store-and-forwarding, at this instant of
-time, the router cannot transmit the bits it has received; instead it must first buffer the packet’s bits. Only after
-the router has received all of the packet’s bits can it begin to transmit the packet onto the outbound link. To gain
-some insight into store-and-forward transmission, let’s now calculate the amount of time that elapses from when the
-source begins to send the packet until the destination has received the entire packet. The source begins to transmit at
-time 0; at time &lt;em&gt;L/R&lt;/em&gt; seconds, the source has transmitted the entire packet, and the entire packet has been received and
-stored at the router. At time &lt;em&gt;L/R&lt;/em&gt; seconds, since the router has just received and stored at the router. At time &lt;em&gt;L/R&lt;/em&gt;
-seconds, since the router has just received the entire packet, it can begin to transmit the packet onto the outbound
-link towards the destination; at time 2&lt;em&gt;L/R&lt;/em&gt;, the router has transmitted the entire packet, and the entire packet has
-been received by the destination. Thus, the total delay is 2&lt;em&gt;L/R&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Let’s now consider the general case of sending one packet from source to destination over a path consisting of &lt;em&gt;N&lt;/em&gt; links
-each of rate &lt;em&gt;R&lt;/em&gt; (thus, there are N-1 routers between source and destination). Applying the same logic as above, we see
-that end-to-end delay is:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{end-to-end}&amp;space;=&amp;space;N\tfrac{L}{R}&quot; alt=&quot;equation&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;queuing-delays-and-packet-loss&quot;&gt;Queuing Delays and Packet Loss&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Output buffer(a.k.a. output queue)&lt;/strong&gt;: Stores packets that the router is about to send into that link.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Queuing delays&lt;/strong&gt;: Variable and depend on the level of congestion in the network.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Packet loss&lt;/strong&gt;: The arriving packet or one of already-queued packets will be dropped since the buffer is already
-completely full.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;forwarding-tables-and-routing-protocols&quot;&gt;Forwarding Tables and Routing Protocols&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Forwarding table&lt;/strong&gt;: Maps destination addresses to that router’s outbound links.
-&lt;strong&gt;Routing protocols&lt;/strong&gt;: Used to automatically set the forwarding tables.&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-circuit-switching&quot;&gt;2️⃣ Circuit Switching&lt;/h2&gt;
-
-&lt;p&gt;There are 2 fundamental approaches to moving data through a network of links and switches: &lt;strong&gt;circuit switching&lt;/strong&gt; and
-&lt;strong&gt;packet switching&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Circuit-switched network&lt;/th&gt;
-      &lt;th&gt;Packet-switched network&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Resources needed along a path to provide communication between the end systems are &lt;strong&gt;&lt;em&gt;reserved&lt;/em&gt;&lt;/strong&gt; for commuication between the end systems&lt;/td&gt;
-      &lt;td&gt;Resources needed along a path to provide communication between the end systems are &lt;strong&gt;&lt;em&gt;not reserved&lt;/em&gt;&lt;/strong&gt; for commuication between the end systems&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;End-to-end connection&lt;/strong&gt;: The network must first reserve one circuit on each of two links.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;multiplexing-in-circuit-switched-networks&quot;&gt;Multiplexing in Circuit-Switched Networks&lt;/h3&gt;
-
-&lt;p&gt;A circuit in a link is implemented with either &lt;strong&gt;frequency-division multiplexing(FDM)&lt;/strong&gt; or 
-&lt;strong&gt;time-division multiplexing(TDM)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Frequency-division multiplexing(FDM)&lt;/strong&gt;: The frequency spectrum of a link is divided up among the connections
-established across the link.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Time-division multiplexing(TDM)&lt;/strong&gt;: Time is divided of fixed duration and each frame is divided into a fixed number
-of time slots.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;bandwidth&lt;/strong&gt;: The width of the frequency band.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;silent period&lt;/strong&gt;: A period of silent in circuit switching when network resources are allocated to the connection but 
-are not used.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-a-network-of-networks&quot;&gt;3️⃣ A Network of Networks&lt;/h2&gt;
-
-&lt;h4 id=&quot;network-structure-1&quot;&gt;Network Structure 1&lt;/h4&gt;
-
-&lt;p&gt;Interconnects all of the access ISPs with a single global transit ISP.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Customer&lt;/strong&gt;: The access ISP&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Provider&lt;/strong&gt;: The global transit ISP&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;network-structure-2&quot;&gt;Network Structure 2&lt;/h4&gt;
-
-&lt;p&gt;Two-tier hierarchy with global transit providers residing at the top tier and access ISPs at the bottom tier.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Regional ISP&lt;/strong&gt;: The access ISPs in the region connect.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Tier-1 ISPs&lt;/strong&gt;: Similar to (imaginary) global transit ISP.
-    &lt;ul&gt;
-      &lt;li&gt;e.g. Level 3 Communications, AT&amp;amp;T, Sprint, and NTT.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;There is a customer-provider relationship at each level of the hierarchy. The tier-1 ISPs do not pay anyone as they are 
-at the top of the hierarchy.&lt;/p&gt;
-
-&lt;h4 id=&quot;network-structure-3&quot;&gt;Network Structure 3&lt;/h4&gt;
-
-&lt;p&gt;Multi-tier hierarchy, which is still only a crude approximation of today’s Internet.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Points of Presence(PoPs)&lt;/strong&gt;: A group of one or more routers in the provider’s network where customer ISPs can connect
-into the provider ISP.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Multi-home&lt;/strong&gt; Connect two or more provider ISPs.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Peer&lt;/strong&gt;: A pair of nearby ISPs at the same level of hierarchy, directly connecting their networks together so that 
-all traffic between them passes over the direct connection to reduce the cost.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Internet ExchangePoint(IXP)&lt;/strong&gt;: A meeting point where multiple ISPs can peer together.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;network-structure-4&quot;&gt;Network Structure 4&lt;/h4&gt;
-
-&lt;p&gt;Ecosystem consisting of access ISPs, regional ISPs, tier-1 ISPs, PoPs, multi-homing, peering, and IXPs&lt;/p&gt;
-
-&lt;h4 id=&quot;network-structure-5&quot;&gt;Network Structure 5&lt;/h4&gt;
-
-&lt;p&gt;Builds on top of Network Structure 4 by adding content-provider networks&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html"></summary>
       
 
       

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-22T22:58:44+09:00</updated>
+  <updated>2022-09-25T15:23:39+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,290 @@
   
   
 
+  
+    <entry>
+      <title type="html">Computer Network - The Web and HTTP</title>
+      <link href="/Computer_Network-The_Web_and_HTTP" rel="alternate" type="text/html" title="Computer Network - The Web and HTTP" />
+      <published>2022-09-23T00:30:00+09:00</published>
+      <updated>2022-09-23T00:30:00+09:00</updated>
+      <id>/Computer_Network-The_Web_and_HTTP</id>
+      <content type="html" xml:base="/Computer_Network-The_Web_and_HTTP">&lt;h2 id=&quot;1️⃣-overview-of-http&quot;&gt;1️⃣ Overview of HTTP&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HyperText Transfer Protocol (HTTP)&lt;/strong&gt;: the Web’s application-layer protocol, a.k.a. the heart of the Web.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web page&lt;/strong&gt;: Document that consists of objects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: a file - such as an HTML file, a JPEG image, a Javascript file, etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;base HTML file&lt;/strong&gt;: a HTML file that references the other objects in the page with objects’ URLs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web browsers&lt;/strong&gt;: Client side of HTTP, in the context of the Web.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Web servers&lt;/strong&gt;: Server side of HTTP, house Web objects, each addressable by a URL.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Stateless protocol&lt;/strong&gt;: An HTTP server maintains no information about the clients&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-non-persistent-and-persistent-connections&quot;&gt;2️⃣ Non-Persistent and Persistent Connections&lt;/h2&gt;
+
+&lt;h3 id=&quot;http-with-non-persistent-connections&quot;&gt;HTTP with Non-Persistent Connections&lt;/h3&gt;
+
+&lt;p&gt;Each TCP connections is closed after the server sends the object - the connection does not persist for other objects.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Round-trip time (RTT)&lt;/strong&gt;: The time it takes for a small packet to travel from client to server and then back to the
+client.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;http-with-persistent-connections&quot;&gt;HTTP with Persistent Connections&lt;/h3&gt;
+
+&lt;p&gt;A brand-new connection must be established and maintained for each requested object. For each of these connections, TCP
+buffers must be allocated and TCP variables must be kept in both the client and server, which may be serving requests 
+from hundreds of different clients simultaneously. Next, each object suffers a delivery delay of two RTTs - one RTT to 
+establish the TCP connection and one RTT to request and receive an object.&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-http-message-format&quot;&gt;3️⃣ HTTP Message Format&lt;/h2&gt;
+
+&lt;h3 id=&quot;http-request-message&quot;&gt;HTTP Request Message&lt;/h3&gt;
+
+&lt;p&gt;A typical HTTP request message:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Request line&lt;/strong&gt;: The first line of an HTTP request message.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Header lines&lt;/strong&gt;: The lines after the first line of an HTTP request message.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Host: www.someschool.edu&lt;/em&gt;: Specifies the host on which the object resides.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Connection: close&lt;/em&gt;: The browser is telling the server that it doesn’t want to bother with persistent connections; 
+it wants the server to close the connection after sending the requested object.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;User-agent&lt;/em&gt;: Specifies the user agent that the browser type that is making the request to the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Accept-language&lt;/em&gt;: One of many content negotiation headers available in HTTP.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;HTTP methods&lt;/strong&gt;: &lt;em&gt;GET&lt;/em&gt;, &lt;em&gt;POST&lt;/em&gt;, &lt;em&gt;HEAD&lt;/em&gt;, &lt;em&gt;PUT&lt;/em&gt;, and &lt;em&gt;DELETE&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Entity body&lt;/strong&gt;: Empty with the &lt;em&gt;GET&lt;/em&gt; method, but is used with the &lt;em&gt;POST&lt;/em&gt; method. An HTTP client often uses the &lt;em&gt;POST&lt;/em&gt;
+method when the user fills out a form.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;http-response-message&quot;&gt;HTTP Response Message&lt;/h3&gt;
+
+&lt;p&gt;A typical HTTP response message:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has three sections: an initial &lt;strong&gt;status line&lt;/strong&gt;, six &lt;strong&gt;header lines&lt;/strong&gt;, and the &lt;strong&gt;entity body&lt;/strong&gt;, containing the 
+requested object itself.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Header lines&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Connection: close&lt;/em&gt;: Tell the client that it is going to close the TCP connection after sending the message.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Date&lt;/em&gt;: Indicates the time and date when the HTTP response was created and sent by the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Server&lt;/em&gt;: Indicates that the message was generated by an Apache Web server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;User-agent&lt;/em&gt;: Header line in the HTTP request message.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Last-Modified&lt;/em&gt;: Indicates the time and date when the object was created or last modified.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Content-Length&lt;/em&gt;: Indicates the number of bytes in the object being sent.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Content-Type&lt;/em&gt;: Indicates that the object in the entity body is HTML text.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Status Code&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;200 OK&lt;/em&gt;: Request succeeded and the information is returned in the response.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;301 Moved Permanently&lt;/em&gt;: Requested object has been permanently moved; the new URL is specified in &lt;em&gt;Location&lt;/em&gt;. The
+client software will automatically retrieve the new URL.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;400 Bad Request&lt;/em&gt;: A generic error code indicating that the request could not be understood by the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;404 Not Found&lt;/em&gt;: The requested document does not exist on this server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;505 HTTP Version Not Supported&lt;/em&gt;: The requested HTTP protocol version is not supported by the server.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-user-server-interaction-cookies&quot;&gt;4️⃣ User-Server Interaction: Cookies&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Overview of HTTP</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Protocol Layers and Their Service Models</title>
+      <link href="/Computer_Network-Principles_of_Network_Applications" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" />
+      <published>2022-09-23T00:00:00+09:00</published>
+      <updated>2022-09-23T00:00:00+09:00</updated>
+      <id>/Computer_Network-Principles_of_Network_Applications</id>
+      <content type="html" xml:base="/Computer_Network-Principles_of_Network_Applications">&lt;h2 id=&quot;1️⃣-network-application-architectures&quot;&gt;1️⃣ Network Application Architectures&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Application architecture&lt;/strong&gt;: Designed by the application developer and dictates how the application is structured
+over the various end systems.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Client-server architecture&lt;/strong&gt;: An always-on host, called the &lt;em&gt;server&lt;/em&gt;, which services requests from many other hosts,
+called &lt;em&gt;clients&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Data center&lt;/strong&gt;: Housing a large number of hosts, is often used to create a powerful virtual server.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;P2P architecture&lt;/strong&gt;: the application exploits direct communication between paris of intermittently connected hosts,
+called &lt;em&gt;peers&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-scalability&lt;/strong&gt;: Although each peer generates workload by requesting files, each peer also adds service capacity
+to the system by distributing files to other peers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-processes-communicating&quot;&gt;2️⃣ Processes Communicating&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Processes&lt;/strong&gt;: A program that is running within an end system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-interface-between-the-process-and-the-computer-network&quot;&gt;The Interface Between the Process and the Computer Network&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Socket&lt;/strong&gt;: A software between the application process and the transport-layer protocol.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Application Programming Interface (API)&lt;/strong&gt;: A socket is the interface between the application layer and the transport
+layer within a host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;addressing-processes&quot;&gt;Addressing Processes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IP address&lt;/strong&gt;: An identification of a host.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: Used to identify the host network application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-transport-services-available-to-applications&quot;&gt;3️⃣ Transport Services Available to Applications&lt;/h2&gt;
+
+&lt;h3 id=&quot;reliable-data-transfer&quot;&gt;Reliable Data Transfer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer&lt;/strong&gt;: A protocol provides such a guaranteed data delivery service.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Loss-tolerant applications&lt;/strong&gt;: A transport-layer protocol doesn’t provide reliable data transfer, some of the data
+sent by the sending process may never arrive at the receiving process.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;throughput&quot;&gt;Throughput&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Bandwidth-sensitive applications&lt;/strong&gt;: Applications that have throughput requirements.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Elastic applications&lt;/strong&gt;: Makes use of as much, or as little, throughput as happens to be available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;timing&quot;&gt;Timing&lt;/h3&gt;
+
+&lt;p&gt;A transport-layer protocol can also provide timing guarantees.&lt;/p&gt;
+
+&lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;
+
+&lt;p&gt;A transport protocol can provide an application with one or more secuirty services.&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-transport-services-provided-by-the-internet&quot;&gt;4️⃣ Transport Services Provided by the Internet&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tcp-services&quot;&gt;TCP Services&lt;/h3&gt;
+
+&lt;p&gt;TCP service model includes a &lt;strong&gt;connection-oriented service&lt;/strong&gt; and a &lt;strong&gt;reliable data transfer service&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-oriented service&lt;/strong&gt;: TCP has the client and server exchange transport-layer control information with each
+other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client and
+server, allowing them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to
+exist between the sockets of the two processes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: The communicating processes can rely on TCP to deliver all data sent without error
+and in the proper order. When on side of the application passes a stream of bytes into a socket, it can count on TCP to
+deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Congesting-control mechanism&lt;/strong&gt;: A service for the general welfare of the Internet rather than for the communicating
+processes. it throttles a sending process when the network is congested between sender and receiver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;udp-services&quot;&gt;UDP Services&lt;/h3&gt;
+
+&lt;p&gt;UDP is no-frills, lightweight transport protocol, providing minimal services. It is connectionless, so there is no
+handshaking before the two processes start to communicate. It provides an unreliable data transfer service, meaning that
+when a process sends a message into a UDP socket, it provides no guarantee that the message will ever reach the
+receiving process. Also, messages that do arrives at the receiving process may arrive not in order. Lastly, UDP does not
+include a congestion-control mechanism,, so the sending side of UDP can pump data into the layer below at any rate.&lt;/p&gt;
+
+&lt;h3 id=&quot;services-not-provided-by-internet-transport-protocols&quot;&gt;Services Not Provided by Internet Transport Protocols&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5️⃣-application-layer-protocols&quot;&gt;5️⃣ Application-Layer Protocols&lt;/h2&gt;
+
+&lt;p&gt;Application-layer protocols Defines how an application’s processes, running on different end systems, pass messages to 
+each other. In particular, it defines:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The types of messages exchanged, for example, request messages and response messages.&lt;/li&gt;
+  &lt;li&gt;The syntax of the various message types, such as the fields in the message and how the fields are delineated.&lt;/li&gt;
+  &lt;li&gt;The semantics of the fields, that is, the meaning of the information in the fields.&lt;/li&gt;
+  &lt;li&gt;Rules for determining when and how a process sends messages and responds to messages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Network Application Architectures</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Intelligent Information Systems - Visualizing Data</title>
@@ -216,6 +500,128 @@
 
       
         <summary type="html">matplotlib package/library</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - History of Computer Networking and the Internet</title>
+      <link href="/Computer_Network-History_of_Computer_Networking_and_the_Internet" rel="alternate" type="text/html" title="Computer Network - History of Computer Networking and the Internet" />
+      <published>2022-09-19T20:45:00+09:00</published>
+      <updated>2022-09-19T20:45:00+09:00</updated>
+      <id>/Computer_Network-History_of_Computer_Networking_and_the_Internet</id>
+      <content type="html" xml:base="/Computer_Network-History_of_Computer_Networking_and_the_Internet">&lt;h2 id=&quot;1️⃣-the-development-of-packet-switching-1961---1972&quot;&gt;1️⃣ The Development of Packet Switching: 1961 - 1972&lt;/h2&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ The Development of Packet Switching: 1961 - 1972</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Networks Under Attack</title>
+      <link href="/Computer_Network-Networks_Under_Attack" rel="alternate" type="text/html" title="Computer Network - Networks Under Attack" />
+      <published>2022-09-19T20:30:00+09:00</published>
+      <updated>2022-09-19T20:30:00+09:00</updated>
+      <id>/Computer_Network-Networks_Under_Attack</id>
+      <content type="html" xml:base="/Computer_Network-Networks_Under_Attack">&lt;h3 id=&quot;the-bad-guys-can-put-malware-into-your-host-via-the-internet&quot;&gt;The Bad Guys can put Malware into your Host via the Internet&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Malware&lt;/strong&gt;: Infectious data that comes with the actual requested data.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Botnet&lt;/strong&gt;: What bad guys control and leverage for spam e-mail distribution or distributed denial-of-service attacks.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Self-replicating&lt;/strong&gt;: Once it infects one host, fromm that host it seeks entry into other hosts over the Internet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-attack-servers-and-network-infrastructure&quot;&gt;The Bad Guys can Attack Servers and Network Infrastructure&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Denial-of-service (DOS) attacks&lt;/strong&gt;: Renders a network, host, or other piece of infrastructure unusable by legitimate 
+users.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Vulnerability attack&lt;/em&gt;: Sends few well-crafted messages to vulnerable application or operating system running on
+targeted host. If the right sequence of packets is sent to vulnerable application or operating system, the service can
+stop or, worse, the host can crash.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Bandwidth flooding&lt;/em&gt;: The attacker sends a deluge of packets to the targeted host - so many packets that the
+target’s access link becomes clogged, preventing legitimate packets from reaching the server.&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;Connection flooding&lt;/em&gt;: The attacker establishes a large number of half-open or fully open TCP connections at the
+target host. The host can become so bogged down with these bogus connections that it stops accepting legitimate
+connections.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distributed DoS (DDoS) attack&lt;/strong&gt;: Attacker controls multiple sources and has each source blast traffic at the target.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-sniff-packets&quot;&gt;The Bad Guys can Sniff Packets&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Packet sniffer&lt;/strong&gt;: A passive receiver that records a copy of every packet that flies by.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-bad-guys-can-masquerade-as-someone-you-trust&quot;&gt;The Bad Guys can Masquerade as Someone You Trust&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IP spoofing&lt;/strong&gt;: Inject packets into the Internet with a false source address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">The Bad Guys can put Malware into your Host via the Internet</summary>
       
 
       
@@ -792,6 +1198,22 @@ element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt
 &lt;h3 id=&quot;proof-of-reservoir-sampling-by-induction&quot;&gt;Proof of Reservoir Sampling By Induction&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;queries-over-a-long-sliding-window&quot;&gt;Queries over a (long) Sliding Window&lt;/h2&gt;
+
+&lt;h3 id=&quot;sliding-windows&quot;&gt;Sliding Windows&lt;/h3&gt;
+
+&lt;h3 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h3&gt;
+
+&lt;h4 id=&quot;simple-solution&quot;&gt;Simple Solution&lt;/h4&gt;
+
+&lt;h4 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Does NOT assume uniformity&lt;/li&gt;
+  &lt;li&gt;Store O(logN) bits per stream&lt;/li&gt;
+  &lt;li&gt;Gives approximate answer, never off by more than 50%&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1479,516 +1901,6 @@ Distributed File System&lt;/p&gt;
 
       
         <summary type="html">Large Scale Computing for Data Mining</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Reading CSV File</title>
-      <link href="/Intelligent_Information_Systems-Reading_CSV_File" rel="alternate" type="text/html" title="Intelligent Information Systems - Reading CSV File" />
-      <published>2022-09-11T19:30:00+09:00</published>
-      <updated>2022-09-11T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Reading_CSV_File</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Reading_CSV_File">&lt;h2 id=&quot;how-to-get-data&quot;&gt;How to GET data&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Get public data
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://data.kma.go.kr&quot;&gt;the Meteorological Administration&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;www.mois.go.kr&quot;&gt;Population Data&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.t-money.co.kr&quot;&gt;Public Traffic Data&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;API
-    &lt;ul&gt;
-      &lt;li&gt;Naver API&lt;/li&gt;
-      &lt;li&gt;Twitter API&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Web Scrapping/Crawling
-    &lt;ul&gt;
-      &lt;li&gt;Only that is allowed by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;what-is-csv-file&quot;&gt;What is CSV file?&lt;/h3&gt;
-
-&lt;p&gt;CSV stands for &lt;strong&gt;Comma - Separated Values&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reading-csv-file&quot;&gt;Reading CSV file&lt;/h3&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_weather.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">How to GET data</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - AI and DS</title>
-      <link href="/Intelligent_Information_Systems-AI_and_DS" rel="alternate" type="text/html" title="Intelligent Information Systems - AI and DS" />
-      <published>2022-09-11T19:30:00+09:00</published>
-      <updated>2022-09-11T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-AI_and_DS</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-AI_and_DS">&lt;h3 id=&quot;where-is-data-created&quot;&gt;Where is “Data” created?&lt;/h3&gt;
-
-&lt;p&gt;Data is created my the Internet, smartphones, smart sensors, GPS, and etc.&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;AI: Artificial Intelligence&lt;/li&gt;
-  &lt;li&gt;ML: Machine Learning&lt;/li&gt;
-  &lt;li&gt;DL: Deep Learning&lt;/li&gt;
-  &lt;li&gt;DS: Data Science&lt;/li&gt;
-  &lt;li&gt;BD: Big Data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;what-is-big-data&quot;&gt;What is Big Data?&lt;/h2&gt;
-
-&lt;h3 id=&quot;characteristics-of-big-data-3v&quot;&gt;Characteristics of Big Data (3V)&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Volume
-    &lt;ul&gt;
-      &lt;li&gt;normally, terabytes or more&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Velocity
-    &lt;ul&gt;
-      &lt;li&gt;produced fast&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variety
-    &lt;ul&gt;
-      &lt;li&gt;various types of data such as text, image, and video&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;AI = A variety of automation&lt;/p&gt;
-
-&lt;p&gt;DS = Opinions collected -&amp;gt; Thesis -&amp;gt; Make Decision&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Where is “Data” created?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Environment Setting</title>
-      <link href="/Intelligent_Information_Systems-Environment_Setting" rel="alternate" type="text/html" title="Intelligent Information Systems - Environment Setting" />
-      <published>2022-09-07T00:00:00+09:00</published>
-      <updated>2022-09-07T00:00:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Environment_Setting</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Environment_Setting">&lt;h2 id=&quot;data-analysis-in-computer&quot;&gt;Data analysis in computer&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For data analysis use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Python is high level programming language that was published in 1997 by &lt;em&gt;Gudio van Raossum&lt;/em&gt;. He named it python 
-because of his favorite comedy TV show &lt;em&gt;Monty Python’s Flying Circus&lt;/em&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tools-used-for-data-analysis&quot;&gt;Tools used for data analysis&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.anaconda.com/products/distribution&quot; target=&quot;_blank&quot;&gt;Anaconda&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Named anaconda because there are many projects or packages that are related to snakes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://jupyter.org/install&quot; target=&quot;_blank&quot;&gt;Jupyter notebook&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Open source web application&lt;/li&gt;
-      &lt;li&gt;Run partial codes and check the output&lt;/li&gt;
-      &lt;li&gt;Named jupyter because of three main languages &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Julia&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;anaconda-commands&quot;&gt;Anaconda commands&lt;/h3&gt;
-
-&lt;h4 id=&quot;create-virtual-environment&quot;&gt;Create virtual environment&lt;/h4&gt;
-
-&lt;p&gt;Get a list of all my environments&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env list
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Create a new environment named py35, install Python 3.5&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create --name py35 python=3.5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Active a existing environment named py35&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda activate py35
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Delete an environment named py35 and everything in it&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda env remove --name py35
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;jupyter-notebook-commands&quot;&gt;Jupyter notebook commands&lt;/h4&gt;
-
-&lt;p&gt;Run jupyter notebook&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf&quot; target=&quot;_blank&quot;&gt;Conda Cheat Sheet by Conda&lt;/a&gt;_&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Data analysis in computer</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Data Mining Research</title>
-      <link href="/Big_Data-Mining_Research" rel="alternate" type="text/html" title="Big Data - Data Mining Research" />
-      <published>2022-09-05T22:30:00+09:00</published>
-      <updated>2022-09-05T22:30:00+09:00</updated>
-      <id>/Big_Data-Mining_Research</id>
-      <content type="html" xml:base="/Big_Data-Mining_Research">&lt;h2 id=&quot;introduction-to-data-mining&quot;&gt;Introduction to Data Mining&lt;/h2&gt;
-&lt;h3 id=&quot;what-is-data-miningdm&quot;&gt;What is Data Mining(DM)?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;data mining&lt;/strong&gt;: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern
-or knowledge from huge amount of data.
-    &lt;ul&gt;
-      &lt;li&gt;aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive
-Analysis, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;kdd-process&quot;&gt;KDD Process&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;key-components-in-data-mining&quot;&gt;Key Components in Data Mining&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data &amp;amp; Datatype
-    &lt;ul&gt;
-      &lt;li&gt;Database Data (extended-relational, object-oriented, heterogeneous, legacy), Data Warehouse, Transactional Data, 
-Stream, Spatio-temporal, Time-series, Sequence, Text and Web, Multi-media, Graphs &amp;amp; Social and Information Networks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data Mining Functions
-    &lt;ul&gt;
-      &lt;li&gt;Characterization, Discrimination, Association, Classification, Clustering, Trend/Deviation, Outlier Analysis, etc.&lt;/li&gt;
-      &lt;li&gt;Descriptive vs Predictive Data Mining&lt;/li&gt;
-      &lt;li&gt;Multiple/Integrated Functions and Mining at Multiple Levels&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Techniques Utilized
-    &lt;ul&gt;
-      &lt;li&gt;Data-intensive, Machine Learning, Statistics, Pattern Recognition, Visualization, High-performance, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Applications Adapted
-    &lt;ul&gt;
-      &lt;li&gt;Retail, Telecommunication, Banking, Fraud Analysis, Bio-data Mining, Stock Market Analysis, Health Care, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dm-component-data--datatype&quot;&gt;DM Component: Data &amp;amp; Datatype&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Database-oriented datasets and applications
-    &lt;ul&gt;
-      &lt;li&gt;Relational database, data warehouse, transactional database&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Advanced Datasets and advanced applications
-    &lt;ul&gt;
-      &lt;li&gt;Data streams and sensor data&lt;/li&gt;
-      &lt;li&gt;Time-series data, temporal data, sequence data (including bio-sequences)&lt;/li&gt;
-      &lt;li&gt;Structure data, graphs, social networks and multi-linked data&lt;/li&gt;
-      &lt;li&gt;Spatial data and spatio-temporal data&lt;/li&gt;
-      &lt;li&gt;Multimedia database&lt;/li&gt;
-      &lt;li&gt;Text databases&lt;/li&gt;
-      &lt;li&gt;The World-Wide Web&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generalization
-    &lt;ul&gt;
-      &lt;li&gt;Multidimensional concept description: Characterization and discrimination&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Association and Correlation Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Frequent patterns or frequent item sets&lt;/li&gt;
-      &lt;li&gt;How to mine such patterns and rules efficiently in large datasets?&lt;/li&gt;
-      &lt;li&gt;How to use such pattern for classification, clustering, and other applications?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Classification
-    &lt;ul&gt;
-      &lt;li&gt;Construct models based on some training examples&lt;/li&gt;
-      &lt;li&gt;Describe and distinguish classes or concepts for future prediction
-        &lt;ul&gt;
-          &lt;li&gt;e.g. Classify countries based on climate, or classify cars based on gas mileage&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Predict some unknown class labels&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cluster Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Unsupervised learning&lt;/li&gt;
-      &lt;li&gt;Group data to form new categories&lt;/li&gt;
-      &lt;li&gt;Principle: Maximizing intra-class similarity &amp;amp; minimizing inter-class similarity&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Outlier Analysis
-    &lt;ul&gt;
-      &lt;li&gt;Outlier: A data object that does not comply with the general behavior of the data&lt;/li&gt;
-      &lt;li&gt;Noise or exception&lt;/li&gt;
-      &lt;li&gt;Useful in fraud detection, rare events analysis&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dm-component-techniques-to-be-used&quot;&gt;DM Component: Techniques to be used&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;dm-component-applications-adapted&quot;&gt;DM Component: Applications adapted&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Web Analysis
-    &lt;ul&gt;
-      &lt;li&gt;e.g. from web page classification, clustering to PageRank algorithms&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Collaborative analysis &amp;amp; recommender system&lt;/li&gt;
-  &lt;li&gt;Basket data analysis to targeted marketing&lt;/li&gt;
-  &lt;li&gt;Biological and medical data analysis: classification, cluster analysis, biological sequence analysis, biological
-sequence analysis, biological network analysis&lt;/li&gt;
-  &lt;li&gt;Social networks&lt;/li&gt;
-  &lt;li&gt;Journalism&lt;/li&gt;
-  &lt;li&gt;Culture &amp;amp; Society&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;diverse-issues-in-dm&quot;&gt;Diverse Issues in DM&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining Methodology
-    &lt;ul&gt;
-      &lt;li&gt;Mining various and new kinds of knowledge&lt;/li&gt;
-      &lt;li&gt;Mining knowledge in multidimensional space&lt;/li&gt;
-      &lt;li&gt;Boosting the power of discovery in a networked environment&lt;/li&gt;
-      &lt;li&gt;Handling noise, uncertainty, and incompleteness of data&lt;/li&gt;
-      &lt;li&gt;Pattern evaluation and pattern- or constraint-guided mining&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;User Interaction
-    &lt;ul&gt;
-      &lt;li&gt;Interactive mining&lt;/li&gt;
-      &lt;li&gt;Incorporation of background knowledge&lt;/li&gt;
-      &lt;li&gt;Presentation and visualization of data mining results&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Efficiency and Scalability
-    &lt;ul&gt;
-      &lt;li&gt;Efficiency and scalability of data mining algorithms&lt;/li&gt;
-      &lt;li&gt;Parallel, distributed, stream, and incremental mining methods&lt;/li&gt;
-      &lt;li&gt;Diversity of data types&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Handling complex types of data
-    &lt;ul&gt;
-      &lt;li&gt;Mining dynamic, networked, and global data repositories&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data mining and society
-    &lt;ul&gt;
-      &lt;li&gt;Social impacts of data mining&lt;/li&gt;
-      &lt;li&gt;Privacy-preserving data mining&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;practical-tips-for-starting-data-mining&quot;&gt;Practical Tips for Starting Data Mining&lt;/h2&gt;
-
-&lt;h4 id=&quot;think-the-process-first&quot;&gt;Think the process first!&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is the exact problem?&lt;/li&gt;
-  &lt;li&gt;What data do we need? Is the data available?&lt;/li&gt;
-  &lt;li&gt;How can we represent the data?&lt;/li&gt;
-  &lt;li&gt;What DM functions/techniques will you use?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1️⃣-step-problem-definition&quot;&gt;1️⃣ step: Problem Definition&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Define the problem as a scientific form
-    &lt;ul&gt;
-      &lt;li&gt;From a rough, uncertain, and undetailed problem to a clear and specific problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Require domain knowledge as well as scientific problem-solving capability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;2️⃣-step-data-collection&quot;&gt;2️⃣ step: Data Collection&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Collecting data via
-    &lt;ul&gt;
-      &lt;li&gt;e.g. devices collection, web crawling, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3️⃣-step-data-representation&quot;&gt;3️⃣ step: Data Representation&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Transforming a high-dimensional raw data into problem-relevant data&lt;/li&gt;
-  &lt;li&gt;Quantifying data with various techniques
-    &lt;ul&gt;
-      &lt;li&gt;Based on information theory, algorithm, and domain knowledge&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;applying-dm-functionstechniques&quot;&gt;Applying DM Functions/Techniques&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Applying appropriate DM techniques
-    &lt;ul&gt;
-      &lt;li&gt;e.g. machine learning, statistical analysis, time-series analysis&lt;/li&gt;
-      &lt;li&gt;multiple techniques can be applied together&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Quantitative vs Qualitative -&amp;gt; Complementary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;-summary&quot;&gt;✅ Summary&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;One cycle is “ALWAYS” not enough! You need to go many (= hundreds or even thousands) cycles to conclude a claim.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Introduction to Data Mining What is Data Mining(DM)? data mining: Extraction of interesting(non-trivial, implicit, previously unknown and potentially useful) pattern or knowledge from huge amount of data. aka. Knowledge Extraction, Data Analysis, Data Science Information Harvesting, Business Intelligence, Predictive Analysis, etc.</summary>
       
 
       

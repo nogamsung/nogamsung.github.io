@@ -8,6 +8,36 @@
     
       
       <item>
+        <title>Computer Network - The Web and HTTP</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-overview-of-http&quot;&gt;1️⃣ Overview of HTTP&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 23 Sep 2022 00:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-The_Web_and_HTTP</link>
+        <guid isPermaLink="true">/Computer_Network-The_Web_and_HTTP</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Protocol Layers and Their Service Models</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-network-application-architectures&quot;&gt;1️⃣ Network Application Architectures&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 23 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Principles_of_Network_Applications</link>
+        <guid isPermaLink="true">/Computer_Network-Principles_of_Network_Applications</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Input Process</title>
         
           <description>&lt;h2 id=&quot;input-process&quot;&gt;Input Process&lt;/h2&gt;
@@ -63,6 +93,36 @@
         <link>
         /Unreal_Engine-Game_Mode_and_Pawn</link>
         <guid isPermaLink="true">/Unreal_Engine-Game_Mode_and_Pawn</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - History of Computer Networking and the Internet</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-the-development-of-packet-switching-1961---1972&quot;&gt;1️⃣ The Development of Packet Switching: 1961 - 1972&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Sep 2022 20:45:00 +0900</pubDate>
+        <link>
+        /Computer_Network-History_of_Computer_Networking_and_the_Internet</link>
+        <guid isPermaLink="true">/Computer_Network-History_of_Computer_Networking_and_the_Internet</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Networks Under Attack</title>
+        
+          <description>&lt;h3 id=&quot;the-bad-guys-can-put-malware-into-your-host-via-the-internet&quot;&gt;The Bad Guys can put Malware into your Host via the Internet&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Sep 2022 20:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Networks_Under_Attack</link>
+        <guid isPermaLink="true">/Computer_Network-Networks_Under_Attack</guid>
       </item>
       
     
