@@ -12,7 +12,7 @@
 
 
 
-    <title>Big Data - Stream</title>
+    <title>Big Data - Stream(1)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Web Font Setting -->
@@ -43,15 +43,15 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="Computer Science & Engineering" />
     <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/Big_Data-Stream" />
+    <link rel="canonical" href="/Big_Data-Stream(1)" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="nogamsung" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Big Data - Stream" />
+    <meta property="og:title" content="Big Data - Stream(1)" />
     <meta property="og:description" content="Characteristics of Stream Data Infinite, Burst, and Non-stationary The size of the entire data set is unknown Only INSTANTLY accessible Stream management is important when the input rate is controlled externally: Google queries Twitter or Facebook status updates Applications Mining query streams Google wants to know what queries are more" />
-    <meta property="og:url" content="/Big_Data-Stream" />
+    <meta property="og:url" content="/Big_Data-Stream(1)" />
     <meta property="og:image" content="/assets/built/images/big-data-logo.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
@@ -59,7 +59,7 @@
     <meta property="article:modified_time" content="2022-09-19T00:00:00+09:00" />
     <meta property="article:tag" content="Comsci" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Big Data - Stream" />
+    <meta name="twitter:title" content="Big Data - Stream(1)" />
     <meta name="twitter:description" content="Characteristics of Stream Data Infinite, Burst, and Non-stationary The size of the entire data set is unknown Only INSTANTLY accessible Stream management is important when the input rate is controlled externally: Google queries Twitter or Facebook status updates Applications Mining query streams Google wants to know what queries are more" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/built/images/big-data-logo.jpeg" />
@@ -81,7 +81,7 @@
         "name": "nogamsung",
         "logo": "/"
     },
-    "url": "/Big_Data-Stream",
+    "url": "/Big_Data-Stream(1)",
     "image": {
         "@type": "ImageObject",
         "url": "/assets/built/images/big-data-logo.jpeg",
@@ -90,7 +90,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/Big_Data-Stream"
+        "@id": "/Big_Data-Stream(1)"
     },
     "description": "Characteristics of Stream Data Infinite, Burst, and Non-stationary The size of the entire data set is unknown Only INSTANTLY accessible Stream management is important when the input rate is controlled externally: Google queries Twitter or Facebook status updates Applications Mining query streams Google wants to know what queries are more"
 }
@@ -105,7 +105,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Big Data - Stream" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Big Data - Stream(1)" href="/feed.xml" />
 
 
 </head>
@@ -181,7 +181,7 @@ into the {body} of the default.hbs template -->
                     
                     
                 </section>
-                <h1 class="post-full-title">Big Data - Stream</h1>
+                <h1 class="post-full-title">Big Data - Stream(1)</h1>
             </header>
 
             
@@ -419,23 +419,261 @@ element seen so far with probability <strong>s/n</strong>.</li>
 
 <h3 id="proof-of-reservoir-sampling-by-induction">Proof of Reservoir Sampling By Induction</h3>
 
+<ul>
+  <li>Assume that after <em>n</em> elements, the sample contains each element seen so far with probability <em>s/n</em>.</li>
+  <li>We need to show that after seeing element <em>n+1</em> the sample maintains the property. Sample contains each element seen
+so far with probability <em>s/(n+1)</em>.</li>
+</ul>
+
+<p><strong><em>Base Case</em></strong></p>
+
+<ul>
+  <li>After we see <em>n=s</em> elements that sample <em>S</em> has the desired property. Each out of <em>n=s</em> elements is in the sample with
+probability y <em>s/s = 1</em></li>
+</ul>
+
+<p><strong><em>Inductive Hypothesis</em></strong></p>
+
+<ul>
+  <li>After <em>n</em> elements, the sample <em>S</em> contains each element seen so far with probability <em>s/n</em>.</li>
+</ul>
+
+<p><strong><em>Inductive step</em></strong></p>
+
+<ul>
+  <li>After the element arrives ate <em>n+1</em>, for elements already in S, probability that the algorithm keeps it in <em>S</em> is:</li>
+</ul>
+
 <p><img src="https://latex.codecogs.com/svg.image?(1&space;-&space;\frac{s}{n&space;&plus;&space;1})&space;&plus;&space;(\frac{s}{n&space;&plus;&space;1})(\frac{s&space;-&space;1}{s})&space;=&space;\frac{n}{n&space;&plus;&space;1}" alt="equation-2" /></p>
+
+<ul>
+  <li>At time <em>n</em>, tuples in <em>S</em> were there with probability <em>s/n</em></li>
+  <li>Time <em>n -&gt; n+1</em>, tuple stayed in <em>S</em> with probability <em>n/(n+1)</em></li>
+  <li>Therefore, probability tuple is in <em>S</em> at time <em>n+1</em> is:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\frac{s}{n}&space;\cdot&space;\frac{n}{n&space;&plus;&space;1}&space;=&space;\frac{s}{n&space;&plus;&space;1}" alt="equation-3" /></p>
 
 <h2 id="queries-over-a-long-sliding-window">Queries over a (long) Sliding Window</h2>
 
+<ul>
+  <li>A useful model of stream processing is that queries are about a <strong>window</strong> of length <em>N</em>, the <em>N</em> most recent elements
+received.</li>
+</ul>
+
 <h3 id="sliding-windows">Sliding Windows</h3>
 
-<h3 id="example-problem-counting-bits">Example Problem: Counting Bits</h3>
+<ul>
+  <li>A useful model of stream processing is that queries are about a window of length <em>N</em>, the <em>N</em> most recent elements
+received.</li>
+</ul>
 
-<h4 id="simple-solution">Simple Solution</h4>
+<h3 id="sliding-window-1-stream">Sliding Window: 1 Stream</h3>
 
-<h4 id="dgim-method">DGIM Method</h4>
+<ul>
+  <li>Sliding window on a single stream:
+    <ul>
+      <li>N = 6</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-2.jpeg" alt="screenshot-2" /></p>
+
+<h4 id="example-problem-counting-bits">Example Problem: Counting Bits</h4>
+
+<p><strong>Problem</strong></p>
+
+<ul>
+  <li>Given a stream of <strong>0</strong>s and <strong>1</strong>s</li>
+  <li>Be prepared to answer queries of the form <strong>How many 1s are in the last <em>k</em> bits?</strong> where k &lt;= N</li>
+</ul>
+
+<p><strong>Obvious Solution</strong></p>
+
+<ul>
+  <li>Store the most recent <em>N</em> bits, and when a new bit comes in, discard the <em>N+1st</em> bit.</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-3.jpeg" alt="screenshot-3" /></p>
+
+<p><strong>Real Problem</strong></p>
+
+<ul>
+  <li>What if we cannot afford to store <em>N</em> bits?
+    <ul>
+      <li>e.g. we’re processing 1 billion streams and <em>N = 1 billion</em>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Simple Solution</strong></p>
+
+<ul>
+  <li>A simple solution that does not really solve our problem: <strong>Uniformity assumption</strong>.</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-4.jpeg" alt="screenshot-4" /></p>
+
+<ul>
+  <li>Maintain 2 counters:
+    <ul>
+      <li><strong><em>S</em></strong>: number of 1s from the beginning of the stream.</li>
+      <li><strong><em>Z</em></strong>: number of 0s from the beginning of the stream.</li>
+    </ul>
+  </li>
+  <li>How many 1s are in the last N bits?</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?N&space;\cdot&space;\frac{S}{S&space;&plus;&space;Z}" alt="equation-4" /></p>
+
+<p><strong>However, what if the stream is non-uniform? What if the distribution changes over time?</strong></p>
+
+<h3 id="dgim-method">DGIM Method</h3>
 
 <ul>
   <li>Does NOT assume uniformity</li>
-  <li>Store O(logN) bits per stream</li>
+  <li>Store O(log<sup>2</sup>N) bits per stream</li>
   <li>Gives approximate answer, never off by more than 50%</li>
 </ul>
+
+<h4 id="beginning-idea-exponential-windows">Beginning Idea: Exponential Windows</h4>
+
+<ul>
+  <li>Summarize exponentially increasing regions of the stream, looking backward</li>
+  <li>Drop small regions if they begin ate the same point as a larger region:</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-5.jpeg" alt="screenshot-5" /></p>
+
+<p><strong>Pros</strong></p>
+
+<ul>
+  <li>Stores only O(log<sup>2</sup>N) bits. O(logN) <Windows counts=""> counts of log<sub>2</sub>N <Window size=""> bits each.</Window></Windows></li>
+  <li>Easy update as more bits enter</li>
+  <li>Error in count no greater than the number of 1s the “unknown” area</li>
+</ul>
+
+<p><strong>Cons</strong></p>
+
+<ul>
+  <li>As long as the 1s are fairly evenly distributed, the error is small due to the unknown region - no more than 50%</li>
+  <li>However, it could be that all the 1s are in the unknown area at the end</li>
+  <li>In that case, the error changes w.r.t. N</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-6.jpeg" alt="screenshot-6" /></p>
+
+<h4 id="fixup-dgim-method">Fixup: DGIM Method</h4>
+
+<ul>
+  <li>We do not have to count both 0s and 1s</li>
+  <li>Instead of summarizing fixed-length blocks, summarize blocks with specific number of 1s. In other words, let the block
+sizes (number of 1s) increase exponentially</li>
+  <li>When there are few 1s in the window, block sizes stay small, so errors are small.</li>
+</ul>
+
+<h4 id="dgim-timestamps">DGIM: Timestamps</h4>
+
+<ul>
+  <li>Each bit in the stream has a <em>timestamp</em>, starting 1, 2, …</li>
+  <li>Record timestamps modulo <em>N</em> (the window size), so we can represent any relevant timestamp in O(log<sub>2</sub>N) 
+bits, and store <em>N</em> = 4 using 2 bits</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-7.jpeg" alt="screenshot-7" /></p>
+
+<h4 id="dgim-buckets">DGIM: Buckets</h4>
+
+<ul>
+  <li>A <em>bucket</em> in the DGIM method is a record consisting of:
+    <ol>
+      <li>The timestamp of its end [O(logN) bits]</li>
+      <li>The number of 1s between its beginning and end [O(log log N) bits]</li>
+    </ol>
+  </li>
+  <li>Constraint on buckets:
+    <ul>
+      <li>The number of 1s MUST be a power of 2.</li>
+      <li>Either <strong>one</strong> or <strong>two</strong> buckets with the same power-of-2 number of 1s.</li>
+      <li>Does not overlap in timestamps.</li>
+      <li>Sorted by size. Earlier buckets are not smaller than later buckets.</li>
+      <li>Buckets disappear when their end-time is &gt; <em>N</em> time units in the past</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-8.jpeg" alt="screenshot-8" /></p>
+
+<p><strong>Example: Representing a Stream by Buckets</strong></p>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-9.jpeg" alt="screenshot-9" /></p>
+
+<p>Three properties of buckets that are maintained:</p>
+<ul>
+  <li>Either <strong>one</strong> or <strong>two</strong> buckets with the same <strong>power-of-2</strong> number of <strong>1s</strong>.</li>
+  <li>Buckets do not overlap in timestamps</li>
+  <li>Buckets are sorted by size</li>
+</ul>
+
+<p><strong>Updating Buckets</strong></p>
+
+<ul>
+  <li>When a new bit comes in, drop the last (oldest) bucket if its end-time is prior to <em>N</em> time units before the current
+time</li>
+  <li>2 cases: Current bit is 0 or 1</li>
+  <li>If the current bit is 0, no other changes are needed</li>
+  <li>If the current bit is 1:
+    <ol>
+      <li>Create a new bucket of size 1, for just this bit
+        <ul>
+          <li>End timestamp = current time</li>
+        </ul>
+      </li>
+      <li>If there are now <strong>three buckets of size 1</strong>, combine the oldest two into a bucket of size 2</li>
+      <li>If there are now <strong>three buckets of size 2</strong>, combine the oldest two into a bucket of size 4</li>
+      <li>so on…</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-10.jpeg" alt="screenshot-10" /></p>
+
+<h4 id="example-bucketized-stream">Example: Bucketized Stream</h4>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-11.jpeg" alt="screenshot-11" /></p>
+
+<p><strong>Why is the error 50%?</strong></p>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-12.jpeg" alt="screenshot-12" /></p>
+
+<ul>
+  <li>Suppose the last bucket has size 2<sup>r</sup></li>
+  <li>Then by assuming 2<sup>r-1</sup> of its 1s are still within the window, we make an error of at most 2<sup>r-1</sup></li>
+  <li>Since there is at least one bucket of each of the sizes less than 2<sup>r</sup>, the true sum is at least:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?1&space;&plus;&space;2&space;&plus;&space;4&space;&plus;&space;2^{r-1}&space;=&space;2^{r-1}" alt="equation-5" /></p>
+
+<p>Thus, error ate most 50%</p>
+
+<p><strong>Further Reducing the Error</strong></p>
+
+<ul>
+  <li>Instead of maintaining 1 or 2 of each size bucket, we allow either <em>r-1</em> or <em>r</em> buckets (<em>r &gt; 2</em>), except for the
+largest size buckets; we can have any number between 1 and r of those</li>
+  <li>Error is at most O(1/r)</li>
+  <li>By picking <em>r</em> appropriately, we can tradeoff between number of bits we store and the error</li>
+</ul>
+
+<p>Can we use the same trick to answer queries <strong>How many 1’s in the last k?</strong> where k &lt; N?</p>
+
+<ul>
+  <li>Find the earliest bucket <em>B</em> that at overlaps with <em>k</em>. Number of <strong>1s</strong> is the <em>*sum of sizes of more recent buckets
+and *1/2</em> size of B.</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-18/screenshot-13.jpeg" alt="screenshot-13" /></p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -507,9 +745,9 @@ element seen so far with probability <strong>s/n</strong>.</li>
                 <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
-                        var this_page_url = '/Big_Data-Stream';
-                        var this_page_identifier = '/Big_Data-Stream';
-                        var this_page_title = 'Big Data - Stream';
+                        var this_page_url = '/Big_Data-Stream(1)';
+                        var this_page_identifier = '/Big_Data-Stream(1)';
+                        var this_page_title = 'Big Data - Stream(1)';
                     };
                     (function () {
                         var d = document, s = d.createElement('script');
@@ -552,6 +790,14 @@ element seen so far with probability <strong>s/n</strong>.</li>
                         
                         
                         
+                         <li><a href="/Intelligent_Information_Systems-Public_-Population_Data">Intelligent Information Systems - Public Population Data</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Computer_Network-The_Web_and_HTTP">Computer Network - The Web and HTTP</a></li>
                             
                             
@@ -572,8 +818,7 @@ element seen so far with probability <strong>s/n</strong>.</li>
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Visualizing_Data">Intelligent Information Systems - Visualizing Data</a></li>
-                            
+                        
                             
                             
                             
@@ -740,7 +985,7 @@ element seen so far with probability <strong>s/n</strong>.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 15 posts →
+                        See all 16 posts →
                         
                     </a>
                 </footer>
@@ -869,20 +1114,20 @@ element seen so far with probability <strong>s/n</strong>.</li>
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Big Data - Stream</div>
+    <div class="floating-header-title">Big Data - Stream(1)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
         <a class="floating-header-share-tw"
-            href="https://twitter.com/share?text=Big+Data+-+Stream&amp;url=https://gs97ahn.github.io/Big_Data-Stream"
+            href="https://twitter.com/share?text=Big+Data+-+Stream%281%29&amp;url=https://gs97ahn.github.io/Big_Data-Stream(1)"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
         <a class="floating-header-share-fb"
-            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Big_Data-Stream"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Big_Data-Stream(1)"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Intelligent_Information_Systems-Public_-Population_Data.html</loc>
+        
+        <lastmod>2022-09-25T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Computer_Network-The_Web_and_HTTP.html</loc>
         
         <lastmod>2022-09-23T00:30:00+09:00</lastmod>
@@ -164,7 +180,7 @@
     </url>
     
     <url>
-        <loc>/Big_Data-Stream.html</loc>
+        <loc>/Big_Data-Stream(1).html</loc>
         
         <lastmod>2022-09-19T00:00:00+09:00</lastmod>
         

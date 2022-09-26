@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-25T15:23:39+09:00</updated>
+  <updated>2022-09-26T14:07:32+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,133 @@
   
   
 
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Public Population Data</title>
+      <link href="/Intelligent_Information_Systems-Public_-Population_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Public Population Data" />
+      <published>2022-09-25T19:30:00+09:00</published>
+      <updated>2022-09-25T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Public_%20Population_Data</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Public_-Population_Data">&lt;h2 id=&quot;visualizing-population-data&quot;&gt;Visualizing Population Data&lt;/h2&gt;
+
+&lt;h4 id=&quot;header&quot;&gt;Header&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;read-data&quot;&gt;Read Data&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;list-slicing&quot;&gt;List Slicing&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;104&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;visualizing-data&quot;&gt;Visualizing Data&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'font'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'AppleGothic'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'송도1동 남성 연령별 인구수'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ggplot'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'연령'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'인구수'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;zip-function&quot;&gt;Zip Function&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;104&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;106&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;207&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Visualizing Population Data</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Computer Network - The Web and HTTP</title>
@@ -1129,191 +1256,6 @@ messages), and &lt;strong&gt;&lt;em&gt;FTP&lt;/em&gt;&lt;/strong&gt; (Transfer o
 
       
         <summary type="html">1️⃣ Layered Architecture</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks</title>
-      <link href="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks" rel="alternate" type="text/html" title="Computer Network - Delay, Loss, and Throughput in Packet-Switched Networks" />
-      <published>2022-09-19T19:30:00+09:00</published>
-      <updated>2022-09-19T19:30:00+09:00</updated>
-      <id>/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks</id>
-      <content type="html" xml:base="/Computer_Network-Delay_Loss_and_Throughput_in_Packet_Switched_Networks">&lt;h2 id=&quot;1️⃣-overview-of-delay-in-packet-switched-networks&quot;&gt;1️⃣ Overview of Delay in Packet-Switched Networks&lt;/h2&gt;
-
-&lt;p&gt;The most important delays when packet travels are &lt;strong&gt;nodal processing delay&lt;/strong&gt;, &lt;strong&gt;queueing delay&lt;/strong&gt;,
-&lt;strong&gt;transmission delay&lt;/strong&gt;, and &lt;strong&gt;propagation delay&lt;/strong&gt;; As a whole, they accumulate and give a &lt;strong&gt;total nodal delay&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;types-of-delay&quot;&gt;Types of Delay&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;processing-delay&quot;&gt;Processing Delay&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The time required to examine the packet’s header and determine where to direct the packet.&lt;/li&gt;
-  &lt;li&gt;The time needed to check for bit-level errors in the packet.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;queuing-delay&quot;&gt;Queuing Delay&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Depends on the number of earlier-arriving packets that are queued and waiting for transmission on the link.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;transmission-delay&quot;&gt;Transmission Delay&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Amount of time required to push all of the packet’s bits into the link.&lt;/li&gt;
-  &lt;li&gt;e.g. A 10 Mbps Ethernet link, the rate is R = 10 Mbps; for a 100 Mbps Ethernet link, the rate is R = 100 Mbps.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;propagation-delay&quot;&gt;Propagation Delay&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The time required to propagate from the beginning of the link to next router.&lt;/li&gt;
-  &lt;li&gt;The bit propagates at the propagation speed of the link.&lt;/li&gt;
-  &lt;li&gt;The range of propagation speed is:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?2\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-1&quot; /&gt; - &lt;img src=&quot;https://latex.codecogs.com/svg.image?3\cdot&amp;space;10^{8}&amp;space;meters/sec&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;e.g. propagation delay is the distance between two routers divided by the propagation speed.
-    &lt;ul&gt;
-      &lt;li&gt;The propagation delay is &lt;strong&gt;&lt;em&gt;d/s&lt;/em&gt;&lt;/strong&gt;, where &lt;strong&gt;&lt;em&gt;d&lt;/em&gt;&lt;/strong&gt; is the distance between the router A and router B and &lt;strong&gt;&lt;em&gt;s&lt;/em&gt;&lt;/strong&gt; is 
-the propagation speed of the link.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;comparing-transmission-and-propagation-delay&quot;&gt;Comparing Transmission and Propagation Delay&lt;/h3&gt;
-
-&lt;p&gt;The difference between transmission delay and propagation delay is subtle but important.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Transmission Delay&lt;/th&gt;
-      &lt;th&gt;Propagation Delay&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;The amount of time required for the router to push out the packet&lt;/td&gt;
-      &lt;td&gt;The time it takes a bit to propagate from one router to the next&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A function of the packet’s length and the transmission rate of the link&lt;/td&gt;
-      &lt;td&gt;A function of the distance between the two routers&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;If we let,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{proc}&amp;space;=&amp;space;processing,&amp;space;d_{queue}&amp;space;=&amp;space;queuing,&amp;space;d_{trans}&amp;space;=&amp;space;transmission&amp;space;delay,&amp;space;d_{prop}&amp;space;=&amp;space;propagation&amp;space;dely,&amp;space;d_{nodal}&amp;space;=&amp;space;total&amp;space;nodal&amp;space;delay&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The total nodal delay is given by,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{nodal}&amp;space;=&amp;space;d_{proc}&amp;space;&amp;plus;&amp;space;d_{queue}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-queuing-delay-and-packet-loss&quot;&gt;2️⃣ Queuing Delay and Packet Loss&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Queuing delay may vary from packet to packet.
-    &lt;ul&gt;
-      &lt;li&gt;e.g. if 10 packets arrive to an empty queue simultaneously, the first packet will not have any delay while the last
-packet suffer a relatively large queuing delay.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;traffic intensity&lt;/strong&gt;: &lt;em&gt;La/R&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;L&lt;/em&gt;: number of bits that all packets consist of.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;a&lt;/em&gt;: average rate at which packets arrive at the queue.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;R&lt;/em&gt;: transmission rate(bits/sec) at which bits are pushed out of the queue.&lt;/li&gt;
-      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;gt; 1, then the average rate at which bits arrive the queue exceeds the rate at which the bits can be
-transmitted from the queue.&lt;/li&gt;
-      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive periodically, then every packet will arrive at an empty queue and there will
-be no queuing delay.&lt;/li&gt;
-      &lt;li&gt;If &lt;em&gt;La/R&lt;/em&gt; &amp;lt;= 1 and all packets arrive in burst, then the first packet will not have any queuing delay, while &lt;em&gt;n&lt;/em&gt;th
-packet has &lt;em&gt;(n-1)L/R&lt;/em&gt; seconds of delay.&lt;/li&gt;
-      &lt;li&gt;For realistic case, the average queuing delay will depend on the &lt;em&gt;La/R&lt;/em&gt; and can be shown with &lt;strong&gt;Figure 1.18&lt;/strong&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;packet-loss&quot;&gt;Packet Loss&lt;/h3&gt;
-
-&lt;p&gt;If a packet arrives to a router, that has reached its capacity limit, it will &lt;strong&gt;drop&lt;/strong&gt; the packet and the packet will be
-&lt;strong&gt;lost&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;3️⃣-end-to-end-delay&quot;&gt;3️⃣ End-to-End Delay&lt;/h2&gt;
-
-&lt;p&gt;The total delay from a source to a destination can be calculated by equation below, assuming that there are &lt;em&gt;N-1&lt;/em&gt;
-routers between the source host and destination host.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{end-end}&amp;space;=&amp;space;N(d_{proc}&amp;space;&amp;plus;&amp;space;d_{trans}&amp;space;&amp;plus;&amp;space;d_{prop})&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;traceroute&quot;&gt;Traceroute&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Traceroute&lt;/strong&gt;: A simple program that can run in any Internet host. It sends a special packets toward a destination,
-and as the packets work their way toward the destination, they pass through a series of router. When a router receives
-one of these special packets, it sends back to the source a short message that contains the name and address of the
-router.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is an example of the output of the Traceroute program, where the route was being traced from the source host
-gaia.cs.umass.edu to a host in the computer science department ate the University of Sorbonne is Paris.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4️⃣-throughput-in-computer-network&quot;&gt;4️⃣ Throughput in Computer Network&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Instantaneous throughput&lt;/strong&gt;: At any instant of time is the rate (in bits/sec) at which the destination host is
-receiving.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Average throughput&lt;/strong&gt;: &lt;em&gt;F/T&lt;/em&gt; bits/sec
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;F&lt;/em&gt; is the number of bits a file consists of.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;T&lt;/em&gt; is the time it takes for the destination host to receive.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">1️⃣ Overview of Delay in Packet-Switched Networks</summary>
       
 
       

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-25T15:23:39+09:00</updated>
+  <updated>2022-09-26T14:07:32+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,133 @@
   
   
 
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Public Population Data</title>
+      <link href="/Intelligent_Information_Systems-Public_-Population_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Public Population Data" />
+      <published>2022-09-25T19:30:00+09:00</published>
+      <updated>2022-09-25T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Public_%20Population_Data</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Public_-Population_Data">&lt;h2 id=&quot;visualizing-population-data&quot;&gt;Visualizing Population Data&lt;/h2&gt;
+
+&lt;h4 id=&quot;header&quot;&gt;Header&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;read-data&quot;&gt;Read Data&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;header&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;list-slicing&quot;&gt;List Slicing&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;104&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;visualizing-data&quot;&gt;Visualizing Data&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'font'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'AppleGothic'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'송도1동 남성 연령별 인구수'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ggplot'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;male&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xlabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'연령'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'인구수'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;zip-function&quot;&gt;Zip Function&lt;/h4&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'incheon_population.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'r'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cp949'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'송도1동'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;104&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;106&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;207&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]):&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Visualizing Population Data</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Computer Network - The Web and HTTP</title>
@@ -964,12 +1091,12 @@ receiving.&lt;/li&gt;
     </entry>
   
     <entry>
-      <title type="html">Big Data - Stream</title>
-      <link href="/Big_Data-Stream" rel="alternate" type="text/html" title="Big Data - Stream" />
+      <title type="html">Big Data - Stream(1)</title>
+      <link href="/Big_Data-Stream(1)" rel="alternate" type="text/html" title="Big Data - Stream(1)" />
       <published>2022-09-19T00:00:00+09:00</published>
       <updated>2022-09-19T00:00:00+09:00</updated>
-      <id>/Big_Data-Stream</id>
-      <content type="html" xml:base="/Big_Data-Stream">&lt;h3 id=&quot;characteristics-of-stream-data&quot;&gt;Characteristics of Stream Data&lt;/h3&gt;
+      <id>/Big_Data-Stream(1)</id>
+      <content type="html" xml:base="/Big_Data-Stream(1)">&lt;h3 id=&quot;characteristics-of-stream-data&quot;&gt;Characteristics of Stream Data&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Infinite, Burst, and Non-stationary
@@ -1197,23 +1324,261 @@ element seen so far with probability &lt;strong&gt;s/n&lt;/strong&gt;.&lt;/li&gt
 
 &lt;h3 id=&quot;proof-of-reservoir-sampling-by-induction&quot;&gt;Proof of Reservoir Sampling By Induction&lt;/h3&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;Assume that after &lt;em&gt;n&lt;/em&gt; elements, the sample contains each element seen so far with probability &lt;em&gt;s/n&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;We need to show that after seeing element &lt;em&gt;n+1&lt;/em&gt; the sample maintains the property. Sample contains each element seen
+so far with probability &lt;em&gt;s/(n+1)&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Base Case&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After we see &lt;em&gt;n=s&lt;/em&gt; elements that sample &lt;em&gt;S&lt;/em&gt; has the desired property. Each out of &lt;em&gt;n=s&lt;/em&gt; elements is in the sample with
+probability y &lt;em&gt;s/s = 1&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Inductive Hypothesis&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After &lt;em&gt;n&lt;/em&gt; elements, the sample &lt;em&gt;S&lt;/em&gt; contains each element seen so far with probability &lt;em&gt;s/n&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Inductive step&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After the element arrives ate &lt;em&gt;n+1&lt;/em&gt;, for elements already in S, probability that the algorithm keeps it in &lt;em&gt;S&lt;/em&gt; is:&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1})&amp;space;&amp;plus;&amp;space;(\frac{s}{n&amp;space;&amp;plus;&amp;space;1})(\frac{s&amp;space;-&amp;space;1}{s})&amp;space;=&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At time &lt;em&gt;n&lt;/em&gt;, tuples in &lt;em&gt;S&lt;/em&gt; were there with probability &lt;em&gt;s/n&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Time &lt;em&gt;n -&amp;gt; n+1&lt;/em&gt;, tuple stayed in &lt;em&gt;S&lt;/em&gt; with probability &lt;em&gt;n/(n+1)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Therefore, probability tuple is in &lt;em&gt;S&lt;/em&gt; at time &lt;em&gt;n+1&lt;/em&gt; is:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{s}{n}&amp;space;\cdot&amp;space;\frac{n}{n&amp;space;&amp;plus;&amp;space;1}&amp;space;=&amp;space;\frac{s}{n&amp;space;&amp;plus;&amp;space;1}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;queries-over-a-long-sliding-window&quot;&gt;Queries over a (long) Sliding Window&lt;/h2&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;A useful model of stream processing is that queries are about a &lt;strong&gt;window&lt;/strong&gt; of length &lt;em&gt;N&lt;/em&gt;, the &lt;em&gt;N&lt;/em&gt; most recent elements
+received.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&quot;sliding-windows&quot;&gt;Sliding Windows&lt;/h3&gt;
 
-&lt;h3 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A useful model of stream processing is that queries are about a window of length &lt;em&gt;N&lt;/em&gt;, the &lt;em&gt;N&lt;/em&gt; most recent elements
+received.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h4 id=&quot;simple-solution&quot;&gt;Simple Solution&lt;/h4&gt;
+&lt;h3 id=&quot;sliding-window-1-stream&quot;&gt;Sliding Window: 1 Stream&lt;/h3&gt;
 
-&lt;h4 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sliding window on a single stream:
+    &lt;ul&gt;
+      &lt;li&gt;N = 6&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example-problem-counting-bits&quot;&gt;Example Problem: Counting Bits&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Given a stream of &lt;strong&gt;0&lt;/strong&gt;s and &lt;strong&gt;1&lt;/strong&gt;s&lt;/li&gt;
+  &lt;li&gt;Be prepared to answer queries of the form &lt;strong&gt;How many 1s are in the last &lt;em&gt;k&lt;/em&gt; bits?&lt;/strong&gt; where k &amp;lt;= N&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Obvious Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Store the most recent &lt;em&gt;N&lt;/em&gt; bits, and when a new bit comes in, discard the &lt;em&gt;N+1st&lt;/em&gt; bit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Real Problem&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What if we cannot afford to store &lt;em&gt;N&lt;/em&gt; bits?
+    &lt;ul&gt;
+      &lt;li&gt;e.g. we’re processing 1 billion streams and &lt;em&gt;N = 1 billion&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Simple Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A simple solution that does not really solve our problem: &lt;strong&gt;Uniformity assumption&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Maintain 2 counters:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;S&lt;/em&gt;&lt;/strong&gt;: number of 1s from the beginning of the stream.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Z&lt;/em&gt;&lt;/strong&gt;: number of 0s from the beginning of the stream.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How many 1s are in the last N bits?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?N&amp;space;\cdot&amp;space;\frac{S}{S&amp;space;&amp;plus;&amp;space;Z}&quot; alt=&quot;equation-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;However, what if the stream is non-uniform? What if the distribution changes over time?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dgim-method&quot;&gt;DGIM Method&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Does NOT assume uniformity&lt;/li&gt;
-  &lt;li&gt;Store O(logN) bits per stream&lt;/li&gt;
+  &lt;li&gt;Store O(log&lt;sup&gt;2&lt;/sup&gt;N) bits per stream&lt;/li&gt;
   &lt;li&gt;Gives approximate answer, never off by more than 50%&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h4 id=&quot;beginning-idea-exponential-windows&quot;&gt;Beginning Idea: Exponential Windows&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Summarize exponentially increasing regions of the stream, looking backward&lt;/li&gt;
+  &lt;li&gt;Drop small regions if they begin ate the same point as a larger region:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pros&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stores only O(log&lt;sup&gt;2&lt;/sup&gt;N) bits. O(logN) &lt;Windows counts=&quot;&quot;&gt; counts of log&lt;sub&gt;2&lt;/sub&gt;N &lt;Window size=&quot;&quot;&gt; bits each.&lt;/Window&gt;&lt;/Windows&gt;&lt;/li&gt;
+  &lt;li&gt;Easy update as more bits enter&lt;/li&gt;
+  &lt;li&gt;Error in count no greater than the number of 1s the “unknown” area&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cons&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;As long as the 1s are fairly evenly distributed, the error is small due to the unknown region - no more than 50%&lt;/li&gt;
+  &lt;li&gt;However, it could be that all the 1s are in the unknown area at the end&lt;/li&gt;
+  &lt;li&gt;In that case, the error changes w.r.t. N&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;fixup-dgim-method&quot;&gt;Fixup: DGIM Method&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We do not have to count both 0s and 1s&lt;/li&gt;
+  &lt;li&gt;Instead of summarizing fixed-length blocks, summarize blocks with specific number of 1s. In other words, let the block
+sizes (number of 1s) increase exponentially&lt;/li&gt;
+  &lt;li&gt;When there are few 1s in the window, block sizes stay small, so errors are small.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dgim-timestamps&quot;&gt;DGIM: Timestamps&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each bit in the stream has a &lt;em&gt;timestamp&lt;/em&gt;, starting 1, 2, …&lt;/li&gt;
+  &lt;li&gt;Record timestamps modulo &lt;em&gt;N&lt;/em&gt; (the window size), so we can represent any relevant timestamp in O(log&lt;sub&gt;2&lt;/sub&gt;N) 
+bits, and store &lt;em&gt;N&lt;/em&gt; = 4 using 2 bits&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;dgim-buckets&quot;&gt;DGIM: Buckets&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;em&gt;bucket&lt;/em&gt; in the DGIM method is a record consisting of:
+    &lt;ol&gt;
+      &lt;li&gt;The timestamp of its end [O(logN) bits]&lt;/li&gt;
+      &lt;li&gt;The number of 1s between its beginning and end [O(log log N) bits]&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Constraint on buckets:
+    &lt;ul&gt;
+      &lt;li&gt;The number of 1s MUST be a power of 2.&lt;/li&gt;
+      &lt;li&gt;Either &lt;strong&gt;one&lt;/strong&gt; or &lt;strong&gt;two&lt;/strong&gt; buckets with the same power-of-2 number of 1s.&lt;/li&gt;
+      &lt;li&gt;Does not overlap in timestamps.&lt;/li&gt;
+      &lt;li&gt;Sorted by size. Earlier buckets are not smaller than later buckets.&lt;/li&gt;
+      &lt;li&gt;Buckets disappear when their end-time is &amp;gt; &lt;em&gt;N&lt;/em&gt; time units in the past&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example: Representing a Stream by Buckets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Three properties of buckets that are maintained:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Either &lt;strong&gt;one&lt;/strong&gt; or &lt;strong&gt;two&lt;/strong&gt; buckets with the same &lt;strong&gt;power-of-2&lt;/strong&gt; number of &lt;strong&gt;1s&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Buckets do not overlap in timestamps&lt;/li&gt;
+  &lt;li&gt;Buckets are sorted by size&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Updating Buckets&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When a new bit comes in, drop the last (oldest) bucket if its end-time is prior to &lt;em&gt;N&lt;/em&gt; time units before the current
+time&lt;/li&gt;
+  &lt;li&gt;2 cases: Current bit is 0 or 1&lt;/li&gt;
+  &lt;li&gt;If the current bit is 0, no other changes are needed&lt;/li&gt;
+  &lt;li&gt;If the current bit is 1:
+    &lt;ol&gt;
+      &lt;li&gt;Create a new bucket of size 1, for just this bit
+        &lt;ul&gt;
+          &lt;li&gt;End timestamp = current time&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;If there are now &lt;strong&gt;three buckets of size 1&lt;/strong&gt;, combine the oldest two into a bucket of size 2&lt;/li&gt;
+      &lt;li&gt;If there are now &lt;strong&gt;three buckets of size 2&lt;/strong&gt;, combine the oldest two into a bucket of size 4&lt;/li&gt;
+      &lt;li&gt;so on…&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;example-bucketized-stream&quot;&gt;Example: Bucketized Stream&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why is the error 50%?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose the last bucket has size 2&lt;sup&gt;r&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Then by assuming 2&lt;sup&gt;r-1&lt;/sup&gt; of its 1s are still within the window, we make an error of at most 2&lt;sup&gt;r-1&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Since there is at least one bucket of each of the sizes less than 2&lt;sup&gt;r&lt;/sup&gt;, the true sum is at least:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?1&amp;space;&amp;plus;&amp;space;2&amp;space;&amp;plus;&amp;space;4&amp;space;&amp;plus;&amp;space;2^{r-1}&amp;space;=&amp;space;2^{r-1}&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, error ate most 50%&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reducing the Error&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instead of maintaining 1 or 2 of each size bucket, we allow either &lt;em&gt;r-1&lt;/em&gt; or &lt;em&gt;r&lt;/em&gt; buckets (&lt;em&gt;r &amp;gt; 2&lt;/em&gt;), except for the
+largest size buckets; we can have any number between 1 and r of those&lt;/li&gt;
+  &lt;li&gt;Error is at most O(1/r)&lt;/li&gt;
+  &lt;li&gt;By picking &lt;em&gt;r&lt;/em&gt; appropriately, we can tradeoff between number of bits we store and the error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Can we use the same trick to answer queries &lt;strong&gt;How many 1’s in the last k?&lt;/strong&gt; where k &amp;lt; N?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Find the earliest bucket &lt;em&gt;B&lt;/em&gt; that at overlaps with &lt;em&gt;k&lt;/em&gt;. Number of &lt;strong&gt;1s&lt;/strong&gt; is the &lt;em&gt;*sum of sizes of more recent buckets
+and *1/2&lt;/em&gt; size of B.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-18/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1445,462 +1810,6 @@ all traffic between them passes over the direct connection to reduce the cost.&l
 
       
         <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - MapReduce</title>
-      <link href="/Big_Data-MapReduce" rel="alternate" type="text/html" title="Big Data - MapReduce" />
-      <published>2022-09-12T00:00:00+09:00</published>
-      <updated>2022-09-12T00:00:00+09:00</updated>
-      <id>/Big_Data-MapReduce</id>
-      <content type="html" xml:base="/Big_Data-MapReduce">&lt;h3 id=&quot;large-scale-computing-for-data-mining&quot;&gt;Large Scale Computing for Data Mining&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Process a lot of data to produce other data&lt;/li&gt;
-  &lt;li&gt;Requirements
-    &lt;ul&gt;
-      &lt;li&gt;CPU, Memory, HDD, …&lt;/li&gt;
-      &lt;li&gt;Multiple machine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cluster-architecture&quot;&gt;Cluster Architecture&lt;/h3&gt;
-
-&lt;p&gt;Fat-tree Architecture&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Mining big data requires large-scale computing whose key component is &lt;strong&gt;parallel programming&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;basic-operation-mapreduce&quot;&gt;Basic Operation: MapReduce&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Created by Google (Jeffry Dean and Sanjay Chemawat) in 2004&lt;/li&gt;
-  &lt;li&gt;Inspired from LISP
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Applies the given function to each element of the set&lt;/li&gt;
-          &lt;li&gt;(map ‘length’(() (a) (a b) (a b c)) =&amp;gt; (0 1 2 3)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;(reduce #’+’(1 2 3 4 5)) =&amp;gt; 15&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-is-also-framework&quot;&gt;MapReduce is also Framework&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Apache Hadoop MapReduce, Amazon Elastic MapReduce&lt;/li&gt;
-  &lt;li&gt;Framework for parallel computing
-    &lt;ul&gt;
-      &lt;li&gt;Parallelization&lt;/li&gt;
-      &lt;li&gt;Data distribution&lt;/li&gt;
-      &lt;li&gt;Load balancing&lt;/li&gt;
-      &lt;li&gt;Fault tolerance&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Programmers get simple API&lt;/li&gt;
-  &lt;li&gt;Allows one to process hug amount of data on thousands of processors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-as-programming-model&quot;&gt;MapReduce as Programming Model&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sample problem
-    &lt;ul&gt;
-      &lt;li&gt;Find top 10URLs by access frequency by analyzing log files from web server(s)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The problem can be converted as WordCount
-    &lt;ul&gt;
-      &lt;li&gt;Counting words in a huge text document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;wordcount&quot;&gt;WordCount&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Assume that a file is too large for memory, but all &amp;lt;word, count&amp;gt; pairs fit in memory
-    &lt;ol&gt;
-      &lt;li&gt;load a part of the file - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;count word - &lt;strong&gt;Map&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;merge - &lt;strong&gt;Reduce&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Each sub-task can be run in parallel
-    &lt;ul&gt;
-      &lt;li&gt;Reduce not only the resource usage, but execution time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;generalize-formally&quot;&gt;Generalize Formally&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Input: a set of key-value pairs&lt;/li&gt;
-  &lt;li&gt;2 methods:
-    &lt;ul&gt;
-      &lt;li&gt;Map(k, v) -&amp;gt; &amp;lt;k’, v’&amp;gt;*&lt;/li&gt;
-      &lt;li&gt;Reduce( k’, &amp;lt;v’&amp;gt;* ) -&amp;gt; &amp;lt;k’, v’’&amp;gt;*&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-a-logical-diagram&quot;&gt;MapReduce: A Logical Diagram&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;mapreduce-environment&quot;&gt;MapReduce: Environment&lt;/h3&gt;
-
-&lt;p&gt;MapReduce environment takes care of the following:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Partitioning&lt;/strong&gt; the input data&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Scheduling&lt;/strong&gt; the program’s execution across a set of machines&lt;/li&gt;
-  &lt;li&gt;Performing the &lt;strong&gt;group by key&lt;/strong&gt; step&lt;/li&gt;
-  &lt;li&gt;Handling machine &lt;strong&gt;failures&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Managing required inter-machine &lt;strong&gt;communication&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mapreduce-a-physical-diagram&quot;&gt;MapReduce: A Physical Diagram&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problems-suited-for-mapreduce&quot;&gt;Problems Suited for MapReduce&lt;/h2&gt;
-
-&lt;h4 id=&quot;host-size-example&quot;&gt;Host Size Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose we have a large web corpus&lt;/li&gt;
-  &lt;li&gt;Look at the metadata file
-    &lt;ul&gt;
-      &lt;li&gt;lines of the form: URL, size, date, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;For each host, find the total of number of bytes
-    &lt;ul&gt;
-      &lt;li&gt;sum of the page sizes for all URLs from the particular host&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;language-model-example&quot;&gt;Language Model Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Statistical machine translation:
-    &lt;ul&gt;
-      &lt;li&gt;need to count number of times every 5-word sequence occurs in a large corpus of documents&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Very easy with MapReduce:
-    &lt;ul&gt;
-      &lt;li&gt;Map: extract(5-word sequence, count) from document&lt;/li&gt;
-      &lt;li&gt;Reduce: combine the counts&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;join-by-mapreduce-example&quot;&gt;Join By MapReduce Example&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Compute the natural (a.k.a. inner) join&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;R&lt;/em&gt; and &lt;em&gt;S&lt;/em&gt; are each stored in files&lt;/li&gt;
-  &lt;li&gt;Tuples are pairs &lt;em&gt;(a,b)&lt;/em&gt; or &lt;em&gt;(b,c)&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use a hash function &lt;em&gt;h&lt;/em&gt; from B-values to 1…k&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;A Map process turns&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Each input tuple &lt;em&gt;R(a,b)&lt;/em&gt; into key-value pair &lt;em&gt;(b,(a,R))&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Each input tuple &lt;em&gt;S(b,c)&lt;/em&gt; into &lt;em&gt;(b,(c,S))&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Map processes send each key-value pair with key &lt;em&gt;b&lt;/em&gt; to Reduce process &lt;em&gt;h(b)&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Hadoop does this automatically; just tell it what &lt;em&gt;k&lt;/em&gt; is.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Each Reduce process matches all the pairs &lt;em&gt;(b,(a,R))&lt;/em&gt; with all &lt;em&gt;(b,(c,S))&lt;/em&gt; and outputs &lt;em&gt;(a,b,c,)&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cost-measures-for-algorithms&quot;&gt;Cost Measures for Algorithms&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In MapReduce we quantify the cost of an algorithm using
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Communication cost&lt;/strong&gt; = total I/O of all processes&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Elapsed communication cost&lt;/strong&gt; = max of I/O along any path&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;(Elapsed) computation cost&lt;/strong&gt; analogous, but count only running time of processes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Note that big-O notation is not the most useful, because adding more machine is always an option.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-cost-measures-mean&quot;&gt;What Cost Measures Mean&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Either the I/O (communication) or processing (computation) cost dominates
-    &lt;ul&gt;
-      &lt;li&gt;Ignore one or the other&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Total cost tells what you pay in rent from your friendly neighborhood cloud&lt;/li&gt;
-  &lt;li&gt;Elapsed cost is wall-clock time using parallelism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;design-mapreduce-framework&quot;&gt;Design MapReduce Framework&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-mapreduce-framework&quot;&gt;Using MapReduce Framework&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Programmer specifies: Map and Reduce and input files&lt;/li&gt;
-  &lt;li&gt;Workflow:
-    &lt;ul&gt;
-      &lt;li&gt;Read inputs as a set of key-value-pairs&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Map&lt;/strong&gt; transforms input kv-pairs into a new set of k’v’-pairs&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Sorts &amp;amp; Shuffles&lt;/strong&gt; the k’v’-pairs to output nodes&lt;/li&gt;
-      &lt;li&gt;All k’v’-pairs with a given k’ are sent to the same &lt;strong&gt;reduce&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Reduce&lt;/strong&gt; processes all k’v’-pairs grouped by key into new k’‘v’‘-pairs&lt;/li&gt;
-      &lt;li&gt;Write the resulting pairs to files&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;All phases are distributed with many tasks doing the work&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;data-flow&quot;&gt;Data Flow&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Input and final output&lt;/strong&gt; are stored on a &lt;strong&gt;distributed file system(DFS)&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Scheduler tries to schedule map tasks “close” to physical storage location of input data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Intermediate results&lt;/strong&gt; are stored on &lt;strong&gt;local File System(FS)&lt;/strong&gt; of Map and Reduce workers&lt;/li&gt;
-  &lt;li&gt;Output is often input to another MapReduce task&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;map-and-reduce-job-example&quot;&gt;Map and Reduce job Example&lt;/h4&gt;
-
-&lt;p&gt;For &lt;em&gt;M&lt;/em&gt; map tasks and &lt;em&gt;R&lt;/em&gt; reduce tasks&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Make &lt;em&gt;M&lt;/em&gt; much larger than the number of nodes in the cluster&lt;/li&gt;
-  &lt;li&gt;One DFS chunk per map is common&lt;/li&gt;
-  &lt;li&gt;Improves dynamic load balancing and speeds up recovery from worker failures&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; is usually &lt;strong&gt;smaller&lt;/strong&gt; than &lt;strong&gt;&lt;em&gt;M&lt;/em&gt;&lt;/strong&gt;, because the output is spread across &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt; files.&lt;/p&gt;
-
-&lt;h4 id=&quot;task-granularity--pipelining&quot;&gt;Task Granularity &amp;amp; Pipelining&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fine granularity tasks: map tasks &amp;gt; machines
-    &lt;ul&gt;
-      &lt;li&gt;Minimizes time for fault recovery&lt;/li&gt;
-      &lt;li&gt;Able to pipeline shuffling with map execution&lt;/li&gt;
-      &lt;li&gt;Better dynamic load balancing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;coordination-master&quot;&gt;Coordination: Master&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Master node takes care of:
-    &lt;ul&gt;
-      &lt;li&gt;Task status: (idle, in-progress, completed)&lt;/li&gt;
-      &lt;li&gt;Idle tasks get scheduled as workers become available&lt;/li&gt;
-      &lt;li&gt;Sends the master the location and sizes of its R intermediate files to reducer when a map task completes&lt;/li&gt;
-      &lt;li&gt;Pings workers periodically to detect failures&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;dealing-with-failures&quot;&gt;Dealing with Failures&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Map worker failure
-    &lt;ul&gt;
-      &lt;li&gt;Map tasks completed or in-progress at worker are reset to idle&lt;/li&gt;
-      &lt;li&gt;Reduce workers are notified when task is rescheduled on an other worker&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reduce worker failure
-    &lt;ul&gt;
-      &lt;li&gt;Only in-progress tasks are reset to idle&lt;/li&gt;
-      &lt;li&gt;Reduce task is restarted&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Master failure
-    &lt;ul&gt;
-      &lt;li&gt;mapReduce task is aborted and client is notified&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;refinements-backup-tasks&quot;&gt;Refinements: Backup Tasks&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Slow workers significantly lengthen the job completion time:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Other jobs on the machine&lt;/li&gt;
-  &lt;li&gt;Bad disks&lt;/li&gt;
-  &lt;li&gt;Unknown&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Near end of phase, spawn backup copies of tasks. Whichever one finishes first “wins”.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Effect&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Dramatically shortens jobs completion time.&lt;/p&gt;
-
-&lt;h4 id=&quot;refinement-combiners&quot;&gt;Refinement: Combiners&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Often a Map task will produce many pairs of the form &lt;em&gt;(k, v1)&lt;/em&gt;, &lt;em&gt;(k, v2)&lt;/em&gt;, … for the same key &lt;em&gt;k&lt;/em&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;e.g. popular words in the word count&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Save network time by pre-aggregating values in the mapper:
-    &lt;ul&gt;
-      &lt;li&gt;combine(k, list(v1)) -&amp;gt; v2&lt;/li&gt;
-      &lt;li&gt;combiner is usually same as the reduce function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Works only if reduce function is commutative and associative&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If combiner combines the values of all keys of a single mapper(single machine), much less data will be copied and 
-shuffled&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;refinement-partition-function&quot;&gt;Refinement: Partition Function&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Control how keys get partitioned
-    &lt;ul&gt;
-      &lt;li&gt;Inputs to map tasks are created by contiguous split of input file&lt;/li&gt;
-      &lt;li&gt;Reduce needs to ensure that records with the same intermediate key end up at the same worker&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;System uses a default partition function:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(key) mod(%) R&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;It is useful to override the hash function:
-    &lt;ul&gt;
-      &lt;li&gt;e.g. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hash(hostname(URL)) mod R&lt;/code&gt; ensures URLs from a host end up in the same output file&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;storage-infrastructure&quot;&gt;Storage Infrastructure&lt;/h4&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;
-If nodes fail, how can we store data persistently?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt;
-Distributed File System&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Provides global file namespace&lt;/li&gt;
-  &lt;li&gt;Google GFS; Hadoop HDFS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Typical usage pattern&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Huge files(100s of GB to TB)&lt;/li&gt;
-  &lt;li&gt;Data is rarely updated in place&lt;/li&gt;
-  &lt;li&gt;Reads and appends are common&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;distributed-file-system&quot;&gt;Distributed File System&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Reliable distributed file system&lt;/li&gt;
-  &lt;li&gt;Data kept in “chunks” spread across machines&lt;/li&gt;
-  &lt;li&gt;Each chunk replicated on different machines&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-09-11/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Chunk servers&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;File is split into contiguous chunks&lt;/li&gt;
-  &lt;li&gt;Typically each chunk is 16-64MB&lt;/li&gt;
-  &lt;li&gt;Each chunk replicated (usually 2x or 3x)&lt;/li&gt;
-  &lt;li&gt;Try to keep replicas in different racks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Master node&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;a.k.a. name node in Hadoop’s HDFS&lt;/li&gt;
-  &lt;li&gt;Stores metadata about where files are stored&lt;/li&gt;
-  &lt;li&gt;Might be replicated&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Client library for file access&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Talks to master to find chunk servers&lt;/li&gt;
-  &lt;li&gt;Connects directly chunk servers to access data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Large Scale Computing for Data Mining</summary>
       
 
       
