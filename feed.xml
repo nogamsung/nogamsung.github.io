@@ -1,4 +1,613 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-26T14:07:32+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Public Population Data</title><link href="/Intelligent_Information_Systems-Public_-Population_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Public Population Data" /><published>2022-09-25T19:30:00+09:00</published><updated>2022-09-25T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Public_%20Population_Data</id><content type="html" xml:base="/Intelligent_Information_Systems-Public_-Population_Data">&lt;h2 id=&quot;visualizing-population-data&quot;&gt;Visualizing Population Data&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-09-27T17:42:56+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Trigger</title><link href="/Unreal_Engine-Trigger" rel="alternate" type="text/html" title="Unreal Engine - Trigger" /><published>2022-09-27T02:00:00+09:00</published><updated>2022-09-27T02:00:00+09:00</updated><id>/Unreal_Engine-Trigger</id><content type="html" xml:base="/Unreal_Engine-Trigger">&lt;h2 id=&quot;collision-detection-using-interaction&quot;&gt;Collision Detection using Interaction&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Game is interactive content, therefore it must have interactive factor&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Collision&lt;/strong&gt; in game: basic interactive implementation method
+    &lt;ul&gt;
+      &lt;li&gt;Collision check with two cars: physical collision&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Collision in UE
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Block&lt;/strong&gt;: Ban physical pass through&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Overlap&lt;/strong&gt;: Detect overlap without any physical measures&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;trigger&quot;&gt;Trigger&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Trigger&lt;/strong&gt;: Volume to make use of overlap
+    &lt;ul&gt;
+      &lt;li&gt;Actor that can be located in level&lt;/li&gt;
+      &lt;li&gt;No physical looks and irrelevant with movement&lt;/li&gt;
+      &lt;li&gt;Can implement interaction&lt;/li&gt;
+      &lt;li&gt;Default supported trigger category: box trigger, sphere trigger, capsule trigger&lt;/li&gt;
+      &lt;li&gt;Event trigger: &lt;strong&gt;OnActorBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnActorEndOverlap&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Procedure to use trigger
+    &lt;ol&gt;
+      &lt;li&gt;Place trigger act on a level&lt;/li&gt;
+      &lt;li&gt;Add &lt;strong&gt;OnActorBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnActorEndOverlap&lt;/strong&gt; event for placed trigger action instance&lt;/li&gt;
+      &lt;li&gt;Fill out the event graph on the &lt;em&gt;level blueprint&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;collision-component&quot;&gt;Collision Component&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Collision Component&lt;/strong&gt;: Component that is used for the purpose of overlap
+    &lt;ul&gt;
+      &lt;li&gt;Trigger is an actor that can be placed in a level, it does not internally include collision component&lt;/li&gt;
+      &lt;li&gt;You can add collision component to a general actor for trigger purpose&lt;/li&gt;
+      &lt;li&gt;Collision component event: &lt;strong&gt;OnComponentBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnComponentEndOverlap&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Procedure to use &lt;strong&gt;Collision component&lt;/strong&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Add a collision component to an actor&lt;/li&gt;
+      &lt;li&gt;Add &lt;strong&gt;OnComponentBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnComponentEndOverlap&lt;/strong&gt; event to the added collision component&lt;/li&gt;
+      &lt;li&gt;Fill out the event graph on the &lt;strong&gt;blueprint class&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Place the actor to the level&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Collision Detection using Interaction</summary></entry><entry><title type="html">Big Data - Stream(2)</title><link href="/Big_Data-Stream(2)" rel="alternate" type="text/html" title="Big Data - Stream(2)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>/Big_Data-Stream(2)</id><content type="html" xml:base="/Big_Data-Stream(2)">&lt;h2 id=&quot;filtering-a-data-stream&quot;&gt;Filtering a Data Stream&lt;/h2&gt;
+
+&lt;h3 id=&quot;bloom-filter&quot;&gt;Bloom Filter&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each element of data stream is a tuple&lt;/li&gt;
+  &lt;li&gt;Given a list of keys &lt;em&gt;S&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Determine which tuples of stream are in &lt;em&gt;S&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;NOTE: It’s different from user-based sampling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Obvious solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Use hash table. However, we &lt;strong&gt;do not have enough memory to store all of **S&lt;/strong&gt; in a hash table**. For example, we might
+be processing millions of filters on the same stream.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example Application: Email Spam Filter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We know 1 billion “benign” email addresses&lt;/li&gt;
+  &lt;li&gt;If an email comes from one of these, it is NOT spam
+    &lt;ul&gt;
+      &lt;li&gt;All benign emails should be determined as benign address&lt;/li&gt;
+      &lt;li&gt;Classifying spam as benign is acceptable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution: Bloom Filter&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bloom Filter consists of
+    &lt;ul&gt;
+      &lt;li&gt;An array of bits&lt;/li&gt;
+      &lt;li&gt;A number of hash functions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Two processes
+    &lt;ul&gt;
+      &lt;li&gt;Setup process
+        &lt;ul&gt;
+          &lt;li&gt;Initially, all bits in the given array set &lt;em&gt;0&lt;/em&gt;s&lt;/li&gt;
+          &lt;li&gt;For each element &lt;em&gt;x&lt;/em&gt; in &lt;em&gt;S&lt;/em&gt;, set the bits h(&lt;em&gt;x&lt;/em&gt;) to 1, for each hash function &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Lookup process
+        &lt;ul&gt;
+          &lt;li&gt;For input &lt;em&gt;y&lt;/em&gt;, check if the bits h(&lt;em&gt;y&lt;/em&gt;) set to 1, for each hash function &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;Accept if all bits are set to 1, otherwise reject&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Starting from Bloom Filter with 1 Hash&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Given a set of keys &lt;em&gt;S&lt;/em&gt; that we want to filter&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Create a &lt;strong&gt;bit array &lt;em&gt;B&lt;/em&gt;&lt;/strong&gt; of &lt;em&gt;n&lt;/em&gt; bits, initially all &lt;em&gt;0&lt;/em&gt;s&lt;/li&gt;
+  &lt;li&gt;Choose a &lt;strong&gt;hash function &lt;em&gt;h&lt;/em&gt;&lt;/strong&gt; with range &lt;strong&gt;[0, n)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Hash each member of &lt;em&gt;s ∈ S&lt;/em&gt; to one of &lt;em&gt;n&lt;/em&gt; buckets, and set that bit to 1, i.e., B[h(s)] = 1&lt;/li&gt;
+  &lt;li&gt;Hash each element &lt;em&gt;a&lt;/em&gt; of the stream and output only those that hash to bit that was set to &lt;em&gt;1&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Output &lt;em&gt;a&lt;/em&gt; if B[h(a)] == 1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;bloom-filter-processing&quot;&gt;Bloom Filter Processing&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Create false positives but no false negatives&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If the item is in &lt;em&gt;S&lt;/em&gt; we surely output it, if not we may still output it&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use n = 11 bits for our filter&lt;/li&gt;
+  &lt;li&gt;Stream elements = integers&lt;/li&gt;
+  &lt;li&gt;Use two hash functions:
+    &lt;ul&gt;
+      &lt;li&gt;h&lt;sub&gt;1&lt;/sub&gt;(x) =
+        &lt;ul&gt;
+          &lt;li&gt;Take odd-numbered bits from the right in the binary representation of x&lt;/li&gt;
+          &lt;li&gt;Treat it as an integer i&lt;/li&gt;
+          &lt;li&gt;Result is i modulo 11&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;h&lt;sub&gt;2&lt;/sub&gt;(x) = same, but take &lt;strong&gt;even&lt;/strong&gt;-numbered bits&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose we have the same Bloom filter as before, and we have set the filter to 10100101010&lt;/li&gt;
+  &lt;li&gt;Lookup element y = 118 = 1&lt;strong&gt;1&lt;/strong&gt;1&lt;strong&gt;0&lt;/strong&gt;1&lt;strong&gt;1&lt;/strong&gt;0 (binary)&lt;/li&gt;
+  &lt;li&gt;h&lt;sub&gt;1&lt;/sub&gt;(y) = 14 modulo 11 = 3&lt;/li&gt;
+  &lt;li&gt;h&lt;sub&gt;2&lt;/sub&gt;(y) = 5 modulo 11 = 5&lt;/li&gt;
+  &lt;li&gt;Bit 5 is 1, but bit 3 is 0, so we are sure y is not in the set&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Returning to our original Question&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;= 1 billion (benign) email addresses&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;B&lt;/td&gt;
+          &lt;td&gt;= 8 billion bits&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If the email address is in &lt;em&gt;S&lt;/em&gt;, then it surely hashes to a bucket that has the big set to 1, so it always gets through
+(&lt;strong&gt;no false negatives&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;However, the UNKNOWN email address can be determined as benign (&lt;strong&gt;false positives&lt;/strong&gt;) -&amp;gt; We need to estimate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;analysis-throwing-darts&quot;&gt;Analysis: Throwing Darts&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;More accurate analysis for the number of &lt;strong&gt;false positives&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;If we throw &lt;em&gt;m&lt;/em&gt; darts into &lt;em&gt;n&lt;/em&gt; equally likely targets, &lt;strong&gt;what is the probability that a target gets at least one 
+dart?&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Targets = bits/buckets&lt;/li&gt;
+      &lt;li&gt;Darts = input items&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We have &lt;em&gt;m&lt;/em&gt; darts,  &lt;em&gt;n&lt;/em&gt; targets&lt;/li&gt;
+  &lt;li&gt;What is the probability that a target gets at least one dart:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fraction of 1s (over input) in the array B = probability fo false positive = 1 - e&lt;sup&gt;-m/n&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;e.g. 10 darts, 8 * 10&lt;sup&gt;9&lt;/sup&gt; targets
+        &lt;ul&gt;
+          &lt;li&gt;Fraction of 1s in B = 1 - e&lt;sup&gt;-1/8&lt;/sup&gt; = 0.1175&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;bloom-filter-with-more-hash-functions&quot;&gt;Bloom Filter with More Hash Functions&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Consider:&lt;/td&gt;
+          &lt;td&gt;S&lt;/td&gt;
+          &lt;td&gt;= &lt;em&gt;m&lt;/em&gt;,&lt;/td&gt;
+          &lt;td&gt;B&lt;/td&gt;
+          &lt;td&gt;= &lt;em&gt;n&lt;/em&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Use &lt;em&gt;k&lt;/em&gt; independent hash functions h&lt;sub&gt;1&lt;/sub&gt;, …, h&lt;sub&gt;k&lt;/sub&gt;&lt;/li&gt;
+  &lt;li&gt;Initialization:
+    &lt;ul&gt;
+      &lt;li&gt;Set &lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt; to all &lt;strong&gt;&lt;em&gt;0s&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Hash each element &lt;strong&gt;&lt;em&gt;s ∈ S&lt;/em&gt;&lt;/strong&gt; using each hash function&lt;sub&gt;i&lt;/sub&gt;, set B[h&lt;sub&gt;i&lt;/sub&gt;(s)] = 1 (for each &lt;em&gt;i = 1, 
+.., k&lt;/em&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Run-time:
+    &lt;ul&gt;
+      &lt;li&gt;When a stream element with key &lt;em&gt;x&lt;/em&gt; arrives
+        &lt;ul&gt;
+          &lt;li&gt;If B[h&lt;sub&gt;i&lt;/sub&gt;(x)] = 1 for all &lt;em&gt;i&lt;/em&gt; = 1, …, k then declare that &lt;em&gt;x&lt;/em&gt; is in &lt;em&gt;S&lt;/em&gt;. That is, &lt;em&gt;x&lt;/em&gt; hashes to a 
+bucket set to &lt;em&gt;1&lt;/em&gt; for every hash function h&lt;sub&gt;i&lt;/sub&gt;(x)&lt;/li&gt;
+          &lt;li&gt;Otherwise discard the element &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;bloom-filter---analysis&quot;&gt;Bloom Filter - Analysis&lt;/h4&gt;
+
+&lt;p&gt;What fraction of the bit vector B are 1s?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Throwing &lt;em&gt;k * m&lt;/em&gt; darts at &lt;em&gt;n&lt;/em&gt; targets&lt;/li&gt;
+  &lt;li&gt;So fraction of &lt;em&gt;1&lt;/em&gt;s is **(1 - e&lt;sup&gt;-km/n&lt;/sup&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But we have &lt;em&gt;k&lt;/em&gt; independent hash functions and we only let the element &lt;em&gt;x&lt;/em&gt; through if all &lt;em&gt;k&lt;/em&gt; hash element &lt;em&gt;x&lt;/em&gt; to bucket
+of value 1. So, &lt;strong&gt;false positive probability = (1 - e&lt;sup&gt;-km/n&lt;/sup&gt;)&lt;sup&gt;k&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;m = 1 billion, n = 8 billion
+    &lt;ul&gt;
+      &lt;li&gt;k = 1: (1 - e&lt;sup&gt;-1/8&lt;/sup&gt;) = 0.1175&lt;/li&gt;
+      &lt;li&gt;k = 2: (1 - e&lt;sup&gt;-1/4&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt; = 0.0493&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Optimal” value of &lt;em&gt;k&lt;/em&gt;: &lt;em&gt;n/m ln(2)&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In our case: Optimal &lt;em&gt;k = 8 ln(2) = 5.546&lt;/em&gt;, Error at &lt;em&gt;k = 6: (1 - e&lt;sup&gt;-1/6&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt; = 0.0235&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;counting-distinct-elements&quot;&gt;Counting Distinct Elements&lt;/h2&gt;
+
+&lt;h3 id=&quot;flajolet-martin-approach&quot;&gt;Flajolet-Martin Approach&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pick a hash function &lt;em&gt;h&lt;/em&gt; that maps each of the &lt;em&gt;N&lt;/em&gt; elements to at least &lt;em&gt;log&lt;sub&gt;2&lt;/sub&gt; N&lt;/em&gt; bits&lt;/li&gt;
+  &lt;li&gt;For each stream element &lt;em&gt;a&lt;/em&gt;, let r(a) be the number of trailing 0s in h(a)
+    &lt;ul&gt;
+      &lt;li&gt;r(a) = position of first 1 counting from the right&lt;/li&gt;
+      &lt;li&gt;e.g. say &lt;em&gt;h(a) = 12&lt;/em&gt;, then &lt;em&gt;12&lt;/em&gt; is &lt;em&gt;1100&lt;/em&gt; in binary, so &lt;em&gt;r(a) = 2&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Record R = the maximum r(a) seen
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;R = max&lt;sub&gt;a&lt;/sub&gt; r(a)&lt;/em&gt;, over all the item &lt;em&gt;a&lt;/em&gt; seen so far&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Estimated number of distinct elements = 2&lt;sup&gt;R&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;why-it-works&quot;&gt;Why It Works&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hash each item x to a bit, using exponential distribution
+    &lt;ul&gt;
+      &lt;li&gt;1/2 map to bit 0, 1/4 map to bit 1, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Intuition
+    &lt;ul&gt;
+      &lt;li&gt;The 0th bit is accessed with probability 1/2&lt;/li&gt;
+      &lt;li&gt;The 1st bit is accessed with probability 1/4&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+      &lt;li&gt;The kth bit is accessed with probability O(1/2&lt;sup&gt;k&lt;/sup&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thus, if the kth bit is set, then we know that an event with probability O(1/2&lt;sup&gt;k&lt;/sup&gt;) happened&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In a more formally&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Goal: Showing that probability of finding a tail of &lt;em&gt;r&lt;/em&gt; zeros:
+    &lt;ul&gt;
+      &lt;li&gt;Goes to &lt;strong&gt;1&lt;/strong&gt; if &lt;strong&gt;m » 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Goes to &lt;strong&gt;0&lt;/strong&gt; if &lt;strong&gt;m « 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;where &lt;strong&gt;m&lt;/strong&gt; is the number of distinct elements seen so far in the stream&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Also, it means that 2&lt;em&gt;R&lt;/em&gt; will almost always be around &lt;em&gt;m&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The probability that a given h(a) ends in at least &lt;em&gt;r&lt;/em&gt; zeros is 2&lt;sup&gt;-r&lt;/sup&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;h(a)&lt;/strong&gt; hashes elements uniformly at random&lt;/li&gt;
+      &lt;li&gt;Probability that a random number ends in at least &lt;em&gt;r&lt;/em&gt; zeros is 2&lt;sup&gt;-r&lt;/sup&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Then the probability of NOT seeing a tail of length &lt;em&gt;r&lt;/em&gt; among &lt;em&gt;m&lt;/em&gt; elements:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;=&amp;space;(1&amp;space;-&amp;space;2^{-r})^{2^{r}(m2^{-r})}\approx&amp;space;e^{-m2^{-r}}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Probability of NOT finding a tail of length &lt;em&gt;r&lt;/em&gt; is:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If &lt;strong&gt;m « 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;, then probability tends to 1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;\approx&amp;space;e^{-m2^{-r}}&amp;space;=&amp;space;1&quot; alt=&quot;equation-2&quot; /&gt; as &lt;img src=&quot;https://latex.codecogs.com/svg.image?m/2^{r}&amp;space;\rightarrow&amp;space;0&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, the probability of finding a tail of length &lt;strong&gt;r&lt;/strong&gt; tends to &lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If &lt;strong&gt;m » 2&lt;sup&gt;-r&lt;/sup&gt;&lt;/strong&gt;, then probability tends to 0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;\approx&amp;space;e^{-m2^{-r}}&amp;space;=&amp;space;0&quot; alt=&quot;equation-4&quot; /&gt; as &lt;img src=&quot;https://latex.codecogs.com/svg.image?m/2^{r}&amp;space;\rightarrow&amp;space;\infty&amp;space;&quot; alt=&quot;eqaution-5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, the probability of finding a tail of length &lt;strong&gt;r&lt;/strong&gt; tends to &lt;strong&gt;1&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thus, 2&lt;sup&gt;R&lt;/sup&gt; will almost always be around &lt;em&gt;m&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;computing-moments&quot;&gt;Computing Moments&lt;/h2&gt;
+
+&lt;h3 id=&quot;generalization&quot;&gt;Generalization&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Suppose a stream has elements chosen from a set &lt;em&gt;A&lt;/em&gt; of &lt;em&gt;N&lt;/em&gt; values&lt;/li&gt;
+  &lt;li&gt;Let &lt;em&gt;m&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; be the number of times value &lt;em&gt;i&lt;/em&gt; occurs in the stream&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;k&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt; moment is:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{i\in&amp;space;A}&amp;space;(m_{i})^{k}&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;special-cases&quot;&gt;Special Cases&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;0&lt;sup&gt;th&lt;/sup&gt; moment = number of distinct elements
+    &lt;ul&gt;
+      &lt;li&gt;The problem just considered&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;1&lt;sup&gt;st&lt;/sup&gt; moment = count of the numbers of elements = length of the stream
+    &lt;ul&gt;
+      &lt;li&gt;Easy to compute&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;2&lt;sup&gt;nd&lt;/sup&gt; moment = surprise number &lt;em&gt;S&lt;/em&gt; = a measure of how uneven the distribution is&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;example-surprise-number&quot;&gt;Example: Surprise Number&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stream of length 100&lt;/li&gt;
+  &lt;li&gt;11 distinct values&lt;/li&gt;
+  &lt;li&gt;Item counts: 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 Surprise S = 910&lt;/li&gt;
+  &lt;li&gt;Item counts: 90, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 Surprise S = 8,110&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;problem-definition&quot;&gt;Problem Definition&lt;/h3&gt;
+
+&lt;p&gt;Q: Given a stream, how can we estimate k-th moment efficiently, with small memory space?&lt;/p&gt;
+
+&lt;p&gt;A: AMS method&lt;/p&gt;
+
+&lt;h3 id=&quot;ams-method&quot;&gt;AMS Method&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;works for all moments&lt;/li&gt;
+  &lt;li&gt;Gives an unbiased estimate&lt;/li&gt;
+  &lt;li&gt;We will just concentrate on the 2&lt;sup&gt;nd&lt;/sup&gt; moment &lt;em&gt;S&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;We pick and keep track of many variables &lt;em&gt;X&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;For each variable &lt;em&gt;X&lt;/em&gt; we store &lt;em&gt;X.el&lt;/em&gt; and &lt;em&gt;X.val&lt;/em&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;X.el&lt;/em&gt; corresponds to the item &lt;em&gt;i&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;em&gt;X.val&lt;/em&gt; corresponds to the count of item &lt;em&gt;i&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Our goal is to compute:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;\sum&amp;space;_{i}m_{i}^{2}&quot; alt=&quot;equation-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;This requires a count in main memory, so number of &lt;em&gt;X&lt;/em&gt;s is limited&lt;/p&gt;
+
+&lt;h3 id=&quot;one-random-variable-x&quot;&gt;One Random Variable (X)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How to set &lt;em&gt;X.val&lt;/em&gt; and &lt;em&gt;X.el&lt;/em&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;Assume stream has length &lt;em&gt;n&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Pick some random time &lt;em&gt;t(t&amp;lt;n)&lt;/em&gt; to start, so that any time is equally likely&lt;/li&gt;
+      &lt;li&gt;Let at time &lt;em&gt;t&lt;/em&gt; the stream have item &lt;em&gt;i. we set X.el = i&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Then we maintain count &lt;em&gt;c (X.val = c)&lt;/em&gt; of the number of &lt;em&gt;i&lt;/em&gt;s in the stream starting from the chosen time &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Then the estimate of the 2&lt;sup&gt;nd&lt;/sup&gt; moment is:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;f(X)&amp;space;=&amp;space;n(2&amp;space;\cdot&amp;space;c&amp;space;-&amp;space;1)&quot; alt=&quot;equation-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;We will keep track of multiple &lt;em&gt;X&lt;/em&gt;s, &lt;em&gt;(X&lt;sub&gt;1&lt;/sub&gt;, X&lt;sub&gt;2&lt;/sub&gt;, …, X&lt;sub&gt;k&lt;/sub&gt;)&lt;/em&gt; and our final estimate will 
+be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;1/k\sum_{j}^{k}f(X_{j})&quot; alt=&quot;equation-8&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;expectation-analysis&quot;&gt;Expectation Analysis&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\frac{1}{n}\sum&amp;space;_{i}n(1&amp;space;&amp;plus;&amp;space;3&amp;space;&amp;plus;&amp;space;5&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;2m_{i}&amp;space;-&amp;space;1)&quot; alt=&quot;equation-9&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Little side calculation:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;&amp;plus;&amp;space;3&amp;space;&amp;plus;&amp;space;5&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;2m_{i}&amp;space;-&amp;space;1)&amp;space;=&amp;space;\sum_{i=1}^{m_{i}}(2i&amp;space;-&amp;space;1)&amp;space;=&amp;space;2\frac{m_{i}(m_{i}&amp;plus;1)}{2}&amp;space;-&amp;space;m_{i}&amp;space;=&amp;space;(m_{i})^{2}&quot; alt=&quot;equation-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\frac{1}{n}\sum&amp;space;_{i}n(m_{i})^{2}&quot; alt=&quot;equation-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\sum&amp;space;_{i}(m_{i})^{2}&amp;space;=&amp;space;S&quot; alt=&quot;equation-12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We have the second moment&lt;/p&gt;
+
+&lt;h3 id=&quot;higher-order-moments&quot;&gt;Higher-Order Moments&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For estimating k&lt;sup&gt;th&lt;/sup&gt; moment we essentially use the same algorithm but change the estimate:
+    &lt;ul&gt;
+      &lt;li&gt;For &lt;strong&gt;k = 2&lt;/strong&gt; we used &lt;em&gt;n (2 * c - 1)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;For &lt;strong&gt;k = 3&lt;/strong&gt; we use &lt;em&gt;n (3 * c&lt;sup&gt;2&lt;/sup&gt; - 3c + 1)&lt;/em&gt; (where &lt;strong&gt;c = X.val&lt;/strong&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why?
+    &lt;ul&gt;
+      &lt;li&gt;For &lt;strong&gt;k = 2&lt;/strong&gt;: Remember we had (1 + 3 + 5 + … + 2m&lt;sub&gt;i&lt;/sub&gt; - 1) and we showed terms &lt;strong&gt;2c - 1&lt;/strong&gt; (for &lt;strong&gt;c = 1, 
+… m&lt;/strong&gt;) sum to &lt;strong&gt;m&lt;sup&gt;2&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{c=1}^{m}2c&amp;space;-&amp;space;1&amp;space;=&amp;space;\sum_{c=1}^{m}c^{2}&amp;space;-&amp;space;\sum_{c=1}^{m}(c-1)^{2}&amp;space;=&amp;space;m^{2}&quot; alt=&quot;equation-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;so,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?2c&amp;space;-&amp;space;1&amp;space;=&amp;space;c^{2}&amp;space;-&amp;space;(c&amp;space;-&amp;space;1)^{2}&quot; alt=&quot;equation-14&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For &lt;strong&gt;k = 3&lt;/strong&gt;: &lt;em&gt;c&lt;sup&gt;3&lt;/sup&gt; - (c - 1)&lt;sup&gt;3&lt;/sup&gt; = 3c&lt;sup&gt;2&lt;/sup&gt; - 3c + 1&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Generally&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Estimate&amp;space;=&amp;space;n(c^{k}-(c&amp;space;-&amp;space;1)^{k})&quot; alt=&quot;equation-15&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;combining-samples&quot;&gt;Combining Samples&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In practice:
+    &lt;ul&gt;
+      &lt;li&gt;Compute &lt;strong&gt;f(X) = n(2c - 1)&lt;/strong&gt; for as many variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; as you can fit in memory&lt;/li&gt;
+      &lt;li&gt;Average them in groups&lt;/li&gt;
+      &lt;li&gt;Take median of averages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Problem: Streams never end
+    &lt;ul&gt;
+      &lt;li&gt;We assumed there was a number &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt;, the number of positions in the stream. But real streams go on forever, so 
+&lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; is a variable - the number of inputs seen so far.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fix-ups&quot;&gt;Fix-ups&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; have &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; as a factor - keep &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; separately; just hold the count in &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Suppose we can only store &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; counts. We must throw some &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt;s out as time goes on:
+    &lt;ul&gt;
+      &lt;li&gt;Objective: Each starting time &lt;strong&gt;&lt;em&gt;t&lt;/em&gt;&lt;/strong&gt; is selected with probability &lt;strong&gt;&lt;em&gt;k/n&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Solution: Fixed-size sampling
+        &lt;ul&gt;
+          &lt;li&gt;Choose the first &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; times for &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; variables&lt;/li&gt;
+          &lt;li&gt;When the &lt;strong&gt;&lt;em&gt;n&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt;&lt;/strong&gt; element arrives &lt;strong&gt;&lt;em&gt;(n &amp;gt; k)&lt;/em&gt;&lt;/strong&gt;, choose it with probability &lt;strong&gt;&lt;em&gt;k/n&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;If you choose it, throw one of the previously stored variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; out with equal probability&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;counting-itemsets&quot;&gt;Counting Itemsets&lt;/h2&gt;
+
+&lt;p&gt;Q: Given a stream, which items appear more &lt;em&gt;s&lt;/em&gt; times in the window?&lt;/p&gt;
+
+&lt;p&gt;A: Think of the stream of baskets as one binary stream per item.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; = item present; &lt;strong&gt;0&lt;/strong&gt; = not present&lt;/li&gt;
+  &lt;li&gt;Use &lt;strong&gt;DGIM&lt;/strong&gt; to estimate counts of &lt;strong&gt;1&lt;/strong&gt;s for all items&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In principle, you could count frequent pairs or even larger sets the same way&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;One stream per itemsets&lt;/li&gt;
+  &lt;li&gt;e.g. for a basket {i, j, k}, assume 7 independent streams: (i) (j) (k) (i, j) (i, k) (j, k) (i, j, k)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Number of itemsets is way too big&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exponentially-decaying-windows&quot;&gt;Exponentially Decaying Windows&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Exponentially decaying windows: A heuristic for selecting likely frequent item(sets)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Filtering a Data Stream</summary></entry><entry><title type="html">Intelligent Information Systems - Public Population Data</title><link href="/Intelligent_Information_Systems-Public_-Population_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Public Population Data" /><published>2022-09-25T19:30:00+09:00</published><updated>2022-09-25T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Public_%20Population_Data</id><content type="html" xml:base="/Intelligent_Information_Systems-Public_-Population_Data">&lt;h2 id=&quot;visualizing-population-data&quot;&gt;Visualizing Population Data&lt;/h2&gt;
 
 &lt;h4 id=&quot;header&quot;&gt;Header&lt;/h4&gt;
 
@@ -190,6 +799,92 @@ client software will automatically retrieve the new URL.&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;4️⃣-user-server-interaction-cookies&quot;&gt;4️⃣ User-Server Interaction: Cookies&lt;/h2&gt;
+
+&lt;p&gt;Cookies allow sites to keep track of users.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Four component of cookie
+    &lt;ol&gt;
+      &lt;li&gt;a cookie header lie in HTTP response message&lt;/li&gt;
+      &lt;li&gt;a cookie header line in HTTP request message&lt;/li&gt;
+      &lt;li&gt;a cookie file kept on the user’s end system and managed by the user’s browser&lt;/li&gt;
+      &lt;li&gt;a back-end database at the Website&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5️⃣-web-caching&quot;&gt;5️⃣ Web Caching&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Web cache&lt;/strong&gt; a.k.a. &lt;strong&gt;proxy server&lt;/strong&gt; is a network entity that satisfies HTTP requests on the behalf of an origin Web
+server.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache.&lt;/li&gt;
+  &lt;li&gt;The Web cache checks to see if it has a copy of the object stored locally. If it does, the Web cache returns the
+object within an HTTP response message to the client browser.&lt;/li&gt;
+  &lt;li&gt;If the Web cache does not have the object, the Web cache opens a TCP connection to the origin server. The Web cache
+then sends an HTTP requests for the object into the cache-to-server TCP connection. After receiving this request, the
+origin server sends the object within an HTTP response to the Web cache.&lt;/li&gt;
+  &lt;li&gt;When the Web cache receives the object, it stores a copy in its local storage and sends a copy, within an HTTP
+response message, to the client browser (over the existing TCP connection between the client browser and the Web cache).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Web cache can substantially reduce the response time for a client request.&lt;/li&gt;
+  &lt;li&gt;Web caches can substantially reduce traffic on an institution’s access link to the Internet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The traffic intensity on the LAN is:&lt;/p&gt;
+
+&lt;p&gt;(15 requests/sec) * (1 Mbits/request) / (100 Mbps) = 0.15&lt;/p&gt;
+
+&lt;p&gt;whereas the traffic intensity on the access link is:&lt;/p&gt;
+
+&lt;p&gt;(15 requests/sec) * (1 Mbits/request) / (15 Mbps) = 1&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content Distribution Networks (CDNs)&lt;/strong&gt;: Web caches are increasingly playing an important role in the Internet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-conditional-get&quot;&gt;The Conditional GET&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The request message uses the GET method&lt;/li&gt;
+  &lt;li&gt;The request message includes an If-Modified-Since: header line.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;6️⃣-http2&quot;&gt;6️⃣ HTTP/2&lt;/h2&gt;
+
+&lt;p&gt;The primary goals for &lt;strong&gt;HTTP/2&lt;/strong&gt; are to reduce perceived latency by enabling request and response multiplexing over a
+single TCP connection, provide request prioritization and server push, and provide efficient compression of HTTP headers
+fields.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Head of Line (HOL) blocking&lt;/strong&gt;: A large size content may take a long time to pass through the bottleneck link, while
+the small objects are delayed as they wait behind the large size content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;http2-framing&quot;&gt;HTTP/2 Framing&lt;/h3&gt;
+
+&lt;p&gt;The HTTP/2 solution for HOL blocking is to break each message into small frames, and interleave the request and response
+message on the same TCP connection.&lt;/p&gt;
+
+&lt;h3 id=&quot;response-message-prioritization-and-server-pushing&quot;&gt;Response Message Prioritization and Server Pushing&lt;/h3&gt;
+
+&lt;p&gt;Message prioritization allows developers to customize the relative priority of requests to better optimize application
+performance.&lt;/p&gt;
+
+&lt;h3 id=&quot;http3&quot;&gt;HTTP/3&lt;/h3&gt;
+
+&lt;p&gt;QUIC is a new “transport” protocol that is implemented in the application layer over the bare-bones UDP protocol.&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -725,168 +1420,4 @@ each other. In particular, it defines:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Development of Packet Switching: 1961 - 1972</summary></entry><entry><title type="html">Computer Network - Networks Under Attack</title><link href="/Computer_Network-Networks_Under_Attack" rel="alternate" type="text/html" title="Computer Network - Networks Under Attack" /><published>2022-09-19T20:30:00+09:00</published><updated>2022-09-19T20:30:00+09:00</updated><id>/Computer_Network-Networks_Under_Attack</id><content type="html" xml:base="/Computer_Network-Networks_Under_Attack">&lt;h3 id=&quot;the-bad-guys-can-put-malware-into-your-host-via-the-internet&quot;&gt;The Bad Guys can put Malware into your Host via the Internet&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Malware&lt;/strong&gt;: Infectious data that comes with the actual requested data.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Botnet&lt;/strong&gt;: What bad guys control and leverage for spam e-mail distribution or distributed denial-of-service attacks.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Self-replicating&lt;/strong&gt;: Once it infects one host, fromm that host it seeks entry into other hosts over the Internet&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-bad-guys-can-attack-servers-and-network-infrastructure&quot;&gt;The Bad Guys can Attack Servers and Network Infrastructure&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Denial-of-service (DOS) attacks&lt;/strong&gt;: Renders a network, host, or other piece of infrastructure unusable by legitimate 
-users.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Vulnerability attack&lt;/em&gt;: Sends few well-crafted messages to vulnerable application or operating system running on
-targeted host. If the right sequence of packets is sent to vulnerable application or operating system, the service can
-stop or, worse, the host can crash.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Bandwidth flooding&lt;/em&gt;: The attacker sends a deluge of packets to the targeted host - so many packets that the
-target’s access link becomes clogged, preventing legitimate packets from reaching the server.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Connection flooding&lt;/em&gt;: The attacker establishes a large number of half-open or fully open TCP connections at the
-target host. The host can become so bogged down with these bogus connections that it stops accepting legitimate
-connections.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Distributed DoS (DDoS) attack&lt;/strong&gt;: Attacker controls multiple sources and has each source blast traffic at the target.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-bad-guys-can-sniff-packets&quot;&gt;The Bad Guys can Sniff Packets&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Packet sniffer&lt;/strong&gt;: A passive receiver that records a copy of every packet that flies by.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-bad-guys-can-masquerade-as-someone-you-trust&quot;&gt;The Bad Guys can Masquerade as Someone You Trust&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;IP spoofing&lt;/strong&gt;: Inject packets into the Internet with a false source address&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">The Bad Guys can put Malware into your Host via the Internet</summary></entry><entry><title type="html">Computer Network - Protocol Layers and Their Service Models</title><link href="/Computer_Network-Protocol_Layers_and_Their_Service_Models" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" /><published>2022-09-19T20:15:00+09:00</published><updated>2022-09-19T20:15:00+09:00</updated><id>/Computer_Network-Protocol_Layers_and_Their_Service_Models</id><content type="html" xml:base="/Computer_Network-Protocol_Layers_and_Their_Service_Models">&lt;h2 id=&quot;1️⃣-layered-architecture&quot;&gt;1️⃣ Layered Architecture&lt;/h2&gt;
-
-&lt;h3 id=&quot;protocol-layering&quot;&gt;Protocol Layering&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Layer&lt;/strong&gt;: Mixed implementation of hardware and software.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Services (a.k.a. service model)&lt;/strong&gt;: A specific task that is taken in a layer.
-    &lt;ul&gt;
-      &lt;li&gt;Performs a certain actions within that layer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;An example of application-layer protocols are: &lt;strong&gt;HTTP&lt;/strong&gt; and &lt;strong&gt;SMTP&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;These are implemented in software in the end systems; so are transport-layer protocols.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;There are drawbacks of layering:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;One layer may duplicate low-layer functionality.&lt;/li&gt;
-  &lt;li&gt;Functionality at one layer may need information that is present only in another layer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Protocol stack&lt;/strong&gt;: The protocols of the various layers&lt;/li&gt;
-  &lt;li&gt;The Internet protocol stack consists of five layers:
-    &lt;ul&gt;
-      &lt;li&gt;Physical Layer&lt;/li&gt;
-      &lt;li&gt;Link Layer&lt;/li&gt;
-      &lt;li&gt;Network Layer&lt;/li&gt;
-      &lt;li&gt;Transport Layer&lt;/li&gt;
-      &lt;li&gt;Application Layer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;application-layer&quot;&gt;Application Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Message&lt;/strong&gt;: Packet of information at the application layer.&lt;/li&gt;
-  &lt;li&gt;Includes many protocols, such as the &lt;strong&gt;&lt;em&gt;HTTP&lt;/em&gt;&lt;/strong&gt; (Web document request and transfer), &lt;strong&gt;&lt;em&gt;SMTP&lt;/em&gt;&lt;/strong&gt; (transfer of e-mail 
-messages), and &lt;strong&gt;&lt;em&gt;FTP&lt;/em&gt;&lt;/strong&gt; (Transfer of files between two end systems).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: Allows human-friendly names for Internet end systems in application layer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;transport-layer&quot;&gt;Transport Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Segment&lt;/strong&gt;: Transport-layer packet.&lt;/li&gt;
-  &lt;li&gt;Transports application-layer messages between application endpoints.&lt;/li&gt;
-  &lt;li&gt;There are two transport protocols
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;TCP&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Provides a connection-oriented service to its applications.&lt;/li&gt;
-          &lt;li&gt;Guaranteed delivery of application-layer message to the destination and flow control.&lt;/li&gt;
-          &lt;li&gt;Breaks long messages into shorter segments and provides a congestion-control mechanism.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;UDP&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Provides a connectionless service to its applications.&lt;/li&gt;
-          &lt;li&gt;No-frills service that provides no reliability, no flow control, and no congestion control.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;network-layer&quot;&gt;Network Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Datagrams&lt;/strong&gt;: Network-layer packet.&lt;/li&gt;
-  &lt;li&gt;Provides the service of delivering the segment to the transport layer in the destination host&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;IP protocol&lt;/strong&gt;: Defines the fields in the datagram as well as how the end systems and routers act on these fields.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;link-layer&quot;&gt;Link Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Frames&lt;/strong&gt;: Link-layer packet.&lt;/li&gt;
-  &lt;li&gt;Depend on specific link-layer protocol that is employed over the link.&lt;/li&gt;
-  &lt;li&gt;Examples of link-layer protocols
-    &lt;ul&gt;
-      &lt;li&gt;Ethernet protocol&lt;/li&gt;
-      &lt;li&gt;WiFi protocol&lt;/li&gt;
-      &lt;li&gt;Cable access network’s DOCSIS protocol&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;physical-layer&quot;&gt;Physical Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Move entire frames from one network element to an adjacent network element.&lt;/li&gt;
-  &lt;li&gt;Examples of transmission medium of link
-    &lt;ul&gt;
-      &lt;li&gt;Twisted-pair copper wire&lt;/li&gt;
-      &lt;li&gt;Single-mode fiber optics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2️⃣-encapsulation&quot;&gt;2️⃣ Encapsulation&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-19/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Layered Architecture</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Development of Packet Switching: 1961 - 1972</summary></entry></feed>

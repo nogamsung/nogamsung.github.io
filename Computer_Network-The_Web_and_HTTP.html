@@ -291,6 +291,92 @@ client software will automatically retrieve the new URL.</li>
 
 <h2 id="4️⃣-user-server-interaction-cookies">4️⃣ User-Server Interaction: Cookies</h2>
 
+<p>Cookies allow sites to keep track of users.</p>
+
+<ul>
+  <li>Four component of cookie
+    <ol>
+      <li>a cookie header lie in HTTP response message</li>
+      <li>a cookie header line in HTTP request message</li>
+      <li>a cookie file kept on the user’s end system and managed by the user’s browser</li>
+      <li>a back-end database at the Website</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-22/screenshot-11.jpeg" alt="screenshot-11" /></p>
+
+<h2 id="5️⃣-web-caching">5️⃣ Web Caching</h2>
+
+<p><strong>Web cache</strong> a.k.a. <strong>proxy server</strong> is a network entity that satisfies HTTP requests on the behalf of an origin Web
+server.</p>
+
+<p><img src="../../assets/screenshots/2022-09-22/screenshot-12.jpeg" alt="screenshot-12" /></p>
+
+<ol>
+  <li>The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache.</li>
+  <li>The Web cache checks to see if it has a copy of the object stored locally. If it does, the Web cache returns the
+object within an HTTP response message to the client browser.</li>
+  <li>If the Web cache does not have the object, the Web cache opens a TCP connection to the origin server. The Web cache
+then sends an HTTP requests for the object into the cache-to-server TCP connection. After receiving this request, the
+origin server sends the object within an HTTP response to the Web cache.</li>
+  <li>When the Web cache receives the object, it stores a copy in its local storage and sends a copy, within an HTTP
+response message, to the client browser (over the existing TCP connection between the client browser and the Web cache).</li>
+</ol>
+
+<ul>
+  <li>Web cache can substantially reduce the response time for a client request.</li>
+  <li>Web caches can substantially reduce traffic on an institution’s access link to the Internet.</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-22/screenshot-13.jpeg" alt="screenshot-13" /></p>
+
+<p>The traffic intensity on the LAN is:</p>
+
+<p>(15 requests/sec) * (1 Mbits/request) / (100 Mbps) = 0.15</p>
+
+<p>whereas the traffic intensity on the access link is:</p>
+
+<p>(15 requests/sec) * (1 Mbits/request) / (15 Mbps) = 1</p>
+
+<p><img src="../../assets/screenshots/2022-09-22/screenshot-14.jpeg" alt="screenshot-14" /></p>
+
+<ul>
+  <li><strong>Content Distribution Networks (CDNs)</strong>: Web caches are increasingly playing an important role in the Internet.</li>
+</ul>
+
+<h3 id="the-conditional-get">The Conditional GET</h3>
+
+<ol>
+  <li>The request message uses the GET method</li>
+  <li>The request message includes an If-Modified-Since: header line.</li>
+</ol>
+
+<h2 id="6️⃣-http2">6️⃣ HTTP/2</h2>
+
+<p>The primary goals for <strong>HTTP/2</strong> are to reduce perceived latency by enabling request and response multiplexing over a
+single TCP connection, provide request prioritization and server push, and provide efficient compression of HTTP headers
+fields.</p>
+
+<ul>
+  <li><strong>Head of Line (HOL) blocking</strong>: A large size content may take a long time to pass through the bottleneck link, while
+the small objects are delayed as they wait behind the large size content.</li>
+</ul>
+
+<h3 id="http2-framing">HTTP/2 Framing</h3>
+
+<p>The HTTP/2 solution for HOL blocking is to break each message into small frames, and interleave the request and response
+message on the same TCP connection.</p>
+
+<h3 id="response-message-prioritization-and-server-pushing">Response Message Prioritization and Server Pushing</h3>
+
+<p>Message prioritization allows developers to customize the relative priority of requests to better optimize application
+performance.</p>
+
+<h3 id="http3">HTTP/3</h3>
+
+<p>QUIC is a new “transport” protocol that is implemented in the application layer over the bare-bones UDP protocol.</p>
+
 <h2 id="reference">Reference</h2>
 <ul>
   <li><a href="https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465" target="_blank">Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross</a></li>
@@ -404,6 +490,16 @@ client software will automatically retrieve the new URL.</li>
                         
                         
                         
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Stream(2)">Big Data - Stream(2)</a></li>
+                            
+                            
+                            
+                            
+                        
                         
                         
                          <li><a href="/Intelligent_Information_Systems-Public_-Population_Data">Intelligent Information Systems - Public Population Data</a></li>
@@ -430,8 +526,7 @@ client software will automatically retrieve the new URL.</li>
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Visualizing_Data">Intelligent Information Systems - Visualizing Data</a></li>
-                            
+                        
                             
                             
                             
@@ -601,7 +696,7 @@ client software will automatically retrieve the new URL.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 16 posts →
+                        See all 17 posts →
                         
                     </a>
                 </footer>

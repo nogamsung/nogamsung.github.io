@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-26T14:07:32+09:00</updated>
+  <updated>2022-09-27T17:42:56+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,103 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Trigger</title>
+      <link href="/Unreal_Engine-Trigger" rel="alternate" type="text/html" title="Unreal Engine - Trigger" />
+      <published>2022-09-27T02:00:00+09:00</published>
+      <updated>2022-09-27T02:00:00+09:00</updated>
+      <id>/Unreal_Engine-Trigger</id>
+      <content type="html" xml:base="/Unreal_Engine-Trigger">&lt;h2 id=&quot;collision-detection-using-interaction&quot;&gt;Collision Detection using Interaction&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Game is interactive content, therefore it must have interactive factor&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Collision&lt;/strong&gt; in game: basic interactive implementation method
+    &lt;ul&gt;
+      &lt;li&gt;Collision check with two cars: physical collision&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Collision in UE
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Block&lt;/strong&gt;: Ban physical pass through&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Overlap&lt;/strong&gt;: Detect overlap without any physical measures&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;trigger&quot;&gt;Trigger&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Trigger&lt;/strong&gt;: Volume to make use of overlap
+    &lt;ul&gt;
+      &lt;li&gt;Actor that can be located in level&lt;/li&gt;
+      &lt;li&gt;No physical looks and irrelevant with movement&lt;/li&gt;
+      &lt;li&gt;Can implement interaction&lt;/li&gt;
+      &lt;li&gt;Default supported trigger category: box trigger, sphere trigger, capsule trigger&lt;/li&gt;
+      &lt;li&gt;Event trigger: &lt;strong&gt;OnActorBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnActorEndOverlap&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Procedure to use trigger
+    &lt;ol&gt;
+      &lt;li&gt;Place trigger act on a level&lt;/li&gt;
+      &lt;li&gt;Add &lt;strong&gt;OnActorBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnActorEndOverlap&lt;/strong&gt; event for placed trigger action instance&lt;/li&gt;
+      &lt;li&gt;Fill out the event graph on the &lt;em&gt;level blueprint&lt;/em&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;collision-component&quot;&gt;Collision Component&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Collision Component&lt;/strong&gt;: Component that is used for the purpose of overlap
+    &lt;ul&gt;
+      &lt;li&gt;Trigger is an actor that can be placed in a level, it does not internally include collision component&lt;/li&gt;
+      &lt;li&gt;You can add collision component to a general actor for trigger purpose&lt;/li&gt;
+      &lt;li&gt;Collision component event: &lt;strong&gt;OnComponentBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnComponentEndOverlap&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Procedure to use &lt;strong&gt;Collision component&lt;/strong&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Add a collision component to an actor&lt;/li&gt;
+      &lt;li&gt;Add &lt;strong&gt;OnComponentBeginOverlap&lt;/strong&gt; / &lt;strong&gt;OnComponentEndOverlap&lt;/strong&gt; event to the added collision component&lt;/li&gt;
+      &lt;li&gt;Fill out the event graph on the &lt;strong&gt;blueprint class&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Place the actor to the level&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Collision Detection using Interaction</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Input Process</title>

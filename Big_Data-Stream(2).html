@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Big Data - Stream(2)</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Web Font Setting -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt&display=swap">
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Computer Science & Engineering" />
+    <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/Big_Data-Stream(2)" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="nogamsung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Big Data - Stream(2)" />
+    <meta property="og:description" content="Filtering a Data Stream Bloom Filter Each element of data stream is a tuple Given a list of keys S Determine which tuples of stream are in S NOTE: It’s different from user-based sampling Obvious solution Use hash table. However, we do not have enough memory to store all of" />
+    <meta property="og:url" content="/Big_Data-Stream(2)" />
+    <meta property="og:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2022-09-26T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-09-26T00:00:00+09:00" />
+    <meta property="article:tag" content="Comsci" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Big Data - Stream(2)" />
+    <meta name="twitter:description" content="Filtering a Data Stream Bloom Filter Each element of data stream is a tuple Given a list of keys S Determine which tuples of stream are in S NOTE: It’s different from user-based sampling Obvious solution Use hash table. However, we do not have enough memory to store all of" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="nogamsung" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Comsci" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "nogamsung",
+        "logo": "/"
+    },
+    "url": "/Big_Data-Stream(2)",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/built/images/big-data-logo.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/Big_Data-Stream(2)"
+    },
+    "description": "Filtering a Data Stream Bloom Filter Each element of data stream is a tuple Given a list of keys S Determine which tuples of stream are in S NOTE: It’s different from user-based sampling Obvious solution Use hash table. However, we do not have enough memory to store all of"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Big Data - Stream(2)" href="/feed.xml" />
+
+
+</head>
+
+<body
+    class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+        <a class="site-nav-logo" href="/">nogamsung</a>
+        
+        
+        
+        <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-frontend" role="menuitem"><a href="/tag/frontend/">Frontend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/backend/">Backend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+        <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-comsci post tag-comsci ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="26 September 2022">26 September 2022</time>
+                    
+                    <span class="date-divider">/</span>
+                    
+                    
+                    <a href='/tag/comsci/'>COMSCI</a>
+                    
+                    
+                    
+                </section>
+                <h1 class="post-full-title">Big Data - Stream(2)</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h2 id="filtering-a-data-stream">Filtering a Data Stream</h2>
+
+<h3 id="bloom-filter">Bloom Filter</h3>
+
+<ul>
+  <li>Each element of data stream is a tuple</li>
+  <li>Given a list of keys <em>S</em></li>
+  <li>Determine which tuples of stream are in <em>S</em>
+    <ul>
+      <li>NOTE: It’s different from user-based sampling</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Obvious solution</strong></p>
+
+<p>Use hash table. However, we <strong>do not have enough memory to store all of **S</strong> in a hash table**. For example, we might
+be processing millions of filters on the same stream.</p>
+
+<p><strong>Example Application: Email Spam Filter</strong></p>
+
+<ul>
+  <li>We know 1 billion “benign” email addresses</li>
+  <li>If an email comes from one of these, it is NOT spam
+    <ul>
+      <li>All benign emails should be determined as benign address</li>
+      <li>Classifying spam as benign is acceptable</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Solution: Bloom Filter</strong></p>
+
+<ul>
+  <li>Bloom Filter consists of
+    <ul>
+      <li>An array of bits</li>
+      <li>A number of hash functions</li>
+    </ul>
+  </li>
+  <li>Two processes
+    <ul>
+      <li>Setup process
+        <ul>
+          <li>Initially, all bits in the given array set <em>0</em>s</li>
+          <li>For each element <em>x</em> in <em>S</em>, set the bits h(<em>x</em>) to 1, for each hash function <em>h</em></li>
+        </ul>
+      </li>
+      <li>Lookup process
+        <ul>
+          <li>For input <em>y</em>, check if the bits h(<em>y</em>) set to 1, for each hash function <em>h</em></li>
+          <li>Accept if all bits are set to 1, otherwise reject</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Starting from Bloom Filter with 1 Hash</strong></p>
+
+<ul>
+  <li><strong>Given a set of keys <em>S</em> that we want to filter</strong></li>
+  <li>Create a <strong>bit array <em>B</em></strong> of <em>n</em> bits, initially all <em>0</em>s</li>
+  <li>Choose a <strong>hash function <em>h</em></strong> with range <strong>[0, n)</strong></li>
+  <li>Hash each member of <em>s ∈ S</em> to one of <em>n</em> buckets, and set that bit to 1, i.e., B[h(s)] = 1</li>
+  <li>Hash each element <em>a</em> of the stream and output only those that hash to bit that was set to <em>1</em>
+    <ul>
+      <li>Output <em>a</em> if B[h(a)] == 1</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="bloom-filter-processing">Bloom Filter Processing</h4>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-7.jpeg" alt="screenshot-7" /></p>
+
+<ul>
+  <li><strong>Create false positives but no false negatives</strong>
+    <ul>
+      <li>If the item is in <em>S</em> we surely output it, if not we may still output it</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<ul>
+  <li>Use n = 11 bits for our filter</li>
+  <li>Stream elements = integers</li>
+  <li>Use two hash functions:
+    <ul>
+      <li>h<sub>1</sub>(x) =
+        <ul>
+          <li>Take odd-numbered bits from the right in the binary representation of x</li>
+          <li>Treat it as an integer i</li>
+          <li>Result is i modulo 11</li>
+        </ul>
+      </li>
+      <li>h<sub>2</sub>(x) = same, but take <strong>even</strong>-numbered bits</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-8.jpeg" alt="screenshot-8" /></p>
+
+<ul>
+  <li>Suppose we have the same Bloom filter as before, and we have set the filter to 10100101010</li>
+  <li>Lookup element y = 118 = 1<strong>1</strong>1<strong>0</strong>1<strong>1</strong>0 (binary)</li>
+  <li>h<sub>1</sub>(y) = 14 modulo 11 = 3</li>
+  <li>h<sub>2</sub>(y) = 5 modulo 11 = 5</li>
+  <li>Bit 5 is 1, but bit 3 is 0, so we are sure y is not in the set</li>
+</ul>
+
+<p>Returning to our original Question</p>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>S</td>
+          <td>= 1 billion (benign) email addresses</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>B</td>
+          <td>= 8 billion bits</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>If the email address is in <em>S</em>, then it surely hashes to a bucket that has the big set to 1, so it always gets through
+(<strong>no false negatives</strong>)</li>
+  <li>However, the UNKNOWN email address can be determined as benign (<strong>false positives</strong>) -&gt; We need to estimate</li>
+</ul>
+
+<h4 id="analysis-throwing-darts">Analysis: Throwing Darts</h4>
+
+<ul>
+  <li>More accurate analysis for the number of <strong>false positives</strong></li>
+  <li>If we throw <em>m</em> darts into <em>n</em> equally likely targets, <strong>what is the probability that a target gets at least one 
+dart?</strong>
+    <ul>
+      <li>Targets = bits/buckets</li>
+      <li>Darts = input items</li>
+    </ul>
+  </li>
+  <li>We have <em>m</em> darts,  <em>n</em> targets</li>
+  <li>What is the probability that a target gets at least one dart:</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-9.jpeg" alt="screenshot-9" /></p>
+
+<ul>
+  <li>Fraction of 1s (over input) in the array B = probability fo false positive = 1 - e<sup>-m/n</sup>
+    <ul>
+      <li>e.g. 10 darts, 8 * 10<sup>9</sup> targets
+        <ul>
+          <li>Fraction of 1s in B = 1 - e<sup>-1/8</sup> = 0.1175</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="bloom-filter-with-more-hash-functions">Bloom Filter with More Hash Functions</h4>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Consider:</td>
+          <td>S</td>
+          <td>= <em>m</em>,</td>
+          <td>B</td>
+          <td>= <em>n</em></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Use <em>k</em> independent hash functions h<sub>1</sub>, …, h<sub>k</sub></li>
+  <li>Initialization:
+    <ul>
+      <li>Set <strong><em>B</em></strong> to all <strong><em>0s</em></strong></li>
+      <li>Hash each element <strong><em>s ∈ S</em></strong> using each hash function<sub>i</sub>, set B[h<sub>i</sub>(s)] = 1 (for each <em>i = 1, 
+.., k</em>)</li>
+    </ul>
+  </li>
+  <li>Run-time:
+    <ul>
+      <li>When a stream element with key <em>x</em> arrives
+        <ul>
+          <li>If B[h<sub>i</sub>(x)] = 1 for all <em>i</em> = 1, …, k then declare that <em>x</em> is in <em>S</em>. That is, <em>x</em> hashes to a 
+bucket set to <em>1</em> for every hash function h<sub>i</sub>(x)</li>
+          <li>Otherwise discard the element <em>x</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="bloom-filter---analysis">Bloom Filter - Analysis</h4>
+
+<p>What fraction of the bit vector B are 1s?</p>
+<ul>
+  <li>Throwing <em>k * m</em> darts at <em>n</em> targets</li>
+  <li>So fraction of <em>1</em>s is **(1 - e<sup>-km/n</sup>)</li>
+</ul>
+
+<p>But we have <em>k</em> independent hash functions and we only let the element <em>x</em> through if all <em>k</em> hash element <em>x</em> to bucket
+of value 1. So, <strong>false positive probability = (1 - e<sup>-km/n</sup>)<sup>k</sup></strong></p>
+
+<ul>
+  <li>m = 1 billion, n = 8 billion
+    <ul>
+      <li>k = 1: (1 - e<sup>-1/8</sup>) = 0.1175</li>
+      <li>k = 2: (1 - e<sup>-1/4</sup>)<sup>2</sup> = 0.0493</li>
+    </ul>
+  </li>
+</ul>
+
+<p>“Optimal” value of <em>k</em>: <em>n/m ln(2)</em></p>
+<ul>
+  <li>In our case: Optimal <em>k = 8 ln(2) = 5.546</em>, Error at <em>k = 6: (1 - e<sup>-1/6</sup>)<sup>2</sup> = 0.0235</em></li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-10.jpeg" alt="screenshot-10" /></p>
+
+<h2 id="counting-distinct-elements">Counting Distinct Elements</h2>
+
+<h3 id="flajolet-martin-approach">Flajolet-Martin Approach</h3>
+
+<ul>
+  <li>Pick a hash function <em>h</em> that maps each of the <em>N</em> elements to at least <em>log<sub>2</sub> N</em> bits</li>
+  <li>For each stream element <em>a</em>, let r(a) be the number of trailing 0s in h(a)
+    <ul>
+      <li>r(a) = position of first 1 counting from the right</li>
+      <li>e.g. say <em>h(a) = 12</em>, then <em>12</em> is <em>1100</em> in binary, so <em>r(a) = 2</em></li>
+    </ul>
+  </li>
+  <li>Record R = the maximum r(a) seen
+    <ul>
+      <li><em>R = max<sub>a</sub> r(a)</em>, over all the item <em>a</em> seen so far</li>
+    </ul>
+  </li>
+  <li>Estimated number of distinct elements = 2<sup>R</sup></li>
+</ul>
+
+<h4 id="why-it-works">Why It Works</h4>
+
+<ul>
+  <li>Hash each item x to a bit, using exponential distribution
+    <ul>
+      <li>1/2 map to bit 0, 1/4 map to bit 1, …</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-11.jpeg" alt="screenshot-11" /></p>
+
+<ul>
+  <li>Intuition
+    <ul>
+      <li>The 0th bit is accessed with probability 1/2</li>
+      <li>The 1st bit is accessed with probability 1/4</li>
+      <li>…</li>
+      <li>The kth bit is accessed with probability O(1/2<sup>k</sup>)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Thus, if the kth bit is set, then we know that an event with probability O(1/2<sup>k</sup>) happened</p>
+
+<p><strong>In a more formally</strong></p>
+
+<ul>
+  <li>Goal: Showing that probability of finding a tail of <em>r</em> zeros:
+    <ul>
+      <li>Goes to <strong>1</strong> if <strong>m » 2<sup>r</sup></strong></li>
+      <li>Goes to <strong>0</strong> if <strong>m « 2<sup>r</sup></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p>where <strong>m</strong> is the number of distinct elements seen so far in the stream</p>
+
+<p><strong>Also, it means that 2<em>R</em> will almost always be around <em>m</em></strong></p>
+
+<ul>
+  <li>The probability that a given h(a) ends in at least <em>r</em> zeros is 2<sup>-r</sup>
+    <ul>
+      <li><strong>h(a)</strong> hashes elements uniformly at random</li>
+      <li>Probability that a random number ends in at least <em>r</em> zeros is 2<sup>-r</sup></li>
+    </ul>
+  </li>
+  <li>Then the probability of NOT seeing a tail of length <em>r</em> among <em>m</em> elements:</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-12.jpeg" alt="screenshot-12" /></p>
+
+<h4 id="note-️">Note ❗️</h4>
+
+<p><img src="https://latex.codecogs.com/svg.image?(1&space;-&space;2^{-r})^{m}&space;=&space;(1&space;-&space;2^{-r})^{2^{r}(m2^{-r})}\approx&space;e^{-m2^{-r}}" alt="equation-1" /></p>
+
+<ul>
+  <li><strong>Probability of NOT finding a tail of length <em>r</em> is:</strong>
+    <ul>
+      <li>If <strong>m « 2<sup>r</sup></strong>, then probability tends to 1</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?(1&space;-&space;2^{-r})^{m}&space;\approx&space;e^{-m2^{-r}}&space;=&space;1" alt="equation-2" /> as <img src="https://latex.codecogs.com/svg.image?m/2^{r}&space;\rightarrow&space;0" alt="equation-3" /></p>
+
+<p>So, the probability of finding a tail of length <strong>r</strong> tends to <strong>0</strong></p>
+
+<ul>
+  <li>If <strong>m » 2<sup>-r</sup></strong>, then probability tends to 0</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?(1&space;-&space;2^{-r})^{m}&space;\approx&space;e^{-m2^{-r}}&space;=&space;0" alt="equation-4" /> as <img src="https://latex.codecogs.com/svg.image?m/2^{r}&space;\rightarrow&space;\infty&space;" alt="eqaution-5" /></p>
+
+<p>So, the probability of finding a tail of length <strong>r</strong> tends to <strong>1</strong></p>
+
+<p><strong>Thus, 2<sup>R</sup> will almost always be around <em>m</em></strong></p>
+
+<h2 id="computing-moments">Computing Moments</h2>
+
+<h3 id="generalization">Generalization</h3>
+
+<ul>
+  <li>Suppose a stream has elements chosen from a set <em>A</em> of <em>N</em> values</li>
+  <li>Let <em>m<sub>i</sub></em> be the number of times value <em>i</em> occurs in the stream</li>
+  <li>The <em>k<sup>th</sup></em> moment is:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{i\in&space;A}&space;(m_{i})^{k}" alt="equation-5" /></p>
+
+<h3 id="special-cases">Special Cases</h3>
+
+<ul>
+  <li>0<sup>th</sup> moment = number of distinct elements
+    <ul>
+      <li>The problem just considered</li>
+    </ul>
+  </li>
+  <li>1<sup>st</sup> moment = count of the numbers of elements = length of the stream
+    <ul>
+      <li>Easy to compute</li>
+    </ul>
+  </li>
+  <li>2<sup>nd</sup> moment = surprise number <em>S</em> = a measure of how uneven the distribution is</li>
+</ul>
+
+<h4 id="example-surprise-number">Example: Surprise Number</h4>
+
+<ul>
+  <li>Stream of length 100</li>
+  <li>11 distinct values</li>
+  <li>Item counts: 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 Surprise S = 910</li>
+  <li>Item counts: 90, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 Surprise S = 8,110</li>
+</ul>
+
+<h3 id="problem-definition">Problem Definition</h3>
+
+<p>Q: Given a stream, how can we estimate k-th moment efficiently, with small memory space?</p>
+
+<p>A: AMS method</p>
+
+<h3 id="ams-method">AMS Method</h3>
+
+<ul>
+  <li>works for all moments</li>
+  <li>Gives an unbiased estimate</li>
+  <li>We will just concentrate on the 2<sup>nd</sup> moment <em>S</em></li>
+  <li>We pick and keep track of many variables <em>X</em>:
+    <ul>
+      <li>For each variable <em>X</em> we store <em>X.el</em> and <em>X.val</em>
+        <ul>
+          <li><em>X.el</em> corresponds to the item <em>i</em></li>
+          <li><em>X.val</em> corresponds to the count of item <em>i</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Our goal is to compute:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?S&space;=&space;\sum&space;_{i}m_{i}^{2}" alt="equation-6" /></p>
+
+<h4 id="note-️-1">Note ❗️</h4>
+
+<p>This requires a count in main memory, so number of <em>X</em>s is limited</p>
+
+<h3 id="one-random-variable-x">One Random Variable (X)</h3>
+
+<ul>
+  <li>How to set <em>X.val</em> and <em>X.el</em>?
+    <ul>
+      <li>Assume stream has length <em>n</em></li>
+      <li>Pick some random time <em>t(t&lt;n)</em> to start, so that any time is equally likely</li>
+      <li>Let at time <em>t</em> the stream have item <em>i. we set X.el = i</em></li>
+      <li>Then we maintain count <em>c (X.val = c)</em> of the number of <em>i</em>s in the stream starting from the chosen time <em>t</em></li>
+    </ul>
+  </li>
+  <li>Then the estimate of the 2<sup>nd</sup> moment is:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?S&space;=&space;f(X)&space;=&space;n(2&space;\cdot&space;c&space;-&space;1)" alt="equation-7" /></p>
+
+<h4 id="note-️-2">Note ❗️</h4>
+
+<p>We will keep track of multiple <em>X</em>s, <em>(X<sub>1</sub>, X<sub>2</sub>, …, X<sub>k</sub>)</em> and our final estimate will 
+be:</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?S&space;=&space;1/k\sum_{j}^{k}f(X_{j})" alt="equation-8" /></p>
+
+<h3 id="expectation-analysis">Expectation Analysis</h3>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-13.jpeg" alt="screenshot-13" /></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?E[f(X)]&space;=&space;\frac{1}{n}\sum&space;_{i}n(1&space;&plus;&space;3&space;&plus;&space;5&space;&plus;&space;\cdots&space;&plus;&space;2m_{i}&space;-&space;1)" alt="equation-9" /></p>
+
+<ul>
+  <li>Little side calculation:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?(1&space;&plus;&space;3&space;&plus;&space;5&space;&plus;&space;\cdots&space;&plus;&space;2m_{i}&space;-&space;1)&space;=&space;\sum_{i=1}^{m_{i}}(2i&space;-&space;1)&space;=&space;2\frac{m_{i}(m_{i}&plus;1)}{2}&space;-&space;m_{i}&space;=&space;(m_{i})^{2}" alt="equation-10" /></p>
+
+<p>Then,</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?E[f(X)]&space;=&space;\frac{1}{n}\sum&space;_{i}n(m_{i})^{2}" alt="equation-11" /></p>
+
+<p>So,</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?E[f(X)]&space;=&space;\sum&space;_{i}(m_{i})^{2}&space;=&space;S" alt="equation-12" /></p>
+
+<p>We have the second moment</p>
+
+<h3 id="higher-order-moments">Higher-Order Moments</h3>
+
+<ul>
+  <li>For estimating k<sup>th</sup> moment we essentially use the same algorithm but change the estimate:
+    <ul>
+      <li>For <strong>k = 2</strong> we used <em>n (2 * c - 1)</em></li>
+      <li>For <strong>k = 3</strong> we use <em>n (3 * c<sup>2</sup> - 3c + 1)</em> (where <strong>c = X.val</strong>)</li>
+    </ul>
+  </li>
+  <li>Why?
+    <ul>
+      <li>For <strong>k = 2</strong>: Remember we had (1 + 3 + 5 + … + 2m<sub>i</sub> - 1) and we showed terms <strong>2c - 1</strong> (for <strong>c = 1, 
+… m</strong>) sum to <strong>m<sup>2</sup></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{c=1}^{m}2c&space;-&space;1&space;=&space;\sum_{c=1}^{m}c^{2}&space;-&space;\sum_{c=1}^{m}(c-1)^{2}&space;=&space;m^{2}" alt="equation-13" /></p>
+
+<p>so,</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?2c&space;-&space;1&space;=&space;c^{2}&space;-&space;(c&space;-&space;1)^{2}" alt="equation-14" /></p>
+
+<ul>
+  <li>For <strong>k = 3</strong>: <em>c<sup>3</sup> - (c - 1)<sup>3</sup> = 3c<sup>2</sup> - 3c + 1</em></li>
+</ul>
+
+<p>Generally</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?Estimate&space;=&space;n(c^{k}-(c&space;-&space;1)^{k})" alt="equation-15" /></p>
+
+<h3 id="combining-samples">Combining Samples</h3>
+
+<ul>
+  <li>In practice:
+    <ul>
+      <li>Compute <strong>f(X) = n(2c - 1)</strong> for as many variables <strong><em>X</em></strong> as you can fit in memory</li>
+      <li>Average them in groups</li>
+      <li>Take median of averages</li>
+    </ul>
+  </li>
+  <li>Problem: Streams never end
+    <ul>
+      <li>We assumed there was a number <strong><em>n</em></strong>, the number of positions in the stream. But real streams go on forever, so 
+<strong><em>n</em></strong> is a variable - the number of inputs seen so far.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="fix-ups">Fix-ups</h4>
+
+<ul>
+  <li>The variables <strong><em>X</em></strong> have <strong><em>n</em></strong> as a factor - keep <strong><em>n</em></strong> separately; just hold the count in <strong><em>X</em></strong></li>
+  <li>Suppose we can only store <strong><em>k</em></strong> counts. We must throw some <strong><em>X</em></strong>s out as time goes on:
+    <ul>
+      <li>Objective: Each starting time <strong><em>t</em></strong> is selected with probability <strong><em>k/n</em></strong></li>
+      <li>Solution: Fixed-size sampling
+        <ul>
+          <li>Choose the first <strong><em>k</em></strong> times for <strong><em>k</em></strong> variables</li>
+          <li>When the <strong><em>n<sup>th</sup></em></strong> element arrives <strong><em>(n &gt; k)</em></strong>, choose it with probability <strong><em>k/n</em></strong></li>
+          <li>If you choose it, throw one of the previously stored variables <strong><em>X</em></strong> out with equal probability</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="counting-itemsets">Counting Itemsets</h2>
+
+<p>Q: Given a stream, which items appear more <em>s</em> times in the window?</p>
+
+<p>A: Think of the stream of baskets as one binary stream per item.</p>
+
+<ul>
+  <li><strong>1</strong> = item present; <strong>0</strong> = not present</li>
+  <li>Use <strong>DGIM</strong> to estimate counts of <strong>1</strong>s for all items</li>
+</ul>
+
+<p><img src="../../assets/screenshots/2022-09-25/screenshot-14.jpeg" alt="screenshot-14" /></p>
+
+<p>In principle, you could count frequent pairs or even larger sets the same way</p>
+<ul>
+  <li>One stream per itemsets</li>
+  <li>e.g. for a basket {i, j, k}, assume 7 independent streams: (i) (j) (k) (i, j) (i, k) (j, k) (i, j, k)</li>
+</ul>
+
+<p>Drawbacks:</p>
+<ul>
+  <li>Number of itemsets is way too big</li>
+</ul>
+
+<h3 id="exponentially-decaying-windows">Exponentially Decaying Windows</h3>
+
+<ul>
+  <li>Exponentially decaying windows: A heuristic for selecting likely frequent item(sets)</li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></li>
+  <li>Introduction to Big Data Lecture by <a href="https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;siteId=isis&amp;dum=dum&amp;command=empDetail&amp;empNum=20201168&amp;empSearchTab=01&amp;deptCode=&amp;siteId=isis" target="_blank">Daejin Choi</a> in <a href="https://www.inu.ac.kr/" target="_blank">Incheon National University</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!---
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to nogamsung</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                
+                <section class="author-card">
+                    
+                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg"
+                        alt="gs97ahn" />
+                    
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="/author/gs97ahn">nogamsung</a></h4>
+                        
+                        <p><a href="gs97ahn.github.io/about/">Geomseong Ahn</a></p>
+                        
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="/author/gs97ahn">Read More</a>
+                </div>
+                
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        var this_page_url = '/Big_Data-Stream(2)';
+                        var this_page_identifier = '/Big_Data-Stream(2)';
+                        var this_page_title = 'Big Data - Stream(2)';
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://geomseongahn.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+            
+            
+            
+            <article class="read-next-card" 
+                style="background-image: url(/assets/built/images/blog-cover.jpg)" >
+                <header class="read-next-card-header">
+                    <small class="read-next-card-header-sitetitle">&mdash; nogamsung &mdash;</small>
+                    
+                    <h3 class="read-next-card-header-title"><a href="/tag/comsci/">Comsci</a></h3>
+                    
+                </header>
+                <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                <div class="read-next-card-content">
+                    <ul>
+                        
+                        
+                        
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Intelligent_Information_Systems-Public_-Population_Data">Intelligent Information Systems - Public Population Data</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-The_Web_and_HTTP">Computer Network - The Web and HTTP</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-Principles_of_Network_Applications">Computer Network - Protocol Layers and Their Service Models</a></li>
+                            
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                    </ul>
+                </div>
+                <footer class="read-next-card-footer">
+                    <a href="/tag/comsci/">
+                        
+                        See all 17 posts →
+                        
+                    </a>
+                </footer>
+            </article>
+            
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Unreal_Engine-Trigger">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/unreal-engine-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Unreal_Engine-Trigger">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Etc</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Unreal Engine - Trigger</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Collision Detection using Interaction
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Intelligent_Information_Systems-Public_-Population_Data">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Intelligent_Information_Systems-Public_-Population_Data">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Intelligent Information Systems - Public Population Data</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Visualizing Population Data
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+            <span>nogamsung</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Big Data - Stream(2)</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw"
+            href="https://twitter.com/share?text=Big+Data+-+Stream%282%29&amp;url=https://gs97ahn.github.io/Big_Data-Stream(2)"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Big_Data-Stream(2)"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">nogamsung</a> &copy; 2022</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search nogamsung</h1>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+        });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-227528384-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+
+</html>
