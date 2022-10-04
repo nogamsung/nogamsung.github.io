@@ -731,6 +731,75 @@ be:</p>
 
 <ul>
   <li>Exponentially decaying windows: A heuristic for selecting likely frequent item(sets)</li>
+  <li>If stream is a<sub>1</sub>, a<sub>2</sub>, .. and we are taking the sum of the stream, take the answer at time <em>t</em> to
+be:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{t}^{i=1}a_{i}(1&space;-&space;c)^{t-i}" alt="equation-1" /></p>
+
+<p><strong><em>c</em></strong> is a constant, presumably tiny, like 10<sup>-6</sup> or 10<sup>-9</sup></p>
+
+<p>When new a<sub>t+1</sub> arrives, multiply current sum by (1-c) and add a<sub>t+1</sub></p>
+
+<h4 id="example-counting-items">Example: Counting Items</h4>
+
+<p>If each a<sub>i</sub> is an “item” we can compute the characteristic function of each possible item <em>x</em> as an
+<strong>Exponentially Decaying Window</strong></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{i=1}^{t}\delta&space;_{i}\cdot&space;(1-c)^{t-i}" alt="equation-2" /> where <img src="https://latex.codecogs.com/svg.image?\delta_{i}&space;=&space;1&space;" alt="equation-3" /> if a<sub>i</sub> = x, and <strong>0</strong> otherwise</p>
+
+<p>Imagine that for each item <strong>x</strong> we have binary stream (<strong>x</strong> if <strong><em>x</em></strong> appears, <strong>0</strong> if <strong><em>x</em></strong> does not appear)</p>
+
+<p>New item <em>x</em> arrives, multiply all counts by <strong>(1 - c)</strong> and add <strong>+1</strong> to count for element <strong><em>x</em></strong></p>
+
+<p><strong>Call this sum the “weight” of item x</strong></p>
+
+<h4 id="example-counting-items-1">Example: Counting Items</h4>
+
+<p><img src="./assets/screenshots/2022-09-25/screenshot-15.jpeg" alt="screenshot-15" /></p>
+
+<p>What are “currently” most popular movies?</p>
+
+<ul>
+  <li>Suppose we want to find movies of weight &gt; 1/2
+    <ul>
+      <li>Important property: Sum over all weights:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{t}(1-c)^{t}" alt="equation-4" /> is 1/[1 - (1 - c)] = 1/c</p>
+
+<p>Thus, there cannot be more than <strong>2/<em>c</em></strong> movies with weight of <strong>1/2</strong>. So 2/c is a limit on the number of movies being
+counted at any time.</p>
+
+<h3 id="extension-to-itemsets">Extension to Itemsets</h3>
+
+<ul>
+  <li>Count (some) itemsets
+    <ul>
+      <li>What are currently “hot” itmesets?</li>
+      <li>Problem: Too many itemsets to keep counts of all of them in memory</li>
+    </ul>
+  </li>
+  <li>When a basket B comes in:
+    <ul>
+      <li>Multiply all counts by <strong>(1-c)</strong></li>
+      <li>For uncounted items in <strong>B</strong>, create nes count</li>
+      <li>Add <strong>1</strong> to count of any item in <strong>B</strong> and to any <strong>itemset</strong> contained in <strong>B</strong> that is already being counted</li>
+      <li><strong>Drop counts &lt; 1/2</strong></li>
+      <li>Initiate new counts (next slide)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="imitation-of-new-counts">Imitation of New Counts</h3>
+
+<p>Start a count for an itemset <strong>S ⊆ B</strong> every proper subset of <strong>S</strong> had a count prior to arrival of basket <strong>B</strong>.</p>
+
+<ul>
+  <li>Intuitively: If all subsets of <strong>S</strong> are being counted this means they are “<strong>frequent/hot</strong>” and thus <strong>S</strong> has a
+potential to be “<strong>hot</strong>”.</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
@@ -849,12 +918,8 @@ be:</p>
                             
                         
                         
-                            
-                            
                         
-                        
-                        
-                         <li><a href="/Intelligent_Information_Systems-Public_-Population_Data">Intelligent Information Systems - Public Population Data</a></li>
+                         <li><a href="/Big_Data-Data_Collection_and_Exploration">Big Data - Data Collection and Exploration</a></li>
                             
                             
                             
@@ -862,7 +927,7 @@ be:</p>
                         
                         
                         
-                         <li><a href="/Computer_Network-The_Web_and_HTTP">Computer Network - The Web and HTTP</a></li>
+                         <li><a href="/Computer_Network-DNS-The_Internet's-Directory-Service">Computer Network - DNS - The Internet's Directory Service</a></li>
                             
                             
                             
@@ -870,8 +935,53 @@ be:</p>
                         
                         
                         
-                         <li><a href="/Computer_Network-Principles_of_Network_Applications">Computer Network - Protocol Layers and Their Service Models</a></li>
+                         <li><a href="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas">Intelligent Information Systems - Data Analysis using Numpy and Pandas</a></li>
                             
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -1052,7 +1162,7 @@ be:</p>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 17 posts →
+                        See all 22 posts →
                         
                     </a>
                 </footer>

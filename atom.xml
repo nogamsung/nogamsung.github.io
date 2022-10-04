@@ -8,6 +8,201 @@
     
       
       <item>
+        <title>Unreal Engine - Custom Event and Event Dispatcher</title>
+        
+          <description>&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dynamically spawn an object
+    &lt;ul&gt;
+      &lt;li&gt;Once located in a map, it is static, meaning it does not move&lt;/li&gt;
+      &lt;li&gt;Object that dynamically appear and disappear
+        &lt;ul&gt;
+          &lt;li&gt;Item that is collected should disappear&lt;/li&gt;
+          &lt;li&gt;Cannon should disappear after it is launched from a cannon shooter&lt;/li&gt;
+          &lt;li&gt;Enemy should constantly &lt;strong&gt;spawn&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;Player should &lt;strong&gt;respawn&lt;/strong&gt; after death&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Spawn and Respawn
+    &lt;ul&gt;
+      &lt;li&gt;Spawn: Object such as character or item that spawns dynamically&lt;/li&gt;
+      &lt;li&gt;Respawn: Character that respawns after death&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 04 Oct 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Actor_Spawn_and_Respawn</link>
+        <guid isPermaLink="true">/Unreal_Engine-Actor_Spawn_and_Respawn</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Data Collection and Exploration</title>
+        
+          <description>&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
+&lt;h3 id=&quot;considerations&quot;&gt;Considerations&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Does the dataset exist (or can we build the dataset)?
+    &lt;ul&gt;
+      &lt;li&gt;If it &lt;strong&gt;DOES NOT EXIST&lt;/strong&gt;, the DM problem you defined &lt;strong&gt;cannot be conducted&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;If it &lt;strong&gt;DOES EXIST&lt;/strong&gt;, specify the target data source with considering
+        &lt;ul&gt;
+          &lt;li&gt;Availability (i.e., permission)&lt;/li&gt;
+          &lt;li&gt;Access type (API, download, …) -&amp;gt; Need to find “limits or warnings”&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Decide the scale of the dataset and what to store
+    &lt;ul&gt;
+      &lt;li&gt;Reasonable amount to solve your problem&lt;/li&gt;
+      &lt;li&gt;Storage capability&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Decide the collection methodology
+    &lt;ul&gt;
+      &lt;li&gt;Crawling web pages or using APIs&lt;/li&gt;
+      &lt;li&gt;Multiprocessing vs. single processing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 03 Oct 2022 22:30:00 +0900</pubDate>
+        <link>
+        /Big_Data-Data_Collection_and_Exploration</link>
+        <guid isPermaLink="true">/Big_Data-Data_Collection_and_Exploration</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - DNS - The Internet's Directory Service</title>
+        
+          <description>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 03 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-DNS-The_Internet's-Directory-Service</link>
+        <guid isPermaLink="true">/Computer_Network-DNS-The_Internet's-Directory-Service</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - Data Analysis using Numpy and Pandas</title>
+        
+          <description>&lt;h2 id=&quot;python-libraries-for-data-analysis&quot;&gt;Python Libraries for Data Analysis&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Matplotlib&lt;/li&gt;
+  &lt;li&gt;Numpy&lt;/li&gt;
+  &lt;li&gt;Pandas&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        
+        <pubDate>Sun, 02 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Electronic Mail in the Internet</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 30 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Electronic_Mail_in_the_Internet</link>
+        <guid isPermaLink="true">/Computer_Network-Electronic_Mail_in_the_Internet</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Graduation Project - First Project</title>
+        
+          <description>&lt;h2 id=&quot;capstone-design&quot;&gt;Capstone Design&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 29 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Graduation_Project-First_Project</link>
+        <guid isPermaLink="true">/Graduation_Project-First_Project</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Unreal Engine - Custom Event and Event Dispatcher</title>
+        
+          <description>&lt;h2 id=&quot;event-node&quot;&gt;Event Node&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Event Based Structure
+    &lt;ul&gt;
+      &lt;li&gt;Game engine detects multiple events(input, collision, etc.) and notify them by the blueprint&lt;/li&gt;
+      &lt;li&gt;Therefore, blueprint is the flow of event process&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Category of Events
+    &lt;ul&gt;
+      &lt;li&gt;Basic events&lt;/li&gt;
+      &lt;li&gt;Input event&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Event Node
+    &lt;ul&gt;
+      &lt;li&gt;Event node = Node called when a specific event occurs&lt;/li&gt;
+      &lt;li&gt;Therefore, event node = first node, a special node, in a node network that flows according to the script coding&lt;/li&gt;
+      &lt;li&gt;Blueprint script coding is writing out various events in the event network&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Sep 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Custom_Event_and_Event_Dispatcher</link>
+        <guid isPermaLink="true">/Unreal_Engine-Custom_Event_and_Event_Dispatcher</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - Visualize in Various Format</title>
+        
+          <description>&lt;h3 id=&quot;bar-graph&quot;&gt;Bar Graph&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Sep 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Visualize_in_Various_Format</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Visualize_in_Various_Format</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Trigger</title>
         
           <description>&lt;h2 id=&quot;collision-detection-using-interaction&quot;&gt;Collision Detection using Interaction&lt;/h2&gt;

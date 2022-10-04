@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-09-27T17:42:56+09:00</updated>
+  <updated>2022-10-04T17:52:29+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,354 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Custom Event and Event Dispatcher</title>
+      <link href="/Unreal_Engine-Actor_Spawn_and_Respawn" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" />
+      <published>2022-10-04T01:30:00+09:00</published>
+      <updated>2022-10-04T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Actor_Spawn_and_Respawn</id>
+      <content type="html" xml:base="/Unreal_Engine-Actor_Spawn_and_Respawn">&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dynamically spawn an object
+    &lt;ul&gt;
+      &lt;li&gt;Once located in a map, it is static, meaning it does not move&lt;/li&gt;
+      &lt;li&gt;Object that dynamically appear and disappear
+        &lt;ul&gt;
+          &lt;li&gt;Item that is collected should disappear&lt;/li&gt;
+          &lt;li&gt;Cannon should disappear after it is launched from a cannon shooter&lt;/li&gt;
+          &lt;li&gt;Enemy should constantly &lt;strong&gt;spawn&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;Player should &lt;strong&gt;respawn&lt;/strong&gt; after death&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Spawn and Respawn
+    &lt;ul&gt;
+      &lt;li&gt;Spawn: Object such as character or item that spawns dynamically&lt;/li&gt;
+      &lt;li&gt;Respawn: Character that respawns after death&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;actor-spawning&quot;&gt;Actor Spawning&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Location fixed with a constant is not flexible&lt;/li&gt;
+  &lt;li&gt;Location information must have an actor&lt;/li&gt;
+  &lt;li&gt;Location can be adjusted using a mouse&lt;/li&gt;
+  &lt;li&gt;A typical actor: “Target Point” actor, “Player starter” actor, …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Actor spawning
+    &lt;ul&gt;
+      &lt;li&gt;SpawnActor from Class&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Transform
+    &lt;ul&gt;
+      &lt;li&gt;transform matrix&lt;/li&gt;
+      &lt;li&gt;Location + Rotation + Scale&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Extract actor’s transform
+    &lt;ul&gt;
+      &lt;li&gt;GetActorTransform&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;destroy&quot;&gt;Destroy&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unnecessary actors
+    &lt;ul&gt;
+      &lt;li&gt;Resources(CPU, Memory) must not be wasted&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Way to delete an actor
+    &lt;ul&gt;
+      &lt;li&gt;Destroy Actor&lt;/li&gt;
+      &lt;li&gt;Using lifespan property&lt;/li&gt;
+      &lt;li&gt;Using kill Z property&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;using-timer&quot;&gt;Using Timer&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Using timer
+    &lt;ul&gt;
+      &lt;li&gt;After the specified time, the subroutine is called&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Two types of timer function
+    &lt;ul&gt;
+      &lt;li&gt;Utilities &amp;gt; Timer &amp;gt; ‘&lt;strong&gt;Set Timer by Function Name&lt;/strong&gt;’&lt;/li&gt;
+      &lt;li&gt;Utilities &amp;gt; Timer &amp;gt; ‘&lt;strong&gt;Set Timer by Event&lt;/strong&gt;’ (Recommended)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timer function input
+    &lt;ul&gt;
+      &lt;li&gt;Function Name: Function / Custom event name string&lt;/li&gt;
+      &lt;li&gt;Event = Connect delegate pin&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Time&lt;/strong&gt;: Wait time in seconds&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Looping&lt;/strong&gt;: Called every specified time
+        &lt;ul&gt;
+          &lt;li&gt;you can use other actions such as &lt;em&gt;ResetTimer&lt;/em&gt;, &lt;em&gt;UnsetTimer&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Return Value&lt;/strong&gt;: Timer handle returns&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Other timer related function
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Clear and Invalidate Timer by Handle&lt;/strong&gt;: Deletes an infinite loop timer&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Get Timer Elapsed(Remaining) Time by Handle&lt;/strong&gt;: Returns remaining time&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Paused(Unpaused) Timer by Handle&lt;/strong&gt;: Pauses a timer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;using-hit-event&quot;&gt;Using Hit Event&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;If the collision occurs in block form, not overlap, the default event does not occur&lt;/li&gt;
+  &lt;li&gt;When block form of collision event occurs:
+    &lt;ul&gt;
+      &lt;li&gt;Check ‘Simulation Generates Hit Events’ in the component’s detail tab&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Callback function
+    &lt;ul&gt;
+      &lt;li&gt;Add the ‘OnComponentHit’ to the specific component to event node in the node graph&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Callback function in actor metrics
+    &lt;ul&gt;
+      &lt;li&gt;Add the ‘OnActorHit’ to the specific instance to event node in the node graph&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pawn-and-controller&quot;&gt;Pawn and Controller&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Difference between Pawn and Controller
+    &lt;ul&gt;
+      &lt;li&gt;Pawn: An existence, such as player or AI, in the world that has physical shape&lt;/li&gt;
+      &lt;li&gt;Controller: Controller class that manages a pawn
+        &lt;ul&gt;
+          &lt;li&gt;Human Player or Computer Player(AI)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;When a game starts, the specified &lt;strong&gt;pawn&lt;/strong&gt; and &lt;strong&gt;controller&lt;/strong&gt; is auto-generated
+        &lt;ul&gt;
+          &lt;li&gt;Controller is not visible but it is auto-generated(you can see it in the outliner)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Input Event Process
+    &lt;ul&gt;
+      &lt;li&gt;General way: Controller gets the input and applies to the pawn&lt;/li&gt;
+      &lt;li&gt;Simple implementation way: Pawn itself gets the input and controls itself&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pawns-response&quot;&gt;Pawn’s Response&lt;/h2&gt;
+&lt;h4 id=&quot;pawns-response-1&quot;&gt;Pawn’s response&lt;/h4&gt;
+&lt;p&gt;After pawn is destroyed, the pawn must respawn in the specified place to replay. However, the pawn’s controller does not
+disappear. Therefore, when the pawn respawn, the original controller must be reconnected.&lt;/p&gt;
+
+&lt;h4 id=&quot;pawn-and-controller-connection&quot;&gt;Pawn and Controller Connection&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pawn and Controller should have one to one connection&lt;/li&gt;
+  &lt;li&gt;In order for the controller to Possess a different pawn, it must UnPossess first&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;event-binding&quot;&gt;Event binding&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Respawning after a player disappear
+    &lt;ul&gt;
+      &lt;li&gt;Define a custom event so the player’s pawn will respawn&lt;/li&gt;
+      &lt;li&gt;Make it so the event is called when the pawn is destroyed&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Event binding
+    &lt;ul&gt;
+      &lt;li&gt;Event bind OnDestroyed to the respawn event&lt;/li&gt;
+      &lt;li&gt;However, pawn level is not placed, it is created upon it runs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Spawn and Respawn Dynamically spawn an object Once located in a map, it is static, meaning it does not move Object that dynamically appear and disappear Item that is collected should disappear Cannon should disappear after it is launched from a cannon shooter Enemy should constantly spawn Player should respawn after death Spawn and Respawn Spawn: Object such as character or item that spawns dynamically Respawn: Character that respawns after death</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Graduation Project - First Project</title>
+      <link href="/Graduation_Project-First_Project" rel="alternate" type="text/html" title="Graduation Project - First Project" />
+      <published>2022-09-29T00:00:00+09:00</published>
+      <updated>2022-09-29T00:00:00+09:00</updated>
+      <id>/Graduation_Project-First_Project</id>
+      <content type="html" xml:base="/Graduation_Project-First_Project">&lt;h2 id=&quot;capstone-design&quot;&gt;Capstone Design&lt;/h2&gt;
+
+&lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. I am&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Capstone Design</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Unreal Engine - Custom Event and Event Dispatcher</title>
+      <link href="/Unreal_Engine-Custom_Event_and_Event_Dispatcher" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" />
+      <published>2022-09-28T19:30:00+09:00</published>
+      <updated>2022-09-28T19:30:00+09:00</updated>
+      <id>/Unreal_Engine-Custom_Event_and_Event_Dispatcher</id>
+      <content type="html" xml:base="/Unreal_Engine-Custom_Event_and_Event_Dispatcher">&lt;h2 id=&quot;event-node&quot;&gt;Event Node&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Event Based Structure
+    &lt;ul&gt;
+      &lt;li&gt;Game engine detects multiple events(input, collision, etc.) and notify them by the blueprint&lt;/li&gt;
+      &lt;li&gt;Therefore, blueprint is the flow of event process&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Category of Events
+    &lt;ul&gt;
+      &lt;li&gt;Basic events&lt;/li&gt;
+      &lt;li&gt;Input event&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Event Node
+    &lt;ul&gt;
+      &lt;li&gt;Event node = Node called when a specific event occurs&lt;/li&gt;
+      &lt;li&gt;Therefore, event node = first node, a special node, in a node network that flows according to the script coding&lt;/li&gt;
+      &lt;li&gt;Blueprint script coding is writing out various events in the event network&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;custom-event-node&quot;&gt;Custom Event Node&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Custom Event Node
+    &lt;ul&gt;
+      &lt;li&gt;You need be able to make a specific event node&lt;/li&gt;
+      &lt;li&gt;The event node that is defined by a user is &lt;strong&gt;custom event&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Calling Custom Event
+    &lt;ul&gt;
+      &lt;li&gt;Think of the event as a function&lt;/li&gt;
+      &lt;li&gt;“Custom event” is the same as “custom function”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;event-dispatcher&quot;&gt;Event Dispatcher&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Event Dispatcher: Communication between actors
+    &lt;ul&gt;
+      &lt;li&gt;The method used by an actor to communicate with other actors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Procedure for Usage
+    &lt;ol&gt;
+      &lt;li&gt;Make an object that &lt;strong&gt;event dispatcher&lt;/strong&gt; owned by an actor to notify an event&lt;/li&gt;
+      &lt;li&gt;Other actors that listens to the event dispatcher subscribe themselves&lt;/li&gt;
+      &lt;li&gt;Actor orders the event dispatcher to send which would notify all the actors that are subscribed&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Event Node Event Based Structure Game engine detects multiple events(input, collision, etc.) and notify them by the blueprint Therefore, blueprint is the flow of event process Category of Events Basic events Input event Event Node Event node = Node called when a specific event occurs Therefore, event node = first node, a special node, in a node network that flows according to the script coding Blueprint script coding is writing out various events in the event network</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Trigger</title>
@@ -780,93 +1128,6 @@ bring the desired experience to a player.&lt;/li&gt;
 
       
         <summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Installing Unreal Engine</title>
-      <link href="/Unreal_Engine-Installing_Unreal_Engine" rel="alternate" type="text/html" title="Unreal Engine - Installing Unreal Engine" />
-      <published>2022-08-31T20:00:00+09:00</published>
-      <updated>2022-08-31T20:00:00+09:00</updated>
-      <id>/Unreal_Engine-Installing_Unreal_Engine</id>
-      <content type="html" xml:base="/Unreal_Engine-Installing_Unreal_Engine">&lt;h2 id=&quot;unity-vs-unreal-engine&quot;&gt;Unity vs Unreal Engine&lt;/h2&gt;
-&lt;h3 id=&quot;unity&quot;&gt;Unity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Easy to learn&lt;/li&gt;
-  &lt;li&gt;Easy to program 2D mobile game&lt;/li&gt;
-  &lt;li&gt;Various assets in stored contents&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;unreal-engine&quot;&gt;Unreal Engine&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Open Source&lt;/li&gt;
-  &lt;li&gt;Allows C++&lt;/li&gt;
-  &lt;li&gt;Provides high graphic quality&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;installing&quot;&gt;Installing&lt;/h2&gt;
-&lt;h3 id=&quot;step-1️⃣&quot;&gt;Step 1️⃣&lt;/h3&gt;
-
-&lt;p&gt;Go to &lt;a href=&quot;https://www.unrealengine.com/en-US/download&quot; target=&quot;_blank&quot;&gt;Unreal Engine Downalods&lt;/a&gt; and click 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DONWLOAD LAUNCHER&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
-
-&lt;p&gt;After downloading the launcher, sign up with one of the options.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
-
-&lt;p&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unreal Engine&lt;/code&gt; in the left menu tab.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
-
-&lt;p&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Library&lt;/code&gt; on the top menu tab.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
-
-&lt;p&gt;Finally Click on the version you would like to download and click install. This would take a long time as it is 
-approximately 20GB.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Unity vs Unreal Engine Unity Easy to learn Easy to program 2D mobile game Various assets in stored contents</summary>
       
 
       
