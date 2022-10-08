@@ -434,6 +434,499 @@ improve mining speed and quality</li>
 
 <h2 id="data-transformation--discretization">Data Transformation &amp; Discretization</h2>
 <h3 id="data-transformation">Data Transformation</h3>
+<p>A function that maps the entire set of values of a given attribute to a new set of replacement values so that each value
+can be identified with one of the new values</p>
+
+<h4 id="methods">Methods</h4>
+<ul>
+  <li><strong>Aggregation</strong>: Summarization, data cube construction</li>
+  <li><strong>Smoothing</strong>: Remove noise from data</li>
+  <li><strong>Normalization</strong>: Scaled to fall within a smaller, common, and specified range
+    <ul>
+      <li>min-max, z-score, decimal scaling</li>
+    </ul>
+  </li>
+  <li><strong>Discretization</strong>: Concept hierarchy climbing
+    <ul>
+      <li>Binning, Clustering, …</li>
+    </ul>
+  </li>
+  <li><strong>Attribute/feature construction</strong>
+    <ul>
+      <li>New attributes constructed from the given ones</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="normalization">Normalization</h3>
+<ul>
+  <li>Min-max normalization: to [new_min<sub>A</sub>, new_max<sub>A</sub>]</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?v'&space;=&space;\frac{v-min_A}{max_A-min_A}(newmax_A&space;-&space;newmin_A)&space;&plus;&space;newmin_A" alt="equation-1" /></p>
+
+<p>e.g. Let income range $12,000 to $98,000 normalized to [0.0, 1.0]. Then $73,000 is mapped to</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?\frac{73600&space;-&space;12000}{98000&space;-&space;12000}(1.0&space;-&space;0)&space;&plus;&space;0&space;=&space;0.716" alt="equation-2" /></p>
+
+<ul>
+  <li>Normalization by decimal scaling</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?v'&space;=&space;\frac{v}{10^j}" alt="equation-3" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>where <em>j</em> is the smallest integer such that Max(</td>
+      <td>v’</td>
+      <td>) &lt; 1</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Z-score normalization (μ: mean, σ: standard deviation):</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?v'&space;=&space;\frac{v-\mu&space;_A}{\sigma&space;_A}" alt="equation-4" /></p>
+
+<p>e.g. Let μ = 54,000, σ = 16,000. Then</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?\frac{73600&space;-&space;54000}{16000}&space;=&space;1.225" alt="equation-5" /></p>
+
+<h3 id="discretization">Discretization</h3>
+<p>Divide the range of a continuous values into intervals</p>
+<ul>
+  <li>Interval labels can then be used to replace actual data values -&gt; Reduce noise</li>
+  <li>Supervised vs. Unsupervised</li>
+  <li>Split (top-down) vs. merge (bottom-up)</li>
+  <li>Can be performed recursively on an attribute</li>
+</ul>
+
+<h4 id="three-types-of-attributes">Three types of attributes</h4>
+<ul>
+  <li>Nominal - values from an unordered set, e.g., color, profession</li>
+  <li>Ordinal - values from an ordered set, e.g., military or academic rank</li>
+  <li>Numeric - real numbers, e.g., integer or real numbers</li>
+</ul>
+
+<h3 id="data-discretization-methods">Data Discretization Methods</h3>
+<h4 id="typical-methods-all-the-methods-can-be-applied-recursively">Typical methods: All the methods can be applied recursively</h4>
+<ul>
+  <li><strong>Binning</strong> (unsupervised, top-down split)</li>
+  <li><strong>Clustering analysis</strong> (unsupervised, top-down split or bottom-up merge)</li>
+  <li><strong>Concept Hierarchy Generation</strong> (supervised, top-down split or bottom-up merge)</li>
+  <li><strong>Correlation analysis</strong>: (unsupervised, bottom-up merge)</li>
+</ul>
+
+<h3 id="simple-discretization-binning">Simple Discretization: Binning</h3>
+<ul>
+  <li><strong>Equal-width</strong> (distance) partitioning
+    <ul>
+      <li>Divide the range into <em>N</em> intervals of equal size: uniform grid</li>
+      <li>if <em>A</em> and <em>B</em> are the lowest and highest values of the attribute, the width of intervals will be: <em>W</em> = (<em>B</em> - <em>A</em>)
+/ <em>N</em></li>
+      <li>The most straightforward, but outliers may dominate presentation</li>
+      <li>Skewed data is <strong>not</strong> handled well</li>
+    </ul>
+  </li>
+  <li><strong>Equal-depth</strong> (frequency) partitioning
+    <ul>
+      <li>Divides the range into <em>N</em> intervals, each containing approximately same number of samples</li>
+      <li>Good data scaling</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="discretization-without-using-class-labels-binning-vs-clustering">Discretization Without Using Class Labels (Binning vs. Clustering)</h3>
+<p><img src="./assets/screenshots/2022-10-03/screenshot-6.jpeg" alt="screenshot-6" /></p>
+
+<h3 id="concept-hierarchy-generation">Concept Hierarchy Generation</h3>
+<ul>
+  <li>Concept hierarchy organizes concepts (i.e., attribute values) hierarchically and is usually associated with each 
+dimension in a data warehouse</li>
+  <li>Concept hierarchies facilitate ‘drilling and rolling’ in data warehouses to view data in multiple granularity</li>
+  <li>Concept hierarchy formation: Recursively reduce the data by collecting and replacing low level concepts (such as 
+numeric values for <em>age</em>) by higher level concepts (such as <em>youth</em>, <em>adult</em>, <em>senior</em>)</li>
+  <li>Concept hierarchies can be explicitly specified <strong>by domain experts</strong> and/or data warehouse designers</li>
+  <li>Concept hierarchy can also be <strong>automatically</strong> formed for both numeric and nominal data. For numeric data, use 
+discretization methods shown.</li>
+</ul>
+
+<h3 id="concept-hierarchy-generation-for-nominal-data">Concept Hierarchy Generation for Nominal Data</h3>
+<ul>
+  <li>Specification of partial/total ordering of attributes explicitly at the schema level by users or experts
+    <ul>
+      <li><em>street</em> &lt; <em>city</em> &lt; <em>state</em> &lt; <em>country</em></li>
+    </ul>
+  </li>
+  <li>Specification of a hierarchy for a set of values by explicit data grouping
+    <ul>
+      <li>{Urbana, Champaign, Chicago} &lt; Illinois</li>
+    </ul>
+  </li>
+  <li>Specification of only a partial set of attributes
+    <ul>
+      <li>e.g., only <em>street</em> &lt; <em>cit</em>, not others</li>
+    </ul>
+  </li>
+  <li>Automatic generation of hierarchies (or attribute levels) by the analysis of the number of distinct values
+    <ul>
+      <li>e.g., for a set of attributes: {<em>street</em>, <em>city</em>, <em>state</em>, <em>country</em>}</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="automatic-concept-hierarchy-generation">Automatic Concept Hierarchy Generation</h3>
+<ul>
+  <li>Some hierarchies can be automatically generated based on the analysis of the number of distinct values per attribute 
+in the data set
+    <ul>
+      <li>The attribute with the most distinct values is placed at the lowest level of the hierarchy</li>
+      <li>Exceptions, e.g., weekday, month, quarter, year</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-7.jpeg" alt="screenshot-7" /></p>
+
+<h2 id="data-reduction">Data Reduction</h2>
+<h3 id="data-reduction-strategies">Data Reduction Strategies</h3>
+<p>Obtain a reduced representation of the data set that is much smaller in volume but yet produces the same (or almost the 
+same) analytical results.</p>
+
+<h4 id="why-data-reduction">Why data reduction?</h4>
+<p>A database/data warehouse may store terabytes of data. Complex data analysis may take a very long time to run on the
+complete data set.</p>
+
+<h4 id="data-reduction-strategies-1">Data reduction strategies</h4>
+<ul>
+  <li>Dimensionality reduction, e.g., remove unimportant attributes
+    <ul>
+      <li><del>Wavelet transforms</del> &lt;- Reduction for signal data</li>
+      <li>Feature subset selection, feature creation</li>
+      <li>Principal Components Analysis (PCA)</li>
+    </ul>
+  </li>
+  <li>Numerosity reduction (some simply call it: Data Reduction)
+    <ul>
+      <li>Regression and Log-Linear Models</li>
+      <li>Histograms, clustering, sampling</li>
+    </ul>
+  </li>
+  <li>Data compression</li>
+</ul>
+
+<h3 id="data-reduction-1-dimensionality-reduction">Data Reduction 1: Dimensionality Reduction</h3>
+<ul>
+  <li>Curse of dimensionality
+    <ul>
+      <li>When dimensionality increases, data becomes increasingly sparse</li>
+      <li>Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful</li>
+      <li>The possible combinations of subspaces will grow exponentially</li>
+    </ul>
+  </li>
+  <li>Dimensionality reduction
+    <ul>
+      <li>Avoid the curse of dimensionality</li>
+      <li>Help eliminate irrelevant features and reduce noise</li>
+      <li>Reduce time and space required in data mining</li>
+      <li>Allow easier visualization</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="attribute-subset-selection">Attribute Subset Selection</h4>
+<ul>
+  <li>Another way to reduce dimensinoality of data</li>
+  <li>Redundant attributes
+    <ul>
+      <li>Duplicate much or all of the information contained in one or more other attributes</li>
+      <li>E.g., purchase price of a product and the amount of sales tax paid</li>
+    </ul>
+  </li>
+  <li>Irrelevant attributes
+    <ul>
+      <li>Contain no information that is useful for the data mining task at hand</li>
+      <li>E.g., students’ ID is often irrelevant to the task of predicting students’ GPA</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Filtering Correlated Features</strong></p>
+<ul>
+  <li>Intuition: We do not need to consider both features that tell same property!</li>
+  <li>Let’s select only a feature from a pair of the features when they are correlated enough
+    <ul>
+      <li>How to compute correlation? Pearson, Spearman, …
+        <ol>
+          <li>Compute the pair-wise correlation among features</li>
+          <li>When correlated, take only a feature</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-8.jpeg" alt="screenshot-8" /></p>
+
+<ul>
+  <li>Variance Inflation Factor (VIF) or Mutual information can be another solution</li>
+</ul>
+
+<p><strong>Removing Features with Low Variance</strong></p>
+<ul>
+  <li>Intuition: Low variance means that features are not distinct enough!</li>
+  <li>Let’s exclude the features whose variance are low
+    <ol>
+      <li>See the distribution of features and compute variance</li>
+      <li>Exclude if the computed variance &lt; threshold</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-9.jpeg" alt="screenshot-9" /></p>
+
+<p><strong>Filtering out Non-relevant Features</strong></p>
+<ul>
+  <li>Intuition: Features that are not relevant to the target variable do not affect the model performance</li>
+  <li>Let’s exclude the features (that are not related to target variable)
+    <ol>
+      <li>Select a feature and measure the correlation to target variable (by Pearson or Spearman)</li>
+      <li>If the correlation is too low, exclude the feature
+        <ul>
+          <li>Other statistical-based methods (e.g., Chi-square) can be used</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>Heuristic Search in Attribute Selection</strong></p>
+<ul>
+  <li>There are 2<em>d</em> possible attribute combinations of <em>d</em> attributes</li>
+  <li>Typical heuristic attribute selection methods:
+    <ul>
+      <li>Best single attribute under the attribute independence assumption: choose by significance tests</li>
+      <li>Best step-wise feature selection
+        <ul>
+          <li>The best single-attribute is picked first</li>
+          <li>Then next best attribute condition to the first, …</li>
+        </ul>
+      </li>
+      <li>Step-wise attribute elimination
+        <ul>
+          <li>Repeatedly eliminate the worst attribute</li>
+        </ul>
+      </li>
+      <li>Best combined attribute selection and elimination</li>
+      <li>Optimal branch and bound
+        <ul>
+          <li>Use attribute elimination and backtracking</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Attribute Creation (Feature Generation)</strong></p>
+<ul>
+  <li>Create new attributes (features) that can capture the important information in a data set more effectively than the
+original ones</li>
+  <li>Two methods
+    <ul>
+      <li>Mapping data to new space (see: data reduction)
+        <ul>
+          <li>E.g., Fourier transformation, wavelet transformation, manifold approaches</li>
+        </ul>
+      </li>
+      <li>Attribute construction
+        <ul>
+          <li>Combining features</li>
+          <li>Data discretization
+Then, remove (usually) larger numbers of attributes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Principal Component Analysis (PCA)</strong></p>
+<ul>
+  <li>Find a projection that captures the largest amount of variation in data</li>
+  <li>The original data are projected onto a much smaller space, resulting in dimensionality reduction. We find the
+eigenvectors of the covariance matrix, and these eigenvectors define the new space</li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-10.jpeg" alt="screenshot-10" /></p>
+
+<p><strong>Principal Component Analysis (Steps)</strong></p>
+<ul>
+  <li>Given <em>N</em> data vecotrs from <em>n</em>-dimensions, find <em>k</em> ≤ <em>n</em> orthogonal vectors (principal components) that can be best
+used to represent data
+    <ul>
+      <li>Normalize input data: Each attribute falls within the same range</li>
+      <li>Compute <em>k</em> orthonormal (unit) vectors, i.e., principal components</li>
+      <li>Each input data (vector) is a linear combination of the <em>k</em> principal component vectors</li>
+      <li>The principal components are sorted in order of decreasing “significance” or strength</li>
+      <li>Since the components are sorted, the size of the data can be reduced by elimination the weak components, i.e., those
+with low variance (i.e., using the strongest principal components, it is possible to reconstruct a good approximation of
+the original data)</li>
+    </ul>
+  </li>
+  <li>Works for numeric data only</li>
+</ul>
+
+<h3 id="data-reduction-2-numerosity-reduction">Data Reduction 2: Numerosity Reduction</h3>
+<ul>
+  <li>Reduce data volume by choosing alternative, smaller forms of data representation</li>
+  <li>Parametric methods (e.g., regression)
+    <ul>
+      <li>Assume the data fits some model, estimate model parameters, store only the parameters, and discard the data (except
+possible outliers)</li>
+      <li>Ex. Log-linear models - obtain value at a point in <em>m</em>-D space as the product on appropriate marginal subspaces</li>
+    </ul>
+  </li>
+  <li>Non-parametric methods
+    <ul>
+      <li>Do not assume models</li>
+      <li>Major families: histograms, clustering, sampling, …</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="data-reduction-by-regression">Data Reduction by Regression</h4>
+<ul>
+  <li>A collective name for techniques for the modeling and analysis of numerical data consisting of values of dependent
+variable (also called response variable or measurement) and of one or more independent variables (a.k.a. explanatory
+variables or predictors)</li>
+  <li>The parameters are estimated so as to give a “best fit” of the data</li>
+  <li>Most commonly the best fit is evaluated by using the least squares method, but other criteria have also been used</li>
+  <li>Used for prediction (including forecasting of time-series data), inference, hypothesis testing, and modeling of causal
+relationships</li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-11.jpeg" alt="screenshot-11" /></p>
+
+<p><strong>Regression Models</strong></p>
+<ul>
+  <li>Linear regression: <em>Y</em> = <em>w</em> <em>X</em> + <em>b</em>
+    <ul>
+      <li>Two regression coefficients, <em>w</em> and <em>b</em>, specify the line and are to be estimated by using the data at hand</li>
+      <li>Using the least squares criterion to the known values of <em>Y<sub>1</sub></em>, <em>Y<sub>2</sub></em>, …, <em>X<sub>1</sub></em>,
+<em>X<sub>2</sub></em>, …</li>
+    </ul>
+  </li>
+  <li>Multiple regression: <em>Y</em> = <em>b<sub>0</sub></em> + <em>b<sub>1</sub></em> <em>X<sub>1</sub></em> + <em>b<sub>2</sub></em> <em>X<sub>2</sub></em>
+    <ul>
+      <li>Many nonlinear functions can be transformed into the above</li>
+    </ul>
+  </li>
+  <li>Log-linear models
+    <ul>
+      <li>Approximate discrete multidimensional probability distributions</li>
+      <li>Estimate the probability of each point (tuple) in a multidimensional space for a set of discretized attributes, 
+based on smaller subset of dimensional combinations</li>
+      <li>Useful for dimensionality reduction and data smoothing</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="non-parametric-reduction-histogram">Non-parametric Reduction: Histogram</h4>
+<ul>
+  <li>Divide data into buckets and store average (sum) for each bucket</li>
+  <li>Partitioning rules
+    <ul>
+      <li>Equal-width: equal bucket range</li>
+      <li>Equal-frequency (or equal-depth)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-12.jpeg" alt="screenshot-12" /></p>
+
+<h4 id="non-parametric-reduction-clustering">Non-parametric Reduction: Clustering</h4>
+<ul>
+  <li>Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter)
+only</li>
+  <li>Can be very effective if data is clustered but not if data is “smeared”</li>
+  <li>Can have hierarchical clustering and be stored in multidimensional index tree structures</li>
+  <li>There are many choices of clustering definitions and clustering algorithms</li>
+</ul>
+
+<h4 id="non-parametric-reduction-sampling">Non-parametric Reduction: Sampling</h4>
+<ul>
+  <li>Sampling: obtaining a small sample <em>s</em> to represent the whole data set <em>N</em></li>
+  <li>Allow a mining algorithm to run in complexity that is potentially sub-linear to the size of the data</li>
+  <li>Key principle: Choose a representative subset of the data
+    <ul>
+      <li>Simple random sampling may have very poor performance in the presence of skew</li>
+      <li>Develop adaptive sampling methods, e.g., stratified sampling</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="note-️-2">Note ❗️</h4>
+<p>Sampling may not reduce database I/Os (page at a time)</p>
+
+<p><strong>Types of Sampling</strong></p>
+<ul>
+  <li>Simple random sampling
+    <ul>
+      <li>There is an equal probability of selecting any particular item</li>
+    </ul>
+  </li>
+  <li>Sampling without replacement
+    <ul>
+      <li>Once an object is selected, it is removed from the population</li>
+    </ul>
+  </li>
+  <li>Sampling with replacement
+    <ul>
+      <li>A selected object is not removed from the population</li>
+    </ul>
+  </li>
+  <li>Stratified sampling
+    <ul>
+      <li>Partition the data set, and draw samples from each partition (proportionally, i.e., approximately the same 
+percentage of the data)</li>
+      <li>Used in conjunction with skewed data</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="sampling-with-or-without-replacement">Sampling: With or without Replacement</h4>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-13.jpeg" alt="screenshot-13" /></p>
+
+<h4 id="sampling-cluster-or-stratified-sampling">Sampling: Cluster or Stratified Sampling</h4>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-14.jpeg" alt="screenshot-14" /></p>
+
+<h4 id="data-reduction-3-data-compression">Data Reduction 3: Data Compression</h4>
+<ul>
+  <li>String compression
+    <ul>
+      <li>There are extensive theories and well-tuned algorithms</li>
+      <li>Typically <strong>lossless</strong>, but only limited manipulation is possible without expansion</li>
+    </ul>
+  </li>
+  <li>Audio/video compression
+    <ul>
+      <li>Typically <strong>lossy</strong> compression, with progressive refinement</li>
+      <li>Sometimes small fragments of signal can be reconstructed without reconstructing the whole</li>
+    </ul>
+  </li>
+  <li>Time sequence is not audio
+    <ul>
+      <li>Typically short and vary slowly with time</li>
+    </ul>
+  </li>
+  <li>Dimensionality and numerosity reduction may also be considered as forms of data compression</li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-15.jpeg" alt="screenshot-15" /></p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -547,6 +1040,8 @@ improve mining speed and quality</li>
                     <ul>
                         
                         
+                        
+                            
                         
                             
                         
@@ -881,7 +1376,8 @@ improve mining speed and quality</li>
                 <section class="post-card-excerpt">
                     
                         <p>
-  Hostname:
+  Hostname: Identifier for a host, such as www.google.com.
+  IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure.
 
 
 </p>
@@ -902,7 +1398,7 @@ improve mining speed and quality</li>
                 <span class="reading-time">
                     
                     
-                      1 min read
+                      3 min read
                     
                 </span>
             </footer>

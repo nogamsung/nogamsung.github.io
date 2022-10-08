@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-04T17:52:29+09:00</updated>
+  <updated>2022-10-08T18:52:26+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,134 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Variable and Basic Function</title>
+      <link href="/Unreal_Engine-Variable_and_Basic_Function" rel="alternate" type="text/html" title="Unreal Engine - Variable and Basic Function" />
+      <published>2022-10-05T19:30:00+09:00</published>
+      <updated>2022-10-05T19:30:00+09:00</updated>
+      <id>/Unreal_Engine-Variable_and_Basic_Function</id>
+      <content type="html" xml:base="/Unreal_Engine-Variable_and_Basic_Function">&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create variable
+    &lt;ul&gt;
+      &lt;li&gt;Add variable from my blueprint panel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Frequently used variable types
+    &lt;ul&gt;
+      &lt;li&gt;Boolean: True/False&lt;/li&gt;
+      &lt;li&gt;Integer&lt;/li&gt;
+      &lt;li&gt;Float&lt;/li&gt;
+      &lt;li&gt;Vector: X, Y, and Z float type structure&lt;/li&gt;
+      &lt;li&gt;String&lt;/li&gt;
+      &lt;li&gt;Object Type&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable Types
+    &lt;ul&gt;
+      &lt;li&gt;Variables have its own color assigned to it&lt;/li&gt;
+      &lt;li&gt;Object type may not be compatible even though it has the same color&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Variable extraction and assignment
+    &lt;ul&gt;
+      &lt;li&gt;extraction = Get&lt;/li&gt;
+      &lt;li&gt;assignment = Set&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable node placement
+    &lt;ul&gt;
+      &lt;li&gt;drag &amp;amp; drop from the ‘my blueprint’ and select Get/Set for placement&lt;/li&gt;
+      &lt;li&gt;drag &amp;amp; drop while pressing Ctrl/Alt key for faster Get/Set placement&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;private-variable-and-elevation-to-variable&quot;&gt;Private Variable and Elevation to Variable&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Private variable
+    &lt;ul&gt;
+      &lt;li&gt;To set the variable ‘private’, only internal variable Get/Set is possible
+        &lt;ul&gt;
+          &lt;li&gt;If it is not ‘private’, Get/Set is possible from external&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Elevation to variable
+    &lt;ul&gt;
+      &lt;li&gt;Make constant value to variable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-structure&quot;&gt;Creation and Usage of Structure&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get/Set Node&lt;/li&gt;
+  &lt;li&gt;Make Structure Node&lt;/li&gt;
+  &lt;li&gt;Split Structure Node&lt;/li&gt;
+  &lt;li&gt;Set Member Structure Node&lt;/li&gt;
+  &lt;li&gt;Flow Control Node
+    &lt;ul&gt;
+      &lt;li&gt;Sequence Node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-enum-variable&quot;&gt;Creation and Usage of Enum Variable&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get/Set Node&lt;/li&gt;
+  &lt;li&gt;Enum Switch Node&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-function&quot;&gt;Creation and Usage of Function&lt;/h2&gt;
+&lt;h3 id=&quot;function&quot;&gt;Function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Re-usage of code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Create Variable and Variables types Create variable Add variable from my blueprint panel Frequently used variable types Boolean: True/False Integer Float Vector: X, Y, and Z float type structure String Object Type Variable Types Variables have its own color assigned to it Object type may not be compatible even though it has the same color</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Custom Event and Event Dispatcher</title>
@@ -1041,93 +1169,6 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
 
       
         <summary type="html">The General Sequence of Game Programming</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Level Editor</title>
-      <link href="/Unreal_Engine-Level_Editor" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
-      <published>2022-09-06T01:30:00+09:00</published>
-      <updated>2022-09-06T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Level_Editor</id>
-      <content type="html" xml:base="/Unreal_Engine-Level_Editor">&lt;h2 id=&quot;basic-terms&quot;&gt;Basic Terms&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unreal Editor: Development environment for Unreal engine.&lt;/li&gt;
-  &lt;li&gt;Level Editor: An interface used for the design and construction of game levels and environments.&lt;/li&gt;
-  &lt;li&gt;Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to
-bring the desired experience to a player.&lt;/li&gt;
-  &lt;li&gt;Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file.&lt;/li&gt;
-  &lt;li&gt;Actor: Object in level such as a camera, static mesh, or player start location.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;default-interface&quot;&gt;Default Interface&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-05/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;coordinates&quot;&gt;Coordinates&lt;/h2&gt;
-
-&lt;p&gt;The coordinates follow &lt;em&gt;left hand rule&lt;/em&gt; as you may have learned in high school physics class.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;thumb: Points upward and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z-coordinate&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;index finger: Points towards and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y-coordinate&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;middle finger: Points to the right and represents the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x-coordinate&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;camera-control-in-view-port&quot;&gt;Camera control in view port&lt;/h2&gt;
-
-&lt;p&gt;Move the camera around using these keys:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w/s&lt;/code&gt;: move forward/backward&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a/d&lt;/code&gt;: move left/right&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;q/e&lt;/code&gt;: move upward/downward&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;z/c&lt;/code&gt;: zoom out/in&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right, move forward/backward horizontally&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: rotate left/right/upwards/downwards&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally, move upwards/downwards in perpendicular&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;left click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move around centering a pivot&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;right click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move towards/away from a pivot&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wheel click&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;option/alt&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drag&lt;/code&gt;: move left/right horizontally and forward/backward in perpendicular&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;select an object&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f&lt;/code&gt;: focus the object&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Basic Terms Unreal Editor: Development environment for Unreal engine. Level Editor: An interface used for the design and construction of game levels and environments. Level: Made up of a collection of static meshes, volumes, lights, blueprints, and more all working together to bring the desired experience to a player. Asset: A piece of content for an Unreal project and can be thought of as a UObject serialized to a file. Actor: Object in level such as a camera, static mesh, or player start location.</summary>
       
 
       

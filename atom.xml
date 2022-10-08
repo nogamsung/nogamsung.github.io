@@ -8,6 +8,44 @@
     
       
       <item>
+        <title>Unreal Engine - Variable and Basic Function</title>
+        
+          <description>&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create variable
+    &lt;ul&gt;
+      &lt;li&gt;Add variable from my blueprint panel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Frequently used variable types
+    &lt;ul&gt;
+      &lt;li&gt;Boolean: True/False&lt;/li&gt;
+      &lt;li&gt;Integer&lt;/li&gt;
+      &lt;li&gt;Float&lt;/li&gt;
+      &lt;li&gt;Vector: X, Y, and Z float type structure&lt;/li&gt;
+      &lt;li&gt;String&lt;/li&gt;
+      &lt;li&gt;Object Type&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable Types
+    &lt;ul&gt;
+      &lt;li&gt;Variables have its own color assigned to it&lt;/li&gt;
+      &lt;li&gt;Object type may not be compatible even though it has the same color&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 05 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Variable_and_Basic_Function</link>
+        <guid isPermaLink="true">/Unreal_Engine-Variable_and_Basic_Function</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Custom Event and Event Dispatcher</title>
         
           <description>&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
@@ -88,7 +126,8 @@
         <title>Computer Network - DNS - The Internet's Directory Service</title>
         
           <description>&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: Identifier for a host, such as &lt;em&gt;www.google.com&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP addresses&lt;/strong&gt;: Identifier consists of four bytes and has a rigid hierarchical structure.&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

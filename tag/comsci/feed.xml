@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-04T17:52:29+09:00</updated>
+  <updated>2022-10-08T18:52:26+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -280,6 +280,499 @@ improve mining speed and quality&lt;/li&gt;
 
 &lt;h2 id=&quot;data-transformation--discretization&quot;&gt;Data Transformation &amp;amp; Discretization&lt;/h2&gt;
 &lt;h3 id=&quot;data-transformation&quot;&gt;Data Transformation&lt;/h3&gt;
+&lt;p&gt;A function that maps the entire set of values of a given attribute to a new set of replacement values so that each value
+can be identified with one of the new values&lt;/p&gt;
+
+&lt;h4 id=&quot;methods&quot;&gt;Methods&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Aggregation&lt;/strong&gt;: Summarization, data cube construction&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Smoothing&lt;/strong&gt;: Remove noise from data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Normalization&lt;/strong&gt;: Scaled to fall within a smaller, common, and specified range
+    &lt;ul&gt;
+      &lt;li&gt;min-max, z-score, decimal scaling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Discretization&lt;/strong&gt;: Concept hierarchy climbing
+    &lt;ul&gt;
+      &lt;li&gt;Binning, Clustering, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Attribute/feature construction&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;New attributes constructed from the given ones&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;normalization&quot;&gt;Normalization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Min-max normalization: to [new_min&lt;sub&gt;A&lt;/sub&gt;, new_max&lt;sub&gt;A&lt;/sub&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-min_A}{max_A-min_A}(newmax_A&amp;space;-&amp;space;newmin_A)&amp;space;&amp;plus;&amp;space;newmin_A&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e.g. Let income range $12,000 to $98,000 normalized to [0.0, 1.0]. Then $73,000 is mapped to&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;12000}{98000&amp;space;-&amp;space;12000}(1.0&amp;space;-&amp;space;0)&amp;space;&amp;plus;&amp;space;0&amp;space;=&amp;space;0.716&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Normalization by decimal scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v}{10^j}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;where &lt;em&gt;j&lt;/em&gt; is the smallest integer such that Max(&lt;/td&gt;
+      &lt;td&gt;v’&lt;/td&gt;
+      &lt;td&gt;) &amp;lt; 1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Z-score normalization (μ: mean, σ: standard deviation):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-\mu&amp;space;_A}{\sigma&amp;space;_A}&quot; alt=&quot;equation-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e.g. Let μ = 54,000, σ = 16,000. Then&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;54000}{16000}&amp;space;=&amp;space;1.225&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;discretization&quot;&gt;Discretization&lt;/h3&gt;
+&lt;p&gt;Divide the range of a continuous values into intervals&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Interval labels can then be used to replace actual data values -&amp;gt; Reduce noise&lt;/li&gt;
+  &lt;li&gt;Supervised vs. Unsupervised&lt;/li&gt;
+  &lt;li&gt;Split (top-down) vs. merge (bottom-up)&lt;/li&gt;
+  &lt;li&gt;Can be performed recursively on an attribute&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;three-types-of-attributes&quot;&gt;Three types of attributes&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nominal - values from an unordered set, e.g., color, profession&lt;/li&gt;
+  &lt;li&gt;Ordinal - values from an ordered set, e.g., military or academic rank&lt;/li&gt;
+  &lt;li&gt;Numeric - real numbers, e.g., integer or real numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-discretization-methods&quot;&gt;Data Discretization Methods&lt;/h3&gt;
+&lt;h4 id=&quot;typical-methods-all-the-methods-can-be-applied-recursively&quot;&gt;Typical methods: All the methods can be applied recursively&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Binning&lt;/strong&gt; (unsupervised, top-down split)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clustering analysis&lt;/strong&gt; (unsupervised, top-down split or bottom-up merge)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Concept Hierarchy Generation&lt;/strong&gt; (supervised, top-down split or bottom-up merge)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Correlation analysis&lt;/strong&gt;: (unsupervised, bottom-up merge)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;simple-discretization-binning&quot;&gt;Simple Discretization: Binning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Equal-width&lt;/strong&gt; (distance) partitioning
+    &lt;ul&gt;
+      &lt;li&gt;Divide the range into &lt;em&gt;N&lt;/em&gt; intervals of equal size: uniform grid&lt;/li&gt;
+      &lt;li&gt;if &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; are the lowest and highest values of the attribute, the width of intervals will be: &lt;em&gt;W&lt;/em&gt; = (&lt;em&gt;B&lt;/em&gt; - &lt;em&gt;A&lt;/em&gt;)
+/ &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;The most straightforward, but outliers may dominate presentation&lt;/li&gt;
+      &lt;li&gt;Skewed data is &lt;strong&gt;not&lt;/strong&gt; handled well&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Equal-depth&lt;/strong&gt; (frequency) partitioning
+    &lt;ul&gt;
+      &lt;li&gt;Divides the range into &lt;em&gt;N&lt;/em&gt; intervals, each containing approximately same number of samples&lt;/li&gt;
+      &lt;li&gt;Good data scaling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discretization-without-using-class-labels-binning-vs-clustering&quot;&gt;Discretization Without Using Class Labels (Binning vs. Clustering)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;concept-hierarchy-generation&quot;&gt;Concept Hierarchy Generation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Concept hierarchy organizes concepts (i.e., attribute values) hierarchically and is usually associated with each 
+dimension in a data warehouse&lt;/li&gt;
+  &lt;li&gt;Concept hierarchies facilitate ‘drilling and rolling’ in data warehouses to view data in multiple granularity&lt;/li&gt;
+  &lt;li&gt;Concept hierarchy formation: Recursively reduce the data by collecting and replacing low level concepts (such as 
+numeric values for &lt;em&gt;age&lt;/em&gt;) by higher level concepts (such as &lt;em&gt;youth&lt;/em&gt;, &lt;em&gt;adult&lt;/em&gt;, &lt;em&gt;senior&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Concept hierarchies can be explicitly specified &lt;strong&gt;by domain experts&lt;/strong&gt; and/or data warehouse designers&lt;/li&gt;
+  &lt;li&gt;Concept hierarchy can also be &lt;strong&gt;automatically&lt;/strong&gt; formed for both numeric and nominal data. For numeric data, use 
+discretization methods shown.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;concept-hierarchy-generation-for-nominal-data&quot;&gt;Concept Hierarchy Generation for Nominal Data&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Specification of partial/total ordering of attributes explicitly at the schema level by users or experts
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;city&lt;/em&gt; &amp;lt; &lt;em&gt;state&lt;/em&gt; &amp;lt; &lt;em&gt;country&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Specification of a hierarchy for a set of values by explicit data grouping
+    &lt;ul&gt;
+      &lt;li&gt;{Urbana, Champaign, Chicago} &amp;lt; Illinois&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Specification of only a partial set of attributes
+    &lt;ul&gt;
+      &lt;li&gt;e.g., only &lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;cit&lt;/em&gt;, not others&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Automatic generation of hierarchies (or attribute levels) by the analysis of the number of distinct values
+    &lt;ul&gt;
+      &lt;li&gt;e.g., for a set of attributes: {&lt;em&gt;street&lt;/em&gt;, &lt;em&gt;city&lt;/em&gt;, &lt;em&gt;state&lt;/em&gt;, &lt;em&gt;country&lt;/em&gt;}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;automatic-concept-hierarchy-generation&quot;&gt;Automatic Concept Hierarchy Generation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Some hierarchies can be automatically generated based on the analysis of the number of distinct values per attribute 
+in the data set
+    &lt;ul&gt;
+      &lt;li&gt;The attribute with the most distinct values is placed at the lowest level of the hierarchy&lt;/li&gt;
+      &lt;li&gt;Exceptions, e.g., weekday, month, quarter, year&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-reduction&quot;&gt;Data Reduction&lt;/h2&gt;
+&lt;h3 id=&quot;data-reduction-strategies&quot;&gt;Data Reduction Strategies&lt;/h3&gt;
+&lt;p&gt;Obtain a reduced representation of the data set that is much smaller in volume but yet produces the same (or almost the 
+same) analytical results.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-data-reduction&quot;&gt;Why data reduction?&lt;/h4&gt;
+&lt;p&gt;A database/data warehouse may store terabytes of data. Complex data analysis may take a very long time to run on the
+complete data set.&lt;/p&gt;
+
+&lt;h4 id=&quot;data-reduction-strategies-1&quot;&gt;Data reduction strategies&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dimensionality reduction, e.g., remove unimportant attributes
+    &lt;ul&gt;
+      &lt;li&gt;&lt;del&gt;Wavelet transforms&lt;/del&gt; &amp;lt;- Reduction for signal data&lt;/li&gt;
+      &lt;li&gt;Feature subset selection, feature creation&lt;/li&gt;
+      &lt;li&gt;Principal Components Analysis (PCA)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Numerosity reduction (some simply call it: Data Reduction)
+    &lt;ul&gt;
+      &lt;li&gt;Regression and Log-Linear Models&lt;/li&gt;
+      &lt;li&gt;Histograms, clustering, sampling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data compression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-reduction-1-dimensionality-reduction&quot;&gt;Data Reduction 1: Dimensionality Reduction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Curse of dimensionality
+    &lt;ul&gt;
+      &lt;li&gt;When dimensionality increases, data becomes increasingly sparse&lt;/li&gt;
+      &lt;li&gt;Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful&lt;/li&gt;
+      &lt;li&gt;The possible combinations of subspaces will grow exponentially&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dimensionality reduction
+    &lt;ul&gt;
+      &lt;li&gt;Avoid the curse of dimensionality&lt;/li&gt;
+      &lt;li&gt;Help eliminate irrelevant features and reduce noise&lt;/li&gt;
+      &lt;li&gt;Reduce time and space required in data mining&lt;/li&gt;
+      &lt;li&gt;Allow easier visualization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;attribute-subset-selection&quot;&gt;Attribute Subset Selection&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Another way to reduce dimensinoality of data&lt;/li&gt;
+  &lt;li&gt;Redundant attributes
+    &lt;ul&gt;
+      &lt;li&gt;Duplicate much or all of the information contained in one or more other attributes&lt;/li&gt;
+      &lt;li&gt;E.g., purchase price of a product and the amount of sales tax paid&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Irrelevant attributes
+    &lt;ul&gt;
+      &lt;li&gt;Contain no information that is useful for the data mining task at hand&lt;/li&gt;
+      &lt;li&gt;E.g., students’ ID is often irrelevant to the task of predicting students’ GPA&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Filtering Correlated Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: We do not need to consider both features that tell same property!&lt;/li&gt;
+  &lt;li&gt;Let’s select only a feature from a pair of the features when they are correlated enough
+    &lt;ul&gt;
+      &lt;li&gt;How to compute correlation? Pearson, Spearman, …
+        &lt;ol&gt;
+          &lt;li&gt;Compute the pair-wise correlation among features&lt;/li&gt;
+          &lt;li&gt;When correlated, take only a feature&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variance Inflation Factor (VIF) or Mutual information can be another solution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Removing Features with Low Variance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: Low variance means that features are not distinct enough!&lt;/li&gt;
+  &lt;li&gt;Let’s exclude the features whose variance are low
+    &lt;ol&gt;
+      &lt;li&gt;See the distribution of features and compute variance&lt;/li&gt;
+      &lt;li&gt;Exclude if the computed variance &amp;lt; threshold&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Filtering out Non-relevant Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: Features that are not relevant to the target variable do not affect the model performance&lt;/li&gt;
+  &lt;li&gt;Let’s exclude the features (that are not related to target variable)
+    &lt;ol&gt;
+      &lt;li&gt;Select a feature and measure the correlation to target variable (by Pearson or Spearman)&lt;/li&gt;
+      &lt;li&gt;If the correlation is too low, exclude the feature
+        &lt;ul&gt;
+          &lt;li&gt;Other statistical-based methods (e.g., Chi-square) can be used&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Heuristic Search in Attribute Selection&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There are 2&lt;em&gt;d&lt;/em&gt; possible attribute combinations of &lt;em&gt;d&lt;/em&gt; attributes&lt;/li&gt;
+  &lt;li&gt;Typical heuristic attribute selection methods:
+    &lt;ul&gt;
+      &lt;li&gt;Best single attribute under the attribute independence assumption: choose by significance tests&lt;/li&gt;
+      &lt;li&gt;Best step-wise feature selection
+        &lt;ul&gt;
+          &lt;li&gt;The best single-attribute is picked first&lt;/li&gt;
+          &lt;li&gt;Then next best attribute condition to the first, …&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Step-wise attribute elimination
+        &lt;ul&gt;
+          &lt;li&gt;Repeatedly eliminate the worst attribute&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Best combined attribute selection and elimination&lt;/li&gt;
+      &lt;li&gt;Optimal branch and bound
+        &lt;ul&gt;
+          &lt;li&gt;Use attribute elimination and backtracking&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Attribute Creation (Feature Generation)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create new attributes (features) that can capture the important information in a data set more effectively than the
+original ones&lt;/li&gt;
+  &lt;li&gt;Two methods
+    &lt;ul&gt;
+      &lt;li&gt;Mapping data to new space (see: data reduction)
+        &lt;ul&gt;
+          &lt;li&gt;E.g., Fourier transformation, wavelet transformation, manifold approaches&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Attribute construction
+        &lt;ul&gt;
+          &lt;li&gt;Combining features&lt;/li&gt;
+          &lt;li&gt;Data discretization
+Then, remove (usually) larger numbers of attributes&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Principal Component Analysis (PCA)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Find a projection that captures the largest amount of variation in data&lt;/li&gt;
+  &lt;li&gt;The original data are projected onto a much smaller space, resulting in dimensionality reduction. We find the
+eigenvectors of the covariance matrix, and these eigenvectors define the new space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Principal Component Analysis (Steps)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given &lt;em&gt;N&lt;/em&gt; data vecotrs from &lt;em&gt;n&lt;/em&gt;-dimensions, find &lt;em&gt;k&lt;/em&gt; ≤ &lt;em&gt;n&lt;/em&gt; orthogonal vectors (principal components) that can be best
+used to represent data
+    &lt;ul&gt;
+      &lt;li&gt;Normalize input data: Each attribute falls within the same range&lt;/li&gt;
+      &lt;li&gt;Compute &lt;em&gt;k&lt;/em&gt; orthonormal (unit) vectors, i.e., principal components&lt;/li&gt;
+      &lt;li&gt;Each input data (vector) is a linear combination of the &lt;em&gt;k&lt;/em&gt; principal component vectors&lt;/li&gt;
+      &lt;li&gt;The principal components are sorted in order of decreasing “significance” or strength&lt;/li&gt;
+      &lt;li&gt;Since the components are sorted, the size of the data can be reduced by elimination the weak components, i.e., those
+with low variance (i.e., using the strongest principal components, it is possible to reconstruct a good approximation of
+the original data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Works for numeric data only&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-reduction-2-numerosity-reduction&quot;&gt;Data Reduction 2: Numerosity Reduction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reduce data volume by choosing alternative, smaller forms of data representation&lt;/li&gt;
+  &lt;li&gt;Parametric methods (e.g., regression)
+    &lt;ul&gt;
+      &lt;li&gt;Assume the data fits some model, estimate model parameters, store only the parameters, and discard the data (except
+possible outliers)&lt;/li&gt;
+      &lt;li&gt;Ex. Log-linear models - obtain value at a point in &lt;em&gt;m&lt;/em&gt;-D space as the product on appropriate marginal subspaces&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Non-parametric methods
+    &lt;ul&gt;
+      &lt;li&gt;Do not assume models&lt;/li&gt;
+      &lt;li&gt;Major families: histograms, clustering, sampling, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;data-reduction-by-regression&quot;&gt;Data Reduction by Regression&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A collective name for techniques for the modeling and analysis of numerical data consisting of values of dependent
+variable (also called response variable or measurement) and of one or more independent variables (a.k.a. explanatory
+variables or predictors)&lt;/li&gt;
+  &lt;li&gt;The parameters are estimated so as to give a “best fit” of the data&lt;/li&gt;
+  &lt;li&gt;Most commonly the best fit is evaluated by using the least squares method, but other criteria have also been used&lt;/li&gt;
+  &lt;li&gt;Used for prediction (including forecasting of time-series data), inference, hypothesis testing, and modeling of causal
+relationships&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regression Models&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linear regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;w&lt;/em&gt; &lt;em&gt;X&lt;/em&gt; + &lt;em&gt;b&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Two regression coefficients, &lt;em&gt;w&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt;, specify the line and are to be estimated by using the data at hand&lt;/li&gt;
+      &lt;li&gt;Using the least squares criterion to the known values of &lt;em&gt;Y&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;, &lt;em&gt;Y&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …, &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;,
+&lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multiple regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;b&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Many nonlinear functions can be transformed into the above&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Log-linear models
+    &lt;ul&gt;
+      &lt;li&gt;Approximate discrete multidimensional probability distributions&lt;/li&gt;
+      &lt;li&gt;Estimate the probability of each point (tuple) in a multidimensional space for a set of discretized attributes, 
+based on smaller subset of dimensional combinations&lt;/li&gt;
+      &lt;li&gt;Useful for dimensionality reduction and data smoothing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-histogram&quot;&gt;Non-parametric Reduction: Histogram&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Divide data into buckets and store average (sum) for each bucket&lt;/li&gt;
+  &lt;li&gt;Partitioning rules
+    &lt;ul&gt;
+      &lt;li&gt;Equal-width: equal bucket range&lt;/li&gt;
+      &lt;li&gt;Equal-frequency (or equal-depth)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-clustering&quot;&gt;Non-parametric Reduction: Clustering&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter)
+only&lt;/li&gt;
+  &lt;li&gt;Can be very effective if data is clustered but not if data is “smeared”&lt;/li&gt;
+  &lt;li&gt;Can have hierarchical clustering and be stored in multidimensional index tree structures&lt;/li&gt;
+  &lt;li&gt;There are many choices of clustering definitions and clustering algorithms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-sampling&quot;&gt;Non-parametric Reduction: Sampling&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sampling: obtaining a small sample &lt;em&gt;s&lt;/em&gt; to represent the whole data set &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Allow a mining algorithm to run in complexity that is potentially sub-linear to the size of the data&lt;/li&gt;
+  &lt;li&gt;Key principle: Choose a representative subset of the data
+    &lt;ul&gt;
+      &lt;li&gt;Simple random sampling may have very poor performance in the presence of skew&lt;/li&gt;
+      &lt;li&gt;Develop adaptive sampling methods, e.g., stratified sampling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;Sampling may not reduce database I/Os (page at a time)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Types of Sampling&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Simple random sampling
+    &lt;ul&gt;
+      &lt;li&gt;There is an equal probability of selecting any particular item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sampling without replacement
+    &lt;ul&gt;
+      &lt;li&gt;Once an object is selected, it is removed from the population&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sampling with replacement
+    &lt;ul&gt;
+      &lt;li&gt;A selected object is not removed from the population&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Stratified sampling
+    &lt;ul&gt;
+      &lt;li&gt;Partition the data set, and draw samples from each partition (proportionally, i.e., approximately the same 
+percentage of the data)&lt;/li&gt;
+      &lt;li&gt;Used in conjunction with skewed data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;sampling-with-or-without-replacement&quot;&gt;Sampling: With or without Replacement&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;sampling-cluster-or-stratified-sampling&quot;&gt;Sampling: Cluster or Stratified Sampling&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-reduction-3-data-compression&quot;&gt;Data Reduction 3: Data Compression&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;String compression
+    &lt;ul&gt;
+      &lt;li&gt;There are extensive theories and well-tuned algorithms&lt;/li&gt;
+      &lt;li&gt;Typically &lt;strong&gt;lossless&lt;/strong&gt;, but only limited manipulation is possible without expansion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Audio/video compression
+    &lt;ul&gt;
+      &lt;li&gt;Typically &lt;strong&gt;lossy&lt;/strong&gt; compression, with progressive refinement&lt;/li&gt;
+      &lt;li&gt;Sometimes small fragments of signal can be reconstructed without reconstructing the whole&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Time sequence is not audio
+    &lt;ul&gt;
+      &lt;li&gt;Typically short and vary slowly with time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dimensionality and numerosity reduction may also be considered as forms of data compression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -320,10 +813,97 @@ improve mining speed and quality&lt;/li&gt;
       <updated>2022-10-03T19:30:00+09:00</updated>
       <id>/Computer_Network-DNS-The_Internet's-Directory-Service</id>
       <content type="html" xml:base="/Computer_Network-DNS-The_Internet's-Directory-Service">&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: Identifier for a host, such as &lt;em&gt;www.google.com&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP addresses&lt;/strong&gt;: Identifier consists of four bytes and has a rigid hierarchical structure.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;1️⃣-services-provided-by-dns&quot;&gt;1️⃣ Services Provided by DNS&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: A directory service that translates hostnames to IP addresses.
+    &lt;ol&gt;
+      &lt;li&gt;A distributed database implemented in a hierarchy of DNS servers.&lt;/li&gt;
+      &lt;li&gt;An application-layer protocol that allows hosts to query the distributed databases.
+        &lt;ul&gt;
+          &lt;li&gt;The DNS servers are often UNIX machines running the Berkeley Internet Name Domain (BIND) software.&lt;/li&gt;
+          &lt;li&gt;The DNS protocol runs over UDP and uses port 53.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dns-application-steps&quot;&gt;DNS application steps&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The same user machine runs the client side of the DNS application.&lt;/li&gt;
+  &lt;li&gt;The browser extracts the hostname, &lt;em&gt;www.domain.com&lt;/em&gt;, from the URL and passes the hostname to the client side of DNS 
+application.&lt;/li&gt;
+  &lt;li&gt;The DNS client sends a query containing the hostname to a DNS server.&lt;/li&gt;
+  &lt;li&gt;The DNS client eventually receives a reply, which includes the IP address for the hostname.&lt;/li&gt;
+  &lt;li&gt;Once the browser receives the IP address from DNS, it can initiate a TCP connection to the HTTP server process
+located at port 80 at that IP address.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;dns-also-provides&quot;&gt;DNS also provides&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Host aliasing&lt;/strong&gt;: A host with a complicated hostname can have one or more alias names.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. &lt;em&gt;relay1.west-coast.enterprise.com&lt;/em&gt; (&lt;strong&gt;canonical hostname&lt;/strong&gt;), &lt;em&gt;www.enterprise.com&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mail server aliasing&lt;/strong&gt;: It is highly desirable that e-mail addresses bo mnemonic.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Load distribution&lt;/strong&gt;: DNS is also used to perform load distribution among replicated servers, such as replicated Web 
+servers. Busy sites, such as &lt;em&gt;cnn.com&lt;/em&gt;, are replicated over multiple servers, with each server running on different end
+system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with
+one alias hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name
+mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the
+addresses within each reply.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-overview-of-how-dns-works&quot;&gt;2️⃣ Overview of how DNS Works&lt;/h2&gt;
+&lt;h4 id=&quot;the-problems-with-a-centralized-design&quot;&gt;The problems with a centralized design&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A single point of failure&lt;/strong&gt;: If the DNS server crashes, so does the entire Internet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Traffic volume&lt;/strong&gt;: A single DNS server would have to handle all DNS queries for all the HTTP requests and e-mail
+messages generated from hundreds of millions of hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Distant centralized database&lt;/strong&gt;: A single DNS server cannot be “close to” all the querying clients. If we put the
+single DNS server in New York City, then all queries from Australia must travel to the other side of the globe, perhaps
+over slow and congested links. This can lead to significant delays.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maintenance&lt;/strong&gt;: The single DNS server would have to keep records for all Internet hosts. Not only would this
+centralized database be huge, but it would have to be updated frequently to account for every new host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a-distributed-hierarchical-database&quot;&gt;A Distributed, Hierarchical Database&lt;/h3&gt;
+&lt;p&gt;In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
+and distributed around the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-classes-of-dns-servers&quot;&gt;3 classes of DNS servers&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Root DNS servers&lt;/strong&gt;: There are more than 1000 root servers instances scattered all over the world. These root servers
+are copies of 13 different root servers, managed by 12 different organizations, and coordinated through the Internet
+Assigned Numbers Authority. Root name servers provide the IP addresses of the TLD servers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Top-level domain (TLD) servers&lt;/strong&gt;: For each of the top-level domains - top level domains such as com, org, net, edu,
+and gov, and all of the country top-level domains such as uk, fr, ca, and jp - there is TLD server or server cluster.
+The company Verisign Global Registry Services maintains the TLD servers for the com top-level domain. TLD servers
+provide the IP addresses for authoritative DNS servers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Authoritative DNS servers&lt;/strong&gt;: Every organization with publicly accessible hosts, such as Web servers and mail
+servers, on the Internet must provide publicly accessible DNS records that map the names of those hosts to IP addresses.
+An organization’s authoritative DNS server houses these DNS records. An organization can choose to implement its own
+authoritative DNS server to hold these records; alternatively, the organization can pay to have these records stored in
+an authoritative DNS server of some service provider. Most universities and large companies implement and maintain their
+own primary and secondary (backup) authoritative DNS server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Local DNS server&lt;/strong&gt;: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
+architecture because each ISP has a local DNS server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -350,7 +930,7 @@ improve mining speed and quality&lt;/li&gt;
       
 
       
-        <summary type="html">Hostname:</summary>
+        <summary type="html">Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure.</summary>
       
 
       

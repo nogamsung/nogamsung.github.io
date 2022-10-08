@@ -50,18 +50,7 @@
     <meta property="og:site_name" content="nogamsung" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Computer Network - DNS - The Internet's Directory Service" />
-    <meta property="og:description" content="
-  Hostname:
-
-
-1️⃣ Services Provided by DNS
-
-Reference
-
-  Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross
-  Computer Network Lecture by Seungsik Choi in Incheon National University
-
-" />
+    <meta property="og:description" content="Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure. 1️⃣ Services Provided by DNS Domain Name System (DNS): A directory service that translates hostnames to IP addresses. A distributed database implemented in a hierarchy of DNS servers. An" />
     <meta property="og:url" content="/Computer_Network-DNS-The_Internet's-Directory-Service" />
     <meta property="og:image" content="/assets/built/images/computer-network-logo.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -71,18 +60,7 @@ Reference
     <meta property="article:tag" content="Comsci" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Computer Network - DNS - The Internet's Directory Service" />
-    <meta name="twitter:description" content="
-  Hostname:
-
-
-1️⃣ Services Provided by DNS
-
-Reference
-
-  Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross
-  Computer Network Lecture by Seungsik Choi in Incheon National University
-
-" />
+    <meta name="twitter:description" content="Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure. 1️⃣ Services Provided by DNS Domain Name System (DNS): A directory service that translates hostnames to IP addresses. A distributed database implemented in a hierarchy of DNS servers. An" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/built/images/computer-network-logo.jpeg" />
     <meta name="twitter:label1" content="Written by" />
@@ -114,18 +92,7 @@ Reference
         "@type": "WebPage",
         "@id": "/Computer_Network-DNS-The_Internet's-Directory-Service"
     },
-    "description": "
-  Hostname:
-
-
-1️⃣ Services Provided by DNS
-
-Reference
-
-  Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross
-  Computer Network Lecture by Seungsik Choi in Incheon National University
-
-"
+    "description": "Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure. 1️⃣ Services Provided by DNS Domain Name System (DNS): A directory service that translates hostnames to IP addresses. A distributed database implemented in a hierarchy of DNS servers. An"
 }
     </script>
 
@@ -225,10 +192,97 @@ into the {body} of the default.hbs template -->
             <section class="post-full-content">
                 <div class="kg-card-markdown">
                     <ul>
-  <li><strong>Hostname</strong>:</li>
+  <li><strong>Hostname</strong>: Identifier for a host, such as <em>www.google.com</em>.</li>
+  <li><strong>IP addresses</strong>: Identifier consists of four bytes and has a rigid hierarchical structure.</li>
 </ul>
 
 <h2 id="1️⃣-services-provided-by-dns">1️⃣ Services Provided by DNS</h2>
+
+<ul>
+  <li><strong>Domain Name System (DNS)</strong>: A directory service that translates hostnames to IP addresses.
+    <ol>
+      <li>A distributed database implemented in a hierarchy of DNS servers.</li>
+      <li>An application-layer protocol that allows hosts to query the distributed databases.
+        <ul>
+          <li>The DNS servers are often UNIX machines running the Berkeley Internet Name Domain (BIND) software.</li>
+          <li>The DNS protocol runs over UDP and uses port 53.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="dns-application-steps">DNS application steps</h4>
+<ol>
+  <li>The same user machine runs the client side of the DNS application.</li>
+  <li>The browser extracts the hostname, <em>www.domain.com</em>, from the URL and passes the hostname to the client side of DNS 
+application.</li>
+  <li>The DNS client sends a query containing the hostname to a DNS server.</li>
+  <li>The DNS client eventually receives a reply, which includes the IP address for the hostname.</li>
+  <li>Once the browser receives the IP address from DNS, it can initiate a TCP connection to the HTTP server process
+located at port 80 at that IP address.</li>
+</ol>
+
+<h4 id="dns-also-provides">DNS also provides</h4>
+<ul>
+  <li><strong>Host aliasing</strong>: A host with a complicated hostname can have one or more alias names.
+    <ul>
+      <li>e.g. <em>relay1.west-coast.enterprise.com</em> (<strong>canonical hostname</strong>), <em>www.enterprise.com</em></li>
+    </ul>
+  </li>
+  <li><strong>Mail server aliasing</strong>: It is highly desirable that e-mail addresses bo mnemonic.</li>
+  <li><strong>Load distribution</strong>: DNS is also used to perform load distribution among replicated servers, such as replicated Web 
+servers. Busy sites, such as <em>cnn.com</em>, are replicated over multiple servers, with each server running on different end
+system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with
+one alias hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name
+mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the
+addresses within each reply.</li>
+</ul>
+
+<h2 id="2️⃣-overview-of-how-dns-works">2️⃣ Overview of how DNS Works</h2>
+<h4 id="the-problems-with-a-centralized-design">The problems with a centralized design</h4>
+<ul>
+  <li><strong>A single point of failure</strong>: If the DNS server crashes, so does the entire Internet.</li>
+  <li><strong>Traffic volume</strong>: A single DNS server would have to handle all DNS queries for all the HTTP requests and e-mail
+messages generated from hundreds of millions of hosts.</li>
+  <li><strong>Distant centralized database</strong>: A single DNS server cannot be “close to” all the querying clients. If we put the
+single DNS server in New York City, then all queries from Australia must travel to the other side of the globe, perhaps
+over slow and congested links. This can lead to significant delays.</li>
+  <li><strong>Maintenance</strong>: The single DNS server would have to keep records for all Internet hosts. Not only would this
+centralized database be huge, but it would have to be updated frequently to account for every new host.</li>
+</ul>
+
+<h3 id="a-distributed-hierarchical-database">A Distributed, Hierarchical Database</h3>
+<p>In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
+and distributed around the world.</p>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-3.jpeg" alt="screenshot-3" /></p>
+
+<h4 id="3-classes-of-dns-servers">3 classes of DNS servers</h4>
+<ul>
+  <li><strong>Root DNS servers</strong>: There are more than 1000 root servers instances scattered all over the world. These root servers
+are copies of 13 different root servers, managed by 12 different organizations, and coordinated through the Internet
+Assigned Numbers Authority. Root name servers provide the IP addresses of the TLD servers.</li>
+  <li><strong>Top-level domain (TLD) servers</strong>: For each of the top-level domains - top level domains such as com, org, net, edu,
+and gov, and all of the country top-level domains such as uk, fr, ca, and jp - there is TLD server or server cluster.
+The company Verisign Global Registry Services maintains the TLD servers for the com top-level domain. TLD servers
+provide the IP addresses for authoritative DNS servers.</li>
+  <li><strong>Authoritative DNS servers</strong>: Every organization with publicly accessible hosts, such as Web servers and mail
+servers, on the Internet must provide publicly accessible DNS records that map the names of those hosts to IP addresses.
+An organization’s authoritative DNS server houses these DNS records. An organization can choose to implement its own
+authoritative DNS server to hold these records; alternatively, the organization can pay to have these records stored in
+an authoritative DNS server of some service provider. Most universities and large companies implement and maintain their
+own primary and secondary (backup) authoritative DNS server.</li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-4.jpeg" alt="screenshot-4" /></p>
+
+<ul>
+  <li><strong>Local DNS server</strong>: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
+architecture because each ISP has a local DNS server.</li>
+</ul>
+
+<p><img src="./assets/screenshots/2022-10-03/screenshot-5.jpeg" alt="screenshot-5" /></p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -342,6 +396,8 @@ into the {body} of the default.hbs template -->
                     <ul>
                         
                         
+                        
+                            
                         
                             
                         
@@ -641,7 +697,7 @@ into the {body} of the default.hbs template -->
                 <span class="reading-time">
                     
                     
-                      4 min read
+                      8 min read
                     
                 </span>
             </footer>

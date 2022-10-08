@@ -1,4 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-10-04T17:52:29+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Custom Event and Event Dispatcher</title><link href="/Unreal_Engine-Actor_Spawn_and_Respawn" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" /><published>2022-10-04T01:30:00+09:00</published><updated>2022-10-04T01:30:00+09:00</updated><id>/Unreal_Engine-Actor_Spawn_and_Respawn</id><content type="html" xml:base="/Unreal_Engine-Actor_Spawn_and_Respawn">&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-10-08T18:52:26+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Unreal Engine - Variable and Basic Function</title><link href="/Unreal_Engine-Variable_and_Basic_Function" rel="alternate" type="text/html" title="Unreal Engine - Variable and Basic Function" /><published>2022-10-05T19:30:00+09:00</published><updated>2022-10-05T19:30:00+09:00</updated><id>/Unreal_Engine-Variable_and_Basic_Function</id><content type="html" xml:base="/Unreal_Engine-Variable_and_Basic_Function">&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create variable
+    &lt;ul&gt;
+      &lt;li&gt;Add variable from my blueprint panel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Frequently used variable types
+    &lt;ul&gt;
+      &lt;li&gt;Boolean: True/False&lt;/li&gt;
+      &lt;li&gt;Integer&lt;/li&gt;
+      &lt;li&gt;Float&lt;/li&gt;
+      &lt;li&gt;Vector: X, Y, and Z float type structure&lt;/li&gt;
+      &lt;li&gt;String&lt;/li&gt;
+      &lt;li&gt;Object Type&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable Types
+    &lt;ul&gt;
+      &lt;li&gt;Variables have its own color assigned to it&lt;/li&gt;
+      &lt;li&gt;Object type may not be compatible even though it has the same color&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Variable extraction and assignment
+    &lt;ul&gt;
+      &lt;li&gt;extraction = Get&lt;/li&gt;
+      &lt;li&gt;assignment = Set&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable node placement
+    &lt;ul&gt;
+      &lt;li&gt;drag &amp;amp; drop from the ‘my blueprint’ and select Get/Set for placement&lt;/li&gt;
+      &lt;li&gt;drag &amp;amp; drop while pressing Ctrl/Alt key for faster Get/Set placement&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;private-variable-and-elevation-to-variable&quot;&gt;Private Variable and Elevation to Variable&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Private variable
+    &lt;ul&gt;
+      &lt;li&gt;To set the variable ‘private’, only internal variable Get/Set is possible
+        &lt;ul&gt;
+          &lt;li&gt;If it is not ‘private’, Get/Set is possible from external&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Elevation to variable
+    &lt;ul&gt;
+      &lt;li&gt;Make constant value to variable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-structure&quot;&gt;Creation and Usage of Structure&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get/Set Node&lt;/li&gt;
+  &lt;li&gt;Make Structure Node&lt;/li&gt;
+  &lt;li&gt;Split Structure Node&lt;/li&gt;
+  &lt;li&gt;Set Member Structure Node&lt;/li&gt;
+  &lt;li&gt;Flow Control Node
+    &lt;ul&gt;
+      &lt;li&gt;Sequence Node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-enum-variable&quot;&gt;Creation and Usage of Enum Variable&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get/Set Node&lt;/li&gt;
+  &lt;li&gt;Enum Switch Node&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creation-and-usage-of-function&quot;&gt;Creation and Usage of Function&lt;/h2&gt;
+&lt;h3 id=&quot;function&quot;&gt;Function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Re-usage of code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Create Variable and Variables types Create variable Add variable from my blueprint panel Frequently used variable types Boolean: True/False Integer Float Vector: X, Y, and Z float type structure String Object Type Variable Types Variables have its own color assigned to it Object type may not be compatible even though it has the same color</summary></entry><entry><title type="html">Unreal Engine - Custom Event and Event Dispatcher</title><link href="/Unreal_Engine-Actor_Spawn_and_Respawn" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" /><published>2022-10-04T01:30:00+09:00</published><updated>2022-10-04T01:30:00+09:00</updated><id>/Unreal_Engine-Actor_Spawn_and_Respawn</id><content type="html" xml:base="/Unreal_Engine-Actor_Spawn_and_Respawn">&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Dynamically spawn an object
     &lt;ul&gt;
@@ -420,22 +514,602 @@ improve mining speed and quality&lt;/li&gt;
 
 &lt;h2 id=&quot;data-transformation--discretization&quot;&gt;Data Transformation &amp;amp; Discretization&lt;/h2&gt;
 &lt;h3 id=&quot;data-transformation&quot;&gt;Data Transformation&lt;/h3&gt;
+&lt;p&gt;A function that maps the entire set of values of a given attribute to a new set of replacement values so that each value
+can be identified with one of the new values&lt;/p&gt;
+
+&lt;h4 id=&quot;methods&quot;&gt;Methods&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Aggregation&lt;/strong&gt;: Summarization, data cube construction&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Smoothing&lt;/strong&gt;: Remove noise from data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Normalization&lt;/strong&gt;: Scaled to fall within a smaller, common, and specified range
+    &lt;ul&gt;
+      &lt;li&gt;min-max, z-score, decimal scaling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Discretization&lt;/strong&gt;: Concept hierarchy climbing
+    &lt;ul&gt;
+      &lt;li&gt;Binning, Clustering, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Attribute/feature construction&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;New attributes constructed from the given ones&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;normalization&quot;&gt;Normalization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Min-max normalization: to [new_min&lt;sub&gt;A&lt;/sub&gt;, new_max&lt;sub&gt;A&lt;/sub&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-min_A}{max_A-min_A}(newmax_A&amp;space;-&amp;space;newmin_A)&amp;space;&amp;plus;&amp;space;newmin_A&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e.g. Let income range $12,000 to $98,000 normalized to [0.0, 1.0]. Then $73,000 is mapped to&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;12000}{98000&amp;space;-&amp;space;12000}(1.0&amp;space;-&amp;space;0)&amp;space;&amp;plus;&amp;space;0&amp;space;=&amp;space;0.716&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Normalization by decimal scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v}{10^j}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;where &lt;em&gt;j&lt;/em&gt; is the smallest integer such that Max(&lt;/td&gt;
+      &lt;td&gt;v’&lt;/td&gt;
+      &lt;td&gt;) &amp;lt; 1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Z-score normalization (μ: mean, σ: standard deviation):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-\mu&amp;space;_A}{\sigma&amp;space;_A}&quot; alt=&quot;equation-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;e.g. Let μ = 54,000, σ = 16,000. Then&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;54000}{16000}&amp;space;=&amp;space;1.225&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;discretization&quot;&gt;Discretization&lt;/h3&gt;
+&lt;p&gt;Divide the range of a continuous values into intervals&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Interval labels can then be used to replace actual data values -&amp;gt; Reduce noise&lt;/li&gt;
+  &lt;li&gt;Supervised vs. Unsupervised&lt;/li&gt;
+  &lt;li&gt;Split (top-down) vs. merge (bottom-up)&lt;/li&gt;
+  &lt;li&gt;Can be performed recursively on an attribute&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;three-types-of-attributes&quot;&gt;Three types of attributes&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nominal - values from an unordered set, e.g., color, profession&lt;/li&gt;
+  &lt;li&gt;Ordinal - values from an ordered set, e.g., military or academic rank&lt;/li&gt;
+  &lt;li&gt;Numeric - real numbers, e.g., integer or real numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-discretization-methods&quot;&gt;Data Discretization Methods&lt;/h3&gt;
+&lt;h4 id=&quot;typical-methods-all-the-methods-can-be-applied-recursively&quot;&gt;Typical methods: All the methods can be applied recursively&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Binning&lt;/strong&gt; (unsupervised, top-down split)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clustering analysis&lt;/strong&gt; (unsupervised, top-down split or bottom-up merge)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Concept Hierarchy Generation&lt;/strong&gt; (supervised, top-down split or bottom-up merge)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Correlation analysis&lt;/strong&gt;: (unsupervised, bottom-up merge)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;simple-discretization-binning&quot;&gt;Simple Discretization: Binning&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Equal-width&lt;/strong&gt; (distance) partitioning
+    &lt;ul&gt;
+      &lt;li&gt;Divide the range into &lt;em&gt;N&lt;/em&gt; intervals of equal size: uniform grid&lt;/li&gt;
+      &lt;li&gt;if &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; are the lowest and highest values of the attribute, the width of intervals will be: &lt;em&gt;W&lt;/em&gt; = (&lt;em&gt;B&lt;/em&gt; - &lt;em&gt;A&lt;/em&gt;)
+/ &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;The most straightforward, but outliers may dominate presentation&lt;/li&gt;
+      &lt;li&gt;Skewed data is &lt;strong&gt;not&lt;/strong&gt; handled well&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Equal-depth&lt;/strong&gt; (frequency) partitioning
+    &lt;ul&gt;
+      &lt;li&gt;Divides the range into &lt;em&gt;N&lt;/em&gt; intervals, each containing approximately same number of samples&lt;/li&gt;
+      &lt;li&gt;Good data scaling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discretization-without-using-class-labels-binning-vs-clustering&quot;&gt;Discretization Without Using Class Labels (Binning vs. Clustering)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;concept-hierarchy-generation&quot;&gt;Concept Hierarchy Generation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Concept hierarchy organizes concepts (i.e., attribute values) hierarchically and is usually associated with each 
+dimension in a data warehouse&lt;/li&gt;
+  &lt;li&gt;Concept hierarchies facilitate ‘drilling and rolling’ in data warehouses to view data in multiple granularity&lt;/li&gt;
+  &lt;li&gt;Concept hierarchy formation: Recursively reduce the data by collecting and replacing low level concepts (such as 
+numeric values for &lt;em&gt;age&lt;/em&gt;) by higher level concepts (such as &lt;em&gt;youth&lt;/em&gt;, &lt;em&gt;adult&lt;/em&gt;, &lt;em&gt;senior&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Concept hierarchies can be explicitly specified &lt;strong&gt;by domain experts&lt;/strong&gt; and/or data warehouse designers&lt;/li&gt;
+  &lt;li&gt;Concept hierarchy can also be &lt;strong&gt;automatically&lt;/strong&gt; formed for both numeric and nominal data. For numeric data, use 
+discretization methods shown.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;concept-hierarchy-generation-for-nominal-data&quot;&gt;Concept Hierarchy Generation for Nominal Data&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Specification of partial/total ordering of attributes explicitly at the schema level by users or experts
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;city&lt;/em&gt; &amp;lt; &lt;em&gt;state&lt;/em&gt; &amp;lt; &lt;em&gt;country&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Specification of a hierarchy for a set of values by explicit data grouping
+    &lt;ul&gt;
+      &lt;li&gt;{Urbana, Champaign, Chicago} &amp;lt; Illinois&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Specification of only a partial set of attributes
+    &lt;ul&gt;
+      &lt;li&gt;e.g., only &lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;cit&lt;/em&gt;, not others&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Automatic generation of hierarchies (or attribute levels) by the analysis of the number of distinct values
+    &lt;ul&gt;
+      &lt;li&gt;e.g., for a set of attributes: {&lt;em&gt;street&lt;/em&gt;, &lt;em&gt;city&lt;/em&gt;, &lt;em&gt;state&lt;/em&gt;, &lt;em&gt;country&lt;/em&gt;}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;automatic-concept-hierarchy-generation&quot;&gt;Automatic Concept Hierarchy Generation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Some hierarchies can be automatically generated based on the analysis of the number of distinct values per attribute 
+in the data set
+    &lt;ul&gt;
+      &lt;li&gt;The attribute with the most distinct values is placed at the lowest level of the hierarchy&lt;/li&gt;
+      &lt;li&gt;Exceptions, e.g., weekday, month, quarter, year&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-reduction&quot;&gt;Data Reduction&lt;/h2&gt;
+&lt;h3 id=&quot;data-reduction-strategies&quot;&gt;Data Reduction Strategies&lt;/h3&gt;
+&lt;p&gt;Obtain a reduced representation of the data set that is much smaller in volume but yet produces the same (or almost the 
+same) analytical results.&lt;/p&gt;
+
+&lt;h4 id=&quot;why-data-reduction&quot;&gt;Why data reduction?&lt;/h4&gt;
+&lt;p&gt;A database/data warehouse may store terabytes of data. Complex data analysis may take a very long time to run on the
+complete data set.&lt;/p&gt;
+
+&lt;h4 id=&quot;data-reduction-strategies-1&quot;&gt;Data reduction strategies&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dimensionality reduction, e.g., remove unimportant attributes
+    &lt;ul&gt;
+      &lt;li&gt;&lt;del&gt;Wavelet transforms&lt;/del&gt; &amp;lt;- Reduction for signal data&lt;/li&gt;
+      &lt;li&gt;Feature subset selection, feature creation&lt;/li&gt;
+      &lt;li&gt;Principal Components Analysis (PCA)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Numerosity reduction (some simply call it: Data Reduction)
+    &lt;ul&gt;
+      &lt;li&gt;Regression and Log-Linear Models&lt;/li&gt;
+      &lt;li&gt;Histograms, clustering, sampling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data compression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-reduction-1-dimensionality-reduction&quot;&gt;Data Reduction 1: Dimensionality Reduction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Curse of dimensionality
+    &lt;ul&gt;
+      &lt;li&gt;When dimensionality increases, data becomes increasingly sparse&lt;/li&gt;
+      &lt;li&gt;Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful&lt;/li&gt;
+      &lt;li&gt;The possible combinations of subspaces will grow exponentially&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dimensionality reduction
+    &lt;ul&gt;
+      &lt;li&gt;Avoid the curse of dimensionality&lt;/li&gt;
+      &lt;li&gt;Help eliminate irrelevant features and reduce noise&lt;/li&gt;
+      &lt;li&gt;Reduce time and space required in data mining&lt;/li&gt;
+      &lt;li&gt;Allow easier visualization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;attribute-subset-selection&quot;&gt;Attribute Subset Selection&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Another way to reduce dimensinoality of data&lt;/li&gt;
+  &lt;li&gt;Redundant attributes
+    &lt;ul&gt;
+      &lt;li&gt;Duplicate much or all of the information contained in one or more other attributes&lt;/li&gt;
+      &lt;li&gt;E.g., purchase price of a product and the amount of sales tax paid&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Irrelevant attributes
+    &lt;ul&gt;
+      &lt;li&gt;Contain no information that is useful for the data mining task at hand&lt;/li&gt;
+      &lt;li&gt;E.g., students’ ID is often irrelevant to the task of predicting students’ GPA&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Filtering Correlated Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: We do not need to consider both features that tell same property!&lt;/li&gt;
+  &lt;li&gt;Let’s select only a feature from a pair of the features when they are correlated enough
+    &lt;ul&gt;
+      &lt;li&gt;How to compute correlation? Pearson, Spearman, …
+        &lt;ol&gt;
+          &lt;li&gt;Compute the pair-wise correlation among features&lt;/li&gt;
+          &lt;li&gt;When correlated, take only a feature&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variance Inflation Factor (VIF) or Mutual information can be another solution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Removing Features with Low Variance&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: Low variance means that features are not distinct enough!&lt;/li&gt;
+  &lt;li&gt;Let’s exclude the features whose variance are low
+    &lt;ol&gt;
+      &lt;li&gt;See the distribution of features and compute variance&lt;/li&gt;
+      &lt;li&gt;Exclude if the computed variance &amp;lt; threshold&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Filtering out Non-relevant Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intuition: Features that are not relevant to the target variable do not affect the model performance&lt;/li&gt;
+  &lt;li&gt;Let’s exclude the features (that are not related to target variable)
+    &lt;ol&gt;
+      &lt;li&gt;Select a feature and measure the correlation to target variable (by Pearson or Spearman)&lt;/li&gt;
+      &lt;li&gt;If the correlation is too low, exclude the feature
+        &lt;ul&gt;
+          &lt;li&gt;Other statistical-based methods (e.g., Chi-square) can be used&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Heuristic Search in Attribute Selection&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There are 2&lt;em&gt;d&lt;/em&gt; possible attribute combinations of &lt;em&gt;d&lt;/em&gt; attributes&lt;/li&gt;
+  &lt;li&gt;Typical heuristic attribute selection methods:
+    &lt;ul&gt;
+      &lt;li&gt;Best single attribute under the attribute independence assumption: choose by significance tests&lt;/li&gt;
+      &lt;li&gt;Best step-wise feature selection
+        &lt;ul&gt;
+          &lt;li&gt;The best single-attribute is picked first&lt;/li&gt;
+          &lt;li&gt;Then next best attribute condition to the first, …&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Step-wise attribute elimination
+        &lt;ul&gt;
+          &lt;li&gt;Repeatedly eliminate the worst attribute&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Best combined attribute selection and elimination&lt;/li&gt;
+      &lt;li&gt;Optimal branch and bound
+        &lt;ul&gt;
+          &lt;li&gt;Use attribute elimination and backtracking&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Attribute Creation (Feature Generation)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create new attributes (features) that can capture the important information in a data set more effectively than the
+original ones&lt;/li&gt;
+  &lt;li&gt;Two methods
+    &lt;ul&gt;
+      &lt;li&gt;Mapping data to new space (see: data reduction)
+        &lt;ul&gt;
+          &lt;li&gt;E.g., Fourier transformation, wavelet transformation, manifold approaches&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Attribute construction
+        &lt;ul&gt;
+          &lt;li&gt;Combining features&lt;/li&gt;
+          &lt;li&gt;Data discretization
+Then, remove (usually) larger numbers of attributes&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Principal Component Analysis (PCA)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Find a projection that captures the largest amount of variation in data&lt;/li&gt;
+  &lt;li&gt;The original data are projected onto a much smaller space, resulting in dimensionality reduction. We find the
+eigenvectors of the covariance matrix, and these eigenvectors define the new space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Principal Component Analysis (Steps)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given &lt;em&gt;N&lt;/em&gt; data vecotrs from &lt;em&gt;n&lt;/em&gt;-dimensions, find &lt;em&gt;k&lt;/em&gt; ≤ &lt;em&gt;n&lt;/em&gt; orthogonal vectors (principal components) that can be best
+used to represent data
+    &lt;ul&gt;
+      &lt;li&gt;Normalize input data: Each attribute falls within the same range&lt;/li&gt;
+      &lt;li&gt;Compute &lt;em&gt;k&lt;/em&gt; orthonormal (unit) vectors, i.e., principal components&lt;/li&gt;
+      &lt;li&gt;Each input data (vector) is a linear combination of the &lt;em&gt;k&lt;/em&gt; principal component vectors&lt;/li&gt;
+      &lt;li&gt;The principal components are sorted in order of decreasing “significance” or strength&lt;/li&gt;
+      &lt;li&gt;Since the components are sorted, the size of the data can be reduced by elimination the weak components, i.e., those
+with low variance (i.e., using the strongest principal components, it is possible to reconstruct a good approximation of
+the original data)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Works for numeric data only&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-reduction-2-numerosity-reduction&quot;&gt;Data Reduction 2: Numerosity Reduction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reduce data volume by choosing alternative, smaller forms of data representation&lt;/li&gt;
+  &lt;li&gt;Parametric methods (e.g., regression)
+    &lt;ul&gt;
+      &lt;li&gt;Assume the data fits some model, estimate model parameters, store only the parameters, and discard the data (except
+possible outliers)&lt;/li&gt;
+      &lt;li&gt;Ex. Log-linear models - obtain value at a point in &lt;em&gt;m&lt;/em&gt;-D space as the product on appropriate marginal subspaces&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Non-parametric methods
+    &lt;ul&gt;
+      &lt;li&gt;Do not assume models&lt;/li&gt;
+      &lt;li&gt;Major families: histograms, clustering, sampling, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;data-reduction-by-regression&quot;&gt;Data Reduction by Regression&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A collective name for techniques for the modeling and analysis of numerical data consisting of values of dependent
+variable (also called response variable or measurement) and of one or more independent variables (a.k.a. explanatory
+variables or predictors)&lt;/li&gt;
+  &lt;li&gt;The parameters are estimated so as to give a “best fit” of the data&lt;/li&gt;
+  &lt;li&gt;Most commonly the best fit is evaluated by using the least squares method, but other criteria have also been used&lt;/li&gt;
+  &lt;li&gt;Used for prediction (including forecasting of time-series data), inference, hypothesis testing, and modeling of causal
+relationships&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Regression Models&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linear regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;w&lt;/em&gt; &lt;em&gt;X&lt;/em&gt; + &lt;em&gt;b&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Two regression coefficients, &lt;em&gt;w&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt;, specify the line and are to be estimated by using the data at hand&lt;/li&gt;
+      &lt;li&gt;Using the least squares criterion to the known values of &lt;em&gt;Y&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;, &lt;em&gt;Y&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …, &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;,
+&lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multiple regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;b&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Many nonlinear functions can be transformed into the above&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Log-linear models
+    &lt;ul&gt;
+      &lt;li&gt;Approximate discrete multidimensional probability distributions&lt;/li&gt;
+      &lt;li&gt;Estimate the probability of each point (tuple) in a multidimensional space for a set of discretized attributes, 
+based on smaller subset of dimensional combinations&lt;/li&gt;
+      &lt;li&gt;Useful for dimensionality reduction and data smoothing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-histogram&quot;&gt;Non-parametric Reduction: Histogram&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Divide data into buckets and store average (sum) for each bucket&lt;/li&gt;
+  &lt;li&gt;Partitioning rules
+    &lt;ul&gt;
+      &lt;li&gt;Equal-width: equal bucket range&lt;/li&gt;
+      &lt;li&gt;Equal-frequency (or equal-depth)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-clustering&quot;&gt;Non-parametric Reduction: Clustering&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter)
+only&lt;/li&gt;
+  &lt;li&gt;Can be very effective if data is clustered but not if data is “smeared”&lt;/li&gt;
+  &lt;li&gt;Can have hierarchical clustering and be stored in multidimensional index tree structures&lt;/li&gt;
+  &lt;li&gt;There are many choices of clustering definitions and clustering algorithms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;non-parametric-reduction-sampling&quot;&gt;Non-parametric Reduction: Sampling&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sampling: obtaining a small sample &lt;em&gt;s&lt;/em&gt; to represent the whole data set &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Allow a mining algorithm to run in complexity that is potentially sub-linear to the size of the data&lt;/li&gt;
+  &lt;li&gt;Key principle: Choose a representative subset of the data
+    &lt;ul&gt;
+      &lt;li&gt;Simple random sampling may have very poor performance in the presence of skew&lt;/li&gt;
+      &lt;li&gt;Develop adaptive sampling methods, e.g., stratified sampling&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;Sampling may not reduce database I/Os (page at a time)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Types of Sampling&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Simple random sampling
+    &lt;ul&gt;
+      &lt;li&gt;There is an equal probability of selecting any particular item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sampling without replacement
+    &lt;ul&gt;
+      &lt;li&gt;Once an object is selected, it is removed from the population&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sampling with replacement
+    &lt;ul&gt;
+      &lt;li&gt;A selected object is not removed from the population&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Stratified sampling
+    &lt;ul&gt;
+      &lt;li&gt;Partition the data set, and draw samples from each partition (proportionally, i.e., approximately the same 
+percentage of the data)&lt;/li&gt;
+      &lt;li&gt;Used in conjunction with skewed data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;sampling-with-or-without-replacement&quot;&gt;Sampling: With or without Replacement&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;sampling-cluster-or-stratified-sampling&quot;&gt;Sampling: Cluster or Stratified Sampling&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;data-reduction-3-data-compression&quot;&gt;Data Reduction 3: Data Compression&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;String compression
+    &lt;ul&gt;
+      &lt;li&gt;There are extensive theories and well-tuned algorithms&lt;/li&gt;
+      &lt;li&gt;Typically &lt;strong&gt;lossless&lt;/strong&gt;, but only limited manipulation is possible without expansion&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Audio/video compression
+    &lt;ul&gt;
+      &lt;li&gt;Typically &lt;strong&gt;lossy&lt;/strong&gt; compression, with progressive refinement&lt;/li&gt;
+      &lt;li&gt;Sometimes small fragments of signal can be reconstructed without reconstructing the whole&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Time sequence is not audio
+    &lt;ul&gt;
+      &lt;li&gt;Typically short and vary slowly with time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dimensionality and numerosity reduction may also be considered as forms of data compression&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Data Collection Considerations Does the dataset exist (or can we build the dataset)? If it DOES NOT EXIST, the DM problem you defined cannot be conducted. If it DOES EXIST, specify the target data source with considering Availability (i.e., permission) Access type (API, download, …) -&amp;gt; Need to find “limits or warnings” Decide the scale of the dataset and what to store Reasonable amount to solve your problem Storage capability Decide the collection methodology Crawling web pages or using APIs Multiprocessing vs. single processing</summary></entry><entry><title type="html">Computer Network - DNS - The Internet’s Directory Service</title><link href="/Computer_Network-DNS-The_Internet's-Directory-Service" rel="alternate" type="text/html" title="Computer Network - DNS - The Internet’s Directory Service" /><published>2022-10-03T19:30:00+09:00</published><updated>2022-10-03T19:30:00+09:00</updated><id>/Computer_Network-DNS-The_Internet's-Directory-Service</id><content type="html" xml:base="/Computer_Network-DNS-The_Internet's-Directory-Service">&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;:&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: Identifier for a host, such as &lt;em&gt;www.google.com&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP addresses&lt;/strong&gt;: Identifier consists of four bytes and has a rigid hierarchical structure.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;1️⃣-services-provided-by-dns&quot;&gt;1️⃣ Services Provided by DNS&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: A directory service that translates hostnames to IP addresses.
+    &lt;ol&gt;
+      &lt;li&gt;A distributed database implemented in a hierarchy of DNS servers.&lt;/li&gt;
+      &lt;li&gt;An application-layer protocol that allows hosts to query the distributed databases.
+        &lt;ul&gt;
+          &lt;li&gt;The DNS servers are often UNIX machines running the Berkeley Internet Name Domain (BIND) software.&lt;/li&gt;
+          &lt;li&gt;The DNS protocol runs over UDP and uses port 53.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;dns-application-steps&quot;&gt;DNS application steps&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;The same user machine runs the client side of the DNS application.&lt;/li&gt;
+  &lt;li&gt;The browser extracts the hostname, &lt;em&gt;www.domain.com&lt;/em&gt;, from the URL and passes the hostname to the client side of DNS 
+application.&lt;/li&gt;
+  &lt;li&gt;The DNS client sends a query containing the hostname to a DNS server.&lt;/li&gt;
+  &lt;li&gt;The DNS client eventually receives a reply, which includes the IP address for the hostname.&lt;/li&gt;
+  &lt;li&gt;Once the browser receives the IP address from DNS, it can initiate a TCP connection to the HTTP server process
+located at port 80 at that IP address.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;dns-also-provides&quot;&gt;DNS also provides&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Host aliasing&lt;/strong&gt;: A host with a complicated hostname can have one or more alias names.
+    &lt;ul&gt;
+      &lt;li&gt;e.g. &lt;em&gt;relay1.west-coast.enterprise.com&lt;/em&gt; (&lt;strong&gt;canonical hostname&lt;/strong&gt;), &lt;em&gt;www.enterprise.com&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mail server aliasing&lt;/strong&gt;: It is highly desirable that e-mail addresses bo mnemonic.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Load distribution&lt;/strong&gt;: DNS is also used to perform load distribution among replicated servers, such as replicated Web 
+servers. Busy sites, such as &lt;em&gt;cnn.com&lt;/em&gt;, are replicated over multiple servers, with each server running on different end
+system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with
+one alias hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name
+mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the
+addresses within each reply.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-overview-of-how-dns-works&quot;&gt;2️⃣ Overview of how DNS Works&lt;/h2&gt;
+&lt;h4 id=&quot;the-problems-with-a-centralized-design&quot;&gt;The problems with a centralized design&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;A single point of failure&lt;/strong&gt;: If the DNS server crashes, so does the entire Internet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Traffic volume&lt;/strong&gt;: A single DNS server would have to handle all DNS queries for all the HTTP requests and e-mail
+messages generated from hundreds of millions of hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Distant centralized database&lt;/strong&gt;: A single DNS server cannot be “close to” all the querying clients. If we put the
+single DNS server in New York City, then all queries from Australia must travel to the other side of the globe, perhaps
+over slow and congested links. This can lead to significant delays.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maintenance&lt;/strong&gt;: The single DNS server would have to keep records for all Internet hosts. Not only would this
+centralized database be huge, but it would have to be updated frequently to account for every new host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a-distributed-hierarchical-database&quot;&gt;A Distributed, Hierarchical Database&lt;/h3&gt;
+&lt;p&gt;In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
+and distributed around the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-classes-of-dns-servers&quot;&gt;3 classes of DNS servers&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Root DNS servers&lt;/strong&gt;: There are more than 1000 root servers instances scattered all over the world. These root servers
+are copies of 13 different root servers, managed by 12 different organizations, and coordinated through the Internet
+Assigned Numbers Authority. Root name servers provide the IP addresses of the TLD servers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Top-level domain (TLD) servers&lt;/strong&gt;: For each of the top-level domains - top level domains such as com, org, net, edu,
+and gov, and all of the country top-level domains such as uk, fr, ca, and jp - there is TLD server or server cluster.
+The company Verisign Global Registry Services maintains the TLD servers for the com top-level domain. TLD servers
+provide the IP addresses for authoritative DNS servers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Authoritative DNS servers&lt;/strong&gt;: Every organization with publicly accessible hosts, such as Web servers and mail
+servers, on the Internet must provide publicly accessible DNS records that map the names of those hosts to IP addresses.
+An organization’s authoritative DNS server houses these DNS records. An organization can choose to implement its own
+authoritative DNS server to hold these records; alternatively, the organization can pay to have these records stored in
+an authoritative DNS server of some service provider. Most universities and large companies implement and maintain their
+own primary and secondary (backup) authoritative DNS server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Local DNS server&lt;/strong&gt;: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
+architecture because each ISP has a local DNS server.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Hostname:</summary></entry><entry><title type="html">Intelligent Information Systems - Data Analysis using Numpy and Pandas</title><link href="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas" rel="alternate" type="text/html" title="Intelligent Information Systems - Data Analysis using Numpy and Pandas" /><published>2022-10-02T19:30:00+09:00</published><updated>2022-10-02T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas</id><content type="html" xml:base="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas">&lt;h2 id=&quot;python-libraries-for-data-analysis&quot;&gt;Python Libraries for Data Analysis&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure.</summary></entry><entry><title type="html">Intelligent Information Systems - Data Analysis using Numpy and Pandas</title><link href="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas" rel="alternate" type="text/html" title="Intelligent Information Systems - Data Analysis using Numpy and Pandas" /><published>2022-10-02T19:30:00+09:00</published><updated>2022-10-02T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas</id><content type="html" xml:base="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas">&lt;h2 id=&quot;python-libraries-for-data-analysis&quot;&gt;Python Libraries for Data Analysis&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;Matplotlib&lt;/li&gt;
   &lt;li&gt;Numpy&lt;/li&gt;
@@ -867,619 +1541,4 @@ a message to a mail server that contains some header lines, including the &lt;em
   &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Collision Detection using Interaction</summary></entry><entry><title type="html">Big Data - Stream(2)</title><link href="/Big_Data-Stream(2)" rel="alternate" type="text/html" title="Big Data - Stream(2)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>/Big_Data-Stream(2)</id><content type="html" xml:base="/Big_Data-Stream(2)">&lt;h2 id=&quot;filtering-a-data-stream&quot;&gt;Filtering a Data Stream&lt;/h2&gt;
-
-&lt;h3 id=&quot;bloom-filter&quot;&gt;Bloom Filter&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Each element of data stream is a tuple&lt;/li&gt;
-  &lt;li&gt;Given a list of keys &lt;em&gt;S&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Determine which tuples of stream are in &lt;em&gt;S&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;NOTE: It’s different from user-based sampling&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Obvious solution&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Use hash table. However, we &lt;strong&gt;do not have enough memory to store all of **S&lt;/strong&gt; in a hash table**. For example, we might
-be processing millions of filters on the same stream.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example Application: Email Spam Filter&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We know 1 billion “benign” email addresses&lt;/li&gt;
-  &lt;li&gt;If an email comes from one of these, it is NOT spam
-    &lt;ul&gt;
-      &lt;li&gt;All benign emails should be determined as benign address&lt;/li&gt;
-      &lt;li&gt;Classifying spam as benign is acceptable&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution: Bloom Filter&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bloom Filter consists of
-    &lt;ul&gt;
-      &lt;li&gt;An array of bits&lt;/li&gt;
-      &lt;li&gt;A number of hash functions&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Two processes
-    &lt;ul&gt;
-      &lt;li&gt;Setup process
-        &lt;ul&gt;
-          &lt;li&gt;Initially, all bits in the given array set &lt;em&gt;0&lt;/em&gt;s&lt;/li&gt;
-          &lt;li&gt;For each element &lt;em&gt;x&lt;/em&gt; in &lt;em&gt;S&lt;/em&gt;, set the bits h(&lt;em&gt;x&lt;/em&gt;) to 1, for each hash function &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Lookup process
-        &lt;ul&gt;
-          &lt;li&gt;For input &lt;em&gt;y&lt;/em&gt;, check if the bits h(&lt;em&gt;y&lt;/em&gt;) set to 1, for each hash function &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;Accept if all bits are set to 1, otherwise reject&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Starting from Bloom Filter with 1 Hash&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Given a set of keys &lt;em&gt;S&lt;/em&gt; that we want to filter&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Create a &lt;strong&gt;bit array &lt;em&gt;B&lt;/em&gt;&lt;/strong&gt; of &lt;em&gt;n&lt;/em&gt; bits, initially all &lt;em&gt;0&lt;/em&gt;s&lt;/li&gt;
-  &lt;li&gt;Choose a &lt;strong&gt;hash function &lt;em&gt;h&lt;/em&gt;&lt;/strong&gt; with range &lt;strong&gt;[0, n)&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Hash each member of &lt;em&gt;s ∈ S&lt;/em&gt; to one of &lt;em&gt;n&lt;/em&gt; buckets, and set that bit to 1, i.e., B[h(s)] = 1&lt;/li&gt;
-  &lt;li&gt;Hash each element &lt;em&gt;a&lt;/em&gt; of the stream and output only those that hash to bit that was set to &lt;em&gt;1&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Output &lt;em&gt;a&lt;/em&gt; if B[h(a)] == 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;bloom-filter-processing&quot;&gt;Bloom Filter Processing&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Create false positives but no false negatives&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;If the item is in &lt;em&gt;S&lt;/em&gt; we surely output it, if not we may still output it&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use n = 11 bits for our filter&lt;/li&gt;
-  &lt;li&gt;Stream elements = integers&lt;/li&gt;
-  &lt;li&gt;Use two hash functions:
-    &lt;ul&gt;
-      &lt;li&gt;h&lt;sub&gt;1&lt;/sub&gt;(x) =
-        &lt;ul&gt;
-          &lt;li&gt;Take odd-numbered bits from the right in the binary representation of x&lt;/li&gt;
-          &lt;li&gt;Treat it as an integer i&lt;/li&gt;
-          &lt;li&gt;Result is i modulo 11&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;h&lt;sub&gt;2&lt;/sub&gt;(x) = same, but take &lt;strong&gt;even&lt;/strong&gt;-numbered bits&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose we have the same Bloom filter as before, and we have set the filter to 10100101010&lt;/li&gt;
-  &lt;li&gt;Lookup element y = 118 = 1&lt;strong&gt;1&lt;/strong&gt;1&lt;strong&gt;0&lt;/strong&gt;1&lt;strong&gt;1&lt;/strong&gt;0 (binary)&lt;/li&gt;
-  &lt;li&gt;h&lt;sub&gt;1&lt;/sub&gt;(y) = 14 modulo 11 = 3&lt;/li&gt;
-  &lt;li&gt;h&lt;sub&gt;2&lt;/sub&gt;(y) = 5 modulo 11 = 5&lt;/li&gt;
-  &lt;li&gt;Bit 5 is 1, but bit 3 is 0, so we are sure y is not in the set&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Returning to our original Question&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;S&lt;/td&gt;
-          &lt;td&gt;= 1 billion (benign) email addresses&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;= 8 billion bits&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;If the email address is in &lt;em&gt;S&lt;/em&gt;, then it surely hashes to a bucket that has the big set to 1, so it always gets through
-(&lt;strong&gt;no false negatives&lt;/strong&gt;)&lt;/li&gt;
-  &lt;li&gt;However, the UNKNOWN email address can be determined as benign (&lt;strong&gt;false positives&lt;/strong&gt;) -&amp;gt; We need to estimate&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;analysis-throwing-darts&quot;&gt;Analysis: Throwing Darts&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;More accurate analysis for the number of &lt;strong&gt;false positives&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;If we throw &lt;em&gt;m&lt;/em&gt; darts into &lt;em&gt;n&lt;/em&gt; equally likely targets, &lt;strong&gt;what is the probability that a target gets at least one 
-dart?&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Targets = bits/buckets&lt;/li&gt;
-      &lt;li&gt;Darts = input items&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;We have &lt;em&gt;m&lt;/em&gt; darts,  &lt;em&gt;n&lt;/em&gt; targets&lt;/li&gt;
-  &lt;li&gt;What is the probability that a target gets at least one dart:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fraction of 1s (over input) in the array B = probability fo false positive = 1 - e&lt;sup&gt;-m/n&lt;/sup&gt;
-    &lt;ul&gt;
-      &lt;li&gt;e.g. 10 darts, 8 * 10&lt;sup&gt;9&lt;/sup&gt; targets
-        &lt;ul&gt;
-          &lt;li&gt;Fraction of 1s in B = 1 - e&lt;sup&gt;-1/8&lt;/sup&gt; = 0.1175&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;bloom-filter-with-more-hash-functions&quot;&gt;Bloom Filter with More Hash Functions&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Consider:&lt;/td&gt;
-          &lt;td&gt;S&lt;/td&gt;
-          &lt;td&gt;= &lt;em&gt;m&lt;/em&gt;,&lt;/td&gt;
-          &lt;td&gt;B&lt;/td&gt;
-          &lt;td&gt;= &lt;em&gt;n&lt;/em&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Use &lt;em&gt;k&lt;/em&gt; independent hash functions h&lt;sub&gt;1&lt;/sub&gt;, …, h&lt;sub&gt;k&lt;/sub&gt;&lt;/li&gt;
-  &lt;li&gt;Initialization:
-    &lt;ul&gt;
-      &lt;li&gt;Set &lt;strong&gt;&lt;em&gt;B&lt;/em&gt;&lt;/strong&gt; to all &lt;strong&gt;&lt;em&gt;0s&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Hash each element &lt;strong&gt;&lt;em&gt;s ∈ S&lt;/em&gt;&lt;/strong&gt; using each hash function&lt;sub&gt;i&lt;/sub&gt;, set B[h&lt;sub&gt;i&lt;/sub&gt;(s)] = 1 (for each &lt;em&gt;i = 1, 
-.., k&lt;/em&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Run-time:
-    &lt;ul&gt;
-      &lt;li&gt;When a stream element with key &lt;em&gt;x&lt;/em&gt; arrives
-        &lt;ul&gt;
-          &lt;li&gt;If B[h&lt;sub&gt;i&lt;/sub&gt;(x)] = 1 for all &lt;em&gt;i&lt;/em&gt; = 1, …, k then declare that &lt;em&gt;x&lt;/em&gt; is in &lt;em&gt;S&lt;/em&gt;. That is, &lt;em&gt;x&lt;/em&gt; hashes to a 
-bucket set to &lt;em&gt;1&lt;/em&gt; for every hash function h&lt;sub&gt;i&lt;/sub&gt;(x)&lt;/li&gt;
-          &lt;li&gt;Otherwise discard the element &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;bloom-filter---analysis&quot;&gt;Bloom Filter - Analysis&lt;/h4&gt;
-
-&lt;p&gt;What fraction of the bit vector B are 1s?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Throwing &lt;em&gt;k * m&lt;/em&gt; darts at &lt;em&gt;n&lt;/em&gt; targets&lt;/li&gt;
-  &lt;li&gt;So fraction of &lt;em&gt;1&lt;/em&gt;s is **(1 - e&lt;sup&gt;-km/n&lt;/sup&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;But we have &lt;em&gt;k&lt;/em&gt; independent hash functions and we only let the element &lt;em&gt;x&lt;/em&gt; through if all &lt;em&gt;k&lt;/em&gt; hash element &lt;em&gt;x&lt;/em&gt; to bucket
-of value 1. So, &lt;strong&gt;false positive probability = (1 - e&lt;sup&gt;-km/n&lt;/sup&gt;)&lt;sup&gt;k&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;m = 1 billion, n = 8 billion
-    &lt;ul&gt;
-      &lt;li&gt;k = 1: (1 - e&lt;sup&gt;-1/8&lt;/sup&gt;) = 0.1175&lt;/li&gt;
-      &lt;li&gt;k = 2: (1 - e&lt;sup&gt;-1/4&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt; = 0.0493&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;“Optimal” value of &lt;em&gt;k&lt;/em&gt;: &lt;em&gt;n/m ln(2)&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In our case: Optimal &lt;em&gt;k = 8 ln(2) = 5.546&lt;/em&gt;, Error at &lt;em&gt;k = 6: (1 - e&lt;sup&gt;-1/6&lt;/sup&gt;)&lt;sup&gt;2&lt;/sup&gt; = 0.0235&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;counting-distinct-elements&quot;&gt;Counting Distinct Elements&lt;/h2&gt;
-
-&lt;h3 id=&quot;flajolet-martin-approach&quot;&gt;Flajolet-Martin Approach&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Pick a hash function &lt;em&gt;h&lt;/em&gt; that maps each of the &lt;em&gt;N&lt;/em&gt; elements to at least &lt;em&gt;log&lt;sub&gt;2&lt;/sub&gt; N&lt;/em&gt; bits&lt;/li&gt;
-  &lt;li&gt;For each stream element &lt;em&gt;a&lt;/em&gt;, let r(a) be the number of trailing 0s in h(a)
-    &lt;ul&gt;
-      &lt;li&gt;r(a) = position of first 1 counting from the right&lt;/li&gt;
-      &lt;li&gt;e.g. say &lt;em&gt;h(a) = 12&lt;/em&gt;, then &lt;em&gt;12&lt;/em&gt; is &lt;em&gt;1100&lt;/em&gt; in binary, so &lt;em&gt;r(a) = 2&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Record R = the maximum r(a) seen
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;R = max&lt;sub&gt;a&lt;/sub&gt; r(a)&lt;/em&gt;, over all the item &lt;em&gt;a&lt;/em&gt; seen so far&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Estimated number of distinct elements = 2&lt;sup&gt;R&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;why-it-works&quot;&gt;Why It Works&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hash each item x to a bit, using exponential distribution
-    &lt;ul&gt;
-      &lt;li&gt;1/2 map to bit 0, 1/4 map to bit 1, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Intuition
-    &lt;ul&gt;
-      &lt;li&gt;The 0th bit is accessed with probability 1/2&lt;/li&gt;
-      &lt;li&gt;The 1st bit is accessed with probability 1/4&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-      &lt;li&gt;The kth bit is accessed with probability O(1/2&lt;sup&gt;k&lt;/sup&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus, if the kth bit is set, then we know that an event with probability O(1/2&lt;sup&gt;k&lt;/sup&gt;) happened&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;In a more formally&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Goal: Showing that probability of finding a tail of &lt;em&gt;r&lt;/em&gt; zeros:
-    &lt;ul&gt;
-      &lt;li&gt;Goes to &lt;strong&gt;1&lt;/strong&gt; if &lt;strong&gt;m » 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Goes to &lt;strong&gt;0&lt;/strong&gt; if &lt;strong&gt;m « 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;where &lt;strong&gt;m&lt;/strong&gt; is the number of distinct elements seen so far in the stream&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Also, it means that 2&lt;em&gt;R&lt;/em&gt; will almost always be around &lt;em&gt;m&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The probability that a given h(a) ends in at least &lt;em&gt;r&lt;/em&gt; zeros is 2&lt;sup&gt;-r&lt;/sup&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;h(a)&lt;/strong&gt; hashes elements uniformly at random&lt;/li&gt;
-      &lt;li&gt;Probability that a random number ends in at least &lt;em&gt;r&lt;/em&gt; zeros is 2&lt;sup&gt;-r&lt;/sup&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Then the probability of NOT seeing a tail of length &lt;em&gt;r&lt;/em&gt; among &lt;em&gt;m&lt;/em&gt; elements:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;=&amp;space;(1&amp;space;-&amp;space;2^{-r})^{2^{r}(m2^{-r})}\approx&amp;space;e^{-m2^{-r}}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Probability of NOT finding a tail of length &lt;em&gt;r&lt;/em&gt; is:&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;If &lt;strong&gt;m « 2&lt;sup&gt;r&lt;/sup&gt;&lt;/strong&gt;, then probability tends to 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;\approx&amp;space;e^{-m2^{-r}}&amp;space;=&amp;space;1&quot; alt=&quot;equation-2&quot; /&gt; as &lt;img src=&quot;https://latex.codecogs.com/svg.image?m/2^{r}&amp;space;\rightarrow&amp;space;0&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So, the probability of finding a tail of length &lt;strong&gt;r&lt;/strong&gt; tends to &lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If &lt;strong&gt;m » 2&lt;sup&gt;-r&lt;/sup&gt;&lt;/strong&gt;, then probability tends to 0&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;-&amp;space;2^{-r})^{m}&amp;space;\approx&amp;space;e^{-m2^{-r}}&amp;space;=&amp;space;0&quot; alt=&quot;equation-4&quot; /&gt; as &lt;img src=&quot;https://latex.codecogs.com/svg.image?m/2^{r}&amp;space;\rightarrow&amp;space;\infty&amp;space;&quot; alt=&quot;eqaution-5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So, the probability of finding a tail of length &lt;strong&gt;r&lt;/strong&gt; tends to &lt;strong&gt;1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Thus, 2&lt;sup&gt;R&lt;/sup&gt; will almost always be around &lt;em&gt;m&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;computing-moments&quot;&gt;Computing Moments&lt;/h2&gt;
-
-&lt;h3 id=&quot;generalization&quot;&gt;Generalization&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose a stream has elements chosen from a set &lt;em&gt;A&lt;/em&gt; of &lt;em&gt;N&lt;/em&gt; values&lt;/li&gt;
-  &lt;li&gt;Let &lt;em&gt;m&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; be the number of times value &lt;em&gt;i&lt;/em&gt; occurs in the stream&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;k&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt; moment is:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{i\in&amp;space;A}&amp;space;(m_{i})^{k}&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;special-cases&quot;&gt;Special Cases&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;0&lt;sup&gt;th&lt;/sup&gt; moment = number of distinct elements
-    &lt;ul&gt;
-      &lt;li&gt;The problem just considered&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;1&lt;sup&gt;st&lt;/sup&gt; moment = count of the numbers of elements = length of the stream
-    &lt;ul&gt;
-      &lt;li&gt;Easy to compute&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;2&lt;sup&gt;nd&lt;/sup&gt; moment = surprise number &lt;em&gt;S&lt;/em&gt; = a measure of how uneven the distribution is&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;example-surprise-number&quot;&gt;Example: Surprise Number&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Stream of length 100&lt;/li&gt;
-  &lt;li&gt;11 distinct values&lt;/li&gt;
-  &lt;li&gt;Item counts: 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 Surprise S = 910&lt;/li&gt;
-  &lt;li&gt;Item counts: 90, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 Surprise S = 8,110&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;problem-definition&quot;&gt;Problem Definition&lt;/h3&gt;
-
-&lt;p&gt;Q: Given a stream, how can we estimate k-th moment efficiently, with small memory space?&lt;/p&gt;
-
-&lt;p&gt;A: AMS method&lt;/p&gt;
-
-&lt;h3 id=&quot;ams-method&quot;&gt;AMS Method&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;works for all moments&lt;/li&gt;
-  &lt;li&gt;Gives an unbiased estimate&lt;/li&gt;
-  &lt;li&gt;We will just concentrate on the 2&lt;sup&gt;nd&lt;/sup&gt; moment &lt;em&gt;S&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;We pick and keep track of many variables &lt;em&gt;X&lt;/em&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;For each variable &lt;em&gt;X&lt;/em&gt; we store &lt;em&gt;X.el&lt;/em&gt; and &lt;em&gt;X.val&lt;/em&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;em&gt;X.el&lt;/em&gt; corresponds to the item &lt;em&gt;i&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;em&gt;X.val&lt;/em&gt; corresponds to the count of item &lt;em&gt;i&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Our goal is to compute:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;\sum&amp;space;_{i}m_{i}^{2}&quot; alt=&quot;equation-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;This requires a count in main memory, so number of &lt;em&gt;X&lt;/em&gt;s is limited&lt;/p&gt;
-
-&lt;h3 id=&quot;one-random-variable-x&quot;&gt;One Random Variable (X)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How to set &lt;em&gt;X.val&lt;/em&gt; and &lt;em&gt;X.el&lt;/em&gt;?
-    &lt;ul&gt;
-      &lt;li&gt;Assume stream has length &lt;em&gt;n&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Pick some random time &lt;em&gt;t(t&amp;lt;n)&lt;/em&gt; to start, so that any time is equally likely&lt;/li&gt;
-      &lt;li&gt;Let at time &lt;em&gt;t&lt;/em&gt; the stream have item &lt;em&gt;i. we set X.el = i&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Then we maintain count &lt;em&gt;c (X.val = c)&lt;/em&gt; of the number of &lt;em&gt;i&lt;/em&gt;s in the stream starting from the chosen time &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Then the estimate of the 2&lt;sup&gt;nd&lt;/sup&gt; moment is:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;f(X)&amp;space;=&amp;space;n(2&amp;space;\cdot&amp;space;c&amp;space;-&amp;space;1)&quot; alt=&quot;equation-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;We will keep track of multiple &lt;em&gt;X&lt;/em&gt;s, &lt;em&gt;(X&lt;sub&gt;1&lt;/sub&gt;, X&lt;sub&gt;2&lt;/sub&gt;, …, X&lt;sub&gt;k&lt;/sub&gt;)&lt;/em&gt; and our final estimate will 
-be:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?S&amp;space;=&amp;space;1/k\sum_{j}^{k}f(X_{j})&quot; alt=&quot;equation-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;expectation-analysis&quot;&gt;Expectation Analysis&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\frac{1}{n}\sum&amp;space;_{i}n(1&amp;space;&amp;plus;&amp;space;3&amp;space;&amp;plus;&amp;space;5&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;2m_{i}&amp;space;-&amp;space;1)&quot; alt=&quot;equation-9&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Little side calculation:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?(1&amp;space;&amp;plus;&amp;space;3&amp;space;&amp;plus;&amp;space;5&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;2m_{i}&amp;space;-&amp;space;1)&amp;space;=&amp;space;\sum_{i=1}^{m_{i}}(2i&amp;space;-&amp;space;1)&amp;space;=&amp;space;2\frac{m_{i}(m_{i}&amp;plus;1)}{2}&amp;space;-&amp;space;m_{i}&amp;space;=&amp;space;(m_{i})^{2}&quot; alt=&quot;equation-10&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Then,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\frac{1}{n}\sum&amp;space;_{i}n(m_{i})^{2}&quot; alt=&quot;equation-11&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?E[f(X)]&amp;space;=&amp;space;\sum&amp;space;_{i}(m_{i})^{2}&amp;space;=&amp;space;S&quot; alt=&quot;equation-12&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We have the second moment&lt;/p&gt;
-
-&lt;h3 id=&quot;higher-order-moments&quot;&gt;Higher-Order Moments&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For estimating k&lt;sup&gt;th&lt;/sup&gt; moment we essentially use the same algorithm but change the estimate:
-    &lt;ul&gt;
-      &lt;li&gt;For &lt;strong&gt;k = 2&lt;/strong&gt; we used &lt;em&gt;n (2 * c - 1)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;For &lt;strong&gt;k = 3&lt;/strong&gt; we use &lt;em&gt;n (3 * c&lt;sup&gt;2&lt;/sup&gt; - 3c + 1)&lt;/em&gt; (where &lt;strong&gt;c = X.val&lt;/strong&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Why?
-    &lt;ul&gt;
-      &lt;li&gt;For &lt;strong&gt;k = 2&lt;/strong&gt;: Remember we had (1 + 3 + 5 + … + 2m&lt;sub&gt;i&lt;/sub&gt; - 1) and we showed terms &lt;strong&gt;2c - 1&lt;/strong&gt; (for &lt;strong&gt;c = 1, 
-… m&lt;/strong&gt;) sum to &lt;strong&gt;m&lt;sup&gt;2&lt;/sup&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{c=1}^{m}2c&amp;space;-&amp;space;1&amp;space;=&amp;space;\sum_{c=1}^{m}c^{2}&amp;space;-&amp;space;\sum_{c=1}^{m}(c-1)^{2}&amp;space;=&amp;space;m^{2}&quot; alt=&quot;equation-13&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;so,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?2c&amp;space;-&amp;space;1&amp;space;=&amp;space;c^{2}&amp;space;-&amp;space;(c&amp;space;-&amp;space;1)^{2}&quot; alt=&quot;equation-14&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For &lt;strong&gt;k = 3&lt;/strong&gt;: &lt;em&gt;c&lt;sup&gt;3&lt;/sup&gt; - (c - 1)&lt;sup&gt;3&lt;/sup&gt; = 3c&lt;sup&gt;2&lt;/sup&gt; - 3c + 1&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Generally&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Estimate&amp;space;=&amp;space;n(c^{k}-(c&amp;space;-&amp;space;1)^{k})&quot; alt=&quot;equation-15&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;combining-samples&quot;&gt;Combining Samples&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In practice:
-    &lt;ul&gt;
-      &lt;li&gt;Compute &lt;strong&gt;f(X) = n(2c - 1)&lt;/strong&gt; for as many variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; as you can fit in memory&lt;/li&gt;
-      &lt;li&gt;Average them in groups&lt;/li&gt;
-      &lt;li&gt;Take median of averages&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Problem: Streams never end
-    &lt;ul&gt;
-      &lt;li&gt;We assumed there was a number &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt;, the number of positions in the stream. But real streams go on forever, so 
-&lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; is a variable - the number of inputs seen so far.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;fix-ups&quot;&gt;Fix-ups&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; have &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; as a factor - keep &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; separately; just hold the count in &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Suppose we can only store &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; counts. We must throw some &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt;s out as time goes on:
-    &lt;ul&gt;
-      &lt;li&gt;Objective: Each starting time &lt;strong&gt;&lt;em&gt;t&lt;/em&gt;&lt;/strong&gt; is selected with probability &lt;strong&gt;&lt;em&gt;k/n&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Solution: Fixed-size sampling
-        &lt;ul&gt;
-          &lt;li&gt;Choose the first &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; times for &lt;strong&gt;&lt;em&gt;k&lt;/em&gt;&lt;/strong&gt; variables&lt;/li&gt;
-          &lt;li&gt;When the &lt;strong&gt;&lt;em&gt;n&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt;&lt;/strong&gt; element arrives &lt;strong&gt;&lt;em&gt;(n &amp;gt; k)&lt;/em&gt;&lt;/strong&gt;, choose it with probability &lt;strong&gt;&lt;em&gt;k/n&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;If you choose it, throw one of the previously stored variables &lt;strong&gt;&lt;em&gt;X&lt;/em&gt;&lt;/strong&gt; out with equal probability&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;counting-itemsets&quot;&gt;Counting Itemsets&lt;/h2&gt;
-
-&lt;p&gt;Q: Given a stream, which items appear more &lt;em&gt;s&lt;/em&gt; times in the window?&lt;/p&gt;
-
-&lt;p&gt;A: Think of the stream of baskets as one binary stream per item.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; = item present; &lt;strong&gt;0&lt;/strong&gt; = not present&lt;/li&gt;
-  &lt;li&gt;Use &lt;strong&gt;DGIM&lt;/strong&gt; to estimate counts of &lt;strong&gt;1&lt;/strong&gt;s for all items&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-25/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In principle, you could count frequent pairs or even larger sets the same way&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;One stream per itemsets&lt;/li&gt;
-  &lt;li&gt;e.g. for a basket {i, j, k}, assume 7 independent streams: (i) (j) (k) (i, j) (i, k) (j, k) (i, j, k)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Drawbacks:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Number of itemsets is way too big&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exponentially-decaying-windows&quot;&gt;Exponentially Decaying Windows&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Exponentially decaying windows: A heuristic for selecting likely frequent item(sets)&lt;/li&gt;
-  &lt;li&gt;If stream is a&lt;sub&gt;1&lt;/sub&gt;, a&lt;sub&gt;2&lt;/sub&gt;, .. and we are taking the sum of the stream, take the answer at time &lt;em&gt;t&lt;/em&gt; to
-be:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{t}^{i=1}a_{i}(1&amp;space;-&amp;space;c)^{t-i}&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;c&lt;/em&gt;&lt;/strong&gt; is a constant, presumably tiny, like 10&lt;sup&gt;-6&lt;/sup&gt; or 10&lt;sup&gt;-9&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;When new a&lt;sub&gt;t+1&lt;/sub&gt; arrives, multiply current sum by (1-c) and add a&lt;sub&gt;t+1&lt;/sub&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;example-counting-items&quot;&gt;Example: Counting Items&lt;/h4&gt;
-
-&lt;p&gt;If each a&lt;sub&gt;i&lt;/sub&gt; is an “item” we can compute the characteristic function of each possible item &lt;em&gt;x&lt;/em&gt; as an
-&lt;strong&gt;Exponentially Decaying Window&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{i=1}^{t}\delta&amp;space;_{i}\cdot&amp;space;(1-c)^{t-i}&quot; alt=&quot;equation-2&quot; /&gt; where &lt;img src=&quot;https://latex.codecogs.com/svg.image?\delta_{i}&amp;space;=&amp;space;1&amp;space;&quot; alt=&quot;equation-3&quot; /&gt; if a&lt;sub&gt;i&lt;/sub&gt; = x, and &lt;strong&gt;0&lt;/strong&gt; otherwise&lt;/p&gt;
-
-&lt;p&gt;Imagine that for each item &lt;strong&gt;x&lt;/strong&gt; we have binary stream (&lt;strong&gt;x&lt;/strong&gt; if &lt;strong&gt;&lt;em&gt;x&lt;/em&gt;&lt;/strong&gt; appears, &lt;strong&gt;0&lt;/strong&gt; if &lt;strong&gt;&lt;em&gt;x&lt;/em&gt;&lt;/strong&gt; does not appear)&lt;/p&gt;
-
-&lt;p&gt;New item &lt;em&gt;x&lt;/em&gt; arrives, multiply all counts by &lt;strong&gt;(1 - c)&lt;/strong&gt; and add &lt;strong&gt;+1&lt;/strong&gt; to count for element &lt;strong&gt;&lt;em&gt;x&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Call this sum the “weight” of item x&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;example-counting-items-1&quot;&gt;Example: Counting Items&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-09-25/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;What are “currently” most popular movies?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Suppose we want to find movies of weight &amp;gt; 1/2
-    &lt;ul&gt;
-      &lt;li&gt;Important property: Sum over all weights:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{t}(1-c)^{t}&quot; alt=&quot;equation-4&quot; /&gt; is 1/[1 - (1 - c)] = 1/c&lt;/p&gt;
-
-&lt;p&gt;Thus, there cannot be more than &lt;strong&gt;2/&lt;em&gt;c&lt;/em&gt;&lt;/strong&gt; movies with weight of &lt;strong&gt;1/2&lt;/strong&gt;. So 2/c is a limit on the number of movies being
-counted at any time.&lt;/p&gt;
-
-&lt;h3 id=&quot;extension-to-itemsets&quot;&gt;Extension to Itemsets&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Count (some) itemsets
-    &lt;ul&gt;
-      &lt;li&gt;What are currently “hot” itmesets?&lt;/li&gt;
-      &lt;li&gt;Problem: Too many itemsets to keep counts of all of them in memory&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;When a basket B comes in:
-    &lt;ul&gt;
-      &lt;li&gt;Multiply all counts by &lt;strong&gt;(1-c)&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;For uncounted items in &lt;strong&gt;B&lt;/strong&gt;, create nes count&lt;/li&gt;
-      &lt;li&gt;Add &lt;strong&gt;1&lt;/strong&gt; to count of any item in &lt;strong&gt;B&lt;/strong&gt; and to any &lt;strong&gt;itemset&lt;/strong&gt; contained in &lt;strong&gt;B&lt;/strong&gt; that is already being counted&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Drop counts &amp;lt; 1/2&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Initiate new counts (next slide)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;imitation-of-new-counts&quot;&gt;Imitation of New Counts&lt;/h3&gt;
-
-&lt;p&gt;Start a count for an itemset &lt;strong&gt;S ⊆ B&lt;/strong&gt; every proper subset of &lt;strong&gt;S&lt;/strong&gt; had a count prior to arrival of basket &lt;strong&gt;B&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Intuitively: If all subsets of &lt;strong&gt;S&lt;/strong&gt; are being counted this means they are “&lt;strong&gt;frequent/hot&lt;/strong&gt;” and thus &lt;strong&gt;S&lt;/strong&gt; has a
-potential to be “&lt;strong&gt;hot&lt;/strong&gt;”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Filtering a Data Stream</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Collision Detection using Interaction</summary></entry></feed>
