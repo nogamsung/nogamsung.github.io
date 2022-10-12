@@ -276,7 +276,54 @@ into the {body} of the default.hbs template -->
 <h2 id="creation-and-usage-of-function">Creation and Usage of Function</h2>
 <h3 id="function">Function</h3>
 <ul>
-  <li>Re-usage of code</li>
+  <li>Re-usage of code
+    <ul>
+      <li>Independently separate code that is reused -&gt; event, graph, function, macro, and etc.</li>
+      <li>function: similar to an event graph</li>
+    </ul>
+  </li>
+  <li>How to use function
+    <ul>
+      <li>Add: Add function from ‘My blueprint’ tab</li>
+      <li>Make node network for each function</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="function-vs-event-graph">Function vs. Event Graph</h3>
+<ul>
+  <li>Make node network from the grid</li>
+  <li>Availability of return value</li>
+  <li>Availability of latent action or timeline function</li>
+  <li>Availability of local variable</li>
+  <li>Number of entry point</li>
+  <li>Guidance for separation
+    <ul>
+      <li>You do not need to be strict</li>
+      <li>If it is hard to choose, just make an custom event first</li>
+      <li>If there is a need for return value, make it into a function</li>
+      <li>If there is a no need for latent action or timeline, make it into a function</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="conditional-expression">Conditional Expression</h3>
+<ul>
+  <li>Flow control node
+    <ul>
+      <li><strong>Branch</strong> node</li>
+    </ul>
+  </li>
+  <li>Conditional node: examine the input value and output true or false
+    <ul>
+      <li>condition
+        <ul>
+          <li>node: &gt;, &lt;. &gt;=, &lt;=, ==, !=</li>
+          <li>node: AND, OR&lt; XOR, NAND, NOR, NOT</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="reference">Reference</h3>
@@ -395,6 +442,18 @@ into the {body} of the default.hbs template -->
                         
                         
                         
+                        
+                         <li><a href="/Unreal_Engine-Pure_Function_and_Type_Cast">Unreal Engine - Pure Function and Type Cast</a></li>
+                            
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
                             
                             
                         
@@ -424,8 +483,7 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Unreal_Engine-Custom_Event_and_Event_Dispatcher">Unreal Engine - Custom Event and Event Dispatcher</a></li>
-                            
+                        
                             
                             
                             
@@ -588,7 +646,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/etc/">
                         
-                        See all 11 posts →
+                        See all 12 posts →
                         
                     </a>
                 </footer>
@@ -597,6 +655,60 @@ into the {body} of the default.hbs template -->
             
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Intelligent_Information_Systems-Web_Basics">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Intelligent_Information_Systems-Web_Basics">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Intelligent Information Systems - Web Basics</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Crawling
+
+  Data Extraction from a web page
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
             
 
             <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->

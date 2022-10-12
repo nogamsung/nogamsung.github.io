@@ -8,6 +8,68 @@
     
       
       <item>
+        <title>Unreal Engine - Pure Function and Type Cast</title>
+        
+          <description>&lt;h2 id=&quot;pure-function&quot;&gt;Pure function&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pure function
+    &lt;ul&gt;
+      &lt;li&gt;Output value is dependent on input value&lt;/li&gt;
+      &lt;li&gt;If it references an external function variable value, it is not a pure function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Purify
+    &lt;ul&gt;
+      &lt;li&gt;For pure function, check the pure property&lt;/li&gt;
+      &lt;li&gt;Type transformation node can be a pure node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 11 Oct 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Pure_Function_and_Type_Cast</link>
+        <guid isPermaLink="true">/Unreal_Engine-Pure_Function_and_Type_Cast</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Statistics</title>
+        
+          <description>&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 10 Oct 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Big_Data-Statistics</link>
+        <guid isPermaLink="true">/Big_Data-Statistics</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - Web Basics</title>
+        
+          <description>&lt;h3 id=&quot;crawling&quot;&gt;Crawling&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data Extraction from a web page&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 09 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information_Systems-Web_Basics</link>
+        <guid isPermaLink="true">/Intelligent_Information_Systems-Web_Basics</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Variable and Basic Function</title>
         
           <description>&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;

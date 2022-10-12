@@ -4,6 +4,54 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Unreal_Engine-Pure_Function_and_Type_Cast.html</loc>
+        
+        <lastmod>2022-10-11T01:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Big_Data-Statistics.html</loc>
+        
+        <lastmod>2022-10-10T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Intelligent_Information_Systems-Web_Basics.html</loc>
+        
+        <lastmod>2022-10-09T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Variable_and_Basic_Function.html</loc>
         
         <lastmod>2022-10-05T19:30:00+09:00</lastmod>

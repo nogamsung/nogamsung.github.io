@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-08T18:52:26+09:00</updated>
+  <updated>2022-10-12T22:04:32+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -30,6 +30,832 @@
   
   
 
+  
+    <entry>
+      <title type="html">Big Data - Statistics</title>
+      <link href="/Big_Data-Statistics" rel="alternate" type="text/html" title="Big Data - Statistics" />
+      <published>2022-10-10T00:00:00+09:00</published>
+      <updated>2022-10-10T00:00:00+09:00</updated>
+      <id>/Big_Data-Statistics</id>
+      <content type="html" xml:base="/Big_Data-Statistics">&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-statistics&quot;&gt;Why Statistics&lt;/h3&gt;
+&lt;p&gt;In general, analysis process is…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h2&gt;
+&lt;h3 id=&quot;population-vs-sample&quot;&gt;Population vs. Sample&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to
+the entire collection of units for which inferences are to be made&lt;/li&gt;
+  &lt;li&gt;Sample: A sample from statistical population is the set of measurements that are actually collected in the course of
+an investigation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;descriptive-vs-inferential&quot;&gt;Descriptive vs. Inferential&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Descriptive Statistics: Consists of methods for organizing and summarizing information (Weiss, 1999)&lt;/li&gt;
+  &lt;li&gt;Inferential Statistics: Consists of methods for drawing and measuring the reliability of conclusions about population
+based on information obtained from a sample of the population (Weiss, 1999)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;Descriptive and inferential statistics are interrelated&lt;/p&gt;
+
+&lt;p&gt;Assume that you just started data analysis. What should you do?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Preliminary descriptive analysis&lt;/li&gt;
+  &lt;li&gt;(Choice of appropriate inferential method)&lt;/li&gt;
+  &lt;li&gt;Inferential analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;parameters-vs-statistics&quot;&gt;Parameters vs. Statistics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parameters: An unknown numerical summary of the population (Agresti &amp;amp; Finalay, 1997)&lt;/li&gt;
+  &lt;li&gt;Statistics: A known numerical summary of the sample which can be used to make inference about parameters (Agresti &amp;amp; 
+Finalay, 1997)&lt;/li&gt;
+  &lt;li&gt;Example
+    &lt;ul&gt;
+      &lt;li&gt;The proportion &lt;em&gt;p&lt;/em&gt; of 18-30 year-olds who use Twitter at least once a day -&amp;gt; Parameter&lt;/li&gt;
+      &lt;li&gt;The proportion &lt;em&gt;p’&lt;/em&gt; of 18-30 year-olds using Twitter at least once a day, calculated from a sample of 18-30 
+year-olds&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discrete-vs-continuous&quot;&gt;Discrete vs. Continuous&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Discrete Variables: indicates a finite numbers of values or as many values as there are integers. E.g. tweet counts 
+per day&lt;/li&gt;
+  &lt;li&gt;Continuous Variables: indicates any real values. E.g. time difference between two consecutive tweet postings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;central-tendency&quot;&gt;Central Tendency&lt;/h2&gt;
+&lt;h3 id=&quot;mean&quot;&gt;Mean&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The sum of observed values in a data divided by the number of observations&lt;/li&gt;
+  &lt;li&gt;p.s. Often affected by extreme values in the data (i.e., outliers)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;9.125&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;median&quot;&gt;Median&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The value of the variable in a data set that divides the set of the observed values in half, so that the observed
+values in one half are less than or equal to the median value and the observed values in the other half are greater or
+equal to the median value&lt;/li&gt;
+  &lt;li&gt;To compute median, the observed values of variable in a data should be sorted
+    &lt;ul&gt;
+      &lt;li&gt;If the # observation is odd, then the sample median is the observed values exactly in the middle of the ordered list&lt;/li&gt;
+      &lt;li&gt;If the # observation is even, then the sample median is the number halfway between two middle observed values in the
+ordered list&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;mode&quot;&gt;Mode&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A discrete variable (or its value) is that value of the variable which occurs with the greatest frequency in a data set&lt;/li&gt;
+  &lt;li&gt;p.s. if the greatest frequency is 1 (i.e., no value occurs more than once), then the variable has no mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;statistics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;range&quot;&gt;Range&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The difference between its maximum and minimum values in a data set&lt;/li&gt;
+  &lt;li&gt;Formally, range = max - min&lt;/li&gt;
+  &lt;li&gt;p.s. range is affected by only max and min values, which means that other values may be ignored
+    &lt;ul&gt;
+      &lt;li&gt;e.g. X = [1,10,10,11,11,10,11,10,11,10,11,11,10,11,100]&lt;/li&gt;
+      &lt;li&gt;Can we say that range of X is [1,100]?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;percentile--quartiles&quot;&gt;Percentile &amp;amp; Quartiles&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A method dividing a given data set with the equal portions
+    &lt;ul&gt;
+      &lt;li&gt;Quartile (4 parts)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Let &lt;em&gt;n&lt;/em&gt; denote the number of observations in a data set. Arrange the observed values of variable in a data in 
+increasing order
+    &lt;ul&gt;
+      &lt;li&gt;The 1&lt;sup&gt;st&lt;/sup&gt; quartile Q1 is at position (n+1)/4&lt;/li&gt;
+      &lt;li&gt;The 2&lt;sup&gt;nd&lt;/sup&gt; quartile Q2 (the median) is at position (n+1)/2&lt;/li&gt;
+      &lt;li&gt;The 3&lt;sup&gt;rd&lt;/sup&gt; quartile Q3 is at position 3(n+1)/4&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Interquartile range: the difference between 1&lt;sup&gt;st&lt;/sup&gt; and 3&lt;sup&gt;rd&lt;/sup&gt; quartiles of variables (i.e. IQR = Q3 - 
+Q1)
+    &lt;ul&gt;
+      &lt;li&gt;Roughly, the IQR gives the range of middle 50% of the observed values&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interquartile-range&quot;&gt;Interquartile Range&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The sample of interquartile range represents the length of the interval covered by the center half of the observed 
+values of the variable&lt;/li&gt;
+  &lt;li&gt;This measure of variation is not disturbed if a small fraction the observed values are very large or very small&lt;/li&gt;
+  &lt;li&gt;Five-number summary: consists of min, max, and quartiles wirtten in increasing order
+    &lt;ul&gt;
+      &lt;li&gt;Min, Q1, Q2, Q3, Max&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;standard-deviation&quot;&gt;Standard Deviation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A measure of a distribution’s deviation from its mean (square root of variance)&lt;/li&gt;
+  &lt;li&gt;For a variable &lt;em&gt;x&lt;/em&gt;, the sample standard deviation is&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sigma&amp;space;=&amp;space;\sqrt{\frac{1}{N}[(x_1&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;(x_2&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;(x_N&amp;space;-&amp;space;\mu&amp;space;)^2]},&amp;space;where&amp;space;\mu&amp;space;=\frac{1}{N}(x_1&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;x_N)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Preferred when the mean is used as the measure of center (e.g. symmetric distribution)&lt;/li&gt;
+  &lt;li&gt;Trivially, more variation -&amp;gt; larger standard deviation&lt;/li&gt;
+  &lt;li&gt;However, it can be strongly affected by a few extreme observations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;1.4851&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;probability&quot;&gt;Probability&lt;/h2&gt;
+&lt;h3 id=&quot;probability-mass-function-pmf&quot;&gt;Probability Mass Function (PMF)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;For discrete random variables&lt;/li&gt;
+  &lt;li&gt;The domain of P must be the set of all possible states of x&lt;/li&gt;
+  &lt;li&gt;0 &amp;lt;= P(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1
+    &lt;ul&gt;
+      &lt;li&gt;An impossible event has probability 0 and no state can be less probable than that. Likewise, an event that is 
+guaranteed to happen has probability 1, and no state cna have a greater chance of occurring.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;P(&lt;em&gt;x&lt;/em&gt;) = 1
+    &lt;ul&gt;
+      &lt;li&gt;We refer to this property as being normalized. Without this property, we could obtain probabilities greater than one 
+by computing the probability of one of many events occurring.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Uniform distribution among &lt;em&gt;k&lt;/em&gt; states:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;x_i)&amp;space;=&amp;space;\frac{1}{k}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For continuous random variables&lt;/li&gt;
+  &lt;li&gt;The domain of P must be set of all possible states of &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;p(&lt;em&gt;x&lt;/em&gt;) &amp;gt;= 0
+    &lt;ul&gt;
+      &lt;li&gt;Note that we do not require p(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\int&amp;space;p(x)&amp;space;dx&amp;space;=&amp;space;1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Uniform distribution u(x;a,b) = 1/(b - a)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;rules-associated-with-probability&quot;&gt;Rules associated with Probability&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computing marginal probability with the Sum Rule&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall_x&amp;space;\in&amp;space;x,&amp;space;P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;\sum_{y}&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?p(x)&amp;space;=&amp;space;\int&amp;space;p(x,y)dy&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Conditional Probability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)&amp;amp;space;=&amp;amp;space;\frac{P(\textrm{y}&amp;amp;space;=&amp;amp;space;y,&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)}{P(\textrm{x}&amp;amp;space;=&amp;amp;space;x)})&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bayes’ Rule&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(x&lt;/td&gt;
+      &lt;td&gt;y)&amp;amp;space;=&amp;amp;space;\frac{P(x)P(y&lt;/td&gt;
+      &lt;td&gt;x)}{P(y)})&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chain Rule of Probability&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x^{(1)},&amp;space;...,&amp;space;x^{(n)})&amp;space;=&amp;space;P(x^{(1)})&amp;space;\prod_{i=2}^{n}P(x^{(1)},&amp;space;...,&amp;space;x^{(i-1)})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;E.g. ![](https://latex.codecogs.com/svg.image?P(a,b,c)&amp;amp;space;=&amp;amp;space;P(a&lt;/td&gt;
+      &lt;td&gt;b,c)P(b&lt;/td&gt;
+      &lt;td&gt;c)P(c))&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
+
+&lt;p&gt;Notation: x ⊥ y&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&amp;space;=&amp;space;p(\textrm{x}&amp;space;=&amp;space;x)&amp;space;p(\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Conditional Independence&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;z&amp;space;\in&amp;space;\textrm{z}&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?p(\textrm{x}&amp;amp;space;=&amp;amp;space;x,&amp;amp;space;\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;=&amp;amp;space;p(\textrm{x}&amp;amp;space;=&amp;amp;space;x&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;p(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z))&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Equivalently, p(x&lt;/td&gt;
+          &lt;td&gt;y,z) = p(x&lt;/td&gt;
+          &lt;td&gt;z)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Notation: x ⊥ y&lt;/td&gt;
+          &lt;td&gt;z&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;expectation&quot;&gt;Expectation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Discrete variable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\sum_{x}&amp;space;P(x)f(x)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Continuous variable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\int&amp;space;&amp;space;p(x)f(x)&amp;space;dx&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linearity of Expectations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[\alpha&amp;space;f(x)&amp;space;&amp;plus;&amp;space;\beta&amp;space;g(x)]&amp;space;=&amp;space;\alpha&amp;space;\mathbb{E}_x[f(x)]&amp;space;&amp;plus;&amp;space;\beta\mathbb{E}_x[g(x)]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;This always holds, even when f(x) and g(x) are dependent&lt;/p&gt;
+
+&lt;h3 id=&quot;covariance&quot;&gt;Covariance&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Cov(f(x),g(y))&amp;space;=&amp;space;\mathbb{E}[(f(x)]&amp;space;-&amp;space;\mathbb{E}[f(x)])(g(y)&amp;space;-&amp;space;\mathbb{E}[g(y)])&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;Covariance can be negative&lt;/p&gt;
+
+&lt;p&gt;Cov(x)&lt;sub&gt;i,j&lt;/sub&gt; = Cov(x&lt;sub&gt;i&lt;/sub&gt;,x&lt;sub&gt;j&lt;/sub&gt;)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Covariance Matrix
+    &lt;ul&gt;
+      &lt;li&gt;Diagonal elements are variance of i-th element&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;randomized-algorithms-probabilistic-algorithm&quot;&gt;Randomized Algorithms (=Probabilistic Algorithm)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Las Vegas&lt;/th&gt;
+      &lt;th&gt;Monte Carlo&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Type of Answer&lt;/td&gt;
+      &lt;td&gt;Exact&lt;/td&gt;
+      &lt;td&gt;Random amount of error&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Runtime&lt;/td&gt;
+      &lt;td&gt;Random (until answer found)&lt;/td&gt;
+      &lt;td&gt;Chosen by user (longer runtime gives less error)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;estimating-sums--integrals-with-samples&quot;&gt;Estimating sums / integrals with samples&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;justification&quot;&gt;Justification&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unbiased:
+    &lt;ul&gt;
+      &lt;li&gt;The expected value for finite &lt;em&gt;n&lt;/em&gt; is equal to the correct value&lt;/li&gt;
+      &lt;li&gt;The value for any specific &lt;em&gt;n&lt;/em&gt; samples will have random error, but the error for different sample sets cancel out&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Low variance:
+    &lt;ul&gt;
+      &lt;li&gt;Variance is O(1/&lt;em&gt;n&lt;/em&gt;)&lt;/li&gt;
+      &lt;li&gt;For very large &lt;em&gt;n&lt;/em&gt;, the error converges “almost surely” to 0&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;distribution--information-theory&quot;&gt;Distribution &amp;amp; Information Theory&lt;/h2&gt;
+&lt;h3 id=&quot;bernoulli-distribution&quot;&gt;Bernoulli Distribution&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Data Collection</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Intelligent Information Systems - Web Basics</title>
+      <link href="/Intelligent_Information_Systems-Web_Basics" rel="alternate" type="text/html" title="Intelligent Information Systems - Web Basics" />
+      <published>2022-10-09T19:30:00+09:00</published>
+      <updated>2022-10-09T19:30:00+09:00</updated>
+      <id>/Intelligent_Information_Systems-Web_Basics</id>
+      <content type="html" xml:base="/Intelligent_Information_Systems-Web_Basics">&lt;h3 id=&quot;crawling&quot;&gt;Crawling&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data Extraction from a web page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;1️⃣-http-hyper-text-transfer-protocol&quot;&gt;1️⃣ HTTP (Hyper Text Transfer Protocol)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;‘Hyper Text’?&lt;/li&gt;
+  &lt;li&gt;HTTP is a protocol to send hyper text written in HTML&lt;/li&gt;
+  &lt;li&gt;‘Protocol’? ‘Promise, rule’
+    &lt;ul&gt;
+      &lt;li&gt;Request and response&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Uses SSL for secure connection between a browser and a server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2️⃣-url-uniform-resource-locator&quot;&gt;2️⃣ URL (Uniform Resource Locator)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A network address that provides resource location&lt;/li&gt;
+  &lt;li&gt;There are other protocols other than http and https
+    &lt;ul&gt;
+      &lt;li&gt;e.g. ftp, mailto&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;3️⃣-html&quot;&gt;3️⃣ HTML&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Markup language for web page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;structure-of-html&quot;&gt;Structure of HTML&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tree structure&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;web-crawling-and-scraping&quot;&gt;Web crawling and scraping&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Crawling
+    &lt;ul&gt;
+      &lt;li&gt;Get information from search and create a db&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Scraping
+    &lt;ul&gt;
+      &lt;li&gt;A Web page information&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;crawling-legal-issue&quot;&gt;Crawling Legal Issue&lt;/h2&gt;
+&lt;p&gt;The intention of the service provider is to actually view a web page&lt;/p&gt;
+
+&lt;h3 id=&quot;db-violation-cases&quot;&gt;DB Violation Cases&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Empass vs Naver&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;잡코리아&lt;/strong&gt; vs 사람인&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;야놀자&lt;/strong&gt; vs 여기어때&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;caution-when-scraping-️&quot;&gt;Caution when scraping ❗️&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data scraping itself is OK&lt;/li&gt;
+  &lt;li&gt;Do not request too much web server computing power&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;getting-web-data&quot;&gt;Getting Web Data&lt;/h2&gt;
+&lt;h3 id=&quot;essential-library&quot;&gt;Essential Library&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;urllib&lt;/li&gt;
+  &lt;li&gt;BeautifulSoup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;urllib&quot;&gt;urllib&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Crawling library&lt;/li&gt;
+  &lt;li&gt;Exists internally in python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;beautifulsoup&quot;&gt;BeautifulSoup&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parsing library&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;beautifulsoup-usage&quot;&gt;BeautifulSoup Usage&lt;/h4&gt;
+
+&lt;p&gt;BeautifulSoup(&lt;received text=&quot;&quot;&gt;, &lt;text parser=&quot;&quot;&gt;)&lt;/text&gt;&lt;/received&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;html&amp;gt;&amp;lt;div&amp;gt;hello&amp;lt;/div&amp;gt;&amp;lt;/html&amp;gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use find() to get important parts of data&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;html&amp;gt;&amp;lt;div&amp;gt;hello&amp;lt;/div&amp;gt;&amp;lt;/html&amp;gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get &amp;lt; ul &amp;gt; tag&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get only ‘line1’ from &amp;lt; li &amp;gt;, &amp;lt; /li &amp;gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Find all the elements that is in condition&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tag-property-and-property-value&quot;&gt;Tag, Property and Property Value&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML?
+    &lt;ul&gt;
+      &lt;li&gt;document starting with &amp;lt; html &amp;gt; &amp;lt; /html &amp;gt;&lt;/li&gt;
+      &lt;li&gt;Composed of tag and property&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tag
+    &lt;ul&gt;
+      &lt;li&gt;&amp;lt; ul &amp;gt; &amp;lt; /ul &amp;gt; &amp;lt; li &amp;gt; &amp;lt; /li &amp;gt; &amp;lt; div &amp;gt; &amp;lt; /div &amp;gt; &amp;lt; a &amp;gt; &amp;lt; /a &amp;gt;, things that are wrapped with &amp;lt; &amp;gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Property and Property Value
+    &lt;ul&gt;
+      &lt;li&gt;&amp;lt; ul class=”class1” &amp;gt;
+        &lt;ul&gt;
+          &lt;li&gt;ul: tag, class: property, “class1”: property value&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Get data using class property&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;ul class=&quot;class1&quot;&amp;gt;
+        &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;ul class=&quot;class2&quot;&amp;gt;
+        &amp;lt;li&amp;gt;line4&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;line5&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;line6&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;class2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;difference-between-class-and-id&quot;&gt;Difference between class and id&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;id: unique in a web page&lt;/li&gt;
+  &lt;li&gt;class: able to use multiple times&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Get Property value&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+    &amp;lt;body&amp;gt;
+        &amp;lt;ul class=&quot;search&quot;&amp;gt;
+            &amp;lt;li&amp;gt;
+                &amp;lt;a href=&quot;https://www.naver.com&quot;&amp;gt;Naver&amp;lt;/a&amp;gt;
+            &amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;
+                &amp;lt;a href=&quot;https://www.google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt;
+            &amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+        &amp;lt;ul class=&quot;sns&quot;&amp;gt;
+            &amp;lt;li&amp;gt;
+                &amp;lt;a href=&quot;https://www.facebook.com&quot;&amp;gt;Facebook&amp;lt;/a&amp;gt;
+            &amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;
+                &amp;lt;a href=&quot;https://www.instagram.com&quot;&amp;gt;Instagram&amp;lt;/a&amp;gt;
+            &amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'href'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;robotstxt&quot;&gt;robots.txt&lt;/h2&gt;
+&lt;p&gt;robots.txt is a bot exclusion standard. It was first established in June 1994 to control the access of bots such as web
+crawler. It is not enforced but if you frequently access banned web pages, it can be understood as a attack.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;robots.txt location
+    &lt;ul&gt;
+      &lt;li&gt;root of the web page&lt;/li&gt;
+      &lt;li&gt;e.g. www.naver.com/robots.txt&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;User-agent
+    &lt;ul&gt;
+      &lt;li&gt;rules assigned to robots&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Disallow
+    &lt;ul&gt;
+      &lt;li&gt;access banned web page&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Allow
+    &lt;ul&gt;
+      &lt;li&gt;access allowed web pages&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Crawling may be banned, but there is an exception for the main page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User-agent: *
+Disallow: /
+Allow: /$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Allow access to all bots
+    &lt;ul&gt;
+      &lt;li&gt;User-agent: *&lt;/li&gt;
+      &lt;li&gt;Allow: /&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ban access to all bots
+    &lt;ul&gt;
+      &lt;li&gt;user-agent: *&lt;/li&gt;
+      &lt;li&gt;Disallow: /&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ban access to a specific directory
+    &lt;ul&gt;
+      &lt;li&gt;User-agent: *&lt;/li&gt;
+      &lt;li&gt;Disallow: /directory_name1/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ban access to a specific file
+    &lt;ul&gt;
+      &lt;li&gt;User-agent: *&lt;/li&gt;
+      &lt;li&gt;Disallow: /directory_name1/file_name.html&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Allow access to a specific bots
+    &lt;ul&gt;
+      &lt;li&gt;User-agent: specific_bot_name&lt;/li&gt;
+      &lt;li&gt;Allow: /directory_name1/directory_name2/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ban access to a specific bot
+    &lt;ul&gt;
+      &lt;li&gt;User-agent: specific_bot_name&lt;/li&gt;
+      &lt;li&gt;Disallow: /directory_name1/directory_name2/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Crawling Data Extraction from a web page</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Big Data - Data Collection and Exploration</title>
@@ -877,7 +1703,7 @@ centralized database be huge, but it would have to be updated frequently to acco
 &lt;p&gt;In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
 and distributed around the world.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;3-classes-of-dns-servers&quot;&gt;3 classes of DNS servers&lt;/h4&gt;
 &lt;ul&gt;
@@ -896,14 +1722,78 @@ an authoritative DNS server of some service provider. Most universities and larg
 own primary and secondary (backup) authoritative DNS server.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Local DNS server&lt;/strong&gt;: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
 architecture because each ISP has a local DNS server.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-5.jpeg&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-caching&quot;&gt;DNS Caching&lt;/h3&gt;
+&lt;p&gt;DNS Caching improve the delay performance and to reduce the number of DNS messages ricocheting around the internet.
+In a query chain, when a DNS server receives a DNS reply (containing, for example, a mapping from a hostname to an IP 
+address), it can cache the mapping in its local memory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-dns-records-and-messages&quot;&gt;3️⃣ DNS Records and Messages&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Resource Records (RRs)&lt;/strong&gt;: Provide hostname-to-IP address mappings.
+    &lt;ul&gt;
+      &lt;li&gt;four-tuple that contains the following fields: (&lt;em&gt;Name&lt;/em&gt;, &lt;em&gt;Value&lt;/em&gt;, &lt;em&gt;Type&lt;/em&gt;, &lt;em&gt;TTL&lt;/em&gt;)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;TTL&lt;/em&gt; is the time to live of the resource record&lt;/li&gt;
+          &lt;li&gt;The meaning of &lt;em&gt;Name&lt;/em&gt; and &lt;em&gt;Value&lt;/em&gt; depend on &lt;em&gt;Type&lt;/em&gt;:
+            &lt;ul&gt;
+              &lt;li&gt;If &lt;em&gt;Type=A&lt;/em&gt;, then &lt;em&gt;Name&lt;/em&gt; is a hostname and &lt;em&gt;Value&lt;/em&gt; is the IP address for the hostname.&lt;/li&gt;
+              &lt;li&gt;If &lt;em&gt;Type=NS&lt;/em&gt;, then &lt;em&gt;Name&lt;/em&gt; is a domain (such as &lt;em&gt;foo.com&lt;/em&gt;) and &lt;em&gt;Value&lt;/em&gt; is the hostname of an authoritative DNS 
+server that knows how to obtain the IP addresses for hosts in the domain. This record is used to route DNS queries 
+further along in the query chain.&lt;/li&gt;
+              &lt;li&gt;If &lt;em&gt;Type=CNAME&lt;/em&gt;, then &lt;em&gt;Value&lt;/em&gt; is canonical hostname for the alias hostname &lt;em&gt;Name&lt;/em&gt;. This record can provide 
+querying hosts the canonical name for a hostname.&lt;/li&gt;
+              &lt;li&gt;If &lt;em&gt;Type=MX&lt;/em&gt;, then &lt;em&gt;Value&lt;/em&gt; is the canonical name of a mail server that has an alias hostname &lt;em&gt;Name&lt;/em&gt;. MX records
+allow the hostnames of mail servers to have simple aliases. Note that by using the MX record, a company can have the
+same aliased name for its mail server and for one of its other servers (such as its Web server). To obtain the canonical
+name for the mail server, a DNS client would query for an MX record’ to obtain the canonical came for the other server,
+the DNS client would query for the CNAME record.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dns-messages&quot;&gt;DNS Messages&lt;/h3&gt;
+&lt;p&gt;There are two kinds of DNS messages: &lt;strong&gt;DNS query&lt;/strong&gt; and &lt;strong&gt;DNS reply messages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The semantics of the various fields in a DNS message are as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The first 12 bytes is the &lt;em&gt;header section&lt;/em&gt;, which has a number of fields. The first field is a 16-bit number that
+identifies the query. There are a number of flags in the flag field. A 1-bit query/reply flag indicates whether the 
+message is a query (0) or reply (1).&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;question section&lt;/em&gt; contains information about the query that is being made. This section includes a name field
+that contains the name that is being queried, and a type field that indicates the type of question being asked about the
+name.&lt;/li&gt;
+  &lt;li&gt;In a reply from a DNS server, the &lt;em&gt;answer section&lt;/em&gt; contains the resource records for the name that was originally 
+queried. A reply can have multiple IP RRs in the answer, since a hostname can have multiple IP addresses.&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;authority section&lt;/em&gt; contains records of other authoritative servers.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The &lt;em&gt;additional section&lt;/em&gt; contains other helpful records. The additional section contains a Type A record providing the
+IP address for the canonical hostname of the mail server.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;nslookup program&lt;/strong&gt;: Sends DNS query message directly from the host you’re working on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;inserting-records-into-the-dns-database&quot;&gt;Inserting Records into the DNS Database&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;registrar&lt;/strong&gt;: A commercial entity that verifies the uniqueness of the domain name, enters the domain name into the 
+DNS database, and collects a small fee from you for its services.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -2335,343 +3225,6 @@ performance.&lt;/p&gt;
 
       
         <summary type="html">1️⃣ Overview of HTTP</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - Protocol Layers and Their Service Models</title>
-      <link href="/Computer_Network-Principles_of_Network_Applications" rel="alternate" type="text/html" title="Computer Network - Protocol Layers and Their Service Models" />
-      <published>2022-09-23T00:00:00+09:00</published>
-      <updated>2022-09-23T00:00:00+09:00</updated>
-      <id>/Computer_Network-Principles_of_Network_Applications</id>
-      <content type="html" xml:base="/Computer_Network-Principles_of_Network_Applications">&lt;h2 id=&quot;1️⃣-network-application-architectures&quot;&gt;1️⃣ Network Application Architectures&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Application architecture&lt;/strong&gt;: Designed by the application developer and dictates how the application is structured
-over the various end systems.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Client-server architecture&lt;/strong&gt;: An always-on host, called the &lt;em&gt;server&lt;/em&gt;, which services requests from many other hosts,
-called &lt;em&gt;clients&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Data center&lt;/strong&gt;: Housing a large number of hosts, is often used to create a powerful virtual server.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;P2P architecture&lt;/strong&gt;: the application exploits direct communication between paris of intermittently connected hosts,
-called &lt;em&gt;peers&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Self-scalability&lt;/strong&gt;: Although each peer generates workload by requesting files, each peer also adds service capacity
-to the system by distributing files to other peers.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-processes-communicating&quot;&gt;2️⃣ Processes Communicating&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Processes&lt;/strong&gt;: A program that is running within an end system.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-interface-between-the-process-and-the-computer-network&quot;&gt;The Interface Between the Process and the Computer Network&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Socket&lt;/strong&gt;: A software between the application process and the transport-layer protocol.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Application Programming Interface (API)&lt;/strong&gt;: A socket is the interface between the application layer and the transport
-layer within a host.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;addressing-processes&quot;&gt;Addressing Processes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;IP address&lt;/strong&gt;: An identification of a host.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: Used to identify the host network application.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-transport-services-available-to-applications&quot;&gt;3️⃣ Transport Services Available to Applications&lt;/h2&gt;
-
-&lt;h3 id=&quot;reliable-data-transfer&quot;&gt;Reliable Data Transfer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Reliable data transfer&lt;/strong&gt;: A protocol provides such a guaranteed data delivery service.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Loss-tolerant applications&lt;/strong&gt;: A transport-layer protocol doesn’t provide reliable data transfer, some of the data
-sent by the sending process may never arrive at the receiving process.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;throughput&quot;&gt;Throughput&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Bandwidth-sensitive applications&lt;/strong&gt;: Applications that have throughput requirements.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Elastic applications&lt;/strong&gt;: Makes use of as much, or as little, throughput as happens to be available.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;timing&quot;&gt;Timing&lt;/h3&gt;
-
-&lt;p&gt;A transport-layer protocol can also provide timing guarantees.&lt;/p&gt;
-
-&lt;h3 id=&quot;security&quot;&gt;Security&lt;/h3&gt;
-
-&lt;p&gt;A transport protocol can provide an application with one or more secuirty services.&lt;/p&gt;
-
-&lt;h2 id=&quot;4️⃣-transport-services-provided-by-the-internet&quot;&gt;4️⃣ Transport Services Provided by the Internet&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tcp-services&quot;&gt;TCP Services&lt;/h3&gt;
-
-&lt;p&gt;TCP service model includes a &lt;strong&gt;connection-oriented service&lt;/strong&gt; and a &lt;strong&gt;reliable data transfer service&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Connection-oriented service&lt;/strong&gt;: TCP has the client and server exchange transport-layer control information with each
-other before the application-level messages begin to flow. This so-called handshaking procedure alerts the client and
-server, allowing them to prepare for an onslaught of packets. After the handshaking phase, a TCP connection is said to
-exist between the sockets of the two processes.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: The communicating processes can rely on TCP to deliver all data sent without error
-and in the proper order. When on side of the application passes a stream of bytes into a socket, it can count on TCP to
-deliver the same stream of bytes to the receiving socket, with no missing or duplicate bytes.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Congesting-control mechanism&lt;/strong&gt;: A service for the general welfare of the Internet rather than for the communicating
-processes. it throttles a sending process when the network is congested between sender and receiver.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;udp-services&quot;&gt;UDP Services&lt;/h3&gt;
-
-&lt;p&gt;UDP is no-frills, lightweight transport protocol, providing minimal services. It is connectionless, so there is no
-handshaking before the two processes start to communicate. It provides an unreliable data transfer service, meaning that
-when a process sends a message into a UDP socket, it provides no guarantee that the message will ever reach the
-receiving process. Also, messages that do arrives at the receiving process may arrive not in order. Lastly, UDP does not
-include a congestion-control mechanism,, so the sending side of UDP can pump data into the layer below at any rate.&lt;/p&gt;
-
-&lt;h3 id=&quot;services-not-provided-by-internet-transport-protocols&quot;&gt;Services Not Provided by Internet Transport Protocols&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-22/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;5️⃣-application-layer-protocols&quot;&gt;5️⃣ Application-Layer Protocols&lt;/h2&gt;
-
-&lt;p&gt;Application-layer protocols Defines how an application’s processes, running on different end systems, pass messages to 
-each other. In particular, it defines:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The types of messages exchanged, for example, request messages and response messages.&lt;/li&gt;
-  &lt;li&gt;The syntax of the various message types, such as the fields in the message and how the fields are delineated.&lt;/li&gt;
-  &lt;li&gt;The semantics of the fields, that is, the meaning of the information in the fields.&lt;/li&gt;
-  &lt;li&gt;Rules for determining when and how a process sends messages and responds to messages.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">1️⃣ Network Application Architectures</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Visualizing Data</title>
-      <link href="/Intelligent_Information_Systems-Visualizing_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Visualizing Data" />
-      <published>2022-09-21T00:00:00+09:00</published>
-      <updated>2022-09-21T00:00:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Visualizing_Data</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Visualizing_Data">&lt;h2 id=&quot;matplotlib-packagelibrary&quot;&gt;matplotlib package/library&lt;/h2&gt;
-
-&lt;p&gt;The most used python library to visualize data such as 2d graph, image, and so on.&lt;/p&gt;
-
-&lt;h4 id=&quot;import-pyplot-module-in-matplotlib-library-as-plt&quot;&gt;Import ‘pyplot’ module in ‘matplotlib’ library as ‘plt’&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;data-visualization&quot;&gt;Data Visualization&lt;/h2&gt;
-
-&lt;h4 id=&quot;input-a-list-to-the-plot-function&quot;&gt;Input a list to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; function&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this case, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; value is the value in the list and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; value increase by 1&lt;/p&gt;
-
-&lt;h4 id=&quot;input-two-lists-to-the-plot-function&quot;&gt;Input two lists to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot()&lt;/code&gt; function&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The two list are separated by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;add-options-to-the-graph&quot;&gt;Add options to the graph&lt;/h2&gt;
-
-&lt;h3 id=&quot;add-a-title-to-the-graph&quot;&gt;Add a title to the graph&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Malgun Gothic&lt;/code&gt; as font in order for title to support Korean&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'font'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;family&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Malgun Gothic'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'플로팅'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;add-labels-to-the-graph&quot;&gt;Add labels to the graph&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;change-location-of-the-legend&quot;&gt;Change location of the legend&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;change-graph-color&quot;&gt;Change graph color&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip️&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;p&gt;Find different colors to use as the graph color from:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/gallery/color/named_colors.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/gallery/color/named_colors.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;change-the-shape-of-line&quot;&gt;Change the shape of line&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linestyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'--'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip️-1&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;p&gt;Find different lines to use as the graph line from:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;change-shape-of-the-marker&quot;&gt;Change shape of the marker&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'plotting'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'skyblue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linestyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'--'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'v'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'pink'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ls&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'o'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'legend2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-20/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip️-2&quot;&gt;Tip❗️&lt;/h4&gt;
-
-&lt;p&gt;Find different markers to use from:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://matplotlib.org/stable/api/markers_api.html&quot; target=&quot;_blank&quot;&gt;https://matplotlib.org/stable/api/markers_api.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">matplotlib package/library</summary>
       
 
       

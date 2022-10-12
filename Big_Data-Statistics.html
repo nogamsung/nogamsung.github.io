@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Big Data - Statistics</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Web Font Setting -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt&display=swap">
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Computer Science & Engineering" />
+    <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/Big_Data-Statistics" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="nogamsung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Big Data - Statistics" />
+    <meta property="og:description" content="Data Collection Why Statistics In general, analysis process is… Terminologies Population vs. Sample Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to the entire collection of units for which inferences are to be made Sample: A sample from statistical population is the" />
+    <meta property="og:url" content="/Big_Data-Statistics" />
+    <meta property="og:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2022-10-10T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-10-10T00:00:00+09:00" />
+    <meta property="article:tag" content="Comsci" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Big Data - Statistics" />
+    <meta name="twitter:description" content="Data Collection Why Statistics In general, analysis process is… Terminologies Population vs. Sample Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to the entire collection of units for which inferences are to be made Sample: A sample from statistical population is the" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="nogamsung" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Comsci" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "nogamsung",
+        "logo": "/"
+    },
+    "url": "/Big_Data-Statistics",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/built/images/big-data-logo.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/Big_Data-Statistics"
+    },
+    "description": "Data Collection Why Statistics In general, analysis process is… Terminologies Population vs. Sample Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to the entire collection of units for which inferences are to be made Sample: A sample from statistical population is the"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Big Data - Statistics" href="/feed.xml" />
+
+
+</head>
+
+<body
+    class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+        <a class="site-nav-logo" href="/">nogamsung</a>
+        
+        
+        
+        <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-frontend" role="menuitem"><a href="/tag/frontend/">Frontend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/backend/">Backend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+        <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-comsci post tag-comsci ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="10 October 2022">10 October 2022</time>
+                    
+                    <span class="date-divider">/</span>
+                    
+                    
+                    <a href='/tag/comsci/'>COMSCI</a>
+                    
+                    
+                    
+                </section>
+                <h1 class="post-full-title">Big Data - Statistics</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h2 id="data-collection">Data Collection</h2>
+
+<h3 id="why-statistics">Why Statistics</h3>
+<p>In general, analysis process is…</p>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-1.jpeg" alt="" /></p>
+
+<h2 id="terminologies">Terminologies</h2>
+<h3 id="population-vs-sample">Population vs. Sample</h3>
+<ul>
+  <li>Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to
+the entire collection of units for which inferences are to be made</li>
+  <li>Sample: A sample from statistical population is the set of measurements that are actually collected in the course of
+an investigation</li>
+</ul>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-2.jpeg" alt="" /></p>
+
+<h3 id="descriptive-vs-inferential">Descriptive vs. Inferential</h3>
+<ul>
+  <li>Descriptive Statistics: Consists of methods for organizing and summarizing information (Weiss, 1999)</li>
+  <li>Inferential Statistics: Consists of methods for drawing and measuring the reliability of conclusions about population
+based on information obtained from a sample of the population (Weiss, 1999)</li>
+</ul>
+
+<h4 id="note-️">Note ❗️</h4>
+<p>Descriptive and inferential statistics are interrelated</p>
+
+<p>Assume that you just started data analysis. What should you do?</p>
+<ul>
+  <li>Preliminary descriptive analysis</li>
+  <li>(Choice of appropriate inferential method)</li>
+  <li>Inferential analysis</li>
+</ul>
+
+<h3 id="parameters-vs-statistics">Parameters vs. Statistics</h3>
+<ul>
+  <li>Parameters: An unknown numerical summary of the population (Agresti &amp; Finalay, 1997)</li>
+  <li>Statistics: A known numerical summary of the sample which can be used to make inference about parameters (Agresti &amp; 
+Finalay, 1997)</li>
+  <li>Example
+    <ul>
+      <li>The proportion <em>p</em> of 18-30 year-olds who use Twitter at least once a day -&gt; Parameter</li>
+      <li>The proportion <em>p’</em> of 18-30 year-olds using Twitter at least once a day, calculated from a sample of 18-30 
+year-olds</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="discrete-vs-continuous">Discrete vs. Continuous</h3>
+<ul>
+  <li>Discrete Variables: indicates a finite numbers of values or as many values as there are integers. E.g. tweet counts 
+per day</li>
+  <li>Continuous Variables: indicates any real values. E.g. time difference between two consecutive tweet postings</li>
+</ul>
+
+<h2 id="central-tendency">Central Tendency</h2>
+<h3 id="mean">Mean</h3>
+<ul>
+  <li>The sum of observed values in a data divided by the number of observations</li>
+  <li>p.s. Often affected by extreme values in the data (i.e., outliers)</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numpy</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numpy</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span>
+<span class="mf">9.125</span>
+</code></pre></div></div>
+
+<h3 id="median">Median</h3>
+<ul>
+  <li>The value of the variable in a data set that divides the set of the observed values in half, so that the observed
+values in one half are less than or equal to the median value and the observed values in the other half are greater or
+equal to the median value</li>
+  <li>To compute median, the observed values of variable in a data should be sorted
+    <ul>
+      <li>If the # observation is odd, then the sample median is the observed values exactly in the middle of the ordered list</li>
+      <li>If the # observation is even, then the sample median is the number halfway between two middle observed values in the
+ordered list</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numpy</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numpy</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span>
+<span class="mi">3</span>
+</code></pre></div></div>
+
+<h3 id="mode">Mode</h3>
+<ul>
+  <li>A discrete variable (or its value) is that value of the variable which occurs with the greatest frequency in a data set</li>
+  <li>p.s. if the greatest frequency is 1 (i.e., no value occurs more than once), then the variable has no mode</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">statistics</span> <span class="kn">import</span> <span class="n">mode</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">mode</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+<span class="mi">4</span>
+</code></pre></div></div>
+
+<h3 id="range">Range</h3>
+<ul>
+  <li>The difference between its maximum and minimum values in a data set</li>
+  <li>Formally, range = max - min</li>
+  <li>p.s. range is affected by only max and min values, which means that other values may be ignored
+    <ul>
+      <li>e.g. X = [1,10,10,11,11,10,11,10,11,10,11,11,10,11,100]</li>
+      <li>Can we say that range of X is [1,100]?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="percentile--quartiles">Percentile &amp; Quartiles</h3>
+<ul>
+  <li>A method dividing a given data set with the equal portions
+    <ul>
+      <li>Quartile (4 parts)</li>
+    </ul>
+  </li>
+  <li>Let <em>n</em> denote the number of observations in a data set. Arrange the observed values of variable in a data in 
+increasing order
+    <ul>
+      <li>The 1<sup>st</sup> quartile Q1 is at position (n+1)/4</li>
+      <li>The 2<sup>nd</sup> quartile Q2 (the median) is at position (n+1)/2</li>
+      <li>The 3<sup>rd</sup> quartile Q3 is at position 3(n+1)/4</li>
+    </ul>
+  </li>
+  <li>Interquartile range: the difference between 1<sup>st</sup> and 3<sup>rd</sup> quartiles of variables (i.e. IQR = Q3 - 
+Q1)
+    <ul>
+      <li>Roughly, the IQR gives the range of middle 50% of the observed values</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="interquartile-range">Interquartile Range</h3>
+<ul>
+  <li>The sample of interquartile range represents the length of the interval covered by the center half of the observed 
+values of the variable</li>
+  <li>This measure of variation is not disturbed if a small fraction the observed values are very large or very small</li>
+  <li>Five-number summary: consists of min, max, and quartiles wirtten in increasing order
+    <ul>
+      <li>Min, Q1, Q2, Q3, Max</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="standard-deviation">Standard Deviation</h3>
+<ul>
+  <li>A measure of a distribution’s deviation from its mean (square root of variance)</li>
+  <li>For a variable <em>x</em>, the sample standard deviation is</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sigma&space;=&space;\sqrt{\frac{1}{N}[(x_1&space;-&space;\mu&space;)^2&space;&plus;&space;(x_2&space;-&space;\mu&space;)^2&space;&plus;&space;\cdots&space;&plus;&space;(x_N&space;-&space;\mu&space;)^2]},&space;where&space;\mu&space;=\frac{1}{N}(x_1&space;&plus;&space;\cdots&space;&plus;&space;x_N)" alt="" /></p>
+
+<ul>
+  <li>Preferred when the mean is used as the measure of center (e.g. symmetric distribution)</li>
+  <li>Trivially, more variation -&gt; larger standard deviation</li>
+  <li>However, it can be strongly affected by a few extreme observations</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">numpy</span><span class="p">.</span><span class="n">std</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">2.8</span><span class="p">,</span><span class="mf">3.7</span><span class="p">,</span><span class="mf">2.6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mf">3.4</span><span class="p">])</span>
+<span class="mf">1.4851</span>
+</code></pre></div></div>
+
+<h2 id="probability">Probability</h2>
+<h3 id="probability-mass-function-pmf">Probability Mass Function (PMF)</h3>
+<ul>
+  <li>For discrete random variables</li>
+  <li>The domain of P must be the set of all possible states of x</li>
+  <li>0 &lt;= P(<em>x</em>) &lt;= 1
+    <ul>
+      <li>An impossible event has probability 0 and no state can be less probable than that. Likewise, an event that is 
+guaranteed to happen has probability 1, and no state cna have a greater chance of occurring.</li>
+    </ul>
+  </li>
+  <li>P(<em>x</em>) = 1
+    <ul>
+      <li>We refer to this property as being normalized. Without this property, we could obtain probabilities greater than one 
+by computing the probability of one of many events occurring.</li>
+    </ul>
+  </li>
+  <li>Uniform distribution among <em>k</em> states:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?P(x&space;=&space;x_i)&space;=&space;\frac{1}{k}" alt="" /></p>
+
+<ul>
+  <li>For continuous random variables</li>
+  <li>The domain of P must be set of all possible states of <em>x</em></li>
+  <li>p(<em>x</em>) &gt;= 0
+    <ul>
+      <li>Note that we do not require p(<em>x</em>) &lt;= 1</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\int&space;p(x)&space;dx&space;=&space;1" alt="" /></p>
+
+<ul>
+  <li>Uniform distribution u(x;a,b) = 1/(b - a)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-10.jpeg" alt="" /></p>
+
+<h3 id="rules-associated-with-probability">Rules associated with Probability</h3>
+<ul>
+  <li>Computing marginal probability with the Sum Rule</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\forall_x&space;\in&space;x,&space;P(\textrm{x}&space;=&space;x)&space;=&space;\sum_{y}&space;P(\textrm{x}&space;=&space;x,&space;\textrm{y}&space;=&space;y)" alt="" /></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?p(x)&space;=&space;\int&space;p(x,y)dy" alt="" /></p>
+
+<ul>
+  <li>Conditional Probability</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://latex.codecogs.com/svg.image?P(\textrm{y}&amp;space;=&amp;space;y&amp;space;</td>
+      <td>&amp;space;\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;\frac{P(\textrm{y}&amp;space;=&amp;space;y,&amp;space;\textrm{x}&amp;space;=&amp;space;x)}{P(\textrm{x}&amp;space;=&amp;space;x)})</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Bayes’ Rule</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://latex.codecogs.com/svg.image?P(x</td>
+      <td>y)&amp;space;=&amp;space;\frac{P(x)P(y</td>
+      <td>x)}{P(y)})</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Chain Rule of Probability</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?P(x^{(1)},&space;...,&space;x^{(n)})&space;=&space;P(x^{(1)})&space;\prod_{i=2}^{n}P(x^{(1)},&space;...,&space;x^{(i-1)})" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>E.g. ![](https://latex.codecogs.com/svg.image?P(a,b,c)&amp;space;=&amp;space;P(a</td>
+      <td>b,c)P(b</td>
+      <td>c)P(c))</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="independence">Independence</h3>
+
+<p>Notation: x ⊥ y</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?\forall&space;x&space;\in&space;\textrm{x},&space;y&space;\in&space;\textrm{y},&space;P(\textrm{x}&space;=&space;x,&space;\textrm{y}&space;=&space;y)&space;=&space;p(\textrm{x}&space;=&space;x)&space;p(\textrm{y}&space;=&space;y)" alt="" /></p>
+
+<ul>
+  <li>Conditional Independence</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\forall&space;x&space;\in&space;\textrm{x},&space;y&space;\in&space;\textrm{y},&space;z&space;\in&space;\textrm{z}&space;" alt="" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://latex.codecogs.com/svg.image?p(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y&amp;space;</td>
+      <td>&amp;space;\textrm{z}&amp;space;=&amp;space;z)&amp;space;=&amp;space;p(\textrm{x}&amp;space;=&amp;space;x&amp;space;</td>
+      <td>&amp;space;\textrm{z}&amp;space;=&amp;space;z)&amp;space;p(\textrm{y}&amp;space;=&amp;space;y&amp;space;</td>
+      <td>&amp;space;\textrm{z}&amp;space;=&amp;space;z))</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Equivalently, p(x</td>
+          <td>y,z) = p(x</td>
+          <td>z)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Notation: x ⊥ y</td>
+          <td>z</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h3 id="expectation">Expectation</h3>
+<ul>
+  <li>Discrete variable</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\mathbb{E}_{x&space;\sim&space;p}[f(x)]&space;=&space;\sum_{x}&space;P(x)f(x)" alt="" /></p>
+
+<ul>
+  <li>Continuous variable</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\mathbb{E}_{x&space;\sim&space;p}[f(x)]&space;=&space;\int&space;&space;p(x)f(x)&space;dx" alt="" /></p>
+
+<ul>
+  <li>Linearity of Expectations</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\mathbb{E}_x[\alpha&space;f(x)&space;&plus;&space;\beta&space;g(x)]&space;=&space;\alpha&space;\mathbb{E}_x[f(x)]&space;&plus;&space;\beta\mathbb{E}_x[g(x)]" alt="" /></p>
+
+<h4 id="note-️-1">Note ❗️</h4>
+<p>This always holds, even when f(x) and g(x) are dependent</p>
+
+<h3 id="covariance">Covariance</h3>
+
+<p><img src="https://latex.codecogs.com/svg.image?Cov(f(x),g(y))&space;=&space;\mathbb{E}[(f(x)]&space;-&space;\mathbb{E}[f(x)])(g(y)&space;-&space;\mathbb{E}[g(y)])" alt="" /></p>
+
+<h4 id="note-️-2">Note ❗️</h4>
+<p>Covariance can be negative</p>
+
+<p>Cov(x)<sub>i,j</sub> = Cov(x<sub>i</sub>,x<sub>j</sub>)</p>
+
+<ul>
+  <li>Covariance Matrix
+    <ul>
+      <li>Diagonal elements are variance of i-th element</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="randomized-algorithms-probabilistic-algorithm">Randomized Algorithms (=Probabilistic Algorithm)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Las Vegas</th>
+      <th>Monte Carlo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Type of Answer</td>
+      <td>Exact</td>
+      <td>Random amount of error</td>
+    </tr>
+    <tr>
+      <td>Runtime</td>
+      <td>Random (until answer found)</td>
+      <td>Chosen by user (longer runtime gives less error)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="estimating-sums--integrals-with-samples">Estimating sums / integrals with samples</h3>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-11.jpeg" alt="" /></p>
+
+<h3 id="justification">Justification</h3>
+<ul>
+  <li>Unbiased:
+    <ul>
+      <li>The expected value for finite <em>n</em> is equal to the correct value</li>
+      <li>The value for any specific <em>n</em> samples will have random error, but the error for different sample sets cancel out</li>
+    </ul>
+  </li>
+  <li>Low variance:
+    <ul>
+      <li>Variance is O(1/<em>n</em>)</li>
+      <li>For very large <em>n</em>, the error converges “almost surely” to 0</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="distribution--information-theory">Distribution &amp; Information Theory</h2>
+<h3 id="bernoulli-distribution">Bernoulli Distribution</h3>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></li>
+  <li>Introduction to Big Data Lecture by <a href="https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;siteId=isis&amp;dum=dum&amp;command=empDetail&amp;empNum=20201168&amp;empSearchTab=01&amp;deptCode=&amp;siteId=isis" target="_blank">Daejin Choi</a> in <a href="https://www.inu.ac.kr/" target="_blank">Incheon National University</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!---
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to nogamsung</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                
+                <section class="author-card">
+                    
+                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg"
+                        alt="gs97ahn" />
+                    
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="/author/gs97ahn">nogamsung</a></h4>
+                        
+                        <p><a href="gs97ahn.github.io/about/">Geomseong Ahn</a></p>
+                        
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="/author/gs97ahn">Read More</a>
+                </div>
+                
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        var this_page_url = '/Big_Data-Statistics';
+                        var this_page_identifier = '/Big_Data-Statistics';
+                        var this_page_title = 'Big Data - Statistics';
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://geomseongahn.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+            
+            
+            
+            <article class="read-next-card" 
+                style="background-image: url(/assets/built/images/blog-cover.jpg)" >
+                <header class="read-next-card-header">
+                    <small class="read-next-card-header-sitetitle">&mdash; nogamsung &mdash;</small>
+                    
+                    <h3 class="read-next-card-header-title"><a href="/tag/comsci/">Comsci</a></h3>
+                    
+                </header>
+                <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                <div class="read-next-card-content">
+                    <ul>
+                        
+                        
+                        
+                            
+                        
+                        
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Intelligent_Information_Systems-Web_Basics">Intelligent Information Systems - Web Basics</a></li>
+                            
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Data_Collection_and_Exploration">Big Data - Data Collection and Exploration</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-DNS-The_Internet's-Directory-Service">Computer Network - DNS - The Internet's Directory Service</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                    </ul>
+                </div>
+                <footer class="read-next-card-footer">
+                    <a href="/tag/comsci/">
+                        
+                        See all 24 posts →
+                        
+                    </a>
+                </footer>
+            </article>
+            
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Unreal_Engine-Pure_Function_and_Type_Cast">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/unreal-engine-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Unreal_Engine-Pure_Function_and_Type_Cast">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Etc</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Unreal Engine - Pure Function and Type Cast</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Pure function Pure function Output value is dependent on input value If it references an external function variable value, it is not a pure function Purify For pure function, check the pure property</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Intelligent_Information_Systems-Web_Basics">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Intelligent_Information_Systems-Web_Basics">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Intelligent Information Systems - Web Basics</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Crawling
+
+  Data Extraction from a web page
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+            <span>nogamsung</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Big Data - Statistics</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw"
+            href="https://twitter.com/share?text=Big+Data+-+Statistics&amp;url=https://gs97ahn.github.io/Big_Data-Statistics"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Big_Data-Statistics"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">nogamsung</a> &copy; 2022</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search nogamsung</h1>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+        });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-227528384-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+
+</html>

@@ -256,7 +256,7 @@ centralized database be huge, but it would have to be updated frequently to acco
 <p>In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
 and distributed around the world.</p>
 
-<p><img src="./assets/screenshots/2022-10-03/screenshot-3.jpeg" alt="screenshot-3" /></p>
+<p><img src="assets/screenshots/2022-10-03/screenshot-3.jpeg" alt="" /></p>
 
 <h4 id="3-classes-of-dns-servers">3 classes of DNS servers</h4>
 <ul>
@@ -275,14 +275,78 @@ an authoritative DNS server of some service provider. Most universities and larg
 own primary and secondary (backup) authoritative DNS server.</li>
 </ul>
 
-<p><img src="./assets/screenshots/2022-10-03/screenshot-4.jpeg" alt="screenshot-4" /></p>
+<p><img src="assets/screenshots/2022-10-03/screenshot-4.jpeg" alt="" /></p>
 
 <ul>
   <li><strong>Local DNS server</strong>: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
 architecture because each ISP has a local DNS server.</li>
 </ul>
 
-<p><img src="./assets/screenshots/2022-10-03/screenshot-5.jpeg" alt="screenshot-5" /></p>
+<p><img src="assets/screenshots/2022-10-03/screenshot-5.jpeg" alt="" /></p>
+
+<h3 id="dns-caching">DNS Caching</h3>
+<p>DNS Caching improve the delay performance and to reduce the number of DNS messages ricocheting around the internet.
+In a query chain, when a DNS server receives a DNS reply (containing, for example, a mapping from a hostname to an IP 
+address), it can cache the mapping in its local memory.</p>
+
+<p><img src="assets/screenshots/2022-10-03/screenshot-16.jpeg" alt="" /></p>
+
+<h2 id="3️⃣-dns-records-and-messages">3️⃣ DNS Records and Messages</h2>
+<ul>
+  <li><strong>Resource Records (RRs)</strong>: Provide hostname-to-IP address mappings.
+    <ul>
+      <li>four-tuple that contains the following fields: (<em>Name</em>, <em>Value</em>, <em>Type</em>, <em>TTL</em>)
+        <ul>
+          <li><em>TTL</em> is the time to live of the resource record</li>
+          <li>The meaning of <em>Name</em> and <em>Value</em> depend on <em>Type</em>:
+            <ul>
+              <li>If <em>Type=A</em>, then <em>Name</em> is a hostname and <em>Value</em> is the IP address for the hostname.</li>
+              <li>If <em>Type=NS</em>, then <em>Name</em> is a domain (such as <em>foo.com</em>) and <em>Value</em> is the hostname of an authoritative DNS 
+server that knows how to obtain the IP addresses for hosts in the domain. This record is used to route DNS queries 
+further along in the query chain.</li>
+              <li>If <em>Type=CNAME</em>, then <em>Value</em> is canonical hostname for the alias hostname <em>Name</em>. This record can provide 
+querying hosts the canonical name for a hostname.</li>
+              <li>If <em>Type=MX</em>, then <em>Value</em> is the canonical name of a mail server that has an alias hostname <em>Name</em>. MX records
+allow the hostnames of mail servers to have simple aliases. Note that by using the MX record, a company can have the
+same aliased name for its mail server and for one of its other servers (such as its Web server). To obtain the canonical
+name for the mail server, a DNS client would query for an MX record’ to obtain the canonical came for the other server,
+the DNS client would query for the CNAME record.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dns-messages">DNS Messages</h3>
+<p>There are two kinds of DNS messages: <strong>DNS query</strong> and <strong>DNS reply messages</strong></p>
+
+<p><img src="assets/screenshots/2022-10-03/screenshot-17.jpeg" alt="" /></p>
+
+<p>The semantics of the various fields in a DNS message are as follows:</p>
+<ul>
+  <li>The first 12 bytes is the <em>header section</em>, which has a number of fields. The first field is a 16-bit number that
+identifies the query. There are a number of flags in the flag field. A 1-bit query/reply flag indicates whether the 
+message is a query (0) or reply (1).</li>
+  <li>The <em>question section</em> contains information about the query that is being made. This section includes a name field
+that contains the name that is being queried, and a type field that indicates the type of question being asked about the
+name.</li>
+  <li>In a reply from a DNS server, the <em>answer section</em> contains the resource records for the name that was originally 
+queried. A reply can have multiple IP RRs in the answer, since a hostname can have multiple IP addresses.</li>
+  <li>The <em>authority section</em> contains records of other authoritative servers.</li>
+  <li>
+    <p>The <em>additional section</em> contains other helpful records. The additional section contains a Type A record providing the
+IP address for the canonical hostname of the mail server.</p>
+  </li>
+  <li><strong>nslookup program</strong>: Sends DNS query message directly from the host you’re working on.</li>
+</ul>
+
+<h3 id="inserting-records-into-the-dns-database">Inserting Records into the DNS Database</h3>
+<ul>
+  <li><strong>registrar</strong>: A commercial entity that verifies the uniqueness of the domain name, enters the domain name into the 
+DNS database, and collects a small fee from you for its services.</li>
+</ul>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -399,6 +463,24 @@ architecture because each ISP has a local DNS server.</li>
                         
                             
                         
+                        
+                        
+                         <li><a href="/Big_Data-Statistics">Big Data - Statistics</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Intelligent_Information_Systems-Web_Basics">Intelligent Information Systems - Web Basics</a></li>
+                            
+                            
+                            
+                            
+                        
+                            
+                        
                             
                         
                         
@@ -415,16 +497,14 @@ architecture because each ISP has a local DNS server.</li>
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas">Intelligent Information Systems - Data Analysis using Numpy and Pandas</a></li>
-                            
+                        
                             
                             
                             
                         
                         
                         
-                         <li><a href="/Computer_Network-Electronic_Mail_in_the_Internet">Computer Network - Electronic Mail in the Internet</a></li>
-                            
+                        
                             
                             
                             
@@ -646,7 +726,7 @@ architecture because each ISP has a local DNS server.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 22 posts →
+                        See all 24 posts →
                         
                     </a>
                 </footer>

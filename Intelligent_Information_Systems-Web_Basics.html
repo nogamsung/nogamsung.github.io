@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Intelligent Information Systems - Web Basics</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Web Font Setting -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt&display=swap">
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Computer Science & Engineering" />
+    <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/Intelligent_Information_Systems-Web_Basics" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="nogamsung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Intelligent Information Systems - Web Basics" />
+    <meta property="og:description" content="Crawling Data Extraction from a web page 1️⃣ HTTP (Hyper Text Transfer Protocol) ‘Hyper Text’? HTTP is a protocol to send hyper text written in HTML ‘Protocol’? ‘Promise, rule’ Request and response HTTPS Uses SSL for secure connection between a browser and a server 2️⃣ URL (Uniform Resource Locator) A" />
+    <meta property="og:url" content="/Intelligent_Information_Systems-Web_Basics" />
+    <meta property="og:image" content="/assets/built/images/intelligent-information-systems-logo.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2022-10-09T19:30:00+09:00" />
+    <meta property="article:modified_time" content="2022-10-09T19:30:00+09:00" />
+    <meta property="article:tag" content="Comsci" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Intelligent Information Systems - Web Basics" />
+    <meta name="twitter:description" content="Crawling Data Extraction from a web page 1️⃣ HTTP (Hyper Text Transfer Protocol) ‘Hyper Text’? HTTP is a protocol to send hyper text written in HTML ‘Protocol’? ‘Promise, rule’ Request and response HTTPS Uses SSL for secure connection between a browser and a server 2️⃣ URL (Uniform Resource Locator) A" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/built/images/intelligent-information-systems-logo.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="nogamsung" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Comsci" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "nogamsung",
+        "logo": "/"
+    },
+    "url": "/Intelligent_Information_Systems-Web_Basics",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/built/images/intelligent-information-systems-logo.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/Intelligent_Information_Systems-Web_Basics"
+    },
+    "description": "Crawling Data Extraction from a web page 1️⃣ HTTP (Hyper Text Transfer Protocol) ‘Hyper Text’? HTTP is a protocol to send hyper text written in HTML ‘Protocol’? ‘Promise, rule’ Request and response HTTPS Uses SSL for secure connection between a browser and a server 2️⃣ URL (Uniform Resource Locator) A"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Intelligent Information Systems - Web Basics" href="/feed.xml" />
+
+
+</head>
+
+<body
+    class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+        <a class="site-nav-logo" href="/">nogamsung</a>
+        
+        
+        
+        <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-frontend" role="menuitem"><a href="/tag/frontend/">Frontend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/backend/">Backend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+        <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-comsci post tag-comsci ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 9 October 2022"> 9 October 2022</time>
+                    
+                    <span class="date-divider">/</span>
+                    
+                    
+                    <a href='/tag/comsci/'>COMSCI</a>
+                    
+                    
+                    
+                </section>
+                <h1 class="post-full-title">Intelligent Information Systems - Web Basics</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h3 id="crawling">Crawling</h3>
+<ul>
+  <li>Data Extraction from a web page</li>
+</ul>
+
+<h4 id="1️⃣-http-hyper-text-transfer-protocol">1️⃣ HTTP (Hyper Text Transfer Protocol)</h4>
+<ul>
+  <li>‘Hyper Text’?</li>
+  <li>HTTP is a protocol to send hyper text written in HTML</li>
+  <li>‘Protocol’? ‘Promise, rule’
+    <ul>
+      <li>Request and response</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>HTTPS</strong></p>
+<ul>
+  <li>Uses SSL for secure connection between a browser and a server</li>
+</ul>
+
+<h4 id="2️⃣-url-uniform-resource-locator">2️⃣ URL (Uniform Resource Locator)</h4>
+<ul>
+  <li>A network address that provides resource location</li>
+  <li>There are other protocols other than http and https
+    <ul>
+      <li>e.g. ftp, mailto</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3️⃣-html">3️⃣ HTML</h4>
+<ul>
+  <li>Markup language for web page</li>
+</ul>
+
+<h2 id="structure-of-html">Structure of HTML</h2>
+<ul>
+  <li>Tree structure</li>
+</ul>
+
+<h3 id="web-crawling-and-scraping">Web crawling and scraping</h3>
+<ul>
+  <li>Crawling
+    <ul>
+      <li>Get information from search and create a db</li>
+    </ul>
+  </li>
+  <li>Scraping
+    <ul>
+      <li>A Web page information</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="crawling-legal-issue">Crawling Legal Issue</h2>
+<p>The intention of the service provider is to actually view a web page</p>
+
+<h3 id="db-violation-cases">DB Violation Cases</h3>
+<ul>
+  <li>Empass vs Naver</li>
+  <li><strong>잡코리아</strong> vs 사람인</li>
+  <li><strong>야놀자</strong> vs 여기어때</li>
+</ul>
+
+<h4 id="caution-when-scraping-️">Caution when scraping ❗️</h4>
+<ul>
+  <li>Data scraping itself is OK</li>
+  <li>Do not request too much web server computing power</li>
+</ul>
+
+<h2 id="getting-web-data">Getting Web Data</h2>
+<h3 id="essential-library">Essential Library</h3>
+<ul>
+  <li>urllib</li>
+  <li>BeautifulSoup</li>
+</ul>
+
+<h3 id="urllib">urllib</h3>
+<ul>
+  <li>Crawling library</li>
+  <li>Exists internally in python</li>
+</ul>
+
+<h3 id="beautifulsoup">BeautifulSoup</h3>
+<ul>
+  <li>Parsing library</li>
+</ul>
+
+<h4 id="beautifulsoup-usage">BeautifulSoup Usage</h4>
+
+<p>BeautifulSoup(<received text="">, <text parser="">)</text></received></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"&lt;html&gt;&lt;div&gt;hello&lt;/div&gt;&lt;/html&gt;"</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">soup</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-3.png" alt="" /></p>
+
+<p>Use find() to get important parts of data</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"&lt;html&gt;&lt;div&gt;hello&lt;/div&gt;&lt;/html&gt;"</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">soup</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"div"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-4.png" alt="" /></p>
+
+<p>Get &lt; ul &gt; tag</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"""
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;line1&lt;/li&gt;
+      &lt;li&gt;line2&lt;/li&gt;
+      &lt;li&gt;line3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"ul"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ul</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-5.png" alt="" /></p>
+
+<p>Get only ‘line1’ from &lt; li &gt;, &lt; /li &gt;</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"""
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;line1&lt;/li&gt;
+      &lt;li&gt;line2&lt;/li&gt;
+      &lt;li&gt;line3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"ul"</span><span class="p">)</span>
+<span class="n">li</span> <span class="o">=</span> <span class="n">ul</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"li"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-6.png" alt="" /></p>
+
+<p>Find all the elements that is in condition</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"""
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;line1&lt;/li&gt;
+      &lt;li&gt;line2&lt;/li&gt;
+      &lt;li&gt;line3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"ul"</span><span class="p">)</span>
+<span class="n">li</span> <span class="o">=</span> <span class="n">ul</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"li"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">lis</span> <span class="o">=</span> <span class="n">ul</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"li"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lis</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-7.png" alt="" /></p>
+
+<h3 id="tag-property-and-property-value">Tag, Property and Property Value</h3>
+<ul>
+  <li>HTML?
+    <ul>
+      <li>document starting with &lt; html &gt; &lt; /html &gt;</li>
+      <li>Composed of tag and property</li>
+    </ul>
+  </li>
+  <li>Tag
+    <ul>
+      <li>&lt; ul &gt; &lt; /ul &gt; &lt; li &gt; &lt; /li &gt; &lt; div &gt; &lt; /div &gt; &lt; a &gt; &lt; /a &gt;, things that are wrapped with &lt; &gt;</li>
+    </ul>
+  </li>
+  <li>Property and Property Value
+    <ul>
+      <li>&lt; ul class=”class1” &gt;
+        <ul>
+          <li>ul: tag, class: property, “class1”: property value</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Get data using class property</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"""
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;ul class="class1"&gt;
+        &lt;li&gt;line1&lt;/li&gt;
+        &lt;li&gt;line2&lt;/li&gt;
+        &lt;li&gt;line3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class="class2"&gt;
+        &lt;li&gt;line4&lt;/li&gt;
+        &lt;li&gt;line5&lt;/li&gt;
+        &lt;li&gt;line6&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"ul"</span><span class="p">,</span> <span class="p">{</span><span class="s">"class"</span><span class="p">:</span> <span class="s">"class2"</span><span class="p">})</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ul</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="assets/screenshots/2022-10-09/screenshot-8.png" alt="" /></p>
+
+<h3 id="difference-between-class-and-id">Difference between class and id</h3>
+<ul>
+  <li>id: unique in a web page</li>
+  <li>class: able to use multiple times</li>
+</ul>
+
+<p>Get Property value</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">html_str</span> <span class="o">=</span> <span class="s">"""
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;ul class="search"&gt;
+            &lt;li&gt;
+                &lt;a href="https://www.naver.com"&gt;Naver&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class="sns"&gt;
+            &lt;li&gt;
+                &lt;a href="https://www.facebook.com"&gt;Facebook&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://www.instagram.com"&gt;Instagram&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+"""</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_str</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+
+<span class="n">ul</span> <span class="o">=</span> <span class="n">soup</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ul</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">ul</span><span class="p">[</span><span class="s">'href'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h2 id="robotstxt">robots.txt</h2>
+<p>robots.txt is a bot exclusion standard. It was first established in June 1994 to control the access of bots such as web
+crawler. It is not enforced but if you frequently access banned web pages, it can be understood as a attack.</p>
+
+<ul>
+  <li>robots.txt location
+    <ul>
+      <li>root of the web page</li>
+      <li>e.g. www.naver.com/robots.txt</li>
+    </ul>
+  </li>
+  <li>User-agent
+    <ul>
+      <li>rules assigned to robots</li>
+    </ul>
+  </li>
+  <li>Disallow
+    <ul>
+      <li>access banned web page</li>
+    </ul>
+  </li>
+  <li>Allow
+    <ul>
+      <li>access allowed web pages</li>
+    </ul>
+  </li>
+  <li>Crawling may be banned, but there is an exception for the main page</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /
+Allow: /$
+</code></pre></div></div>
+
+<ul>
+  <li>Allow access to all bots
+    <ul>
+      <li>User-agent: *</li>
+      <li>Allow: /</li>
+    </ul>
+  </li>
+  <li>Ban access to all bots
+    <ul>
+      <li>user-agent: *</li>
+      <li>Disallow: /</li>
+    </ul>
+  </li>
+  <li>Ban access to a specific directory
+    <ul>
+      <li>User-agent: *</li>
+      <li>Disallow: /directory_name1/</li>
+    </ul>
+  </li>
+  <li>Ban access to a specific file
+    <ul>
+      <li>User-agent: *</li>
+      <li>Disallow: /directory_name1/file_name.html</li>
+    </ul>
+  </li>
+  <li>Allow access to a specific bots
+    <ul>
+      <li>User-agent: specific_bot_name</li>
+      <li>Allow: /directory_name1/directory_name2/</li>
+    </ul>
+  </li>
+  <li>Ban access to a specific bot
+    <ul>
+      <li>User-agent: specific_bot_name</li>
+      <li>Disallow: /directory_name1/directory_name2/</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li>Intelligent Information Systems Lecture by <a href="https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;siteId=isis&amp;dum=dum&amp;command=empDetail&amp;empNum=20201019&amp;empSearchTab=01&amp;deptCode=&amp;siteId=isis" target="_blank">Youhyun Shin</a> in <a href="https://www.inu.ac.kr/" target="_blank">Incheon National University</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!---
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to nogamsung</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                
+                <section class="author-card">
+                    
+                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg"
+                        alt="gs97ahn" />
+                    
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="/author/gs97ahn">nogamsung</a></h4>
+                        
+                        <p><a href="gs97ahn.github.io/about/">Geomseong Ahn</a></p>
+                        
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="/author/gs97ahn">Read More</a>
+                </div>
+                
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        var this_page_url = '/Intelligent_Information_Systems-Web_Basics';
+                        var this_page_identifier = '/Intelligent_Information_Systems-Web_Basics';
+                        var this_page_title = 'Intelligent Information Systems - Web Basics';
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://geomseongahn.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+            
+            
+            
+            <article class="read-next-card" 
+                style="background-image: url(/assets/built/images/blog-cover.jpg)" >
+                <header class="read-next-card-header">
+                    <small class="read-next-card-header-sitetitle">&mdash; nogamsung &mdash;</small>
+                    
+                    <h3 class="read-next-card-header-title"><a href="/tag/comsci/">Comsci</a></h3>
+                    
+                </header>
+                <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                <div class="read-next-card-content">
+                    <ul>
+                        
+                        
+                        
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Statistics">Big Data - Statistics</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Data_Collection_and_Exploration">Big Data - Data Collection and Exploration</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-DNS-The_Internet's-Directory-Service">Computer Network - DNS - The Internet's Directory Service</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                    </ul>
+                </div>
+                <footer class="read-next-card-footer">
+                    <a href="/tag/comsci/">
+                        
+                        See all 24 posts →
+                        
+                    </a>
+                </footer>
+            </article>
+            
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Big_Data-Statistics">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Big_Data-Statistics">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Big Data - Statistics</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Data Collection
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      4 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Unreal_Engine-Variable_and_Basic_Function">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/unreal-engine-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Unreal_Engine-Variable_and_Basic_Function">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Etc</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Unreal Engine - Variable and Basic Function</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Create Variable and Variables types Create variable Add variable from my blueprint panel Frequently used variable types Boolean: True/False Integer Float Vector: X, Y, and Z float type structure String Object Type Variable</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+            <span>nogamsung</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Intelligent Information Systems - Web Basics</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw"
+            href="https://twitter.com/share?text=Intelligent+Information+Systems+-+Web+Basics&amp;url=https://gs97ahn.github.io/Intelligent_Information_Systems-Web_Basics"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Intelligent_Information_Systems-Web_Basics"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">nogamsung</a> &copy; 2022</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search nogamsung</h1>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+        });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-227528384-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+
+</html>

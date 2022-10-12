@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-08T18:52:26+09:00</updated>
+  <updated>2022-10-12T22:04:32+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,98 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Pure Function and Type Cast</title>
+      <link href="/Unreal_Engine-Pure_Function_and_Type_Cast" rel="alternate" type="text/html" title="Unreal Engine - Pure Function and Type Cast" />
+      <published>2022-10-11T01:30:00+09:00</published>
+      <updated>2022-10-11T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Pure_Function_and_Type_Cast</id>
+      <content type="html" xml:base="/Unreal_Engine-Pure_Function_and_Type_Cast">&lt;h2 id=&quot;pure-function&quot;&gt;Pure function&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pure function
+    &lt;ul&gt;
+      &lt;li&gt;Output value is dependent on input value&lt;/li&gt;
+      &lt;li&gt;If it references an external function variable value, it is not a pure function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Purify
+    &lt;ul&gt;
+      &lt;li&gt;For pure function, check the pure property&lt;/li&gt;
+      &lt;li&gt;Type transformation node can be a pure node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;type-casting-and-favorites&quot;&gt;Type Casting and Favorites&lt;/h2&gt;
+&lt;h3 id=&quot;type-casting-in-inherited-relationship&quot;&gt;Type Casting in Inherited Relationship&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Superclass(Fruit) and subclass(Apple)
+    &lt;ul&gt;
+      &lt;li&gt;Apple class has fruit information and distinctive features&lt;/li&gt;
+      &lt;li&gt;Apple is a fruit (O), Fruit is an apple (X)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Subclass type(Apple) casted to superclass(Fruit)
+    &lt;ul&gt;
+      &lt;li&gt;Automatic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Superclass type(Fruit) casted to subclass(Apple)
+    &lt;ul&gt;
+      &lt;li&gt;Must be done explicitly&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;type-casting&quot;&gt;Type Casting&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A reference type transforming into a different reference type is called &lt;strong&gt;type casting&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;The need for type casting
+    &lt;ul&gt;
+      &lt;li&gt;E.g. when two actors collide, each actor calls the other actor’s function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;favorites-function&quot;&gt;Favorites function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Commonly used function/node: add to favorites which then will be accessible from &lt;strong&gt;palette&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Pure function Pure function Output value is dependent on input value If it references an external function variable value, it is not a pure function Purify For pure function, check the pure property Type transformation node can be a pure node</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Variable and Basic Function</title>
@@ -122,7 +214,54 @@
 &lt;h2 id=&quot;creation-and-usage-of-function&quot;&gt;Creation and Usage of Function&lt;/h2&gt;
 &lt;h3 id=&quot;function&quot;&gt;Function&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Re-usage of code&lt;/li&gt;
+  &lt;li&gt;Re-usage of code
+    &lt;ul&gt;
+      &lt;li&gt;Independently separate code that is reused -&amp;gt; event, graph, function, macro, and etc.&lt;/li&gt;
+      &lt;li&gt;function: similar to an event graph&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to use function
+    &lt;ul&gt;
+      &lt;li&gt;Add: Add function from ‘My blueprint’ tab&lt;/li&gt;
+      &lt;li&gt;Make node network for each function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;function-vs-event-graph&quot;&gt;Function vs. Event Graph&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make node network from the grid&lt;/li&gt;
+  &lt;li&gt;Availability of return value&lt;/li&gt;
+  &lt;li&gt;Availability of latent action or timeline function&lt;/li&gt;
+  &lt;li&gt;Availability of local variable&lt;/li&gt;
+  &lt;li&gt;Number of entry point&lt;/li&gt;
+  &lt;li&gt;Guidance for separation
+    &lt;ul&gt;
+      &lt;li&gt;You do not need to be strict&lt;/li&gt;
+      &lt;li&gt;If it is hard to choose, just make an custom event first&lt;/li&gt;
+      &lt;li&gt;If there is a need for return value, make it into a function&lt;/li&gt;
+      &lt;li&gt;If there is a no need for latent action or timeline, make it into a function&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;conditional-expression&quot;&gt;Conditional Expression&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Flow control node
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Branch&lt;/strong&gt; node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conditional node: examine the input value and output true or false
+    &lt;ul&gt;
+      &lt;li&gt;condition
+        &lt;ul&gt;
+          &lt;li&gt;node: &amp;gt;, &amp;lt;. &amp;gt;=, &amp;lt;=, ==, !=&lt;/li&gt;
+          &lt;li&gt;node: AND, OR&amp;lt; XOR, NAND, NOR, NOT&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
@@ -1040,135 +1179,6 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
 
       
         <summary type="html">Making Mesh</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Level Editor</title>
-      <link href="/Unreal_Engine-Level_Edit" rel="alternate" type="text/html" title="Unreal Engine - Level Editor" />
-      <published>2022-09-13T01:30:00+09:00</published>
-      <updated>2022-09-13T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Level_Edit</id>
-      <content type="html" xml:base="/Unreal_Engine-Level_Edit">&lt;h2 id=&quot;the-general-sequence-of-game-programming&quot;&gt;The General Sequence of Game Programming&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Prototyping
-    &lt;ul&gt;
-      &lt;li&gt;Verify that the game that you are making has value&lt;/li&gt;
-      &lt;li&gt;Use “greyboxing” to quickly construct maps
-        &lt;ul&gt;
-          &lt;li&gt;Do not worry about the design, quickly construct map to test playing&lt;/li&gt;
-          &lt;li&gt;Afterwards, you need to change the mesh template to actual assets. This process is called “meshing”.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pre-production
-    &lt;ul&gt;
-      &lt;li&gt;A rehearsal stage to bring the level of game to production level&lt;/li&gt;
-      &lt;li&gt;This is stage that proves the entire ‘workflow’ of the game.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Production
-    &lt;ul&gt;
-      &lt;li&gt;Finish the last bits for official deployment&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;making-simple-levels&quot;&gt;Making simple levels&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Look for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Engine Contents&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BasicShapes&lt;/code&gt; folder&lt;/li&gt;
-  &lt;li&gt;Drag the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cube&lt;/code&gt; static mesh&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;play-modes&quot;&gt;Play modes&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Selected Viewport Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;It is a play mode in viewport&lt;/li&gt;
-      &lt;li&gt;Quickly play to check everything&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Mobile Free View Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Simulate the play in a mobile environment (The preparation time is slow)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;New Editor Screen (PIE) Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Play in a new screen (The screen resolution and ratio that you set are applied)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Simulated Mode&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;It is not a mode to play, it is a mode to observe the levels
-        &lt;ul&gt;
-          &lt;li&gt;You can see all the screen view that a player would see, but not be able to perform any game related functions&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Use mouse and keyboard to look around the level freely
-        &lt;ul&gt;
-          &lt;li&gt;Conveniently place a particle effect or physical objects&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;making-levels-using-brush&quot;&gt;Making levels using brush&lt;/h2&gt;
-
-&lt;p&gt;Brush is a tool provided by unreal for greyboxing&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Do not need to use external DCC and just use internal unreal editor tool to make mesh&lt;/li&gt;
-  &lt;li&gt;Using ‘brush’ is not a common method to use
-    &lt;ul&gt;
-      &lt;li&gt;‘Static mesh’ is commonly used&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;However, brush is very convenient to use, so use it when you need it
-    &lt;ul&gt;
-      &lt;li&gt;Used to make the entire outline and it is replaced with static mesh afterwards&lt;/li&gt;
-      &lt;li&gt;Early stage prototyping for test usage&lt;/li&gt;
-      &lt;li&gt;It is also usable for final mesh&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">The General Sequence of Game Programming</summary>
       
 
       
