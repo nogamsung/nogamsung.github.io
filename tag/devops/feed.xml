@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/devops/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-12T22:04:32+09:00</updated>
+  <updated>2022-10-13T21:37:19+09:00</updated>
   <id>/tag/devops/feed.xml</id>
 
   
@@ -44,7 +44,7 @@ project. In this post, I am going to go through the steps to build CI pipeline f
 &lt;h3 id=&quot;1️⃣-setting-in-github&quot;&gt;1️⃣ Setting in GitHub&lt;/h3&gt;
 &lt;p&gt;First go to your project repository and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt; in the menu.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2️⃣-set-up-a-workflow&quot;&gt;2️⃣ Set up a workflow&lt;/h3&gt;
 
@@ -53,7 +53,7 @@ configuration you need.&lt;/p&gt;
 
 &lt;p&gt;I am going to set up from the scratch for the example.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;3️⃣-workflow-code&quot;&gt;3️⃣ Workflow Code&lt;/h3&gt;
 
@@ -141,22 +141,22 @@ everytime the code is compiling.&lt;/p&gt;
 &lt;h4 id=&quot;4️⃣---1️⃣&quot;&gt;4️⃣ - 1️⃣&lt;/h4&gt;
 &lt;p&gt;To set up secrets, go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; in your project repository.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;4️⃣---2️⃣&quot;&gt;4️⃣ - 2️⃣&lt;/h4&gt;
 &lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Secrets&lt;/code&gt; in the left menu bar.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;4️⃣---3️⃣&quot;&gt;4️⃣ - 3️⃣&lt;/h4&gt;
 &lt;p&gt;Then click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New repository secret&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;4️⃣---4️⃣&quot;&gt;4️⃣ - 4️⃣&lt;/h4&gt;
 &lt;p&gt;Finally name the secret and write the value. Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Add secret&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;5️⃣-done&quot;&gt;5️⃣ Done&lt;/h3&gt;
 &lt;p&gt;Try pushing your work to the branch to see github actions in work.&lt;/p&gt;
@@ -169,7 +169,7 @@ everytime the code is compiling.&lt;/p&gt;
 
 &lt;p&gt;You can find the github actions in work by going to actions menu in your github repository.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-31/screenshot-12.png&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/31/screenshot-12.png&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
@@ -225,19 +225,19 @@ possible.&lt;/p&gt;
 
 &lt;p&gt;I am currently trying to have a service in South Korea. Therefore, I will be selecting Seoul(ap-northeast-2).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
 &lt;p&gt;Select launch instance from the EC2 Dashboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
 &lt;p&gt;Name your instance and choose the operating system you would like.&lt;/p&gt;
 
 &lt;p&gt;For my specific example, I will be choosing ubuntu 22.04 as it is eligible for free tier.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
 &lt;p&gt;Select the instance type that you would like. Depending on the computing power that you need, this may vary. Of course,
@@ -246,14 +246,14 @@ if you choose a powerful instance, you would need to pay more for the usage.&lt;
 &lt;p&gt;For my specific example, I will be selecting t2.micro which has 1vCPU, 1GiB memory. This instance is eligible for free
 tier usage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
 &lt;p&gt;Set up a key pair. This is not required, however it is important that you need to set this up for security reasons as
 &lt;strong&gt;you do not want anyone else to access your ec2 instance&lt;/strong&gt;. Click on the “Create new key pair” if you do not have a key
 pair already.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After clicking on the “Create new key pair”, name your key pair and select the options that you need.&lt;/p&gt;
 
@@ -267,7 +267,7 @@ get into your ec2 instance ever again&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;For the sake of my example, I am going to select RSA and .pem format.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-6️⃣&quot;&gt;Step 6️⃣&lt;/h3&gt;
 &lt;p&gt;Next is setting up the network settings. If you have a constant IP address, and you will want to access the EC2 instance
@@ -280,7 +280,7 @@ This is your clients accessing your server for requests and responses.&lt;/p&gt;
 &lt;p&gt;For my example, I am going to run a Spring Boot application, so I am going to allow HTTP traffic only. Also, I am going
 to allow SSH traffic from Anywhere.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-7.png&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-7️⃣&quot;&gt;Step 7️⃣&lt;/h3&gt;
 &lt;p&gt;Next step is setting up storage. For free tier, AWS allows you to have upto 30GB, but you probably would like to check
@@ -288,21 +288,21 @@ on the pricing to reduce surprises that you might encounter in the future.&lt;/p
 
 &lt;p&gt;For my example, I am going to give 10GiB to my storage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-8.png&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-8️⃣&quot;&gt;Step 8️⃣&lt;/h3&gt;
 &lt;p&gt;If you want your instance to have GPU or other advanced setting, you can configure it in “Advanced details”.&lt;/p&gt;
 
 &lt;p&gt;For my example, I do need any of the advanced settings for now, so I am just going to ignore this part.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-9.png&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;step-9️⃣&quot;&gt;Step 9️⃣&lt;/h3&gt;
 &lt;p&gt;Last but not least, you need to select how many instance, meaning how many server computer that you are going run.&lt;/p&gt;
 
 &lt;p&gt;I am going to select just one for the sake of this example.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-10.png&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, click on the “Launch instance”, and AWS will prepare you for your EC2 instance. Congrats! 🎉&lt;/p&gt;
 
@@ -321,7 +321,7 @@ on the pricing to reduce surprises that you might encounter in the future.&lt;/p
 &lt;p&gt;And of course, as it is default to be “On Demand”, you can stop your server, or get rid of it any time you would like.
 However, you need to acknowledge that everytime you stop and re-run your instance, the EC2 IP address will change.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-08-24/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/24/screenshot-11.png&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;

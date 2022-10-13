@@ -70,6 +70,37 @@
     
       
       <item>
+        <title>Computer Network - Video Streaming and Content Distribution Networks</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-http-streaming-and-dash&quot;&gt;1️⃣ HTTP Streaming and DASH&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HTTP Streaming&lt;/strong&gt;: When a user wants to see the video, the client establishes a TCP connection with th server and 
+issues an HTTP &lt;em&gt;GET&lt;/em&gt; request for that URL. The server then sends the video file, within an HTTP response message, as 
+quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all 
+clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a 
+client, both across different clients and also over time for the same client.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dynamic Adaptive Streaming over HTTP (DASH)&lt;/strong&gt;: The video is encoded into several quality level. The client 
+dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is 
+high, the client naturally selects chunks from a high-rate version and vica-versa.
+    &lt;ul&gt;
+      &lt;li&gt;Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to 
+the base stations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;manifest file&lt;/strong&gt;: Provides a URL for each version along with its bit rate.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 07 Oct 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Video_Streaming_and_Content_Distribution_Networks</link>
+        <guid isPermaLink="true">/Computer_Network-Video_Streaming_and_Content_Distribution_Networks</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Variable and Basic Function</title>
         
           <description>&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;
@@ -225,7 +256,7 @@
       <item>
         <title>Computer Network - Electronic Mail in the Internet</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 </description>
         
@@ -240,7 +271,7 @@
       <item>
         <title>Graduation Project - First Project</title>
         
-          <description>&lt;h2 id=&quot;capstone-design&quot;&gt;Capstone Design&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;what-is-capstone-design&quot;&gt;What is Capstone Design?&lt;/h2&gt;
 
 </description>
         
@@ -546,7 +577,7 @@
       <item>
         <title>Computer Network - The Network Core</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 </description>
         

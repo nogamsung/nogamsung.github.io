@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-12T22:04:32+09:00</updated>
+  <updated>2022-10-13T21:37:19+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -134,7 +134,7 @@
 &lt;h3 id=&quot;why-statistics&quot;&gt;Why Statistics&lt;/h3&gt;
 &lt;p&gt;In general, analysis process is…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h2&gt;
 &lt;h3 id=&quot;population-vs-sample&quot;&gt;Population vs. Sample&lt;/h3&gt;
@@ -145,7 +145,7 @@ the entire collection of units for which inferences are to be made&lt;/li&gt;
 an investigation&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;descriptive-vs-inferential&quot;&gt;Descriptive vs. Inferential&lt;/h3&gt;
 &lt;ul&gt;
@@ -331,7 +331,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
   &lt;li&gt;Uniform distribution u(x;a,b) = 1/(b - a)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/screenshots/2022/10/09/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;rules-associated-with-probability&quot;&gt;Rules associated with Probability&lt;/h3&gt;
 &lt;ul&gt;
@@ -497,7 +497,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 
 &lt;h3 id=&quot;estimating-sums--integrals-with-samples&quot;&gt;Estimating sums / integrals with samples&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;justification&quot;&gt;Justification&lt;/h3&gt;
 &lt;ul&gt;
@@ -658,7 +658,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Use find() to get important parts of data&lt;/p&gt;
 
@@ -672,7 +672,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Get &amp;lt; ul &amp;gt; tag&lt;/p&gt;
 
@@ -696,7 +696,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Get only ‘line1’ from &amp;lt; li &amp;gt;, &amp;lt; /li &amp;gt;&lt;/p&gt;
 
@@ -721,7 +721,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Find all the elements that is in condition&lt;/p&gt;
 
@@ -750,7 +750,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;tag-property-and-property-value&quot;&gt;Tag, Property and Property Value&lt;/h3&gt;
 &lt;ul&gt;
@@ -803,7 +803,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-09/screenshot-8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;difference-between-class-and-id&quot;&gt;Difference between class and id&lt;/h3&gt;
 &lt;ul&gt;
@@ -950,6 +950,145 @@ Allow: /$
     </entry>
   
     <entry>
+      <title type="html">Computer Network - Video Streaming and Content Distribution Networks</title>
+      <link href="/Computer_Network-Video_Streaming_and_Content_Distribution_Networks" rel="alternate" type="text/html" title="Computer Network - Video Streaming and Content Distribution Networks" />
+      <published>2022-10-07T00:00:00+09:00</published>
+      <updated>2022-10-07T00:00:00+09:00</updated>
+      <id>/Computer_Network-Video_Streaming_and_Content_Distribution_Networks</id>
+      <content type="html" xml:base="/Computer_Network-Video_Streaming_and_Content_Distribution_Networks">&lt;h2 id=&quot;1️⃣-http-streaming-and-dash&quot;&gt;1️⃣ HTTP Streaming and DASH&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;HTTP Streaming&lt;/strong&gt;: When a user wants to see the video, the client establishes a TCP connection with th server and 
+issues an HTTP &lt;em&gt;GET&lt;/em&gt; request for that URL. The server then sends the video file, within an HTTP response message, as 
+quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all 
+clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a 
+client, both across different clients and also over time for the same client.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dynamic Adaptive Streaming over HTTP (DASH)&lt;/strong&gt;: The video is encoded into several quality level. The client 
+dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is 
+high, the client naturally selects chunks from a high-rate version and vica-versa.
+    &lt;ul&gt;
+      &lt;li&gt;Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to 
+the base stations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;manifest file&lt;/strong&gt;: Provides a URL for each version along with its bit rate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-content-distribution-networks&quot;&gt;2️⃣ Content Distribution Networks&lt;/h2&gt;
+&lt;p&gt;Providing streaming video service by building a single massive data center, store all of its videos in the data
+center, and stream the videos directly from the data center to clients worldwide has &lt;strong&gt;3 major problems&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;If the client is far from the data center, server-to-client packets will cross many communication links and likely
+pass through many ISPs, with some of the ISPs possibly located on different continents. If one of these links provide a
+throughput will that is less than the video consumption rate, the end-to-end throughput will also be below the 
+consumption rate, resulting in annoying freezing delays for the user.&lt;/li&gt;
+  &lt;li&gt;A popular video will likely be sent many times over the same communication links. Not only does this waste network 
+bandwidth, but the Internet video company itself will be paying its provider ISP for sending the same bytes into the 
+Internet over and over again.&lt;/li&gt;
+  &lt;li&gt;A single data center represents a single point of failure - if the data center or its links to the Internet goes
+down, it would not be able to distribute any video streams.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To fix this 3 problems, major video-streaming companies make use of &lt;strong&gt;Content Distribution Networks (CDNs)&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content Distribution Networks (CDNs)&lt;/strong&gt;: Manage servers in multiple geographically distributed locations, stores 
+copies of the video in its servers, and attempt to direct each user request to a CDN location that will provide the best
+user experience.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Private CDN&lt;/strong&gt;: Owned by the content provider itself.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Third-party CDN&lt;/strong&gt;: Distributes content on behalf of multiple content provider.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;CDNs typically adopt one of two different server placement philosophies:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Enter Deep&lt;/strong&gt;. Pioneered by Akamai, this philosophy is to enter deep into the access networks of Internet Service 
+Providers, by deploying server clusters in access ISPs all over the world. The goal is to get close to end users, 
+thereby improving user-perceived delay and throughput by decreasing the number of links and routers between the end user 
+and the CDN server from which it receives content.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bring Home&lt;/strong&gt;. Pioneered by Limelight and many other CDN companies, this philosophy is to bring the ISPs home by 
+building a large clusters at a smaller number of sites. Instead of getting inside the access ISPs, these CDNs typically 
+place their clusters in Internet Exchange Points (IXPs). Compare to the &lt;em&gt;enter deep&lt;/em&gt; approach, this results in lower 
+maintenance and management overhead, possibly at the expense of higher delay and lower throughput to end users.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;cnd-operation&quot;&gt;CND Operation&lt;/h3&gt;
+&lt;p&gt;When a browser in a user’s host is instructed to retrieve a specific video, the CDN must intercept the request so that 
+it can do the followings:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Determine a suitable CDN server cluster for that client at that time.&lt;/li&gt;
+  &lt;li&gt;Redirect the client’s request to a server in that cluster.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/06/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The user visits the Web page at NetCinema&lt;/li&gt;
+  &lt;li&gt;When the user licks on the link http://video.netcinema.com/6Y7B23V, the user’s host sends a DNS query for 
+video.netcinema.com.&lt;/li&gt;
+  &lt;li&gt;The user’s Local DNS Server (LDNS) relays the DNS query to authoritative DNS server for NetCinema, which observes the
+string “video” in the hostname video.netcinema.com. To “hand over” the DNS query to KingCDN, instead of returning an IP 
+address, the NetCinema authoritative DNS server returns to the LDNS a hostname in the KingCDN’s domain, for example, 
+a1105.kingcdn.com.&lt;/li&gt;
+  &lt;li&gt;From this point on, the DNS query enters into KingCDN’s private DNS infrastructure. The user’s LDNS then sends a 
+second query, now for a1105.kingcdn.com, and KingCDN’s DNS system eventually returns the IP addresses of a KingCDN 
+content server to the LDNS. It is thus here, within the KingCDN’s DNS system, that the CDN server from which the client 
+will receive its content is specified.&lt;/li&gt;
+  &lt;li&gt;The LDNS forwards the IP address of the content-serving CDN node to the user’s host.&lt;/li&gt;
+  &lt;li&gt;Once the client receives the IP address for a KingCDN content server, it establishes a direct TCP connection with the
+server at that IP address and issues an HTTP GET request for the video. If DASH is used, the server will first send to 
+the client a manifest file with a list of URLs, one for each version of the video, and the client will dynamically 
+select chunks from the different versions.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;cluster-selection-strategies&quot;&gt;Cluster Selection Strategies&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Cluster selection strategy&lt;/strong&gt;: A mechanism for dynamically directing clients to a server cluster or a data center 
+within the CDN.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Geographically closest&lt;/strong&gt;: A strategy that maps each LDNS IP address to geographic location.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Real-time measurements&lt;/strong&gt;: A strategy that determines the best cluster for a client based on the current traffic 
+condition by measuring delay and loss performance between their clusters and clients.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-case-studies-netflix-and-youtube&quot;&gt;3️⃣ Case Studies: Netflix and YouTube&lt;/h2&gt;
+&lt;h3 id=&quot;netflix&quot;&gt;Netflix&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ HTTP Streaming and DASH HTTP Streaming: When a user wants to see the video, the client establishes a TCP connection with th server and issues an HTTP GET request for that URL. The server then sends the video file, within an HTTP response message, as quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a client, both across different clients and also over time for the same client. Dynamic Adaptive Streaming over HTTP (DASH): The video is encoded into several quality level. The client dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is high, the client naturally selects chunks from a high-rate version and vica-versa. Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to the base stations. manifest file: Provides a URL for each version along with its bit rate.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Unreal Engine - Variable and Basic Function</title>
       <link href="/Unreal_Engine-Variable_and_Basic_Function" rel="alternate" type="text/html" title="Unreal Engine - Variable and Basic Function" />
       <published>2022-10-05T19:30:00+09:00</published>
@@ -982,7 +1121,7 @@ Allow: /$
 
 &lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
 &lt;ul&gt;
@@ -1385,7 +1524,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
 
 &lt;p&gt;Official API is provided through &lt;a href=&quot;https://www.reddit.com/dev/api/&quot;&gt;https://www.reddit.com/dev/api/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
 
@@ -1393,7 +1532,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
 
 &lt;h4 id=&quot;investigation-on-rules&quot;&gt;Investigation on Rules&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;data-preprocessing&quot;&gt;Data Preprocessing&lt;/h2&gt;
 &lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
@@ -1692,7 +1831,7 @@ can be identified with one of the new values&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;discretization-without-using-class-labels-binning-vs-clustering&quot;&gt;Discretization Without Using Class Labels (Binning vs. Clustering)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;concept-hierarchy-generation&quot;&gt;Concept Hierarchy Generation&lt;/h3&gt;
 &lt;ul&gt;
@@ -1741,7 +1880,7 @@ in the data set
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;data-reduction&quot;&gt;Data Reduction&lt;/h2&gt;
 &lt;h3 id=&quot;data-reduction-strategies&quot;&gt;Data Reduction Strategies&lt;/h3&gt;
@@ -1821,7 +1960,7 @@ complete data set.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Variance Inflation Factor (VIF) or Mutual information can be another solution&lt;/li&gt;
@@ -1838,7 +1977,7 @@ complete data set.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Filtering out Non-relevant Features&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1911,7 +2050,7 @@ Then, remove (usually) larger numbers of attributes&lt;/li&gt;
 eigenvectors of the covariance matrix, and these eigenvectors define the new space&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Principal Component Analysis (Steps)&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1959,7 +2098,7 @@ variables or predictors)&lt;/li&gt;
 relationships&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Regression Models&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1996,7 +2135,7 @@ based on smaller subset of dimensional combinations&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;non-parametric-reduction-clustering&quot;&gt;Non-parametric Reduction: Clustering&lt;/h4&gt;
 &lt;ul&gt;
@@ -2050,11 +2189,11 @@ percentage of the data)&lt;/li&gt;
 
 &lt;h4 id=&quot;sampling-with-or-without-replacement&quot;&gt;Sampling: With or without Replacement&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;sampling-cluster-or-stratified-sampling&quot;&gt;Sampling: Cluster or Stratified Sampling&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;data-reduction-3-data-compression&quot;&gt;Data Reduction 3: Data Compression&lt;/h4&gt;
 &lt;ul&gt;
@@ -2078,7 +2217,7 @@ percentage of the data)&lt;/li&gt;
   &lt;li&gt;Dimensionality and numerosity reduction may also be considered as forms of data compression&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-03/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -2183,7 +2322,7 @@ centralized database be huge, but it would have to be updated frequently to acco
 &lt;p&gt;In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
 and distributed around the world.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;3-classes-of-dns-servers&quot;&gt;3 classes of DNS servers&lt;/h4&gt;
 &lt;ul&gt;
@@ -2202,21 +2341,21 @@ an authoritative DNS server of some service provider. Most universities and larg
 own primary and secondary (backup) authoritative DNS server.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Local DNS server&lt;/strong&gt;: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
 architecture because each ISP has a local DNS server.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;dns-caching&quot;&gt;DNS Caching&lt;/h3&gt;
 &lt;p&gt;DNS Caching improve the delay performance and to reduce the number of DNS messages ricocheting around the internet.
 In a query chain, when a DNS server receives a DNS reply (containing, for example, a mapping from a hostname to an IP 
 address), it can cache the mapping in its local memory.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;3️⃣-dns-records-and-messages&quot;&gt;3️⃣ DNS Records and Messages&lt;/h2&gt;
 &lt;ul&gt;
@@ -2249,7 +2388,7 @@ the DNS client would query for the CNAME record.&lt;/li&gt;
 &lt;h3 id=&quot;dns-messages&quot;&gt;DNS Messages&lt;/h3&gt;
 &lt;p&gt;There are two kinds of DNS messages: &lt;strong&gt;DNS query&lt;/strong&gt; and &lt;strong&gt;DNS reply messages&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022-10-03/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The semantics of the various fields in a DNS message are as follows:&lt;/p&gt;
 &lt;ul&gt;
@@ -2386,7 +2525,7 @@ and other types of data&lt;/p&gt;
       <published>2022-09-30T00:00:00+09:00</published>
       <updated>2022-09-30T00:00:00+09:00</updated>
       <id>/Computer_Network-Electronic_Mail_in_the_Internet</id>
-      <content type="html" xml:base="/Computer_Network-Electronic_Mail_in_the_Internet">&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+      <content type="html" xml:base="/Computer_Network-Electronic_Mail_in_the_Internet">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Three major components in the Internet mail system are: &lt;strong&gt;user agents&lt;/strong&gt;, &lt;strong&gt;mail servers&lt;/strong&gt;, and &lt;strong&gt;Simple Mail Transfer 
 Protocol (SMTP).&lt;/strong&gt;&lt;/p&gt;
@@ -2410,7 +2549,7 @@ Bob’s mailbox.&lt;/li&gt;
   &lt;li&gt;Bob invokes his user agent to read the message at his convenience.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;2️⃣-mail-message-format&quot;&gt;2️⃣ Mail Message Format&lt;/h2&gt;
 
@@ -2423,7 +2562,7 @@ well as other optional header lines.&lt;/li&gt;
 
 &lt;p&gt;A typical message header looks like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-3.jpeg&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;After the message header, a blank line follows; then the message body (in ASCII) follows. You should use Telnet to send
 a message to a mail server that contains some header lines, including the &lt;em&gt;Subject&lt;/em&gt;: header line. To do this, issue
@@ -2431,7 +2570,7 @@ a message to a mail server that contains some header lines, including the &lt;em
 
 &lt;h2 id=&quot;3️⃣-mail-access-protocols&quot;&gt;3️⃣ Mail Access Protocols&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-29/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-4.jpeg&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -2459,47 +2598,6 @@ a message to a mail server that contains some header lines, including the &lt;em
 
       
         <summary type="html"></summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Graduation Project - First Project</title>
-      <link href="/Graduation_Project-First_Project" rel="alternate" type="text/html" title="Graduation Project - First Project" />
-      <published>2022-09-29T00:00:00+09:00</published>
-      <updated>2022-09-29T00:00:00+09:00</updated>
-      <id>/Graduation_Project-First_Project</id>
-      <content type="html" xml:base="/Graduation_Project-First_Project">&lt;h2 id=&quot;capstone-design&quot;&gt;Capstone Design&lt;/h2&gt;
-
-&lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. I am&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Capstone Design</summary>
       
 
       

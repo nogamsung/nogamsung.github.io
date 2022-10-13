@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-12T22:04:32+09:00</updated>
+  <updated>2022-10-13T21:37:19+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -156,7 +156,7 @@
 
 &lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;./assets/screenshots/2022-10-05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
 &lt;ul&gt;
@@ -517,9 +517,10 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
       <published>2022-09-29T00:00:00+09:00</published>
       <updated>2022-09-29T00:00:00+09:00</updated>
       <id>/Graduation_Project-First_Project</id>
-      <content type="html" xml:base="/Graduation_Project-First_Project">&lt;h2 id=&quot;capstone-design&quot;&gt;Capstone Design&lt;/h2&gt;
+      <content type="html" xml:base="/Graduation_Project-First_Project">&lt;h2 id=&quot;what-is-capstone-design&quot;&gt;What is Capstone Design?&lt;/h2&gt;
 
-&lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. I am&lt;/p&gt;
+&lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. Upon graduation, the university requires
+all of its student to make a software program.&lt;/p&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;
@@ -545,7 +546,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
       
 
       
-        <summary type="html">Capstone Design</summary>
+        <summary type="html">What is Capstone Design?</summary>
       
 
       
@@ -1112,7 +1113,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
   &lt;li&gt;You can make mesh using &lt;a href=&quot;https://www.blender.org/support/tutorials/&quot; target=&quot;_blank&quot;&gt;blender&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/14/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;importing-mesh&quot;&gt;Importing Mesh&lt;/h2&gt;
 
@@ -1150,7 +1151,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../../assets/screenshots/2022-09-14/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/14/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
 &lt;ul&gt;

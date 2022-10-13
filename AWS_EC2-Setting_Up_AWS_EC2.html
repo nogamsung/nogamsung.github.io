@@ -208,19 +208,19 @@ possible.</p>
 
 <p>I am currently trying to have a service in South Korea. Therefore, I will be selecting Seoul(ap-northeast-2).</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-1.png" alt="screenshot-1" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-1.png" alt="screenshot-1" /></p>
 
 <h3 id="step-2️⃣">Step 2️⃣</h3>
 <p>Select launch instance from the EC2 Dashboard.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-2.png" alt="screenshot-2" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-2.png" alt="screenshot-2" /></p>
 
 <h3 id="step-3️⃣">Step 3️⃣</h3>
 <p>Name your instance and choose the operating system you would like.</p>
 
 <p>For my specific example, I will be choosing ubuntu 22.04 as it is eligible for free tier.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-3.png" alt="screenshot-3" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-3.png" alt="screenshot-3" /></p>
 
 <h3 id="step-4️⃣">Step 4️⃣</h3>
 <p>Select the instance type that you would like. Depending on the computing power that you need, this may vary. Of course,
@@ -229,14 +229,14 @@ if you choose a powerful instance, you would need to pay more for the usage.</p>
 <p>For my specific example, I will be selecting t2.micro which has 1vCPU, 1GiB memory. This instance is eligible for free
 tier usage.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-4.png" alt="screenshot-4" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-4.png" alt="screenshot-4" /></p>
 
 <h3 id="step-5️⃣">Step 5️⃣</h3>
 <p>Set up a key pair. This is not required, however it is important that you need to set this up for security reasons as
 <strong>you do not want anyone else to access your ec2 instance</strong>. Click on the “Create new key pair” if you do not have a key
 pair already.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-5.png" alt="screenshot-5" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-5.png" alt="screenshot-5" /></p>
 
 <p>After clicking on the “Create new key pair”, name your key pair and select the options that you need.</p>
 
@@ -250,7 +250,7 @@ get into your ec2 instance ever again</strong>.</p>
 
 <p>For the sake of my example, I am going to select RSA and .pem format.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-6.png" alt="screenshot-6" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-6.png" alt="screenshot-6" /></p>
 
 <h3 id="step-6️⃣">Step 6️⃣</h3>
 <p>Next is setting up the network settings. If you have a constant IP address, and you will want to access the EC2 instance
@@ -263,7 +263,7 @@ This is your clients accessing your server for requests and responses.</p>
 <p>For my example, I am going to run a Spring Boot application, so I am going to allow HTTP traffic only. Also, I am going
 to allow SSH traffic from Anywhere.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-7.png" alt="screenshot-7" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-7.png" alt="screenshot-7" /></p>
 
 <h3 id="step-7️⃣">Step 7️⃣</h3>
 <p>Next step is setting up storage. For free tier, AWS allows you to have upto 30GB, but you probably would like to check
@@ -271,21 +271,21 @@ on the pricing to reduce surprises that you might encounter in the future.</p>
 
 <p>For my example, I am going to give 10GiB to my storage.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-8.png" alt="screenshot-8" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-8.png" alt="screenshot-8" /></p>
 
 <h3 id="step-8️⃣">Step 8️⃣</h3>
 <p>If you want your instance to have GPU or other advanced setting, you can configure it in “Advanced details”.</p>
 
 <p>For my example, I do need any of the advanced settings for now, so I am just going to ignore this part.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-9.png" alt="screenshot-9" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-9.png" alt="screenshot-9" /></p>
 
 <h3 id="step-9️⃣">Step 9️⃣</h3>
 <p>Last but not least, you need to select how many instance, meaning how many server computer that you are going run.</p>
 
 <p>I am going to select just one for the sake of this example.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-10.png" alt="screenshot-10" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-10.png" alt="screenshot-10" /></p>
 
 <p>Finally, click on the “Launch instance”, and AWS will prepare you for your EC2 instance. Congrats! 🎉</p>
 
@@ -304,7 +304,7 @@ on the pricing to reduce surprises that you might encounter in the future.</p>
 <p>And of course, as it is default to be “On Demand”, you can stop your server, or get rid of it any time you would like.
 However, you need to acknowledge that everytime you stop and re-run your instance, the EC2 IP address will change.</p>
 
-<p><img src="../../assets/screenshots/2022-08-24/screenshot-11.png" alt="screenshot-11" /></p>
+<p><img src="assets/screenshots/2022/08/24/screenshot-11.png" alt="screenshot-11" /></p>
 
 <h3 id="reference">Reference</h3>
 <ul>
@@ -417,6 +417,8 @@ However, you need to acknowledge that everytime you stop and re-run your instanc
                     <ul>
                         
                         
+                        
+                            
                         
                             
                         
