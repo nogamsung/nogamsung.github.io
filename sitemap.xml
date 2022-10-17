@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Intelligent_Information_Systems-Crawling.html</loc>
+        
+        <lastmod>2022-10-16T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Pure_Function_and_Type_Cast.html</loc>
         
         <lastmod>2022-10-11T01:30:00+09:00</lastmod>
