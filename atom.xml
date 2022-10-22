@@ -8,6 +8,104 @@
     
       
       <item>
+        <title>Computer Network - Multiplexing and Demultiplexing</title>
+        
+          <description>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Demultiplexing&lt;/strong&gt;: A job of delivering the data in a transport-layer segment to the correct socket.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multiplexing&lt;/strong&gt;: A job of gathering data chunks at the source host from different sockets, encapsulating each data 
+chunk with header information to create segments, and passing the segments to the network layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 21 Oct 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Multiplexing_and_Demultiplexing</link>
+        <guid isPermaLink="true">/Computer_Network-Multiplexing_and_Demultiplexing</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Unreal Engine - Timeline</title>
+        
+          <description>&lt;h2 id=&quot;timeline&quot;&gt;Timeline&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set a specific time and repeat a certain movement
+    &lt;ul&gt;
+      &lt;li&gt;E.g. At 5 sec move upwards and open a door, etc.&lt;/li&gt;
+      &lt;li&gt;Express this in timeline
+        &lt;ul&gt;
+          &lt;li&gt;Timeline is a event that occurs in a time sequence&lt;/li&gt;
+          &lt;li&gt;Parallel axis is time axis&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline
+    &lt;ul&gt;
+      &lt;li&gt;Timeline is a change in value which occurs in time
+        &lt;ul&gt;
+          &lt;li&gt;X-axis is time and Y-axis is value&lt;/li&gt;
+          &lt;li&gt;“Value” = “Track”&lt;/li&gt;
+          &lt;li&gt;Track Category: float, vector, color, event&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Curve Input: Input keys to express a curve
+        &lt;ul&gt;
+          &lt;li&gt;Key = (time, value)&lt;/li&gt;
+          &lt;li&gt;Adding key: shift + click&lt;/li&gt;
+          &lt;li&gt;Interpolation between keys create a curve&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 18 Oct 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Timeline</link>
+        <guid isPermaLink="true">/Unreal_Engine-Timeline</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Introduction and Transport-Layer Services</title>
+        
+          <description>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Logical communication&lt;/strong&gt;: Allows application processes to freely send messages to each other, without worrying about 
+the details of the physical infrastructure used to carry these messages.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 17 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Introduction_and_Transport-Layer_Services</link>
+        <guid isPermaLink="true">/Computer_Network-Introduction_and_Transport-Layer_Services</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Graph Mining</title>
+        
+          <description>&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Big_Data-Graph_Mining</link>
+        <guid isPermaLink="true">/Big_Data-Graph_Mining</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Intelligent Information Systems - Crawling</title>
         
           <description>&lt;h2 id=&quot;urllib&quot;&gt;urllib&lt;/h2&gt;
@@ -18,6 +116,25 @@
         <link>
         /Intelligent_Information_Systems-Crawling</link>
         <guid isPermaLink="true">/Intelligent_Information_Systems-Crawling</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Socket Programming</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-socket-programming-with-udp&quot;&gt;1️⃣ Socket Programming with UDP&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: An identifier for a specific network application process as it may be running multiple network 
+application.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 14 Oct 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Socket_Programming</link>
+        <guid isPermaLink="true">/Computer_Network-Socket_Programming</guid>
       </item>
       
     

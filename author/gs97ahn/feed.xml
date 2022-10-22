@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-17T11:05:05+09:00</updated>
+  <updated>2022-10-22T15:45:34+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,600 @@
   
   
 
+  
+    <entry>
+      <title type="html">Computer Network - Multiplexing and Demultiplexing</title>
+      <link href="/Computer_Network-Multiplexing_and_Demultiplexing" rel="alternate" type="text/html" title="Computer Network - Multiplexing and Demultiplexing" />
+      <published>2022-10-21T00:00:00+09:00</published>
+      <updated>2022-10-21T00:00:00+09:00</updated>
+      <id>/Computer_Network-Multiplexing_and_Demultiplexing</id>
+      <content type="html" xml:base="/Computer_Network-Multiplexing_and_Demultiplexing">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Demultiplexing&lt;/strong&gt;: A job of delivering the data in a transport-layer segment to the correct socket.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multiplexing&lt;/strong&gt;: A job of gathering data chunks at the source host from different sockets, encapsulating each data 
+chunk with header information to create segments, and passing the segments to the network layer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The requirement of transport-layer multiplexing:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sockets have unique identifiers.&lt;/li&gt;
+  &lt;li&gt;Each segment have special fields that indicate the socket to which the segment is to be delivered.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Source port number field&lt;/strong&gt; and &lt;strong&gt;Destination port number field&lt;/strong&gt;: Port number consists of 16-bit number, ranging 
+from 0 to 65535.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Well-known port numbers&lt;/strong&gt;: Port numbers that have restricted range from 0 to 1023.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;connectionless-multiplexing-and-demultiplexing&quot;&gt;Connectionless Multiplexing and Demultiplexing&lt;/h3&gt;
+&lt;p&gt;Connectionless service does not require establishing any connection and termination process for transferring the data 
+over a network.&lt;/p&gt;
+
+&lt;h3 id=&quot;connection-oriented-multiplexing-and-demultiplexing&quot;&gt;Connection-Oriented Multiplexing and Demultiplexing&lt;/h3&gt;
+&lt;p&gt;Connection-oriented service involves the creating and terminatino of the connection for sending the data between two or 
+more devices.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;TCP socket
+    &lt;ul&gt;
+      &lt;li&gt;Identified by a four-tuple: source IP address, source port number, destination IP address, destination port number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;UDP socket
+    &lt;ul&gt;
+      &lt;li&gt;If two TCp segments with different source IP addresses or port numbers arrive, it will be directed to two different 
+sockets.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.javatpoint.com/connection-oriented-vs-connectionless-service&quot; target=&quot;_blank&quot;&gt;Difference between connection-oriented and connectionless service in javaTpoint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Demultiplexing: A job of delivering the data in a transport-layer segment to the correct socket. Multiplexing: A job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header information to create segments, and passing the segments to the network layer.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Unreal Engine - Timeline</title>
+      <link href="/Unreal_Engine-Timeline" rel="alternate" type="text/html" title="Unreal Engine - Timeline" />
+      <published>2022-10-18T01:30:00+09:00</published>
+      <updated>2022-10-18T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Timeline</id>
+      <content type="html" xml:base="/Unreal_Engine-Timeline">&lt;h2 id=&quot;timeline&quot;&gt;Timeline&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set a specific time and repeat a certain movement
+    &lt;ul&gt;
+      &lt;li&gt;E.g. At 5 sec move upwards and open a door, etc.&lt;/li&gt;
+      &lt;li&gt;Express this in timeline
+        &lt;ul&gt;
+          &lt;li&gt;Timeline is a event that occurs in a time sequence&lt;/li&gt;
+          &lt;li&gt;Parallel axis is time axis&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline
+    &lt;ul&gt;
+      &lt;li&gt;Timeline is a change in value which occurs in time
+        &lt;ul&gt;
+          &lt;li&gt;X-axis is time and Y-axis is value&lt;/li&gt;
+          &lt;li&gt;“Value” = “Track”&lt;/li&gt;
+          &lt;li&gt;Track Category: float, vector, color, event&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Curve Input: Input keys to express a curve
+        &lt;ul&gt;
+          &lt;li&gt;Key = (time, value)&lt;/li&gt;
+          &lt;li&gt;Adding key: shift + click&lt;/li&gt;
+          &lt;li&gt;Interpolation between keys create a curve&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;timeline-example&quot;&gt;Timeline Example&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Actors spin example
+    &lt;ul&gt;
+      &lt;li&gt;Actor should spin
+        &lt;ul&gt;
+          &lt;li&gt;It should spin every second&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Create timeline: Float Track
+        &lt;ul&gt;
+          &lt;li&gt;1 spin / 1 sec = Change the float value from 0 to 360 every second in the timeline&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Timeline Node Output Pin
+        &lt;ul&gt;
+          &lt;li&gt;Update Output Pin: Continuous execution during the timeline&lt;/li&gt;
+          &lt;li&gt;Finished Output Pin: End when timeline finishes&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Rotate Implementation (Connect update pin)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Make&lt;/strong&gt; Rotator: Make a structure from rotator 3 float values(Roll, Pitch, Yaw)
+            &lt;ul&gt;
+              &lt;li&gt;Opposite function: &lt;strong&gt;Break&lt;/strong&gt; Rotator [&lt;strong&gt;Make&lt;/strong&gt; and &lt;strong&gt;Break&lt;/strong&gt;]&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;SetRelativeRotation: Set rotation relative to the parent component&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;key-interpolation&quot;&gt;Key Interpolation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lerp
+    &lt;ul&gt;
+      &lt;li&gt;Linear Interpolation
+        &lt;ul&gt;
+          &lt;li&gt;Linear interpolation between two values&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Lerp Interpolation Function
+        &lt;ul&gt;
+          &lt;li&gt;Lerp(A, B, α) = A * (1 - α) + B * α = A + (B - A) * α&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Key Interpolation
+    &lt;ul&gt;
+      &lt;li&gt;Linear&lt;/li&gt;
+      &lt;li&gt;Automatic&lt;/li&gt;
+      &lt;li&gt;Ease In / Ease Out
+        &lt;ul&gt;
+          &lt;li&gt;Smooth animation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;timeline-reverse-function&quot;&gt;Timeline Reverse Function&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Timeline input pin
+    &lt;ul&gt;
+      &lt;li&gt;Play input pin&lt;/li&gt;
+      &lt;li&gt;Reverse input pin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline output pin
+    &lt;ul&gt;
+      &lt;li&gt;Direction output pin
+        &lt;ul&gt;
+          &lt;li&gt;Play direction data of current timeline&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;ETimelineDirection&lt;/strong&gt; value&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sliding-door&quot;&gt;Sliding Door&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;2 Door with a rail
+    &lt;ul&gt;
+      &lt;li&gt;Push to door forward and make it move left or right&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DoorLeft and DoorRight movement
+    &lt;ul&gt;
+      &lt;li&gt;Move -100 in x-axis for a second
+        &lt;ul&gt;
+          &lt;li&gt;(0, -50, 0), (0, 50, 0) -&amp;gt; (-100, -50, 0), (-100, 50, 0)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Next move +-100 in y-axis for a second
+        &lt;ul&gt;
+          &lt;li&gt;(-100, -50, 0), (-100, 50, 0) -&amp;gt; (-100, -150, 0), (-100, 150, 0)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sliding-door-implementation&quot;&gt;Sliding Door Implementation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arrow Component
+    &lt;ul&gt;
+      &lt;li&gt;Visible in editor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Float track&lt;/strong&gt; cannot express linear interpolation -&amp;gt; Use &lt;strong&gt;Vector track&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Timeline implementation (DoorRight)
+        &lt;ul&gt;
+          &lt;li&gt;Move -100 in x-axis for a second&lt;/li&gt;
+          &lt;li&gt;Next, move +100 in y-axis for a second&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Movement
+        &lt;ul&gt;
+          &lt;li&gt;SetRelativeLocation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Timeline Set a specific time and repeat a certain movement E.g. At 5 sec move upwards and open a door, etc. Express this in timeline Timeline is a event that occurs in a time sequence Parallel axis is time axis Timeline Timeline is a change in value which occurs in time X-axis is time and Y-axis is value “Value” = “Track” Track Category: float, vector, color, event Curve Input: Input keys to express a curve Key = (time, value) Adding key: shift + click Interpolation between keys create a curve</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Introduction and Transport-Layer Services</title>
+      <link href="/Computer_Network-Introduction_and_Transport-Layer_Services" rel="alternate" type="text/html" title="Computer Network - Introduction and Transport-Layer Services" />
+      <published>2022-10-17T19:30:00+09:00</published>
+      <updated>2022-10-17T19:30:00+09:00</updated>
+      <id>/Computer_Network-Introduction_and_Transport-Layer_Services</id>
+      <content type="html" xml:base="/Computer_Network-Introduction_and_Transport-Layer_Services">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Logical communication&lt;/strong&gt;: Allows application processes to freely send messages to each other, without worrying about 
+the details of the physical infrastructure used to carry these messages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-relationship-between-transport-and-network-layers&quot;&gt;1️⃣ Relationship Between Transport and Network Layers&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-overview-of-the-transport-layer-in-the-internet&quot;&gt;2️⃣ Overview of the Transport Layer in the Internet&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;UDP&lt;/strong&gt;: A protocol that is unreliable and connectionless service to the invoking application.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP&lt;/strong&gt;: A protocol that is reliable and connection-oriented service to the invoking application.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;IP service mode&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Best-effort delivery service&lt;/strong&gt;: The IP service model that makes “best effort” to deliver segments between 
+communicating hosts.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Unreliable service&lt;/strong&gt;: The IP service model makes no guarantees. Specifically, it does not guarantee segment 
+delivery, orderly delivery of segments, and the integrity of the data in the segments.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer&lt;/strong&gt;: TCP, using flow control, sequence numbers, acknowledgements, and timers, TCP ensures that 
+data is delivered from sending process to receiving process, correctly and in order.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Congestion control&lt;/strong&gt;: TCP prevents any one TCP connection from swamping the links and routers between communicating 
+hosts with an excessive amount of traffic.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Logical communication: Allows application processes to freely send messages to each other, without worrying about the details of the physical infrastructure used to carry these messages.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Big Data - Graph Mining</title>
+      <link href="/Big_Data-Graph_Mining" rel="alternate" type="text/html" title="Big Data - Graph Mining" />
+      <published>2022-10-17T00:00:00+09:00</published>
+      <updated>2022-10-17T00:00:00+09:00</updated>
+      <id>/Big_Data-Graph_Mining</id>
+      <content type="html" xml:base="/Big_Data-Graph_Mining">&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
+
+&lt;p&gt;Most data is structured from &lt;strong&gt;Network&lt;/strong&gt; &amp;lt;- A Complex System Consisting of &lt;strong&gt;Interacting Entities&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;graph-entities&quot;&gt;Graph Entities&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-can-be-modeled-as-a-graph&quot;&gt;What can be Modeled as a Graph?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;relations-may-be-inferred&quot;&gt;“Relations” may be inferred&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-networks-graph-and--why-now&quot;&gt;Why Networks (Graph)? And .. Why Now?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Universal language for describing complex data
+    &lt;ul&gt;
+      &lt;li&gt;Networks from science, nature, and technology are more similar than one would expect&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Shared vocabulary between fields
+    &lt;ul&gt;
+      &lt;li&gt;Computer Science, Social Science, Physics, Economics, Statistics, Biology&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data availability &amp;amp; computational challenges
+    &lt;ul&gt;
+      &lt;li&gt;Web/mobile, bio, health, and medical&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Impact!
+    &lt;ul&gt;
+      &lt;li&gt;Social networking, Drug design, AI reasoning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;graph-basic&quot;&gt;Graph Basic&lt;/h2&gt;
+&lt;h3 id=&quot;graph-definition&quot;&gt;Graph Definition&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data Structure (or dataset) to model the relations of entity
+    &lt;ul&gt;
+      &lt;li&gt;E.g., Social relation, p2p network, code flow, paths on the map, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;G = (V, E, W)
+    &lt;ul&gt;
+      &lt;li&gt;V: a set of entity (also called as nodes, object, …)&lt;/li&gt;
+      &lt;li&gt;E: a set of relation (also called as link, …)&lt;/li&gt;
+      &lt;li&gt;W: a set of weight (on the corresponding link)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;graph-types&quot;&gt;Graph Types&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Undirected Graph
+    &lt;ul&gt;
+      &lt;li&gt;E consists of only undirected link&lt;/li&gt;
+      &lt;li&gt;E.g. Facebook friendship&lt;/li&gt;
+      &lt;li&gt;(Usually) indicated by (A, B)&lt;/li&gt;
+      &lt;li&gt;(A, B) = (B, A)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Directed Graph
+    &lt;ul&gt;
+      &lt;li&gt;E consists of only directed links&lt;/li&gt;
+      &lt;li&gt;E.g. Twitter following/follower&lt;/li&gt;
+      &lt;li&gt;(Usually) indicated by &amp;lt;A, B&amp;gt;&lt;/li&gt;
+      &lt;li&gt;&amp;lt;A, B&amp;gt; != &amp;lt;B, A&amp;gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unweighted Graph
+    &lt;ul&gt;
+      &lt;li&gt;All elements in W are same&lt;/li&gt;
+      &lt;li&gt;(Usually) weights are not indicated&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;subgraphs-motifs-and-graphlets&quot;&gt;Subgraphs, Motifs, and Graphlets&lt;/h2&gt;
+&lt;h3 id=&quot;subnetworks-a-property-of-graph&quot;&gt;Subnetworks: A Property of Graph&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Subnetworks, or subgraphs, are the building blocks of networks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;They have the power to characterize and discriminate networks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-characterize-a-graph-from-subgraphs&quot;&gt;How to Characterize a Graph from Subgraphs?&lt;/h3&gt;
+&lt;p&gt;Let’s consider all possible (non-isomorphoic) directed subgraphs of size 3&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For each Subgraphs:
+    &lt;ul&gt;
+      &lt;li&gt;Imagine you have a metric capable of classifying the subgraph “significnace”
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Negative values&lt;/strong&gt; indicate &lt;strong&gt;under-representation&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Positive values&lt;/strong&gt; indicate &lt;strong&gt;over-representation&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We create a &lt;strong&gt;network significance profile&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;A feature vector with values for all subgraph types&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Next: Compare profiles of different networks:
+    &lt;ul&gt;
+      &lt;li&gt;Regulatory network (gene regulation)&lt;/li&gt;
+      &lt;li&gt;Neuronal network (synaptic connection)&lt;/li&gt;
+      &lt;li&gt;World Wide Web (hyperlinks between pages)&lt;/li&gt;
+      &lt;li&gt;Social networks (friendships)&lt;/li&gt;
+      &lt;li&gt;Language networks (word adjacency)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;case-example-og-subgraphs&quot;&gt;Case Example og Subgraphs&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Networks from the same domain have similar significance profiles&lt;/p&gt;
+
+&lt;h3 id=&quot;network-motifs&quot;&gt;Network Motifs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Network motifs: “recurring, significant patterns of interconnections”&lt;/li&gt;
+  &lt;li&gt;How to define a network motif:
+    &lt;ul&gt;
+      &lt;li&gt;Pattern: Small partial &lt;strong&gt;subgraph&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Recurring: Found many times, i.e., with high frequency&lt;/li&gt;
+      &lt;li&gt;Significant: More frequent than expected, i.e., in randomly generated networks
+        &lt;ul&gt;
+          &lt;li&gt;Erdos - Renyi random graphs, scale-free networks&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;partial-subgraphs&quot;&gt;Partial Subgraphs&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Induced subgraphs&lt;/strong&gt; of graph G is a graph, formed from a subset X of the vertices of graph G and all of the edges 
+connecting pairs of vertices in subset X.&lt;/p&gt;
+
+&lt;h3 id=&quot;recurrence&quot;&gt;Recurrence&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Allow &lt;strong&gt;overlapping of motifs&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Network on the right has 4 occurrences of the motif:
+    &lt;ul&gt;
+      &lt;li&gt;{1, 2, 3, 4, 5}&lt;/li&gt;
+      &lt;li&gt;{1, 2, 3, 4, 6}&lt;/li&gt;
+      &lt;li&gt;{1, 2, 3, 4, 7}&lt;/li&gt;
+      &lt;li&gt;{1, 2, 3, 4, 8}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;significance-of-motif&quot;&gt;Significance of Motif&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Key idea: Subgraphs that occur in a real network much more frequently than in a random network have functional 
+significance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">WHY GRAPH?</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Intelligent Information Systems - Crawling</title>
@@ -68,7 +662,7 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;find--class-property&quot;&gt;find() &amp;amp; class property&lt;/h2&gt;
+&lt;h3 id=&quot;find--class-property&quot;&gt;find() &amp;amp; Class Property&lt;/h3&gt;
 
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
@@ -85,7 +679,7 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;text-extraction&quot;&gt;Text Extraction&lt;/h2&gt;
+&lt;h3 id=&quot;text-extraction&quot;&gt;Text Extraction&lt;/h3&gt;
 
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
@@ -102,7 +696,7 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;naver-menu-name-extraction&quot;&gt;Naver Menu Name Extraction&lt;/h2&gt;
+&lt;h3 id=&quot;naver-menu-name-extraction&quot;&gt;Naver Menu Name Extraction&lt;/h3&gt;
 
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
@@ -122,9 +716,152 @@
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;get-web-page-data&quot;&gt;Get Web Page Data&lt;/h2&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;get-title&quot;&gt;Get Title&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'div'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'class'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'tit5'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;string-vs-text&quot;&gt;.string vs .text&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;.string&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;.text&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;contents&quot;&gt;.contents&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+&amp;lt;html&amp;gt;
+&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/html&amp;gt;
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;get-rate-value&quot;&gt;Get Rate Value&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'class'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'point'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;crawling-data-and-drawing-a-graph&quot;&gt;Crawling Data and Drawing a Graph&lt;/h2&gt;
+&lt;h3 id=&quot;pandas-method&quot;&gt;Pandas Method&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;pandas.date_range
+    &lt;ul&gt;
+      &lt;li&gt;pandas.date_range(start=None, end=None, periods=None, freq=None, tz=None, normalize=False, name=None, 
+closed=_NoDefault.no_default, inclusive=None, **kwargs)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pandas.pivot_table
+    &lt;ul&gt;
+      &lt;li&gt;pandas.pivot_table(data, values=None, index=None, columns=None, aggfunc=’mean’, fill_value=None, margins=False, 
+dropna=True, margins_name=’All’, observed=False, sort=True)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pandas.DataFrame.query
+    &lt;ul&gt;
+      &lt;li&gt;pandas.DataFrame.query(expr, inplace=False, **kwargs)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/&quot;&gt;Pandas Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
 
       
@@ -147,6 +884,130 @@
 
       
         <summary type="html">urllib</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Socket Programming</title>
+      <link href="/Computer_Network-Socket_Programming" rel="alternate" type="text/html" title="Computer Network - Socket Programming" />
+      <published>2022-10-14T00:00:00+09:00</published>
+      <updated>2022-10-14T00:00:00+09:00</updated>
+      <id>/Computer_Network-Socket_Programming</id>
+      <content type="html" xml:base="/Computer_Network-Socket_Programming">&lt;h2 id=&quot;1️⃣-socket-programming-with-udp&quot;&gt;1️⃣ Socket Programming with UDP&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: An identifier for a specific network application process as it may be running multiple network 
+application.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Demonstration of simple client-server application socket programming for both UDP and TCP:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The client reads a line of characters (data) from its keyboard and sends the data to the server.&lt;/li&gt;
+  &lt;li&gt;The server receives the data and converts the characters to uppercase.&lt;/li&gt;
+  &lt;li&gt;The server sends the modified data to the client.&lt;/li&gt;
+  &lt;li&gt;The client receives the modified data and displays the line on its screen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;udpclientpy&quot;&gt;UDPClient.py&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'localhost'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Input lowercase sentence:'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;udpserverpy&quot;&gt;UDPServer.py&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The server is ready to receive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2️⃣-socket-programming-with-tcp&quot;&gt;2️⃣ Socket Programming with TCP&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tcpclientpy&quot;&gt;TCPClient.py&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'localhost'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Input lowercase sentence:'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;moidifiedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'From Server: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;tcpserverpy&quot;&gt;TCPServer.py&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'The server is ready to receive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Socket Programming with UDP Port number: An identifier for a specific network application process as it may be running multiple network application.</summary>
       
 
       
@@ -578,7 +1439,7 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 
 &lt;h3 id=&quot;covariance&quot;&gt;Covariance&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Cov(f(x),g(y))&amp;space;=&amp;space;\mathbb{E}[(f(x)]&amp;space;-&amp;space;\mathbb{E}[f(x)])(g(y)&amp;space;-&amp;space;\mathbb{E}[g(y)])&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Cov[f(x),g(y)]=\mathbb{E}[(f(x)]&amp;space;-&amp;space;\mathbb{E}[f(x)])(g(y)&amp;space;-&amp;space;\mathbb{E}[g(y)])&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
 &lt;p&gt;Covariance can be negative&lt;/p&gt;
@@ -639,6 +1500,85 @@ by computing the probability of one of many events occurring.&lt;/li&gt;
 
 &lt;h2 id=&quot;distribution--information-theory&quot;&gt;Distribution &amp;amp; Information Theory&lt;/h2&gt;
 &lt;h3 id=&quot;bernoulli-distribution&quot;&gt;Bernoulli Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;PDF&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;1)&amp;space;=&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;0)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi^x(1-\phi)^{1-x}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Expectation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[x]=\phi&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variance&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Var_x(x)&amp;space;=&amp;space;\phi&amp;space;(1-\phi)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gaussian-distribution&quot;&gt;Gaussian Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parameterized by variance:
+    &lt;ul&gt;
+      &lt;li&gt;E[x] = μ, Var[x] = σ&lt;sup&gt;2&lt;/sup&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\sigma^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{1}{2\pi&amp;amp;space;\sigma^2}}exp(-\frac{1}{2\sigma^2}(x-\mu)^2)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parameterized by precision:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\beta&amp;amp;space;^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{\beta}{2\pi}}exp(-\frac{1}{2}\beta(x-\mu)^2)&lt;/p&gt;
+
+&lt;h3 id=&quot;gaussian-distribution-1&quot;&gt;Gaussian Distribution&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;theorems-related-to-gaussian-distribution&quot;&gt;Theorems related to Gaussian Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Central limit theorem&lt;/strong&gt;: the sum of many independent random variables is approximately normally distributed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\sqrt{n}}{\sigma}(\overline{X_n}&amp;space;-&amp;space;\mu)&amp;space;\to&amp;space;N(0,1)&quot; alt=&quot;&quot; /&gt; 
+as 
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Law of large numbers&lt;/strong&gt;: the sample average converges to the expectation as the sample size goes to infinity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;\to&amp;space;\mu&quot; alt=&quot;&quot; /&gt; 
+as 
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&amp;space;&quot; alt=&quot;&quot; /&gt;
+, where 
+&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;=&amp;space;\frac{1}{n}(X_1&amp;space;&amp;plus;&amp;space;X_2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;space;&amp;plus;&amp;space;X_n)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;multivariate-gaussian&quot;&gt;Multivariate Gaussian&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Parameterized by covariance matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&amp;space;=&amp;space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp(-\frac{1}{2}(x-\mu)^\top&amp;space;\sum&amp;space;^{-1}(x-\mu))}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;μ is a vector&lt;/li&gt;
+  &lt;li&gt;∑ is a covariance matrix&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parameterized by precision matrix&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1177,6 +2117,26 @@ condition by measuring delay and loss performance between their clusters and cli
 
 &lt;h2 id=&quot;3️⃣-case-studies-netflix-and-youtube&quot;&gt;3️⃣ Case Studies: Netflix and YouTube&lt;/h2&gt;
 &lt;h3 id=&quot;netflix&quot;&gt;Netflix&lt;/h3&gt;
+&lt;p&gt;Amazon cloud handles the following critical functions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Content ingestion&lt;/strong&gt;: Before Netflix can distribute a movie to its customers, it must first ingest and process the
+movie. Netflix receives studio master versions of movies and upload them to hosts in the Amazon cloud.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Content processing&lt;/strong&gt;: The machines in the Amazon cloud create many different formats for each movie, suitable for a
+diverse array of client video players running on desktop computers, smartphones, and game consoles connected to
+televisions. A different version is created for each of these formats and at multiple bit rates, allowing for adaptive
+streaming over HTTP using DASH&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Uploading versions to its CDN&lt;/strong&gt;: Once all of the versions of a movie have been created, the hosts in the Amazon
+cloud upload the versions to its CDN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/06/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;youtube&quot;&gt;YouTube&lt;/h3&gt;
+&lt;p&gt;YouTube employs HTTP streaming, often making a small number of different versions available for a video, eac with a
+different bit rate and corresponding quality level. YouTube does not employ adaptive streaming (such as DASH), but
+instead requires the user to manually select a version. In order to save bandwidth and server resources that would be
+wasted by repositioning or early termination, YouTube uses the HTTP byte range request to limit the flow of transmitted
+data after a target amount of video is prefetched.&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1204,1437 +2164,6 @@ condition by measuring delay and loss performance between their clusters and cli
 
       
         <summary type="html">1️⃣ HTTP Streaming and DASH HTTP Streaming: When a user wants to see the video, the client establishes a TCP connection with th server and issues an HTTP GET request for that URL. The server then sends the video file, within an HTTP response message, as quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a client, both across different clients and also over time for the same client. Dynamic Adaptive Streaming over HTTP (DASH): The video is encoded into several quality level. The client dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is high, the client naturally selects chunks from a high-rate version and vica-versa. Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to the base stations. manifest file: Provides a URL for each version along with its bit rate.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Variable and Basic Function</title>
-      <link href="/Unreal_Engine-Variable_and_Basic_Function" rel="alternate" type="text/html" title="Unreal Engine - Variable and Basic Function" />
-      <published>2022-10-05T19:30:00+09:00</published>
-      <updated>2022-10-05T19:30:00+09:00</updated>
-      <id>/Unreal_Engine-Variable_and_Basic_Function</id>
-      <content type="html" xml:base="/Unreal_Engine-Variable_and_Basic_Function">&lt;h2 id=&quot;create-variable-and-variables-types&quot;&gt;Create Variable and Variables types&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Create variable
-    &lt;ul&gt;
-      &lt;li&gt;Add variable from my blueprint panel&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Frequently used variable types
-    &lt;ul&gt;
-      &lt;li&gt;Boolean: True/False&lt;/li&gt;
-      &lt;li&gt;Integer&lt;/li&gt;
-      &lt;li&gt;Float&lt;/li&gt;
-      &lt;li&gt;Vector: X, Y, and Z float type structure&lt;/li&gt;
-      &lt;li&gt;String&lt;/li&gt;
-      &lt;li&gt;Object Type&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variable Types
-    &lt;ul&gt;
-      &lt;li&gt;Variables have its own color assigned to it&lt;/li&gt;
-      &lt;li&gt;Object type may not be compatible even though it has the same color&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Variable extraction and assignment
-    &lt;ul&gt;
-      &lt;li&gt;extraction = Get&lt;/li&gt;
-      &lt;li&gt;assignment = Set&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variable node placement
-    &lt;ul&gt;
-      &lt;li&gt;drag &amp;amp; drop from the ‘my blueprint’ and select Get/Set for placement&lt;/li&gt;
-      &lt;li&gt;drag &amp;amp; drop while pressing Ctrl/Alt key for faster Get/Set placement&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;private-variable-and-elevation-to-variable&quot;&gt;Private Variable and Elevation to Variable&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Private variable
-    &lt;ul&gt;
-      &lt;li&gt;To set the variable ‘private’, only internal variable Get/Set is possible
-        &lt;ul&gt;
-          &lt;li&gt;If it is not ‘private’, Get/Set is possible from external&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Elevation to variable
-    &lt;ul&gt;
-      &lt;li&gt;Make constant value to variable&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;creation-and-usage-of-structure&quot;&gt;Creation and Usage of Structure&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Get/Set Node&lt;/li&gt;
-  &lt;li&gt;Make Structure Node&lt;/li&gt;
-  &lt;li&gt;Split Structure Node&lt;/li&gt;
-  &lt;li&gt;Set Member Structure Node&lt;/li&gt;
-  &lt;li&gt;Flow Control Node
-    &lt;ul&gt;
-      &lt;li&gt;Sequence Node&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;creation-and-usage-of-enum-variable&quot;&gt;Creation and Usage of Enum Variable&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Get/Set Node&lt;/li&gt;
-  &lt;li&gt;Enum Switch Node&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;creation-and-usage-of-function&quot;&gt;Creation and Usage of Function&lt;/h2&gt;
-&lt;h3 id=&quot;function&quot;&gt;Function&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Re-usage of code
-    &lt;ul&gt;
-      &lt;li&gt;Independently separate code that is reused -&amp;gt; event, graph, function, macro, and etc.&lt;/li&gt;
-      &lt;li&gt;function: similar to an event graph&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to use function
-    &lt;ul&gt;
-      &lt;li&gt;Add: Add function from ‘My blueprint’ tab&lt;/li&gt;
-      &lt;li&gt;Make node network for each function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;function-vs-event-graph&quot;&gt;Function vs. Event Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Make node network from the grid&lt;/li&gt;
-  &lt;li&gt;Availability of return value&lt;/li&gt;
-  &lt;li&gt;Availability of latent action or timeline function&lt;/li&gt;
-  &lt;li&gt;Availability of local variable&lt;/li&gt;
-  &lt;li&gt;Number of entry point&lt;/li&gt;
-  &lt;li&gt;Guidance for separation
-    &lt;ul&gt;
-      &lt;li&gt;You do not need to be strict&lt;/li&gt;
-      &lt;li&gt;If it is hard to choose, just make an custom event first&lt;/li&gt;
-      &lt;li&gt;If there is a need for return value, make it into a function&lt;/li&gt;
-      &lt;li&gt;If there is a no need for latent action or timeline, make it into a function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;conditional-expression&quot;&gt;Conditional Expression&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Flow control node
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Branch&lt;/strong&gt; node&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conditional node: examine the input value and output true or false
-    &lt;ul&gt;
-      &lt;li&gt;condition
-        &lt;ul&gt;
-          &lt;li&gt;node: &amp;gt;, &amp;lt;. &amp;gt;=, &amp;lt;=, ==, !=&lt;/li&gt;
-          &lt;li&gt;node: AND, OR&amp;lt; XOR, NAND, NOR, NOT&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Create Variable and Variables types Create variable Add variable from my blueprint panel Frequently used variable types Boolean: True/False Integer Float Vector: X, Y, and Z float type structure String Object Type Variable Types Variables have its own color assigned to it Object type may not be compatible even though it has the same color</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Custom Event and Event Dispatcher</title>
-      <link href="/Unreal_Engine-Actor_Spawn_and_Respawn" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" />
-      <published>2022-10-04T01:30:00+09:00</published>
-      <updated>2022-10-04T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Actor_Spawn_and_Respawn</id>
-      <content type="html" xml:base="/Unreal_Engine-Actor_Spawn_and_Respawn">&lt;h2 id=&quot;spawn-and-respawn&quot;&gt;Spawn and Respawn&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dynamically spawn an object
-    &lt;ul&gt;
-      &lt;li&gt;Once located in a map, it is static, meaning it does not move&lt;/li&gt;
-      &lt;li&gt;Object that dynamically appear and disappear
-        &lt;ul&gt;
-          &lt;li&gt;Item that is collected should disappear&lt;/li&gt;
-          &lt;li&gt;Cannon should disappear after it is launched from a cannon shooter&lt;/li&gt;
-          &lt;li&gt;Enemy should constantly &lt;strong&gt;spawn&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;Player should &lt;strong&gt;respawn&lt;/strong&gt; after death&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Spawn and Respawn
-    &lt;ul&gt;
-      &lt;li&gt;Spawn: Object such as character or item that spawns dynamically&lt;/li&gt;
-      &lt;li&gt;Respawn: Character that respawns after death&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;actor-spawning&quot;&gt;Actor Spawning&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Location fixed with a constant is not flexible&lt;/li&gt;
-  &lt;li&gt;Location information must have an actor&lt;/li&gt;
-  &lt;li&gt;Location can be adjusted using a mouse&lt;/li&gt;
-  &lt;li&gt;A typical actor: “Target Point” actor, “Player starter” actor, …&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Actor spawning
-    &lt;ul&gt;
-      &lt;li&gt;SpawnActor from Class&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Transform
-    &lt;ul&gt;
-      &lt;li&gt;transform matrix&lt;/li&gt;
-      &lt;li&gt;Location + Rotation + Scale&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Extract actor’s transform
-    &lt;ul&gt;
-      &lt;li&gt;GetActorTransform&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;destroy&quot;&gt;Destroy&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unnecessary actors
-    &lt;ul&gt;
-      &lt;li&gt;Resources(CPU, Memory) must not be wasted&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Way to delete an actor
-    &lt;ul&gt;
-      &lt;li&gt;Destroy Actor&lt;/li&gt;
-      &lt;li&gt;Using lifespan property&lt;/li&gt;
-      &lt;li&gt;Using kill Z property&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;using-timer&quot;&gt;Using Timer&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Using timer
-    &lt;ul&gt;
-      &lt;li&gt;After the specified time, the subroutine is called&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Two types of timer function
-    &lt;ul&gt;
-      &lt;li&gt;Utilities &amp;gt; Timer &amp;gt; ‘&lt;strong&gt;Set Timer by Function Name&lt;/strong&gt;’&lt;/li&gt;
-      &lt;li&gt;Utilities &amp;gt; Timer &amp;gt; ‘&lt;strong&gt;Set Timer by Event&lt;/strong&gt;’ (Recommended)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Timer function input
-    &lt;ul&gt;
-      &lt;li&gt;Function Name: Function / Custom event name string&lt;/li&gt;
-      &lt;li&gt;Event = Connect delegate pin&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Time&lt;/strong&gt;: Wait time in seconds&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Looping&lt;/strong&gt;: Called every specified time
-        &lt;ul&gt;
-          &lt;li&gt;you can use other actions such as &lt;em&gt;ResetTimer&lt;/em&gt;, &lt;em&gt;UnsetTimer&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Return Value&lt;/strong&gt;: Timer handle returns&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Other timer related function
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Clear and Invalidate Timer by Handle&lt;/strong&gt;: Deletes an infinite loop timer&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Get Timer Elapsed(Remaining) Time by Handle&lt;/strong&gt;: Returns remaining time&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Paused(Unpaused) Timer by Handle&lt;/strong&gt;: Pauses a timer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;using-hit-event&quot;&gt;Using Hit Event&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;If the collision occurs in block form, not overlap, the default event does not occur&lt;/li&gt;
-  &lt;li&gt;When block form of collision event occurs:
-    &lt;ul&gt;
-      &lt;li&gt;Check ‘Simulation Generates Hit Events’ in the component’s detail tab&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Callback function
-    &lt;ul&gt;
-      &lt;li&gt;Add the ‘OnComponentHit’ to the specific component to event node in the node graph&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Callback function in actor metrics
-    &lt;ul&gt;
-      &lt;li&gt;Add the ‘OnActorHit’ to the specific instance to event node in the node graph&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;pawn-and-controller&quot;&gt;Pawn and Controller&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Difference between Pawn and Controller
-    &lt;ul&gt;
-      &lt;li&gt;Pawn: An existence, such as player or AI, in the world that has physical shape&lt;/li&gt;
-      &lt;li&gt;Controller: Controller class that manages a pawn
-        &lt;ul&gt;
-          &lt;li&gt;Human Player or Computer Player(AI)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;When a game starts, the specified &lt;strong&gt;pawn&lt;/strong&gt; and &lt;strong&gt;controller&lt;/strong&gt; is auto-generated
-        &lt;ul&gt;
-          &lt;li&gt;Controller is not visible but it is auto-generated(you can see it in the outliner)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Input Event Process
-    &lt;ul&gt;
-      &lt;li&gt;General way: Controller gets the input and applies to the pawn&lt;/li&gt;
-      &lt;li&gt;Simple implementation way: Pawn itself gets the input and controls itself&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;pawns-response&quot;&gt;Pawn’s Response&lt;/h2&gt;
-&lt;h4 id=&quot;pawns-response-1&quot;&gt;Pawn’s response&lt;/h4&gt;
-&lt;p&gt;After pawn is destroyed, the pawn must respawn in the specified place to replay. However, the pawn’s controller does not
-disappear. Therefore, when the pawn respawn, the original controller must be reconnected.&lt;/p&gt;
-
-&lt;h4 id=&quot;pawn-and-controller-connection&quot;&gt;Pawn and Controller Connection&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pawn and Controller should have one to one connection&lt;/li&gt;
-  &lt;li&gt;In order for the controller to Possess a different pawn, it must UnPossess first&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;event-binding&quot;&gt;Event binding&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Respawning after a player disappear
-    &lt;ul&gt;
-      &lt;li&gt;Define a custom event so the player’s pawn will respawn&lt;/li&gt;
-      &lt;li&gt;Make it so the event is called when the pawn is destroyed&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Event binding
-    &lt;ul&gt;
-      &lt;li&gt;Event bind OnDestroyed to the respawn event&lt;/li&gt;
-      &lt;li&gt;However, pawn level is not placed, it is created upon it runs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Spawn and Respawn Dynamically spawn an object Once located in a map, it is static, meaning it does not move Object that dynamically appear and disappear Item that is collected should disappear Cannon should disappear after it is launched from a cannon shooter Enemy should constantly spawn Player should respawn after death Spawn and Respawn Spawn: Object such as character or item that spawns dynamically Respawn: Character that respawns after death</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Data Collection and Exploration</title>
-      <link href="/Big_Data-Data_Collection_and_Exploration" rel="alternate" type="text/html" title="Big Data - Data Collection and Exploration" />
-      <published>2022-10-03T22:30:00+09:00</published>
-      <updated>2022-10-03T22:30:00+09:00</updated>
-      <id>/Big_Data-Data_Collection_and_Exploration</id>
-      <content type="html" xml:base="/Big_Data-Data_Collection_and_Exploration">&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
-&lt;h3 id=&quot;considerations&quot;&gt;Considerations&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Does the dataset exist (or can we build the dataset)?
-    &lt;ul&gt;
-      &lt;li&gt;If it &lt;strong&gt;DOES NOT EXIST&lt;/strong&gt;, the DM problem you defined &lt;strong&gt;cannot be conducted&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;If it &lt;strong&gt;DOES EXIST&lt;/strong&gt;, specify the target data source with considering
-        &lt;ul&gt;
-          &lt;li&gt;Availability (i.e., permission)&lt;/li&gt;
-          &lt;li&gt;Access type (API, download, …) -&amp;gt; Need to find “limits or warnings”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Decide the scale of the dataset and what to store
-    &lt;ul&gt;
-      &lt;li&gt;Reasonable amount to solve your problem&lt;/li&gt;
-      &lt;li&gt;Storage capability&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Decide the collection methodology
-    &lt;ul&gt;
-      &lt;li&gt;Crawling web pages or using APIs&lt;/li&gt;
-      &lt;li&gt;Multiprocessing vs. single processing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-
-&lt;p&gt;Collection data as much as you can store&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Re-collection is too much expensive&lt;/li&gt;
-  &lt;li&gt;Nobody (even you) knows what to use&lt;/li&gt;
-  &lt;li&gt;During analysis, you may need new data that you ignored&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;case-study-reddit-crawling&quot;&gt;Case Study: Reddit Crawling&lt;/h3&gt;
-
-&lt;p&gt;Official API is provided through &lt;a href=&quot;https://www.reddit.com/dev/api/&quot;&gt;https://www.reddit.com/dev/api/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;It is written that only last 1000 items (i.e. comments are accessible)&lt;/p&gt;
-
-&lt;h4 id=&quot;investigation-on-rules&quot;&gt;Investigation on Rules&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;data-preprocessing&quot;&gt;Data Preprocessing&lt;/h2&gt;
-&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The first step to ensure “data quality”
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Accuracy&lt;/strong&gt;: correct or wrong, accurate or not&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Completeness&lt;/strong&gt;: not recorded, unavailable, …&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt;: some modified but some not, dangling, …&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Timeliness&lt;/strong&gt;: timely update?&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Believability&lt;/strong&gt;: how trustable the data are correct?&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Interpretability&lt;/strong&gt;: how easily the data can be understood?&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Manipulating data for your intended use&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;Preprocessing should be conducted &lt;strong&gt;REASONABLY&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;major-task&quot;&gt;Major Task&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data cleaning
-    &lt;ul&gt;
-      &lt;li&gt;Fill in missing value, smooth noisy data, identify or remove outliers, and resolve inconsistencies, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data integration
-    &lt;ul&gt;
-      &lt;li&gt;Integration of multiple databases, data cubes, or files&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data transformation and data discretization
-    &lt;ul&gt;
-      &lt;li&gt;Normalization&lt;/li&gt;
-      &lt;li&gt;Concept hierarchy generation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data reduction
-    &lt;ul&gt;
-      &lt;li&gt;Dimensionality reduction&lt;/li&gt;
-      &lt;li&gt;Numerosity reduction&lt;/li&gt;
-      &lt;li&gt;Data compression&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;data-cleaning&quot;&gt;Data Cleaning&lt;/h2&gt;
-&lt;p&gt;Data in the Real World Is &lt;strong&gt;Dirty&lt;/strong&gt;. Lots of potentially incorrect data, e.g., instrument faculty, human or computer
-error, transmission error&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;incomplete: lacking attribute values, lacking certain attributes of interest, or containing only aggregate data
-    &lt;ul&gt;
-      &lt;li&gt;e.g., Occupation=”” (missing data)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;noisy: containing noise, errors, or outliers
-    &lt;ul&gt;
-      &lt;li&gt;e.g. Salary=”-10” (an error)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;inconsistent: containing discrepancies in codes or names, e.g.
-    &lt;ul&gt;
-      &lt;li&gt;Age=”42”, Birthday=”03/07/2010”&lt;/li&gt;
-      &lt;li&gt;Was rating “1,2,3”, now rating “A,B,C”&lt;/li&gt;
-      &lt;li&gt;discrepancy between duplicate records&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Intentional (e.g. disguised missing data)
-    &lt;ul&gt;
-      &lt;li&gt;Jan. 1 as everyone’s birthday?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;incomplete-missing-data&quot;&gt;Incomplete (Missing) Data&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data is not always available
-    &lt;ul&gt;
-      &lt;li&gt;e.g. many tuples have no recorded value for several attributes, such as customer income in sales data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Missing data may be due to
-    &lt;ul&gt;
-      &lt;li&gt;equipment malfunction&lt;/li&gt;
-      &lt;li&gt;inconsistent with other recorded data and thus deleted&lt;/li&gt;
-      &lt;li&gt;data not entered due to misunderstanding&lt;/li&gt;
-      &lt;li&gt;certain data may not be considered important at the time of entry&lt;/li&gt;
-      &lt;li&gt;not register history or changes of the data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Missing data may need to be inferred&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-to-handle-missing-data&quot;&gt;How to Handle Missing Data&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ignore tuple: usually done when class label is missing (when doing classification) - not effective when the % of 
-missing values per attribute varies considerably&lt;/li&gt;
-  &lt;li&gt;Fill in the missing value manually: tedious + infeasible&lt;/li&gt;
-  &lt;li&gt;Fill in it automatically with
-    &lt;ul&gt;
-      &lt;li&gt;a global constant: e.g., “unknown”, a new class?!&lt;/li&gt;
-      &lt;li&gt;the attribute mean&lt;/li&gt;
-      &lt;li&gt;the attribute mean for all samples belonging to the same class: smarter&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;the most probable value: inferenced-based such as Bayesian formula or decision tree&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dealing-with-noisy-data&quot;&gt;Dealing with Noisy Data&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Noise&lt;/strong&gt;: random error or variance in a measured variable&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Incorrect attribute values&lt;/strong&gt; may be due to:
-    &lt;ul&gt;
-      &lt;li&gt;faculty data collection instruments&lt;/li&gt;
-      &lt;li&gt;data entry problems&lt;/li&gt;
-      &lt;li&gt;data transmission problems&lt;/li&gt;
-      &lt;li&gt;technology limitation&lt;/li&gt;
-      &lt;li&gt;inconsistency in naming convention&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Other data problems&lt;/strong&gt; which require data cleaning
-    &lt;ul&gt;
-      &lt;li&gt;duplicate records&lt;/li&gt;
-      &lt;li&gt;incomplete data&lt;/li&gt;
-      &lt;li&gt;inconsistent data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Binning&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;first sort data and partition into (equal-frequency) bins&lt;/li&gt;
-      &lt;li&gt;then one can &lt;strong&gt;smooth by bin means&lt;/strong&gt;, &lt;strong&gt;smooth by bin median&lt;/strong&gt;, &lt;strong&gt;smooth by bin boundaries&lt;/strong&gt;, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Regression&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;smooth by fitting the data into regression functions&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Clustering&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;detect and remove outliers&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Combined computer and human inspection&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;detect suspicious values and check by human (e.g., eal with possible outliers)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;data-integration&quot;&gt;Data Integration&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Data Integration&lt;/strong&gt; can be done by combining data from multiple sources into a coherent store.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Schema integration&lt;/strong&gt;: e.g. A.cust-id = B.cust-#
-    &lt;ul&gt;
-      &lt;li&gt;Integrate metadata from different sources&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Entity identification problem&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Identify real world entities from multiple data sources, e.g., Bill Clinton = William Clinton&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Detecting and resolving data value conflicts&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;For the sam real world entity, attribute values from different sources are different&lt;/li&gt;
-      &lt;li&gt;Possible reasons: different representations, different sacles, e.g., metric vs. British units&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;handling-redundancy-in-data-integration&quot;&gt;Handling Redundancy in Data Integration&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Redundant data occur often when integration of multiple databases
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;Object identification&lt;/em&gt;: The same attribute or object may have different names in different databases&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Derivable data&lt;/em&gt;: One attribute may be a “derived” attribute in another table, e.g., annual revenue&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;*Redundant attributes may be able to be detected by *correlation analysis&lt;/em&gt; and &lt;em&gt;covariance analysis&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Careful integration of the data from multiple sources may help reduce/avoid redundancies and inconsistencies and
-improve mining speed and quality&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;data-transformation--discretization&quot;&gt;Data Transformation &amp;amp; Discretization&lt;/h2&gt;
-&lt;h3 id=&quot;data-transformation&quot;&gt;Data Transformation&lt;/h3&gt;
-&lt;p&gt;A function that maps the entire set of values of a given attribute to a new set of replacement values so that each value
-can be identified with one of the new values&lt;/p&gt;
-
-&lt;h4 id=&quot;methods&quot;&gt;Methods&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Aggregation&lt;/strong&gt;: Summarization, data cube construction&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Smoothing&lt;/strong&gt;: Remove noise from data&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Normalization&lt;/strong&gt;: Scaled to fall within a smaller, common, and specified range
-    &lt;ul&gt;
-      &lt;li&gt;min-max, z-score, decimal scaling&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Discretization&lt;/strong&gt;: Concept hierarchy climbing
-    &lt;ul&gt;
-      &lt;li&gt;Binning, Clustering, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Attribute/feature construction&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;New attributes constructed from the given ones&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;normalization&quot;&gt;Normalization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Min-max normalization: to [new_min&lt;sub&gt;A&lt;/sub&gt;, new_max&lt;sub&gt;A&lt;/sub&gt;]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-min_A}{max_A-min_A}(newmax_A&amp;space;-&amp;space;newmin_A)&amp;space;&amp;plus;&amp;space;newmin_A&quot; alt=&quot;equation-1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;e.g. Let income range $12,000 to $98,000 normalized to [0.0, 1.0]. Then $73,000 is mapped to&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;12000}{98000&amp;space;-&amp;space;12000}(1.0&amp;space;-&amp;space;0)&amp;space;&amp;plus;&amp;space;0&amp;space;=&amp;space;0.716&quot; alt=&quot;equation-2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Normalization by decimal scaling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v}{10^j}&quot; alt=&quot;equation-3&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;where &lt;em&gt;j&lt;/em&gt; is the smallest integer such that Max(&lt;/td&gt;
-      &lt;td&gt;v’&lt;/td&gt;
-      &lt;td&gt;) &amp;lt; 1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Z-score normalization (μ: mean, σ: standard deviation):&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?v'&amp;space;=&amp;space;\frac{v-\mu&amp;space;_A}{\sigma&amp;space;_A}&quot; alt=&quot;equation-4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;e.g. Let μ = 54,000, σ = 16,000. Then&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{73600&amp;space;-&amp;space;54000}{16000}&amp;space;=&amp;space;1.225&quot; alt=&quot;equation-5&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;discretization&quot;&gt;Discretization&lt;/h3&gt;
-&lt;p&gt;Divide the range of a continuous values into intervals&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Interval labels can then be used to replace actual data values -&amp;gt; Reduce noise&lt;/li&gt;
-  &lt;li&gt;Supervised vs. Unsupervised&lt;/li&gt;
-  &lt;li&gt;Split (top-down) vs. merge (bottom-up)&lt;/li&gt;
-  &lt;li&gt;Can be performed recursively on an attribute&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;three-types-of-attributes&quot;&gt;Three types of attributes&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Nominal - values from an unordered set, e.g., color, profession&lt;/li&gt;
-  &lt;li&gt;Ordinal - values from an ordered set, e.g., military or academic rank&lt;/li&gt;
-  &lt;li&gt;Numeric - real numbers, e.g., integer or real numbers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-discretization-methods&quot;&gt;Data Discretization Methods&lt;/h3&gt;
-&lt;h4 id=&quot;typical-methods-all-the-methods-can-be-applied-recursively&quot;&gt;Typical methods: All the methods can be applied recursively&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Binning&lt;/strong&gt; (unsupervised, top-down split)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Clustering analysis&lt;/strong&gt; (unsupervised, top-down split or bottom-up merge)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Concept Hierarchy Generation&lt;/strong&gt; (supervised, top-down split or bottom-up merge)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Correlation analysis&lt;/strong&gt;: (unsupervised, bottom-up merge)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;simple-discretization-binning&quot;&gt;Simple Discretization: Binning&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Equal-width&lt;/strong&gt; (distance) partitioning
-    &lt;ul&gt;
-      &lt;li&gt;Divide the range into &lt;em&gt;N&lt;/em&gt; intervals of equal size: uniform grid&lt;/li&gt;
-      &lt;li&gt;if &lt;em&gt;A&lt;/em&gt; and &lt;em&gt;B&lt;/em&gt; are the lowest and highest values of the attribute, the width of intervals will be: &lt;em&gt;W&lt;/em&gt; = (&lt;em&gt;B&lt;/em&gt; - &lt;em&gt;A&lt;/em&gt;)
-/ &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;The most straightforward, but outliers may dominate presentation&lt;/li&gt;
-      &lt;li&gt;Skewed data is &lt;strong&gt;not&lt;/strong&gt; handled well&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Equal-depth&lt;/strong&gt; (frequency) partitioning
-    &lt;ul&gt;
-      &lt;li&gt;Divides the range into &lt;em&gt;N&lt;/em&gt; intervals, each containing approximately same number of samples&lt;/li&gt;
-      &lt;li&gt;Good data scaling&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;discretization-without-using-class-labels-binning-vs-clustering&quot;&gt;Discretization Without Using Class Labels (Binning vs. Clustering)&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-6.jpeg&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;concept-hierarchy-generation&quot;&gt;Concept Hierarchy Generation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Concept hierarchy organizes concepts (i.e., attribute values) hierarchically and is usually associated with each 
-dimension in a data warehouse&lt;/li&gt;
-  &lt;li&gt;Concept hierarchies facilitate ‘drilling and rolling’ in data warehouses to view data in multiple granularity&lt;/li&gt;
-  &lt;li&gt;Concept hierarchy formation: Recursively reduce the data by collecting and replacing low level concepts (such as 
-numeric values for &lt;em&gt;age&lt;/em&gt;) by higher level concepts (such as &lt;em&gt;youth&lt;/em&gt;, &lt;em&gt;adult&lt;/em&gt;, &lt;em&gt;senior&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;Concept hierarchies can be explicitly specified &lt;strong&gt;by domain experts&lt;/strong&gt; and/or data warehouse designers&lt;/li&gt;
-  &lt;li&gt;Concept hierarchy can also be &lt;strong&gt;automatically&lt;/strong&gt; formed for both numeric and nominal data. For numeric data, use 
-discretization methods shown.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;concept-hierarchy-generation-for-nominal-data&quot;&gt;Concept Hierarchy Generation for Nominal Data&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Specification of partial/total ordering of attributes explicitly at the schema level by users or experts
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;city&lt;/em&gt; &amp;lt; &lt;em&gt;state&lt;/em&gt; &amp;lt; &lt;em&gt;country&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Specification of a hierarchy for a set of values by explicit data grouping
-    &lt;ul&gt;
-      &lt;li&gt;{Urbana, Champaign, Chicago} &amp;lt; Illinois&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Specification of only a partial set of attributes
-    &lt;ul&gt;
-      &lt;li&gt;e.g., only &lt;em&gt;street&lt;/em&gt; &amp;lt; &lt;em&gt;cit&lt;/em&gt;, not others&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Automatic generation of hierarchies (or attribute levels) by the analysis of the number of distinct values
-    &lt;ul&gt;
-      &lt;li&gt;e.g., for a set of attributes: {&lt;em&gt;street&lt;/em&gt;, &lt;em&gt;city&lt;/em&gt;, &lt;em&gt;state&lt;/em&gt;, &lt;em&gt;country&lt;/em&gt;}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;automatic-concept-hierarchy-generation&quot;&gt;Automatic Concept Hierarchy Generation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Some hierarchies can be automatically generated based on the analysis of the number of distinct values per attribute 
-in the data set
-    &lt;ul&gt;
-      &lt;li&gt;The attribute with the most distinct values is placed at the lowest level of the hierarchy&lt;/li&gt;
-      &lt;li&gt;Exceptions, e.g., weekday, month, quarter, year&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-7.jpeg&quot; alt=&quot;screenshot-7&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;data-reduction&quot;&gt;Data Reduction&lt;/h2&gt;
-&lt;h3 id=&quot;data-reduction-strategies&quot;&gt;Data Reduction Strategies&lt;/h3&gt;
-&lt;p&gt;Obtain a reduced representation of the data set that is much smaller in volume but yet produces the same (or almost the 
-same) analytical results.&lt;/p&gt;
-
-&lt;h4 id=&quot;why-data-reduction&quot;&gt;Why data reduction?&lt;/h4&gt;
-&lt;p&gt;A database/data warehouse may store terabytes of data. Complex data analysis may take a very long time to run on the
-complete data set.&lt;/p&gt;
-
-&lt;h4 id=&quot;data-reduction-strategies-1&quot;&gt;Data reduction strategies&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dimensionality reduction, e.g., remove unimportant attributes
-    &lt;ul&gt;
-      &lt;li&gt;&lt;del&gt;Wavelet transforms&lt;/del&gt; &amp;lt;- Reduction for signal data&lt;/li&gt;
-      &lt;li&gt;Feature subset selection, feature creation&lt;/li&gt;
-      &lt;li&gt;Principal Components Analysis (PCA)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Numerosity reduction (some simply call it: Data Reduction)
-    &lt;ul&gt;
-      &lt;li&gt;Regression and Log-Linear Models&lt;/li&gt;
-      &lt;li&gt;Histograms, clustering, sampling&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data compression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-reduction-1-dimensionality-reduction&quot;&gt;Data Reduction 1: Dimensionality Reduction&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Curse of dimensionality
-    &lt;ul&gt;
-      &lt;li&gt;When dimensionality increases, data becomes increasingly sparse&lt;/li&gt;
-      &lt;li&gt;Density and distance between points, which is critical to clustering, outlier analysis, becomes less meaningful&lt;/li&gt;
-      &lt;li&gt;The possible combinations of subspaces will grow exponentially&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Dimensionality reduction
-    &lt;ul&gt;
-      &lt;li&gt;Avoid the curse of dimensionality&lt;/li&gt;
-      &lt;li&gt;Help eliminate irrelevant features and reduce noise&lt;/li&gt;
-      &lt;li&gt;Reduce time and space required in data mining&lt;/li&gt;
-      &lt;li&gt;Allow easier visualization&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;attribute-subset-selection&quot;&gt;Attribute Subset Selection&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Another way to reduce dimensinoality of data&lt;/li&gt;
-  &lt;li&gt;Redundant attributes
-    &lt;ul&gt;
-      &lt;li&gt;Duplicate much or all of the information contained in one or more other attributes&lt;/li&gt;
-      &lt;li&gt;E.g., purchase price of a product and the amount of sales tax paid&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Irrelevant attributes
-    &lt;ul&gt;
-      &lt;li&gt;Contain no information that is useful for the data mining task at hand&lt;/li&gt;
-      &lt;li&gt;E.g., students’ ID is often irrelevant to the task of predicting students’ GPA&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Filtering Correlated Features&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intuition: We do not need to consider both features that tell same property!&lt;/li&gt;
-  &lt;li&gt;Let’s select only a feature from a pair of the features when they are correlated enough
-    &lt;ul&gt;
-      &lt;li&gt;How to compute correlation? Pearson, Spearman, …
-        &lt;ol&gt;
-          &lt;li&gt;Compute the pair-wise correlation among features&lt;/li&gt;
-          &lt;li&gt;When correlated, take only a feature&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-8.jpeg&quot; alt=&quot;screenshot-8&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Variance Inflation Factor (VIF) or Mutual information can be another solution&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Removing Features with Low Variance&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intuition: Low variance means that features are not distinct enough!&lt;/li&gt;
-  &lt;li&gt;Let’s exclude the features whose variance are low
-    &lt;ol&gt;
-      &lt;li&gt;See the distribution of features and compute variance&lt;/li&gt;
-      &lt;li&gt;Exclude if the computed variance &amp;lt; threshold&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-9.jpeg&quot; alt=&quot;screenshot-9&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Filtering out Non-relevant Features&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intuition: Features that are not relevant to the target variable do not affect the model performance&lt;/li&gt;
-  &lt;li&gt;Let’s exclude the features (that are not related to target variable)
-    &lt;ol&gt;
-      &lt;li&gt;Select a feature and measure the correlation to target variable (by Pearson or Spearman)&lt;/li&gt;
-      &lt;li&gt;If the correlation is too low, exclude the feature
-        &lt;ul&gt;
-          &lt;li&gt;Other statistical-based methods (e.g., Chi-square) can be used&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Heuristic Search in Attribute Selection&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;There are 2&lt;em&gt;d&lt;/em&gt; possible attribute combinations of &lt;em&gt;d&lt;/em&gt; attributes&lt;/li&gt;
-  &lt;li&gt;Typical heuristic attribute selection methods:
-    &lt;ul&gt;
-      &lt;li&gt;Best single attribute under the attribute independence assumption: choose by significance tests&lt;/li&gt;
-      &lt;li&gt;Best step-wise feature selection
-        &lt;ul&gt;
-          &lt;li&gt;The best single-attribute is picked first&lt;/li&gt;
-          &lt;li&gt;Then next best attribute condition to the first, …&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Step-wise attribute elimination
-        &lt;ul&gt;
-          &lt;li&gt;Repeatedly eliminate the worst attribute&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Best combined attribute selection and elimination&lt;/li&gt;
-      &lt;li&gt;Optimal branch and bound
-        &lt;ul&gt;
-          &lt;li&gt;Use attribute elimination and backtracking&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Attribute Creation (Feature Generation)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Create new attributes (features) that can capture the important information in a data set more effectively than the
-original ones&lt;/li&gt;
-  &lt;li&gt;Two methods
-    &lt;ul&gt;
-      &lt;li&gt;Mapping data to new space (see: data reduction)
-        &lt;ul&gt;
-          &lt;li&gt;E.g., Fourier transformation, wavelet transformation, manifold approaches&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Attribute construction
-        &lt;ul&gt;
-          &lt;li&gt;Combining features&lt;/li&gt;
-          &lt;li&gt;Data discretization
-Then, remove (usually) larger numbers of attributes&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Principal Component Analysis (PCA)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Find a projection that captures the largest amount of variation in data&lt;/li&gt;
-  &lt;li&gt;The original data are projected onto a much smaller space, resulting in dimensionality reduction. We find the
-eigenvectors of the covariance matrix, and these eigenvectors define the new space&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-10.jpeg&quot; alt=&quot;screenshot-10&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Principal Component Analysis (Steps)&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given &lt;em&gt;N&lt;/em&gt; data vecotrs from &lt;em&gt;n&lt;/em&gt;-dimensions, find &lt;em&gt;k&lt;/em&gt; ≤ &lt;em&gt;n&lt;/em&gt; orthogonal vectors (principal components) that can be best
-used to represent data
-    &lt;ul&gt;
-      &lt;li&gt;Normalize input data: Each attribute falls within the same range&lt;/li&gt;
-      &lt;li&gt;Compute &lt;em&gt;k&lt;/em&gt; orthonormal (unit) vectors, i.e., principal components&lt;/li&gt;
-      &lt;li&gt;Each input data (vector) is a linear combination of the &lt;em&gt;k&lt;/em&gt; principal component vectors&lt;/li&gt;
-      &lt;li&gt;The principal components are sorted in order of decreasing “significance” or strength&lt;/li&gt;
-      &lt;li&gt;Since the components are sorted, the size of the data can be reduced by elimination the weak components, i.e., those
-with low variance (i.e., using the strongest principal components, it is possible to reconstruct a good approximation of
-the original data)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Works for numeric data only&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;data-reduction-2-numerosity-reduction&quot;&gt;Data Reduction 2: Numerosity Reduction&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reduce data volume by choosing alternative, smaller forms of data representation&lt;/li&gt;
-  &lt;li&gt;Parametric methods (e.g., regression)
-    &lt;ul&gt;
-      &lt;li&gt;Assume the data fits some model, estimate model parameters, store only the parameters, and discard the data (except
-possible outliers)&lt;/li&gt;
-      &lt;li&gt;Ex. Log-linear models - obtain value at a point in &lt;em&gt;m&lt;/em&gt;-D space as the product on appropriate marginal subspaces&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Non-parametric methods
-    &lt;ul&gt;
-      &lt;li&gt;Do not assume models&lt;/li&gt;
-      &lt;li&gt;Major families: histograms, clustering, sampling, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;data-reduction-by-regression&quot;&gt;Data Reduction by Regression&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;A collective name for techniques for the modeling and analysis of numerical data consisting of values of dependent
-variable (also called response variable or measurement) and of one or more independent variables (a.k.a. explanatory
-variables or predictors)&lt;/li&gt;
-  &lt;li&gt;The parameters are estimated so as to give a “best fit” of the data&lt;/li&gt;
-  &lt;li&gt;Most commonly the best fit is evaluated by using the least squares method, but other criteria have also been used&lt;/li&gt;
-  &lt;li&gt;Used for prediction (including forecasting of time-series data), inference, hypothesis testing, and modeling of causal
-relationships&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-11.jpeg&quot; alt=&quot;screenshot-11&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Regression Models&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Linear regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;w&lt;/em&gt; &lt;em&gt;X&lt;/em&gt; + &lt;em&gt;b&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Two regression coefficients, &lt;em&gt;w&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt;, specify the line and are to be estimated by using the data at hand&lt;/li&gt;
-      &lt;li&gt;Using the least squares criterion to the known values of &lt;em&gt;Y&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;, &lt;em&gt;Y&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …, &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt;,
-&lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Multiple regression: &lt;em&gt;Y&lt;/em&gt; = &lt;em&gt;b&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; + &lt;em&gt;b&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt; &lt;em&gt;X&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Many nonlinear functions can be transformed into the above&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Log-linear models
-    &lt;ul&gt;
-      &lt;li&gt;Approximate discrete multidimensional probability distributions&lt;/li&gt;
-      &lt;li&gt;Estimate the probability of each point (tuple) in a multidimensional space for a set of discretized attributes, 
-based on smaller subset of dimensional combinations&lt;/li&gt;
-      &lt;li&gt;Useful for dimensionality reduction and data smoothing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;non-parametric-reduction-histogram&quot;&gt;Non-parametric Reduction: Histogram&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Divide data into buckets and store average (sum) for each bucket&lt;/li&gt;
-  &lt;li&gt;Partitioning rules
-    &lt;ul&gt;
-      &lt;li&gt;Equal-width: equal bucket range&lt;/li&gt;
-      &lt;li&gt;Equal-frequency (or equal-depth)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-12.jpeg&quot; alt=&quot;screenshot-12&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;non-parametric-reduction-clustering&quot;&gt;Non-parametric Reduction: Clustering&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Partition data set into clusters based on similarity, and store cluster representation (e.g., centroid and diameter)
-only&lt;/li&gt;
-  &lt;li&gt;Can be very effective if data is clustered but not if data is “smeared”&lt;/li&gt;
-  &lt;li&gt;Can have hierarchical clustering and be stored in multidimensional index tree structures&lt;/li&gt;
-  &lt;li&gt;There are many choices of clustering definitions and clustering algorithms&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;non-parametric-reduction-sampling&quot;&gt;Non-parametric Reduction: Sampling&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sampling: obtaining a small sample &lt;em&gt;s&lt;/em&gt; to represent the whole data set &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Allow a mining algorithm to run in complexity that is potentially sub-linear to the size of the data&lt;/li&gt;
-  &lt;li&gt;Key principle: Choose a representative subset of the data
-    &lt;ul&gt;
-      &lt;li&gt;Simple random sampling may have very poor performance in the presence of skew&lt;/li&gt;
-      &lt;li&gt;Develop adaptive sampling methods, e.g., stratified sampling&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Sampling may not reduce database I/Os (page at a time)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Types of Sampling&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Simple random sampling
-    &lt;ul&gt;
-      &lt;li&gt;There is an equal probability of selecting any particular item&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sampling without replacement
-    &lt;ul&gt;
-      &lt;li&gt;Once an object is selected, it is removed from the population&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sampling with replacement
-    &lt;ul&gt;
-      &lt;li&gt;A selected object is not removed from the population&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Stratified sampling
-    &lt;ul&gt;
-      &lt;li&gt;Partition the data set, and draw samples from each partition (proportionally, i.e., approximately the same 
-percentage of the data)&lt;/li&gt;
-      &lt;li&gt;Used in conjunction with skewed data&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;sampling-with-or-without-replacement&quot;&gt;Sampling: With or without Replacement&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-13.jpeg&quot; alt=&quot;screenshot-13&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;sampling-cluster-or-stratified-sampling&quot;&gt;Sampling: Cluster or Stratified Sampling&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-14.jpeg&quot; alt=&quot;screenshot-14&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;data-reduction-3-data-compression&quot;&gt;Data Reduction 3: Data Compression&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;String compression
-    &lt;ul&gt;
-      &lt;li&gt;There are extensive theories and well-tuned algorithms&lt;/li&gt;
-      &lt;li&gt;Typically &lt;strong&gt;lossless&lt;/strong&gt;, but only limited manipulation is possible without expansion&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Audio/video compression
-    &lt;ul&gt;
-      &lt;li&gt;Typically &lt;strong&gt;lossy&lt;/strong&gt; compression, with progressive refinement&lt;/li&gt;
-      &lt;li&gt;Sometimes small fragments of signal can be reconstructed without reconstructing the whole&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Time sequence is not audio
-    &lt;ul&gt;
-      &lt;li&gt;Typically short and vary slowly with time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Dimensionality and numerosity reduction may also be considered as forms of data compression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-15.jpeg&quot; alt=&quot;screenshot-15&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Data Collection Considerations Does the dataset exist (or can we build the dataset)? If it DOES NOT EXIST, the DM problem you defined cannot be conducted. If it DOES EXIST, specify the target data source with considering Availability (i.e., permission) Access type (API, download, …) -&amp;gt; Need to find “limits or warnings” Decide the scale of the dataset and what to store Reasonable amount to solve your problem Storage capability Decide the collection methodology Crawling web pages or using APIs Multiprocessing vs. single processing</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - DNS - The Internet’s Directory Service</title>
-      <link href="/Computer_Network-DNS-The_Internet's-Directory-Service" rel="alternate" type="text/html" title="Computer Network - DNS - The Internet's Directory Service" />
-      <published>2022-10-03T19:30:00+09:00</published>
-      <updated>2022-10-03T19:30:00+09:00</updated>
-      <id>/Computer_Network-DNS-The_Internet's-Directory-Service</id>
-      <content type="html" xml:base="/Computer_Network-DNS-The_Internet's-Directory-Service">&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: Identifier for a host, such as &lt;em&gt;www.google.com&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;IP addresses&lt;/strong&gt;: Identifier consists of four bytes and has a rigid hierarchical structure.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1️⃣-services-provided-by-dns&quot;&gt;1️⃣ Services Provided by DNS&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Domain Name System (DNS)&lt;/strong&gt;: A directory service that translates hostnames to IP addresses.
-    &lt;ol&gt;
-      &lt;li&gt;A distributed database implemented in a hierarchy of DNS servers.&lt;/li&gt;
-      &lt;li&gt;An application-layer protocol that allows hosts to query the distributed databases.
-        &lt;ul&gt;
-          &lt;li&gt;The DNS servers are often UNIX machines running the Berkeley Internet Name Domain (BIND) software.&lt;/li&gt;
-          &lt;li&gt;The DNS protocol runs over UDP and uses port 53.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;dns-application-steps&quot;&gt;DNS application steps&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;The same user machine runs the client side of the DNS application.&lt;/li&gt;
-  &lt;li&gt;The browser extracts the hostname, &lt;em&gt;www.domain.com&lt;/em&gt;, from the URL and passes the hostname to the client side of DNS 
-application.&lt;/li&gt;
-  &lt;li&gt;The DNS client sends a query containing the hostname to a DNS server.&lt;/li&gt;
-  &lt;li&gt;The DNS client eventually receives a reply, which includes the IP address for the hostname.&lt;/li&gt;
-  &lt;li&gt;Once the browser receives the IP address from DNS, it can initiate a TCP connection to the HTTP server process
-located at port 80 at that IP address.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;dns-also-provides&quot;&gt;DNS also provides&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Host aliasing&lt;/strong&gt;: A host with a complicated hostname can have one or more alias names.
-    &lt;ul&gt;
-      &lt;li&gt;e.g. &lt;em&gt;relay1.west-coast.enterprise.com&lt;/em&gt; (&lt;strong&gt;canonical hostname&lt;/strong&gt;), &lt;em&gt;www.enterprise.com&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Mail server aliasing&lt;/strong&gt;: It is highly desirable that e-mail addresses bo mnemonic.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Load distribution&lt;/strong&gt;: DNS is also used to perform load distribution among replicated servers, such as replicated Web 
-servers. Busy sites, such as &lt;em&gt;cnn.com&lt;/em&gt;, are replicated over multiple servers, with each server running on different end
-system and each having a different IP address. For replicated Web servers, a set of IP addresses is thus associated with
-one alias hostname. The DNS database contains this set of IP addresses. When clients make a DNS query for a name
-mapped to a set of addresses, the server responds with the entire set of IP addresses, but rotates the ordering of the
-addresses within each reply.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2️⃣-overview-of-how-dns-works&quot;&gt;2️⃣ Overview of how DNS Works&lt;/h2&gt;
-&lt;h4 id=&quot;the-problems-with-a-centralized-design&quot;&gt;The problems with a centralized design&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;A single point of failure&lt;/strong&gt;: If the DNS server crashes, so does the entire Internet.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Traffic volume&lt;/strong&gt;: A single DNS server would have to handle all DNS queries for all the HTTP requests and e-mail
-messages generated from hundreds of millions of hosts.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Distant centralized database&lt;/strong&gt;: A single DNS server cannot be “close to” all the querying clients. If we put the
-single DNS server in New York City, then all queries from Australia must travel to the other side of the globe, perhaps
-over slow and congested links. This can lead to significant delays.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Maintenance&lt;/strong&gt;: The single DNS server would have to keep records for all Internet hosts. Not only would this
-centralized database be huge, but it would have to be updated frequently to account for every new host.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;a-distributed-hierarchical-database&quot;&gt;A Distributed, Hierarchical Database&lt;/h3&gt;
-&lt;p&gt;In order to deal with the issue of scale, the DNS uses a large number of servers, organized in a hierarchical fashion
-and distributed around the world.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;3-classes-of-dns-servers&quot;&gt;3 classes of DNS servers&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Root DNS servers&lt;/strong&gt;: There are more than 1000 root servers instances scattered all over the world. These root servers
-are copies of 13 different root servers, managed by 12 different organizations, and coordinated through the Internet
-Assigned Numbers Authority. Root name servers provide the IP addresses of the TLD servers.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Top-level domain (TLD) servers&lt;/strong&gt;: For each of the top-level domains - top level domains such as com, org, net, edu,
-and gov, and all of the country top-level domains such as uk, fr, ca, and jp - there is TLD server or server cluster.
-The company Verisign Global Registry Services maintains the TLD servers for the com top-level domain. TLD servers
-provide the IP addresses for authoritative DNS servers.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Authoritative DNS servers&lt;/strong&gt;: Every organization with publicly accessible hosts, such as Web servers and mail
-servers, on the Internet must provide publicly accessible DNS records that map the names of those hosts to IP addresses.
-An organization’s authoritative DNS server houses these DNS records. An organization can choose to implement its own
-authoritative DNS server to hold these records; alternatively, the organization can pay to have these records stored in
-an authoritative DNS server of some service provider. Most universities and large companies implement and maintain their
-own primary and secondary (backup) authoritative DNS server.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Local DNS server&lt;/strong&gt;: Does not strictly belong to the hierarchy of servers but is nevertheless central to the DNS 
-architecture because each ISP has a local DNS server.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;dns-caching&quot;&gt;DNS Caching&lt;/h3&gt;
-&lt;p&gt;DNS Caching improve the delay performance and to reduce the number of DNS messages ricocheting around the internet.
-In a query chain, when a DNS server receives a DNS reply (containing, for example, a mapping from a hostname to an IP 
-address), it can cache the mapping in its local memory.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3️⃣-dns-records-and-messages&quot;&gt;3️⃣ DNS Records and Messages&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Resource Records (RRs)&lt;/strong&gt;: Provide hostname-to-IP address mappings.
-    &lt;ul&gt;
-      &lt;li&gt;four-tuple that contains the following fields: (&lt;em&gt;Name&lt;/em&gt;, &lt;em&gt;Value&lt;/em&gt;, &lt;em&gt;Type&lt;/em&gt;, &lt;em&gt;TTL&lt;/em&gt;)
-        &lt;ul&gt;
-          &lt;li&gt;&lt;em&gt;TTL&lt;/em&gt; is the time to live of the resource record&lt;/li&gt;
-          &lt;li&gt;The meaning of &lt;em&gt;Name&lt;/em&gt; and &lt;em&gt;Value&lt;/em&gt; depend on &lt;em&gt;Type&lt;/em&gt;:
-            &lt;ul&gt;
-              &lt;li&gt;If &lt;em&gt;Type=A&lt;/em&gt;, then &lt;em&gt;Name&lt;/em&gt; is a hostname and &lt;em&gt;Value&lt;/em&gt; is the IP address for the hostname.&lt;/li&gt;
-              &lt;li&gt;If &lt;em&gt;Type=NS&lt;/em&gt;, then &lt;em&gt;Name&lt;/em&gt; is a domain (such as &lt;em&gt;foo.com&lt;/em&gt;) and &lt;em&gt;Value&lt;/em&gt; is the hostname of an authoritative DNS 
-server that knows how to obtain the IP addresses for hosts in the domain. This record is used to route DNS queries 
-further along in the query chain.&lt;/li&gt;
-              &lt;li&gt;If &lt;em&gt;Type=CNAME&lt;/em&gt;, then &lt;em&gt;Value&lt;/em&gt; is canonical hostname for the alias hostname &lt;em&gt;Name&lt;/em&gt;. This record can provide 
-querying hosts the canonical name for a hostname.&lt;/li&gt;
-              &lt;li&gt;If &lt;em&gt;Type=MX&lt;/em&gt;, then &lt;em&gt;Value&lt;/em&gt; is the canonical name of a mail server that has an alias hostname &lt;em&gt;Name&lt;/em&gt;. MX records
-allow the hostnames of mail servers to have simple aliases. Note that by using the MX record, a company can have the
-same aliased name for its mail server and for one of its other servers (such as its Web server). To obtain the canonical
-name for the mail server, a DNS client would query for an MX record’ to obtain the canonical came for the other server,
-the DNS client would query for the CNAME record.&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;dns-messages&quot;&gt;DNS Messages&lt;/h3&gt;
-&lt;p&gt;There are two kinds of DNS messages: &lt;strong&gt;DNS query&lt;/strong&gt; and &lt;strong&gt;DNS reply messages&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/03/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The semantics of the various fields in a DNS message are as follows:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The first 12 bytes is the &lt;em&gt;header section&lt;/em&gt;, which has a number of fields. The first field is a 16-bit number that
-identifies the query. There are a number of flags in the flag field. A 1-bit query/reply flag indicates whether the 
-message is a query (0) or reply (1).&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;question section&lt;/em&gt; contains information about the query that is being made. This section includes a name field
-that contains the name that is being queried, and a type field that indicates the type of question being asked about the
-name.&lt;/li&gt;
-  &lt;li&gt;In a reply from a DNS server, the &lt;em&gt;answer section&lt;/em&gt; contains the resource records for the name that was originally 
-queried. A reply can have multiple IP RRs in the answer, since a hostname can have multiple IP addresses.&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;authority section&lt;/em&gt; contains records of other authoritative servers.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The &lt;em&gt;additional section&lt;/em&gt; contains other helpful records. The additional section contains a Type A record providing the
-IP address for the canonical hostname of the mail server.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;nslookup program&lt;/strong&gt;: Sends DNS query message directly from the host you’re working on.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;inserting-records-into-the-dns-database&quot;&gt;Inserting Records into the DNS Database&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;registrar&lt;/strong&gt;: A commercial entity that verifies the uniqueness of the domain name, enters the domain name into the 
-DNS database, and collects a small fee from you for its services.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Hostname: Identifier for a host, such as www.google.com. IP addresses: Identifier consists of four bytes and has a rigid hierarchical structure.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Intelligent Information Systems - Data Analysis using Numpy and Pandas</title>
-      <link href="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas" rel="alternate" type="text/html" title="Intelligent Information Systems - Data Analysis using Numpy and Pandas" />
-      <published>2022-10-02T19:30:00+09:00</published>
-      <updated>2022-10-02T19:30:00+09:00</updated>
-      <id>/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas</id>
-      <content type="html" xml:base="/Intelligent_Information_Systems-Data_Analysis_using_Numpy_and_Pandas">&lt;h2 id=&quot;python-libraries-for-data-analysis&quot;&gt;Python Libraries for Data Analysis&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Matplotlib&lt;/li&gt;
-  &lt;li&gt;Numpy&lt;/li&gt;
-  &lt;li&gt;Pandas&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;what-is-numpy&quot;&gt;What is Numpy?&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Numpy&lt;/strong&gt; is a library that is used for handling numerical data. Numpy is useful for handling large quantity of data.&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;what-is-pandas&quot;&gt;What is Pandas&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Pandas&lt;/strong&gt; is a library for a little more complicated data analysis. Pandas is numpy based, but it can handle csv, json,
-and other types of data&lt;/p&gt;
-
-&lt;p&gt;Two types of data in pandas&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Series&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Table with one column&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;DataFrame&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Table with multiple column&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Python Libraries for Data Analysis Matplotlib Numpy Pandas</summary>
       
 
       

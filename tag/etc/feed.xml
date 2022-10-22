@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-17T11:05:05+09:00</updated>
+  <updated>2022-10-22T15:45:34+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,217 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Timeline</title>
+      <link href="/Unreal_Engine-Timeline" rel="alternate" type="text/html" title="Unreal Engine - Timeline" />
+      <published>2022-10-18T01:30:00+09:00</published>
+      <updated>2022-10-18T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Timeline</id>
+      <content type="html" xml:base="/Unreal_Engine-Timeline">&lt;h2 id=&quot;timeline&quot;&gt;Timeline&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set a specific time and repeat a certain movement
+    &lt;ul&gt;
+      &lt;li&gt;E.g. At 5 sec move upwards and open a door, etc.&lt;/li&gt;
+      &lt;li&gt;Express this in timeline
+        &lt;ul&gt;
+          &lt;li&gt;Timeline is a event that occurs in a time sequence&lt;/li&gt;
+          &lt;li&gt;Parallel axis is time axis&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline
+    &lt;ul&gt;
+      &lt;li&gt;Timeline is a change in value which occurs in time
+        &lt;ul&gt;
+          &lt;li&gt;X-axis is time and Y-axis is value&lt;/li&gt;
+          &lt;li&gt;“Value” = “Track”&lt;/li&gt;
+          &lt;li&gt;Track Category: float, vector, color, event&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Curve Input: Input keys to express a curve
+        &lt;ul&gt;
+          &lt;li&gt;Key = (time, value)&lt;/li&gt;
+          &lt;li&gt;Adding key: shift + click&lt;/li&gt;
+          &lt;li&gt;Interpolation between keys create a curve&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;timeline-example&quot;&gt;Timeline Example&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Actors spin example
+    &lt;ul&gt;
+      &lt;li&gt;Actor should spin
+        &lt;ul&gt;
+          &lt;li&gt;It should spin every second&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Create timeline: Float Track
+        &lt;ul&gt;
+          &lt;li&gt;1 spin / 1 sec = Change the float value from 0 to 360 every second in the timeline&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Timeline Node Output Pin
+        &lt;ul&gt;
+          &lt;li&gt;Update Output Pin: Continuous execution during the timeline&lt;/li&gt;
+          &lt;li&gt;Finished Output Pin: End when timeline finishes&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Rotate Implementation (Connect update pin)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Make&lt;/strong&gt; Rotator: Make a structure from rotator 3 float values(Roll, Pitch, Yaw)
+            &lt;ul&gt;
+              &lt;li&gt;Opposite function: &lt;strong&gt;Break&lt;/strong&gt; Rotator [&lt;strong&gt;Make&lt;/strong&gt; and &lt;strong&gt;Break&lt;/strong&gt;]&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;SetRelativeRotation: Set rotation relative to the parent component&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;key-interpolation&quot;&gt;Key Interpolation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lerp
+    &lt;ul&gt;
+      &lt;li&gt;Linear Interpolation
+        &lt;ul&gt;
+          &lt;li&gt;Linear interpolation between two values&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Lerp Interpolation Function
+        &lt;ul&gt;
+          &lt;li&gt;Lerp(A, B, α) = A * (1 - α) + B * α = A + (B - A) * α&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Key Interpolation
+    &lt;ul&gt;
+      &lt;li&gt;Linear&lt;/li&gt;
+      &lt;li&gt;Automatic&lt;/li&gt;
+      &lt;li&gt;Ease In / Ease Out
+        &lt;ul&gt;
+          &lt;li&gt;Smooth animation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;timeline-reverse-function&quot;&gt;Timeline Reverse Function&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Timeline input pin
+    &lt;ul&gt;
+      &lt;li&gt;Play input pin&lt;/li&gt;
+      &lt;li&gt;Reverse input pin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline output pin
+    &lt;ul&gt;
+      &lt;li&gt;Direction output pin
+        &lt;ul&gt;
+          &lt;li&gt;Play direction data of current timeline&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;ETimelineDirection&lt;/strong&gt; value&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sliding-door&quot;&gt;Sliding Door&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;2 Door with a rail
+    &lt;ul&gt;
+      &lt;li&gt;Push to door forward and make it move left or right&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DoorLeft and DoorRight movement
+    &lt;ul&gt;
+      &lt;li&gt;Move -100 in x-axis for a second
+        &lt;ul&gt;
+          &lt;li&gt;(0, -50, 0), (0, 50, 0) -&amp;gt; (-100, -50, 0), (-100, 50, 0)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Next move +-100 in y-axis for a second
+        &lt;ul&gt;
+          &lt;li&gt;(-100, -50, 0), (-100, 50, 0) -&amp;gt; (-100, -150, 0), (-100, 150, 0)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sliding-door-implementation&quot;&gt;Sliding Door Implementation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Arrow Component
+    &lt;ul&gt;
+      &lt;li&gt;Visible in editor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Timeline
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Float track&lt;/strong&gt; cannot express linear interpolation -&amp;gt; Use &lt;strong&gt;Vector track&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Timeline implementation (DoorRight)
+        &lt;ul&gt;
+          &lt;li&gt;Move -100 in x-axis for a second&lt;/li&gt;
+          &lt;li&gt;Next, move +100 in y-axis for a second&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Movement
+        &lt;ul&gt;
+          &lt;li&gt;SetRelativeLocation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Timeline Set a specific time and repeat a certain movement E.g. At 5 sec move upwards and open a door, etc. Express this in timeline Timeline is a event that occurs in a time sequence Parallel axis is time axis Timeline Timeline is a change in value which occurs in time X-axis is time and Y-axis is value “Value” = “Track” Track Category: float, vector, color, event Curve Input: Input keys to express a curve Key = (time, value) Adding key: shift + click Interpolation between keys create a curve</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Pure Function and Type Cast</title>
@@ -1095,91 +1306,6 @@ all of its student to make a software program.&lt;/p&gt;
 
       
         <summary type="html">Concept of Class</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Asset</title>
-      <link href="/Unreal_Engine-Asset" rel="alternate" type="text/html" title="Unreal Engine - Asset" />
-      <published>2022-09-15T19:30:00+09:00</published>
-      <updated>2022-09-15T19:30:00+09:00</updated>
-      <id>/Unreal_Engine-Asset</id>
-      <content type="html" xml:base="/Unreal_Engine-Asset">&lt;h2 id=&quot;making-mesh&quot;&gt;Making Mesh&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;You can make mesh using &lt;a href=&quot;https://www.blender.org/support/tutorials/&quot; target=&quot;_blank&quot;&gt;blender&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/14/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;importing-mesh&quot;&gt;Importing Mesh&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Import: Unreal Engine reads the format that is externally created
-    &lt;ul&gt;
-      &lt;li&gt;You must import the asset to the &lt;strong&gt;Content Browser&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;collision-volume&quot;&gt;Collision Volume&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;There are 2 types of collision volume
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Simple Collision&lt;/strong&gt; volume
-        &lt;ul&gt;
-          &lt;li&gt;box, sphere, capsule, and primitive like convex hull&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Complex Collision&lt;/strong&gt; volume
-        &lt;ul&gt;
-          &lt;li&gt;trimesh&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to request collision test within Unreal Engine using &lt;strong&gt;PhysX&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;simple query: request simple collision test&lt;/li&gt;
-      &lt;li&gt;complex query: request complex collision test&lt;/li&gt;
-      &lt;li&gt;default action: simple query for simple collision and complex query for complex collision&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/14/screenshot-2.jpeg&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Making Mesh</summary>
       
 
       

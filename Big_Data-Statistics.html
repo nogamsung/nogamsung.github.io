@@ -518,7 +518,7 @@ by computing the probability of one of many events occurring.</li>
 
 <h3 id="covariance">Covariance</h3>
 
-<p><img src="https://latex.codecogs.com/svg.image?Cov(f(x),g(y))&space;=&space;\mathbb{E}[(f(x)]&space;-&space;\mathbb{E}[f(x)])(g(y)&space;-&space;\mathbb{E}[g(y)])" alt="" /></p>
+<p><img src="https://latex.codecogs.com/svg.image?Cov[f(x),g(y)]=\mathbb{E}[(f(x)]&space;-&space;\mathbb{E}[f(x)])(g(y)&space;-&space;\mathbb{E}[g(y)])" alt="" /></p>
 
 <h4 id="note-️-2">Note ❗️</h4>
 <p>Covariance can be negative</p>
@@ -579,6 +579,85 @@ by computing the probability of one of many events occurring.</li>
 
 <h2 id="distribution--information-theory">Distribution &amp; Information Theory</h2>
 <h3 id="bernoulli-distribution">Bernoulli Distribution</h3>
+<ul>
+  <li>PDF</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?P(x&space;=&space;1)&space;=&space;\phi&space;&space;" alt="" /></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?P(x&space;=&space;0)&space;=&space;1&space;-&space;\phi&space;&space;" alt="" /></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?P(\textrm{x}&space;=&space;x)&space;=&space;1&space;-&space;\phi^x(1-\phi)^{1-x}" alt="" /></p>
+
+<ul>
+  <li>Expectation</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\mathbb{E}_x[x]=\phi&space;" alt="" /></p>
+
+<ul>
+  <li>Variance</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?Var_x(x)&space;=&space;\phi&space;(1-\phi)" alt="" /></p>
+
+<h3 id="gaussian-distribution">Gaussian Distribution</h3>
+<ul>
+  <li>Parameterized by variance:
+    <ul>
+      <li>E[x] = μ, Var[x] = σ<sup>2</sup></li>
+    </ul>
+  </li>
+</ul>
+
+<p>![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;space;,&amp;space;\sigma^{-1})&amp;space;=&amp;space;\sqrt{\frac{1}{2\pi&amp;space;\sigma^2}}exp(-\frac{1}{2\sigma^2}(x-\mu)^2)</p>
+
+<ul>
+  <li>Parameterized by precision:</li>
+</ul>
+
+<p>![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;space;,&amp;space;\beta&amp;space;^{-1})&amp;space;=&amp;space;\sqrt{\frac{\beta}{2\pi}}exp(-\frac{1}{2}\beta(x-\mu)^2)</p>
+
+<h3 id="gaussian-distribution-1">Gaussian Distribution</h3>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-12.jpeg" alt="" /></p>
+
+<h3 id="theorems-related-to-gaussian-distribution">Theorems related to Gaussian Distribution</h3>
+<ul>
+  <li><strong>Central limit theorem</strong>: the sum of many independent random variables is approximately normally distributed</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\frac{\sqrt{n}}{\sigma}(\overline{X_n}&space;-&space;\mu)&space;\to&space;N(0,1)" alt="" /> 
+as 
+<img src="https://latex.codecogs.com/svg.image?n&space;\to&space;\infty" alt="" /></p>
+
+<ul>
+  <li><strong>Law of large numbers</strong>: the sample average converges to the expectation as the sample size goes to infinity</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\overline{X_n}&space;\to&space;\mu" alt="" /> 
+as 
+<img src="https://latex.codecogs.com/svg.image?n&space;\to&space;\infty&space;" alt="" />
+, where 
+<img src="https://latex.codecogs.com/svg.image?\overline{X_n}&space;=&space;\frac{1}{n}(X_1&space;&plus;&space;X_2&space;&plus;&space;\cdots&space;&space;&plus;&space;X_n)" alt="" /></p>
+
+<h3 id="multivariate-gaussian">Multivariate Gaussian</h3>
+<ul>
+  <li>Parameterized by covariance matrix</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&space;=&space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp(-\frac{1}{2}(x-\mu)^\top&space;\sum&space;^{-1}(x-\mu))}" alt="" /></p>
+
+<ul>
+  <li>μ is a vector</li>
+  <li>∑ is a covariance matrix</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-13.jpeg" alt="" /></p>
+
+<ul>
+  <li>Parameterized by precision matrix</li>
+</ul>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -695,8 +774,40 @@ by computing the probability of one of many events occurring.</li>
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Crawling">Intelligent Information Systems - Crawling</a></li>
+                         <li><a href="/Computer_Network-Multiplexing_and_Demultiplexing">Computer Network - Multiplexing and Demultiplexing</a></li>
                             
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-Introduction_and_Transport-Layer_Services">Computer Network - Introduction and Transport-Layer Services</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Graph_Mining">Big Data - Graph Mining</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -709,16 +820,14 @@ by computing the probability of one of many events occurring.</li>
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Web_Basics">Intelligent Information Systems - Web Basics</a></li>
-                            
+                        
                             
                             
                             
                         
                         
                         
-                         <li><a href="/Computer_Network-Video_Streaming_and_Content_Distribution_Networks">Computer Network - Video Streaming and Content Distribution Networks</a></li>
-                            
+                        
                             
                             
                             
@@ -972,7 +1081,7 @@ by computing the probability of one of many events occurring.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 26 posts →
+                        See all 30 posts →
                         
                     </a>
                 </footer>

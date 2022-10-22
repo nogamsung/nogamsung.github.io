@@ -4,9 +4,89 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Computer_Network-Multiplexing_and_Demultiplexing.html</loc>
+        
+        <lastmod>2022-10-21T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Unreal_Engine-Timeline.html</loc>
+        
+        <lastmod>2022-10-18T01:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Introduction_and_Transport-Layer_Services.html</loc>
+        
+        <lastmod>2022-10-17T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Big_Data-Graph_Mining.html</loc>
+        
+        <lastmod>2022-10-17T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Intelligent_Information_Systems-Crawling.html</loc>
         
         <lastmod>2022-10-16T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Socket_Programming.html</loc>
+        
+        <lastmod>2022-10-14T00:00:00+09:00</lastmod>
         
 
         

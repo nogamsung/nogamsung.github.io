@@ -291,6 +291,26 @@ condition by measuring delay and loss performance between their clusters and cli
 
 <h2 id="3️⃣-case-studies-netflix-and-youtube">3️⃣ Case Studies: Netflix and YouTube</h2>
 <h3 id="netflix">Netflix</h3>
+<p>Amazon cloud handles the following critical functions:</p>
+<ul>
+  <li><strong>Content ingestion</strong>: Before Netflix can distribute a movie to its customers, it must first ingest and process the
+movie. Netflix receives studio master versions of movies and upload them to hosts in the Amazon cloud.</li>
+  <li><strong>Content processing</strong>: The machines in the Amazon cloud create many different formats for each movie, suitable for a
+diverse array of client video players running on desktop computers, smartphones, and game consoles connected to
+televisions. A different version is created for each of these formats and at multiple bit rates, allowing for adaptive
+streaming over HTTP using DASH</li>
+  <li><strong>Uploading versions to its CDN</strong>: Once all of the versions of a movie have been created, the hosts in the Amazon
+cloud upload the versions to its CDN</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/06/screenshot-2.jpeg" alt="" /></p>
+
+<h3 id="youtube">YouTube</h3>
+<p>YouTube employs HTTP streaming, often making a small number of different versions available for a video, eac with a
+different bit rate and corresponding quality level. YouTube does not employ adaptive streaming (such as DASH), but
+instead requires the user to manually select a version. In order to save bandwidth and server resources that would be
+wasted by repositioning or early termination, YouTube uses the HTTP byte range request to limit the flow of transmitted
+data after a target amount of video is prefetched.</p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -407,7 +427,7 @@ condition by measuring delay and loss performance between their clusters and cli
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Crawling">Intelligent Information Systems - Crawling</a></li>
+                         <li><a href="/Computer_Network-Multiplexing_and_Demultiplexing">Computer Network - Multiplexing and Demultiplexing</a></li>
                             
                             
                             
@@ -417,7 +437,7 @@ condition by measuring delay and loss performance between their clusters and cli
                         
                         
                         
-                         <li><a href="/Big_Data-Statistics">Big Data - Statistics</a></li>
+                         <li><a href="/Computer_Network-Introduction_and_Transport-Layer_Services">Computer Network - Introduction and Transport-Layer Services</a></li>
                             
                             
                             
@@ -425,8 +445,38 @@ condition by measuring delay and loss performance between their clusters and cli
                         
                         
                         
-                         <li><a href="/Intelligent_Information_Systems-Web_Basics">Intelligent Information Systems - Web Basics</a></li>
+                         <li><a href="/Big_Data-Graph_Mining">Big Data - Graph Mining</a></li>
                             
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -684,7 +734,7 @@ condition by measuring delay and loss performance between their clusters and cli
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 26 posts →
+                        See all 30 posts →
                         
                     </a>
                 </footer>
