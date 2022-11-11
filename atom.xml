@@ -8,6 +8,112 @@
     
       
       <item>
+        <title>Intelligent Information Systems - Selenium</title>
+        
+          <description>&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Wed, 09 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information-Selenium</link>
+        <guid isPermaLink="true">/Intelligent_Information-Selenium</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Unreal Engine - Physics Engine</title>
+        
+          <description>&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ways to move an object in the game world
+    &lt;ul&gt;
+      &lt;li&gt;Change coordinates every frame: Use Tick event node to change to location&lt;/li&gt;
+      &lt;li&gt;Use timeline&lt;/li&gt;
+      &lt;li&gt;Use movement component: Add movement component in an actor or a character&lt;/li&gt;
+      &lt;li&gt;Use physics engine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ways to use physics engine
+    &lt;ul&gt;
+      &lt;li&gt;cons: Many parts are unpredictable&lt;/li&gt;
+      &lt;li&gt;pros: Not many tasks are required compared to other methods
+        &lt;ul&gt;
+          &lt;li&gt;If level gets big, it is impossible to work with it, so you will be forced to use physics engine&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 01 Nov 2022 01:30:00 +0900</pubDate>
+        <link>
+        /Unreal_Engine-Physics_Engine</link>
+        <guid isPermaLink="true">/Unreal_Engine-Physics_Engine</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Principles of Reliable Data Transfer</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 31 Oct 2022 20:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Principles_of_Reliable_Data_Transfer</link>
+        <guid isPermaLink="true">/Computer_Network-Principles_of_Reliable_Data_Transfer</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Connectionless Transport UDP</title>
+        
+          <description>&lt;h4 id=&quot;why-choose-udp-over-tcp&quot;&gt;Why choose UDP over TCP&lt;/h4&gt;
+
+</description>
+        
+        <pubDate>Mon, 31 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Connectionless_Transport_UDP</link>
+        <guid isPermaLink="true">/Computer_Network-Connectionless_Transport_UDP</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intelligent Information Systems - Crawling Data</title>
+        
+          <description>&lt;h3 id=&quot;deliver-date-value-to-url&quot;&gt;Deliver Date Value to URL&lt;/h3&gt;
+&lt;h4 id=&quot;search-movie-information-for-100-days-after-2020-07-01&quot;&gt;Search movie information for 100 days after 2020-07-01&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make search target url&lt;/li&gt;
+  &lt;li&gt;HTML document parsing&lt;/li&gt;
+  &lt;li&gt;Extract target tag value&lt;/li&gt;
+  &lt;li&gt;Save extracted value into a list&lt;/li&gt;
+  &lt;li&gt;Data processing&lt;/li&gt;
+  &lt;li&gt;Save date&lt;/li&gt;
+  &lt;li&gt;Test by increasing the period from 1 to 2&lt;/li&gt;
+  &lt;li&gt;Increase periods to 100&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        
+        <pubDate>Sun, 30 Oct 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information-Crawling_Data</link>
+        <guid isPermaLink="true">/Intelligent_Information-Crawling_Data</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Computer Network - Multiplexing and Demultiplexing</title>
         
           <description>&lt;ul&gt;
@@ -348,7 +454,7 @@ the base stations.&lt;/li&gt;
     
       
       <item>
-        <title>Computer Network - DNS - The Internet's Directory Service</title>
+        <title>Computer Network - DNS - The Internet&apos;s Directory Service</title>
         
           <description>&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Hostname&lt;/strong&gt;: Identifier for a host, such as &lt;em&gt;www.google.com&lt;/em&gt;.&lt;/li&gt;
@@ -388,7 +494,7 @@ the base stations.&lt;/li&gt;
       <item>
         <title>Computer Network - Electronic Mail in the Internet</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/09/29/screenshot-1.jpeg&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 </description>
         
@@ -709,7 +815,7 @@ the base stations.&lt;/li&gt;
       <item>
         <title>Computer Network - The Network Core</title>
         
-          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/09/12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+          <description>&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/09/12/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 </description>
         

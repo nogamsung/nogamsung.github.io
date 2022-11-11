@@ -646,7 +646,7 @@ as
   <li>Parameterized by covariance matrix</li>
 </ul>
 
-<p><img src="https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&space;=&space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp(-\frac{1}{2}(x-\mu)^\top&space;\sum&space;^{-1}(x-\mu))}" alt="" /></p>
+<p><img src="https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&space;=&space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp-\frac{1}{2}(x-\mu)^\top&space;\sum&space;^{-1}(x-\mu)" alt="" /></p>
 
 <ul>
   <li>μ is a vector</li>
@@ -658,6 +658,142 @@ as
 <ul>
   <li>Parameterized by precision matrix</li>
 </ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?N(x;\mu,&space;\beta^{-1})=\sqrt{\frac{det(\beta)}{(2\pi)^n}}exp-\frac{1}{2}(x-\mu)^\tau\beta(x-\mu)" alt="" /></p>
+
+<h3 id="information-theory">Information Theory</h3>
+<ul>
+  <li>Information theory: quantifying how much information is present in a signal</li>
+  <li>Learning that an unlikely event has occurred is more informative than learning that a likely event has occurred</li>
+  <li>Self-Information of x
+    <ul>
+      <li>I(<em>x</em>) = -logP(<em>x</em>)</li>
+      <li>Intuition: minimum # of bits to express (encode) an event with probability P(<em>x</em>)</li>
+      <li>Rare event has a large information content</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="entropy">Entropy</h4>
+<ul>
+  <li>Entropy: expectation of self-information
+    <ul>
+      <li>Minimum expected # of bits to express a distribution</li>
+      <li>For Bernoulli variable,
+        <ul>
+          <li>H(<em>x</em>) = -<em>p</em> log <em>p</em> - (1 - <em>p</em>) log(1 - <em>p</em>)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-14.jpeg" alt="" /></p>
+
+<h3 id="kl-divergence">KL Divergence</h3>
+<ul>
+  <li>Measure the difference of two distributions P(<em>x</em>) and Q(<em>x</em>)</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?D_{KL}(P&space;\parallel&space;Q)&space;=&space;\mathbb{E}_{x&space;\sim&space;P}[log\frac{P(x)}{Q(x)}]&space;=&space;\mathbb{E}_{x&space;\sim&space;P}[logP(x)&space;-&space;log&space;Q(x)]" alt="" /></p>
+
+<ul>
+  <li>Properties
+    <ul>
+      <li>Always non-negative: 0 if and only if P and Q are the same
+        <ul>
+          <li>Intuition: If x ~ P, the best (minimal) encoding is given by assigning log P(<em>x</em>) bits for each <em>x</em></li>
+        </ul>
+      </li>
+      <li>Not symmetric:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?D_{KL}(P&space;\parallel&space;Q)&space;\neq&space;D_{KL}(Q&space;\parallel&space;P)" alt="" /></p>
+
+<h3 id="cross-entropy">Cross-Entropy</h3>
+<ul>
+  <li>Average # of bits needed to identify an event from the true distribution P, if we use a coding scheme optimized for 
+unnatural distribution Q</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>H(P, Q) = H(P) + D<sub>KL</sub>(P</td>
+          <td> </td>
+          <td>Q) = -E<sub>x~P</sub> log Q(x)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Minimizing the cross-entropy w.r.t. Q is equivalent to minimizing the KL divergence</li>
+</ul>
+
+<h3 id="intermediate-summary">Intermediate Summary</h3>
+<ul>
+  <li>“Remember” the key terminology / concepts that popularly used in Statistics
+    <ul>
+      <li>Population, Sample, Descriptive, Inferential, Parameters, Statistics, …</li>
+      <li>Mean, Median, Mode, Range/Quartile, Standard Dev.</li>
+      <li>Probability, Expectation, Covariance</li>
+      <li>Distributions</li>
+      <li>Self-Information, Entropy, KL-Divergence, Cross-Entropy</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="association-between-distributions">Association between Distributions</h2>
+<h3 id="pearson-correlation-coefficient">Pearson Correlation Coefficient</h3>
+<ul>
+  <li>A measure of the strength of the linear relation between two variables x and y</li>
+  <li>1 is total positive correlation, 0 is no correlation, and -1 is total negative correlation</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?r&space;=&space;\frac{\sum_{n}^{i=1}(X_i&space;-&space;\overline{X})(Y_i&space;-&space;\overline{Y})}{\sqrt{\sum_{i=1}^{n}(X_i&space;-&space;\overline{X})^2}\sqrt{\sum_{i=1}^{n}(Y_i&space;-&space;\overline{Y})^2}}" alt="" /></p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs1</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs6</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">stats</span><span class="p">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">rvs1</span><span class="p">,</span> <span class="n">rvs6</span><span class="p">)</span>
+<span class="p">(</span><span class="o">-</span><span class="mf">0.028991426987572115</span><span class="p">,</span> <span class="mf">0.5177734067731351</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="spearmans-correlation">Spearman’s correlation</h3>
+<ul>
+  <li>Pearson’s correlation assumes “normality of the distributions” being compared</li>
+  <li>The Spearman correlation is a non-parametic measure of the monotonicity of the relationship between two datasets</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs1</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs6</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">stats</span><span class="p">.</span><span class="n">spearmanr</span><span class="p">(</span><span class="n">rvs1</span><span class="p">,</span> <span class="n">rvs6</span><span class="p">)</span>
+<span class="p">(</span><span class="o">-</span><span class="mf">0.045163188652754614</span><span class="p">,</span> <span class="mf">0.31351864108864802</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="kendalls-tau">Kendall’s Tau</h3>
+<ul>
+  <li>A measure of the correspondence between two rankings</li>
+  <li>Close to 1 if strong agreement, -1 indicates strong disagreement</li>
+</ul>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs1</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rvs6</span> <span class="o">=</span> <span class="n">stats</span><span class="p">.</span><span class="n">norm</span><span class="p">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">stats</span><span class="p">.</span><span class="n">kendalltau</span><span class="p">(</span><span class="n">rvs1</span><span class="p">,</span> <span class="n">rvs6</span><span class="p">)</span>
+<span class="p">(</span><span class="o">-</span><span class="mf">0.0319198396793587</span><span class="p">,</span> <span class="mf">0.28602201432226193</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>What if two sets have different elements?
+    <ul>
+      <li>Or, what if two sets have different # elements?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="hypothesis-testing">Hypothesis Testing</h2>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -774,7 +910,7 @@ as
                         
                         
                         
-                         <li><a href="/Computer_Network-Multiplexing_and_Demultiplexing">Computer Network - Multiplexing and Demultiplexing</a></li>
+                         <li><a href="/Intelligent_Information-Selenium">Intelligent Information Systems - Selenium</a></li>
                             
                             
                             
@@ -784,7 +920,7 @@ as
                         
                         
                         
-                         <li><a href="/Computer_Network-Introduction_and_Transport-Layer_Services">Computer Network - Introduction and Transport-Layer Services</a></li>
+                         <li><a href="/Computer_Network-Principles_of_Reliable_Data_Transfer">Computer Network - Principles of Reliable Data Transfer</a></li>
                             
                             
                             
@@ -792,8 +928,38 @@ as
                         
                         
                         
-                         <li><a href="/Big_Data-Graph_Mining">Big Data - Graph Mining</a></li>
+                         <li><a href="/Computer_Network-Connectionless_Transport_UDP">Computer Network - Connectionless Transport UDP</a></li>
                             
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -1081,7 +1247,7 @@ as
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 30 posts →
+                        See all 34 posts →
                         
                     </a>
                 </footer>

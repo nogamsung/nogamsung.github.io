@@ -1,4 +1,501 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-10-22T15:45:34+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - Multiplexing and Demultiplexing</title><link href="/Computer_Network-Multiplexing_and_Demultiplexing" rel="alternate" type="text/html" title="Computer Network - Multiplexing and Demultiplexing" /><published>2022-10-21T00:00:00+09:00</published><updated>2022-10-21T00:00:00+09:00</updated><id>/Computer_Network-Multiplexing_and_Demultiplexing</id><content type="html" xml:base="/Computer_Network-Multiplexing_and_Demultiplexing">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-11T13:35:03+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.chrome.options&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_experimental_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;prefs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;download.default_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/Users/gs97ahn/Development/jupyter-notebook-workspace/Excercises/Week10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/Users/gs97ahn/Development/jupyter-notebook-workspace/Excercises/chromedriver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;main_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://www.opinet.co.kr/user/main/mainView.do&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.opinet.co.kr/searRgSelect.do&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;sigungu_xpath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;SIGUNGU_NM0&quot;]&apos;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gu_list_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigungu_xpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gu_list_raw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;tag name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;option&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;install-all-location-data-in-excel&quot;&gt;Install all location data in excel&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm.notebook&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;gu_xpath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;SIGUNGU_NM0&quot;]&apos;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gu_xpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;search_button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;searRgSelect&quot;]&apos;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;save_excel_button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;glopopd_excel&quot;]&apos;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;save_excel_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;read-excel-data&quot;&gt;Read excel data&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;glob&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;station_files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;지역*.xls&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;station_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_excel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;stations&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;exception-handling&quot;&gt;Exception Handling&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;가격 != &apos;-&apos;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Get all the location</summary></entry><entry><title type="html">Unreal Engine - Physics Engine</title><link href="/Unreal_Engine-Physics_Engine" rel="alternate" type="text/html" title="Unreal Engine - Physics Engine" /><published>2022-11-01T01:30:00+09:00</published><updated>2022-11-01T01:30:00+09:00</updated><id>/Unreal_Engine-Physics_Engine</id><content type="html" xml:base="/Unreal_Engine-Physics_Engine">&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ways to move an object in the game world
+    &lt;ul&gt;
+      &lt;li&gt;Change coordinates every frame: Use Tick event node to change to location&lt;/li&gt;
+      &lt;li&gt;Use timeline&lt;/li&gt;
+      &lt;li&gt;Use movement component: Add movement component in an actor or a character&lt;/li&gt;
+      &lt;li&gt;Use physics engine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ways to use physics engine
+    &lt;ul&gt;
+      &lt;li&gt;cons: Many parts are unpredictable&lt;/li&gt;
+      &lt;li&gt;pros: Not many tasks are required compared to other methods
+        &lt;ul&gt;
+          &lt;li&gt;If level gets big, it is impossible to work with it, so you will be forced to use physics engine&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-necessity-of-physics-engine-in-the-game&quot;&gt;The Necessity of Physics Engine in the Game&lt;/h3&gt;
+&lt;p&gt;In the game, it is actually good to implement codes. However, it is very difficult to implement codes for all the
+physics acts. You must think whether it would be necessary to use physics engine simulation.&lt;/p&gt;
+
+&lt;h3 id=&quot;physics-engine-status&quot;&gt;Physics Engine Status&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;PhysX (PhysX SDK)
+        &lt;ul&gt;
+          &lt;li&gt;Owned by Nvidia (2008 ~ )&lt;/li&gt;
+          &lt;li&gt;PC/Console version is free, open source (2018 ~ )&lt;/li&gt;
+          &lt;li&gt;GPU acceleration function (rely on GPU)&lt;/li&gt;
+          &lt;li&gt;In Unreal engine and Unity&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Havok
+        &lt;ul&gt;
+          &lt;li&gt;Owned by Microsoft (2015 ~ )&lt;/li&gt;
+          &lt;li&gt;Respected and not an open source&lt;/li&gt;
+          &lt;li&gt;GPU acceleration is not used and uses CPU caculation instead (pros)&lt;/li&gt;
+          &lt;li&gt;Owns AI tool, animation tool, etc.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open Source Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;ODE (Open Dynamics Engine)&lt;/li&gt;
+      &lt;li&gt;Newton Game Dynamics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pros-and-cons-of-physics-engine&quot;&gt;Pros and Cons of Physics Engine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cons of Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;Low reproducibility&lt;/li&gt;
+      &lt;li&gt;Very low controllability&lt;/li&gt;
+      &lt;li&gt;Difficult for precise situation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reciprocity of game and physics engine
+    &lt;ul&gt;
+      &lt;li&gt;Game is about constructing entertainment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physics-engine-and-collision&quot;&gt;Physics Engine and Collision&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apply physics engine to actor
+    &lt;ul&gt;
+      &lt;li&gt;Suppose that an actor is a rigid body&lt;/li&gt;
+      &lt;li&gt;Physics engine is used on collision volume and not on mesh&lt;/li&gt;
+      &lt;li&gt;Actor mesh must have collision volume&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Physics application to collision volume
+    &lt;ul&gt;
+      &lt;li&gt;Collision volume should not be complicated&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ways-to-use-physics-engine&quot;&gt;Ways to use physics engine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physics engine application: Go through the following steps in the actor editor’s &lt;strong&gt;detail&lt;/strong&gt; tab
+    &lt;ul&gt;
+      &lt;li&gt;Activate &lt;strong&gt;Simulate Physics&lt;/strong&gt; in &lt;strong&gt;Physics&lt;/strong&gt; area
+        &lt;ul&gt;
+          &lt;li&gt;The &lt;strong&gt;mobility&lt;/strong&gt; property changes to &lt;strong&gt;movable&lt;/strong&gt; automatically&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;actors-physics-property&quot;&gt;Actor’s physics property&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Actor’s physics property
+    &lt;ul&gt;
+      &lt;li&gt;Start Awake&lt;/li&gt;
+      &lt;li&gt;Mass in Kg&lt;/li&gt;
+      &lt;li&gt;Enable Gravity&lt;/li&gt;
+      &lt;li&gt;Center of Mass Offset&lt;/li&gt;
+      &lt;li&gt;Etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-material&quot;&gt;Physical Material&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Value related to collision depends on the material&lt;/li&gt;
+  &lt;li&gt;Use an &lt;strong&gt;exclusive asset that can input a physics value&lt;/strong&gt;, instead of setting physics value every time&lt;/li&gt;
+  &lt;li&gt;Use the physical material to give physics value to similar material meshes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-materials-core-property&quot;&gt;Physical Material’s Core Property&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Friction
+    &lt;ul&gt;
+      &lt;li&gt;Friction coefficient: 0 (weak) ~ 1 (strong)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Friction Combine Mode
+    &lt;ul&gt;
+      &lt;li&gt;Friction occurs when two object make contact -&amp;gt; consider both friction property&lt;/li&gt;
+      &lt;li&gt;4 friction combine mode in UE
+        &lt;ul&gt;
+          &lt;li&gt;Average&lt;/li&gt;
+          &lt;li&gt;Multiply&lt;/li&gt;
+          &lt;li&gt;Max&lt;/li&gt;
+          &lt;li&gt;Min&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Restitution
+    &lt;ul&gt;
+      &lt;li&gt;Restitution coefficient: 0 (weak restitution) ~ 1 (strong restitution)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Density
+    &lt;ul&gt;
+      &lt;li&gt;Friction = Friction coefficient * Mass&lt;/li&gt;
+      &lt;li&gt;An object’s mass is very important in physics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Move an Object Ways to move an object in the game world Change coordinates every frame: Use Tick event node to change to location Use timeline Use movement component: Add movement component in an actor or a character Use physics engine Ways to use physics engine cons: Many parts are unpredictable pros: Not many tasks are required compared to other methods If level gets big, it is impossible to work with it, so you will be forced to use physics engine</summary></entry><entry><title type="html">Computer Network - Principles of Reliable Data Transfer</title><link href="/Computer_Network-Principles_of_Reliable_Data_Transfer" rel="alternate" type="text/html" title="Computer Network - Principles of Reliable Data Transfer" /><published>2022-10-31T20:00:00+09:00</published><updated>2022-10-31T20:00:00+09:00</updated><id>/Computer_Network-Principles_of_Reliable_Data_Transfer</id><content type="html" xml:base="/Computer_Network-Principles_of_Reliable_Data_Transfer">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer protocol&lt;/strong&gt;: Difficult since the layer below the reliable data transfer protocol may be
+unreliable.
+    &lt;ul&gt;
+      &lt;li&gt;E.g. TCP is a reliable data transfer protocol that is implemented on top of an unreliable (IP) end-to-end network
+layer.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unidirectional data transfer&lt;/strong&gt;: Data transfer from sending to the receiving side.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bidirectional data transfer&lt;/strong&gt;: Reliable full-duplex transfer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-building-a-reliable-data-transfer-protocol&quot;&gt;1️⃣ Building a Reliable Data Transfer Protocol&lt;/h2&gt;
+&lt;h3 id=&quot;reliable-data-transfer-over-a-perfectly-reliable-channel-rdt10&quot;&gt;Reliable Data Transfer over a Perfectly Reliable Channel: rdt1.0&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;finite-state machine (FSM)&lt;/strong&gt;: The operation of the rdt1.0 sender and receiver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;the-sending-side-of-rdt&quot;&gt;The sending side of rdt&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Accepts data from the upper layer via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send(data)&lt;/code&gt; event.&lt;/li&gt;
+  &lt;li&gt;Creates a packet containing the data (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make_pkt(data)&lt;/code&gt;) and send the packet into the channel.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In practice, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send(data)&lt;/code&gt; event would result from a procedure call (for example, to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send()&lt;/code&gt;) by the
+upper-layer application.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-receiving-side-of-rdt&quot;&gt;The receiving side of rdt&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Receives a packet from the underlying channel via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv(packet)&lt;/code&gt; event.&lt;/li&gt;
+  &lt;li&gt;Removes the data from the packet (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extract(pakcet, data)&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;Passes the data up to the upper layer (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deliver_data(data)&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In practice the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv(packet)&lt;/code&gt; event would result from a procedure call (for example, to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv()&lt;/code&gt;) from the lower-
+layer protocol.&lt;/p&gt;
+
+&lt;h3 id=&quot;reliable-data-transfer-over-a-channel-with-bit-errors-rdt20&quot;&gt;Reliable Data Transfer over a Channel with Bit Errors: rdt2.0&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Positive acknowledgements&lt;/strong&gt; and &lt;strong&gt;negative acknowledgements&lt;/strong&gt;: The message-dictation protocol that allow the 
+receiver to let the sender know what has been received correctly and what has been received in error and tus requires
+repeating.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ARQ (Automatic Repeat reQuest) protocols&lt;/strong&gt;: Reliable data transfer protocols based on such retransmission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Three additional protocol capabilities required in ARQ protocols to handle the presence of bit errors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Error detection&lt;/em&gt;. First, a mechanism is needed to allow the receiver to detect when bit error has occurred.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Receiver feedback&lt;/em&gt;. Since the sender and receiver are typically executing on different end systems, possibly
+separated by thousands of miles, the only way for the sender to learn of the receiver’s view of the world is for the
+receiver to provide explicit feedback to the sender.The positive (ACK) and negative (NAK) acknowledgement replies in the
+message-dictation scenario are examples of such feedback.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Retransmission&lt;/em&gt;. A packet that is received in error at the receiver will be retransmitted by the sender.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html"></summary></entry><entry><title type="html">Computer Network - Connectionless Transport UDP</title><link href="/Computer_Network-Connectionless_Transport_UDP" rel="alternate" type="text/html" title="Computer Network - Connectionless Transport UDP" /><published>2022-10-31T19:30:00+09:00</published><updated>2022-10-31T19:30:00+09:00</updated><id>/Computer_Network-Connectionless_Transport_UDP</id><content type="html" xml:base="/Computer_Network-Connectionless_Transport_UDP">&lt;h4 id=&quot;why-choose-udp-over-tcp&quot;&gt;Why choose UDP over TCP&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Finer application-level control over what data is sent, and when.&lt;/strong&gt; Under UDP, as soon as an application process 
+passes data to UDP, UDP will package the data inside a UDP segment and immediately pass the segment to the network 
+layer. TCP, however, has a congestion-control mechanism that throttles the transport-layer TCP sender when one or more 
+links between the source and destination hosts become excessively congested.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;No connection establishment.&lt;/strong&gt; TCP uses a three-way handshake before it starts to transfer data. UDP just blasts 
+away without any formal preliminaries. Thus, UDP does not introduce any delay to establish a connection.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;No connection state.&lt;/strong&gt; TCP maintains connection state in the end systems. This connection state includes receive and
+send buffers, congestion-control parameters, and sequence and acknowledgment number parameters. UDP, however, does not 
+maintain connection state and does not track any of these parameters. For this reason, a server devoted to a particular 
+application can typically support many more active clients when the application runs over UDP rather than TCP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Small packet header overhead.&lt;/strong&gt; The TCP segment has 20 bytes of header overhead in every segment, whereas UDP has
+only 8 bytes of overhead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1️⃣-udp-segment-structure&quot;&gt;1️⃣ UDP Segment Structure&lt;/h2&gt;
+&lt;p&gt;The application data occupies the data field of the UDP segment. For example, for DNS, the data field contains either a 
+query message or a response message. For a streaming audio application, audio samples fills the field. The UDP header 
+has only four fields, each consisting of two bytes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-udp-checksum&quot;&gt;2️⃣ UDP Checksum&lt;/h2&gt;
+&lt;p&gt;The UDP checksum provides for error detection. That is, the checksum is used to determine whether bits within the UDP 
+segment have been altered as it moved from source to destination. UDP at the sender side performs the 1s complement of 
+the sum of all the 16-bit words in the segment, with any overflow encountered during the sum being wrapped around.&lt;/p&gt;
+
+&lt;h4 id=&quot;three-16-bit-words-example&quot;&gt;Three 16-bit Words Example&lt;/h4&gt;
+
+&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
+0101 0101 0101 0101&lt;br /&gt;
+1000 1111 0000 1100&lt;/p&gt;
+
+&lt;p&gt;The sum of first two of these 16-bit words is&lt;/p&gt;
+
+&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
+0101 0101 0101 0101&lt;br /&gt;
+===================&lt;br /&gt;
+1011 1011 1011 0101&lt;/p&gt;
+
+&lt;p&gt;Adding the third word to the above sum gives&lt;/p&gt;
+
+&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
+1000 1111 0000 1100&lt;br /&gt;
+===================&lt;br /&gt;
+0100 1010 1100 0010&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;end-end principle&lt;/strong&gt;: States that since certain functionality (error detection, in this case) must be implemented on 
+an end-end basis: “functions placed at the lower levels may be redundant or of little value when compared to the cost of providing them at the higher level”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Why choose UDP over TCP</summary></entry><entry><title type="html">Intelligent Information Systems - Crawling Data</title><link href="/Intelligent_Information-Crawling_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Crawling Data" /><published>2022-10-30T19:30:00+09:00</published><updated>2022-10-30T19:30:00+09:00</updated><id>/Intelligent_Information-Crawling_Data</id><content type="html" xml:base="/Intelligent_Information-Crawling_Data">&lt;h3 id=&quot;deliver-date-value-to-url&quot;&gt;Deliver Date Value to URL&lt;/h3&gt;
+&lt;h4 id=&quot;search-movie-information-for-100-days-after-2020-07-01&quot;&gt;Search movie information for 100 days after 2020-07-01&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make search target url&lt;/li&gt;
+  &lt;li&gt;HTML document parsing&lt;/li&gt;
+  &lt;li&gt;Extract target tag value&lt;/li&gt;
+  &lt;li&gt;Save extracted value into a list&lt;/li&gt;
+  &lt;li&gt;Data processing&lt;/li&gt;
+  &lt;li&gt;Save date&lt;/li&gt;
+  &lt;li&gt;Test by increasing the period from 1 to 2&lt;/li&gt;
+  &lt;li&gt;Increase periods to 100&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;2020-07-01&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;periods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;D&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&amp;amp;date=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;%Y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;
+        
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;check-progress-status&quot;&gt;Check progress status&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use tqdm module instead of print()&lt;/li&gt;
+  &lt;li&gt;tqdm is &lt;strong&gt;t&lt;/strong&gt;a&lt;strong&gt;q&lt;/strong&gt;a&lt;strong&gt;d&lt;/strong&gt;u&lt;strong&gt;m&lt;/strong&gt; which is progress in Arabic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm.notebook&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# import tqdm module
+&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;2020-07-01&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;periods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;D&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# implement tqdm modlue
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&amp;amp;date=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;%Y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;make-data-into-a-table&quot;&gt;Make Data into a table&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;date&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;use-pivot_table&quot;&gt;Use pivot_table&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aggfunc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aggfunc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Deliver Date Value to URL Search movie information for 100 days after 2020-07-01 Make search target url HTML document parsing Extract target tag value Save extracted value into a list Data processing Save date Test by increasing the period from 1 to 2 Increase periods to 100</summary></entry><entry><title type="html">Computer Network - Multiplexing and Demultiplexing</title><link href="/Computer_Network-Multiplexing_and_Demultiplexing" rel="alternate" type="text/html" title="Computer Network - Multiplexing and Demultiplexing" /><published>2022-10-21T00:00:00+09:00</published><updated>2022-10-21T00:00:00+09:00</updated><id>/Computer_Network-Multiplexing_and_Demultiplexing</id><content type="html" xml:base="/Computer_Network-Multiplexing_and_Demultiplexing">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Demultiplexing&lt;/strong&gt;: A job of delivering the data in a transport-layer segment to the correct socket.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Multiplexing&lt;/strong&gt;: A job of gathering data chunks at the source host from different sockets, encapsulating each data 
 chunk with header information to create segments, and passing the segments to the network layer.&lt;/li&gt;
@@ -354,6 +851,21 @@ hosts with an excessive amount of traffic.&lt;/li&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;degrees&quot;&gt;Degrees&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;In undirected graph,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#############################################################
+#############################################################
+#############################################################&lt;/p&gt;
+
+&lt;p&gt;TODO&lt;/p&gt;
+
+&lt;p&gt;#############################################################
+#############################################################
+#############################################################&lt;/p&gt;
+
 &lt;h2 id=&quot;subgraphs-motifs-and-graphlets&quot;&gt;Subgraphs, Motifs, and Graphlets&lt;/h2&gt;
 &lt;h3 id=&quot;subnetworks-a-property-of-graph&quot;&gt;Subnetworks: A Property of Graph&lt;/h3&gt;
 &lt;ul&gt;
@@ -565,7 +1077,7 @@ significance&lt;/li&gt;
 
 &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'div'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'class'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'tit5'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -591,7 +1103,7 @@ significance&lt;/li&gt;
 
 &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -614,7 +1126,7 @@ significance&lt;/li&gt;
 
 &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -637,7 +1149,7 @@ significance&lt;/li&gt;
 
 &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -653,7 +1165,7 @@ significance&lt;/li&gt;
 &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'td'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'class'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'point'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
@@ -687,1114 +1199,4 @@ dropna=True, margins_name=’All’, observed=False, sort=True)&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/&quot;&gt;Pandas Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">urllib</summary></entry><entry><title type="html">Computer Network - Socket Programming</title><link href="/Computer_Network-Socket_Programming" rel="alternate" type="text/html" title="Computer Network - Socket Programming" /><published>2022-10-14T00:00:00+09:00</published><updated>2022-10-14T00:00:00+09:00</updated><id>/Computer_Network-Socket_Programming</id><content type="html" xml:base="/Computer_Network-Socket_Programming">&lt;h2 id=&quot;1️⃣-socket-programming-with-udp&quot;&gt;1️⃣ Socket Programming with UDP&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: An identifier for a specific network application process as it may be running multiple network 
-application.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Demonstration of simple client-server application socket programming for both UDP and TCP:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The client reads a line of characters (data) from its keyboard and sends the data to the server.&lt;/li&gt;
-  &lt;li&gt;The server receives the data and converts the characters to uppercase.&lt;/li&gt;
-  &lt;li&gt;The server sends the modified data to the client.&lt;/li&gt;
-  &lt;li&gt;The client receives the modified data and displays the line on its screen.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;udpclientpy&quot;&gt;UDPClient.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'localhost'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Input lowercase sentence:'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;udpserverpy&quot;&gt;UDPServer.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The server is ready to receive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2️⃣-socket-programming-with-tcp&quot;&gt;2️⃣ Socket Programming with TCP&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tcpclientpy&quot;&gt;TCPClient.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'localhost'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Input lowercase sentence:'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;moidifiedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'From Server: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;tcpserverpy&quot;&gt;TCPServer.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'The server is ready to receive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Socket Programming with UDP Port number: An identifier for a specific network application process as it may be running multiple network application.</summary></entry><entry><title type="html">Unreal Engine - Pure Function and Type Cast</title><link href="/Unreal_Engine-Pure_Function_and_Type_Cast" rel="alternate" type="text/html" title="Unreal Engine - Pure Function and Type Cast" /><published>2022-10-11T01:30:00+09:00</published><updated>2022-10-11T01:30:00+09:00</updated><id>/Unreal_Engine-Pure_Function_and_Type_Cast</id><content type="html" xml:base="/Unreal_Engine-Pure_Function_and_Type_Cast">&lt;h2 id=&quot;pure-function&quot;&gt;Pure function&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pure function
-    &lt;ul&gt;
-      &lt;li&gt;Output value is dependent on input value&lt;/li&gt;
-      &lt;li&gt;If it references an external function variable value, it is not a pure function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Purify
-    &lt;ul&gt;
-      &lt;li&gt;For pure function, check the pure property&lt;/li&gt;
-      &lt;li&gt;Type transformation node can be a pure node&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;type-casting-and-favorites&quot;&gt;Type Casting and Favorites&lt;/h2&gt;
-&lt;h3 id=&quot;type-casting-in-inherited-relationship&quot;&gt;Type Casting in Inherited Relationship&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Superclass(Fruit) and subclass(Apple)
-    &lt;ul&gt;
-      &lt;li&gt;Apple class has fruit information and distinctive features&lt;/li&gt;
-      &lt;li&gt;Apple is a fruit (O), Fruit is an apple (X)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Subclass type(Apple) casted to superclass(Fruit)
-    &lt;ul&gt;
-      &lt;li&gt;Automatic&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Superclass type(Fruit) casted to subclass(Apple)
-    &lt;ul&gt;
-      &lt;li&gt;Must be done explicitly&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;type-casting&quot;&gt;Type Casting&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A reference type transforming into a different reference type is called &lt;strong&gt;type casting&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;The need for type casting
-    &lt;ul&gt;
-      &lt;li&gt;E.g. when two actors collide, each actor calls the other actor’s function&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;favorites-function&quot;&gt;Favorites function&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Commonly used function/node: add to favorites which then will be accessible from &lt;strong&gt;palette&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Pure function Pure function Output value is dependent on input value If it references an external function variable value, it is not a pure function Purify For pure function, check the pure property Type transformation node can be a pure node</summary></entry><entry><title type="html">Big Data - Statistics</title><link href="/Big_Data-Statistics" rel="alternate" type="text/html" title="Big Data - Statistics" /><published>2022-10-10T00:00:00+09:00</published><updated>2022-10-10T00:00:00+09:00</updated><id>/Big_Data-Statistics</id><content type="html" xml:base="/Big_Data-Statistics">&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
-
-&lt;h3 id=&quot;why-statistics&quot;&gt;Why Statistics&lt;/h3&gt;
-&lt;p&gt;In general, analysis process is…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h2&gt;
-&lt;h3 id=&quot;population-vs-sample&quot;&gt;Population vs. Sample&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to
-the entire collection of units for which inferences are to be made&lt;/li&gt;
-  &lt;li&gt;Sample: A sample from statistical population is the set of measurements that are actually collected in the course of
-an investigation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;descriptive-vs-inferential&quot;&gt;Descriptive vs. Inferential&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Descriptive Statistics: Consists of methods for organizing and summarizing information (Weiss, 1999)&lt;/li&gt;
-  &lt;li&gt;Inferential Statistics: Consists of methods for drawing and measuring the reliability of conclusions about population
-based on information obtained from a sample of the population (Weiss, 1999)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Descriptive and inferential statistics are interrelated&lt;/p&gt;
-
-&lt;p&gt;Assume that you just started data analysis. What should you do?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Preliminary descriptive analysis&lt;/li&gt;
-  &lt;li&gt;(Choice of appropriate inferential method)&lt;/li&gt;
-  &lt;li&gt;Inferential analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;parameters-vs-statistics&quot;&gt;Parameters vs. Statistics&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameters: An unknown numerical summary of the population (Agresti &amp;amp; Finalay, 1997)&lt;/li&gt;
-  &lt;li&gt;Statistics: A known numerical summary of the sample which can be used to make inference about parameters (Agresti &amp;amp; 
-Finalay, 1997)&lt;/li&gt;
-  &lt;li&gt;Example
-    &lt;ul&gt;
-      &lt;li&gt;The proportion &lt;em&gt;p&lt;/em&gt; of 18-30 year-olds who use Twitter at least once a day -&amp;gt; Parameter&lt;/li&gt;
-      &lt;li&gt;The proportion &lt;em&gt;p’&lt;/em&gt; of 18-30 year-olds using Twitter at least once a day, calculated from a sample of 18-30 
-year-olds&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;discrete-vs-continuous&quot;&gt;Discrete vs. Continuous&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Discrete Variables: indicates a finite numbers of values or as many values as there are integers. E.g. tweet counts 
-per day&lt;/li&gt;
-  &lt;li&gt;Continuous Variables: indicates any real values. E.g. time difference between two consecutive tweet postings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;central-tendency&quot;&gt;Central Tendency&lt;/h2&gt;
-&lt;h3 id=&quot;mean&quot;&gt;Mean&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The sum of observed values in a data divided by the number of observations&lt;/li&gt;
-  &lt;li&gt;p.s. Often affected by extreme values in the data (i.e., outliers)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;9.125&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;median&quot;&gt;Median&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The value of the variable in a data set that divides the set of the observed values in half, so that the observed
-values in one half are less than or equal to the median value and the observed values in the other half are greater or
-equal to the median value&lt;/li&gt;
-  &lt;li&gt;To compute median, the observed values of variable in a data should be sorted
-    &lt;ul&gt;
-      &lt;li&gt;If the # observation is odd, then the sample median is the observed values exactly in the middle of the ordered list&lt;/li&gt;
-      &lt;li&gt;If the # observation is even, then the sample median is the number halfway between two middle observed values in the
-ordered list&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;mode&quot;&gt;Mode&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A discrete variable (or its value) is that value of the variable which occurs with the greatest frequency in a data set&lt;/li&gt;
-  &lt;li&gt;p.s. if the greatest frequency is 1 (i.e., no value occurs more than once), then the variable has no mode&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;statistics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;range&quot;&gt;Range&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The difference between its maximum and minimum values in a data set&lt;/li&gt;
-  &lt;li&gt;Formally, range = max - min&lt;/li&gt;
-  &lt;li&gt;p.s. range is affected by only max and min values, which means that other values may be ignored
-    &lt;ul&gt;
-      &lt;li&gt;e.g. X = [1,10,10,11,11,10,11,10,11,10,11,11,10,11,100]&lt;/li&gt;
-      &lt;li&gt;Can we say that range of X is [1,100]?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;percentile--quartiles&quot;&gt;Percentile &amp;amp; Quartiles&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A method dividing a given data set with the equal portions
-    &lt;ul&gt;
-      &lt;li&gt;Quartile (4 parts)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let &lt;em&gt;n&lt;/em&gt; denote the number of observations in a data set. Arrange the observed values of variable in a data in 
-increasing order
-    &lt;ul&gt;
-      &lt;li&gt;The 1&lt;sup&gt;st&lt;/sup&gt; quartile Q1 is at position (n+1)/4&lt;/li&gt;
-      &lt;li&gt;The 2&lt;sup&gt;nd&lt;/sup&gt; quartile Q2 (the median) is at position (n+1)/2&lt;/li&gt;
-      &lt;li&gt;The 3&lt;sup&gt;rd&lt;/sup&gt; quartile Q3 is at position 3(n+1)/4&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Interquartile range: the difference between 1&lt;sup&gt;st&lt;/sup&gt; and 3&lt;sup&gt;rd&lt;/sup&gt; quartiles of variables (i.e. IQR = Q3 - 
-Q1)
-    &lt;ul&gt;
-      &lt;li&gt;Roughly, the IQR gives the range of middle 50% of the observed values&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;interquartile-range&quot;&gt;Interquartile Range&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The sample of interquartile range represents the length of the interval covered by the center half of the observed 
-values of the variable&lt;/li&gt;
-  &lt;li&gt;This measure of variation is not disturbed if a small fraction the observed values are very large or very small&lt;/li&gt;
-  &lt;li&gt;Five-number summary: consists of min, max, and quartiles wirtten in increasing order
-    &lt;ul&gt;
-      &lt;li&gt;Min, Q1, Q2, Q3, Max&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;standard-deviation&quot;&gt;Standard Deviation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A measure of a distribution’s deviation from its mean (square root of variance)&lt;/li&gt;
-  &lt;li&gt;For a variable &lt;em&gt;x&lt;/em&gt;, the sample standard deviation is&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sigma&amp;space;=&amp;space;\sqrt{\frac{1}{N}[(x_1&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;(x_2&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;(x_N&amp;space;-&amp;space;\mu&amp;space;)^2]},&amp;space;where&amp;space;\mu&amp;space;=\frac{1}{N}(x_1&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;x_N)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preferred when the mean is used as the measure of center (e.g. symmetric distribution)&lt;/li&gt;
-  &lt;li&gt;Trivially, more variation -&amp;gt; larger standard deviation&lt;/li&gt;
-  &lt;li&gt;However, it can be strongly affected by a few extreme observations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;1.4851&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;probability&quot;&gt;Probability&lt;/h2&gt;
-&lt;h3 id=&quot;probability-mass-function-pmf&quot;&gt;Probability Mass Function (PMF)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;For discrete random variables&lt;/li&gt;
-  &lt;li&gt;The domain of P must be the set of all possible states of x&lt;/li&gt;
-  &lt;li&gt;0 &amp;lt;= P(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1
-    &lt;ul&gt;
-      &lt;li&gt;An impossible event has probability 0 and no state can be less probable than that. Likewise, an event that is 
-guaranteed to happen has probability 1, and no state cna have a greater chance of occurring.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;P(&lt;em&gt;x&lt;/em&gt;) = 1
-    &lt;ul&gt;
-      &lt;li&gt;We refer to this property as being normalized. Without this property, we could obtain probabilities greater than one 
-by computing the probability of one of many events occurring.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uniform distribution among &lt;em&gt;k&lt;/em&gt; states:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;x_i)&amp;space;=&amp;space;\frac{1}{k}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For continuous random variables&lt;/li&gt;
-  &lt;li&gt;The domain of P must be set of all possible states of &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;p(&lt;em&gt;x&lt;/em&gt;) &amp;gt;= 0
-    &lt;ul&gt;
-      &lt;li&gt;Note that we do not require p(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\int&amp;space;p(x)&amp;space;dx&amp;space;=&amp;space;1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Uniform distribution u(x;a,b) = 1/(b - a)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/screenshots/2022/10/09/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;rules-associated-with-probability&quot;&gt;Rules associated with Probability&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Computing marginal probability with the Sum Rule&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall_x&amp;space;\in&amp;space;x,&amp;space;P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;\sum_{y}&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?p(x)&amp;space;=&amp;space;\int&amp;space;p(x,y)dy&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conditional Probability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)&amp;amp;space;=&amp;amp;space;\frac{P(\textrm{y}&amp;amp;space;=&amp;amp;space;y,&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)}{P(\textrm{x}&amp;amp;space;=&amp;amp;space;x)})&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bayes’ Rule&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(x&lt;/td&gt;
-      &lt;td&gt;y)&amp;amp;space;=&amp;amp;space;\frac{P(x)P(y&lt;/td&gt;
-      &lt;td&gt;x)}{P(y)})&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Chain Rule of Probability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x^{(1)},&amp;space;...,&amp;space;x^{(n)})&amp;space;=&amp;space;P(x^{(1)})&amp;space;\prod_{i=2}^{n}P(x^{(1)},&amp;space;...,&amp;space;x^{(i-1)})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;E.g. ![](https://latex.codecogs.com/svg.image?P(a,b,c)&amp;amp;space;=&amp;amp;space;P(a&lt;/td&gt;
-      &lt;td&gt;b,c)P(b&lt;/td&gt;
-      &lt;td&gt;c)P(c))&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
-
-&lt;p&gt;Notation: x ⊥ y&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&amp;space;=&amp;space;p(\textrm{x}&amp;space;=&amp;space;x)&amp;space;p(\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conditional Independence&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;z&amp;space;\in&amp;space;\textrm{z}&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?p(\textrm{x}&amp;amp;space;=&amp;amp;space;x,&amp;amp;space;\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;=&amp;amp;space;p(\textrm{x}&amp;amp;space;=&amp;amp;space;x&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;p(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z))&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Equivalently, p(x&lt;/td&gt;
-          &lt;td&gt;y,z) = p(x&lt;/td&gt;
-          &lt;td&gt;z)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Notation: x ⊥ y&lt;/td&gt;
-          &lt;td&gt;z&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;expectation&quot;&gt;Expectation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Discrete variable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\sum_{x}&amp;space;P(x)f(x)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Continuous variable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\int&amp;space;&amp;space;p(x)f(x)&amp;space;dx&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Linearity of Expectations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[\alpha&amp;space;f(x)&amp;space;&amp;plus;&amp;space;\beta&amp;space;g(x)]&amp;space;=&amp;space;\alpha&amp;space;\mathbb{E}_x[f(x)]&amp;space;&amp;plus;&amp;space;\beta\mathbb{E}_x[g(x)]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;This always holds, even when f(x) and g(x) are dependent&lt;/p&gt;
-
-&lt;h3 id=&quot;covariance&quot;&gt;Covariance&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Cov[f(x),g(y)]=\mathbb{E}[(f(x)]&amp;space;-&amp;space;\mathbb{E}[f(x)])(g(y)&amp;space;-&amp;space;\mathbb{E}[g(y)])&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Covariance can be negative&lt;/p&gt;
-
-&lt;p&gt;Cov(x)&lt;sub&gt;i,j&lt;/sub&gt; = Cov(x&lt;sub&gt;i&lt;/sub&gt;,x&lt;sub&gt;j&lt;/sub&gt;)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Covariance Matrix
-    &lt;ul&gt;
-      &lt;li&gt;Diagonal elements are variance of i-th element&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;randomized-algorithms-probabilistic-algorithm&quot;&gt;Randomized Algorithms (=Probabilistic Algorithm)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Las Vegas&lt;/th&gt;
-      &lt;th&gt;Monte Carlo&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Type of Answer&lt;/td&gt;
-      &lt;td&gt;Exact&lt;/td&gt;
-      &lt;td&gt;Random amount of error&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Runtime&lt;/td&gt;
-      &lt;td&gt;Random (until answer found)&lt;/td&gt;
-      &lt;td&gt;Chosen by user (longer runtime gives less error)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;estimating-sums--integrals-with-samples&quot;&gt;Estimating sums / integrals with samples&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;justification&quot;&gt;Justification&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unbiased:
-    &lt;ul&gt;
-      &lt;li&gt;The expected value for finite &lt;em&gt;n&lt;/em&gt; is equal to the correct value&lt;/li&gt;
-      &lt;li&gt;The value for any specific &lt;em&gt;n&lt;/em&gt; samples will have random error, but the error for different sample sets cancel out&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Low variance:
-    &lt;ul&gt;
-      &lt;li&gt;Variance is O(1/&lt;em&gt;n&lt;/em&gt;)&lt;/li&gt;
-      &lt;li&gt;For very large &lt;em&gt;n&lt;/em&gt;, the error converges “almost surely” to 0&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;distribution--information-theory&quot;&gt;Distribution &amp;amp; Information Theory&lt;/h2&gt;
-&lt;h3 id=&quot;bernoulli-distribution&quot;&gt;Bernoulli Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;PDF&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;1)&amp;space;=&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;0)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi^x(1-\phi)^{1-x}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Expectation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[x]=\phi&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Variance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Var_x(x)&amp;space;=&amp;space;\phi&amp;space;(1-\phi)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;gaussian-distribution&quot;&gt;Gaussian Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by variance:
-    &lt;ul&gt;
-      &lt;li&gt;E[x] = μ, Var[x] = σ&lt;sup&gt;2&lt;/sup&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\sigma^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{1}{2\pi&amp;amp;space;\sigma^2}}exp(-\frac{1}{2\sigma^2}(x-\mu)^2)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by precision:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\beta&amp;amp;space;^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{\beta}{2\pi}}exp(-\frac{1}{2}\beta(x-\mu)^2)&lt;/p&gt;
-
-&lt;h3 id=&quot;gaussian-distribution-1&quot;&gt;Gaussian Distribution&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;theorems-related-to-gaussian-distribution&quot;&gt;Theorems related to Gaussian Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Central limit theorem&lt;/strong&gt;: the sum of many independent random variables is approximately normally distributed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\sqrt{n}}{\sigma}(\overline{X_n}&amp;space;-&amp;space;\mu)&amp;space;\to&amp;space;N(0,1)&quot; alt=&quot;&quot; /&gt; 
-as 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Law of large numbers&lt;/strong&gt;: the sample average converges to the expectation as the sample size goes to infinity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;\to&amp;space;\mu&quot; alt=&quot;&quot; /&gt; 
-as 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&amp;space;&quot; alt=&quot;&quot; /&gt;
-, where 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;=&amp;space;\frac{1}{n}(X_1&amp;space;&amp;plus;&amp;space;X_2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;space;&amp;plus;&amp;space;X_n)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;multivariate-gaussian&quot;&gt;Multivariate Gaussian&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by covariance matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&amp;space;=&amp;space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp(-\frac{1}{2}(x-\mu)^\top&amp;space;\sum&amp;space;^{-1}(x-\mu))}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;μ is a vector&lt;/li&gt;
-  &lt;li&gt;∑ is a covariance matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by precision matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Data Collection</summary></entry><entry><title type="html">Intelligent Information Systems - Web Basics</title><link href="/Intelligent_Information_Systems-Web_Basics" rel="alternate" type="text/html" title="Intelligent Information Systems - Web Basics" /><published>2022-10-09T19:30:00+09:00</published><updated>2022-10-09T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Web_Basics</id><content type="html" xml:base="/Intelligent_Information_Systems-Web_Basics">&lt;h3 id=&quot;crawling&quot;&gt;Crawling&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data Extraction from a web page&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;1️⃣-http-hyper-text-transfer-protocol&quot;&gt;1️⃣ HTTP (Hyper Text Transfer Protocol)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;‘Hyper Text’?&lt;/li&gt;
-  &lt;li&gt;HTTP is a protocol to send hyper text written in HTML&lt;/li&gt;
-  &lt;li&gt;‘Protocol’? ‘Promise, rule’
-    &lt;ul&gt;
-      &lt;li&gt;Request and response&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Uses SSL for secure connection between a browser and a server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;2️⃣-url-uniform-resource-locator&quot;&gt;2️⃣ URL (Uniform Resource Locator)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;A network address that provides resource location&lt;/li&gt;
-  &lt;li&gt;There are other protocols other than http and https
-    &lt;ul&gt;
-      &lt;li&gt;e.g. ftp, mailto&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;3️⃣-html&quot;&gt;3️⃣ HTML&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Markup language for web page&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;structure-of-html&quot;&gt;Structure of HTML&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Tree structure&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;web-crawling-and-scraping&quot;&gt;Web crawling and scraping&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Crawling
-    &lt;ul&gt;
-      &lt;li&gt;Get information from search and create a db&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Scraping
-    &lt;ul&gt;
-      &lt;li&gt;A Web page information&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;crawling-legal-issue&quot;&gt;Crawling Legal Issue&lt;/h2&gt;
-&lt;p&gt;The intention of the service provider is to actually view a web page&lt;/p&gt;
-
-&lt;h3 id=&quot;db-violation-cases&quot;&gt;DB Violation Cases&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Empass vs Naver&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;잡코리아&lt;/strong&gt; vs 사람인&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;야놀자&lt;/strong&gt; vs 여기어때&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;caution-when-scraping-️&quot;&gt;Caution when scraping ❗️&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data scraping itself is OK&lt;/li&gt;
-  &lt;li&gt;Do not request too much web server computing power&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;getting-web-data&quot;&gt;Getting Web Data&lt;/h2&gt;
-&lt;h3 id=&quot;essential-library&quot;&gt;Essential Library&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;urllib&lt;/li&gt;
-  &lt;li&gt;BeautifulSoup&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;urllib&quot;&gt;urllib&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Crawling library&lt;/li&gt;
-  &lt;li&gt;Exists internally in python&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;beautifulsoup&quot;&gt;BeautifulSoup&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parsing library&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;beautifulsoup-usage&quot;&gt;BeautifulSoup Usage&lt;/h4&gt;
-
-&lt;p&gt;BeautifulSoup(&lt;received text=&quot;&quot;&gt;, &lt;text parser=&quot;&quot;&gt;)&lt;/text&gt;&lt;/received&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;html&amp;gt;&amp;lt;div&amp;gt;hello&amp;lt;/div&amp;gt;&amp;lt;/html&amp;gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Use find() to get important parts of data&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;html&amp;gt;&amp;lt;div&amp;gt;hello&amp;lt;/div&amp;gt;&amp;lt;/html&amp;gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Get &amp;lt; ul &amp;gt; tag&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-  &amp;lt;body&amp;gt;
-    &amp;lt;ul&amp;gt;
-      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Get only ‘line1’ from &amp;lt; li &amp;gt;, &amp;lt; /li &amp;gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-  &amp;lt;body&amp;gt;
-    &amp;lt;ul&amp;gt;
-      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Find all the elements that is in condition&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-  &amp;lt;body&amp;gt;
-    &amp;lt;ul&amp;gt;
-      &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
-      &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tag-property-and-property-value&quot;&gt;Tag, Property and Property Value&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTML?
-    &lt;ul&gt;
-      &lt;li&gt;document starting with &amp;lt; html &amp;gt; &amp;lt; /html &amp;gt;&lt;/li&gt;
-      &lt;li&gt;Composed of tag and property&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Tag
-    &lt;ul&gt;
-      &lt;li&gt;&amp;lt; ul &amp;gt; &amp;lt; /ul &amp;gt; &amp;lt; li &amp;gt; &amp;lt; /li &amp;gt; &amp;lt; div &amp;gt; &amp;lt; /div &amp;gt; &amp;lt; a &amp;gt; &amp;lt; /a &amp;gt;, things that are wrapped with &amp;lt; &amp;gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Property and Property Value
-    &lt;ul&gt;
-      &lt;li&gt;&amp;lt; ul class=”class1” &amp;gt;
-        &lt;ul&gt;
-          &lt;li&gt;ul: tag, class: property, “class1”: property value&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Get data using class property&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-  &amp;lt;body&amp;gt;
-    &amp;lt;ul class=&quot;class1&quot;&amp;gt;
-        &amp;lt;li&amp;gt;line1&amp;lt;/li&amp;gt;
-        &amp;lt;li&amp;gt;line2&amp;lt;/li&amp;gt;
-        &amp;lt;li&amp;gt;line3&amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-    &amp;lt;ul class=&quot;class2&quot;&amp;gt;
-        &amp;lt;li&amp;gt;line4&amp;lt;/li&amp;gt;
-        &amp;lt;li&amp;gt;line5&amp;lt;/li&amp;gt;
-        &amp;lt;li&amp;gt;line6&amp;lt;/li&amp;gt;
-    &amp;lt;/ul&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;class2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;difference-between-class-and-id&quot;&gt;Difference between class and id&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;id: unique in a web page&lt;/li&gt;
-  &lt;li&gt;class: able to use multiple times&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Get Property value&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-    &amp;lt;body&amp;gt;
-        &amp;lt;ul class=&quot;search&quot;&amp;gt;
-            &amp;lt;li&amp;gt;
-                &amp;lt;a href=&quot;https://www.naver.com&quot;&amp;gt;Naver&amp;lt;/a&amp;gt;
-            &amp;lt;/li&amp;gt;
-            &amp;lt;li&amp;gt;
-                &amp;lt;a href=&quot;https://www.google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt;
-            &amp;lt;/li&amp;gt;
-        &amp;lt;/ul&amp;gt;
-        &amp;lt;ul class=&quot;sns&quot;&amp;gt;
-            &amp;lt;li&amp;gt;
-                &amp;lt;a href=&quot;https://www.facebook.com&quot;&amp;gt;Facebook&amp;lt;/a&amp;gt;
-            &amp;lt;/li&amp;gt;
-            &amp;lt;li&amp;gt;
-                &amp;lt;a href=&quot;https://www.instagram.com&quot;&amp;gt;Instagram&amp;lt;/a&amp;gt;
-            &amp;lt;/li&amp;gt;
-        &amp;lt;/ul&amp;gt;
-    &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'href'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;robotstxt&quot;&gt;robots.txt&lt;/h2&gt;
-&lt;p&gt;robots.txt is a bot exclusion standard. It was first established in June 1994 to control the access of bots such as web
-crawler. It is not enforced but if you frequently access banned web pages, it can be understood as a attack.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;robots.txt location
-    &lt;ul&gt;
-      &lt;li&gt;root of the web page&lt;/li&gt;
-      &lt;li&gt;e.g. www.naver.com/robots.txt&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;User-agent
-    &lt;ul&gt;
-      &lt;li&gt;rules assigned to robots&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Disallow
-    &lt;ul&gt;
-      &lt;li&gt;access banned web page&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Allow
-    &lt;ul&gt;
-      &lt;li&gt;access allowed web pages&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Crawling may be banned, but there is an exception for the main page&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User-agent: *
-Disallow: /
-Allow: /$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Allow access to all bots
-    &lt;ul&gt;
-      &lt;li&gt;User-agent: *&lt;/li&gt;
-      &lt;li&gt;Allow: /&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ban access to all bots
-    &lt;ul&gt;
-      &lt;li&gt;user-agent: *&lt;/li&gt;
-      &lt;li&gt;Disallow: /&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ban access to a specific directory
-    &lt;ul&gt;
-      &lt;li&gt;User-agent: *&lt;/li&gt;
-      &lt;li&gt;Disallow: /directory_name1/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ban access to a specific file
-    &lt;ul&gt;
-      &lt;li&gt;User-agent: *&lt;/li&gt;
-      &lt;li&gt;Disallow: /directory_name1/file_name.html&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Allow access to a specific bots
-    &lt;ul&gt;
-      &lt;li&gt;User-agent: specific_bot_name&lt;/li&gt;
-      &lt;li&gt;Allow: /directory_name1/directory_name2/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ban access to a specific bot
-    &lt;ul&gt;
-      &lt;li&gt;User-agent: specific_bot_name&lt;/li&gt;
-      &lt;li&gt;Disallow: /directory_name1/directory_name2/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Crawling Data Extraction from a web page</summary></entry><entry><title type="html">Computer Network - Video Streaming and Content Distribution Networks</title><link href="/Computer_Network-Video_Streaming_and_Content_Distribution_Networks" rel="alternate" type="text/html" title="Computer Network - Video Streaming and Content Distribution Networks" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>/Computer_Network-Video_Streaming_and_Content_Distribution_Networks</id><content type="html" xml:base="/Computer_Network-Video_Streaming_and_Content_Distribution_Networks">&lt;h2 id=&quot;1️⃣-http-streaming-and-dash&quot;&gt;1️⃣ HTTP Streaming and DASH&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;HTTP Streaming&lt;/strong&gt;: When a user wants to see the video, the client establishes a TCP connection with th server and 
-issues an HTTP &lt;em&gt;GET&lt;/em&gt; request for that URL. The server then sends the video file, within an HTTP response message, as 
-quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all 
-clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a 
-client, both across different clients and also over time for the same client.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Dynamic Adaptive Streaming over HTTP (DASH)&lt;/strong&gt;: The video is encoded into several quality level. The client 
-dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is 
-high, the client naturally selects chunks from a high-rate version and vica-versa.
-    &lt;ul&gt;
-      &lt;li&gt;Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to 
-the base stations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;manifest file&lt;/strong&gt;: Provides a URL for each version along with its bit rate.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2️⃣-content-distribution-networks&quot;&gt;2️⃣ Content Distribution Networks&lt;/h2&gt;
-&lt;p&gt;Providing streaming video service by building a single massive data center, store all of its videos in the data
-center, and stream the videos directly from the data center to clients worldwide has &lt;strong&gt;3 major problems&lt;/strong&gt;:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;If the client is far from the data center, server-to-client packets will cross many communication links and likely
-pass through many ISPs, with some of the ISPs possibly located on different continents. If one of these links provide a
-throughput will that is less than the video consumption rate, the end-to-end throughput will also be below the 
-consumption rate, resulting in annoying freezing delays for the user.&lt;/li&gt;
-  &lt;li&gt;A popular video will likely be sent many times over the same communication links. Not only does this waste network 
-bandwidth, but the Internet video company itself will be paying its provider ISP for sending the same bytes into the 
-Internet over and over again.&lt;/li&gt;
-  &lt;li&gt;A single data center represents a single point of failure - if the data center or its links to the Internet goes
-down, it would not be able to distribute any video streams.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To fix this 3 problems, major video-streaming companies make use of &lt;strong&gt;Content Distribution Networks (CDNs)&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Content Distribution Networks (CDNs)&lt;/strong&gt;: Manage servers in multiple geographically distributed locations, stores 
-copies of the video in its servers, and attempt to direct each user request to a CDN location that will provide the best
-user experience.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Private CDN&lt;/strong&gt;: Owned by the content provider itself.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Third-party CDN&lt;/strong&gt;: Distributes content on behalf of multiple content provider.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;CDNs typically adopt one of two different server placement philosophies:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;Enter Deep&lt;/strong&gt;. Pioneered by Akamai, this philosophy is to enter deep into the access networks of Internet Service 
-Providers, by deploying server clusters in access ISPs all over the world. The goal is to get close to end users, 
-thereby improving user-perceived delay and throughput by decreasing the number of links and routers between the end user 
-and the CDN server from which it receives content.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bring Home&lt;/strong&gt;. Pioneered by Limelight and many other CDN companies, this philosophy is to bring the ISPs home by 
-building a large clusters at a smaller number of sites. Instead of getting inside the access ISPs, these CDNs typically 
-place their clusters in Internet Exchange Points (IXPs). Compare to the &lt;em&gt;enter deep&lt;/em&gt; approach, this results in lower 
-maintenance and management overhead, possibly at the expense of higher delay and lower throughput to end users.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;cnd-operation&quot;&gt;CND Operation&lt;/h3&gt;
-&lt;p&gt;When a browser in a user’s host is instructed to retrieve a specific video, the CDN must intercept the request so that 
-it can do the followings:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Determine a suitable CDN server cluster for that client at that time.&lt;/li&gt;
-  &lt;li&gt;Redirect the client’s request to a server in that cluster.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/06/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The user visits the Web page at NetCinema&lt;/li&gt;
-  &lt;li&gt;When the user licks on the link http://video.netcinema.com/6Y7B23V, the user’s host sends a DNS query for 
-video.netcinema.com.&lt;/li&gt;
-  &lt;li&gt;The user’s Local DNS Server (LDNS) relays the DNS query to authoritative DNS server for NetCinema, which observes the
-string “video” in the hostname video.netcinema.com. To “hand over” the DNS query to KingCDN, instead of returning an IP 
-address, the NetCinema authoritative DNS server returns to the LDNS a hostname in the KingCDN’s domain, for example, 
-a1105.kingcdn.com.&lt;/li&gt;
-  &lt;li&gt;From this point on, the DNS query enters into KingCDN’s private DNS infrastructure. The user’s LDNS then sends a 
-second query, now for a1105.kingcdn.com, and KingCDN’s DNS system eventually returns the IP addresses of a KingCDN 
-content server to the LDNS. It is thus here, within the KingCDN’s DNS system, that the CDN server from which the client 
-will receive its content is specified.&lt;/li&gt;
-  &lt;li&gt;The LDNS forwards the IP address of the content-serving CDN node to the user’s host.&lt;/li&gt;
-  &lt;li&gt;Once the client receives the IP address for a KingCDN content server, it establishes a direct TCP connection with the
-server at that IP address and issues an HTTP GET request for the video. If DASH is used, the server will first send to 
-the client a manifest file with a list of URLs, one for each version of the video, and the client will dynamically 
-select chunks from the different versions.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;cluster-selection-strategies&quot;&gt;Cluster Selection Strategies&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Cluster selection strategy&lt;/strong&gt;: A mechanism for dynamically directing clients to a server cluster or a data center 
-within the CDN.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Geographically closest&lt;/strong&gt;: A strategy that maps each LDNS IP address to geographic location.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Real-time measurements&lt;/strong&gt;: A strategy that determines the best cluster for a client based on the current traffic 
-condition by measuring delay and loss performance between their clusters and clients.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-case-studies-netflix-and-youtube&quot;&gt;3️⃣ Case Studies: Netflix and YouTube&lt;/h2&gt;
-&lt;h3 id=&quot;netflix&quot;&gt;Netflix&lt;/h3&gt;
-&lt;p&gt;Amazon cloud handles the following critical functions:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Content ingestion&lt;/strong&gt;: Before Netflix can distribute a movie to its customers, it must first ingest and process the
-movie. Netflix receives studio master versions of movies and upload them to hosts in the Amazon cloud.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Content processing&lt;/strong&gt;: The machines in the Amazon cloud create many different formats for each movie, suitable for a
-diverse array of client video players running on desktop computers, smartphones, and game consoles connected to
-televisions. A different version is created for each of these formats and at multiple bit rates, allowing for adaptive
-streaming over HTTP using DASH&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Uploading versions to its CDN&lt;/strong&gt;: Once all of the versions of a movie have been created, the hosts in the Amazon
-cloud upload the versions to its CDN&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/06/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;youtube&quot;&gt;YouTube&lt;/h3&gt;
-&lt;p&gt;YouTube employs HTTP streaming, often making a small number of different versions available for a video, eac with a
-different bit rate and corresponding quality level. YouTube does not employ adaptive streaming (such as DASH), but
-instead requires the user to manually select a version. In order to save bandwidth and server resources that would be
-wasted by repositioning or early termination, YouTube uses the HTTP byte range request to limit the flow of transmitted
-data after a target amount of video is prefetched.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ HTTP Streaming and DASH HTTP Streaming: When a user wants to see the video, the client establishes a TCP connection with th server and issues an HTTP GET request for that URL. The server then sends the video file, within an HTTP response message, as quickly as the underlying network protocols and traffic conditions will allow. The shortcoming, however, is that all clients receive the same encoding of the video, despite the large variations in the amount of bandwidth available to a client, both across different clients and also over time for the same client. Dynamic Adaptive Streaming over HTTP (DASH): The video is encoded into several quality level. The client dynamically requests chunks of video segments of a few seconds in length. When the amount of available bandwidth is high, the client naturally selects chunks from a high-rate version and vica-versa. Important for mobile users, who typically see their bandwidth availability fluctuate as they move with respect to the base stations. manifest file: Provides a URL for each version along with its bit rate.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">urllib</summary></entry></feed>

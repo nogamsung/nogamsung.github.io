@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-10-22T15:45:34+09:00</updated>
+  <updated>2022-11-11T13:35:03+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -30,6 +30,202 @@
   
   
 
+  
+    <entry>
+      <title type="html">Unreal Engine - Physics Engine</title>
+      <link href="/Unreal_Engine-Physics_Engine" rel="alternate" type="text/html" title="Unreal Engine - Physics Engine" />
+      <published>2022-11-01T01:30:00+09:00</published>
+      <updated>2022-11-01T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Physics_Engine</id>
+      <content type="html" xml:base="/Unreal_Engine-Physics_Engine">&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ways to move an object in the game world
+    &lt;ul&gt;
+      &lt;li&gt;Change coordinates every frame: Use Tick event node to change to location&lt;/li&gt;
+      &lt;li&gt;Use timeline&lt;/li&gt;
+      &lt;li&gt;Use movement component: Add movement component in an actor or a character&lt;/li&gt;
+      &lt;li&gt;Use physics engine&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ways to use physics engine
+    &lt;ul&gt;
+      &lt;li&gt;cons: Many parts are unpredictable&lt;/li&gt;
+      &lt;li&gt;pros: Not many tasks are required compared to other methods
+        &lt;ul&gt;
+          &lt;li&gt;If level gets big, it is impossible to work with it, so you will be forced to use physics engine&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-necessity-of-physics-engine-in-the-game&quot;&gt;The Necessity of Physics Engine in the Game&lt;/h3&gt;
+&lt;p&gt;In the game, it is actually good to implement codes. However, it is very difficult to implement codes for all the
+physics acts. You must think whether it would be necessary to use physics engine simulation.&lt;/p&gt;
+
+&lt;h3 id=&quot;physics-engine-status&quot;&gt;Physics Engine Status&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;PhysX (PhysX SDK)
+        &lt;ul&gt;
+          &lt;li&gt;Owned by Nvidia (2008 ~ )&lt;/li&gt;
+          &lt;li&gt;PC/Console version is free, open source (2018 ~ )&lt;/li&gt;
+          &lt;li&gt;GPU acceleration function (rely on GPU)&lt;/li&gt;
+          &lt;li&gt;In Unreal engine and Unity&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Havok
+        &lt;ul&gt;
+          &lt;li&gt;Owned by Microsoft (2015 ~ )&lt;/li&gt;
+          &lt;li&gt;Respected and not an open source&lt;/li&gt;
+          &lt;li&gt;GPU acceleration is not used and uses CPU caculation instead (pros)&lt;/li&gt;
+          &lt;li&gt;Owns AI tool, animation tool, etc.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open Source Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;ODE (Open Dynamics Engine)&lt;/li&gt;
+      &lt;li&gt;Newton Game Dynamics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pros-and-cons-of-physics-engine&quot;&gt;Pros and Cons of Physics Engine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cons of Physics Engine
+    &lt;ul&gt;
+      &lt;li&gt;Low reproducibility&lt;/li&gt;
+      &lt;li&gt;Very low controllability&lt;/li&gt;
+      &lt;li&gt;Difficult for precise situation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reciprocity of game and physics engine
+    &lt;ul&gt;
+      &lt;li&gt;Game is about constructing entertainment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physics-engine-and-collision&quot;&gt;Physics Engine and Collision&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apply physics engine to actor
+    &lt;ul&gt;
+      &lt;li&gt;Suppose that an actor is a rigid body&lt;/li&gt;
+      &lt;li&gt;Physics engine is used on collision volume and not on mesh&lt;/li&gt;
+      &lt;li&gt;Actor mesh must have collision volume&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Physics application to collision volume
+    &lt;ul&gt;
+      &lt;li&gt;Collision volume should not be complicated&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ways-to-use-physics-engine&quot;&gt;Ways to use physics engine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Physics engine application: Go through the following steps in the actor editor’s &lt;strong&gt;detail&lt;/strong&gt; tab
+    &lt;ul&gt;
+      &lt;li&gt;Activate &lt;strong&gt;Simulate Physics&lt;/strong&gt; in &lt;strong&gt;Physics&lt;/strong&gt; area
+        &lt;ul&gt;
+          &lt;li&gt;The &lt;strong&gt;mobility&lt;/strong&gt; property changes to &lt;strong&gt;movable&lt;/strong&gt; automatically&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;actors-physics-property&quot;&gt;Actor’s physics property&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Actor’s physics property
+    &lt;ul&gt;
+      &lt;li&gt;Start Awake&lt;/li&gt;
+      &lt;li&gt;Mass in Kg&lt;/li&gt;
+      &lt;li&gt;Enable Gravity&lt;/li&gt;
+      &lt;li&gt;Center of Mass Offset&lt;/li&gt;
+      &lt;li&gt;Etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-material&quot;&gt;Physical Material&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Value related to collision depends on the material&lt;/li&gt;
+  &lt;li&gt;Use an &lt;strong&gt;exclusive asset that can input a physics value&lt;/strong&gt;, instead of setting physics value every time&lt;/li&gt;
+  &lt;li&gt;Use the physical material to give physics value to similar material meshes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;physical-materials-core-property&quot;&gt;Physical Material’s Core Property&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Friction
+    &lt;ul&gt;
+      &lt;li&gt;Friction coefficient: 0 (weak) ~ 1 (strong)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Friction Combine Mode
+    &lt;ul&gt;
+      &lt;li&gt;Friction occurs when two object make contact -&amp;gt; consider both friction property&lt;/li&gt;
+      &lt;li&gt;4 friction combine mode in UE
+        &lt;ul&gt;
+          &lt;li&gt;Average&lt;/li&gt;
+          &lt;li&gt;Multiply&lt;/li&gt;
+          &lt;li&gt;Max&lt;/li&gt;
+          &lt;li&gt;Min&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Restitution
+    &lt;ul&gt;
+      &lt;li&gt;Restitution coefficient: 0 (weak restitution) ~ 1 (strong restitution)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Density
+    &lt;ul&gt;
+      &lt;li&gt;Friction = Friction coefficient * Mass&lt;/li&gt;
+      &lt;li&gt;An object’s mass is very important in physics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Move an Object Ways to move an object in the game world Change coordinates every frame: Use Tick event node to change to location Use timeline Use movement component: Add movement component in an actor or a character Use physics engine Ways to use physics engine cons: Many parts are unpredictable pros: Not many tasks are required compared to other methods If level gets big, it is impossible to work with it, so you will be forced to use physics engine</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Unreal Engine - Timeline</title>
@@ -367,7 +563,7 @@
 
 &lt;h3 id=&quot;types-of-variable&quot;&gt;Types of Variable&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/10/05/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;variable-extraction-and-assignment-variable-node-placement&quot;&gt;Variable Extraction and Assignment, Variable Node Placement&lt;/h3&gt;
 &lt;ul&gt;
@@ -733,10 +929,7 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
 &lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. Upon graduation, the university requires
 all of its student to make a software program.&lt;/p&gt;
 
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;</content>
 
       
       
@@ -1150,162 +1343,6 @@ all of its student to make a software program.&lt;/p&gt;
 
       
         <summary type="html">Blueprint</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Unreal Engine - Game Mode and Pawn</title>
-      <link href="/Unreal_Engine-Game_Mode_and_Pawn" rel="alternate" type="text/html" title="Unreal Engine - Game Mode and Pawn" />
-      <published>2022-09-20T01:30:00+09:00</published>
-      <updated>2022-09-20T01:30:00+09:00</updated>
-      <id>/Unreal_Engine-Game_Mode_and_Pawn</id>
-      <content type="html" xml:base="/Unreal_Engine-Game_Mode_and_Pawn">&lt;h2 id=&quot;concept-of-class&quot;&gt;Concept of Class&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is &lt;strong&gt;Class&lt;/strong&gt;?
-    &lt;ul&gt;
-      &lt;li&gt;C++: expressed in object as it is an object-oriented language&lt;/li&gt;
-      &lt;li&gt;Object is implemented in class&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt; is a part that is implemented in class&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What is &lt;strong&gt;Blueprint&lt;/strong&gt;?
-    &lt;ul&gt;
-      &lt;li&gt;In Unreal Engine, you can use &lt;strong&gt;blueprint&lt;/strong&gt;, similar to C++, it is a visual script language&lt;/li&gt;
-      &lt;li&gt;The blueprint is a C++ class internally&lt;/li&gt;
-      &lt;li&gt;Therefore, C++ class and blueprint class is similar in characteristic&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ways to implement class: C++ or Blueprint
-    &lt;ul&gt;
-      &lt;li&gt;The way it to implement is not essential&lt;/li&gt;
-      &lt;li&gt;Categorized into &lt;strong&gt;C++ class&lt;/strong&gt; or &lt;strong&gt;blueprint class&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Example of Class
-    &lt;ul&gt;
-      &lt;li&gt;Object class, Actor class, pawn class, and so on&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;game-framework&quot;&gt;Game Framework&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Every game needs to have basic structure
-    &lt;ul&gt;
-      &lt;li&gt;Player character, player controller, camera, and so on&lt;/li&gt;
-      &lt;li&gt;Even if you use an empty template, you need include a minimum game structure&lt;/li&gt;
-      &lt;li&gt;The game structure in UE is “Game Framework”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Game Mode
-    &lt;ul&gt;
-      &lt;li&gt;Object that express the rules for a game to be played&lt;/li&gt;
-      &lt;li&gt;Decides the player and camera in a map during the “Game Mode”&lt;/li&gt;
-      &lt;li&gt;If it is not altered, the standard game mode is set to default&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;core-class&quot;&gt;Core Class&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Core classes in UE
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: A class located at the top of all class, all of the classes are derived from this class.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt;: Place a class in level. It is a child class of an object.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Pawn&lt;/strong&gt;: A class that has a physical looks, such as player or A.I. It is child class of an actor.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Character&lt;/strong&gt;: A class that is able to walk or do any type of movement function. It is a child class of a pawn.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Player controller&lt;/strong&gt;: A class that controls a player’s pawn. It is a child class of an actor.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Game mode&lt;/strong&gt;: A class that express the rules for a game. It is a child class of an actor.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Name of the core class
-    &lt;ul&gt;
-      &lt;li&gt;Class is usually omitted. So just say object, actor, pawn, player controller, and character.&lt;/li&gt;
-      &lt;li&gt;Name of the class implemented in C++: UObject, APawn, ACharacter, APlayerController, AGameMode&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;blueprint&quot;&gt;Blueprint&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What is blueprint?
-    &lt;ul&gt;
-      &lt;li&gt;Visual script system provided by UE
-        &lt;ul&gt;
-          &lt;li&gt;Node based development environment that uses the mouse to connect commands.&lt;/li&gt;
-          &lt;li&gt;Easy. -&amp;gt; All producers can participate in development.&lt;/li&gt;
-          &lt;li&gt;Block assemble form that reduces the grammatical error.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Good when making interactive assets
-        &lt;ul&gt;
-          &lt;li&gt;Event process script&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Easy to combine various functions&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Making blueprint object
-    &lt;ul&gt;
-      &lt;li&gt;You can use C++ to make a class or use the blueprint.&lt;/li&gt;
-      &lt;li&gt;Blueprint class is a powerful means&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;concept-of-component&quot;&gt;Concept of Component&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Component
-    &lt;ul&gt;
-      &lt;li&gt;A single blueprint class has many component inside a component container&lt;/li&gt;
-      &lt;li&gt;Component is added to a blueprint class to act as a class&lt;/li&gt;
-      &lt;li&gt;Different components do different tasks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Types of component
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Actor component&lt;/strong&gt;: A base class component that does not have any transform data.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Scene Component&lt;/strong&gt;: A child class of an actor component that has transform data.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Primitive component&lt;/strong&gt;: A child class of a scene component that has graphic expression.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">Concept of Class</summary>
       
 
       
