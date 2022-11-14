@@ -253,6 +253,103 @@ message-dictation scenario are examples of such feedback.</li>
 
 <p><img src="assets/screenshots/2022/10/31/6.jpeg" alt="" /></p>
 
+<ul>
+  <li><strong>stop-and-wait protocols</strong>: The sender will not send a new piece of data until it is sure that the receiver has 
+correctly received the current packet.</li>
+</ul>
+
+<p>Three possibilities for handling corrupted ACKs or NAKs:</p>
+
+<ul>
+  <li>Consider what a human might do in the message-dictation scenario. If the speaker didn’t understand the “OK” or “Please
+repeat that” reply from the receiver, the speaker would probably ask, “What did you say?” The receiver would then repeat
+the reply. But what if the speaker’s “What did you say?” is corrupted? The receiver, having no idea whether the garbled 
+sentence was part of the dictation or a request to repeat the last reply, would probably then respond with “What did you
+say?” And the, of course, that response might be garbled. Clearly, we’re heading down a difficult path.</li>
+  <li>A second alternative is to add enough checksum bits to allow the sender not only to detect, but also to recover from,
+bit errors. This solves the immediate problem for a channel that can corrupt packets but not lose them.</li>
+  <li>A third approach is for the sender simply to resend the current data packet when it receives a garbled ACK or NAK 
+packet. This approach, however, introduces <strong>duplicate packets</strong> into the sender-to-receiver channel. The fundamental
+difficulty with duplicate packets is that the receiver doesn’t know whether the ACK or NAK it last send was received
+correctly at the sender. Thus, it cannot know a priori whether an arriving packet contains new data or is a 
+retransmission.</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/31/7.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/10/31/8.jpeg" alt="" /></p>
+
+<ul>
+  <li><strong>Duplicate ACKs</strong>: The receiver did not correctly receive the packet following the packet that is being ACKed twice.</li>
+</ul>
+
+<h3 id="reliable-data-transfer-over-a-lossy-channel-with-bit-errors-rdt30">Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0</h3>
+
+<p><img src="assets/screenshots/2022/10/31/9.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/10/31/10.jpeg" alt="" /></p>
+
+<ul>
+  <li><strong>Duplicate data packets</strong>: If a packet experiences a particularly large delay, the sender may retransmit the packet
+even though neither the data packet nor its ACK have been lost.</li>
+  <li><strong>Countdown timer</strong>: A time-based retransmission mechanism that can interrupt the sender after a given amount of time
+has expired.
+    <ol>
+      <li>Start the timer each time a packet is sent.</li>
+      <li>Respond to a timer interrupt.</li>
+      <li>Stop the timer.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/31/11.jpeg" alt="" /></p>
+
+<ul>
+  <li><strong>Alternating-bit protocol</strong>: Packet sequence numbers alternate between 0 and 1.</li>
+</ul>
+
+<h2 id="2️⃣-pipelined-reliable-data-transfer-protocols">2️⃣ Pipelined Reliable Data Transfer Protocols</h2>
+
+<p><img src="assets/screenshots/2022/10/31/12.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/10/31/13.jpeg" alt="" /></p>
+
+<p>Transmit the packet into the 1 Gbps link</p>
+
+<p><img src="https://latex.codecogs.com/svg.image?d_{trans}&space;=&space;\frac{L}{R}&space;=&space;\frac{8000&space;bits}{10^9&space;bits/sec}&space;=&space;8&space;microseconds" alt="" /></p>
+
+<p>Stop-and-wait protocol has a rather dismal sender utilization U<sub>sender</sub></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?U_{sender}&space;=&space;\frac{L/R}{RTT&space;&plus;&space;L/R}&space;=&space;\frac{0.008}{30.008}&space;=&space;0.00027" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/10/31/14.jpeg" alt="" /></p>
+
+<ul>
+  <li><strong>Pipelining</strong>: The many in-transit sender-to-receiver packets can be visualized as filling a pipeline</li>
+</ul>
+
+<p>The consequences for reliable data transfer protocols:</p>
+
+<ul>
+  <li>The range of sequence numbers must be increased, since each in-transit packet must have a unique sequence number and 
+there may be multiple, in-transmit, unacknowledged packets.</li>
+  <li>The sender and receiver sides of the protocols may have to buffer more than one packet. Minimally, the sender will
+have to buffer packets that have been transmitted but not yet acknowledged. Buffering of correctly received packets may 
+also be needed at the receiver, as discussed below.</li>
+  <li>The range of sequence numbers needed and the buffering requirements will depend on the manner in which a data transfer 
+protocol responds to lost, corrupted, and overly delayed packets. Two basic approaches toward pipelined error recovery 
+can be identified: <strong>Go-Back-N</strong> and <strong>selective repeat</strong>.</li>
+</ul>
+
+<h2 id="3️⃣-go-back-n-gbn">3️⃣ Go-Back-N (GBN)</h2>
+<ul>
+  <li><strong>Go-Back-N (GBN) protocol</strong>: The sender is allowed to transmit multiple packets without waiting for an 
+acknowledgement, but is constrained t have no more than some maximum allowable number, <em>N</em>, of unacknowledged packets in
+the pipeline.</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/31/15.jpeg" alt="" /></p>
+
 <h2 id="reference">Reference</h2>
 <ul>
   <li><a href="https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465" target="_blank">Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross</a></li>
@@ -374,6 +471,22 @@ message-dictation scenario are examples of such feedback.</li>
                             
                             
                         
+                        
+                        
+                         <li><a href="/Big_Data-Graph_Mining_(Roles_and_Communities)">Big Data - Graph Mining (Roles and Communities)</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-Connection-Oriented_Trnasport_TCP">Computer Network - Connection-Oriented Transport TCP</a></li>
+                            
+                            
+                            
+                            
+                        
                             
                         
                         
@@ -382,16 +495,14 @@ message-dictation scenario are examples of such feedback.</li>
                         
                         
                         
-                         <li><a href="/Computer_Network-Connectionless_Transport_UDP">Computer Network - Connectionless Transport UDP</a></li>
-                            
+                        
                             
                             
                             
                         
                         
                         
-                         <li><a href="/Intelligent_Information-Crawling_Data">Intelligent Information Systems - Crawling Data</a></li>
-                            
+                        
                             
                             
                             
@@ -705,7 +816,7 @@ message-dictation scenario are examples of such feedback.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 34 posts →
+                        See all 36 posts →
                         
                     </a>
                 </footer>

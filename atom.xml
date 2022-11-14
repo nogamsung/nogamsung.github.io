@@ -23,6 +23,36 @@
     
       
       <item>
+        <title>Big Data - Graph Mining (Roles and Communities)</title>
+        
+          <description>&lt;h3 id=&quot;roles-vs-groups-in-networks&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 07 Nov 2022 22:30:00 +0900</pubDate>
+        <link>
+        /Big_Data-Graph_Mining_(Roles_and_Communities)</link>
+        <guid isPermaLink="true">/Big_Data-Graph_Mining_(Roles_and_Communities)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Connection-Oriented Transport TCP</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 07 Nov 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Connection-Oriented_Trnasport_TCP</link>
+        <guid isPermaLink="true">/Computer_Network-Connection-Oriented_Trnasport_TCP</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Unreal Engine - Physics Engine</title>
         
           <description>&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
@@ -197,7 +227,7 @@ the details of the physical infrastructure used to carry these messages.&lt;/li&
     
       
       <item>
-        <title>Big Data - Graph Mining</title>
+        <title>Big Data - Graph Mining (Graph Basic, Random Graph, Motif)</title>
         
           <description>&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
 
@@ -205,8 +235,8 @@ the details of the physical infrastructure used to carry these messages.&lt;/li&
         
         <pubDate>Mon, 17 Oct 2022 00:00:00 +0900</pubDate>
         <link>
-        /Big_Data-Graph_Mining</link>
-        <guid isPermaLink="true">/Big_Data-Graph_Mining</guid>
+        /Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)</link>
+        <guid isPermaLink="true">/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)</guid>
       </item>
       
     

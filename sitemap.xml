@@ -20,6 +20,38 @@
     </url>
     
     <url>
+        <loc>/Big_Data-Graph_Mining_(Roles_and_Communities).html</loc>
+        
+        <lastmod>2022-11-07T22:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Connection-Oriented_Trnasport_TCP.html</loc>
+        
+        <lastmod>2022-11-07T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Unreal_Engine-Physics_Engine.html</loc>
         
         <lastmod>2022-11-01T01:30:00+09:00</lastmod>
@@ -132,7 +164,7 @@
     </url>
     
     <url>
-        <loc>/Big_Data-Graph_Mining.html</loc>
+        <loc>/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif).html</loc>
         
         <lastmod>2022-10-17T00:00:00+09:00</lastmod>
         

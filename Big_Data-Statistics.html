@@ -794,6 +794,270 @@ unnatural distribution Q</li>
 </ul>
 
 <h2 id="hypothesis-testing">Hypothesis Testing</h2>
+<ul>
+  <li>Hypothesis: A statement about some characteristic of a variable or a collection of variables. (Agresti &amp; Finlay, 1997)</li>
+  <li>The general goal of a hypothesis test is to provide a plausible explanation for the results from a research study.</li>
+  <li>Hypothesis testing is a technique to help determine whether <strong>a specific treatment has an effect on the individuals in
+a population.</strong></li>
+  <li>The hypothesis test is used to <strong>evaluate the results</strong> from a research study in which,
+    <ul>
+      <li>A sample is selected from the population</li>
+      <li>The treatment is administered to the sample</li>
+      <li>After treatment, the individuals in the sample are measured</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-15.jpeg" alt="" /></p>
+
+<ul>
+  <li>If the individuals in the sample are <strong>noticeably different</strong> from the individuals in the original population, we have
+evidence that <strong>the treatment has an effect</strong></li>
+  <li>However, it is also possible that <strong>the difference between the sample and the population is simply sampling error</strong></li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-16.jpeg" alt="" /></p>
+
+<ul>
+  <li>The purpose of the hypothesis test is to decide between two explanations:
+    <ul>
+      <li>The difference between the sample and the population can be explained by sampling error (there does <strong>not</strong> appear 
+to be a treatment effect)</li>
+      <li>The difference between the sample and population is too large to be explained by sampling error (there <strong>does 
+appear</strong> to be a treatment effect)</li>
+    </ul>
+  </li>
+  <li>All statistical tests have five elements: <strong>Assumptions, hypotheses, test statistics, p-value, and conclusion</strong></li>
+</ul>
+
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+  <li>The statement that the statistic test relies on
+    <ul>
+      <li>E.g., normal distribution, equal population variance</li>
+    </ul>
+  </li>
+  <li>Every test has assumptions, and cannot use if assumptions are violated</li>
+  <li>There also exist some statistics tests to assure assumptions
+    <ul>
+      <li>F-test for equal population variances</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="hypothesis">Hypothesis</h3>
+<ul>
+  <li>Consider two hypotheses about the value of a population parameter
+    <ul>
+      <li><strong>Null hypothesis (H<sub>o</sub>)</strong>: A hypothesis to directly test
+        <ul>
+          <li>Treatment has <strong>no effect</strong> (no change, no difference)</li>
+          <li>What we assume is true to begin with</li>
+          <li>Typically that there is no difference/effect/relationship etc.</li>
+        </ul>
+      </li>
+      <li><strong>Alternative hypothesis (H<sub>A</sub>)</strong>: A hypothesis contradicts that null hypothesis
+        <ul>
+          <li>What we aim to gather evidence of</li>
+          <li>Typically that there is a difference/effect/relationship etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Two-sided vs. One-sided</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>H<sub>0</sub></th>
+      <th>H<sub>1</sub></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>μ = 50 cm/s</td>
+      <td>μ ≠ 50 cm/s</td>
+    </tr>
+    <tr>
+      <td>μ = 50 cm/s</td>
+      <td>μ &lt; 50 cm/s</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="type-of-errors">Type of Errors</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Study reports <strong>NO</strong> difference<br />(Do not reject H<sub>0</sub>)</th>
+      <th>Study reports <strong>IS</strong> a difference<br />(Reject H<sub>0</sub>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H<sub>0</sub> is true<br />Difference does <strong>NOT</strong> exist in population</td>
+      <td>✅</td>
+      <td>❌<br />Type I Error</td>
+    </tr>
+    <tr>
+      <td>H<sub>A</sub> is true<br />Difference <strong>DOES</strong> exist in population</td>
+      <td>❌<br />Type II Error</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>✅ Prob of this = Power of test</li>
+  <li>❌ Type I Error: Typically restrict to a 5% Risk = level of significance</li>
+  <li>❌ Type II Error: Controlled via sample size (= 1 - Power of test)</li>
+</ul>
+
+<h3 id="test-statistics">Test Statistics</h3>
+<ul>
+  <li>Measures how close the sample ahs come to null hypothesis</li>
+  <li>The value itself might mean nothing, but usually meaningful for comparison</li>
+  <li>Example: t-test
+    <ul>
+      <li>Measure <strong>difference of means</strong> when comparing two distributions</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?T&space;=&space;\frac{mean1&space;-&space;mean2}{\frac{s(diff)}{\sqrt{n}}}" alt="" /></p>
+
+<h3 id="what-statistics-to-choose">What statistics to choose?</h3>
+<ul>
+  <li>Depends on data types and goals</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-17.jpeg" alt="" /></p>
+
+<h3 id="cf-parametric-vs-non-parametric">CF) Parametric vs. Non-parametric</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parametric test</th>
+      <th>What to check for normality</th>
+      <th>Non-parametric test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Independent t-test</strong></td>
+      <td>Dependent variable by group</td>
+      <td>Mann-Whitney test</td>
+    </tr>
+    <tr>
+      <td><strong>Paired t-test</strong></td>
+      <td>Paired differences</td>
+      <td>Wilcoxon signed rank test</td>
+    </tr>
+    <tr>
+      <td><strong>One-way ANOVA</strong></td>
+      <td>Residuals/Dependent</td>
+      <td>Kruskal-Wallis test</td>
+    </tr>
+    <tr>
+      <td><strong>Repeated measures ANOVA</strong></td>
+      <td>Residuals</td>
+      <td>Friedman test</td>
+    </tr>
+    <tr>
+      <td><strong>Pearson’s Correlation Co-efficient</strong></td>
+      <td>At least one of the variables should be normal</td>
+      <td>Spearman’s Correlation Co-efficient</td>
+    </tr>
+    <tr>
+      <td><strong>Linear Regression</strong></td>
+      <td>Residuals</td>
+      <td>None - Transform the data</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Notes: The residuals are the differences between the observed and expected values</li>
+</ul>
+
+<h3 id="p-value">p-value</h3>
+<ul>
+  <li>The probability when H<sub></sub> is true, of a test statistic value at least as contradictory to H<sub>0</sub> as the
+value actually observed. The smaller the p-value, the more strongly contradict H<sub>0</sub> (Agresti &amp; Finlay, 1997)</li>
+  <li>p-value is often defined with respect to a chosen confidence level (95%, 99% … &lt;–&gt; 0.1, 0.05, 0.01, …)</li>
+  <li>The t-test has important assumptions that must be satisfied in order for the associated p-value to be valid
+    <ul>
+      <li>The samples are independent</li>
+      <li>Each sample is from a normally distributed population</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="steps-to-undertaking-a-hypothesis-test">Steps to undertaking a hypothesis test</h3>
+<ol>
+  <li>Define study question</li>
+  <li>Set null and alternative hypothesis</li>
+  <li>Calculate a test statistic</li>
+  <li>Calculate a p-value</li>
+  <li>Make a decision and interpret your conclusions</li>
+</ol>
+
+<h2 id="case-examples">Case Examples</h2>
+<h3 id="titanic">Titanic</h3>
+<ul>
+  <li>The ship Titanic sank in 1912 with the loss of most of its passengers</li>
+  <li>809 of the 1,309 passengers and crew died = 61.8%</li>
+  <li>Research question: Did class of travel affect survival?</li>
+</ul>
+
+<h4 id="chi-squared-test">Chi-squared Test</h4>
+<ul>
+  <li>Null: There is NO association between class and survival</li>
+  <li>Alternative: There IS association between class and survival</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-18.jpeg" alt="" /></p>
+
+<h4 id="what-would-be-expected-if-the-null-is-true">What would be expected if the null is true?</h4>
+<ul>
+  <li>Same proportion of people would have died in each class</li>
+  <li>Overall, 809 people died out of 1309 = 61.8%</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-19.jpeg" alt="" /></p>
+
+<h4 id="chi-squared-test-actually-compares-observed-and-expected-frequencies-not-ratio">Chi-squared Test Actually Compares Observed and Expected Frequencies (not ratio)</h4>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-20.jpeg" alt="" /></p>
+
+<p>Expected number dying in each class = 0.618 x no. in class</p>
+
+<h4 id="chi-squared-test-statistic">Chi-squared test statistic</h4>
+<ul>
+  <li>The chi-squared test is used when we want to see if two categorical variables are related</li>
+  <li>The test statistic for the Chi-squared test uses the sum of the squared difference between each pair of observed (O)
+and expected values (E)</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\chi^2&space;=&space;\sum_{i=1}^{n}\frac{(O_i&space;-&space;E_i)^2}{E_i}" alt="" /></p>
+
+<h3 id="results">Results</h3>
+<p>Test Statistic = 127.859</p>
+
+<p><img src="assets/screenshots/2022/10/09/screenshot-21.jpeg" alt="" /></p>
+
+<ul>
+  <li>Decision rule
+    <ul>
+      <li>If P &lt; 0.05 <strong>reject</strong> H<sub>0</sub> =&gt; Evidence of H<sub>A</sub> being true (i.e. <strong>IS</strong> association)</li>
+      <li>If P &gt; 0.05 <strong>do not reject</strong> H<sub>0</sub> (i.e. <strong>NO</strong> association)</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -916,11 +1180,9 @@ unnatural distribution Q</li>
                             
                             
                         
-                            
                         
                         
-                        
-                         <li><a href="/Computer_Network-Principles_of_Reliable_Data_Transfer">Computer Network - Principles of Reliable Data Transfer</a></li>
+                         <li><a href="/Big_Data-Graph_Mining_(Roles_and_Communities)">Big Data - Graph Mining (Roles and Communities)</a></li>
                             
                             
                             
@@ -928,8 +1190,24 @@ unnatural distribution Q</li>
                         
                         
                         
-                         <li><a href="/Computer_Network-Connectionless_Transport_UDP">Computer Network - Connectionless Transport UDP</a></li>
+                         <li><a href="/Computer_Network-Connection-Oriented_Trnasport_TCP">Computer Network - Connection-Oriented Transport TCP</a></li>
                             
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -1247,7 +1525,7 @@ unnatural distribution Q</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 34 posts →
+                        See all 36 posts →
                         
                     </a>
                 </footer>

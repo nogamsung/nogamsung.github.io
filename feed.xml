@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-11T13:35:03+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-14T21:36:53+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
 
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.chrome.options&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;
@@ -82,7 +82,50 @@
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Get all the location</summary></entry><entry><title type="html">Unreal Engine - Physics Engine</title><link href="/Unreal_Engine-Physics_Engine" rel="alternate" type="text/html" title="Unreal Engine - Physics Engine" /><published>2022-11-01T01:30:00+09:00</published><updated>2022-11-01T01:30:00+09:00</updated><id>/Unreal_Engine-Physics_Engine</id><content type="html" xml:base="/Unreal_Engine-Physics_Engine">&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Get all the location</summary></entry><entry><title type="html">Big Data - Graph Mining (Roles and Communities)</title><link href="/Big_Data-Graph_Mining_(Roles_and_Communities)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Roles and Communities)" /><published>2022-11-07T22:30:00+09:00</published><updated>2022-11-07T22:30:00+09:00</updated><id>/Big_Data-Graph_Mining_(Roles_and_Communities)</id><content type="html" xml:base="/Big_Data-Graph_Mining_(Roles_and_Communities)">&lt;h3 id=&quot;roles-vs-groups-in-networks&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;structural-roles-in-networks&quot;&gt;Structural Roles in Networks&lt;/h2&gt;
+&lt;h3 id=&quot;what-are-roles&quot;&gt;What Are Roles?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Roles are “&lt;strong&gt;functions&lt;/strong&gt;” of nodes in a network:
+    &lt;ul&gt;
+      &lt;li&gt;Roles of species in ecosystems&lt;/li&gt;
+      &lt;li&gt;Roles of individuals in companies&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roles are measured by structural behaviors:
+    &lt;ul&gt;
+      &lt;li&gt;centers of stars(hub)&lt;/li&gt;
+      &lt;li&gt;members of cliques(community)&lt;/li&gt;
+      &lt;li&gt;peripheral nodes, etc. (outliers, …)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;example-of-roles&quot;&gt;Example of Roles&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;roles-vs-groups-in-networks-1&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Roles vs. Groups in Networks</summary></entry><entry><title type="html">Computer Network - Connection-Oriented Transport TCP</title><link href="/Computer_Network-Connection-Oriented_Trnasport_TCP" rel="alternate" type="text/html" title="Computer Network - Connection-Oriented Transport TCP" /><published>2022-11-07T19:30:00+09:00</published><updated>2022-11-07T19:30:00+09:00</updated><id>/Computer_Network-Connection-Oriented_Trnasport_TCP</id><content type="html" xml:base="/Computer_Network-Connection-Oriented_Trnasport_TCP">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html"></summary></entry><entry><title type="html">Unreal Engine - Physics Engine</title><link href="/Unreal_Engine-Physics_Engine" rel="alternate" type="text/html" title="Unreal Engine - Physics Engine" /><published>2022-11-01T01:30:00+09:00</published><updated>2022-11-01T01:30:00+09:00</updated><id>/Unreal_Engine-Physics_Engine</id><content type="html" xml:base="/Unreal_Engine-Physics_Engine">&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Ways to move an object in the game world
     &lt;ul&gt;
@@ -305,6 +348,103 @@ message-dictation scenario are examples of such feedback.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;stop-and-wait protocols&lt;/strong&gt;: The sender will not send a new piece of data until it is sure that the receiver has 
+correctly received the current packet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Three possibilities for handling corrupted ACKs or NAKs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Consider what a human might do in the message-dictation scenario. If the speaker didn’t understand the “OK” or “Please
+repeat that” reply from the receiver, the speaker would probably ask, “What did you say?” The receiver would then repeat
+the reply. But what if the speaker’s “What did you say?” is corrupted? The receiver, having no idea whether the garbled 
+sentence was part of the dictation or a request to repeat the last reply, would probably then respond with “What did you
+say?” And the, of course, that response might be garbled. Clearly, we’re heading down a difficult path.&lt;/li&gt;
+  &lt;li&gt;A second alternative is to add enough checksum bits to allow the sender not only to detect, but also to recover from,
+bit errors. This solves the immediate problem for a channel that can corrupt packets but not lose them.&lt;/li&gt;
+  &lt;li&gt;A third approach is for the sender simply to resend the current data packet when it receives a garbled ACK or NAK 
+packet. This approach, however, introduces &lt;strong&gt;duplicate packets&lt;/strong&gt; into the sender-to-receiver channel. The fundamental
+difficulty with duplicate packets is that the receiver doesn’t know whether the ACK or NAK it last send was received
+correctly at the sender. Thus, it cannot know a priori whether an arriving packet contains new data or is a 
+retransmission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Duplicate ACKs&lt;/strong&gt;: The receiver did not correctly receive the packet following the packet that is being ACKed twice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reliable-data-transfer-over-a-lossy-channel-with-bit-errors-rdt30&quot;&gt;Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Duplicate data packets&lt;/strong&gt;: If a packet experiences a particularly large delay, the sender may retransmit the packet
+even though neither the data packet nor its ACK have been lost.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Countdown timer&lt;/strong&gt;: A time-based retransmission mechanism that can interrupt the sender after a given amount of time
+has expired.
+    &lt;ol&gt;
+      &lt;li&gt;Start the timer each time a packet is sent.&lt;/li&gt;
+      &lt;li&gt;Respond to a timer interrupt.&lt;/li&gt;
+      &lt;li&gt;Stop the timer.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Alternating-bit protocol&lt;/strong&gt;: Packet sequence numbers alternate between 0 and 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-pipelined-reliable-data-transfer-protocols&quot;&gt;2️⃣ Pipelined Reliable Data Transfer Protocols&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Transmit the packet into the 1 Gbps link&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{trans}&amp;space;=&amp;space;\frac{L}{R}&amp;space;=&amp;space;\frac{8000&amp;space;bits}{10^9&amp;space;bits/sec}&amp;space;=&amp;space;8&amp;space;microseconds&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Stop-and-wait protocol has a rather dismal sender utilization U&lt;sub&gt;sender&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?U_{sender}&amp;space;=&amp;space;\frac{L/R}{RTT&amp;space;&amp;plus;&amp;space;L/R}&amp;space;=&amp;space;\frac{0.008}{30.008}&amp;space;=&amp;space;0.00027&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Pipelining&lt;/strong&gt;: The many in-transit sender-to-receiver packets can be visualized as filling a pipeline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The consequences for reliable data transfer protocols:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The range of sequence numbers must be increased, since each in-transit packet must have a unique sequence number and 
+there may be multiple, in-transmit, unacknowledged packets.&lt;/li&gt;
+  &lt;li&gt;The sender and receiver sides of the protocols may have to buffer more than one packet. Minimally, the sender will
+have to buffer packets that have been transmitted but not yet acknowledged. Buffering of correctly received packets may 
+also be needed at the receiver, as discussed below.&lt;/li&gt;
+  &lt;li&gt;The range of sequence numbers needed and the buffering requirements will depend on the manner in which a data transfer 
+protocol responds to lost, corrupted, and overly delayed packets. Two basic approaches toward pipelined error recovery 
+can be identified: &lt;strong&gt;Go-Back-N&lt;/strong&gt; and &lt;strong&gt;selective repeat&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-go-back-n-gbn&quot;&gt;3️⃣ Go-Back-N (GBN)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Go-Back-N (GBN) protocol&lt;/strong&gt;: The sender is allowed to transmit multiple packets without waiting for an 
+acknowledgement, but is constrained t have no more than some maximum allowable number, &lt;em&gt;N&lt;/em&gt;, of unacknowledged packets in
+the pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -756,447 +896,4 @@ hosts with an excessive amount of traffic.&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Logical communication: Allows application processes to freely send messages to each other, without worrying about the details of the physical infrastructure used to carry these messages.</summary></entry><entry><title type="html">Big Data - Graph Mining</title><link href="/Big_Data-Graph_Mining" rel="alternate" type="text/html" title="Big Data - Graph Mining" /><published>2022-10-17T00:00:00+09:00</published><updated>2022-10-17T00:00:00+09:00</updated><id>/Big_Data-Graph_Mining</id><content type="html" xml:base="/Big_Data-Graph_Mining">&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
-
-&lt;p&gt;Most data is structured from &lt;strong&gt;Network&lt;/strong&gt; &amp;lt;- A Complex System Consisting of &lt;strong&gt;Interacting Entities&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;graph-entities&quot;&gt;Graph Entities&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-can-be-modeled-as-a-graph&quot;&gt;What can be Modeled as a Graph?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;relations-may-be-inferred&quot;&gt;“Relations” may be inferred&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;why-networks-graph-and--why-now&quot;&gt;Why Networks (Graph)? And .. Why Now?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Universal language for describing complex data
-    &lt;ul&gt;
-      &lt;li&gt;Networks from science, nature, and technology are more similar than one would expect&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Shared vocabulary between fields
-    &lt;ul&gt;
-      &lt;li&gt;Computer Science, Social Science, Physics, Economics, Statistics, Biology&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data availability &amp;amp; computational challenges
-    &lt;ul&gt;
-      &lt;li&gt;Web/mobile, bio, health, and medical&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Impact!
-    &lt;ul&gt;
-      &lt;li&gt;Social networking, Drug design, AI reasoning&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;graph-basic&quot;&gt;Graph Basic&lt;/h2&gt;
-&lt;h3 id=&quot;graph-definition&quot;&gt;Graph Definition&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data Structure (or dataset) to model the relations of entity
-    &lt;ul&gt;
-      &lt;li&gt;E.g., Social relation, p2p network, code flow, paths on the map, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;G = (V, E, W)
-    &lt;ul&gt;
-      &lt;li&gt;V: a set of entity (also called as nodes, object, …)&lt;/li&gt;
-      &lt;li&gt;E: a set of relation (also called as link, …)&lt;/li&gt;
-      &lt;li&gt;W: a set of weight (on the corresponding link)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;graph-types&quot;&gt;Graph Types&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Undirected Graph
-    &lt;ul&gt;
-      &lt;li&gt;E consists of only undirected link&lt;/li&gt;
-      &lt;li&gt;E.g. Facebook friendship&lt;/li&gt;
-      &lt;li&gt;(Usually) indicated by (A, B)&lt;/li&gt;
-      &lt;li&gt;(A, B) = (B, A)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Directed Graph
-    &lt;ul&gt;
-      &lt;li&gt;E consists of only directed links&lt;/li&gt;
-      &lt;li&gt;E.g. Twitter following/follower&lt;/li&gt;
-      &lt;li&gt;(Usually) indicated by &amp;lt;A, B&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&amp;lt;A, B&amp;gt; != &amp;lt;B, A&amp;gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Unweighted Graph
-    &lt;ul&gt;
-      &lt;li&gt;All elements in W are same&lt;/li&gt;
-      &lt;li&gt;(Usually) weights are not indicated&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;degrees&quot;&gt;Degrees&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;In undirected graph,&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;#############################################################
-#############################################################
-#############################################################&lt;/p&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-
-&lt;p&gt;#############################################################
-#############################################################
-#############################################################&lt;/p&gt;
-
-&lt;h2 id=&quot;subgraphs-motifs-and-graphlets&quot;&gt;Subgraphs, Motifs, and Graphlets&lt;/h2&gt;
-&lt;h3 id=&quot;subnetworks-a-property-of-graph&quot;&gt;Subnetworks: A Property of Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Subnetworks, or subgraphs, are the building blocks of networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They have the power to characterize and discriminate networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-to-characterize-a-graph-from-subgraphs&quot;&gt;How to Characterize a Graph from Subgraphs?&lt;/h3&gt;
-&lt;p&gt;Let’s consider all possible (non-isomorphoic) directed subgraphs of size 3&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For each Subgraphs:
-    &lt;ul&gt;
-      &lt;li&gt;Imagine you have a metric capable of classifying the subgraph “significnace”
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Negative values&lt;/strong&gt; indicate &lt;strong&gt;under-representation&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Positive values&lt;/strong&gt; indicate &lt;strong&gt;over-representation&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;We create a &lt;strong&gt;network significance profile&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;A feature vector with values for all subgraph types&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Next: Compare profiles of different networks:
-    &lt;ul&gt;
-      &lt;li&gt;Regulatory network (gene regulation)&lt;/li&gt;
-      &lt;li&gt;Neuronal network (synaptic connection)&lt;/li&gt;
-      &lt;li&gt;World Wide Web (hyperlinks between pages)&lt;/li&gt;
-      &lt;li&gt;Social networks (friendships)&lt;/li&gt;
-      &lt;li&gt;Language networks (word adjacency)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;case-example-og-subgraphs&quot;&gt;Case Example og Subgraphs&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Networks from the same domain have similar significance profiles&lt;/p&gt;
-
-&lt;h3 id=&quot;network-motifs&quot;&gt;Network Motifs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Network motifs: “recurring, significant patterns of interconnections”&lt;/li&gt;
-  &lt;li&gt;How to define a network motif:
-    &lt;ul&gt;
-      &lt;li&gt;Pattern: Small partial &lt;strong&gt;subgraph&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Recurring: Found many times, i.e., with high frequency&lt;/li&gt;
-      &lt;li&gt;Significant: More frequent than expected, i.e., in randomly generated networks
-        &lt;ul&gt;
-          &lt;li&gt;Erdos - Renyi random graphs, scale-free networks&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;partial-subgraphs&quot;&gt;Partial Subgraphs&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Induced subgraphs&lt;/strong&gt; of graph G is a graph, formed from a subset X of the vertices of graph G and all of the edges 
-connecting pairs of vertices in subset X.&lt;/p&gt;
-
-&lt;h3 id=&quot;recurrence&quot;&gt;Recurrence&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Allow &lt;strong&gt;overlapping of motifs&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Network on the right has 4 occurrences of the motif:
-    &lt;ul&gt;
-      &lt;li&gt;{1, 2, 3, 4, 5}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 6}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 7}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 8}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;significance-of-motif&quot;&gt;Significance of Motif&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Key idea: Subgraphs that occur in a real network much more frequently than in a random network have functional 
-significance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">WHY GRAPH?</summary></entry><entry><title type="html">Intelligent Information Systems - Crawling</title><link href="/Intelligent_Information_Systems-Crawling" rel="alternate" type="text/html" title="Intelligent Information Systems - Crawling" /><published>2022-10-16T19:30:00+09:00</published><updated>2022-10-16T19:30:00+09:00</updated><id>/Intelligent_Information_Systems-Crawling</id><content type="html" xml:base="/Intelligent_Information_Systems-Crawling">&lt;h2 id=&quot;urllib&quot;&gt;urllib&lt;/h2&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.naver.com/&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;beautifulsoup&quot;&gt;BeautifulSoup()&lt;/h2&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.naver.com/&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;developers-tool&quot;&gt;Developers Tool&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;find--class-property&quot;&gt;find() &amp;amp; Class Property&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.naver.com/&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;div&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;service_area&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;text-extraction&quot;&gt;Text Extraction&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.naver.com/&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;NM_set_home_btn&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;naver-menu-name-extraction&quot;&gt;Naver Menu Name Extraction&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.naver.com&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;list_nav type_fix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;li_result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li_res&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;a_li_result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;li_res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a_li_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;get-web-page-data&quot;&gt;Get Web Page Data&lt;/h2&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;get-title&quot;&gt;Get Title&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;string-vs-text&quot;&gt;.string vs .text&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;.string&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-22.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;.text&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;contents&quot;&gt;.contents&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-&amp;lt;html&amp;gt;
-&amp;lt;td&amp;gt;some text&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;even &amp;lt;p&amp;gt;more text&amp;lt;/p&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/html&amp;gt;
-&quot;&quot;&quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;get-rate-value&quot;&gt;Get Rate Value&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.naver?sel=pnt&amp;amp;date=20211018&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;point_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;crawling-data-and-drawing-a-graph&quot;&gt;Crawling Data and Drawing a Graph&lt;/h2&gt;
-&lt;h3 id=&quot;pandas-method&quot;&gt;Pandas Method&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;pandas.date_range
-    &lt;ul&gt;
-      &lt;li&gt;pandas.date_range(start=None, end=None, periods=None, freq=None, tz=None, normalize=False, name=None, 
-closed=_NoDefault.no_default, inclusive=None, **kwargs)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;pandas.pivot_table
-    &lt;ul&gt;
-      &lt;li&gt;pandas.pivot_table(data, values=None, index=None, columns=None, aggfunc=’mean’, fill_value=None, margins=False, 
-dropna=True, margins_name=’All’, observed=False, sort=True)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;pandas.DataFrame.query
-    &lt;ul&gt;
-      &lt;li&gt;pandas.DataFrame.query(expr, inplace=False, **kwargs)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pandas.pydata.org/docs/reference/&quot;&gt;Pandas Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">urllib</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Logical communication: Allows application processes to freely send messages to each other, without worrying about the details of the physical infrastructure used to carry these messages.</summary></entry></feed>

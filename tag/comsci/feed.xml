@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-11-11T13:35:03+09:00</updated>
+  <updated>2022-11-14T21:36:53+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -150,6 +150,117 @@
     </entry>
   
     <entry>
+      <title type="html">Big Data - Graph Mining (Roles and Communities)</title>
+      <link href="/Big_Data-Graph_Mining_(Roles_and_Communities)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Roles and Communities)" />
+      <published>2022-11-07T22:30:00+09:00</published>
+      <updated>2022-11-07T22:30:00+09:00</updated>
+      <id>/Big_Data-Graph_Mining_(Roles_and_Communities)</id>
+      <content type="html" xml:base="/Big_Data-Graph_Mining_(Roles_and_Communities)">&lt;h3 id=&quot;roles-vs-groups-in-networks&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;structural-roles-in-networks&quot;&gt;Structural Roles in Networks&lt;/h2&gt;
+&lt;h3 id=&quot;what-are-roles&quot;&gt;What Are Roles?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Roles are “&lt;strong&gt;functions&lt;/strong&gt;” of nodes in a network:
+    &lt;ul&gt;
+      &lt;li&gt;Roles of species in ecosystems&lt;/li&gt;
+      &lt;li&gt;Roles of individuals in companies&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roles are measured by structural behaviors:
+    &lt;ul&gt;
+      &lt;li&gt;centers of stars(hub)&lt;/li&gt;
+      &lt;li&gt;members of cliques(community)&lt;/li&gt;
+      &lt;li&gt;peripheral nodes, etc. (outliers, …)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;example-of-roles&quot;&gt;Example of Roles&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;roles-vs-groups-in-networks-1&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">Roles vs. Groups in Networks</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Connection-Oriented Transport TCP</title>
+      <link href="/Computer_Network-Connection-Oriented_Trnasport_TCP" rel="alternate" type="text/html" title="Computer Network - Connection-Oriented Transport TCP" />
+      <published>2022-11-07T19:30:00+09:00</published>
+      <updated>2022-11-07T19:30:00+09:00</updated>
+      <id>/Computer_Network-Connection-Oriented_Trnasport_TCP</id>
+      <content type="html" xml:base="/Computer_Network-Connection-Oriented_Trnasport_TCP">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Computer Network - Principles of Reliable Data Transfer</title>
       <link href="/Computer_Network-Principles_of_Reliable_Data_Transfer" rel="alternate" type="text/html" title="Computer Network - Principles of Reliable Data Transfer" />
       <published>2022-10-31T20:00:00+09:00</published>
@@ -216,6 +327,103 @@ message-dictation scenario are examples of such feedback.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;stop-and-wait protocols&lt;/strong&gt;: The sender will not send a new piece of data until it is sure that the receiver has 
+correctly received the current packet.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Three possibilities for handling corrupted ACKs or NAKs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Consider what a human might do in the message-dictation scenario. If the speaker didn’t understand the “OK” or “Please
+repeat that” reply from the receiver, the speaker would probably ask, “What did you say?” The receiver would then repeat
+the reply. But what if the speaker’s “What did you say?” is corrupted? The receiver, having no idea whether the garbled 
+sentence was part of the dictation or a request to repeat the last reply, would probably then respond with “What did you
+say?” And the, of course, that response might be garbled. Clearly, we’re heading down a difficult path.&lt;/li&gt;
+  &lt;li&gt;A second alternative is to add enough checksum bits to allow the sender not only to detect, but also to recover from,
+bit errors. This solves the immediate problem for a channel that can corrupt packets but not lose them.&lt;/li&gt;
+  &lt;li&gt;A third approach is for the sender simply to resend the current data packet when it receives a garbled ACK or NAK 
+packet. This approach, however, introduces &lt;strong&gt;duplicate packets&lt;/strong&gt; into the sender-to-receiver channel. The fundamental
+difficulty with duplicate packets is that the receiver doesn’t know whether the ACK or NAK it last send was received
+correctly at the sender. Thus, it cannot know a priori whether an arriving packet contains new data or is a 
+retransmission.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Duplicate ACKs&lt;/strong&gt;: The receiver did not correctly receive the packet following the packet that is being ACKed twice.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reliable-data-transfer-over-a-lossy-channel-with-bit-errors-rdt30&quot;&gt;Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Duplicate data packets&lt;/strong&gt;: If a packet experiences a particularly large delay, the sender may retransmit the packet
+even though neither the data packet nor its ACK have been lost.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Countdown timer&lt;/strong&gt;: A time-based retransmission mechanism that can interrupt the sender after a given amount of time
+has expired.
+    &lt;ol&gt;
+      &lt;li&gt;Start the timer each time a packet is sent.&lt;/li&gt;
+      &lt;li&gt;Respond to a timer interrupt.&lt;/li&gt;
+      &lt;li&gt;Stop the timer.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Alternating-bit protocol&lt;/strong&gt;: Packet sequence numbers alternate between 0 and 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-pipelined-reliable-data-transfer-protocols&quot;&gt;2️⃣ Pipelined Reliable Data Transfer Protocols&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Transmit the packet into the 1 Gbps link&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{trans}&amp;space;=&amp;space;\frac{L}{R}&amp;space;=&amp;space;\frac{8000&amp;space;bits}{10^9&amp;space;bits/sec}&amp;space;=&amp;space;8&amp;space;microseconds&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Stop-and-wait protocol has a rather dismal sender utilization U&lt;sub&gt;sender&lt;/sub&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?U_{sender}&amp;space;=&amp;space;\frac{L/R}{RTT&amp;space;&amp;plus;&amp;space;L/R}&amp;space;=&amp;space;\frac{0.008}{30.008}&amp;space;=&amp;space;0.00027&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Pipelining&lt;/strong&gt;: The many in-transit sender-to-receiver packets can be visualized as filling a pipeline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The consequences for reliable data transfer protocols:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The range of sequence numbers must be increased, since each in-transit packet must have a unique sequence number and 
+there may be multiple, in-transmit, unacknowledged packets.&lt;/li&gt;
+  &lt;li&gt;The sender and receiver sides of the protocols may have to buffer more than one packet. Minimally, the sender will
+have to buffer packets that have been transmitted but not yet acknowledged. Buffering of correctly received packets may 
+also be needed at the receiver, as discussed below.&lt;/li&gt;
+  &lt;li&gt;The range of sequence numbers needed and the buffering requirements will depend on the manner in which a data transfer 
+protocol responds to lost, corrupted, and overly delayed packets. Two basic approaches toward pipelined error recovery 
+can be identified: &lt;strong&gt;Go-Back-N&lt;/strong&gt; and &lt;strong&gt;selective repeat&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-go-back-n-gbn&quot;&gt;3️⃣ Go-Back-N (GBN)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Go-Back-N (GBN) protocol&lt;/strong&gt;: The sender is allowed to transmit multiple packets without waiting for an 
+acknowledgement, but is constrained t have no more than some maximum allowable number, &lt;em&gt;N&lt;/em&gt;, of unacknowledged packets in
+the pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -655,12 +863,12 @@ hosts with an excessive amount of traffic.&lt;/li&gt;
     </entry>
   
     <entry>
-      <title type="html">Big Data - Graph Mining</title>
-      <link href="/Big_Data-Graph_Mining" rel="alternate" type="text/html" title="Big Data - Graph Mining" />
+      <title type="html">Big Data - Graph Mining (Graph Basic, Random Graph, Motif)</title>
+      <link href="/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Graph Basic, Random Graph, Motif)" />
       <published>2022-10-17T00:00:00+09:00</published>
       <updated>2022-10-17T00:00:00+09:00</updated>
-      <id>/Big_Data-Graph_Mining</id>
-      <content type="html" xml:base="/Big_Data-Graph_Mining">&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
+      <id>/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)</id>
+      <content type="html" xml:base="/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)">&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
 
 &lt;p&gt;Most data is structured from &lt;strong&gt;Network&lt;/strong&gt; &amp;lt;- A Complex System Consisting of &lt;strong&gt;Interacting Entities&lt;/strong&gt;&lt;/p&gt;
 
@@ -755,20 +963,386 @@ hosts with an excessive amount of traffic.&lt;/li&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;degrees&quot;&gt;Degrees&lt;/h2&gt;
+&lt;h3 id=&quot;degrees&quot;&gt;Degrees&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;In undirected graph,&lt;/li&gt;
+  &lt;li&gt;In undirected graph,
+    &lt;ul&gt;
+      &lt;li&gt;no. links connected to a given node (= no. neighbors)&lt;/li&gt;
+      &lt;li&gt;In G1, degree(0) = 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In directed graph,
+    &lt;ul&gt;
+      &lt;li&gt;In-degrees: no. links toward a given node (= no. incoming links)&lt;/li&gt;
+      &lt;li&gt;Out-degrees: no. links from a given node (= no. out-going links)&lt;/li&gt;
+      &lt;li&gt;In G3, In-degree(1) = 1, Out-degree(1) = 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;#############################################################
-#############################################################
-#############################################################&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;TODO&lt;/p&gt;
+&lt;h3 id=&quot;representing-a-graph-adjacent-matrix&quot;&gt;Representing a Graph: Adjacent Matrix&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;For an adjacent matrix M,
+    &lt;ul&gt;
+      &lt;li&gt;M[i][j] = 1 if there is a link from node i to node j&lt;/li&gt;
+      &lt;li&gt;M[i][j] = 0 otherwise&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Symmetric when undirected graph&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;#############################################################
-#############################################################
-#############################################################&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tree&quot;&gt;Tree&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A type of graph satisfying the following conditions
+    &lt;ul&gt;
+      &lt;li&gt;All nodes are connected (i.e., no isolated nodes)&lt;/li&gt;
+      &lt;li&gt;No cycles&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tools-for-graph-modeling--analysis&quot;&gt;Tools for Graph Modeling &amp;amp; Analysis&lt;/h2&gt;
+&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Graph analysis
+    &lt;ul&gt;
+      &lt;li&gt;igraph (Fast)&lt;/li&gt;
+      &lt;li&gt;NetworkX&lt;/li&gt;
+      &lt;li&gt;Pajek&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Network visualization tools (valid for small network)
+    &lt;ul&gt;
+      &lt;li&gt;Gephi&lt;/li&gt;
+      &lt;li&gt;Graphviz&lt;/li&gt;
+      &lt;li&gt;Pajek&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;igraph-example&quot;&gt;iGraph Example&lt;/h3&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;igraph&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;igraph&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;__main__&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Read_Ncol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;test1.csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weights&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;directed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;node_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;edge_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Number of nodes = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Number of edges = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edge_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;len(degrees) = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Avg.Degree = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitivity_undirected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Avg.CC = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;network-properties&quot;&gt;Network Properties&lt;/h2&gt;
+&lt;h3 id=&quot;a-first-measure-for-graph&quot;&gt;A first measure for graph&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assume that you have modeled a graph, what can you do next?&lt;/li&gt;
+  &lt;li&gt;You will have to measure “coarse-grained characteristics” of a graph!
+    &lt;ul&gt;
+      &lt;li&gt;Can be done with network properties
+        &lt;ul&gt;
+          &lt;li&gt;Degree distribution: &lt;em&gt;P(k)&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;Path length: &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;Clustering coefficient: &lt;em&gt;C&lt;/em&gt;&lt;/li&gt;
+          &lt;li&gt;Connected components: &lt;em&gt;s&lt;/em&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;degree-distribution&quot;&gt;Degree Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Degree distribution &lt;em&gt;P(k)&lt;/em&gt;: Probability that a randomly chosen node has degree &lt;em&gt;k&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;N&lt;sub&gt;k&lt;/sub&gt;&lt;/em&gt; = no. nodes with degree &lt;em&gt;k&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Normalized histogram:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;P(k)&lt;/em&gt; = &lt;em&gt;N&lt;sub&gt;k&lt;/sub&gt;&lt;/em&gt; / &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;paths-in-a-graph&quot;&gt;Paths in a Graph&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;path&lt;/strong&gt; is a sequence of nodes in which each node is linked to the next one&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;P&lt;sub&gt;n&lt;/sub&gt; = {i&lt;sub&gt;0&lt;/sub&gt;, i&lt;sub&gt;1&lt;/sub&gt;, i&lt;sub&gt;2&lt;/sub&gt;, …, i&lt;sub&gt;n&lt;/sub&gt;}&lt;/p&gt;
+
+&lt;p&gt;P&lt;sub&gt;n&lt;/sub&gt; = {(i&lt;sub&gt;0&lt;/sub&gt;, i&lt;sub&gt;1&lt;/sub&gt;), (i&lt;sub&gt;1&lt;/sub&gt;, i&lt;sub&gt;2&lt;/sub&gt;), (i&lt;sub&gt;2&lt;/sub&gt;, i&lt;sub&gt;3&lt;/sub&gt;), …,
+(i&lt;sub&gt;n-1&lt;/sub&gt;, i&lt;sub&gt;n&lt;/sub&gt;)}&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;NOTE ❗️&lt;/h4&gt;
+&lt;p&gt;A path can intersect itself and pass through the same edge multiple times&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;i.e., the path length between two nodes can be infinite&lt;/li&gt;
+  &lt;li&gt;e.g.: ACDB&lt;strong&gt;CD&lt;/strong&gt;EG&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;distance-shortest-path-length&quot;&gt;Distance (Shortest Path Length)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The number of edges along the shortest path connecting the nodes
+    &lt;ul&gt;
+      &lt;li&gt;If the two nodes are not connected, the distance is usually defined as infinite (or zero)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In directed graphs, paths need to follow the direction of arrows
+    &lt;ul&gt;
+      &lt;li&gt;i.e., Distance is not symmetric h&lt;sub&gt;B,C&lt;/sub&gt; != h&lt;sub&gt;C,B&lt;/sub&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;diameter--apl&quot;&gt;Diameter &amp;amp; APL&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Diameter: The maximum (shortest path) distance between any pair of nodes in a graph&lt;/li&gt;
+  &lt;li&gt;Average path length (for a &lt;strong&gt;connected&lt;/strong&gt; graph or a &lt;strong&gt;strong connected&lt;/strong&gt; directed graph)
+    &lt;ul&gt;
+      &lt;li&gt;Many times we compute the average only over the connected pairs of nodes (that is, we ignore “infinite” length paths
+) -&amp;gt; &lt;strong&gt;Isolated nodes are not considered!&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{h}&amp;space;=&amp;space;\frac{1}{2E_{max}}\sum_{i,j\neq&amp;space;i}h_{ij}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;h&lt;sub&gt;ij&lt;/sub&gt;&lt;/strong&gt; is the distance from node &lt;strong&gt;i&lt;/strong&gt; to node &lt;strong&gt;j&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;E&lt;sub&gt;max&lt;/sub&gt;&lt;/strong&gt; is the max number of edges (total number of node pairs) = &lt;strong&gt;n(n-1) / 2&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;clustering-coefficient&quot;&gt;Clustering Coefficient&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clustering coefficient (for undirected graphs):
+    &lt;ul&gt;
+      &lt;li&gt;How connected are &lt;strong&gt;i&lt;/strong&gt;’s neighbors to each other?&lt;/li&gt;
+      &lt;li&gt;Node &lt;strong&gt;i&lt;/strong&gt; with degree &lt;strong&gt;k&lt;sub&gt;i&lt;/sub&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;=&amp;space;\frac{2e_i}{k_i(k_i-1)}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;em&gt;e&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; is the number of edges between the neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;\in&amp;space;[0,1]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;k(k-1)&lt;/em&gt; is max number of edges between the &lt;em&gt;k&lt;/em&gt; neighbors&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clustering coefficient is undefined (or defined to be 0) for nodes with degree 0 or 1&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Average clustering coefficient:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C&amp;space;=&amp;space;\frac{1}{N}\sum_{i}^{N}C_i&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;computing-clustering-coefficient&quot;&gt;Computing Clustering Coefficient&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clustering coefficient (for undirected graphs):
+    &lt;ul&gt;
+      &lt;li&gt;How connected are &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;’s neighbors to each other?&lt;/li&gt;
+      &lt;li&gt;Node &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; with degree &lt;strong&gt;&lt;em&gt;k&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;=&amp;space;\frac{2e_i}{k_i(k_i-1)}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;em&gt;e&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; is the number of edges between the neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-35.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Size of the largest connected component
+    &lt;ul&gt;
+      &lt;li&gt;Largest set where any two vertices can be joined by a path&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-36.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finding connected components:
+    &lt;ul&gt;
+      &lt;li&gt;Start from random node and perform Breath First Search (BFS)&lt;/li&gt;
+      &lt;li&gt;Label the nodes that BFS visits&lt;/li&gt;
+      &lt;li&gt;If all nodes are visited, the network is connected&lt;/li&gt;
+      &lt;li&gt;Otherwise, find an unvisited node and repeat BFS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;summary-key-network-properties&quot;&gt;Summary: Key Network Properties&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Degree distribution&lt;/strong&gt;: P(k)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Path length&lt;/strong&gt;: h&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clustering coefficient&lt;/strong&gt;: C&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Connected components&lt;/strong&gt;: s&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;generating-random-graph-erdos-renyi&quot;&gt;Generating Random Graph (Erdos-Renyi)&lt;/h2&gt;
+&lt;h3 id=&quot;simple-algorithm-to-generate-a-random-graph&quot;&gt;Simple Algorithm to Generate a Random Graph&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A graph “uniformly” create or select links&lt;/li&gt;
+  &lt;li&gt;Two variants
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;G&lt;sub&gt;np&lt;/sub&gt;&lt;/strong&gt;: undirected graph on &lt;em&gt;n&lt;/em&gt; nodes where each edge (&lt;em&gt;u&lt;/em&gt;, &lt;em&gt;v&lt;/em&gt;) appears i.i.d. with probability &lt;em&gt;p&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;G&lt;sub&gt;nm&lt;/sub&gt;&lt;/strong&gt;: undirected graph with &lt;em&gt;n&lt;/em&gt; nodes, and &lt;em&gt;m&lt;/em&gt; edges picked uniformly at random&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What kind of networks do such models produce?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;random-graph-model&quot;&gt;Random Graph Model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;n&lt;/em&gt; and &lt;em&gt;p&lt;/em&gt; do not uniquely determine the graph!
+    &lt;ul&gt;
+      &lt;li&gt;The graph is a result of random process&lt;/li&gt;
+      &lt;li&gt;We can have many different realizations given the same &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-37.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;properties-of-gnp&quot;&gt;Properties of G&lt;sub&gt;np&lt;/sub&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Degree distribution&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-38.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Average path length&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;O(log n)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Average clustering coefficient&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{k}&amp;space;/&amp;space;n&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Largest Connected Component&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;GCC exists when k &amp;gt; 1&lt;/p&gt;
+
+&lt;h3 id=&quot;random-graph-gnp-does-not-reflect-real-world&quot;&gt;Random Graph &lt;em&gt;G&lt;sub&gt;np&lt;/sub&gt;&lt;/em&gt; Does NOT Reflect Real-World&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-39.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Other examples&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-40.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-problem-comes-from-edge-locality&quot;&gt;The Problem Comes from “Edge Locality”&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The major difference is that real-world network has “local structure”
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Triadic closure&lt;/strong&gt;: Friend of a friend is my friend&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-41.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Simple adding edges” (i.e., uniform triad) does not work&lt;/li&gt;
+  &lt;li&gt;How can we create a graph with high CC &amp;amp; low diameter?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;creating-the-graph-with-high-cc-and-low-diameter&quot;&gt;Creating the Graph with High CC and Low Diameter&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-42.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The point is “how to add edges”
+    &lt;ul&gt;
+      &lt;li&gt;Clustering implies edge “locality”&lt;/li&gt;
+      &lt;li&gt;Randomness enables “shortcuts”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;solution-the-small-world-model&quot;&gt;Solution: The Small World Model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start with a low-dimensional regular lattice
+    &lt;ul&gt;
+      &lt;li&gt;(In our case we are using a ring as a lattice)&lt;/li&gt;
+      &lt;li&gt;Has high clustering coefficient&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rewire: &lt;strong&gt;Introduce randomness&lt;/strong&gt; (“shortcuts”)
+    &lt;ul&gt;
+      &lt;li&gt;Add/remove edges to create shortcuts to join remote parts of the lattice&lt;/li&gt;
+      &lt;li&gt;For each edge, with probability &lt;em&gt;p&lt;/em&gt;, move the other endpoints to a random node&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-43.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-44.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-45.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-small-world-summary&quot;&gt;The Small World: Summary&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Could a network with high clustering be at the same time a small world?
+    &lt;ul&gt;
+      &lt;li&gt;Yes! You don’t need more than a few random links&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The Watts Strogatz Model
+    &lt;ul&gt;
+      &lt;li&gt;Provides insight on the interplay between clustering and the small-world&lt;/li&gt;
+      &lt;li&gt;Captures the structure of many realistic networks&lt;/li&gt;
+      &lt;li&gt;Accounts for the high clustering of real networks&lt;/li&gt;
+      &lt;li&gt;Does not lead to the correct degree distribution&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;subgraphs-motifs-and-graphlets&quot;&gt;Subgraphs, Motifs, and Graphlets&lt;/h2&gt;
 &lt;h3 id=&quot;subnetworks-a-property-of-graph&quot;&gt;Subnetworks: A Property of Graph&lt;/h3&gt;
@@ -867,6 +1441,148 @@ significance&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Motifs are overrepresented in a network when compared to randomized networks:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Z&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; captures statistical significance of motif &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Z_i=(N_i^{real}-\overline{N}_i^{rand})/std(N_i^{rand})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;N&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;real&lt;/sup&gt; is no. (subgraphs of type &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;) in network G&lt;sup&gt;real&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;N&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;rand&lt;/sup&gt; is no. (subgraphs of type &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;) in network G&lt;sup&gt;rand&lt;/sup&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Network significance profile (SP):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?SP_i=Z_i/\sqrt{\sum_{j}Z_j^2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SP is a vector of &lt;strong&gt;normalized Z-scores&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;SP emphasizes realtive significance of subgraphs:
+    &lt;ul&gt;
+      &lt;li&gt;Important for comparison of networks of different sizes&lt;/li&gt;
+      &lt;li&gt;Generally, larger networks display higher Z-scores&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;case-example-invitation-network-in-aion&quot;&gt;Case Example: Invitation Network in Aion&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-46.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;detecting-motifs&quot;&gt;Detecting Motifs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Count subgraphs &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; in G&lt;sup&gt;real&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Count subgraphs &lt;em&gt;i&lt;/em&gt; in random networks G&lt;sup&gt;random&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Configuration model: Each G&lt;sup&gt;rand&lt;/sup&gt; has the same no.(nodes), no.(edges), and no.(degree distribution) as G
+&lt;sup&gt;real&lt;sup&gt;&lt;/sup&gt;&lt;/sup&gt;&lt;/li&gt;
+  &lt;li&gt;Assign Z-score to &lt;em&gt;i&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Z_i=(N_i^{real}-\overline{N}_i^{rand})/std(N_i^{rand})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High Z-score: Subgraph &lt;em&gt;i** is a network motif of &lt;strong&gt;*G&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-47.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;variations-of-motif-concept&quot;&gt;Variations of Motif Concept&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Canonical definition:
+    &lt;ul&gt;
+      &lt;li&gt;Directed and undirected&lt;/li&gt;
+      &lt;li&gt;Colored and uncolored&lt;/li&gt;
+      &lt;li&gt;Temporal and static motifs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-48.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Variations on concept
+    &lt;ul&gt;
+      &lt;li&gt;Different &lt;strong&gt;frequency concepts&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Different &lt;strong&gt;significance metrics&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Under-representation&lt;/strong&gt; (anti-motifs)&lt;/li&gt;
+      &lt;li&gt;Different constraints for &lt;strong&gt;null model&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-49.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;graphlets-node-feature-vectors&quot;&gt;Graphlets: Node Feature Vectors&lt;/h2&gt;
+&lt;h3 id=&quot;new-concept-graphlets&quot;&gt;New Concept: Graphlets&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Graphlets&lt;/strong&gt;: connected non-isomorphic subgraphs
+    &lt;ul&gt;
+      &lt;li&gt;Induced subgraphs of any frequency&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-50.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;graphlet-degree-vector-gdv&quot;&gt;Graphlet Degree Vector (GDV)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Next: Use graphlets to obtain a &lt;strong&gt;node-level subgraph&lt;/strong&gt; metric&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt; counts no.(edges) that a node touches:
+    &lt;ul&gt;
+      &lt;li&gt;Can we generalize this notion for graphlets? - Yes!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-51.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Graphlet degree vector&lt;/strong&gt; counts no.(graphlets) that a node touches&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;automorphism-orbit&quot;&gt;Automorphism Orbit&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;An automorphism orbit takes into account that &lt;strong&gt;symmetries of a subgraph&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Graphlet Degree Vector (GDV): a vector with the frequency of the node in each orbit position&lt;/li&gt;
+  &lt;li&gt;Example: Graphlet degree vector of node &lt;em&gt;v&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-52.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;graphlet-degree-vector-gdv-1&quot;&gt;Graphlet Degree Vector (GDV)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Graphlet degree vector counts no.(graphlets) that a node touches at a particular orbit&lt;/li&gt;
+  &lt;li&gt;Considering graphlets on 2 to 5 nodes we get:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Vector of 73 coordinates&lt;/strong&gt; is a signature of a node that describes the topology of node’s neighborhood&lt;/li&gt;
+      &lt;li&gt;Captures its interconnectivities out to &lt;strong&gt;a distance of 4 hops&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Graphelet degree vector provides a measure of a &lt;strong&gt;node’s local network topology&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;Comparing vectors of two nodes provides a highly constraining measure of local topological similarity between them&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;graphlet-degree-vector-example&quot;&gt;Graphlet Degree Vector Example&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-53.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Graphlet Degree Vector (GDV) of node A:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;-th element of GDV(A): no.(graphlets) that touch A at orbit &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Highlighted are graphlets that touch node A at orbits 15, 19, 27, and 35 from left to right&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1159,772 +1875,6 @@ dropna=True, margins_name=’All’, observed=False, sort=True)&lt;/li&gt;
 
       
         <summary type="html">urllib</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Computer Network - Socket Programming</title>
-      <link href="/Computer_Network-Socket_Programming" rel="alternate" type="text/html" title="Computer Network - Socket Programming" />
-      <published>2022-10-14T00:00:00+09:00</published>
-      <updated>2022-10-14T00:00:00+09:00</updated>
-      <id>/Computer_Network-Socket_Programming</id>
-      <content type="html" xml:base="/Computer_Network-Socket_Programming">&lt;h2 id=&quot;1️⃣-socket-programming-with-udp&quot;&gt;1️⃣ Socket Programming with UDP&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Port number&lt;/strong&gt;: An identifier for a specific network application process as it may be running multiple network 
-application.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Demonstration of simple client-server application socket programming for both UDP and TCP:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;The client reads a line of characters (data) from its keyboard and sends the data to the server.&lt;/li&gt;
-  &lt;li&gt;The server receives the data and converts the characters to uppercase.&lt;/li&gt;
-  &lt;li&gt;The server sends the modified data to the client.&lt;/li&gt;
-  &lt;li&gt;The client receives the modified data and displays the line on its screen.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;udpclientpy&quot;&gt;UDPClient.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;localhost&apos;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Input lowercase sentence:&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;udpserverpy&quot;&gt;UDPServer.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The server is ready to receive&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modifiedMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2️⃣-socket-programming-with-tcp&quot;&gt;2️⃣ Socket Programming with TCP&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tcpclientpy&quot;&gt;TCPClient.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;localhost&apos;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;serverName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Input lowercase sentence:&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;moidifiedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;From Server: &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modifiedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clientSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;tcpserverpy&quot;&gt;TCPServer.py&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12000&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverPort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;The server is ready to receive&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serverSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accept&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;decode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upper&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;capitalizedSentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;connectionSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/13/screenshot-3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">1️⃣ Socket Programming with UDP Port number: An identifier for a specific network application process as it may be running multiple network application.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Statistics</title>
-      <link href="/Big_Data-Statistics" rel="alternate" type="text/html" title="Big Data - Statistics" />
-      <published>2022-10-10T00:00:00+09:00</published>
-      <updated>2022-10-10T00:00:00+09:00</updated>
-      <id>/Big_Data-Statistics</id>
-      <content type="html" xml:base="/Big_Data-Statistics">&lt;h2 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h2&gt;
-
-&lt;h3 id=&quot;why-statistics&quot;&gt;Why Statistics&lt;/h3&gt;
-&lt;p&gt;In general, analysis process is…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h2&gt;
-&lt;h3 id=&quot;population-vs-sample&quot;&gt;Population vs. Sample&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Population: A statistical population is the set of measurements or record of some qualitative trait corresponding to
-the entire collection of units for which inferences are to be made&lt;/li&gt;
-  &lt;li&gt;Sample: A sample from statistical population is the set of measurements that are actually collected in the course of
-an investigation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;descriptive-vs-inferential&quot;&gt;Descriptive vs. Inferential&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Descriptive Statistics: Consists of methods for organizing and summarizing information (Weiss, 1999)&lt;/li&gt;
-  &lt;li&gt;Inferential Statistics: Consists of methods for drawing and measuring the reliability of conclusions about population
-based on information obtained from a sample of the population (Weiss, 1999)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Descriptive and inferential statistics are interrelated&lt;/p&gt;
-
-&lt;p&gt;Assume that you just started data analysis. What should you do?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Preliminary descriptive analysis&lt;/li&gt;
-  &lt;li&gt;(Choice of appropriate inferential method)&lt;/li&gt;
-  &lt;li&gt;Inferential analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;parameters-vs-statistics&quot;&gt;Parameters vs. Statistics&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameters: An unknown numerical summary of the population (Agresti &amp;amp; Finalay, 1997)&lt;/li&gt;
-  &lt;li&gt;Statistics: A known numerical summary of the sample which can be used to make inference about parameters (Agresti &amp;amp; 
-Finalay, 1997)&lt;/li&gt;
-  &lt;li&gt;Example
-    &lt;ul&gt;
-      &lt;li&gt;The proportion &lt;em&gt;p&lt;/em&gt; of 18-30 year-olds who use Twitter at least once a day -&amp;gt; Parameter&lt;/li&gt;
-      &lt;li&gt;The proportion &lt;em&gt;p’&lt;/em&gt; of 18-30 year-olds using Twitter at least once a day, calculated from a sample of 18-30 
-year-olds&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;discrete-vs-continuous&quot;&gt;Discrete vs. Continuous&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Discrete Variables: indicates a finite numbers of values or as many values as there are integers. E.g. tweet counts 
-per day&lt;/li&gt;
-  &lt;li&gt;Continuous Variables: indicates any real values. E.g. time difference between two consecutive tweet postings&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;central-tendency&quot;&gt;Central Tendency&lt;/h2&gt;
-&lt;h3 id=&quot;mean&quot;&gt;Mean&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The sum of observed values in a data divided by the number of observations&lt;/li&gt;
-  &lt;li&gt;p.s. Often affected by extreme values in the data (i.e., outliers)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;9.125&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;median&quot;&gt;Median&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The value of the variable in a data set that divides the set of the observed values in half, so that the observed
-values in one half are less than or equal to the median value and the observed values in the other half are greater or
-equal to the median value&lt;/li&gt;
-  &lt;li&gt;To compute median, the observed values of variable in a data should be sorted
-    &lt;ul&gt;
-      &lt;li&gt;If the # observation is odd, then the sample median is the observed values exactly in the middle of the ordered list&lt;/li&gt;
-      &lt;li&gt;If the # observation is even, then the sample median is the number halfway between two middle observed values in the
-ordered list&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;mode&quot;&gt;Mode&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A discrete variable (or its value) is that value of the variable which occurs with the greatest frequency in a data set&lt;/li&gt;
-  &lt;li&gt;p.s. if the greatest frequency is 1 (i.e., no value occurs more than once), then the variable has no mode&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;statistics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;range&quot;&gt;Range&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The difference between its maximum and minimum values in a data set&lt;/li&gt;
-  &lt;li&gt;Formally, range = max - min&lt;/li&gt;
-  &lt;li&gt;p.s. range is affected by only max and min values, which means that other values may be ignored
-    &lt;ul&gt;
-      &lt;li&gt;e.g. X = [1,10,10,11,11,10,11,10,11,10,11,11,10,11,100]&lt;/li&gt;
-      &lt;li&gt;Can we say that range of X is [1,100]?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;percentile--quartiles&quot;&gt;Percentile &amp;amp; Quartiles&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A method dividing a given data set with the equal portions
-    &lt;ul&gt;
-      &lt;li&gt;Quartile (4 parts)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let &lt;em&gt;n&lt;/em&gt; denote the number of observations in a data set. Arrange the observed values of variable in a data in 
-increasing order
-    &lt;ul&gt;
-      &lt;li&gt;The 1&lt;sup&gt;st&lt;/sup&gt; quartile Q1 is at position (n+1)/4&lt;/li&gt;
-      &lt;li&gt;The 2&lt;sup&gt;nd&lt;/sup&gt; quartile Q2 (the median) is at position (n+1)/2&lt;/li&gt;
-      &lt;li&gt;The 3&lt;sup&gt;rd&lt;/sup&gt; quartile Q3 is at position 3(n+1)/4&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Interquartile range: the difference between 1&lt;sup&gt;st&lt;/sup&gt; and 3&lt;sup&gt;rd&lt;/sup&gt; quartiles of variables (i.e. IQR = Q3 - 
-Q1)
-    &lt;ul&gt;
-      &lt;li&gt;Roughly, the IQR gives the range of middle 50% of the observed values&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;interquartile-range&quot;&gt;Interquartile Range&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The sample of interquartile range represents the length of the interval covered by the center half of the observed 
-values of the variable&lt;/li&gt;
-  &lt;li&gt;This measure of variation is not disturbed if a small fraction the observed values are very large or very small&lt;/li&gt;
-  &lt;li&gt;Five-number summary: consists of min, max, and quartiles wirtten in increasing order
-    &lt;ul&gt;
-      &lt;li&gt;Min, Q1, Q2, Q3, Max&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;standard-deviation&quot;&gt;Standard Deviation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A measure of a distribution’s deviation from its mean (square root of variance)&lt;/li&gt;
-  &lt;li&gt;For a variable &lt;em&gt;x&lt;/em&gt;, the sample standard deviation is&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sigma&amp;space;=&amp;space;\sqrt{\frac{1}{N}[(x_1&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;(x_2&amp;space;-&amp;space;\mu&amp;space;)^2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;(x_N&amp;space;-&amp;space;\mu&amp;space;)^2]},&amp;space;where&amp;space;\mu&amp;space;=\frac{1}{N}(x_1&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;plus;&amp;space;x_N)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Preferred when the mean is used as the measure of center (e.g. symmetric distribution)&lt;/li&gt;
-  &lt;li&gt;Trivially, more variation -&amp;gt; larger standard deviation&lt;/li&gt;
-  &lt;li&gt;However, it can be strongly affected by a few extreme observations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;mf&quot;&gt;1.4851&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;probability&quot;&gt;Probability&lt;/h2&gt;
-&lt;h3 id=&quot;probability-mass-function-pmf&quot;&gt;Probability Mass Function (PMF)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;For discrete random variables&lt;/li&gt;
-  &lt;li&gt;The domain of P must be the set of all possible states of x&lt;/li&gt;
-  &lt;li&gt;0 &amp;lt;= P(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1
-    &lt;ul&gt;
-      &lt;li&gt;An impossible event has probability 0 and no state can be less probable than that. Likewise, an event that is 
-guaranteed to happen has probability 1, and no state cna have a greater chance of occurring.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;P(&lt;em&gt;x&lt;/em&gt;) = 1
-    &lt;ul&gt;
-      &lt;li&gt;We refer to this property as being normalized. Without this property, we could obtain probabilities greater than one 
-by computing the probability of one of many events occurring.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uniform distribution among &lt;em&gt;k&lt;/em&gt; states:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;x_i)&amp;space;=&amp;space;\frac{1}{k}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For continuous random variables&lt;/li&gt;
-  &lt;li&gt;The domain of P must be set of all possible states of &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;p(&lt;em&gt;x&lt;/em&gt;) &amp;gt;= 0
-    &lt;ul&gt;
-      &lt;li&gt;Note that we do not require p(&lt;em&gt;x&lt;/em&gt;) &amp;lt;= 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\int&amp;space;p(x)&amp;space;dx&amp;space;=&amp;space;1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Uniform distribution u(x;a,b) = 1/(b - a)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/screenshots/2022/10/09/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;rules-associated-with-probability&quot;&gt;Rules associated with Probability&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Computing marginal probability with the Sum Rule&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall_x&amp;space;\in&amp;space;x,&amp;space;P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;\sum_{y}&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?p(x)&amp;space;=&amp;space;\int&amp;space;p(x,y)dy&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conditional Probability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)&amp;amp;space;=&amp;amp;space;\frac{P(\textrm{y}&amp;amp;space;=&amp;amp;space;y,&amp;amp;space;\textrm{x}&amp;amp;space;=&amp;amp;space;x)}{P(\textrm{x}&amp;amp;space;=&amp;amp;space;x)})&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bayes’ Rule&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?P(x&lt;/td&gt;
-      &lt;td&gt;y)&amp;amp;space;=&amp;amp;space;\frac{P(x)P(y&lt;/td&gt;
-      &lt;td&gt;x)}{P(y)})&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Chain Rule of Probability&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x^{(1)},&amp;space;...,&amp;space;x^{(n)})&amp;space;=&amp;space;P(x^{(1)})&amp;space;\prod_{i=2}^{n}P(x^{(1)},&amp;space;...,&amp;space;x^{(i-1)})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;E.g. ![](https://latex.codecogs.com/svg.image?P(a,b,c)&amp;amp;space;=&amp;amp;space;P(a&lt;/td&gt;
-      &lt;td&gt;b,c)P(b&lt;/td&gt;
-      &lt;td&gt;c)P(c))&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;independence&quot;&gt;Independence&lt;/h3&gt;
-
-&lt;p&gt;Notation: x ⊥ y&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;P(\textrm{x}&amp;space;=&amp;space;x,&amp;space;\textrm{y}&amp;space;=&amp;space;y)&amp;space;=&amp;space;p(\textrm{x}&amp;space;=&amp;space;x)&amp;space;p(\textrm{y}&amp;space;=&amp;space;y)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Conditional Independence&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\forall&amp;space;x&amp;space;\in&amp;space;\textrm{x},&amp;space;y&amp;space;\in&amp;space;\textrm{y},&amp;space;z&amp;space;\in&amp;space;\textrm{z}&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?p(\textrm{x}&amp;amp;space;=&amp;amp;space;x,&amp;amp;space;\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;=&amp;amp;space;p(\textrm{x}&amp;amp;space;=&amp;amp;space;x&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z)&amp;amp;space;p(\textrm{y}&amp;amp;space;=&amp;amp;space;y&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;&amp;amp;space;\textrm{z}&amp;amp;space;=&amp;amp;space;z))&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Equivalently, p(x&lt;/td&gt;
-          &lt;td&gt;y,z) = p(x&lt;/td&gt;
-          &lt;td&gt;z)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Notation: x ⊥ y&lt;/td&gt;
-          &lt;td&gt;z&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;expectation&quot;&gt;Expectation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Discrete variable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\sum_{x}&amp;space;P(x)f(x)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Continuous variable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_{x&amp;space;\sim&amp;space;p}[f(x)]&amp;space;=&amp;space;\int&amp;space;&amp;space;p(x)f(x)&amp;space;dx&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Linearity of Expectations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[\alpha&amp;space;f(x)&amp;space;&amp;plus;&amp;space;\beta&amp;space;g(x)]&amp;space;=&amp;space;\alpha&amp;space;\mathbb{E}_x[f(x)]&amp;space;&amp;plus;&amp;space;\beta\mathbb{E}_x[g(x)]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;This always holds, even when f(x) and g(x) are dependent&lt;/p&gt;
-
-&lt;h3 id=&quot;covariance&quot;&gt;Covariance&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Cov[f(x),g(y)]=\mathbb{E}[(f(x)]&amp;space;-&amp;space;\mathbb{E}[f(x)])(g(y)&amp;space;-&amp;space;\mathbb{E}[g(y)])&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Covariance can be negative&lt;/p&gt;
-
-&lt;p&gt;Cov(x)&lt;sub&gt;i,j&lt;/sub&gt; = Cov(x&lt;sub&gt;i&lt;/sub&gt;,x&lt;sub&gt;j&lt;/sub&gt;)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Covariance Matrix
-    &lt;ul&gt;
-      &lt;li&gt;Diagonal elements are variance of i-th element&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;randomized-algorithms-probabilistic-algorithm&quot;&gt;Randomized Algorithms (=Probabilistic Algorithm)&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt; &lt;/th&gt;
-      &lt;th&gt;Las Vegas&lt;/th&gt;
-      &lt;th&gt;Monte Carlo&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Type of Answer&lt;/td&gt;
-      &lt;td&gt;Exact&lt;/td&gt;
-      &lt;td&gt;Random amount of error&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Runtime&lt;/td&gt;
-      &lt;td&gt;Random (until answer found)&lt;/td&gt;
-      &lt;td&gt;Chosen by user (longer runtime gives less error)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;estimating-sums--integrals-with-samples&quot;&gt;Estimating sums / integrals with samples&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;justification&quot;&gt;Justification&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Unbiased:
-    &lt;ul&gt;
-      &lt;li&gt;The expected value for finite &lt;em&gt;n&lt;/em&gt; is equal to the correct value&lt;/li&gt;
-      &lt;li&gt;The value for any specific &lt;em&gt;n&lt;/em&gt; samples will have random error, but the error for different sample sets cancel out&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Low variance:
-    &lt;ul&gt;
-      &lt;li&gt;Variance is O(1/&lt;em&gt;n&lt;/em&gt;)&lt;/li&gt;
-      &lt;li&gt;For very large &lt;em&gt;n&lt;/em&gt;, the error converges “almost surely” to 0&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;distribution--information-theory&quot;&gt;Distribution &amp;amp; Information Theory&lt;/h2&gt;
-&lt;h3 id=&quot;bernoulli-distribution&quot;&gt;Bernoulli Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;PDF&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;1)&amp;space;=&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(x&amp;space;=&amp;space;0)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi&amp;space;&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?P(\textrm{x}&amp;space;=&amp;space;x)&amp;space;=&amp;space;1&amp;space;-&amp;space;\phi^x(1-\phi)^{1-x}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Expectation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\mathbb{E}_x[x]=\phi&amp;space;&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Variance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Var_x(x)&amp;space;=&amp;space;\phi&amp;space;(1-\phi)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;gaussian-distribution&quot;&gt;Gaussian Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by variance:
-    &lt;ul&gt;
-      &lt;li&gt;E[x] = μ, Var[x] = σ&lt;sup&gt;2&lt;/sup&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\sigma^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{1}{2\pi&amp;amp;space;\sigma^2}}exp(-\frac{1}{2\sigma^2}(x-\mu)^2)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by precision:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;![](https://latex.codecogs.com/svg.image?N(x;\mu&amp;amp;space;,&amp;amp;space;\beta&amp;amp;space;^{-1})&amp;amp;space;=&amp;amp;space;\sqrt{\frac{\beta}{2\pi}}exp(-\frac{1}{2}\beta(x-\mu)^2)&lt;/p&gt;
-
-&lt;h3 id=&quot;gaussian-distribution-1&quot;&gt;Gaussian Distribution&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;theorems-related-to-gaussian-distribution&quot;&gt;Theorems related to Gaussian Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Central limit theorem&lt;/strong&gt;: the sum of many independent random variables is approximately normally distributed&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\frac{\sqrt{n}}{\sigma}(\overline{X_n}&amp;space;-&amp;space;\mu)&amp;space;\to&amp;space;N(0,1)&quot; alt=&quot;&quot; /&gt; 
-as 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Law of large numbers&lt;/strong&gt;: the sample average converges to the expectation as the sample size goes to infinity&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;\to&amp;space;\mu&quot; alt=&quot;&quot; /&gt; 
-as 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?n&amp;space;\to&amp;space;\infty&amp;space;&quot; alt=&quot;&quot; /&gt;
-, where 
-&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{X_n}&amp;space;=&amp;space;\frac{1}{n}(X_1&amp;space;&amp;plus;&amp;space;X_2&amp;space;&amp;plus;&amp;space;\cdots&amp;space;&amp;space;&amp;plus;&amp;space;X_n)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;multivariate-gaussian&quot;&gt;Multivariate Gaussian&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by covariance matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?N(x;\mu,\sum)&amp;space;=&amp;space;\sqrt{\frac{1}{(2\pi)^ndet(\sum)}exp-\frac{1}{2}(x-\mu)^\top&amp;space;\sum&amp;space;^{-1}(x-\mu)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;μ is a vector&lt;/li&gt;
-  &lt;li&gt;∑ is a covariance matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Parameterized by precision matrix&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?N(x;\mu,&amp;space;\beta^{-1})=\sqrt{\frac{det(\beta)}{(2\pi)^n}}exp-\frac{1}{2}(x-\mu)^\tau\beta(x-\mu)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;information-theory&quot;&gt;Information Theory&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Information theory: quantifying how much information is present in a signal&lt;/li&gt;
-  &lt;li&gt;Learning that an unlikely event has occurred is more informative than learning that a likely event has occurred&lt;/li&gt;
-  &lt;li&gt;Self-Information of x
-    &lt;ul&gt;
-      &lt;li&gt;I(&lt;em&gt;x&lt;/em&gt;) = -logP(&lt;em&gt;x&lt;/em&gt;)&lt;/li&gt;
-      &lt;li&gt;Intuition: minimum # of bits to express (encode) an event with probability P(&lt;em&gt;x&lt;/em&gt;)&lt;/li&gt;
-      &lt;li&gt;Rare event has a large information content&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;entropy&quot;&gt;Entropy&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entropy: expectation of self-information
-    &lt;ul&gt;
-      &lt;li&gt;Minimum expected # of bits to express a distribution&lt;/li&gt;
-      &lt;li&gt;For Bernoulli variable,
-        &lt;ul&gt;
-          &lt;li&gt;H(&lt;em&gt;x&lt;/em&gt;) = -&lt;em&gt;p&lt;/em&gt; log &lt;em&gt;p&lt;/em&gt; - (1 - &lt;em&gt;p&lt;/em&gt;) log(1 - &lt;em&gt;p&lt;/em&gt;)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/09/screenshot-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;kl-divergence&quot;&gt;KL Divergence&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Measure the difference of two distributions P(&lt;em&gt;x&lt;/em&gt;) and Q(&lt;em&gt;x&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?D_{KL}(P&amp;space;\parallel&amp;space;Q)&amp;space;=&amp;space;\mathbb{E}_{x&amp;space;\sim&amp;space;P}[log\frac{P(x)}{Q(x)}]&amp;space;=&amp;space;\mathbb{E}_{x&amp;space;\sim&amp;space;P}[logP(x)&amp;space;-&amp;space;log&amp;space;Q(x)]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Properties
-    &lt;ul&gt;
-      &lt;li&gt;Always non-negative: 0 if and only if P and Q are the same
-        &lt;ul&gt;
-          &lt;li&gt;Intuition: If x ~ P, the best (minimal) encoding is given by assigning log P(&lt;em&gt;x&lt;/em&gt;) bits for each &lt;em&gt;x&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Not symmetric:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?D_{KL}(P&amp;space;\parallel&amp;space;Q)&amp;space;\neq&amp;space;D_{KL}(Q&amp;space;\parallel&amp;space;P)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cross-entropy&quot;&gt;Cross-Entropy&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Average # of bits needed to identify an event from the true distribution P, if we use a coding scheme optimized for 
-unnatural distribution Q&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;H(P, Q) = H(P) + D&lt;sub&gt;KL&lt;/sub&gt;(P&lt;/td&gt;
-          &lt;td&gt; &lt;/td&gt;
-          &lt;td&gt;Q) = -E&lt;sub&gt;x~P&lt;/sub&gt; log Q(x)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Minimizing the cross-entropy w.r.t. Q is equivalent to minimizing the KL divergence&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;intermediate-summary&quot;&gt;Intermediate Summary&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;“Remember” the key terminology / concepts that popularly used in Statistics
-    &lt;ul&gt;
-      &lt;li&gt;Population, Sample, Descriptive, Inferential, Parameters, Statistics, …&lt;/li&gt;
-      &lt;li&gt;Mean, Median, Mode, Range/Quartile, Standard Dev.&lt;/li&gt;
-      &lt;li&gt;Probability, Expectation, Covariance&lt;/li&gt;
-      &lt;li&gt;Distributions&lt;/li&gt;
-      &lt;li&gt;Self-Information, Entropy, KL-Divergence, Cross-Entropy&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;association-between-distributions&quot;&gt;Association between Distributions&lt;/h2&gt;
-&lt;h3 id=&quot;pearson-correlation-coefficient&quot;&gt;Pearson Correlation Coefficient&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A measure of the strength of the linear relation between two variables x and y&lt;/li&gt;
-  &lt;li&gt;1 is total positive correlation, 0 is no correlation, and -1 is total negative correlation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?r&amp;space;=&amp;space;\frac{\sum_{n}^{i=1}(X_i&amp;space;-&amp;space;\overline{X})(Y_i&amp;space;-&amp;space;\overline{Y})}{\sqrt{\sum_{i=1}^{n}(X_i&amp;space;-&amp;space;\overline{X})^2}\sqrt{\sum_{i=1}^{n}(Y_i&amp;space;-&amp;space;\overline{Y})^2}}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pearsonr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.028991426987572115&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5177734067731351&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;spearmans-correlation&quot;&gt;Spearman’s correlation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pearson’s correlation assumes “normality of the distributions” being compared&lt;/li&gt;
-  &lt;li&gt;The Spearman correlation is a non-parametic measure of the monotonicity of the relationship between two datasets&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spearmanr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.045163188652754614&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.31351864108864802&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;kendalls-tau&quot;&gt;Kendall’s Tau&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A measure of the correspondence between two rankings&lt;/li&gt;
-  &lt;li&gt;Close to 1 if strong agreement, -1 indicates strong disagreement&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;norm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stats&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kendalltau&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvs1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rvs6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.0319198396793587&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.28602201432226193&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What if two sets have different elements?
-    &lt;ul&gt;
-      &lt;li&gt;Or, what if two sets have different # elements?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;hypothesis-testing&quot;&gt;Hypothesis Testing&lt;/h2&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Data Collection</summary>
       
 
       
