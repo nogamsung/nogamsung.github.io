@@ -350,6 +350,41 @@ the pipeline.</li>
 
 <p><img src="assets/screenshots/2022/10/31/15.jpeg" alt="" /></p>
 
+<p><em>0 ~ base-1</em>: Packets that have already been transmitted and acknowledged.</p>
+
+<p><em>base ~ nextseqnum-1</em>: Packets that have been sent but not yet acknowledged.</p>
+
+<p><em>nextseqnum ~ base+N-1</em>: Packets that can be sent immediately, should data arrive from the upper layer.</p>
+
+<ul>
+  <li><strong>Window size</strong>: The range of permissible sequence numbers for transmitted but not yet acknowledged packets.</li>
+  <li><strong>Sliding-window protocol</strong>: GBN (Go-Back-N) protocol.</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/10/31/16.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/10/31/17.jpeg" alt="" /></p>
+
+<p>The GBN sender must respond to three types of events:</p>
+
+<ul>
+  <li><em>Invocation from above</em>. When <em>rdt_send()</em> is called from above, the sender first checks to see if the window is full,
+that is, whether there are <em>N</em> outstanding, unacknowledged packets. If the window is not full, a packet is created and 
+sent, and variables are appropriately updated. If the window is full, the sender simply returns the data back to the
+upper layer, an implicit indication that the window is full. The upper layer would presumably then have to try again 
+later. In a real implementation, the sender would more likely have either buffered this data, or would have a 
+synchronization mechanism that would allow the upper layer to call <em>rdt_send()</em> only when the window is not full.</li>
+  <li><em>Receipt of an ACK</em>. In our GBN protocol, an acknowledgement for a packet with sequence number <em>n</em> will be taken to be
+a <strong>cumulative acknowledgement</strong>, indicating that all packets with a sequence number up to and including <em>n</em> have been 
+correctly received at the receiver.</li>
+  <li><em>A timeout event</em>. The protocol’s name, “Go-Back-N”, is derived from the sender’s behavior in the presence of lost or 
+overly delayed packets. As in the stop-and-wait protocol, a timer will again be used to recover from lost data or 
+acknowledgement packets. If a timeout occurs, the sender resends all packets that have been previously sent but have not
+yet been acknowledged. If an ACK is received but there are still additional transmitted but not yet acknowledged packet.
+If an ACK is received but there are still additional transmitted but not yet acknowledged packets, the timer is 
+restarted. If there are no outstanding, unacknowledged packets, the timer is stopped.</li>
+</ul>
+
 <h2 id="reference">Reference</h2>
 <ul>
   <li><a href="https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465" target="_blank">Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross</a></li>
@@ -465,6 +500,22 @@ the pipeline.</li>
                         
                         
                         
+                         <li><a href="/Intelligent_Information-Drawing_Word_Cloud">Intelligent Information Systems - Drawing Word Cloud</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Graph_Mining_(Applications)">Big Data - Graph Mining (Applications)</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Intelligent_Information-Selenium">Intelligent Information Systems - Selenium</a></li>
                             
                             
@@ -473,16 +524,7 @@ the pipeline.</li>
                         
                         
                         
-                         <li><a href="/Big_Data-Graph_Mining_(Roles_and_Communities)">Big Data - Graph Mining (Roles and Communities)</a></li>
-                            
-                            
-                            
-                            
                         
-                        
-                        
-                         <li><a href="/Computer_Network-Connection-Oriented_Trnasport_TCP">Computer Network - Connection-Oriented Transport TCP</a></li>
-                            
                             
                             
                             
@@ -816,7 +858,7 @@ the pipeline.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 36 posts →
+                        See all 37 posts →
                         
                     </a>
                 </footer>

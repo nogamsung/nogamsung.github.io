@@ -4,6 +4,38 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Intelligent_Information-Drawing_Word_Cloud.html</loc>
+        
+        <lastmod>2022-11-16T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Big_Data-Graph_Mining_(Applications).html</loc>
+        
+        <lastmod>2022-11-14T22:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Intelligent_Information-Selenium.html</loc>
         
         <lastmod>2022-11-09T00:00:00+09:00</lastmod>
@@ -23,22 +55,6 @@
         <loc>/Big_Data-Graph_Mining_(Roles_and_Communities).html</loc>
         
         <lastmod>2022-11-07T22:30:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>/Computer_Network-Connection-Oriented_Trnasport_TCP.html</loc>
-        
-        <lastmod>2022-11-07T19:30:00+09:00</lastmod>
         
 
         

@@ -8,6 +8,48 @@
     
       
       <item>
+        <title>Intelligent Information Systems - Drawing Word Cloud</title>
+        
+          <description>&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Word Cloud
+    &lt;ul&gt;
+      &lt;li&gt;Size depends on frequency&lt;/li&gt;
+      &lt;li&gt;Shows frequently used word visually&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 16 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Intelligent_Information-Drawing_Word_Cloud</link>
+        <guid isPermaLink="true">/Intelligent_Information-Drawing_Word_Cloud</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Graph Mining (Applications)</title>
+        
+          <description>&lt;h2 id=&quot;graph-mining-for-content-propagation&quot;&gt;Graph Mining for Content Propagation&lt;/h2&gt;
+&lt;h3 id=&quot;ex1-interest-graph-in-pinterest&quot;&gt;Ex1: Interest Graph in Pinterest&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Interest Graph” represents relations (in terms of shared interests) among users&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 14 Nov 2022 22:30:00 +0900</pubDate>
+        <link>
+        /Big_Data-Graph_Mining_(Applications)</link>
+        <guid isPermaLink="true">/Big_Data-Graph_Mining_(Applications)</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Intelligent Information Systems - Selenium</title>
         
           <description>&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
@@ -33,21 +75,6 @@
         <link>
         /Big_Data-Graph_Mining_(Roles_and_Communities)</link>
         <guid isPermaLink="true">/Big_Data-Graph_Mining_(Roles_and_Communities)</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Computer Network - Connection-Oriented Transport TCP</title>
-        
-          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Mon, 07 Nov 2022 19:30:00 +0900</pubDate>
-        <link>
-        /Computer_Network-Connection-Oriented_Trnasport_TCP</link>
-        <guid isPermaLink="true">/Computer_Network-Connection-Oriented_Trnasport_TCP</guid>
       </item>
       
     
