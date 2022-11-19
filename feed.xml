@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-16T16:48:33+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-19T20:22:29+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Word Cloud
     &lt;ul&gt;
@@ -487,7 +487,157 @@ likes of the original pin)&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Graph Mining for Content Propagation Ex1: Interest Graph in Pinterest “Interest Graph” represents relations (in terms of shared interests) among users</summary></entry><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Graph Mining for Content Propagation Ex1: Interest Graph in Pinterest “Interest Graph” represents relations (in terms of shared interests) among users</summary></entry><entry><title type="html">Computer Network - Connection Oriented Transport TCP</title><link href="/Computer_Network-Connection_Oriented_Transport_TCP" rel="alternate" type="text/html" title="Computer Network - Connection Oriented Transport TCP" /><published>2022-11-11T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>/Computer_Network-Connection_Oriented_Transport_TCP</id><content type="html" xml:base="/Computer_Network-Connection_Oriented_Transport_TCP">&lt;h2 id=&quot;1️⃣-the-tcp-connection&quot;&gt;1️⃣ The TCP Connection&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-oriented&lt;/strong&gt;: Before one application process can begin to send data to another, the two processes must
+first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the 
+parameters of ensuing data transfer.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Full-duplex service&lt;/strong&gt;: If there is a TCP connection between Process A on one host and Process B on another host,
+then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from 
+Process A to Process B.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Point-to-point&lt;/strong&gt;: Between a single sender and a single receiver.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multicasting&lt;/strong&gt;: The transfer of data from one sender to many receivers in a single send operation, which is not 
+possible with TCP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Three-way handshake&lt;/strong&gt;: Three segments sent between the two hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Send buffer&lt;/strong&gt;: One of the buffers that is set aside during the initial three-way handshake.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum segment size (MSS)&lt;/strong&gt;: The maximum amount of data that can be grabbed and placed in a segment.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum transmission Unit (MTU)&lt;/strong&gt;: Length of the largest link-layer frame that can be sent by the local sending 
+host.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP segments&lt;/strong&gt;: Passed down to the network layer, where they are separately encapsulated within network-layer IP 
+datagrams.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-tcp-segment-structure&quot;&gt;2️⃣ TCP Segment Structure&lt;/h2&gt;
+
+&lt;p&gt;The TCP segment header contains the following fields:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Source and destination port numbers&lt;/strong&gt; which is used for multiplexing/demultiplexing data from/to upper-layer 
+applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Checksum field&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;The 32-bit &lt;strong&gt;sequence number field&lt;/strong&gt; and the 32-bit &lt;strong&gt;acknowledgement number field&lt;/strong&gt; are used by the TCP sender and 
+receiver in implementing a reliable data transfer service.&lt;/li&gt;
+  &lt;li&gt;The 16-bit &lt;strong&gt;receive window&lt;/strong&gt; field is used for flow control.&lt;/li&gt;
+  &lt;li&gt;The 4-bit &lt;strong&gt;header length field&lt;/strong&gt; specifies the length of the TCP header in 32-bit words. The TCP header can be of 
+variable length due to the TCP options field.&lt;/li&gt;
+  &lt;li&gt;The optional and variable-length &lt;strong&gt;options field&lt;/strong&gt; is used when a sender and receiver negotiate the maximum segment 
+size (MSS) or as a window scaling factor for use in high-speed networks. A time-stamping option is also defined.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;flag field&lt;/strong&gt; contains 6 bits. The ACK bit is used to indicate that the value carried in the acknowledgement 
+field is valid; that is, the segment contains an acknowledgement for a segment that has been successfully received. The 
+&lt;strong&gt;RST&lt;/strong&gt;, &lt;strong&gt;SYN&lt;/strong&gt;, and &lt;strong&gt;FIN&lt;/strong&gt; bits are used for connection setup and teardown. The CWR and ECE bits are used in explicit
+congestion notification. Setting the &lt;strong&gt;PSH&lt;/strong&gt; bit indicates that the receiver should pass the data to the upper layer 
+immediately. Finally, the &lt;strong&gt;URG&lt;/strong&gt; bit is used to indicate that there is data in this segment that the sending-side 
+upper-layer entity has marked as “urgent”. The location of the last byte of this urgent data is indicated by the 16-bit 
+&lt;strong&gt;urgent data pointer field&lt;/strong&gt;. TCP must inform the receiving-side upper-layer entity when urgent data exists and pass it
+a pointer to the end of the urgent data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sequence-numbers-and-acknowledgement-numbers&quot;&gt;Sequence Numbers and Acknowledgement Numbers&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sequence number for a segment&lt;/strong&gt;: The byte-stream number of the first byte in the segment.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cumulative acknowledgements&lt;/strong&gt;: The concept of TCP that it only acknowledges bytes up to the first missing byte in 
+the stream.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When a computer receives out-of-order segments in a TCP connection, the programming implementing a TCP implementation 
+can decide to either:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The receiver immediately discards out-of-order segments&lt;/li&gt;
+  &lt;li&gt;The receiver keeps the out-of-order bytes and waits for the missing bytes to fill in the gaps.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;telnet-a-case-study-for-sequence-and-acknowledgement-numbers&quot;&gt;Telnet: A Case Study for Sequence and Acknowledgement Numbers&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Piggybacked&lt;/strong&gt;: The acknowledgement for client-to-server data is carried in a segment carrying server-to-client data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-round-trip-time-estimation-and-timeout&quot;&gt;3️⃣ Round-Trip Time Estimation and Timeout&lt;/h2&gt;
+&lt;h3 id=&quot;estimating-the-round-trip-time&quot;&gt;Estimating the Round-Trip Time&lt;/h3&gt;
+
+&lt;p&gt;Upon obtaining a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt;, TCP updates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt; according to the following formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;(1-\alpha)&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;\alpha&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;EstimatedRTT&lt;/strong&gt;: An average, which the new value of &lt;strong&gt;EstimatedRTT&lt;/strong&gt; is a weighted combination of the previous value 
+&lt;strong&gt;EstimatedRTT&lt;/strong&gt; and the new value for &lt;strong&gt;SampleRTT&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The recommended value of α is α = 0.125, in which case the formula above becomes:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;0.875&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;0.125&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Exponential weighted moving average (EWMA)&lt;/strong&gt;: The weighted average puts more weight on recent samples better reflect
+the current congestion in the network. The word “exponential” appears because the weight of a given &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; decays 
+exponentially fast as the updates proceed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; is an estimate of how much &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; typically deviates from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt;:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?DevRTT&amp;amp;space;=&amp;amp;space;(1-\beta)&amp;amp;space;\cdot&amp;amp;space;DevRTT&amp;amp;space;&amp;amp;plus;&amp;amp;space;\beta&amp;amp;space;\cdot&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;SampleRTT&amp;amp;space;-&amp;amp;space;EstimatedRTT&lt;/td&gt;
+      &lt;td&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; values have little fluctuation, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; wil be small and vica-versa. The recommended value of β 
+is 0.25.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-and-managing-the-retransmission-timeout-interval&quot;&gt;Setting and Managing the Retransmission Timeout Interval&lt;/h3&gt;
+
+&lt;p&gt;Formula to determine the retransmission timeout interval:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?TimeoutInterval&amp;space;=&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;4&amp;space;\cdot&amp;space;DevRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An initial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeoutInterval&lt;/code&gt; value of 1 second is recommended.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-reliable-data-transfer&quot;&gt;4️⃣ Reliable Data Transfer&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: Created by TCP on top of IP’s unreliable best-effort service, it ensures that the
+data stream that a process reads out of its TCP receive buffer is uncorrupted, without gaps, without duplication, and in
+sequence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The 3 major events related to data transmission and retransmission in the TCP sender&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Data received from application above.&lt;/li&gt;
+  &lt;li&gt;Timer timeout&lt;/li&gt;
+  &lt;li&gt;ACK receipt&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;a-few-interesting-scenarios&quot;&gt;A Few Interesting Scenarios&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;doubling-the-timeout-interval&quot;&gt;Doubling the Timeout Interval&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The TCP Connection Connection-oriented: Before one application process can begin to send data to another, the two processes must first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the parameters of ensuing data transfer. Full-duplex service: If there is a TCP connection between Process A on one host and Process B on another host, then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from Process A to Process B. Point-to-point: Between a single sender and a single receiver. Multicasting: The transfer of data from one sender to many receivers in a single send operation, which is not possible with TCP. Three-way handshake: Three segments sent between the two hosts. Send buffer: One of the buffers that is set aside during the initial three-way handshake. Maximum segment size (MSS): The maximum amount of data that can be grabbed and placed in a segment. Maximum transmission Unit (MTU): Length of the largest link-layer frame that can be sent by the local sending host. TCP segments: Passed down to the network layer, where they are separately encapsulated within network-layer IP datagrams.</summary></entry><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
 
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.chrome.options&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;
@@ -603,6 +753,174 @@ likes of the original pin)&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;roles-vs-groups-in-networks-1&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roles:
+    &lt;ul&gt;
+      &lt;li&gt;A group of nodes with similar structural properties&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Communities/Groups:
+    &lt;ul&gt;
+      &lt;li&gt;A group of nodes that are &lt;strong&gt;well-connected&lt;/strong&gt; to each other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Roles and communities are complementary&lt;/li&gt;
+  &lt;li&gt;Consider the social network of a CSE Dept:
+    &lt;ul&gt;
+      &lt;li&gt;Roles: Faculty, Staff, Students&lt;/li&gt;
+      &lt;li&gt;Communities: AI Lab, Network Lab, System Lab&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;roles-more-formally&quot;&gt;Roles: More Formally&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Structural equivalence: Node &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are &lt;strong&gt;structurally equivalent&lt;/strong&gt; if they have the same relations to all other 
+nodes
+    &lt;ul&gt;
+      &lt;li&gt;Structurally equivalent nodes are likely to be similar in other ways - i.e., friendships in social networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;structural-equivalence-example&quot;&gt;Structural Equivalence: Example&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nodes &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are structurally equivalent:
+    &lt;ul&gt;
+      &lt;li&gt;For all the other nodes &lt;em&gt;k&lt;/em&gt;, node &lt;em&gt;u&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt; if and only if node &lt;em&gt;v&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;discovering-structural-roles-in-networks&quot;&gt;Discovering Structural Roles in Networks&lt;/h2&gt;
+&lt;h3 id=&quot;method-to-discover-structural-roles&quot;&gt;Method to Discover Structural Roles&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;RoIX: Automatic discovery of nodes’ structural roles in networks
+    &lt;ul&gt;
+      &lt;li&gt;Unsupervised learning approach&lt;/li&gt;
+      &lt;li&gt;No prior knowledge required&lt;/li&gt;
+      &lt;li&gt;Assigns a mixed-membership of roles to each node&lt;/li&gt;
+      &lt;li&gt;Scales linearly in number (of edges)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;roix-approach-overview&quot;&gt;RoIX: Approach Overview&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;recursive-feature-extraction&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recursive feature extraction turns network connectivity into structural features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Neighborhood features: What is a node’s &lt;strong&gt;connectivity&lt;/strong&gt; pattern?&lt;/li&gt;
+  &lt;li&gt;Recursive features: To &lt;strong&gt;what kinds of nodes&lt;/strong&gt; is a node &lt;strong&gt;connected&lt;/strong&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;recursive-feature-extraction-1&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: Aggregate features of a node and use them to generate new recursive features&lt;/li&gt;
+  &lt;li&gt;Base set of a node’s neighborhood features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Local features&lt;/strong&gt;: All measures of the node degree:
+        &lt;ul&gt;
+          &lt;li&gt;If network is directed, include in-degree and out-degree, total degree&lt;/li&gt;
+          &lt;li&gt;If network is weighted, include weighted feature versions&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Egonet features&lt;/strong&gt;: Computed on the node’s egonet:
+        &lt;ul&gt;
+          &lt;li&gt;Egonet includes the node, its neighbors, and any edges in the induced subgraph on these nodes&lt;/li&gt;
+          &lt;li&gt;Number of within-egonet edges&lt;/li&gt;
+          &lt;li&gt;Number of edges entering/leaving egonet&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Start with the base set of node features&lt;/li&gt;
+  &lt;li&gt;Use the set of current node features to generate additional features:
+    &lt;ul&gt;
+      &lt;li&gt;Two types of aggregate functions: mean and sum
+        &lt;ul&gt;
+          &lt;li&gt;E.g., mean value of “unweighted degree” feature between all neighbors of a node&lt;/li&gt;
+          &lt;li&gt;Compute means and sums over all current features, including other recursive features&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Repeat&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The number of possible recursive features grows exponentially with each recursive iteration:
+    &lt;ul&gt;
+      &lt;li&gt;Reduce the number of features using a pruning technique:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Look for pairs of features&lt;/strong&gt; that are &lt;strong&gt;high correlated&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Eliminate one of the features&lt;/strong&gt; whenever two features are correlated above a user-defined threshold&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;role-extraction&quot;&gt;Role Extraction&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;application-structural-similarity&quot;&gt;Application: Structural Similarity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Task: Cluster nodes based on their structural similarity&lt;/li&gt;
+  &lt;li&gt;Two networks:
+    &lt;ul&gt;
+      &lt;li&gt;Network science co-authorship network:
+        &lt;ul&gt;
+          &lt;li&gt;Nodes: Network scientists&lt;/li&gt;
+          &lt;li&gt;Edges: The number of co-authored papers&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Political books co-purchasing network:
+        &lt;ul&gt;
+          &lt;li&gt;Nodes: Political books on Amazon&lt;/li&gt;
+          &lt;li&gt;Edges: Frequent co-purchasing of books by the same buyers&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Setup: For each network,
+    &lt;ol&gt;
+      &lt;li&gt;Use RoIX to assign each node a distribution over the set of discovered, structural roles&lt;/li&gt;
+      &lt;li&gt;Determine similarity between nodes by comparing their role distributions&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;structural-sim&quot;&gt;Structural Sim&lt;/h3&gt;
+&lt;h4 id=&quot;co-authorship-network&quot;&gt;Co-authorship Network&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;political-book-network&quot;&gt;Political Book Network&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Book labels (i.e., liberal, conservative, neutral) were not given to role discovery algorithm&lt;/p&gt;
+
+&lt;h2 id=&quot;centrality-a-specific-role-of-nodes-in-the-network&quot;&gt;Centrality: A Specific Role of Nodes in the Network&lt;/h2&gt;
+&lt;h3 id=&quot;centrality-or-prestige&quot;&gt;Centrality (or Prestige)&lt;/h3&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -964,6 +1282,47 @@ If an ACK is received but there are still additional transmitted but not yet ack
 restarted. If there are no outstanding, unacknowledged packets, the timer is stopped.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-selective-repeat-sr&quot;&gt;4️⃣ Selective Repeat (SR)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SR sender events and actions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Data received from above&lt;/em&gt;. When data is received from above, the SR sender checks the next available sequence number
+for the packet. If the sequence number is within the sender’s window, the data is packetized and sent; otherwise it is 
+either buffered or returned to the upper layer for later transmission, as in GBN.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Timeout&lt;/em&gt;. Timers are again used to protect against lost packets. However, each packet must now have its own logical 
+timer, since only a single packet will be transmitted on timeout. A single hardware timer can be used to mimic the 
+operation of multiple logical timers.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ACK received&lt;/em&gt;. If an ACK is received, the SR sender marks that packet as having been received, provided it is in the
+window. If the packet’s sequence number is equal to *send_Base, the window base is moved forward to the unacknowledged 
+packet with the smallest sequence number. If the window moves and there are untransmitted packets with sequence numbers 
+that now fall within the window, these packets are transmitted.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;SR receiver events and actions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base, rcv_base+N-1) is correctly received&lt;/em&gt;. In this case, the received packet 
+falls within the receiver’s window and a selective ACK packet is returned to the sender. if the packet was not 
+previously received, it is buffered. If this packet has a sequence number equal to the base of the received window, then
+this packet, and any previously buffered and consecutively numbered (beginning with rcv_base) packets are delivered to 
+the upper layer. The receive window is then moved forward by the number of packets delivered to the upper layer. When a 
+packet with a sequence number of rcv_base=2 is received, it and packets 3, 4, and 5 can be delivered to the upper layer.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base-N, rcv_base-1) is correctly received&lt;/em&gt;. In this case, an ACK must be 
+generated, even though this is a packet that the receiver has previously acknowledged.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Otherwise&lt;/em&gt;. Ignore the packet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
@@ -1206,181 +1565,4 @@ sockets.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.javatpoint.com/connection-oriented-vs-connectionless-service&quot; target=&quot;_blank&quot;&gt;Difference between connection-oriented and connectionless service in javaTpoint&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Demultiplexing: A job of delivering the data in a transport-layer segment to the correct socket. Multiplexing: A job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header information to create segments, and passing the segments to the network layer.</summary></entry><entry><title type="html">Unreal Engine - Timeline</title><link href="/Unreal_Engine-Timeline" rel="alternate" type="text/html" title="Unreal Engine - Timeline" /><published>2022-10-18T01:30:00+09:00</published><updated>2022-10-18T01:30:00+09:00</updated><id>/Unreal_Engine-Timeline</id><content type="html" xml:base="/Unreal_Engine-Timeline">&lt;h2 id=&quot;timeline&quot;&gt;Timeline&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Set a specific time and repeat a certain movement
-    &lt;ul&gt;
-      &lt;li&gt;E.g. At 5 sec move upwards and open a door, etc.&lt;/li&gt;
-      &lt;li&gt;Express this in timeline
-        &lt;ul&gt;
-          &lt;li&gt;Timeline is a event that occurs in a time sequence&lt;/li&gt;
-          &lt;li&gt;Parallel axis is time axis&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Timeline
-    &lt;ul&gt;
-      &lt;li&gt;Timeline is a change in value which occurs in time
-        &lt;ul&gt;
-          &lt;li&gt;X-axis is time and Y-axis is value&lt;/li&gt;
-          &lt;li&gt;“Value” = “Track”&lt;/li&gt;
-          &lt;li&gt;Track Category: float, vector, color, event&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Curve Input: Input keys to express a curve
-        &lt;ul&gt;
-          &lt;li&gt;Key = (time, value)&lt;/li&gt;
-          &lt;li&gt;Adding key: shift + click&lt;/li&gt;
-          &lt;li&gt;Interpolation between keys create a curve&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;timeline-example&quot;&gt;Timeline Example&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Actors spin example
-    &lt;ul&gt;
-      &lt;li&gt;Actor should spin
-        &lt;ul&gt;
-          &lt;li&gt;It should spin every second&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Create timeline: Float Track
-        &lt;ul&gt;
-          &lt;li&gt;1 spin / 1 sec = Change the float value from 0 to 360 every second in the timeline&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Timeline Node Output Pin
-        &lt;ul&gt;
-          &lt;li&gt;Update Output Pin: Continuous execution during the timeline&lt;/li&gt;
-          &lt;li&gt;Finished Output Pin: End when timeline finishes&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Rotate Implementation (Connect update pin)
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Make&lt;/strong&gt; Rotator: Make a structure from rotator 3 float values(Roll, Pitch, Yaw)
-            &lt;ul&gt;
-              &lt;li&gt;Opposite function: &lt;strong&gt;Break&lt;/strong&gt; Rotator [&lt;strong&gt;Make&lt;/strong&gt; and &lt;strong&gt;Break&lt;/strong&gt;]&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;SetRelativeRotation: Set rotation relative to the parent component&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;key-interpolation&quot;&gt;Key Interpolation&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Lerp
-    &lt;ul&gt;
-      &lt;li&gt;Linear Interpolation
-        &lt;ul&gt;
-          &lt;li&gt;Linear interpolation between two values&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Lerp Interpolation Function
-        &lt;ul&gt;
-          &lt;li&gt;Lerp(A, B, α) = A * (1 - α) + B * α = A + (B - A) * α&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Key Interpolation
-    &lt;ul&gt;
-      &lt;li&gt;Linear&lt;/li&gt;
-      &lt;li&gt;Automatic&lt;/li&gt;
-      &lt;li&gt;Ease In / Ease Out
-        &lt;ul&gt;
-          &lt;li&gt;Smooth animation&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;timeline-reverse-function&quot;&gt;Timeline Reverse Function&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Timeline input pin
-    &lt;ul&gt;
-      &lt;li&gt;Play input pin&lt;/li&gt;
-      &lt;li&gt;Reverse input pin&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Timeline output pin
-    &lt;ul&gt;
-      &lt;li&gt;Direction output pin
-        &lt;ul&gt;
-          &lt;li&gt;Play direction data of current timeline&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;ETimelineDirection&lt;/strong&gt; value&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sliding-door&quot;&gt;Sliding Door&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;2 Door with a rail
-    &lt;ul&gt;
-      &lt;li&gt;Push to door forward and make it move left or right&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;DoorLeft and DoorRight movement
-    &lt;ul&gt;
-      &lt;li&gt;Move -100 in x-axis for a second
-        &lt;ul&gt;
-          &lt;li&gt;(0, -50, 0), (0, 50, 0) -&amp;gt; (-100, -50, 0), (-100, 50, 0)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Next move +-100 in y-axis for a second
-        &lt;ul&gt;
-          &lt;li&gt;(-100, -50, 0), (-100, 50, 0) -&amp;gt; (-100, -150, 0), (-100, 150, 0)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;sliding-door-implementation&quot;&gt;Sliding Door Implementation&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Arrow Component
-    &lt;ul&gt;
-      &lt;li&gt;Visible in editor&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Timeline
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Float track&lt;/strong&gt; cannot express linear interpolation -&amp;gt; Use &lt;strong&gt;Vector track&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Timeline implementation (DoorRight)
-        &lt;ul&gt;
-          &lt;li&gt;Move -100 in x-axis for a second&lt;/li&gt;
-          &lt;li&gt;Next, move +100 in y-axis for a second&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Movement
-        &lt;ul&gt;
-          &lt;li&gt;SetRelativeLocation&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/17/screenshot-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.unrealengine.com/4.27/en-US/&quot;&gt;Unreal Engine Document&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Timeline Set a specific time and repeat a certain movement E.g. At 5 sec move upwards and open a door, etc. Express this in timeline Timeline is a event that occurs in a time sequence Parallel axis is time axis Timeline Timeline is a change in value which occurs in time X-axis is time and Y-axis is value “Value” = “Track” Track Category: float, vector, color, event Curve Input: Input keys to express a curve Key = (time, value) Adding key: shift + click Interpolation between keys create a curve</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Demultiplexing: A job of delivering the data in a transport-layer segment to the correct socket. Multiplexing: A job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header information to create segments, and passing the segments to the network layer.</summary></entry></feed>

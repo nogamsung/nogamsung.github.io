@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/comsci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-11-16T16:48:33+09:00</updated>
+  <updated>2022-11-19T20:22:29+09:00</updated>
   <id>/tag/comsci/feed.xml</id>
 
   
@@ -589,6 +589,190 @@ likes of the original pin)&lt;/li&gt;
     </entry>
   
     <entry>
+      <title type="html">Computer Network - Connection Oriented Transport TCP</title>
+      <link href="/Computer_Network-Connection_Oriented_Transport_TCP" rel="alternate" type="text/html" title="Computer Network - Connection Oriented Transport TCP" />
+      <published>2022-11-11T00:00:00+09:00</published>
+      <updated>2022-11-11T00:00:00+09:00</updated>
+      <id>/Computer_Network-Connection_Oriented_Transport_TCP</id>
+      <content type="html" xml:base="/Computer_Network-Connection_Oriented_Transport_TCP">&lt;h2 id=&quot;1️⃣-the-tcp-connection&quot;&gt;1️⃣ The TCP Connection&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-oriented&lt;/strong&gt;: Before one application process can begin to send data to another, the two processes must
+first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the 
+parameters of ensuing data transfer.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Full-duplex service&lt;/strong&gt;: If there is a TCP connection between Process A on one host and Process B on another host,
+then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from 
+Process A to Process B.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Point-to-point&lt;/strong&gt;: Between a single sender and a single receiver.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multicasting&lt;/strong&gt;: The transfer of data from one sender to many receivers in a single send operation, which is not 
+possible with TCP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Three-way handshake&lt;/strong&gt;: Three segments sent between the two hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Send buffer&lt;/strong&gt;: One of the buffers that is set aside during the initial three-way handshake.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum segment size (MSS)&lt;/strong&gt;: The maximum amount of data that can be grabbed and placed in a segment.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum transmission Unit (MTU)&lt;/strong&gt;: Length of the largest link-layer frame that can be sent by the local sending 
+host.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP segments&lt;/strong&gt;: Passed down to the network layer, where they are separately encapsulated within network-layer IP 
+datagrams.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-tcp-segment-structure&quot;&gt;2️⃣ TCP Segment Structure&lt;/h2&gt;
+
+&lt;p&gt;The TCP segment header contains the following fields:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Source and destination port numbers&lt;/strong&gt; which is used for multiplexing/demultiplexing data from/to upper-layer 
+applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Checksum field&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;The 32-bit &lt;strong&gt;sequence number field&lt;/strong&gt; and the 32-bit &lt;strong&gt;acknowledgement number field&lt;/strong&gt; are used by the TCP sender and 
+receiver in implementing a reliable data transfer service.&lt;/li&gt;
+  &lt;li&gt;The 16-bit &lt;strong&gt;receive window&lt;/strong&gt; field is used for flow control.&lt;/li&gt;
+  &lt;li&gt;The 4-bit &lt;strong&gt;header length field&lt;/strong&gt; specifies the length of the TCP header in 32-bit words. The TCP header can be of 
+variable length due to the TCP options field.&lt;/li&gt;
+  &lt;li&gt;The optional and variable-length &lt;strong&gt;options field&lt;/strong&gt; is used when a sender and receiver negotiate the maximum segment 
+size (MSS) or as a window scaling factor for use in high-speed networks. A time-stamping option is also defined.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;flag field&lt;/strong&gt; contains 6 bits. The ACK bit is used to indicate that the value carried in the acknowledgement 
+field is valid; that is, the segment contains an acknowledgement for a segment that has been successfully received. The 
+&lt;strong&gt;RST&lt;/strong&gt;, &lt;strong&gt;SYN&lt;/strong&gt;, and &lt;strong&gt;FIN&lt;/strong&gt; bits are used for connection setup and teardown. The CWR and ECE bits are used in explicit
+congestion notification. Setting the &lt;strong&gt;PSH&lt;/strong&gt; bit indicates that the receiver should pass the data to the upper layer 
+immediately. Finally, the &lt;strong&gt;URG&lt;/strong&gt; bit is used to indicate that there is data in this segment that the sending-side 
+upper-layer entity has marked as “urgent”. The location of the last byte of this urgent data is indicated by the 16-bit 
+&lt;strong&gt;urgent data pointer field&lt;/strong&gt;. TCP must inform the receiving-side upper-layer entity when urgent data exists and pass it
+a pointer to the end of the urgent data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sequence-numbers-and-acknowledgement-numbers&quot;&gt;Sequence Numbers and Acknowledgement Numbers&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sequence number for a segment&lt;/strong&gt;: The byte-stream number of the first byte in the segment.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cumulative acknowledgements&lt;/strong&gt;: The concept of TCP that it only acknowledges bytes up to the first missing byte in 
+the stream.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When a computer receives out-of-order segments in a TCP connection, the programming implementing a TCP implementation 
+can decide to either:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The receiver immediately discards out-of-order segments&lt;/li&gt;
+  &lt;li&gt;The receiver keeps the out-of-order bytes and waits for the missing bytes to fill in the gaps.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;telnet-a-case-study-for-sequence-and-acknowledgement-numbers&quot;&gt;Telnet: A Case Study for Sequence and Acknowledgement Numbers&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Piggybacked&lt;/strong&gt;: The acknowledgement for client-to-server data is carried in a segment carrying server-to-client data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-round-trip-time-estimation-and-timeout&quot;&gt;3️⃣ Round-Trip Time Estimation and Timeout&lt;/h2&gt;
+&lt;h3 id=&quot;estimating-the-round-trip-time&quot;&gt;Estimating the Round-Trip Time&lt;/h3&gt;
+
+&lt;p&gt;Upon obtaining a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt;, TCP updates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt; according to the following formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;(1-\alpha)&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;\alpha&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;EstimatedRTT&lt;/strong&gt;: An average, which the new value of &lt;strong&gt;EstimatedRTT&lt;/strong&gt; is a weighted combination of the previous value 
+&lt;strong&gt;EstimatedRTT&lt;/strong&gt; and the new value for &lt;strong&gt;SampleRTT&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The recommended value of α is α = 0.125, in which case the formula above becomes:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;0.875&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;0.125&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Exponential weighted moving average (EWMA)&lt;/strong&gt;: The weighted average puts more weight on recent samples better reflect
+the current congestion in the network. The word “exponential” appears because the weight of a given &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; decays 
+exponentially fast as the updates proceed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; is an estimate of how much &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; typically deviates from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt;:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?DevRTT&amp;amp;space;=&amp;amp;space;(1-\beta)&amp;amp;space;\cdot&amp;amp;space;DevRTT&amp;amp;space;&amp;amp;plus;&amp;amp;space;\beta&amp;amp;space;\cdot&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;SampleRTT&amp;amp;space;-&amp;amp;space;EstimatedRTT&lt;/td&gt;
+      &lt;td&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;If the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; values have little fluctuation, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; wil be small and vica-versa. The recommended value of β 
+is 0.25.&lt;/p&gt;
+
+&lt;h3 id=&quot;setting-and-managing-the-retransmission-timeout-interval&quot;&gt;Setting and Managing the Retransmission Timeout Interval&lt;/h3&gt;
+
+&lt;p&gt;Formula to determine the retransmission timeout interval:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?TimeoutInterval&amp;space;=&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;4&amp;space;\cdot&amp;space;DevRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An initial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeoutInterval&lt;/code&gt; value of 1 second is recommended.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-reliable-data-transfer&quot;&gt;4️⃣ Reliable Data Transfer&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: Created by TCP on top of IP’s unreliable best-effort service, it ensures that the
+data stream that a process reads out of its TCP receive buffer is uncorrupted, without gaps, without duplication, and in
+sequence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The 3 major events related to data transmission and retransmission in the TCP sender&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Data received from application above.&lt;/li&gt;
+  &lt;li&gt;Timer timeout&lt;/li&gt;
+  &lt;li&gt;ACK receipt&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;a-few-interesting-scenarios&quot;&gt;A Few Interesting Scenarios&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;doubling-the-timeout-interval&quot;&gt;Doubling the Timeout Interval&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ The TCP Connection Connection-oriented: Before one application process can begin to send data to another, the two processes must first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the parameters of ensuing data transfer. Full-duplex service: If there is a TCP connection between Process A on one host and Process B on another host, then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from Process A to Process B. Point-to-point: Between a single sender and a single receiver. Multicasting: The transfer of data from one sender to many receivers in a single send operation, which is not possible with TCP. Three-way handshake: Three segments sent between the two hosts. Send buffer: One of the buffers that is set aside during the initial three-way handshake. Maximum segment size (MSS): The maximum amount of data that can be grabbed and placed in a segment. Maximum transmission Unit (MTU): Length of the largest link-layer frame that can be sent by the local sending host. TCP segments: Passed down to the network layer, where they are separately encapsulated within network-layer IP datagrams.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Intelligent Information Systems - Selenium</title>
       <link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" />
       <published>2022-11-09T00:00:00+09:00</published>
@@ -744,6 +928,174 @@ likes of the original pin)&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;roles-vs-groups-in-networks-1&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Roles:
+    &lt;ul&gt;
+      &lt;li&gt;A group of nodes with similar structural properties&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Communities/Groups:
+    &lt;ul&gt;
+      &lt;li&gt;A group of nodes that are &lt;strong&gt;well-connected&lt;/strong&gt; to each other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Roles and communities are complementary&lt;/li&gt;
+  &lt;li&gt;Consider the social network of a CSE Dept:
+    &lt;ul&gt;
+      &lt;li&gt;Roles: Faculty, Staff, Students&lt;/li&gt;
+      &lt;li&gt;Communities: AI Lab, Network Lab, System Lab&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;roles-more-formally&quot;&gt;Roles: More Formally&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Structural equivalence: Node &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are &lt;strong&gt;structurally equivalent&lt;/strong&gt; if they have the same relations to all other 
+nodes
+    &lt;ul&gt;
+      &lt;li&gt;Structurally equivalent nodes are likely to be similar in other ways - i.e., friendships in social networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;structural-equivalence-example&quot;&gt;Structural Equivalence: Example&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nodes &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are structurally equivalent:
+    &lt;ul&gt;
+      &lt;li&gt;For all the other nodes &lt;em&gt;k&lt;/em&gt;, node &lt;em&gt;u&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt; if and only if node &lt;em&gt;v&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;discovering-structural-roles-in-networks&quot;&gt;Discovering Structural Roles in Networks&lt;/h2&gt;
+&lt;h3 id=&quot;method-to-discover-structural-roles&quot;&gt;Method to Discover Structural Roles&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;RoIX: Automatic discovery of nodes’ structural roles in networks
+    &lt;ul&gt;
+      &lt;li&gt;Unsupervised learning approach&lt;/li&gt;
+      &lt;li&gt;No prior knowledge required&lt;/li&gt;
+      &lt;li&gt;Assigns a mixed-membership of roles to each node&lt;/li&gt;
+      &lt;li&gt;Scales linearly in number (of edges)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;roix-approach-overview&quot;&gt;RoIX: Approach Overview&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;recursive-feature-extraction&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Recursive feature extraction turns network connectivity into structural features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Neighborhood features: What is a node’s &lt;strong&gt;connectivity&lt;/strong&gt; pattern?&lt;/li&gt;
+  &lt;li&gt;Recursive features: To &lt;strong&gt;what kinds of nodes&lt;/strong&gt; is a node &lt;strong&gt;connected&lt;/strong&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;recursive-feature-extraction-1&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: Aggregate features of a node and use them to generate new recursive features&lt;/li&gt;
+  &lt;li&gt;Base set of a node’s neighborhood features:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Local features&lt;/strong&gt;: All measures of the node degree:
+        &lt;ul&gt;
+          &lt;li&gt;If network is directed, include in-degree and out-degree, total degree&lt;/li&gt;
+          &lt;li&gt;If network is weighted, include weighted feature versions&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Egonet features&lt;/strong&gt;: Computed on the node’s egonet:
+        &lt;ul&gt;
+          &lt;li&gt;Egonet includes the node, its neighbors, and any edges in the induced subgraph on these nodes&lt;/li&gt;
+          &lt;li&gt;Number of within-egonet edges&lt;/li&gt;
+          &lt;li&gt;Number of edges entering/leaving egonet&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Start with the base set of node features&lt;/li&gt;
+  &lt;li&gt;Use the set of current node features to generate additional features:
+    &lt;ul&gt;
+      &lt;li&gt;Two types of aggregate functions: mean and sum
+        &lt;ul&gt;
+          &lt;li&gt;E.g., mean value of “unweighted degree” feature between all neighbors of a node&lt;/li&gt;
+          &lt;li&gt;Compute means and sums over all current features, including other recursive features&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Repeat&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The number of possible recursive features grows exponentially with each recursive iteration:
+    &lt;ul&gt;
+      &lt;li&gt;Reduce the number of features using a pruning technique:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Look for pairs of features&lt;/strong&gt; that are &lt;strong&gt;high correlated&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Eliminate one of the features&lt;/strong&gt; whenever two features are correlated above a user-defined threshold&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;role-extraction&quot;&gt;Role Extraction&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;application-structural-similarity&quot;&gt;Application: Structural Similarity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Task: Cluster nodes based on their structural similarity&lt;/li&gt;
+  &lt;li&gt;Two networks:
+    &lt;ul&gt;
+      &lt;li&gt;Network science co-authorship network:
+        &lt;ul&gt;
+          &lt;li&gt;Nodes: Network scientists&lt;/li&gt;
+          &lt;li&gt;Edges: The number of co-authored papers&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Political books co-purchasing network:
+        &lt;ul&gt;
+          &lt;li&gt;Nodes: Political books on Amazon&lt;/li&gt;
+          &lt;li&gt;Edges: Frequent co-purchasing of books by the same buyers&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Setup: For each network,
+    &lt;ol&gt;
+      &lt;li&gt;Use RoIX to assign each node a distribution over the set of discovered, structural roles&lt;/li&gt;
+      &lt;li&gt;Determine similarity between nodes by comparing their role distributions&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;structural-sim&quot;&gt;Structural Sim&lt;/h3&gt;
+&lt;h4 id=&quot;co-authorship-network&quot;&gt;Co-authorship Network&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;political-book-network&quot;&gt;Political Book Network&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Book labels (i.e., liberal, conservative, neutral) were not given to role discovery algorithm&lt;/p&gt;
+
+&lt;h2 id=&quot;centrality-a-specific-role-of-nodes-in-the-network&quot;&gt;Centrality: A Specific Role of Nodes in the Network&lt;/h2&gt;
+&lt;h3 id=&quot;centrality-or-prestige&quot;&gt;Centrality (or Prestige)&lt;/h3&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -976,6 +1328,47 @@ yet been acknowledged. If an ACK is received but there are still additional tran
 If an ACK is received but there are still additional transmitted but not yet acknowledged packets, the timer is 
 restarted. If there are no outstanding, unacknowledged packets, the timer is stopped.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-selective-repeat-sr&quot;&gt;4️⃣ Selective Repeat (SR)&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SR sender events and actions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Data received from above&lt;/em&gt;. When data is received from above, the SR sender checks the next available sequence number
+for the packet. If the sequence number is within the sender’s window, the data is packetized and sent; otherwise it is 
+either buffered or returned to the upper layer for later transmission, as in GBN.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Timeout&lt;/em&gt;. Timers are again used to protect against lost packets. However, each packet must now have its own logical 
+timer, since only a single packet will be transmitted on timeout. A single hardware timer can be used to mimic the 
+operation of multiple logical timers.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;ACK received&lt;/em&gt;. If an ACK is received, the SR sender marks that packet as having been received, provided it is in the
+window. If the packet’s sequence number is equal to *send_Base, the window base is moved forward to the unacknowledged 
+packet with the smallest sequence number. If the window moves and there are untransmitted packets with sequence numbers 
+that now fall within the window, these packets are transmitted.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;SR receiver events and actions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base, rcv_base+N-1) is correctly received&lt;/em&gt;. In this case, the received packet 
+falls within the receiver’s window and a selective ACK packet is returned to the sender. if the packet was not 
+previously received, it is buffered. If this packet has a sequence number equal to the base of the received window, then
+this packet, and any previously buffered and consecutively numbered (beginning with rcv_base) packets are delivered to 
+the upper layer. The receive window is then moved forward by the number of packets delivered to the upper layer. When a 
+packet with a sequence number of rcv_base=2 is received, it and packets 3, 4, and 5 can be delivered to the upper layer.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base-N, rcv_base-1) is correctly received&lt;/em&gt;. In this case, an ACK must be 
+generated, even though this is a packet that the receiver has previously acknowledged.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Otherwise&lt;/em&gt;. Ignore the packet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1408,760 +1801,6 @@ hosts with an excessive amount of traffic.&lt;/li&gt;
 
       
         <summary type="html">Logical communication: Allows application processes to freely send messages to each other, without worrying about the details of the physical infrastructure used to carry these messages.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Graph Mining (Graph Basic, Random Graph, Motif)</title>
-      <link href="/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Graph Basic, Random Graph, Motif)" />
-      <published>2022-10-17T00:00:00+09:00</published>
-      <updated>2022-10-17T00:00:00+09:00</updated>
-      <id>/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)</id>
-      <content type="html" xml:base="/Big_Data-Graph_Mining_(Graph_Basic,_Random_Graph,_Motif)">&lt;h2 id=&quot;why-graph&quot;&gt;WHY GRAPH?&lt;/h2&gt;
-
-&lt;p&gt;Most data is structured from &lt;strong&gt;Network&lt;/strong&gt; &amp;lt;- A Complex System Consisting of &lt;strong&gt;Interacting Entities&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;graph-entities&quot;&gt;Graph Entities&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-can-be-modeled-as-a-graph&quot;&gt;What can be Modeled as a Graph?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;relations-may-be-inferred&quot;&gt;“Relations” may be inferred&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;why-networks-graph-and--why-now&quot;&gt;Why Networks (Graph)? And .. Why Now?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Universal language for describing complex data
-    &lt;ul&gt;
-      &lt;li&gt;Networks from science, nature, and technology are more similar than one would expect&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Shared vocabulary between fields
-    &lt;ul&gt;
-      &lt;li&gt;Computer Science, Social Science, Physics, Economics, Statistics, Biology&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data availability &amp;amp; computational challenges
-    &lt;ul&gt;
-      &lt;li&gt;Web/mobile, bio, health, and medical&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Impact!
-    &lt;ul&gt;
-      &lt;li&gt;Social networking, Drug design, AI reasoning&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;graph-basic&quot;&gt;Graph Basic&lt;/h2&gt;
-&lt;h3 id=&quot;graph-definition&quot;&gt;Graph Definition&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data Structure (or dataset) to model the relations of entity
-    &lt;ul&gt;
-      &lt;li&gt;E.g., Social relation, p2p network, code flow, paths on the map, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;G = (V, E, W)
-    &lt;ul&gt;
-      &lt;li&gt;V: a set of entity (also called as nodes, object, …)&lt;/li&gt;
-      &lt;li&gt;E: a set of relation (also called as link, …)&lt;/li&gt;
-      &lt;li&gt;W: a set of weight (on the corresponding link)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;graph-types&quot;&gt;Graph Types&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Undirected Graph
-    &lt;ul&gt;
-      &lt;li&gt;E consists of only undirected link&lt;/li&gt;
-      &lt;li&gt;E.g. Facebook friendship&lt;/li&gt;
-      &lt;li&gt;(Usually) indicated by (A, B)&lt;/li&gt;
-      &lt;li&gt;(A, B) = (B, A)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Directed Graph
-    &lt;ul&gt;
-      &lt;li&gt;E consists of only directed links&lt;/li&gt;
-      &lt;li&gt;E.g. Twitter following/follower&lt;/li&gt;
-      &lt;li&gt;(Usually) indicated by &amp;lt;A, B&amp;gt;&lt;/li&gt;
-      &lt;li&gt;&amp;lt;A, B&amp;gt; != &amp;lt;B, A&amp;gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Unweighted Graph
-    &lt;ul&gt;
-      &lt;li&gt;All elements in W are same&lt;/li&gt;
-      &lt;li&gt;(Usually) weights are not indicated&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;degrees&quot;&gt;Degrees&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In undirected graph,
-    &lt;ul&gt;
-      &lt;li&gt;no. links connected to a given node (= no. neighbors)&lt;/li&gt;
-      &lt;li&gt;In G1, degree(0) = 3&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;In directed graph,
-    &lt;ul&gt;
-      &lt;li&gt;In-degrees: no. links toward a given node (= no. incoming links)&lt;/li&gt;
-      &lt;li&gt;Out-degrees: no. links from a given node (= no. out-going links)&lt;/li&gt;
-      &lt;li&gt;In G3, In-degree(1) = 1, Out-degree(1) = 2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;representing-a-graph-adjacent-matrix&quot;&gt;Representing a Graph: Adjacent Matrix&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;For an adjacent matrix M,
-    &lt;ul&gt;
-      &lt;li&gt;M[i][j] = 1 if there is a link from node i to node j&lt;/li&gt;
-      &lt;li&gt;M[i][j] = 0 otherwise&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Symmetric when undirected graph&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tree&quot;&gt;Tree&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A type of graph satisfying the following conditions
-    &lt;ul&gt;
-      &lt;li&gt;All nodes are connected (i.e., no isolated nodes)&lt;/li&gt;
-      &lt;li&gt;No cycles&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;tools-for-graph-modeling--analysis&quot;&gt;Tools for Graph Modeling &amp;amp; Analysis&lt;/h2&gt;
-&lt;h3 id=&quot;tools&quot;&gt;Tools&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Graph analysis
-    &lt;ul&gt;
-      &lt;li&gt;igraph (Fast)&lt;/li&gt;
-      &lt;li&gt;NetworkX&lt;/li&gt;
-      &lt;li&gt;Pajek&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Network visualization tools (valid for small network)
-    &lt;ul&gt;
-      &lt;li&gt;Gephi&lt;/li&gt;
-      &lt;li&gt;Graphviz&lt;/li&gt;
-      &lt;li&gt;Pajek&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;igraph-example&quot;&gt;iGraph Example&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;igraph&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;igraph&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;__main__&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Read_Ncol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;test1.csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weights&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;directed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degree&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;node_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;edge_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Number of nodes = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Number of edges = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;edge_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;len(degrees) = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Avg.Degree = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;degrees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transitivity_undirected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Avg.CC = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;network-properties&quot;&gt;Network Properties&lt;/h2&gt;
-&lt;h3 id=&quot;a-first-measure-for-graph&quot;&gt;A first measure for graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Assume that you have modeled a graph, what can you do next?&lt;/li&gt;
-  &lt;li&gt;You will have to measure “coarse-grained characteristics” of a graph!
-    &lt;ul&gt;
-      &lt;li&gt;Can be done with network properties
-        &lt;ul&gt;
-          &lt;li&gt;Degree distribution: &lt;em&gt;P(k)&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;Path length: &lt;em&gt;h&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;Clustering coefficient: &lt;em&gt;C&lt;/em&gt;&lt;/li&gt;
-          &lt;li&gt;Connected components: &lt;em&gt;s&lt;/em&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;degree-distribution&quot;&gt;Degree Distribution&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Degree distribution &lt;em&gt;P(k)&lt;/em&gt;: Probability that a randomly chosen node has degree &lt;em&gt;k&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;N&lt;sub&gt;k&lt;/sub&gt;&lt;/em&gt; = no. nodes with degree &lt;em&gt;k&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Normalized histogram:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;em&gt;P(k)&lt;/em&gt; = &lt;em&gt;N&lt;sub&gt;k&lt;/sub&gt;&lt;/em&gt; / &lt;em&gt;N&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;paths-in-a-graph&quot;&gt;Paths in a Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A &lt;strong&gt;path&lt;/strong&gt; is a sequence of nodes in which each node is linked to the next one&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;P&lt;sub&gt;n&lt;/sub&gt; = {i&lt;sub&gt;0&lt;/sub&gt;, i&lt;sub&gt;1&lt;/sub&gt;, i&lt;sub&gt;2&lt;/sub&gt;, …, i&lt;sub&gt;n&lt;/sub&gt;}&lt;/p&gt;
-
-&lt;p&gt;P&lt;sub&gt;n&lt;/sub&gt; = {(i&lt;sub&gt;0&lt;/sub&gt;, i&lt;sub&gt;1&lt;/sub&gt;), (i&lt;sub&gt;1&lt;/sub&gt;, i&lt;sub&gt;2&lt;/sub&gt;), (i&lt;sub&gt;2&lt;/sub&gt;, i&lt;sub&gt;3&lt;/sub&gt;), …,
-(i&lt;sub&gt;n-1&lt;/sub&gt;, i&lt;sub&gt;n&lt;/sub&gt;)}&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;NOTE ❗️&lt;/h4&gt;
-&lt;p&gt;A path can intersect itself and pass through the same edge multiple times&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;i.e., the path length between two nodes can be infinite&lt;/li&gt;
-  &lt;li&gt;e.g.: ACDB&lt;strong&gt;CD&lt;/strong&gt;EG&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;distance-shortest-path-length&quot;&gt;Distance (Shortest Path Length)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The number of edges along the shortest path connecting the nodes
-    &lt;ul&gt;
-      &lt;li&gt;If the two nodes are not connected, the distance is usually defined as infinite (or zero)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In directed graphs, paths need to follow the direction of arrows
-    &lt;ul&gt;
-      &lt;li&gt;i.e., Distance is not symmetric h&lt;sub&gt;B,C&lt;/sub&gt; != h&lt;sub&gt;C,B&lt;/sub&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;diameter--apl&quot;&gt;Diameter &amp;amp; APL&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Diameter: The maximum (shortest path) distance between any pair of nodes in a graph&lt;/li&gt;
-  &lt;li&gt;Average path length (for a &lt;strong&gt;connected&lt;/strong&gt; graph or a &lt;strong&gt;strong connected&lt;/strong&gt; directed graph)
-    &lt;ul&gt;
-      &lt;li&gt;Many times we compute the average only over the connected pairs of nodes (that is, we ignore “infinite” length paths
-) -&amp;gt; &lt;strong&gt;Isolated nodes are not considered!&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{h}&amp;space;=&amp;space;\frac{1}{2E_{max}}\sum_{i,j\neq&amp;space;i}h_{ij}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;h&lt;sub&gt;ij&lt;/sub&gt;&lt;/strong&gt; is the distance from node &lt;strong&gt;i&lt;/strong&gt; to node &lt;strong&gt;j&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;E&lt;sub&gt;max&lt;/sub&gt;&lt;/strong&gt; is the max number of edges (total number of node pairs) = &lt;strong&gt;n(n-1) / 2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;clustering-coefficient&quot;&gt;Clustering Coefficient&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Clustering coefficient (for undirected graphs):
-    &lt;ul&gt;
-      &lt;li&gt;How connected are &lt;strong&gt;i&lt;/strong&gt;’s neighbors to each other?&lt;/li&gt;
-      &lt;li&gt;Node &lt;strong&gt;i&lt;/strong&gt; with degree &lt;strong&gt;k&lt;sub&gt;i&lt;/sub&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;=&amp;space;\frac{2e_i}{k_i(k_i-1)}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;where &lt;em&gt;e&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; is the number of edges between the neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;\in&amp;space;[0,1]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;k(k-1)&lt;/em&gt; is max number of edges between the &lt;em&gt;k&lt;/em&gt; neighbors&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Clustering coefficient is undefined (or defined to be 0) for nodes with degree 0 or 1&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Average clustering coefficient:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C&amp;space;=&amp;space;\frac{1}{N}\sum_{i}^{N}C_i&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;computing-clustering-coefficient&quot;&gt;Computing Clustering Coefficient&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Clustering coefficient (for undirected graphs):
-    &lt;ul&gt;
-      &lt;li&gt;How connected are &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;’s neighbors to each other?&lt;/li&gt;
-      &lt;li&gt;Node &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; with degree &lt;strong&gt;&lt;em&gt;k&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_i&amp;space;=&amp;space;\frac{2e_i}{k_i(k_i-1)}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;where &lt;em&gt;e&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; is the number of edges between the neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-35.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Size of the largest connected component
-    &lt;ul&gt;
-      &lt;li&gt;Largest set where any two vertices can be joined by a path&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-36.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Finding connected components:
-    &lt;ul&gt;
-      &lt;li&gt;Start from random node and perform Breath First Search (BFS)&lt;/li&gt;
-      &lt;li&gt;Label the nodes that BFS visits&lt;/li&gt;
-      &lt;li&gt;If all nodes are visited, the network is connected&lt;/li&gt;
-      &lt;li&gt;Otherwise, find an unvisited node and repeat BFS&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;summary-key-network-properties&quot;&gt;Summary: Key Network Properties&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Degree distribution&lt;/strong&gt;: P(k)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Path length&lt;/strong&gt;: h&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Clustering coefficient&lt;/strong&gt;: C&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Connected components&lt;/strong&gt;: s&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;generating-random-graph-erdos-renyi&quot;&gt;Generating Random Graph (Erdos-Renyi)&lt;/h2&gt;
-&lt;h3 id=&quot;simple-algorithm-to-generate-a-random-graph&quot;&gt;Simple Algorithm to Generate a Random Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A graph “uniformly” create or select links&lt;/li&gt;
-  &lt;li&gt;Two variants
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;G&lt;sub&gt;np&lt;/sub&gt;&lt;/strong&gt;: undirected graph on &lt;em&gt;n&lt;/em&gt; nodes where each edge (&lt;em&gt;u&lt;/em&gt;, &lt;em&gt;v&lt;/em&gt;) appears i.i.d. with probability &lt;em&gt;p&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;G&lt;sub&gt;nm&lt;/sub&gt;&lt;/strong&gt;: undirected graph with &lt;em&gt;n&lt;/em&gt; nodes, and &lt;em&gt;m&lt;/em&gt; edges picked uniformly at random&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;What kind of networks do such models produce?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;random-graph-model&quot;&gt;Random Graph Model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;n&lt;/em&gt; and &lt;em&gt;p&lt;/em&gt; do not uniquely determine the graph!
-    &lt;ul&gt;
-      &lt;li&gt;The graph is a result of random process&lt;/li&gt;
-      &lt;li&gt;We can have many different realizations given the same &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;p&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-37.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;properties-of-gnp&quot;&gt;Properties of G&lt;sub&gt;np&lt;/sub&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Degree distribution&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-38.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Average path length&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;O(log n)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Average clustering coefficient&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\overline{k}&amp;space;/&amp;space;n&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Largest Connected Component&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;GCC exists when k &amp;gt; 1&lt;/p&gt;
-
-&lt;h3 id=&quot;random-graph-gnp-does-not-reflect-real-world&quot;&gt;Random Graph &lt;em&gt;G&lt;sub&gt;np&lt;/sub&gt;&lt;/em&gt; Does NOT Reflect Real-World&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-39.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Other examples&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-40.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-problem-comes-from-edge-locality&quot;&gt;The Problem Comes from “Edge Locality”&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The major difference is that real-world network has “local structure”
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Triadic closure&lt;/strong&gt;: Friend of a friend is my friend&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-41.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Simple adding edges” (i.e., uniform triad) does not work&lt;/li&gt;
-  &lt;li&gt;How can we create a graph with high CC &amp;amp; low diameter?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;creating-the-graph-with-high-cc-and-low-diameter&quot;&gt;Creating the Graph with High CC and Low Diameter&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-42.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The point is “how to add edges”
-    &lt;ul&gt;
-      &lt;li&gt;Clustering implies edge “locality”&lt;/li&gt;
-      &lt;li&gt;Randomness enables “shortcuts”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;solution-the-small-world-model&quot;&gt;Solution: The Small World Model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Start with a low-dimensional regular lattice
-    &lt;ul&gt;
-      &lt;li&gt;(In our case we are using a ring as a lattice)&lt;/li&gt;
-      &lt;li&gt;Has high clustering coefficient&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rewire: &lt;strong&gt;Introduce randomness&lt;/strong&gt; (“shortcuts”)
-    &lt;ul&gt;
-      &lt;li&gt;Add/remove edges to create shortcuts to join remote parts of the lattice&lt;/li&gt;
-      &lt;li&gt;For each edge, with probability &lt;em&gt;p&lt;/em&gt;, move the other endpoints to a random node&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-43.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-44.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-45.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-small-world-summary&quot;&gt;The Small World: Summary&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Could a network with high clustering be at the same time a small world?
-    &lt;ul&gt;
-      &lt;li&gt;Yes! You don’t need more than a few random links&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The Watts Strogatz Model
-    &lt;ul&gt;
-      &lt;li&gt;Provides insight on the interplay between clustering and the small-world&lt;/li&gt;
-      &lt;li&gt;Captures the structure of many realistic networks&lt;/li&gt;
-      &lt;li&gt;Accounts for the high clustering of real networks&lt;/li&gt;
-      &lt;li&gt;Does not lead to the correct degree distribution&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;subgraphs-motifs-and-graphlets&quot;&gt;Subgraphs, Motifs, and Graphlets&lt;/h2&gt;
-&lt;h3 id=&quot;subnetworks-a-property-of-graph&quot;&gt;Subnetworks: A Property of Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Subnetworks, or subgraphs, are the building blocks of networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;They have the power to characterize and discriminate networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-to-characterize-a-graph-from-subgraphs&quot;&gt;How to Characterize a Graph from Subgraphs?&lt;/h3&gt;
-&lt;p&gt;Let’s consider all possible (non-isomorphoic) directed subgraphs of size 3&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;For each Subgraphs:
-    &lt;ul&gt;
-      &lt;li&gt;Imagine you have a metric capable of classifying the subgraph “significnace”
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Negative values&lt;/strong&gt; indicate &lt;strong&gt;under-representation&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Positive values&lt;/strong&gt; indicate &lt;strong&gt;over-representation&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;We create a &lt;strong&gt;network significance profile&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;A feature vector with values for all subgraph types&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Next: Compare profiles of different networks:
-    &lt;ul&gt;
-      &lt;li&gt;Regulatory network (gene regulation)&lt;/li&gt;
-      &lt;li&gt;Neuronal network (synaptic connection)&lt;/li&gt;
-      &lt;li&gt;World Wide Web (hyperlinks between pages)&lt;/li&gt;
-      &lt;li&gt;Social networks (friendships)&lt;/li&gt;
-      &lt;li&gt;Language networks (word adjacency)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;case-example-og-subgraphs&quot;&gt;Case Example og Subgraphs&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Networks from the same domain have similar significance profiles&lt;/p&gt;
-
-&lt;h3 id=&quot;network-motifs&quot;&gt;Network Motifs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Network motifs: “recurring, significant patterns of interconnections”&lt;/li&gt;
-  &lt;li&gt;How to define a network motif:
-    &lt;ul&gt;
-      &lt;li&gt;Pattern: Small partial &lt;strong&gt;subgraph&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Recurring: Found many times, i.e., with high frequency&lt;/li&gt;
-      &lt;li&gt;Significant: More frequent than expected, i.e., in randomly generated networks
-        &lt;ul&gt;
-          &lt;li&gt;Erdos - Renyi random graphs, scale-free networks&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;partial-subgraphs&quot;&gt;Partial Subgraphs&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Induced subgraphs&lt;/strong&gt; of graph G is a graph, formed from a subset X of the vertices of graph G and all of the edges 
-connecting pairs of vertices in subset X.&lt;/p&gt;
-
-&lt;h3 id=&quot;recurrence&quot;&gt;Recurrence&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-17.jpeg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Allow &lt;strong&gt;overlapping of motifs&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Network on the right has 4 occurrences of the motif:
-    &lt;ul&gt;
-      &lt;li&gt;{1, 2, 3, 4, 5}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 6}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 7}&lt;/li&gt;
-      &lt;li&gt;{1, 2, 3, 4, 8}&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;significance-of-motif&quot;&gt;Significance of Motif&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Key idea: Subgraphs that occur in a real network much more frequently than in a random network have functional 
-significance&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motifs are overrepresented in a network when compared to randomized networks:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;Z&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; captures statistical significance of motif &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Z_i=(N_i^{real}-\overline{N}_i^{rand})/std(N_i^{rand})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;N&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;real&lt;/sup&gt; is no. (subgraphs of type &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;) in network G&lt;sup&gt;real&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;N&lt;sub&gt;i&lt;/sub&gt;&lt;sup&gt;rand&lt;/sup&gt; is no. (subgraphs of type &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;) in network G&lt;sup&gt;rand&lt;/sup&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Network significance profile (SP):&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?SP_i=Z_i/\sqrt{\sum_{j}Z_j^2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SP is a vector of &lt;strong&gt;normalized Z-scores&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;SP emphasizes realtive significance of subgraphs:
-    &lt;ul&gt;
-      &lt;li&gt;Important for comparison of networks of different sizes&lt;/li&gt;
-      &lt;li&gt;Generally, larger networks display higher Z-scores&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;case-example-invitation-network-in-aion&quot;&gt;Case Example: Invitation Network in Aion&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-46.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;detecting-motifs&quot;&gt;Detecting Motifs&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Count subgraphs &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt; in G&lt;sup&gt;real&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Count subgraphs &lt;em&gt;i&lt;/em&gt; in random networks G&lt;sup&gt;random&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Configuration model: Each G&lt;sup&gt;rand&lt;/sup&gt; has the same no.(nodes), no.(edges), and no.(degree distribution) as G
-&lt;sup&gt;real&lt;sup&gt;&lt;/sup&gt;&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;Assign Z-score to &lt;em&gt;i&lt;/em&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Z_i=(N_i^{real}-\overline{N}_i^{rand})/std(N_i^{rand})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;High Z-score: Subgraph &lt;em&gt;i** is a network motif of &lt;strong&gt;*G&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-47.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;variations-of-motif-concept&quot;&gt;Variations of Motif Concept&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Canonical definition:
-    &lt;ul&gt;
-      &lt;li&gt;Directed and undirected&lt;/li&gt;
-      &lt;li&gt;Colored and uncolored&lt;/li&gt;
-      &lt;li&gt;Temporal and static motifs&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-48.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Variations on concept
-    &lt;ul&gt;
-      &lt;li&gt;Different &lt;strong&gt;frequency concepts&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Different &lt;strong&gt;significance metrics&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Under-representation&lt;/strong&gt; (anti-motifs)&lt;/li&gt;
-      &lt;li&gt;Different constraints for &lt;strong&gt;null model&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-49.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;graphlets-node-feature-vectors&quot;&gt;Graphlets: Node Feature Vectors&lt;/h2&gt;
-&lt;h3 id=&quot;new-concept-graphlets&quot;&gt;New Concept: Graphlets&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Graphlets&lt;/strong&gt;: connected non-isomorphic subgraphs
-    &lt;ul&gt;
-      &lt;li&gt;Induced subgraphs of any frequency&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-50.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;graphlet-degree-vector-gdv&quot;&gt;Graphlet Degree Vector (GDV)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Next: Use graphlets to obtain a &lt;strong&gt;node-level subgraph&lt;/strong&gt; metric&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Degree&lt;/strong&gt; counts no.(edges) that a node touches:
-    &lt;ul&gt;
-      &lt;li&gt;Can we generalize this notion for graphlets? - Yes!&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-51.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Graphlet degree vector&lt;/strong&gt; counts no.(graphlets) that a node touches&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;automorphism-orbit&quot;&gt;Automorphism Orbit&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;An automorphism orbit takes into account that &lt;strong&gt;symmetries of a subgraph&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Graphlet Degree Vector (GDV): a vector with the frequency of the node in each orbit position&lt;/li&gt;
-  &lt;li&gt;Example: Graphlet degree vector of node &lt;em&gt;v&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-52.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;graphlet-degree-vector-gdv-1&quot;&gt;Graphlet Degree Vector (GDV)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Graphlet degree vector counts no.(graphlets) that a node touches at a particular orbit&lt;/li&gt;
-  &lt;li&gt;Considering graphlets on 2 to 5 nodes we get:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Vector of 73 coordinates&lt;/strong&gt; is a signature of a node that describes the topology of node’s neighborhood&lt;/li&gt;
-      &lt;li&gt;Captures its interconnectivities out to &lt;strong&gt;a distance of 4 hops&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Graphelet degree vector provides a measure of a &lt;strong&gt;node’s local network topology&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Comparing vectors of two nodes provides a highly constraining measure of local topological similarity between them&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;graphlet-degree-vector-example&quot;&gt;Graphlet Degree Vector Example&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/16/screenshot-53.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Graphlet Degree Vector (GDV) of node A:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;-th element of GDV(A): no.(graphlets) that touch A at orbit &lt;strong&gt;&lt;em&gt;i&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Highlighted are graphlets that touch node A at orbits 15, 19, 27, and 35 from left to right&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">WHY GRAPH?</summary>
       
 
       

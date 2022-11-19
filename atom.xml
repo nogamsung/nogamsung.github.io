@@ -50,6 +50,39 @@
     
       
       <item>
+        <title>Computer Network - Connection Oriented Transport TCP</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-the-tcp-connection&quot;&gt;1️⃣ The TCP Connection&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Connection-oriented&lt;/strong&gt;: Before one application process can begin to send data to another, the two processes must
+first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the 
+parameters of ensuing data transfer.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Full-duplex service&lt;/strong&gt;: If there is a TCP connection between Process A on one host and Process B on another host,
+then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from 
+Process A to Process B.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Point-to-point&lt;/strong&gt;: Between a single sender and a single receiver.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Multicasting&lt;/strong&gt;: The transfer of data from one sender to many receivers in a single send operation, which is not 
+possible with TCP.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Three-way handshake&lt;/strong&gt;: Three segments sent between the two hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Send buffer&lt;/strong&gt;: One of the buffers that is set aside during the initial three-way handshake.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum segment size (MSS)&lt;/strong&gt;: The maximum amount of data that can be grabbed and placed in a segment.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Maximum transmission Unit (MTU)&lt;/strong&gt;: Length of the largest link-layer frame that can be sent by the local sending 
+host.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP segments&lt;/strong&gt;: Passed down to the network layer, where they are separately encapsulated within network-layer IP 
+datagrams.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 11 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Connection_Oriented_Transport_TCP</link>
+        <guid isPermaLink="true">/Computer_Network-Connection_Oriented_Transport_TCP</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Intelligent Information Systems - Selenium</title>
         
           <description>&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;

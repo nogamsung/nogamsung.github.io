@@ -224,6 +224,174 @@ into the {body} of the default.hbs template -->
 
 <h3 id="roles-vs-groups-in-networks-1">Roles vs. Groups in Networks</h3>
 
+<ul>
+  <li>Roles:
+    <ul>
+      <li>A group of nodes with similar structural properties</li>
+    </ul>
+  </li>
+  <li>Communities/Groups:
+    <ul>
+      <li>A group of nodes that are <strong>well-connected</strong> to each other</li>
+    </ul>
+  </li>
+  <li>Roles and communities are complementary</li>
+  <li>Consider the social network of a CSE Dept:
+    <ul>
+      <li>Roles: Faculty, Staff, Students</li>
+      <li>Communities: AI Lab, Network Lab, System Lab</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="roles-more-formally">Roles: More Formally</h3>
+<ul>
+  <li>Structural equivalence: Node <em>u</em> and <em>v</em> are <strong>structurally equivalent</strong> if they have the same relations to all other 
+nodes
+    <ul>
+      <li>Structurally equivalent nodes are likely to be similar in other ways - i.e., friendships in social networks</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/4.jpeg" alt="" /></p>
+
+<h3 id="structural-equivalence-example">Structural Equivalence: Example</h3>
+<ul>
+  <li>Nodes <em>u</em> and <em>v</em> are structurally equivalent:
+    <ul>
+      <li>For all the other nodes <em>k</em>, node <em>u</em> has tie to <em>k</em> if and only if node <em>v</em> has tie to <em>k</em></li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/5.jpeg" alt="" /></p>
+
+<h2 id="discovering-structural-roles-in-networks">Discovering Structural Roles in Networks</h2>
+<h3 id="method-to-discover-structural-roles">Method to Discover Structural Roles</h3>
+<ul>
+  <li>RoIX: Automatic discovery of nodes’ structural roles in networks
+    <ul>
+      <li>Unsupervised learning approach</li>
+      <li>No prior knowledge required</li>
+      <li>Assigns a mixed-membership of roles to each node</li>
+      <li>Scales linearly in number (of edges)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/6.jpeg" alt="" /></p>
+
+<h3 id="roix-approach-overview">RoIX: Approach Overview</h3>
+
+<p><img src="assets/screenshots/2022/11/07/7.jpeg" alt="" /></p>
+
+<h3 id="recursive-feature-extraction">Recursive Feature Extraction</h3>
+<ul>
+  <li>Recursive feature extraction turns network connectivity into structural features</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/8.jpeg" alt="" /></p>
+
+<ul>
+  <li>Neighborhood features: What is a node’s <strong>connectivity</strong> pattern?</li>
+  <li>Recursive features: To <strong>what kinds of nodes</strong> is a node <strong>connected</strong>?</li>
+</ul>
+
+<h3 id="recursive-feature-extraction-1">Recursive Feature Extraction</h3>
+<ul>
+  <li>Idea: Aggregate features of a node and use them to generate new recursive features</li>
+  <li>Base set of a node’s neighborhood features:
+    <ul>
+      <li><strong>Local features</strong>: All measures of the node degree:
+        <ul>
+          <li>If network is directed, include in-degree and out-degree, total degree</li>
+          <li>If network is weighted, include weighted feature versions</li>
+        </ul>
+      </li>
+      <li><strong>Egonet features</strong>: Computed on the node’s egonet:
+        <ul>
+          <li>Egonet includes the node, its neighbors, and any edges in the induced subgraph on these nodes</li>
+          <li>Number of within-egonet edges</li>
+          <li>Number of edges entering/leaving egonet</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Start with the base set of node features</li>
+  <li>Use the set of current node features to generate additional features:
+    <ul>
+      <li>Two types of aggregate functions: mean and sum
+        <ul>
+          <li>E.g., mean value of “unweighted degree” feature between all neighbors of a node</li>
+          <li>Compute means and sums over all current features, including other recursive features</li>
+        </ul>
+      </li>
+      <li>Repeat</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/9.jpeg" alt="" /></p>
+
+<ul>
+  <li>The number of possible recursive features grows exponentially with each recursive iteration:
+    <ul>
+      <li>Reduce the number of features using a pruning technique:
+        <ul>
+          <li><strong>Look for pairs of features</strong> that are <strong>high correlated</strong></li>
+          <li><strong>Eliminate one of the features</strong> whenever two features are correlated above a user-defined threshold</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="role-extraction">Role Extraction</h3>
+
+<p><img src="assets/screenshots/2022/11/07/10.jpeg" alt="" /></p>
+
+<h3 id="application-structural-similarity">Application: Structural Similarity</h3>
+<ul>
+  <li>Task: Cluster nodes based on their structural similarity</li>
+  <li>Two networks:
+    <ul>
+      <li>Network science co-authorship network:
+        <ul>
+          <li>Nodes: Network scientists</li>
+          <li>Edges: The number of co-authored papers</li>
+        </ul>
+      </li>
+      <li>Political books co-purchasing network:
+        <ul>
+          <li>Nodes: Political books on Amazon</li>
+          <li>Edges: Frequent co-purchasing of books by the same buyers</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Setup: For each network,
+    <ol>
+      <li>Use RoIX to assign each node a distribution over the set of discovered, structural roles</li>
+      <li>Determine similarity between nodes by comparing their role distributions</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="structural-sim">Structural Sim</h3>
+<h4 id="co-authorship-network">Co-authorship Network</h4>
+
+<p><img src="assets/screenshots/2022/11/07/11.jpeg" alt="" /></p>
+
+<h4 id="political-book-network">Political Book Network</h4>
+
+<p><img src="assets/screenshots/2022/11/07/12.jpeg" alt="" /></p>
+
+<p>Book labels (i.e., liberal, conservative, neutral) were not given to role discovery algorithm</p>
+
+<h2 id="centrality-a-specific-role-of-nodes-in-the-network">Centrality: A Specific Role of Nodes in the Network</h2>
+<h3 id="centrality-or-prestige">Centrality (or Prestige)</h3>
+
 <h2 id="reference">Reference</h2>
 <ul>
   <li><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></li>
@@ -355,8 +523,15 @@ into the {body} of the default.hbs template -->
                         
                         
                         
-                         <li><a href="/Intelligent_Information-Selenium">Intelligent Information Systems - Selenium</a></li>
+                         <li><a href="/Computer_Network-Connection_Oriented_Transport_TCP">Computer Network - Connection Oriented Transport TCP</a></li>
                             
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -697,7 +872,7 @@ into the {body} of the default.hbs template -->
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 37 posts →
+                        See all 38 posts →
                         
                     </a>
                 </footer>
