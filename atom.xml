@@ -8,6 +8,43 @@
     
       
       <item>
+        <title>Big Data - Text Mining</title>
+        
+          <description>&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Text mining, also referred to as &lt;strong&gt;text data mining&lt;/strong&gt;, roughly equivalent to text analytics, refers to the process of
+deriving high-quality information from text.” - wikipedia&lt;/li&gt;
+  &lt;li&gt;“Another way to view text data mining is as a process fo &lt;strong&gt;exploratory&lt;/strong&gt; data analysis that lead to &lt;strong&gt;heretofore
+unknown&lt;/strong&gt; information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 21 Nov 2022 22:30:00 +0900</pubDate>
+        <link>
+        /Big_Data-Text_Mining</link>
+        <guid isPermaLink="true">/Big_Data-Text_Mining</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Big Data - Time Series</title>
+        
+          <description>&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
+&lt;h3 id=&quot;time-series&quot;&gt;Time Series?&lt;/h3&gt;
+
+</description>
+        
+        <pubDate>Mon, 21 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Big_Data-Time_Series</link>
+        <guid isPermaLink="true">/Big_Data-Time_Series</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Intelligent Information Systems - Drawing Word Cloud</title>
         
           <description>&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;

@@ -1,4 +1,863 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-19T20:22:29+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-22T21:30:10+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Big Data - Text Mining</title><link href="/Big_Data-Text_Mining" rel="alternate" type="text/html" title="Big Data - Text Mining" /><published>2022-11-21T22:30:00+09:00</published><updated>2022-11-21T22:30:00+09:00</updated><id>/Big_Data-Text_Mining</id><content type="html" xml:base="/Big_Data-Text_Mining">&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Text mining, also referred to as &lt;strong&gt;text data mining&lt;/strong&gt;, roughly equivalent to text analytics, refers to the process of
+deriving high-quality information from text.” - wikipedia&lt;/li&gt;
+  &lt;li&gt;“Another way to view text data mining is as a process fo &lt;strong&gt;exploratory&lt;/strong&gt; data analysis that lead to &lt;strong&gt;heretofore
+unknown&lt;/strong&gt; information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;text-mining-around-us&quot;&gt;Text mining around us&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sentiment analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Document summarization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;News recommendation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Text analytics in financial services&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Text analytics in healthcare&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-perform-text-mining&quot;&gt;How to perform text mining?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;As computer scientists, we view it as
+    &lt;ul&gt;
+      &lt;li&gt;Text Mining = &lt;strong&gt;Data Mining&lt;/strong&gt; + &lt;strong&gt;Text Data&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Data Mining
+            &lt;ul&gt;
+              &lt;li&gt;Information retrieval&lt;/li&gt;
+              &lt;li&gt;Natural language processing&lt;/li&gt;
+              &lt;li&gt;Applied machine learning&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Text Data
+            &lt;ul&gt;
+              &lt;li&gt;Scientific literature&lt;/li&gt;
+              &lt;li&gt;Email, Tweets, News articles&lt;/li&gt;
+              &lt;li&gt;Software documentations&lt;/li&gt;
+              &lt;li&gt;Blogs, Web pages&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;text-mining-vs-nl-ir-dm&quot;&gt;Text mining vs. NL, IR, DM…&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;How does it relate to data mining in general?&lt;/li&gt;
+  &lt;li&gt;How does it relate to computations linguistics?&lt;/li&gt;
+  &lt;li&gt;How does it relate to information retrieval?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;text-mining-in-general&quot;&gt;Text mining in general&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;challenges-in-text-mining&quot;&gt;Challenges in text mining&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data collections is “free text”
+    &lt;ul&gt;
+      &lt;li&gt;Data is not well-organized
+        &lt;ul&gt;
+          &lt;li&gt;Semi-structured or unstructured&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Natural language text contains ambiguities on many levels
+        &lt;ul&gt;
+          &lt;li&gt;Lexical, syntactic, semantic, and pragmatic&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Learning techniques for processing text typically need annotated traning examples
+        &lt;ul&gt;
+          &lt;li&gt;Expensive to acquire at scale&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What to mine?&lt;/li&gt;
+  &lt;li&gt;Huge in size
+    &lt;ul&gt;
+      &lt;li&gt;Google processes 5.13 B queries/day (2013)&lt;/li&gt;
+      &lt;li&gt;Twitter receives 340 M tweets/day (2012)&lt;/li&gt;
+      &lt;li&gt;Facebook has 2.5 PB of user data + 15 TB/day (4/2009)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;80% data is unstructured (IBM, 2010)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;scalability-is-crucial&quot;&gt;Scalability is crucial&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Large scale text processing techniques
+    &lt;ul&gt;
+      &lt;li&gt;MapReduce framework&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;state-of-the-art-solutions&quot;&gt;State-of-the-art solutions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Apache Spark
+    &lt;ul&gt;
+      &lt;li&gt;In-memory MapReduce
+        &lt;ul&gt;
+          &lt;li&gt;Specialized for machine learning algorithms&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Speed
+        &lt;ul&gt;
+          &lt;li&gt;100x faster than Hadoop MapReduce in memory or 10x faster on disk.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In-memory MapReduce
+    &lt;ul&gt;
+      &lt;li&gt;Specialized for machine learning algorithms&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Generality
+    &lt;ul&gt;
+      &lt;li&gt;Combine SQL, streaming, and complex analytics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;document-representation&quot;&gt;Document Representation&lt;/h2&gt;
+&lt;h3 id=&quot;how-to-represent-a-document&quot;&gt;How to represent a document&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Represent by a string?
+    &lt;ul&gt;
+      &lt;li&gt;No semantic meaning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Represent by a list of sentences?
+    &lt;ul&gt;
+      &lt;li&gt;Sentence is just like a short document (recursive definition)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vector-space-vs-model&quot;&gt;Vector Space (VS) model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Represent documents by concept vectors
+    &lt;ul&gt;
+      &lt;li&gt;Each concept defines one dimension&lt;/li&gt;
+      &lt;li&gt;&lt;em&gt;k&lt;/em&gt; concepts define a high-dimensional space&lt;/li&gt;
+      &lt;li&gt;Element of vector corresponds to concept weight&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Distance between the vectors in this concept space
+    &lt;ul&gt;
+      &lt;li&gt;Relationship among documents&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;an-illustration-of-vs-model&quot;&gt;An illustration of VS model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;All documents are projected into this concept space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-the-vs-model-doesnt-say&quot;&gt;What the VS model doesn’t say&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;How to define/select the “basic concept”
+    &lt;ul&gt;
+      &lt;li&gt;Concepts are assumed to be orthogonal&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to assign weights
+    &lt;ul&gt;
+      &lt;li&gt;Weights indicate how well the concept characterizes the document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to define the distance metric&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-is-a-good-basic-concept&quot;&gt;What is a good “Basic Concept”?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Orthogonal
+    &lt;ul&gt;
+      &lt;li&gt;Linearly independent basis vectors
+        &lt;ul&gt;
+          &lt;li&gt;“Non-overlapping” in meaning&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;No ambiguity&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Weights should be assigned automatically and accurately&lt;/li&gt;
+  &lt;li&gt;Existing solutions
+    &lt;ul&gt;
+      &lt;li&gt;Terms or N-grams, a.k.a., Bag-of-Words&lt;/li&gt;
+      &lt;li&gt;Topics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;document-representation-bag-of-words&quot;&gt;Document Representation: Bag-of-Words&lt;/h2&gt;
+&lt;h3 id=&quot;bag-of-words-representation&quot;&gt;Bag-of-Words representation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Term as the basis for vector space
+    &lt;ul&gt;
+      &lt;li&gt;Doc1: Text mining is to identify useful information.&lt;/li&gt;
+      &lt;li&gt;Doc2: Useful information is mined from text.&lt;/li&gt;
+      &lt;li&gt;Doc3: Apple is delicious.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Break a stream of text into meaningful units
+    &lt;ul&gt;
+      &lt;li&gt;Tokens: words, phrases, symbols
+        &lt;ul&gt;
+          &lt;li&gt;Input: It’s not straight-forward to perform so-called “tokenization”.&lt;/li&gt;
+          &lt;li&gt;Output(1): “‘It’s’, ‘not’, ‘straight-forward”, ‘to’, ‘perform’, ‘so-called’, ‘tokenization’”&lt;/li&gt;
+          &lt;li&gt;Output(2): “‘It’, ‘’s’, ‘not’, ‘straight’, ‘-‘, ‘forward’, ‘to’, ‘perform’, ‘so’, ‘-‘, ‘called’, ‘tokenization’”&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Definition depends on language, corpus, or even context&lt;/li&gt;
+  &lt;li&gt;Solutions
+    &lt;ul&gt;
+      &lt;li&gt;Regular expressions
+        &lt;ul&gt;
+          &lt;li&gt;[\w]+: so-called -&amp;gt; ‘so’, ‘called’&lt;/li&gt;
+          &lt;li&gt;[\S]+: It’s -&amp;gt; ‘It’s’ instead of ‘It’, ‘’s’&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Statistical methods
+        &lt;ul&gt;
+          &lt;li&gt;Explore rich features to decide where the boundary of a word is
+            &lt;ul&gt;
+              &lt;li&gt;Apache OpenNLP&lt;/li&gt;
+              &lt;li&gt;Standford NLP Parser&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Online Demo
+            &lt;ul&gt;
+              &lt;li&gt;Standford&lt;/li&gt;
+              &lt;li&gt;UIUC&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bag-of-words-representation-1&quot;&gt;Bag-of-Words representation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assumption
+    &lt;ul&gt;
+      &lt;li&gt;Words are independent from each other&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pros
+    &lt;ul&gt;
+      &lt;li&gt;Simple&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cons
+    &lt;ul&gt;
+      &lt;li&gt;Basis vectors are clearly not linearly independent!&lt;/li&gt;
+      &lt;li&gt;Grammar and order are missing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The ost frequently used document representation
+    &lt;ul&gt;
+      &lt;li&gt;Image, speech, gene sequence&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bag-of-words-with-n-grams&quot;&gt;Bag-of-Words with N-grams&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;N-grams: a contiguous sequence of N tokens from a given piece of test
+    &lt;ul&gt;
+      &lt;li&gt;E.g., ‘Text mining is to identify useful information’&lt;/li&gt;
+      &lt;li&gt;Bigrams: ‘text_mining’, ‘mining_is’, ‘is_to’, ‘to_identify’, ‘identify_useful’, ‘useful_information’, ‘information_’&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pros: capture local dependency and order&lt;/li&gt;
+  &lt;li&gt;Cons: a pure statistical view, increase the vocabulary size O(V&lt;sup&gt;N&lt;/sup&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;automatic-document-representation&quot;&gt;Automatic document representation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Represent a document with all the occurring words
+    &lt;ul&gt;
+      &lt;li&gt;Pros
+        &lt;ul&gt;
+          &lt;li&gt;Preserve all information in the text (hopefully)&lt;/li&gt;
+          &lt;li&gt;Fully automatic&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Cons
+        &lt;ul&gt;
+          &lt;li&gt;Vocabulary gap: cars versus car, talk versus talking&lt;/li&gt;
+          &lt;li&gt;Large storage: N-grams needs O(V&lt;sup&gt;N&lt;/sup&gt;)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Solution
+        &lt;ul&gt;
+          &lt;li&gt;Construct controlled vocabulary&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a-statistical-property-of-language&quot;&gt;A statistical property of language&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Zipf’s law
+    &lt;ul&gt;
+      &lt;li&gt;Frequency of any word is inversely proportional to tis rank in the frequency table&lt;/li&gt;
+      &lt;li&gt;Formally&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f(k;s,N)=\frac{1/k^s}{\sum_{n=1}^{N}1/n^s}v&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where &lt;em&gt;k&lt;/em&gt; is rank of word; &lt;em&gt;N&lt;/em&gt; is the vocabulary size; &lt;em&gt;s&lt;/em&gt; is language-specific parameter&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Simply&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f(k;s,N)\propto&amp;space;1/k^s&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;zipfs-law-tells-us&quot;&gt;Zipf’s law tells us&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Head words take large portion of occurrences, but they are semantically meaningless
+    &lt;ul&gt;
+      &lt;li&gt;E.g., the, a, an, we, do, to&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Trail words take major portion of vocabulary, but they rarely occur in documents
+    &lt;ul&gt;
+      &lt;li&gt;E.g., sesquipedalianism&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The rest is most representative
+    &lt;ul&gt;
+      &lt;li&gt;To be included in the controlled vocabulary&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;automatic-document-representation-1&quot;&gt;Automatic document representation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stopwords&quot;&gt;Stopwords&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Useless words for document analaysis
+    &lt;ul&gt;
+      &lt;li&gt;Not all words are informative&lt;/li&gt;
+      &lt;li&gt;Remove such words to reduce vocabulary size&lt;/li&gt;
+      &lt;li&gt;No universal definition&lt;/li&gt;
+      &lt;li&gt;Risk: break the original meaning and structure of text
+        &lt;ul&gt;
+          &lt;li&gt;E.g., this is not a good option -&amp;gt; option to be or not to be -&amp;gt; null&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;normalization&quot;&gt;Normalization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Convert different forms of a word to a normalized form in the vocabulary
+    &lt;ul&gt;
+      &lt;li&gt;U.S.A -&amp;gt; USA, ST.Louis -&amp;gt; Saint Louis&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Solution
+    &lt;ul&gt;
+      &lt;li&gt;Rule-based
+        &lt;ul&gt;
+          &lt;li&gt;Delete periods and hyphens&lt;/li&gt;
+          &lt;li&gt;All in lower cases&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Dictionary-based
+        &lt;ul&gt;
+          &lt;li&gt;Construct equivalent calss
+            &lt;ul&gt;
+              &lt;li&gt;Car -&amp;gt; “automobile, vehicle”&lt;/li&gt;
+              &lt;li&gt;Mobile phone -&amp;gt; “cellphone”&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stemming&quot;&gt;Stemming&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reduce inflected or derived words to their root form
+    &lt;ul&gt;
+      &lt;li&gt;Plurals, adverbs, inflected word forms
+        &lt;ul&gt;
+          &lt;li&gt;E.g., ladies -&amp;gt; lady, referring -&amp;gt; refer, forgotten -&amp;gt; forget&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Bridge the vocabulary gap&lt;/li&gt;
+      &lt;li&gt;Solutions (for English)
+        &lt;ul&gt;
+          &lt;li&gt;Porter stemmer: patterns of vowel-consonant sequence&lt;/li&gt;
+          &lt;li&gt;Krovetz stemmer: morphological rules&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Risk: lose precise meaning of the word
+        &lt;ul&gt;
+          &lt;li&gt;E.g., lay -&amp;gt; lie (a false statement? or be in a horizontal position?)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;constructing-a-vsm-representation&quot;&gt;Constructing a VSM representation&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-assign-weights&quot;&gt;How to assign weights?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Important!&lt;/li&gt;
+  &lt;li&gt;Why?
+    &lt;ul&gt;
+      &lt;li&gt;Corpus-wise: some terms carry more information about the document content&lt;/li&gt;
+      &lt;li&gt;Document-wise: not all terms are equally important&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How?
+    &lt;ul&gt;
+      &lt;li&gt;Two basic heuristics
+        &lt;ul&gt;
+          &lt;li&gt;TF (Term Frequency) = Within-doc-frequency&lt;/li&gt;
+          &lt;li&gt;IDF (Inverse Document Frequency)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;term-frequency&quot;&gt;Term frequency&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Idea: a term is more important if it occurs more frequently in a document&lt;/li&gt;
+  &lt;li&gt;TF Formulas
+    &lt;ul&gt;
+      &lt;li&gt;Let c(t,d) be the frequency count of term t in doc d&lt;/li&gt;
+      &lt;li&gt;Raw TF: tf(t,d) = c(t,d)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Which two documents are more similar to each other?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;‘good weather’, 10&lt;/li&gt;
+  &lt;li&gt;‘good weather’, 2&lt;/li&gt;
+  &lt;li&gt;‘good weather’, 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;tf-normalization&quot;&gt;TF normalization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Two views of document length
+    &lt;ul&gt;
+      &lt;li&gt;A doc is long because it is verbose&lt;/li&gt;
+      &lt;li&gt;A doc is long because it has more content&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Raw TF is inaccurate
+    &lt;ul&gt;
+      &lt;li&gt;Document length variation&lt;/li&gt;
+      &lt;li&gt;“Repeated occurrences” are less informative than the “first occurrence”&lt;/li&gt;
+      &lt;li&gt;Information about semantic does not increase proportionally with number of term occurrence&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Generally penalize long document, but avoid over-penalizing
+    &lt;ul&gt;
+      &lt;li&gt;Pivoted length normalization&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Maximum TF scaling
+    &lt;ul&gt;
+      &lt;li&gt;Normalize by the most frequent word in this doc&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?tf(t,d)=\alpha&amp;space;&amp;plus;(a-\alpha)\frac{c(t,d)}{max_tc(t,d)&apos;},&amp;space;if&amp;space;c(t,d)&amp;gt;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sub-linear TF scaling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Idea: a term is more discriminative if it occurs only in fewer documents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;inverse-document-frequency&quot;&gt;Inverse document frequency&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Solution
+    &lt;ul&gt;
+      &lt;li&gt;Assign higher weights to rare terms&lt;/li&gt;
+      &lt;li&gt;Formula&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A corpus-specific property
+    &lt;ul&gt;
+      &lt;li&gt;Independent of a single document&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-document-frequency&quot;&gt;What document frequency&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;How about total term frequency?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?ttf(t)=\sum_{d}c(t,d)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cannot recognize words frequently occurring in a subset of documents&lt;/p&gt;
+
+&lt;h3 id=&quot;tf-idf-weighting&quot;&gt;TF-IDF weighting&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Combining TF and IDF
+    &lt;ul&gt;
+      &lt;li&gt;Common in doc -&amp;gt; high tf -&amp;gt; high weight&lt;/li&gt;
+      &lt;li&gt;Rare in collection -&amp;gt; high idf -&amp;gt; high weight&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?w(t,d)=TF(t,d)\times&amp;space;IDF(t)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Most well-known document representation schema in IR (G Salton et al. 1983)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-define-a-good-similarity-metric&quot;&gt;How to define a good similarity metric?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Euclidean distance?
+    &lt;ul&gt;
+      &lt;li&gt;Longer documents will be penalized by the extra words&lt;/li&gt;
+      &lt;li&gt;We care more about how these two vectors are overlapped&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?dist(d_i,d_j)=\sqrt{\sum_{t\in&amp;space;V}[tf(t,d_i)idf(t)-tf(t,d_j)idf(t)]^2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;from-distance-to-angle&quot;&gt;From distance to angle&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Angle: how vectors are overlapped
+    &lt;ul&gt;
+      &lt;li&gt;Cosine similarity - projection of one vector onto another&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cosine-similarity&quot;&gt;Cosine similarity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Angle between two vectors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?cosine(d_i,d_j)=\frac{V_{d_i}^TV_{d_j}}{&lt;/td&gt;
+      &lt;td&gt;d_{d_i}&lt;/td&gt;
+      &lt;td&gt;_2\times&amp;amp;space;&lt;/td&gt;
+      &lt;td&gt;v_{d_j}&lt;/td&gt;
+      &lt;td&gt;}_2)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Documents are normalized by length&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;advantage-and-disadvantage-of-vs-model&quot;&gt;Advantage and Disadvantage of VS model&lt;/h3&gt;
+&lt;p&gt;|                Pros                |             Cons              |
+|:———————————-:|:—————————–:|
+|       Empirically effective        |    Assume term idependence    |
+|             Intuitive              | Lack of “predictive adequacy” |
+|         Easy to implement          |   Lots of parameter tuning    |
+|   Well-studied/mostly evaluated    |                               |
+|          The Smart system          |                               |
+| Warning: maning variants of TF-IDF |                               |&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary></entry><entry><title type="html">Big Data - Time Series</title><link href="/Big_Data-Time_Series" rel="alternate" type="text/html" title="Big Data - Time Series" /><published>2022-11-21T00:00:00+09:00</published><updated>2022-11-21T00:00:00+09:00</updated><id>/Big_Data-Time_Series</id><content type="html" xml:base="/Big_Data-Time_Series">&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
+&lt;h3 id=&quot;time-series&quot;&gt;Time Series?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A time series is a sequential set of data points, measured typically over successive times&lt;/li&gt;
+  &lt;li&gt;Time series analysis comprises methods for analyzing time series data in order to extract meaningful statistics and
+other characteristics of the data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;uni-variate vs. multivariate
+    &lt;ul&gt;
+      &lt;li&gt;A time series containing records of a single variable is termed as uni-variate, but if records of more than one 
+variable are considered then it is termed as multivariate&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;linear vs. non-linear
+    &lt;ul&gt;
+      &lt;li&gt;A time series model is said to be linear or non-linear depending on whether the current value of the series is a
+linear or non-linear function of past observations&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;discrete vs. continuous
+    &lt;ul&gt;
+      &lt;li&gt;In a continuous time series observations are measured at every instance of time, whereas a discrete time series
+contains observations measured at discrete points in time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;components-of-time-series-1-trend&quot;&gt;Components of Time Series: (1) Trend&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The general tendency of a time series to increase, decrease or stagnate over a long period of time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The price of chicken: monthly whole bird spot price, Georgia docks, US cents per pound, August 2001 to July 2016, with
+fitted linear trend line.&lt;/p&gt;
+
+&lt;h3 id=&quot;components-of-time-series-2-seasonal&quot;&gt;Components of Time Series: (2) Seasonal&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The fluctuations within a year during the season, usually caused by climate and weather conditions, customs,
+traditional habits, etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;components-of-time-series-3-cyclic&quot;&gt;Components of Time Series: (3) Cyclic&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The medium-term (not fixed!) changes caused by circumstances, which repeat in cycles. The duration of a cycle extends
+over longer period of time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;component-of-time-series-4-irregular&quot;&gt;Component of Time Series: (4) Irregular&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Caused by unpredictable influences, which are not regular and also do not repeat in a particular pattern
+    &lt;ul&gt;
+      &lt;li&gt;E.g., incidences such as war, strike, earthquake, flood, revolution, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;No defined statistical technique for measuring random fluctuations in a time series&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;decomposition-of-time-series&quot;&gt;Decomposition of Time Series&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?t_t&amp;space;=&amp;space;f(S_t,T_t,R_t)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;y&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = data at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;T&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = trend-cycle component at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;S&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = seasonal component at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;R&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = remainder component at period &lt;em&gt;t&lt;/em&gt; (i.e., cyclic + irregular)&lt;/li&gt;
+  &lt;li&gt;Additive&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t&amp;plus;T_t&amp;plus;R_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multiplicative&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t\times&amp;space;T_t\times&amp;space;R_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Additive model appropriate if magnitude of seasonal fluctuations does not vary with level&lt;/li&gt;
+  &lt;li&gt;If seasonal are proportional to level of series, then multiplicative model appropriate&lt;/li&gt;
+  &lt;li&gt;Multiplicative decomposition more prevalent with economic series&lt;/li&gt;
+  &lt;li&gt;Logs turn multiplicative relationship into an additive relationship:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t\times&amp;space;T_t\times&amp;space;R_t&amp;space;\to&amp;space;logy_t&amp;space;=&amp;space;logS_t&amp;plus;logT_t&amp;plus;logR_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;more-techniques-on-decomposition&quot;&gt;More Techniques on Decomposition?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;X11&lt;/li&gt;
+  &lt;li&gt;SEATS&lt;/li&gt;
+  &lt;li&gt;STL&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;exponential-smoothing&quot;&gt;Exponential Smoothing&lt;/h2&gt;
+&lt;h3 id=&quot;big-idea-control-the-rate-of-change&quot;&gt;Big Idea: Control the Rate of Change&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;α controls the flexibility of the &lt;strong&gt;level&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If α = 0, the level never updates (mean)&lt;/li&gt;
+      &lt;li&gt;If α = 1, the level updates completely (naive)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;β controls the flexibility of the &lt;strong&gt;trend&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If β = 0, the trend is linear&lt;/li&gt;
+      &lt;li&gt;If β = 1, the trend changes suddenly every observation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;γ controls the flexibility of the &lt;strong&gt;seasonality&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;If γ = 0, the seasonality is fixed (seasonal means)&lt;/li&gt;
+      &lt;li&gt;If γ = 1, the seasonality updates completely (seasonal naive)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;exponential-smoothing-1&quot;&gt;Exponential Smoothing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;We want a model that captures the level (l&lt;sub&gt;t&lt;/sub&gt;), trend (b&lt;sub&gt;t&lt;/sub&gt;) and seasonality (s&lt;sub&gt;t&lt;/sub&gt;)&lt;/li&gt;
+  &lt;li&gt;How do we combine these element?
+    &lt;ul&gt;
+      &lt;li&gt;Additively: y&lt;sub&gt;t&lt;/sub&gt; = l&lt;sub&gt;t-1&lt;/sub&gt; + b&lt;sub&gt;t-1&lt;/sub&gt; + s&lt;sub&gt;t-m&lt;/sub&gt; + ε&lt;sub&gt;t&lt;/sub&gt;&lt;/li&gt;
+      &lt;li&gt;Multiplicatively: y&lt;sub&gt;t&lt;/sub&gt; = l&lt;sub&gt;t-1&lt;/sub&gt; b&lt;sub&gt;t-1&lt;/sub&gt; s&lt;sub&gt;t-m&lt;/sub&gt; (1 + ε&lt;sub&gt;t&lt;/sub&gt;)&lt;/li&gt;
+      &lt;li&gt;Hybrid: y&lt;sub&gt;t&lt;/sub&gt; = (l&lt;sub&gt;t-1&lt;/sub&gt; + b&lt;sub&gt;t-1&lt;/sub&gt;) s&lt;sub&gt;t-m&lt;/sub&gt; + ε&lt;sub&gt;t&lt;/sub&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How do the level, trend, and seasonal components evolve over time?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generalized-exponential-smoothing-ets&quot;&gt;Generalized ExponenTial Smoothing (ETS)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;General Notation of ETS
+    &lt;ul&gt;
+      &lt;li&gt;E: Error&lt;/li&gt;
+      &lt;li&gt;T: Trend&lt;/li&gt;
+      &lt;li&gt;S: Season&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Error: Additive (“A”) or multiplicative (“M”)&lt;/li&gt;
+  &lt;li&gt;Trend: None(“N”), additive (“A”), multiplicative (“M”), or damped (“A&lt;sub&gt;d&lt;/sub&gt;”)&lt;/li&gt;
+  &lt;li&gt;Seasonality: None(“N”), additive (“A”), or multiplicative (“M”)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ets-generalized-exponential-smoothing&quot;&gt;ETS: Generalized Exponential Smoothing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(N,N): Simple exponential smoothing&lt;/li&gt;
+  &lt;li&gt;(A,N): Holt’s linear method&lt;/li&gt;
+  &lt;li&gt;(A&lt;sub&gt;d&lt;/sub&gt;,N): Additive damped trend method&lt;/li&gt;
+  &lt;li&gt;(A,A): Additive Holt-Winters’ method&lt;/li&gt;
+  &lt;li&gt;(A,M): Multiplicative Holt-Winters’ method&lt;/li&gt;
+  &lt;li&gt;(A&lt;sub&gt;d&lt;/sub&gt;,M): Damped multiplicative Holt-Winters’ method&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;simple-exponential-smoothing-ses&quot;&gt;Simple Exponential Smoothing (SES)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?\widehat{y}_{T&amp;amp;plus;1&lt;/td&gt;
+      &lt;td&gt;t}=\alpha&amp;amp;space;y_T&amp;amp;plus;\alpha&amp;amp;space;(1-\alpha)y_{T-1}&amp;amp;plus;\alpha&amp;amp;space;(1-\alpha)^2y_{T-2}&amp;amp;plus;\cdots&amp;amp;space;,&amp;amp;space;0\leq&amp;amp;space;\alpha&amp;amp;space;\leq&amp;amp;space;1)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ses-as-component-form&quot;&gt;SES as Component Form&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Understanding Time Series Time Series?</summary></entry><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Word Cloud
     &lt;ul&gt;
@@ -632,6 +1491,47 @@ sequence.&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;doubling-the-timeout-interval&quot;&gt;Doubling the Timeout Interval&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fast-retransmit&quot;&gt;Fast Retransmit&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Duplicate ACK&lt;/strong&gt;: An ACK that re-acknowledges a segment for which the sender has already received an earlier
+acknowledgement.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fast retransmit&lt;/strong&gt;: Retransmission of the missing segment before that segment’s timer expires.Performed by sender 
+when three duplicate ACKs are received.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;event: ACK received, with ACK field value of y
+            if (y &amp;gt; SendBase) {
+                sendBase = y
+                if (there are currently any not yet acknowledged segments)
+                    start timer
+            }
+            else { /* a duplicate ACK for already ACKed segment */
+                increment number of duplicate ACKs received for y
+                if (number of duplicate ACKs received for y == 3)
+                /* TCP fast retrnasmit */
+                    resend segment with sequence number y
+            }
+        break;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;go-back-n-or-selective-repeat&quot;&gt;Go-Back-N or Selective Repeat?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Selective acknowledgement&lt;/strong&gt;: A proposed modification to TCP, it allows a TCP receiver to acknowledge out-of-order
+segments selectively rather than just cumulatively acknowledging the last correctly received, in-order segment.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1387,182 +2287,4 @@ an end-end basis: “functions placed at the lower levels may be redundant or of
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Why choose UDP over TCP</summary></entry><entry><title type="html">Intelligent Information Systems - Crawling Data</title><link href="/Intelligent_Information-Crawling_Data" rel="alternate" type="text/html" title="Intelligent Information Systems - Crawling Data" /><published>2022-10-30T19:30:00+09:00</published><updated>2022-10-30T19:30:00+09:00</updated><id>/Intelligent_Information-Crawling_Data</id><content type="html" xml:base="/Intelligent_Information-Crawling_Data">&lt;h3 id=&quot;deliver-date-value-to-url&quot;&gt;Deliver Date Value to URL&lt;/h3&gt;
-&lt;h4 id=&quot;search-movie-information-for-100-days-after-2020-07-01&quot;&gt;Search movie information for 100 days after 2020-07-01&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Make search target url&lt;/li&gt;
-  &lt;li&gt;HTML document parsing&lt;/li&gt;
-  &lt;li&gt;Extract target tag value&lt;/li&gt;
-  &lt;li&gt;Save extracted value into a list&lt;/li&gt;
-  &lt;li&gt;Data processing&lt;/li&gt;
-  &lt;li&gt;Save date&lt;/li&gt;
-  &lt;li&gt;Test by increasing the period from 1 to 2&lt;/li&gt;
-  &lt;li&gt;Increase periods to 100&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;2020-07-01&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;periods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;D&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&amp;amp;date=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;%Y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;
-        
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;check-progress-status&quot;&gt;Check progress status&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use tqdm module instead of print()&lt;/li&gt;
-  &lt;li&gt;tqdm is &lt;strong&gt;t&lt;/strong&gt;a&lt;strong&gt;q&lt;/strong&gt;a&lt;strong&gt;d&lt;/strong&gt;u&lt;strong&gt;m&lt;/strong&gt; which is progress in Arabic&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm.notebook&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# import tqdm module
-&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;2020-07-01&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;periods&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;D&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;today&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# implement tqdm modlue
-&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&amp;amp;date=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;%Y%m%d&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;div&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;tit5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;td&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;class&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;titles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;today&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;titles_text&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;points_text&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;make-data-into-a-table&quot;&gt;Make Data into a table&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;date&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;use-pivot_table&quot;&gt;Use pivot_table&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aggfunc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pivot_table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;point&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;aggfunc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;movie_point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/30/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Deliver Date Value to URL Search movie information for 100 days after 2020-07-01 Make search target url HTML document parsing Extract target tag value Save extracted value into a list Data processing Save date Test by increasing the period from 1 to 2 Increase periods to 100</summary></entry><entry><title type="html">Computer Network - Multiplexing and Demultiplexing</title><link href="/Computer_Network-Multiplexing_and_Demultiplexing" rel="alternate" type="text/html" title="Computer Network - Multiplexing and Demultiplexing" /><published>2022-10-21T00:00:00+09:00</published><updated>2022-10-21T00:00:00+09:00</updated><id>/Computer_Network-Multiplexing_and_Demultiplexing</id><content type="html" xml:base="/Computer_Network-Multiplexing_and_Demultiplexing">&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Demultiplexing&lt;/strong&gt;: A job of delivering the data in a transport-layer segment to the correct socket.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Multiplexing&lt;/strong&gt;: A job of gathering data chunks at the source host from different sockets, encapsulating each data 
-chunk with header information to create segments, and passing the segments to the network layer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The requirement of transport-layer multiplexing:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sockets have unique identifiers.&lt;/li&gt;
-  &lt;li&gt;Each segment have special fields that indicate the socket to which the segment is to be delivered.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Source port number field&lt;/strong&gt; and &lt;strong&gt;Destination port number field&lt;/strong&gt;: Port number consists of 16-bit number, ranging 
-from 0 to 65535.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Well-known port numbers&lt;/strong&gt;: Port numbers that have restricted range from 0 to 1023.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;connectionless-multiplexing-and-demultiplexing&quot;&gt;Connectionless Multiplexing and Demultiplexing&lt;/h3&gt;
-&lt;p&gt;Connectionless service does not require establishing any connection and termination process for transferring the data 
-over a network.&lt;/p&gt;
-
-&lt;h3 id=&quot;connection-oriented-multiplexing-and-demultiplexing&quot;&gt;Connection-Oriented Multiplexing and Demultiplexing&lt;/h3&gt;
-&lt;p&gt;Connection-oriented service involves the creating and terminatino of the connection for sending the data between two or 
-more devices.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;TCP socket
-    &lt;ul&gt;
-      &lt;li&gt;Identified by a four-tuple: source IP address, source port number, destination IP address, destination port number.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;UDP socket
-    &lt;ul&gt;
-      &lt;li&gt;If two TCp segments with different source IP addresses or port numbers arrive, it will be directed to two different 
-sockets.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/20/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.javatpoint.com/connection-oriented-vs-connectionless-service&quot; target=&quot;_blank&quot;&gt;Difference between connection-oriented and connectionless service in javaTpoint&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Demultiplexing: A job of delivering the data in a transport-layer segment to the correct socket. Multiplexing: A job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header information to create segments, and passing the segments to the network layer.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Why choose UDP over TCP</summary></entry></feed>

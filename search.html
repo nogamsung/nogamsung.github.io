@@ -180,6 +180,24 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "big-data-text-mining": {
+        "title": "Big Data - Text Mining",
+            "author": "gs97ahn",
+                "category": "",
+                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
+        "url": "/Big_Data-Text_Mining"
+    }
+    , 
+    
+    "big-data-time-series": {
+        "title": "Big Data - Time Series",
+            "author": "gs97ahn",
+                "category": "",
+                    "content": { { post.content | strip_html | strip_newlines | jsonify } },
+        "url": "/Big_Data-Time_Series"
+    }
+    , 
+    
     "intelligent-information-drawing-word-cloud": {
         "title": "Intelligent Information Systems - Drawing Word Cloud",
             "author": "gs97ahn",
