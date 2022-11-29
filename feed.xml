@@ -1,4 +1,274 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-25T17:18:09+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Big Data - Text Mining</title><link href="/Big_Data-Text_Mining" rel="alternate" type="text/html" title="Big Data - Text Mining" /><published>2022-11-21T22:30:00+09:00</published><updated>2022-11-21T22:30:00+09:00</updated><id>/Big_Data-Text_Mining</id><content type="html" xml:base="/Big_Data-Text_Mining">&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-29T10:31:17+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Big Data - Text Mining (LSA) Visualization</title><link href="/Big_Data-Text_Mining_(LSA)_Visualization" rel="alternate" type="text/html" title="Big Data - Text Mining (LSA) Visualization" /><published>2022-11-28T00:00:00+09:00</published><updated>2022-11-28T00:00:00+09:00</updated><id>/Big_Data-Text_Mining_(LSA)_Visualization</id><content type="html" xml:base="/Big_Data-Text_Mining_(LSA)_Visualization">&lt;h3 id=&quot;vs-model-in-practice&quot;&gt;VS model in practice&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Document &amp;amp; query are represented by term vectors
+    &lt;ul&gt;
+      &lt;li&gt;Terms are not necessarily orthogonal to each other
+        &lt;ul&gt;
+          &lt;li&gt;Synonymy: car vs. automobile&lt;/li&gt;
+          &lt;li&gt;Polysemy: fly (action vs. insects)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;choosing-basis-for-vs-model&quot;&gt;Choosing basis for VS model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A concept space is preferred
+    &lt;ul&gt;
+      &lt;li&gt;Semantic gap will be bridged&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-build-such-as-space&quot;&gt;How to build such as space&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Automatic term expansion
+    &lt;ul&gt;
+      &lt;li&gt;Construction of thesaurus
+        &lt;ul&gt;
+          &lt;li&gt;WordNet&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Clustering of words&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Word sense disambiguation
+    &lt;ul&gt;
+      &lt;li&gt;Dictionary-based
+        &lt;ul&gt;
+          &lt;li&gt;Relation between a pair of words should be similar as in text and dictionary’s description&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Explore word usage context&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Latent Semantic Analysis
+    &lt;ul&gt;
+      &lt;li&gt;Assumption: there is some underlying latent semantic structure in the data that is partially obscured by the 
+randomness&lt;/li&gt;
+      &lt;li&gt;It means: the observed term-document association data is contaminated by random noise&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;solution&quot;&gt;Solution&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low rank matrix approximation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;latent-semantic-analysis-lsa&quot;&gt;Latent Semantic Analysis (LSA)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low rank approximation of term-document matrix C&lt;sub&gt;MxN&lt;/sub&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Goal: remove noise in the observed term-document association data&lt;/li&gt;
+      &lt;li&gt;Solution: find a matrix with rank &lt;em&gt;k&lt;/em&gt; which is closest to the original matrix in terms of Frobenius norm&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;basic-concepts-in-linear-algebra&quot;&gt;Basic concepts in linear algebra&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Symmetric matrix
+    &lt;ul&gt;
+      &lt;li&gt;C = C&lt;sup&gt;T&lt;/sup&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rank of a matrix
+    &lt;ul&gt;
+      &lt;li&gt;The number of linearly independent rows (columns) in a matrix C&lt;sub&gt;MxN&lt;/sub&gt;&lt;/li&gt;
+      &lt;li&gt;rank(C&lt;sub&gt;MxN&lt;/sub&gt;) &amp;lt;= min (M,N)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Eigen system
+    &lt;ul&gt;
+      &lt;li&gt;For a square matrix C&lt;sub&gt;MxM&lt;/sub&gt;&lt;/li&gt;
+      &lt;li&gt;If Cx = λx, x is called the right eigenvector of C and λ is the corresponding eigenvalue&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For a symmetric full-rank matrix C&lt;sub&gt;MxM&lt;/sub&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We have its eigen-decomposition as
+        &lt;ul&gt;
+          &lt;li&gt;C = QΛQ&lt;sup&gt;T&amp;lt;/sub&amp;gt;&lt;/sup&gt;&lt;/li&gt;
+          &lt;li&gt;where the columns of Q are the orthogonal and normalized eigenvectors of C are Λ is a diagonal matrix whose 
+entries are the eigenvalues of C&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Singular value decomposition (SVD)
+    &lt;ul&gt;
+      &lt;li&gt;For matrix C&lt;sub&gt;MxN&lt;/sub&gt; with rank r, we have
+        &lt;ul&gt;
+          &lt;li&gt;C = U∑V&lt;sup&gt;T&lt;/sup&gt;&lt;/li&gt;
+          &lt;li&gt;where U&lt;sub&gt;Mxr&lt;/sub&gt; and V&lt;sub&gt;Nxr&lt;/sub&gt; are orthogonal matrices, and ∑ is a r x r diagonal matrix, with 
+∑&lt;sub&gt;ii&lt;/sub&gt; = √(λ&lt;sub&gt;i&lt;/sub&gt;) and λ&lt;sub&gt;1&lt;/sub&gt; … λ&lt;sub&gt;r&lt;/sub&gt; are the eigenvalues of CC&lt;sup&gt;T&lt;/sup&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;We define C&lt;sup&gt;k&lt;/sup&gt;&lt;sub&gt;MxN&lt;/sub&gt; = U&lt;sub&gt;Mxk&lt;/sub&gt;∑&lt;sub&gt;kxk&lt;/sub&gt;V&lt;sup&gt;T&lt;/sup&gt;&lt;sub&gt;Nxk&lt;/sub&gt;
+        &lt;ul&gt;
+          &lt;li&gt;where we place ∑&lt;sub&gt;ii&lt;/sub&gt; in a descending order and set ∑&lt;sub&gt;ii&lt;/sub&gt; = ∑&lt;sub&gt;ii&lt;/sub&gt; = √λ&lt;sub&gt;i&lt;/sub&gt; for
+i &amp;lt;= k, and ∑&lt;sub&gt;ii&lt;/sub&gt; = 0 for i &amp;gt; k&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;latent-semantic-analysis-lsa-1&quot;&gt;Latent Semantic Analysis (LSA)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Solve LSA by SVD&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Procedure of LSA
+    &lt;ol&gt;
+      &lt;li&gt;Perform SVD on document-term adjacency matrix&lt;/li&gt;
+      &lt;li&gt;Construct C&lt;sup&gt;k&lt;/sup&gt;&lt;sub&gt;MxN&lt;/sub&gt; by only keeping the largest k singular values in ∑ non-zero&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-are-those-dimensions-in-lsa&quot;&gt;What are those dimensions in LSA&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Principal component analysis (PCA)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lsa-beyond-text&quot;&gt;LSA beyond text&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Collaborative filtering
+    &lt;ul&gt;
+      &lt;li&gt;User item matrix stores for each user the rating for the item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-visualization-fundamentals-for-visualization&quot;&gt;Data Visualization: Fundamentals for visualization&lt;/h2&gt;
+&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Definition: To represent the data (or result) for better understanding
+    &lt;ul&gt;
+      &lt;li&gt;How can I represent what my data (or results) shows?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why visualize?
+    &lt;ul&gt;
+      &lt;li&gt;Giving better, clear understanding to audiences&lt;/li&gt;
+      &lt;li&gt;Can get perceptual motivations&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;principles-on-visualization&quot;&gt;Principles on Visualization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be true to your research
+    &lt;ul&gt;
+      &lt;li&gt;Design your display to illustrate a particular point&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Maximize information, minimize ink
+    &lt;ul&gt;
+      &lt;li&gt;Use the simplest possible representation for the bits you want to convey&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Organize hierarchically
+    &lt;ul&gt;
+      &lt;li&gt;What should a viewer see first? what if they look deeper?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-types--aesthetics&quot;&gt;Data Types &amp;amp; Aesthetics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data Types
+    &lt;ul&gt;
+      &lt;li&gt;Norminal - values from an unordered set, e.g., color, profession&lt;/li&gt;
+      &lt;li&gt;Ordinal - values from an ordered set, e.g., military or academic rank&lt;/li&gt;
+      &lt;li&gt;Numeric - real numbers, e.g., integer or real numbers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Aesthetics
+    &lt;ul&gt;
+      &lt;li&gt;Shape&lt;/li&gt;
+      &lt;li&gt;Color&lt;/li&gt;
+      &lt;li&gt;Size&lt;/li&gt;
+      &lt;li&gt;Position (Axis)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visualization: Connect data type(s) into Aesthetics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-choose-colors&quot;&gt;How to Choose Colors?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;“Qualitative”, “Sequential”, “Diverging” colors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Good Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;position-axis&quot;&gt;Position (Axis)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cartesian Coordinate system
+    &lt;ul&gt;
+      &lt;li&gt;Linear vs. Log-scale&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Polar Coordinate system
+    &lt;ul&gt;
+      &lt;li&gt;Good to see changes of values for continuous data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-visualization-basic-plots&quot;&gt;Data Visualization: Basic plots&lt;/h2&gt;
+&lt;h3 id=&quot;popular-plots-for-visualization&quot;&gt;Popular Plots for Visualization&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;histograms&quot;&gt;Histograms&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">VS model in practice Document &amp;amp; query are represented by term vectors Terms are not necessarily orthogonal to each other Synonymy: car vs. automobile Polysemy: fly (action vs. insects)</summary></entry><entry><title type="html">Big Data - Text Mining</title><link href="/Big_Data-Text_Mining" rel="alternate" type="text/html" title="Big Data - Text Mining" /><published>2022-11-21T22:30:00+09:00</published><updated>2022-11-21T22:30:00+09:00</updated><id>/Big_Data-Text_Mining</id><content type="html" xml:base="/Big_Data-Text_Mining">&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;“Text mining, also referred to as &lt;strong&gt;text data mining&lt;/strong&gt;, roughly equivalent to text analytics, refers to the process of
 deriving high-quality information from text.” - wikipedia&lt;/li&gt;
@@ -664,7 +934,107 @@ unknown&lt;/strong&gt; information, or to answers for questions for which the an
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary></entry><entry><title type="html">Big Data - Time Series</title><link href="/Big_Data-Time_Series" rel="alternate" type="text/html" title="Big Data - Time Series" /><published>2022-11-21T00:00:00+09:00</published><updated>2022-11-21T00:00:00+09:00</updated><id>/Big_Data-Time_Series</id><content type="html" xml:base="/Big_Data-Time_Series">&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary></entry><entry><title type="html">Computer Network - TCP Congestion Control</title><link href="/Computer_Network-TCP_Congestion_Control" rel="alternate" type="text/html" title="Computer Network - TCP Congestion Control" /><published>2022-11-21T19:30:00+09:00</published><updated>2022-11-21T19:30:00+09:00</updated><id>/Computer_Network-TCP_Congestion_Control</id><content type="html" xml:base="/Computer_Network-TCP_Congestion_Control">&lt;h2 id=&quot;1️⃣-classic-tcp-congestion-control&quot;&gt;1️⃣ Classic TCP Congestion Control&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Congestion window&lt;/strong&gt;: Denoted &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cwnd&lt;/code&gt;, imposes a constraint on the rate at which a TCP sender can send traffic into
+the network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LastByeSent - LastByteAcked &amp;lt;= min{ cwnd, rwnd }&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Self-clocking&lt;/strong&gt;: TCP uses acknowledgements to trigger its increase in congestion window size.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TCP guiding principles for congestion:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A lost segment implies congestion, and hence, the TCP sender’s rate should be decreased when a segment is lost.&lt;/li&gt;
+  &lt;li&gt;An acknowledged segment indicates that the network is delivering the sender’s segments to the receiver, and hence, the
+sender’s rate can be increased when an ACk arrives for a previously unacknowledged segment.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bandwidth probing.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP congestion-control algorithm&lt;/strong&gt;: The algorithm has three major components
+    &lt;ol&gt;
+      &lt;li&gt;Slow start&lt;/li&gt;
+      &lt;li&gt;Congestion avoidance&lt;/li&gt;
+      &lt;li&gt;Fast recovery&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;slow-start&quot;&gt;Slow Start&lt;/h3&gt;
+
+&lt;p&gt;The value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cwnd&lt;/code&gt; begins at 1 MSS and increase by 1 MSS every time a transmitted segment is first acknowledged.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;congestion-avoidance&quot;&gt;Congestion Avoidance&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fast-recovery&quot;&gt;Fast Recovery&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;TCP Tahoe&lt;/strong&gt;: The early version of TCP that unconditionally cut its congestion window to 1 MSS and entered the slow 
+start phase after either a timeout-indicated or tripled-duplicate-ACK-indicated loss event.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TCP Reno&lt;/strong&gt;: The newer version of TCP that incorporated fast recovery.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tcp-congestion-control-retrospective&quot;&gt;TCP Congestion Control: Retrospective&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Additive-increase, multiplicative-decrease (AIMD)&lt;/strong&gt;: Form of congestion control that gives rise to the “saw tooth”
+behavior.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tcp-cubic&quot;&gt;TCP Cubic&lt;/h3&gt;
+
+&lt;p&gt;CUBIC only changes the congestion avoidance phase, as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Let W&lt;sub&gt;max&lt;/sub&gt; be size of TCP’s congestion control window when loss was last detected, and let K be the future
+point in time when TCP CUBIC’s window size will again reach W&lt;sub&gt;max&lt;/sub&gt;, assuming no losses. Several tunable CUBIC
+parameters determine the value K, that is, how quickly the protocol’s congestion window size would reach W&lt;sub&gt;max&lt;/sub&gt;.&lt;/li&gt;
+  &lt;li&gt;CUBIC increase the congestion window as a function of cube of the distance between the current time, t, and K. Thus,
+when t is further away from K, the congestion window size increases are much larger than when t is close to K. That is
+CUBIC quickly ramps up TCP’s sending rate to get close to the pre-loss rate, W&lt;sub&gt;max&lt;/sub&gt;, and only then probes
+cautiously for bandwidth as it approaches W&lt;sub&gt;max&lt;/sub&gt;.&lt;/li&gt;
+  &lt;li&gt;When t is greater than K, the cubic rule implies that CUBIC’s congestion window increases are small when t is still
+close to K but then increase rapidly as t exceeds K.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/31.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;macroscopic-description-of-tcp-reno-throughput&quot;&gt;Macroscopic Description of TCP Reno Throughput&lt;/h3&gt;
+
+&lt;p&gt;TCP throughput increases linearly between the two extreme values, therefore&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;average throughput of a connection = (0.75 * W) / RTT&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-network-assisted-explicit-congestion-notification-and-delayed-based-congestion-control&quot;&gt;2️⃣ Network-Assisted Explicit Congestion Notification and Delayed-based Congestion Control&lt;/h2&gt;
+&lt;h3 id=&quot;explicit-congestion-notification&quot;&gt;Explicit Congestion Notification&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;delayed-based-congestion-control&quot;&gt;Delayed-based Congestion Control&lt;/h3&gt;
+
+&lt;p&gt;In TCP Vegas, the sender measures the RTT of the source-to-destination path for all acknowledged packets.&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-fairness&quot;&gt;3️⃣ Fairness&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Classic TCP Congestion Control Congestion window: Denoted cwnd, imposes a constraint on the rate at which a TCP sender can send traffic into the network.</summary></entry><entry><title type="html">Big Data - Time Series</title><link href="/Big_Data-Time_Series" rel="alternate" type="text/html" title="Big Data - Time Series" /><published>2022-11-21T00:00:00+09:00</published><updated>2022-11-21T00:00:00+09:00</updated><id>/Big_Data-Time_Series</id><content type="html" xml:base="/Big_Data-Time_Series">&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
 &lt;h3 id=&quot;time-series&quot;&gt;Time Series?&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -853,11 +1223,274 @@ over longer period of time.&lt;/li&gt;
 
 &lt;h3 id=&quot;ses-as-component-form&quot;&gt;SES as Component Form&lt;/h3&gt;
 
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-trend-holts-linear-trend&quot;&gt;Adding Trend: Holt’s Linear Trend&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Holt’s method with additive errors
+    &lt;ul&gt;
+      &lt;li&gt;Assumption: ε&lt;sub&gt;t&lt;/sub&gt; = y&lt;sub&gt;t&lt;/sub&gt; - l&lt;sub&gt;t-1&lt;/sub&gt; - b&lt;sub&gt;t-1&lt;/sub&gt; ~ NID(0, σ&lt;sup&gt;2&lt;/sup&gt;) &amp;lt;- Normally 
+Independent Distribution&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;damped-trend&quot;&gt;Damped Trend&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Good to forecast time-series values in a long range
+    &lt;ul&gt;
+      &lt;li&gt;H) Trend less affect to the values in distant future&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Equation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Damping parameter - &amp;lt; Φ &amp;lt; 1&lt;/li&gt;
+  &lt;li&gt;If Φ = 1, identical to Holt’s linear trend&lt;/li&gt;
+  &lt;li&gt;As h -&amp;gt; ∞&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?\widehat{y}_{T&amp;amp;plus;h&lt;/td&gt;
+      &lt;td&gt;T}\to&amp;amp;space;l_T&amp;amp;plus;\phi&amp;amp;space;b_T/(1-\phi))&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Short-run forecasts trended, long run forecasts constant&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;adding-seasonality-holt-winters-method&quot;&gt;Adding Seasonality: Holt-Winters Method&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Seasonal component is usually expressed as&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?s_t=\gamma^*(y_t-l_t)&amp;plus;(1-\gamma^*)s_{t-m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Substitute in for l&lt;sub&gt;t&lt;/sub&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?s_t=\gamma^*(1-a)(y_t-l_{t-1}-b_{t-1})&amp;plus;[1-\gamma^*(1-\alpha)]s_{t-m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Set γ = γ&lt;sup&gt;*&lt;/sup&gt;(1 - α), then 0 &amp;lt;= γ &amp;lt;= 1 - α&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;arima&quot;&gt;ARIMA&lt;/h2&gt;
+&lt;h3 id=&quot;quick-glance-at-arima&quot;&gt;Quick Glance At ARIMA&lt;/h3&gt;
+
+&lt;p&gt;AR: autoregressive (lagged observation as inputs)&lt;/p&gt;
+
+&lt;p&gt;I: integrated (differencing to make series stationary)&lt;/p&gt;
+
+&lt;p&gt;MA: moving average (lagged errors as inputs)&lt;/p&gt;
+
+&lt;p&gt;An ARIMA model is rarely interpretable in terms of visible data structures like trend and seasonality. But it can
+capture a huge range of time series patterns.&lt;/p&gt;
+
+&lt;h3 id=&quot;stationary&quot;&gt;Stationary&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Definition
+    &lt;ul&gt;
+      &lt;li&gt;If {y_t} is a stationary time series, then for all s, the distribution of (y&lt;sub&gt;t&lt;/sub&gt;,…,y&lt;sub&gt;t+s&lt;/sub&gt;) does
+&lt;strong&gt;NOT&lt;/strong&gt; depend on t&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Characteristics
+    &lt;ul&gt;
+      &lt;li&gt;Roughly horizontal&lt;/li&gt;
+      &lt;li&gt;Constant variance&lt;/li&gt;
+      &lt;li&gt;No patterns predictable in the long-term&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For ARIMA modeling, we need to stabilize the mean!
+    &lt;ul&gt;
+      &lt;li&gt;By Differencing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;differencing&quot;&gt;Differencing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Differencing helps to stabilize the mean&lt;/li&gt;
+  &lt;li&gt;(First-order) differencing
+    &lt;ul&gt;
+      &lt;li&gt;The “differenced series” is the change between each observation in the original series: y&lt;sub&gt;t&lt;/sub&gt;’ = y&lt;sub&gt;t
+&lt;/sub&gt; - y&lt;sub&gt;t-1&lt;/sub&gt;&lt;/li&gt;
+      &lt;li&gt;The differenced series will have only T - 1 values since it is not possible to calculate a difference y&lt;sub&gt;1&lt;/sub&gt;’
+for the first observation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-differencing&quot;&gt;Other Differencing?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Second-order differencing
+    &lt;ul&gt;
+      &lt;li&gt;In practice, it is almost never necessary to go beyond second-order differences&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Seasonal differencing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;autoregressive-ar-model&quot;&gt;AutoRegressive (AR) Model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equation (p-th order)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t=c&amp;plus;\phi_1y_{t-1}&amp;plus;\phi_2y_{t-2}&amp;plus;\cdots&amp;space;&amp;plus;\phi_py_{t-p}&amp;plus;\epsilon_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where ε&lt;sub&gt;t&lt;/sub&gt; is white noise.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Same as the multiple regression with lagged values of y&lt;sub&gt;t&lt;/sub&gt; as predictors&lt;/li&gt;
+  &lt;li&gt;Only for stationary data with constraints on parameters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;moving-average-ma&quot;&gt;Moving Average (MA)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equation (q-th order)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t=c&amp;plus;\epsilon_t&amp;plus;\theta_1\epsilon_{t-1}&amp;plus;\theta_2\epsilon_{t-2}&amp;plus;\cdots&amp;space;&amp;plus;\theta_q\epsilon_{t-q}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where ε&lt;sub&gt;t&lt;/sub&gt; is white noise.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Same as multiple regression with past errors as predictors (not moving average smoothing)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;arp--ma&quot;&gt;AR(p) = MA(∞)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How about MA(q) -&amp;gt; AR(∞)?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;invertible-property&quot;&gt;Invertible Property&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;MA(q) -&amp;gt; AR(∞) when the parameters of MA are restricted (called invertible property)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ar--ma--differencing--arima&quot;&gt;AR + MA + Differencing = ARIMA&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Equation: ARIMA(p, d, q)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;White noise: ARIMA(0, 0, 0)&lt;/li&gt;
+  &lt;li&gt;AR(p): ARIMA(p, 0, 0)&lt;/li&gt;
+  &lt;li&gt;MA(q): ARIMA(0, q, 0)&lt;/li&gt;
+  &lt;li&gt;How to choose parameters? -&amp;gt; MLE&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;seasonal-arima&quot;&gt;Seasonal ARIMA&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Example: SARIMA(1, 1, 1)(1, 1, 1)&lt;sub&gt;4&lt;/sub&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;arima-vs-ets&quot;&gt;ARIMA vs. ETS&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Myth: ARIMA models are more general than exponential smoothing&lt;/li&gt;
+  &lt;li&gt;Linear exponential smoothing models are all special cases of ARIMA models&lt;/li&gt;
+  &lt;li&gt;Non-linear exponential smoothing models have NO equivalent ARIMA counterparts&lt;/li&gt;
+  &lt;li&gt;Many ARIMA models have NO exponential smoothing counterparts&lt;/li&gt;
+  &lt;li&gt;ETS models all non-stationary&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Understanding Time Series Time Series?</summary></entry><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Understanding Time Series Time Series?</summary></entry><entry><title type="html">Computer Network - Principles of Congestion Control</title><link href="/Computer_Network-Principles_of_Congestion_Control" rel="alternate" type="text/html" title="Computer Network - Principles of Congestion Control" /><published>2022-11-18T00:00:00+09:00</published><updated>2022-11-18T00:00:00+09:00</updated><id>/Computer_Network-Principles_of_Congestion_Control</id><content type="html" xml:base="/Computer_Network-Principles_of_Congestion_Control">&lt;h2 id=&quot;1️⃣-the-causes-and-the-costs-of-congestion&quot;&gt;1️⃣ The Causes and the Costs of Congestion&lt;/h2&gt;
+&lt;h3 id=&quot;scenario-1-two-senders-a-router-with-infinite-buffers&quot;&gt;Scenario 1: Two Senders, a Router with Infinite Buffers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Per-connection throughput&lt;/strong&gt;: Number of bytes per second at the receiver&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;scenario-2-two-senders-and-a-router-with-finite-buffers&quot;&gt;Scenario 2: Two Senders and a Router with Finite Buffers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Offered load&lt;/strong&gt;: The rate at which the transport layer sends segments containing original data and retransmitted data
+into the network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;scenario-3-four-senders-routers-with-finite-buffers-and-multihop-paths&quot;&gt;Scenario 3: Four Senders, Routers with Finite Buffers, and Multihop Paths&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-approaches-to-congestion-control&quot;&gt;2️⃣ Approaches to Congestion Control&lt;/h2&gt;
+
+&lt;p&gt;At the highest level, we can distinguish among congestion-control approaches by whether the network layer provides
+explicit assistance to the transport layer for congestion-control purposes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;End-to-end congestion control.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Network-assisted congestion control.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ATM Available Bit Rate (ABR)&lt;/strong&gt;: A router informs the sender of the maximum host sending rate it can support on an 
+outgoing link.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Causes and the Costs of Congestion Scenario 1: Two Senders, a Router with Infinite Buffers Per-connection throughput: Number of bytes per second at the receiver</summary></entry><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Word Cloud
     &lt;ul&gt;
@@ -1898,470 +2531,533 @@ nodes
 
 &lt;h2 id=&quot;centrality-a-specific-role-of-nodes-in-the-network&quot;&gt;Centrality: A Specific Role of Nodes in the Network&lt;/h2&gt;
 &lt;h3 id=&quot;centrality-or-prestige&quot;&gt;Centrality (or Prestige)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Some nodes are more important than others&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Important” nodes?
+    &lt;ul&gt;
+      &lt;li&gt;Can be differently identified depending on the context&lt;/li&gt;
+      &lt;li&gt;Exchange, spread of information, brokerage opportunities, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Centrality measures can quantify the important nodes from various perspectives&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;node-centrality&quot;&gt;Node Centrality&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;We can identify hub nodes from various perspectives
+    &lt;ul&gt;
+      &lt;li&gt;Degree centrality: Node with many neighbors&lt;/li&gt;
+      &lt;li&gt;Closeness centrality: Close (higher weights or lower costs) to other nodes&lt;/li&gt;
+      &lt;li&gt;Betweenness centrality: Nodes which connect to more “sub-networks”&lt;/li&gt;
+      &lt;li&gt;Eigenvector cnetrality (similar to PageRank Centrality): Nodes which connects to larger network&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;degree-centrality&quot;&gt;Degree Centrality&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The node with the most connections is most important
+    &lt;ul&gt;
+      &lt;li&gt;E.g., no. supporters, audience size, no. trading partners, no. direct reports&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;closeness-centrality&quot;&gt;Closeness Centrality&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The node in the middle of the action is most central
+    &lt;ul&gt;
+      &lt;li&gt;Node with highest closeness centrality has the &lt;strong&gt;shortest distance to the other nodes&lt;/strong&gt;, on average&lt;/li&gt;
+      &lt;li&gt;e.g., access to information opinion formation, spread of disease, adoption of new technology&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;between-centrality&quot;&gt;Between Centrality&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The node you have to go through is most central
+    &lt;ul&gt;
+      &lt;li&gt;e.g., brokering between groups, control of information, innovation, collaboration&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_B(v_i)=\frac{\sum_{j&amp;lt;k}\frac{g_{jk}(v_i)}{g_{jk}}}{(N-1)(N-2)/2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;eigenvector-centrality&quot;&gt;Eigenvector Centrality&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The node that &lt;strong&gt;connects to the important nodes is important&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;e.g., a twitter account followed by someone with a large audience, a entrepreneur who knows Jack Dorsey, a senator’s
+barer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;A node’s eigenvector centrality is proportional to the centrality of it’s neighbors&lt;/li&gt;
+  &lt;li&gt;A node can have higher eigenvector centrality because:
+    &lt;ul&gt;
+      &lt;li&gt;They have more connections&lt;/li&gt;
+      &lt;li&gt;They have important connections&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;comparing-three-centralises&quot;&gt;Comparing Three Centralises&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The three measures are clearly related, because they each get at something slightly different!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cf-network-centralization&quot;&gt;CF: Network Centralization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A measure of how centrality is distributed in the network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;network-centralization&quot;&gt;Network Centralization&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Centralization tells us about “how influence is spread across the network”
+    &lt;ul&gt;
+      &lt;li&gt;e.g., Financial trading networks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;prestige&quot;&gt;Prestige&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Centrality in directed network is called “prestige”&lt;/li&gt;
+  &lt;li&gt;This is sometimes a fine name:
+    &lt;ul&gt;
+      &lt;li&gt;admiration or trust&lt;/li&gt;
+      &lt;li&gt;influence&lt;/li&gt;
+      &lt;li&gt;friendship&lt;/li&gt;
+      &lt;li&gt;trade&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;But depending on the type of link, it might be misleading:
+    &lt;ul&gt;
+      &lt;li&gt;money lending&lt;/li&gt;
+      &lt;li&gt;giving advice&lt;/li&gt;
+      &lt;li&gt;hatred or distrust&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Context matters!&lt;/strong&gt; Always consider the interpretation of a measure in a particular context&lt;/p&gt;
+
+&lt;h3 id=&quot;computing-a-fes-types-of-prestige&quot;&gt;Computing A Fes Types of Prestige&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In-degree
+    &lt;ul&gt;
+      &lt;li&gt;A website that is linked to often has high prestige&lt;/li&gt;
+      &lt;li&gt;A person who is frequently nominated for a reward has high prestige&lt;/li&gt;
+      &lt;li&gt;How about out-degree?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Closeness analogue: proximity
+    &lt;ul&gt;
+      &lt;li&gt;Uses the shortest directed path length: directed geodesic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Directed betweeness
+    &lt;ul&gt;
+      &lt;li&gt;Almost exactly the same as undirected betweenness, but with directed geodesics and normalized in a directed way&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Influence range
+    &lt;ul&gt;
+      &lt;li&gt;The influence range is what fraction of the nodes in the network can reach you via directed paths&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-analysis-motivation&quot;&gt;Community Analysis: Motivation&lt;/h2&gt;
+&lt;h3 id=&quot;roles-vs-groups-in-networks-2&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;networks--communities&quot;&gt;Networks &amp;amp; Communities&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;We often think of networks “looking” like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What led to such a conceptual picture?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;granovetters-theory&quot;&gt;Granovetter’s Theory&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Granovetter makes a connection between the social and structural role of an edge&lt;/li&gt;
+  &lt;li&gt;First point: &lt;strong&gt;Structure&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Structurally embedded edges are also socially strong&lt;/li&gt;
+      &lt;li&gt;Long-range edges spanning different parts of the network are socially weak&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Second point: &lt;strong&gt;Information&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Long-range edges allow you to gather information from different parts of the network and get a job&lt;/li&gt;
+      &lt;li&gt;Structurally embedded edges are heavily redundant in terms of information access&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;edge-strength-in-real-data&quot;&gt;Edge Strength in Real Data&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;For many years Granovetter’s theory was not tested&lt;/li&gt;
+  &lt;li&gt;But today we have large who-talks-to-whom graphs:
+    &lt;ul&gt;
+      &lt;li&gt;Email, Messenger, Cell phones, Facebook&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Onnela et al. 2007:
+    &lt;ul&gt;
+      &lt;li&gt;Cell-phone network of 20% of EU country’s population&lt;/li&gt;
+      &lt;li&gt;Edge weights: no. phone calls&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;edge-overlap&quot;&gt;Edge Overlap&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;![](https://latex.codecogs.com/svg.image?O_{ij}=\frac{&lt;/td&gt;
+      &lt;td&gt;(Ni\cap&amp;amp;space;Nj)/(i,j)&lt;/td&gt;
+      &lt;td&gt;}{&lt;/td&gt;
+      &lt;td&gt;(Ni\cup&amp;amp;space;Nj)/(i,j)&lt;/td&gt;
+      &lt;td&gt;})&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;N(&lt;em&gt;i&lt;/em&gt;) … the set of neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
+&lt;p&gt;Overlap = 0 when an edge is a local bridge&lt;/p&gt;
+
+&lt;h3 id=&quot;real-network-real-edge-strengths&quot;&gt;Real Network, Real Edge Strengths&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Real edge strengths in mobile call graph
+    &lt;ul&gt;
+      &lt;li&gt;Strong ties are more embedded (hav higher overlap)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;linked-removed-by-overlap&quot;&gt;Linked Removed by Overlap&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conceptual-picture-of-networks&quot;&gt;Conceptual Picture of Networks&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Granovetter’s theory leads to the following conceptual picture of networks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lessons-from-granovetters--onnelas-work&quot;&gt;Lessons from Granovetter’s &amp;amp; Onnela’s Work&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In real-world, the shape of network (or graph) is NOT homogeneous!
+    &lt;ul&gt;
+      &lt;li&gt;Homogeneous: all nodes have equal no. edges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Heterogeneity (opposite to homogeneity) means:
+    &lt;ul&gt;
+      &lt;li&gt;Some edges are skewed to a few nodes&lt;/li&gt;
+      &lt;li&gt;Local clusters (= communities) exist&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; It is valuable to analyze network community!&lt;/p&gt;
+
+&lt;h2 id=&quot;computing-communities-overview&quot;&gt;Computing Communities: Overview&lt;/h2&gt;
+&lt;h3 id=&quot;network-communities&quot;&gt;Network Communities&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sets of nodes with lots of internal connections and few external ones (to the rest of the network).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;finding-network-communities&quot;&gt;Finding Network Communities&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;How do we automatically find such densely connected groups of nodes?&lt;/li&gt;
+  &lt;li&gt;Ideally such automatically detected clusters would then correspond to real groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;modularity-and-network-communities&quot;&gt;Modularity and Network Communities&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Communities: sets of tightly connected nodes&lt;/li&gt;
+  &lt;li&gt;Define: Modularity Q
+    &lt;ul&gt;
+      &lt;li&gt;A measure of how well a network is partitioned into communities&lt;/li&gt;
+      &lt;li&gt;Given a partitioning of the network into groups disjoint s ∈ S:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/31.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;null-network-configuration-model&quot;&gt;Null Network Configuration Model&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Given real G on n nodes and m edges, construct rewired Network G’
+    &lt;ul&gt;
+      &lt;li&gt;Same degree distribution but uniformly random connections&lt;/li&gt;
+      &lt;li&gt;Consider G’ as a multigraph&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The expected number of edges between nodes i and j of degrees k&lt;sub&gt;i&lt;/sub&gt; and k&lt;sub&gt;j&lt;/sub&gt; equals:
+    &lt;ul&gt;
+      &lt;li&gt;The expected number of edges in (multigraph) G’:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?k_i\cdot&amp;space;\frac{k_j}{2m}=\frac{k_ik_j}{2m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?=\frac{1}{2}\sum_{i\in&amp;space;N}\sum_{j\in&amp;space;N}\frac{k_ik_j}{2m}=\frac{1}{2}\cdot&amp;space;\frac{1}{2m}\sum_{i\in&amp;space;N}k_i(\sum_{j\in&amp;space;N}k_j)=\frac{1}{4m}2m\cdot&amp;space;2m=m&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{u\in&amp;space;N}k_u=2m&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;modularity&quot;&gt;Modularity&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Modularity of partitioning S of graph G:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Modularity values take range [-1, 1]
+    &lt;ul&gt;
+      &lt;li&gt;It is positive if the number of edges within groups exceeds the expected number&lt;/li&gt;
+      &lt;li&gt;Q greater than 0.3-0.7 means significant community structure&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Q(G,S)=\frac{1}{2m}\sum_{s\in&amp;space;S}\sum_{i\in&amp;space;s}\sum{j\sum&amp;space;s}(A_{ij}-\frac{k_ik_j}{2m})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Equivalently modularity can be written as:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Idea: We can identify communities by maximizing modularity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;computing-communities-newman-method&quot;&gt;Computing Communities: Newman Method&lt;/h2&gt;
+&lt;h3 id=&quot;newman-method-intuition&quot;&gt;Newman Method: Intuition&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Considering Edge Betweenness!
+    &lt;ul&gt;
+      &lt;li&gt;No. shortest paths passing over the edges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/35.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/36.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;newman-method-an-overview&quot;&gt;Newman Method: An overview&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Division hierarchical clustering based on notion of edge betweenness&lt;/li&gt;
+  &lt;li&gt;Works on undirected unweighted networks&lt;/li&gt;
+  &lt;li&gt;Steps:
+    &lt;ol&gt;
+      &lt;li&gt;Calculate betweenness of edges&lt;/li&gt;
+      &lt;li&gt;Remove edges with highest betweenness&lt;/li&gt;
+      &lt;li&gt;Connected components are communities&lt;/li&gt;
+      &lt;li&gt;Give a hierarchical decomposition of the network&lt;/li&gt;
+      &lt;li&gt;Repeat 1-5
+        &lt;ul&gt;
+          &lt;li&gt;Find the best clustering based on threshold of modularity&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;newman-method-illustration&quot;&gt;Newman Method: Illustration&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/37.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Need to re-compute betweenness at every step&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/38.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-compute-edge-betweenness&quot;&gt;How to Compute Edge Betweenness?&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Starting from a randomly selected node (e.g., A) conduct breath first search (BFS)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/39.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Count the no. the shortest paths from A to all other nodes of the network&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/40.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Compute betweenness by working up the tre from the lowest layers of the tree
+    &lt;ul&gt;
+      &lt;li&gt;If there are multiple paths, count them fractionally&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/41.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;results-hierarchical-network-decomposition&quot;&gt;Results: Hierarchical network decomposition&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/42.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;finally-deciding-clusters&quot;&gt;Finally Deciding Clusters&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compute modularity for each steps, then decide clusters with the highest modularity!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/43.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;newman-method-an-example-graph&quot;&gt;Newman Method: An Example Graph&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/44.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;computing-communities-louvain-method&quot;&gt;Computing Communities: Louvain Method&lt;/h2&gt;
+&lt;h3 id=&quot;louvain-algorithm&quot;&gt;Louvain Algorithm&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Greedy algorithm for community detection
+    &lt;ul&gt;
+      &lt;li&gt;O(n log n) run time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Support weighted graphs&lt;/li&gt;
+  &lt;li&gt;Provides hierarchical communities&lt;/li&gt;
+  &lt;li&gt;Widely used to study large networks because:
+    &lt;ul&gt;
+      &lt;li&gt;Fast&lt;/li&gt;
+      &lt;li&gt;Rapid convergence&lt;/li&gt;
+      &lt;li&gt;High modularity output (i.e., “better communities”)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/45.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;louvain-algorithm-at-high-level&quot;&gt;Louvain Algorithm: At High Level&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Louvain algorithm greedily maximizes modularity&lt;/li&gt;
+  &lt;li&gt;Every pass is made of 2 phases:
+    &lt;ul&gt;
+      &lt;li&gt;Phase 1: Modularity is optimized by allowing only local changes to node-communities memberships&lt;/li&gt;
+      &lt;li&gt;Phase 2: The identified communities are aggregated into super-nodes to build a new network&lt;/li&gt;
+      &lt;li&gt;Goto Phase 1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/46.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;louvain-algorithm-1st-phase-partitioning&quot;&gt;Louvain Algorithm: 1st Phase (Partitioning)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Put each node in a graph into a distinct community (one node per community)&lt;/li&gt;
+  &lt;li&gt;For each node i, the algorithm performs two calculations:
+    &lt;ul&gt;
+      &lt;li&gt;Compute the modularity delta (∆Q) when putting node i into the community of some neighbor j&lt;/li&gt;
+      &lt;li&gt;Move i to a community of node j that yields the largest gain in ∆Q&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Phase 1 runs until no movement yields a gain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;The first phase stops when a local maxima of modularity is attained, i.e., when no individual node move can improve the 
+modularity.&lt;/p&gt;
+
+&lt;p&gt;The output of the algorithm &lt;strong&gt;depends on the order in which the nodes are considered&lt;/strong&gt;. Research indicates that the
+ordering of the nodes does NOT have a significant influence on the overall modularity that is obtained.&lt;/p&gt;
+
+&lt;h3 id=&quot;louvain-algorithm-modularity-gain&quot;&gt;Louvain Algorithm: Modularity Gain&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is ∆Q if we have node i to community C?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\bigtriangleup&amp;space;Q(i\to&amp;space;C)=[\frac{\sum_{in}&amp;plus;k_{i,in}}{2m}-(\frac{\sum_{tot}&amp;plus;k_i}{2m})^2]-[\frac{\sum_{in}}{2m}-(\frac{\sum_{tot}}{2m})^2-(\frac{k_i}{2m})^2]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;where
+    &lt;ul&gt;
+      &lt;li&gt;∑&lt;sub&gt;in&lt;/sub&gt; … sum of link weights between nodes in C&lt;/li&gt;
+      &lt;li&gt;∑&lt;sub&gt;tot&lt;/sub&gt; … sum of all link weights of nodes in C&lt;/li&gt;
+      &lt;li&gt;k&lt;sub&gt;i,in&lt;/sub&gt; … sum of alink weights between nodes i and C&lt;/li&gt;
+      &lt;li&gt;k&lt;sub&gt;i&lt;/sub&gt; … sum of all link weights (i.e., degree) of node i&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;more-detail&quot;&gt;More Detail&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/47.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;louvain-2nd-phase-reconstructing&quot;&gt;Louvain: 2nd Phase (Reconstructing)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The communities obtained in the first phase are contracted into super-nodes, and the network is created accordingly:
+    &lt;ul&gt;
+      &lt;li&gt;Super-nodes are connected if there is at least one edge between the nodes of the corresponding communities&lt;/li&gt;
+      &lt;li&gt;The weight of the edge between the two super-nodes is the sum of the weights from all edges between their 
+corresponding communities&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Phase 1 is then run on the super-node network&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;louvain-algorithm-1&quot;&gt;Louvain Algorithm&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/48.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Roles vs. Groups in Networks</summary></entry><entry><title type="html">Unreal Engine - Physics Engine</title><link href="/Unreal_Engine-Physics_Engine" rel="alternate" type="text/html" title="Unreal Engine - Physics Engine" /><published>2022-11-01T01:30:00+09:00</published><updated>2022-11-01T01:30:00+09:00</updated><id>/Unreal_Engine-Physics_Engine</id><content type="html" xml:base="/Unreal_Engine-Physics_Engine">&lt;h3 id=&quot;move-an-object&quot;&gt;Move an Object&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ways to move an object in the game world
-    &lt;ul&gt;
-      &lt;li&gt;Change coordinates every frame: Use Tick event node to change to location&lt;/li&gt;
-      &lt;li&gt;Use timeline&lt;/li&gt;
-      &lt;li&gt;Use movement component: Add movement component in an actor or a character&lt;/li&gt;
-      &lt;li&gt;Use physics engine&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ways to use physics engine
-    &lt;ul&gt;
-      &lt;li&gt;cons: Many parts are unpredictable&lt;/li&gt;
-      &lt;li&gt;pros: Not many tasks are required compared to other methods
-        &lt;ul&gt;
-          &lt;li&gt;If level gets big, it is impossible to work with it, so you will be forced to use physics engine&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-necessity-of-physics-engine-in-the-game&quot;&gt;The Necessity of Physics Engine in the Game&lt;/h3&gt;
-&lt;p&gt;In the game, it is actually good to implement codes. However, it is very difficult to implement codes for all the
-physics acts. You must think whether it would be necessary to use physics engine simulation.&lt;/p&gt;
-
-&lt;h3 id=&quot;physics-engine-status&quot;&gt;Physics Engine Status&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Physics Engine
-    &lt;ul&gt;
-      &lt;li&gt;PhysX (PhysX SDK)
-        &lt;ul&gt;
-          &lt;li&gt;Owned by Nvidia (2008 ~ )&lt;/li&gt;
-          &lt;li&gt;PC/Console version is free, open source (2018 ~ )&lt;/li&gt;
-          &lt;li&gt;GPU acceleration function (rely on GPU)&lt;/li&gt;
-          &lt;li&gt;In Unreal engine and Unity&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Havok
-        &lt;ul&gt;
-          &lt;li&gt;Owned by Microsoft (2015 ~ )&lt;/li&gt;
-          &lt;li&gt;Respected and not an open source&lt;/li&gt;
-          &lt;li&gt;GPU acceleration is not used and uses CPU caculation instead (pros)&lt;/li&gt;
-          &lt;li&gt;Owns AI tool, animation tool, etc.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Open Source Physics Engine
-    &lt;ul&gt;
-      &lt;li&gt;ODE (Open Dynamics Engine)&lt;/li&gt;
-      &lt;li&gt;Newton Game Dynamics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;pros-and-cons-of-physics-engine&quot;&gt;Pros and Cons of Physics Engine&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cons of Physics Engine
-    &lt;ul&gt;
-      &lt;li&gt;Low reproducibility&lt;/li&gt;
-      &lt;li&gt;Very low controllability&lt;/li&gt;
-      &lt;li&gt;Difficult for precise situation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Reciprocity of game and physics engine
-    &lt;ul&gt;
-      &lt;li&gt;Game is about constructing entertainment&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;physics-engine-and-collision&quot;&gt;Physics Engine and Collision&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apply physics engine to actor
-    &lt;ul&gt;
-      &lt;li&gt;Suppose that an actor is a rigid body&lt;/li&gt;
-      &lt;li&gt;Physics engine is used on collision volume and not on mesh&lt;/li&gt;
-      &lt;li&gt;Actor mesh must have collision volume&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Physics application to collision volume
-    &lt;ul&gt;
-      &lt;li&gt;Collision volume should not be complicated&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ways-to-use-physics-engine&quot;&gt;Ways to use physics engine&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Physics engine application: Go through the following steps in the actor editor’s &lt;strong&gt;detail&lt;/strong&gt; tab
-    &lt;ul&gt;
-      &lt;li&gt;Activate &lt;strong&gt;Simulate Physics&lt;/strong&gt; in &lt;strong&gt;Physics&lt;/strong&gt; area
-        &lt;ul&gt;
-          &lt;li&gt;The &lt;strong&gt;mobility&lt;/strong&gt; property changes to &lt;strong&gt;movable&lt;/strong&gt; automatically&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;actors-physics-property&quot;&gt;Actor’s physics property&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Actor’s physics property
-    &lt;ul&gt;
-      &lt;li&gt;Start Awake&lt;/li&gt;
-      &lt;li&gt;Mass in Kg&lt;/li&gt;
-      &lt;li&gt;Enable Gravity&lt;/li&gt;
-      &lt;li&gt;Center of Mass Offset&lt;/li&gt;
-      &lt;li&gt;Etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;physical-material&quot;&gt;Physical Material&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Value related to collision depends on the material&lt;/li&gt;
-  &lt;li&gt;Use an &lt;strong&gt;exclusive asset that can input a physics value&lt;/strong&gt;, instead of setting physics value every time&lt;/li&gt;
-  &lt;li&gt;Use the physical material to give physics value to similar material meshes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;physical-materials-core-property&quot;&gt;Physical Material’s Core Property&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Friction
-    &lt;ul&gt;
-      &lt;li&gt;Friction coefficient: 0 (weak) ~ 1 (strong)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Friction Combine Mode
-    &lt;ul&gt;
-      &lt;li&gt;Friction occurs when two object make contact -&amp;gt; consider both friction property&lt;/li&gt;
-      &lt;li&gt;4 friction combine mode in UE
-        &lt;ul&gt;
-          &lt;li&gt;Average&lt;/li&gt;
-          &lt;li&gt;Multiply&lt;/li&gt;
-          &lt;li&gt;Max&lt;/li&gt;
-          &lt;li&gt;Min&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Restitution
-    &lt;ul&gt;
-      &lt;li&gt;Restitution coefficient: 0 (weak restitution) ~ 1 (strong restitution)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Density
-    &lt;ul&gt;
-      &lt;li&gt;Friction = Friction coefficient * Mass&lt;/li&gt;
-      &lt;li&gt;An object’s mass is very important in physics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="etc" /><summary type="html">Move an Object Ways to move an object in the game world Change coordinates every frame: Use Tick event node to change to location Use timeline Use movement component: Add movement component in an actor or a character Use physics engine Ways to use physics engine cons: Many parts are unpredictable pros: Not many tasks are required compared to other methods If level gets big, it is impossible to work with it, so you will be forced to use physics engine</summary></entry><entry><title type="html">Computer Network - Principles of Reliable Data Transfer</title><link href="/Computer_Network-Principles_of_Reliable_Data_Transfer" rel="alternate" type="text/html" title="Computer Network - Principles of Reliable Data Transfer" /><published>2022-10-31T20:00:00+09:00</published><updated>2022-10-31T20:00:00+09:00</updated><id>/Computer_Network-Principles_of_Reliable_Data_Transfer</id><content type="html" xml:base="/Computer_Network-Principles_of_Reliable_Data_Transfer">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Reliable data transfer protocol&lt;/strong&gt;: Difficult since the layer below the reliable data transfer protocol may be
-unreliable.
-    &lt;ul&gt;
-      &lt;li&gt;E.g. TCP is a reliable data transfer protocol that is implemented on top of an unreliable (IP) end-to-end network
-layer.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Unidirectional data transfer&lt;/strong&gt;: Data transfer from sending to the receiving side.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bidirectional data transfer&lt;/strong&gt;: Reliable full-duplex transfer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1️⃣-building-a-reliable-data-transfer-protocol&quot;&gt;1️⃣ Building a Reliable Data Transfer Protocol&lt;/h2&gt;
-&lt;h3 id=&quot;reliable-data-transfer-over-a-perfectly-reliable-channel-rdt10&quot;&gt;Reliable Data Transfer over a Perfectly Reliable Channel: rdt1.0&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;finite-state machine (FSM)&lt;/strong&gt;: The operation of the rdt1.0 sender and receiver.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-sending-side-of-rdt&quot;&gt;The sending side of rdt&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Accepts data from the upper layer via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send(data)&lt;/code&gt; event.&lt;/li&gt;
-  &lt;li&gt;Creates a packet containing the data (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make_pkt(data)&lt;/code&gt;) and send the packet into the channel.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In practice, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send(data)&lt;/code&gt; event would result from a procedure call (for example, to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_send()&lt;/code&gt;) by the
-upper-layer application.&lt;/p&gt;
-
-&lt;h4 id=&quot;the-receiving-side-of-rdt&quot;&gt;The receiving side of rdt&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Receives a packet from the underlying channel via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv(packet)&lt;/code&gt; event.&lt;/li&gt;
-  &lt;li&gt;Removes the data from the packet (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extract(pakcet, data)&lt;/code&gt;).&lt;/li&gt;
-  &lt;li&gt;Passes the data up to the upper layer (via the action &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deliver_data(data)&lt;/code&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In practice the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv(packet)&lt;/code&gt; event would result from a procedure call (for example, to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rdt_rcv()&lt;/code&gt;) from the lower-
-layer protocol.&lt;/p&gt;
-
-&lt;h3 id=&quot;reliable-data-transfer-over-a-channel-with-bit-errors-rdt20&quot;&gt;Reliable Data Transfer over a Channel with Bit Errors: rdt2.0&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Positive acknowledgements&lt;/strong&gt; and &lt;strong&gt;negative acknowledgements&lt;/strong&gt;: The message-dictation protocol that allow the 
-receiver to let the sender know what has been received correctly and what has been received in error and tus requires
-repeating.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ARQ (Automatic Repeat reQuest) protocols&lt;/strong&gt;: Reliable data transfer protocols based on such retransmission.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Three additional protocol capabilities required in ARQ protocols to handle the presence of bit errors:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Error detection&lt;/em&gt;. First, a mechanism is needed to allow the receiver to detect when bit error has occurred.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Receiver feedback&lt;/em&gt;. Since the sender and receiver are typically executing on different end systems, possibly
-separated by thousands of miles, the only way for the sender to learn of the receiver’s view of the world is for the
-receiver to provide explicit feedback to the sender.The positive (ACK) and negative (NAK) acknowledgement replies in the
-message-dictation scenario are examples of such feedback.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Retransmission&lt;/em&gt;. A packet that is received in error at the receiver will be retransmitted by the sender.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;stop-and-wait protocols&lt;/strong&gt;: The sender will not send a new piece of data until it is sure that the receiver has 
-correctly received the current packet.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Three possibilities for handling corrupted ACKs or NAKs:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Consider what a human might do in the message-dictation scenario. If the speaker didn’t understand the “OK” or “Please
-repeat that” reply from the receiver, the speaker would probably ask, “What did you say?” The receiver would then repeat
-the reply. But what if the speaker’s “What did you say?” is corrupted? The receiver, having no idea whether the garbled 
-sentence was part of the dictation or a request to repeat the last reply, would probably then respond with “What did you
-say?” And the, of course, that response might be garbled. Clearly, we’re heading down a difficult path.&lt;/li&gt;
-  &lt;li&gt;A second alternative is to add enough checksum bits to allow the sender not only to detect, but also to recover from,
-bit errors. This solves the immediate problem for a channel that can corrupt packets but not lose them.&lt;/li&gt;
-  &lt;li&gt;A third approach is for the sender simply to resend the current data packet when it receives a garbled ACK or NAK 
-packet. This approach, however, introduces &lt;strong&gt;duplicate packets&lt;/strong&gt; into the sender-to-receiver channel. The fundamental
-difficulty with duplicate packets is that the receiver doesn’t know whether the ACK or NAK it last send was received
-correctly at the sender. Thus, it cannot know a priori whether an arriving packet contains new data or is a 
-retransmission.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Duplicate ACKs&lt;/strong&gt;: The receiver did not correctly receive the packet following the packet that is being ACKed twice.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;reliable-data-transfer-over-a-lossy-channel-with-bit-errors-rdt30&quot;&gt;Reliable Data Transfer over a Lossy Channel with Bit Errors: rdt3.0&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Duplicate data packets&lt;/strong&gt;: If a packet experiences a particularly large delay, the sender may retransmit the packet
-even though neither the data packet nor its ACK have been lost.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Countdown timer&lt;/strong&gt;: A time-based retransmission mechanism that can interrupt the sender after a given amount of time
-has expired.
-    &lt;ol&gt;
-      &lt;li&gt;Start the timer each time a packet is sent.&lt;/li&gt;
-      &lt;li&gt;Respond to a timer interrupt.&lt;/li&gt;
-      &lt;li&gt;Stop the timer.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Alternating-bit protocol&lt;/strong&gt;: Packet sequence numbers alternate between 0 and 1.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;2️⃣-pipelined-reliable-data-transfer-protocols&quot;&gt;2️⃣ Pipelined Reliable Data Transfer Protocols&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Transmit the packet into the 1 Gbps link&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_{trans}&amp;space;=&amp;space;\frac{L}{R}&amp;space;=&amp;space;\frac{8000&amp;space;bits}{10^9&amp;space;bits/sec}&amp;space;=&amp;space;8&amp;space;microseconds&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Stop-and-wait protocol has a rather dismal sender utilization U&lt;sub&gt;sender&lt;/sub&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?U_{sender}&amp;space;=&amp;space;\frac{L/R}{RTT&amp;space;&amp;plus;&amp;space;L/R}&amp;space;=&amp;space;\frac{0.008}{30.008}&amp;space;=&amp;space;0.00027&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Pipelining&lt;/strong&gt;: The many in-transit sender-to-receiver packets can be visualized as filling a pipeline&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The consequences for reliable data transfer protocols:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The range of sequence numbers must be increased, since each in-transit packet must have a unique sequence number and 
-there may be multiple, in-transmit, unacknowledged packets.&lt;/li&gt;
-  &lt;li&gt;The sender and receiver sides of the protocols may have to buffer more than one packet. Minimally, the sender will
-have to buffer packets that have been transmitted but not yet acknowledged. Buffering of correctly received packets may 
-also be needed at the receiver, as discussed below.&lt;/li&gt;
-  &lt;li&gt;The range of sequence numbers needed and the buffering requirements will depend on the manner in which a data transfer 
-protocol responds to lost, corrupted, and overly delayed packets. Two basic approaches toward pipelined error recovery 
-can be identified: &lt;strong&gt;Go-Back-N&lt;/strong&gt; and &lt;strong&gt;selective repeat&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-go-back-n-gbn&quot;&gt;3️⃣ Go-Back-N (GBN)&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Go-Back-N (GBN) protocol&lt;/strong&gt;: The sender is allowed to transmit multiple packets without waiting for an 
-acknowledgement, but is constrained t have no more than some maximum allowable number, &lt;em&gt;N&lt;/em&gt;, of unacknowledged packets in
-the pipeline.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;0 ~ base-1&lt;/em&gt;: Packets that have already been transmitted and acknowledged.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;base ~ nextseqnum-1&lt;/em&gt;: Packets that have been sent but not yet acknowledged.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;nextseqnum ~ base+N-1&lt;/em&gt;: Packets that can be sent immediately, should data arrive from the upper layer.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Window size&lt;/strong&gt;: The range of permissible sequence numbers for transmitted but not yet acknowledged packets.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Sliding-window protocol&lt;/strong&gt;: GBN (Go-Back-N) protocol.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The GBN sender must respond to three types of events:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Invocation from above&lt;/em&gt;. When &lt;em&gt;rdt_send()&lt;/em&gt; is called from above, the sender first checks to see if the window is full,
-that is, whether there are &lt;em&gt;N&lt;/em&gt; outstanding, unacknowledged packets. If the window is not full, a packet is created and 
-sent, and variables are appropriately updated. If the window is full, the sender simply returns the data back to the
-upper layer, an implicit indication that the window is full. The upper layer would presumably then have to try again 
-later. In a real implementation, the sender would more likely have either buffered this data, or would have a 
-synchronization mechanism that would allow the upper layer to call &lt;em&gt;rdt_send()&lt;/em&gt; only when the window is not full.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Receipt of an ACK&lt;/em&gt;. In our GBN protocol, an acknowledgement for a packet with sequence number &lt;em&gt;n&lt;/em&gt; will be taken to be
-a &lt;strong&gt;cumulative acknowledgement&lt;/strong&gt;, indicating that all packets with a sequence number up to and including &lt;em&gt;n&lt;/em&gt; have been 
-correctly received at the receiver.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;A timeout event&lt;/em&gt;. The protocol’s name, “Go-Back-N”, is derived from the sender’s behavior in the presence of lost or 
-overly delayed packets. As in the stop-and-wait protocol, a timer will again be used to recover from lost data or 
-acknowledgement packets. If a timeout occurs, the sender resends all packets that have been previously sent but have not
-yet been acknowledged. If an ACK is received but there are still additional transmitted but not yet acknowledged packet.
-If an ACK is received but there are still additional transmitted but not yet acknowledged packets, the timer is 
-restarted. If there are no outstanding, unacknowledged packets, the timer is stopped.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4️⃣-selective-repeat-sr&quot;&gt;4️⃣ Selective Repeat (SR)&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;SR sender events and actions&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;em&gt;Data received from above&lt;/em&gt;. When data is received from above, the SR sender checks the next available sequence number
-for the packet. If the sequence number is within the sender’s window, the data is packetized and sent; otherwise it is 
-either buffered or returned to the upper layer for later transmission, as in GBN.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Timeout&lt;/em&gt;. Timers are again used to protect against lost packets. However, each packet must now have its own logical 
-timer, since only a single packet will be transmitted on timeout. A single hardware timer can be used to mimic the 
-operation of multiple logical timers.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;ACK received&lt;/em&gt;. If an ACK is received, the SR sender marks that packet as having been received, provided it is in the
-window. If the packet’s sequence number is equal to *send_Base, the window base is moved forward to the unacknowledged 
-packet with the smallest sequence number. If the window moves and there are untransmitted packets with sequence numbers 
-that now fall within the window, these packets are transmitted.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;SR receiver events and actions&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base, rcv_base+N-1) is correctly received&lt;/em&gt;. In this case, the received packet 
-falls within the receiver’s window and a selective ACK packet is returned to the sender. if the packet was not 
-previously received, it is buffered. If this packet has a sequence number equal to the base of the received window, then
-this packet, and any previously buffered and consecutively numbered (beginning with rcv_base) packets are delivered to 
-the upper layer. The receive window is then moved forward by the number of packets delivered to the upper layer. When a 
-packet with a sequence number of rcv_base=2 is received, it and packets 3, 4, and 5 can be delivered to the upper layer.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Packet with sequence number in (rcv_base-N, rcv_base-1) is correctly received&lt;/em&gt;. In this case, an ACK must be 
-generated, even though this is a packet that the receiver has previously acknowledged.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Otherwise&lt;/em&gt;. Ignore the packet.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html"></summary></entry><entry><title type="html">Computer Network - Connectionless Transport UDP</title><link href="/Computer_Network-Connectionless_Transport_UDP" rel="alternate" type="text/html" title="Computer Network - Connectionless Transport UDP" /><published>2022-10-31T19:30:00+09:00</published><updated>2022-10-31T19:30:00+09:00</updated><id>/Computer_Network-Connectionless_Transport_UDP</id><content type="html" xml:base="/Computer_Network-Connectionless_Transport_UDP">&lt;h4 id=&quot;why-choose-udp-over-tcp&quot;&gt;Why choose UDP over TCP&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Finer application-level control over what data is sent, and when.&lt;/strong&gt; Under UDP, as soon as an application process 
-passes data to UDP, UDP will package the data inside a UDP segment and immediately pass the segment to the network 
-layer. TCP, however, has a congestion-control mechanism that throttles the transport-layer TCP sender when one or more 
-links between the source and destination hosts become excessively congested.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;No connection establishment.&lt;/strong&gt; TCP uses a three-way handshake before it starts to transfer data. UDP just blasts 
-away without any formal preliminaries. Thus, UDP does not introduce any delay to establish a connection.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;No connection state.&lt;/strong&gt; TCP maintains connection state in the end systems. This connection state includes receive and
-send buffers, congestion-control parameters, and sequence and acknowledgment number parameters. UDP, however, does not 
-maintain connection state and does not track any of these parameters. For this reason, a server devoted to a particular 
-application can typically support many more active clients when the application runs over UDP rather than TCP.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Small packet header overhead.&lt;/strong&gt; The TCP segment has 20 bytes of header overhead in every segment, whereas UDP has
-only 8 bytes of overhead.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;1️⃣-udp-segment-structure&quot;&gt;1️⃣ UDP Segment Structure&lt;/h2&gt;
-&lt;p&gt;The application data occupies the data field of the UDP segment. For example, for DNS, the data field contains either a 
-query message or a response message. For a streaming audio application, audio samples fills the field. The UDP header 
-has only four fields, each consisting of two bytes.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/10/31/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-udp-checksum&quot;&gt;2️⃣ UDP Checksum&lt;/h2&gt;
-&lt;p&gt;The UDP checksum provides for error detection. That is, the checksum is used to determine whether bits within the UDP 
-segment have been altered as it moved from source to destination. UDP at the sender side performs the 1s complement of 
-the sum of all the 16-bit words in the segment, with any overflow encountered during the sum being wrapped around.&lt;/p&gt;
-
-&lt;h4 id=&quot;three-16-bit-words-example&quot;&gt;Three 16-bit Words Example&lt;/h4&gt;
-
-&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
-0101 0101 0101 0101&lt;br /&gt;
-1000 1111 0000 1100&lt;/p&gt;
-
-&lt;p&gt;The sum of first two of these 16-bit words is&lt;/p&gt;
-
-&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
-0101 0101 0101 0101&lt;br /&gt;
-===================&lt;br /&gt;
-1011 1011 1011 0101&lt;/p&gt;
-
-&lt;p&gt;Adding the third word to the above sum gives&lt;/p&gt;
-
-&lt;p&gt;0110 0110 0110 0000&lt;br /&gt;
-1000 1111 0000 1100&lt;br /&gt;
-===================&lt;br /&gt;
-0100 1010 1100 0010&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;end-end principle&lt;/strong&gt;: States that since certain functionality (error detection, in this case) must be implemented on 
-an end-end basis: “functions placed at the lower levels may be redundant or of little value when compared to the cost of providing them at the higher level”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Why choose UDP over TCP</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Roles vs. Groups in Networks</summary></entry></feed>

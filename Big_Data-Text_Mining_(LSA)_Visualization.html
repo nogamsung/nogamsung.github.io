@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Big Data - Text Mining (LSA) Visualization</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Web Font Setting -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt&display=swap">
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>
+        .hljs {
+            background: none;
+        }
+    </style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Computer Science & Engineering" />
+    <link rel="shortcut icon" href="/assets/built/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/Big_Data-Text_Mining_(LSA)_Visualization" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="nogamsung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Big Data - Text Mining (LSA) Visualization" />
+    <meta property="og:description" content="VS model in practice Document &amp; query are represented by term vectors Terms are not necessarily orthogonal to each other Synonymy: car vs. automobile Polysemy: fly (action vs. insects) Choosing basis for VS model A concept space is preferred Semantic gap will be bridged How to build such as space" />
+    <meta property="og:url" content="/Big_Data-Text_Mining_(LSA)_Visualization" />
+    <meta property="og:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2022-11-28T00:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-11-28T00:00:00+09:00" />
+    <meta property="article:tag" content="Comsci" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Big Data - Text Mining (LSA) Visualization" />
+    <meta name="twitter:description" content="VS model in practice Document &amp; query are represented by term vectors Terms are not necessarily orthogonal to each other Synonymy: car vs. automobile Polysemy: fly (action vs. insects) Choosing basis for VS model A concept space is preferred Semantic gap will be bridged How to build such as space" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/built/images/big-data-logo.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="nogamsung" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Comsci" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "nogamsung",
+        "logo": "/"
+    },
+    "url": "/Big_Data-Text_Mining_(LSA)_Visualization",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/built/images/big-data-logo.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/Big_Data-Text_Mining_(LSA)_Visualization"
+    },
+    "description": "VS model in practice Document &amp; query are represented by term vectors Terms are not necessarily orthogonal to each other Synonymy: car vs. automobile Polysemy: fly (action vs. insects) Choosing basis for VS model A concept space is preferred Semantic gap will be bridged How to build such as space"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Big Data - Text Mining (LSA) Visualization" href="/feed.xml" />
+
+
+</head>
+
+<body
+    class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+        <a class="site-nav-logo" href="/">nogamsung</a>
+        
+        
+        
+        <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-frontend" role="menuitem"><a href="/tag/frontend/">Frontend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/backend/">Backend</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/devops/">DevOps</a></li>
+    <li class="nav-ai" role="menuitem"><a href="/tag/ai/">AI</a></li>
+    <li class="nav-backend" role="menuitem"><a href="/tag/comsci/">ComSci</a></li>
+    <li class="nav-etc" role="menuitem"><a href="/tag/etc/">ETC</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+        <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-comsci post tag-comsci ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="28 November 2022">28 November 2022</time>
+                    
+                    <span class="date-divider">/</span>
+                    
+                    
+                    <a href='/tag/comsci/'>COMSCI</a>
+                    
+                    
+                    
+                </section>
+                <h1 class="post-full-title">Big Data - Text Mining (LSA) Visualization</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h3 id="vs-model-in-practice">VS model in practice</h3>
+<ul>
+  <li>Document &amp; query are represented by term vectors
+    <ul>
+      <li>Terms are not necessarily orthogonal to each other
+        <ul>
+          <li>Synonymy: car vs. automobile</li>
+          <li>Polysemy: fly (action vs. insects)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/1.jpeg" alt="" /></p>
+
+<h3 id="choosing-basis-for-vs-model">Choosing basis for VS model</h3>
+<ul>
+  <li>A concept space is preferred
+    <ul>
+      <li>Semantic gap will be bridged</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/2.jpeg" alt="" /></p>
+
+<h3 id="how-to-build-such-as-space">How to build such as space</h3>
+<ul>
+  <li>Automatic term expansion
+    <ul>
+      <li>Construction of thesaurus
+        <ul>
+          <li>WordNet</li>
+        </ul>
+      </li>
+      <li>Clustering of words</li>
+    </ul>
+  </li>
+  <li>Word sense disambiguation
+    <ul>
+      <li>Dictionary-based
+        <ul>
+          <li>Relation between a pair of words should be similar as in text and dictionary’s description</li>
+        </ul>
+      </li>
+      <li>Explore word usage context</li>
+    </ul>
+  </li>
+  <li>Latent Semantic Analysis
+    <ul>
+      <li>Assumption: there is some underlying latent semantic structure in the data that is partially obscured by the 
+randomness</li>
+      <li>It means: the observed term-document association data is contaminated by random noise</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="solution">Solution</h4>
+<ul>
+  <li>Low rank matrix approximation</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/3.jpeg" alt="" /></p>
+
+<h3 id="latent-semantic-analysis-lsa">Latent Semantic Analysis (LSA)</h3>
+<ul>
+  <li>Low rank approximation of term-document matrix C<sub>MxN</sub>
+    <ul>
+      <li>Goal: remove noise in the observed term-document association data</li>
+      <li>Solution: find a matrix with rank <em>k</em> which is closest to the original matrix in terms of Frobenius norm</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/4.jpeg" alt="" /></p>
+
+<h3 id="basic-concepts-in-linear-algebra">Basic concepts in linear algebra</h3>
+<ul>
+  <li>Symmetric matrix
+    <ul>
+      <li>C = C<sup>T</sup></li>
+    </ul>
+  </li>
+  <li>Rank of a matrix
+    <ul>
+      <li>The number of linearly independent rows (columns) in a matrix C<sub>MxN</sub></li>
+      <li>rank(C<sub>MxN</sub>) &lt;= min (M,N)</li>
+    </ul>
+  </li>
+  <li>Eigen system
+    <ul>
+      <li>For a square matrix C<sub>MxM</sub></li>
+      <li>If Cx = λx, x is called the right eigenvector of C and λ is the corresponding eigenvalue</li>
+    </ul>
+  </li>
+  <li>For a symmetric full-rank matrix C<sub>MxM</sub>
+    <ul>
+      <li>We have its eigen-decomposition as
+        <ul>
+          <li>C = QΛQ<sup>T&lt;/sub&gt;</sup></li>
+          <li>where the columns of Q are the orthogonal and normalized eigenvectors of C are Λ is a diagonal matrix whose 
+entries are the eigenvalues of C</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Singular value decomposition (SVD)
+    <ul>
+      <li>For matrix C<sub>MxN</sub> with rank r, we have
+        <ul>
+          <li>C = U∑V<sup>T</sup></li>
+          <li>where U<sub>Mxr</sub> and V<sub>Nxr</sub> are orthogonal matrices, and ∑ is a r x r diagonal matrix, with 
+∑<sub>ii</sub> = √(λ<sub>i</sub>) and λ<sub>1</sub> … λ<sub>r</sub> are the eigenvalues of CC<sup>T</sup></li>
+        </ul>
+      </li>
+      <li>We define C<sup>k</sup><sub>MxN</sub> = U<sub>Mxk</sub>∑<sub>kxk</sub>V<sup>T</sup><sub>Nxk</sub>
+        <ul>
+          <li>where we place ∑<sub>ii</sub> in a descending order and set ∑<sub>ii</sub> = ∑<sub>ii</sub> = √λ<sub>i</sub> for
+i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/5.jpeg" alt="" /></p>
+
+<h3 id="latent-semantic-analysis-lsa-1">Latent Semantic Analysis (LSA)</h3>
+<ul>
+  <li>Solve LSA by SVD</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/6.jpeg" alt="" /></p>
+
+<ul>
+  <li>Procedure of LSA
+    <ol>
+      <li>Perform SVD on document-term adjacency matrix</li>
+      <li>Construct C<sup>k</sup><sub>MxN</sub> by only keeping the largest k singular values in ∑ non-zero</li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="what-are-those-dimensions-in-lsa">What are those dimensions in LSA</h3>
+<ul>
+  <li>Principal component analysis (PCA)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/7.jpeg" alt="" /></p>
+
+<h3 id="lsa-beyond-text">LSA beyond text</h3>
+<ul>
+  <li>Collaborative filtering
+    <ul>
+      <li>User item matrix stores for each user the rating for the item</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/8.jpeg" alt="" /></p>
+
+<h2 id="data-visualization-fundamentals-for-visualization">Data Visualization: Fundamentals for visualization</h2>
+<h3 id="overview">Overview</h3>
+<ul>
+  <li>Definition: To represent the data (or result) for better understanding
+    <ul>
+      <li>How can I represent what my data (or results) shows?</li>
+    </ul>
+  </li>
+  <li>Why visualize?
+    <ul>
+      <li>Giving better, clear understanding to audiences</li>
+      <li>Can get perceptual motivations</li>
+      <li>…</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="principles-on-visualization">Principles on Visualization</h3>
+<ul>
+  <li>Be true to your research
+    <ul>
+      <li>Design your display to illustrate a particular point</li>
+    </ul>
+  </li>
+  <li>Maximize information, minimize ink
+    <ul>
+      <li>Use the simplest possible representation for the bits you want to convey</li>
+    </ul>
+  </li>
+  <li>Organize hierarchically
+    <ul>
+      <li>What should a viewer see first? what if they look deeper?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="data-types--aesthetics">Data Types &amp; Aesthetics</h3>
+<ul>
+  <li>Data Types
+    <ul>
+      <li>Norminal - values from an unordered set, e.g., color, profession</li>
+      <li>Ordinal - values from an ordered set, e.g., military or academic rank</li>
+      <li>Numeric - real numbers, e.g., integer or real numbers</li>
+    </ul>
+  </li>
+  <li>Aesthetics
+    <ul>
+      <li>Shape</li>
+      <li>Color</li>
+      <li>Size</li>
+      <li>Position (Axis)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/9.jpeg" alt="" /></p>
+
+<ul>
+  <li>Visualization: Connect data type(s) into Aesthetics</li>
+</ul>
+
+<h3 id="how-to-choose-colors">How to Choose Colors?</h3>
+<ul>
+  <li>“Qualitative”, “Sequential”, “Diverging” colors</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/10.jpeg" alt="" /></p>
+
+<h4 id="note-️">Note ❗️</h4>
+
+<p><img src="assets/screenshots/2022/11/27/11.jpeg" alt="" /></p>
+
+<p><strong>Good Example</strong></p>
+
+<p><img src="assets/screenshots/2022/11/27/12.jpeg" alt="" /></p>
+
+<h3 id="position-axis">Position (Axis)</h3>
+<ul>
+  <li>Cartesian Coordinate system
+    <ul>
+      <li>Linear vs. Log-scale</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/13.jpeg" alt="" /></p>
+
+<ul>
+  <li>Polar Coordinate system
+    <ul>
+      <li>Good to see changes of values for continuous data</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/14.jpeg" alt="" /></p>
+
+<h2 id="data-visualization-basic-plots">Data Visualization: Basic plots</h2>
+<h3 id="popular-plots-for-visualization">Popular Plots for Visualization</h3>
+
+<p><img src="assets/screenshots/2022/11/27/15.jpeg" alt="" /></p>
+
+<h3 id="histograms">Histograms</h3>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></li>
+  <li>Introduction to Big Data Lecture by <a href="https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;siteId=isis&amp;dum=dum&amp;command=empDetail&amp;empNum=20201168&amp;empSearchTab=01&amp;deptCode=&amp;siteId=isis" target="_blank">Daejin Choi</a> in <a href="https://www.inu.ac.kr/" target="_blank">Incheon National University</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            <!---
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to nogamsung</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                
+                <section class="author-card">
+                    
+                    <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg"
+                        alt="gs97ahn" />
+                    
+                    <section class="author-card-content">
+                        <h4 class="author-card-name"><a href="/author/gs97ahn">nogamsung</a></h4>
+                        
+                        <p><a href="gs97ahn.github.io/about/">Geomseong Ahn</a></p>
+                        
+                    </section>
+                </section>
+                <div class="post-full-footer-right">
+                    <a class="author-card-button" href="/author/gs97ahn">Read More</a>
+                </div>
+                
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        var this_page_url = '/Big_Data-Text_Mining_(LSA)_Visualization';
+                        var this_page_identifier = '/Big_Data-Text_Mining_(LSA)_Visualization';
+                        var this_page_title = 'Big Data - Text Mining (LSA) Visualization';
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://geomseongahn.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+            
+            
+            
+            
+            <article class="read-next-card" 
+                style="background-image: url(/assets/built/images/blog-cover.jpg)" >
+                <header class="read-next-card-header">
+                    <small class="read-next-card-header-sitetitle">&mdash; nogamsung &mdash;</small>
+                    
+                    <h3 class="read-next-card-header-title"><a href="/tag/comsci/">Comsci</a></h3>
+                    
+                </header>
+                <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                <div class="read-next-card-content">
+                    <ul>
+                        
+                        
+                        
+                        
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Text_Mining">Big Data - Text Mining</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Computer_Network-TCP_Congestion_Control">Computer Network - TCP Congestion Control</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                         <li><a href="/Big_Data-Time_Series">Big Data - Time Series</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                    </ul>
+                </div>
+                <footer class="read-next-card-footer">
+                    <a href="/tag/comsci/">
+                        
+                        See all 43 posts →
+                        
+                    </a>
+                </footer>
+            </article>
+            
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Big_Data-Text_Mining">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Big_Data-Text_Mining">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Big Data - Text Mining</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      6 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+            <span>nogamsung</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Big Data - Text Mining (LSA) Visualization</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw"
+            href="https://twitter.com/share?text=Big+Data+-+Text+Mining+%28LSA%29+Visualization&amp;url=https://gs97ahn.github.io/Big_Data-Text_Mining_(LSA)_Visualization"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gs97ahn.github.io/Big_Data-Text_Mining_(LSA)_Visualization"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">nogamsung</a> &copy; 2022</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a>
+                </section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search nogamsung</h1>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm" />
+    <input class="location" type="hidden" name="location" />
+    <input class="referrer" type="hidden" name="referrer" />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" id="searchtext" type="text" name="searchtext"
+            placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if (event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function () {
+            $('pre code').each(function (i, block) {
+                hljs.highlightBlock(block);
+            });
+        });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-227528384-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+
+</html>

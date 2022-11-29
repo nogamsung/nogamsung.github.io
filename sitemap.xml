@@ -4,6 +4,22 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Big_Data-Text_Mining_(LSA)_Visualization.html</loc>
+        
+        <lastmod>2022-11-28T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Big_Data-Text_Mining.html</loc>
         
         <lastmod>2022-11-21T22:30:00+09:00</lastmod>
@@ -20,9 +36,41 @@
     </url>
     
     <url>
+        <loc>/Computer_Network-TCP_Congestion_Control.html</loc>
+        
+        <lastmod>2022-11-21T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Big_Data-Time_Series.html</loc>
         
         <lastmod>2022-11-21T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Principles_of_Congestion_Control.html</loc>
+        
+        <lastmod>2022-11-18T00:00:00+09:00</lastmod>
         
 
         

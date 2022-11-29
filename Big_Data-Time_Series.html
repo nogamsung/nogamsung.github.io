@@ -380,6 +380,224 @@ over longer period of time.</li>
 
 <h3 id="ses-as-component-form">SES as Component Form</h3>
 
+<p><img src="assets/screenshots/2022/11/20/8.jpeg" alt="" /></p>
+
+<h3 id="adding-trend-holts-linear-trend">Adding Trend: Holt’s Linear Trend</h3>
+
+<p><img src="assets/screenshots/2022/11/20/9.jpeg" alt="" /></p>
+
+<ul>
+  <li>Holt’s method with additive errors
+    <ul>
+      <li>Assumption: ε<sub>t</sub> = y<sub>t</sub> - l<sub>t-1</sub> - b<sub>t-1</sub> ~ NID(0, σ<sup>2</sup>) &lt;- Normally 
+Independent Distribution</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/10.jpeg" alt="" /></p>
+
+<h3 id="damped-trend">Damped Trend</h3>
+<ul>
+  <li>Good to forecast time-series values in a long range
+    <ul>
+      <li>H) Trend less affect to the values in distant future</li>
+    </ul>
+  </li>
+  <li>Equation</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/11.jpeg" alt="" /></p>
+
+<ul>
+  <li>Damping parameter - &lt; Φ &lt; 1</li>
+  <li>If Φ = 1, identical to Holt’s linear trend</li>
+  <li>As h -&gt; ∞</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://latex.codecogs.com/svg.image?\widehat{y}_{T&amp;plus;h</td>
+      <td>T}\to&amp;space;l_T&amp;plus;\phi&amp;space;b_T/(1-\phi))</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Short-run forecasts trended, long run forecasts constant</li>
+</ul>
+
+<h3 id="adding-seasonality-holt-winters-method">Adding Seasonality: Holt-Winters Method</h3>
+<ul>
+  <li>Equation</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/12.jpeg" alt="" /></p>
+
+<ul>
+  <li>Seasonal component is usually expressed as</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?s_t=\gamma^*(y_t-l_t)&plus;(1-\gamma^*)s_{t-m}" alt="" /></p>
+
+<ul>
+  <li>Substitute in for l<sub>t</sub>:</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?s_t=\gamma^*(1-a)(y_t-l_{t-1}-b_{t-1})&plus;[1-\gamma^*(1-\alpha)]s_{t-m}" alt="" /></p>
+
+<ul>
+  <li>Set γ = γ<sup>*</sup>(1 - α), then 0 &lt;= γ &lt;= 1 - α</li>
+</ul>
+
+<h2 id="arima">ARIMA</h2>
+<h3 id="quick-glance-at-arima">Quick Glance At ARIMA</h3>
+
+<p>AR: autoregressive (lagged observation as inputs)</p>
+
+<p>I: integrated (differencing to make series stationary)</p>
+
+<p>MA: moving average (lagged errors as inputs)</p>
+
+<p>An ARIMA model is rarely interpretable in terms of visible data structures like trend and seasonality. But it can
+capture a huge range of time series patterns.</p>
+
+<h3 id="stationary">Stationary</h3>
+<ul>
+  <li>Definition
+    <ul>
+      <li>If {y_t} is a stationary time series, then for all s, the distribution of (y<sub>t</sub>,…,y<sub>t+s</sub>) does
+<strong>NOT</strong> depend on t</li>
+    </ul>
+  </li>
+  <li>Characteristics
+    <ul>
+      <li>Roughly horizontal</li>
+      <li>Constant variance</li>
+      <li>No patterns predictable in the long-term</li>
+    </ul>
+  </li>
+  <li>For ARIMA modeling, we need to stabilize the mean!
+    <ul>
+      <li>By Differencing</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/13.jpeg" alt="" /></p>
+
+<h3 id="differencing">Differencing</h3>
+<ul>
+  <li>Differencing helps to stabilize the mean</li>
+  <li>(First-order) differencing
+    <ul>
+      <li>The “differenced series” is the change between each observation in the original series: y<sub>t</sub>’ = y<sub>t
+</sub> - y<sub>t-1</sub></li>
+      <li>The differenced series will have only T - 1 values since it is not possible to calculate a difference y<sub>1</sub>’
+for the first observation</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="other-differencing">Other Differencing?</h3>
+<ul>
+  <li>Second-order differencing
+    <ul>
+      <li>In practice, it is almost never necessary to go beyond second-order differences</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/14.jpeg" alt="" /></p>
+
+<ul>
+  <li>Seasonal differencing</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/15.jpeg" alt="" /></p>
+
+<h3 id="autoregressive-ar-model">AutoRegressive (AR) Model</h3>
+<ul>
+  <li>Equation (p-th order)</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?y_t=c&plus;\phi_1y_{t-1}&plus;\phi_2y_{t-2}&plus;\cdots&space;&plus;\phi_py_{t-p}&plus;\epsilon_t" alt="" /></p>
+
+<p>where ε<sub>t</sub> is white noise.</p>
+
+<ul>
+  <li>Same as the multiple regression with lagged values of y<sub>t</sub> as predictors</li>
+  <li>Only for stationary data with constraints on parameters</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/16.jpeg" alt="" /></p>
+
+<h3 id="moving-average-ma">Moving Average (MA)</h3>
+<ul>
+  <li>Equation (q-th order)</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?y_t=c&plus;\epsilon_t&plus;\theta_1\epsilon_{t-1}&plus;\theta_2\epsilon_{t-2}&plus;\cdots&space;&plus;\theta_q\epsilon_{t-q}" alt="" /></p>
+
+<p>where ε<sub>t</sub> is white noise.</p>
+
+<ul>
+  <li>Same as multiple regression with past errors as predictors (not moving average smoothing)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/17.jpeg" alt="" /></p>
+
+<h3 id="arp--ma">AR(p) = MA(∞)</h3>
+
+<p><img src="assets/screenshots/2022/11/20/18.jpeg" alt="" /></p>
+
+<ul>
+  <li>How about MA(q) -&gt; AR(∞)?</li>
+</ul>
+
+<h3 id="invertible-property">Invertible Property</h3>
+<ul>
+  <li>MA(q) -&gt; AR(∞) when the parameters of MA are restricted (called invertible property)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/19.jpeg" alt="" /></p>
+
+<h3 id="ar--ma--differencing--arima">AR + MA + Differencing = ARIMA</h3>
+<ul>
+  <li>Equation: ARIMA(p, d, q)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/20.jpeg" alt="" /></p>
+
+<ul>
+  <li>White noise: ARIMA(0, 0, 0)</li>
+  <li>AR(p): ARIMA(p, 0, 0)</li>
+  <li>MA(q): ARIMA(0, q, 0)</li>
+  <li>How to choose parameters? -&gt; MLE</li>
+</ul>
+
+<h3 id="seasonal-arima">Seasonal ARIMA</h3>
+
+<p><img src="assets/screenshots/2022/11/20/21.jpeg" alt="" /></p>
+
+<ul>
+  <li>Example: SARIMA(1, 1, 1)(1, 1, 1)<sub>4</sub></li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/22.jpeg" alt="" /></p>
+
+<h3 id="arima-vs-ets">ARIMA vs. ETS</h3>
+<ul>
+  <li>Myth: ARIMA models are more general than exponential smoothing</li>
+  <li>Linear exponential smoothing models are all special cases of ARIMA models</li>
+  <li>Non-linear exponential smoothing models have NO equivalent ARIMA counterparts</li>
+  <li>Many ARIMA models have NO exponential smoothing counterparts</li>
+  <li>ETS models all non-stationary</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/20/23.jpeg" alt="" /></p>
+
 <h2 id="reference">Reference</h2>
 <ul>
   <li><a href="http://www.mmds.org/" target="_blank">Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman</a></li>
@@ -495,6 +713,14 @@ over longer period of time.</li>
                         
                         
                         
+                         <li><a href="/Big_Data-Text_Mining_(LSA)_Visualization">Big Data - Text Mining (LSA) Visualization</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Big_Data-Text_Mining">Big Data - Text Mining</a></li>
                             
                             
@@ -502,21 +728,34 @@ over longer period of time.</li>
                             
                         
                         
-                            
-                            
                         
-                        
-                        
-                         <li><a href="/Intelligent_Information-Drawing_Word_Cloud">Intelligent Information Systems - Drawing Word Cloud</a></li>
+                         <li><a href="/Computer_Network-TCP_Congestion_Control">Computer Network - TCP Congestion Control</a></li>
                             
                             
                             
                             
                         
                         
-                        
-                         <li><a href="/Big_Data-Graph_Mining_(Applications)">Big Data - Graph Mining (Applications)</a></li>
                             
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -874,7 +1113,7 @@ over longer period of time.</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 40 posts →
+                        See all 43 posts →
                         
                     </a>
                 </footer>
@@ -888,12 +1127,12 @@ over longer period of time.</li>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Big_Data-Text_Mining">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)"></div>
+            <a class="post-card-image-link" href="/Computer_Network-TCP_Congestion_Control">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/computer-network-logo.jpeg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Big_Data-Text_Mining">
+            <a class="post-card-content-link" href="/Computer_Network-TCP_Congestion_Control">
                 <header class="post-card-header">
                     
                         
@@ -903,70 +1142,14 @@ over longer period of time.</li>
                         
                     
 
-                    <h2 class="post-card-title">Big Data - Text Mining</h2>
+                    <h2 class="post-card-title">Computer Network - TCP Congestion Control</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/gs97ahn/">nogamsung</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      7 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
+                        <p>1️⃣ Classic TCP Congestion Control
 
-            
-
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-            
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/Intelligent_Information-Drawing_Word_Cloud">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/intelligent-information-systems-logo.jpeg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Intelligent_Information-Drawing_Word_Cloud">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Comsci</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Intelligent Information Systems - Drawing Word Cloud</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Word Cloud
-
-  Word Cloud
-    
-      Size depends on frequency
-      Shows frequently used word visually
-    
-  
+  Congestion window: Denoted cwnd, imposes a constraint on the rate at which a TCP sender can send traffic into
+the network.
 
 
 </p>
@@ -987,7 +1170,65 @@ over longer period of time.</li>
                 <span class="reading-time">
                     
                     
-                      2 min read
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+            
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Computer_Network-Principles_of_Congestion_Control">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/computer-network-logo.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Computer_Network-Principles_of_Congestion_Control">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Comsci</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Computer Network - Principles of Congestion Control</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>1️⃣ The Causes and the Costs of Congestion
+Scenario 1: Two Senders, a Router with Infinite Buffers
+
+  Per-connection throughput: Number of bytes per second at the receiver
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo.jpeg" alt="nogamsung" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/gs97ahn/">nogamsung</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
                     
                 </span>
             </footer>

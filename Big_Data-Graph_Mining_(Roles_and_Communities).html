@@ -391,6 +391,530 @@ nodes
 
 <h2 id="centrality-a-specific-role-of-nodes-in-the-network">Centrality: A Specific Role of Nodes in the Network</h2>
 <h3 id="centrality-or-prestige">Centrality (or Prestige)</h3>
+<ul>
+  <li>Some nodes are more important than others</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/13.jpeg" alt="" /></p>
+
+<ul>
+  <li>“Important” nodes?
+    <ul>
+      <li>Can be differently identified depending on the context</li>
+      <li>Exchange, spread of information, brokerage opportunities, etc.</li>
+    </ul>
+  </li>
+  <li>Centrality measures can quantify the important nodes from various perspectives</li>
+</ul>
+
+<h3 id="node-centrality">Node Centrality</h3>
+<ul>
+  <li>We can identify hub nodes from various perspectives
+    <ul>
+      <li>Degree centrality: Node with many neighbors</li>
+      <li>Closeness centrality: Close (higher weights or lower costs) to other nodes</li>
+      <li>Betweenness centrality: Nodes which connect to more “sub-networks”</li>
+      <li>Eigenvector cnetrality (similar to PageRank Centrality): Nodes which connects to larger network</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="degree-centrality">Degree Centrality</h3>
+<ul>
+  <li>The node with the most connections is most important
+    <ul>
+      <li>E.g., no. supporters, audience size, no. trading partners, no. direct reports</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/14.jpeg" alt="" /></p>
+
+<h3 id="closeness-centrality">Closeness Centrality</h3>
+<ul>
+  <li>The node in the middle of the action is most central
+    <ul>
+      <li>Node with highest closeness centrality has the <strong>shortest distance to the other nodes</strong>, on average</li>
+      <li>e.g., access to information opinion formation, spread of disease, adoption of new technology</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/15.jpeg" alt="" /></p>
+
+<h3 id="between-centrality">Between Centrality</h3>
+<ul>
+  <li>The node you have to go through is most central
+    <ul>
+      <li>e.g., brokering between groups, control of information, innovation, collaboration</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/16.jpeg" alt="" /></p>
+
+<h4 id="examples">Examples</h4>
+
+<p><img src="https://latex.codecogs.com/svg.image?C_B(v_i)=\frac{\sum_{j&lt;k}\frac{g_{jk}(v_i)}{g_{jk}}}{(N-1)(N-2)/2}" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/11/07/17.jpeg" alt="" /></p>
+
+<h3 id="eigenvector-centrality">Eigenvector Centrality</h3>
+<ul>
+  <li>The node that <strong>connects to the important nodes is important</strong>
+    <ul>
+      <li>e.g., a twitter account followed by someone with a large audience, a entrepreneur who knows Jack Dorsey, a senator’s
+barer</li>
+    </ul>
+  </li>
+  <li>A node’s eigenvector centrality is proportional to the centrality of it’s neighbors</li>
+  <li>A node can have higher eigenvector centrality because:
+    <ul>
+      <li>They have more connections</li>
+      <li>They have important connections</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="comparing-three-centralises">Comparing Three Centralises</h3>
+
+<p><img src="assets/screenshots/2022/11/07/18.jpeg" alt="" /></p>
+
+<p><strong>The three measures are clearly related, because they each get at something slightly different!</strong></p>
+
+<h3 id="cf-network-centralization">CF: Network Centralization</h3>
+<ul>
+  <li>A measure of how centrality is distributed in the network</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/19.jpeg" alt="" /></p>
+
+<h3 id="network-centralization">Network Centralization</h3>
+<ul>
+  <li>Centralization tells us about “how influence is spread across the network”
+    <ul>
+      <li>e.g., Financial trading networks</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/20.jpeg" alt="" /></p>
+
+<h3 id="prestige">Prestige</h3>
+<ul>
+  <li>Centrality in directed network is called “prestige”</li>
+  <li>This is sometimes a fine name:
+    <ul>
+      <li>admiration or trust</li>
+      <li>influence</li>
+      <li>friendship</li>
+      <li>trade</li>
+    </ul>
+  </li>
+  <li>But depending on the type of link, it might be misleading:
+    <ul>
+      <li>money lending</li>
+      <li>giving advice</li>
+      <li>hatred or distrust</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tip-️">Tip ❗️</h4>
+<p><strong>Context matters!</strong> Always consider the interpretation of a measure in a particular context</p>
+
+<h3 id="computing-a-fes-types-of-prestige">Computing A Fes Types of Prestige</h3>
+<ul>
+  <li>In-degree
+    <ul>
+      <li>A website that is linked to often has high prestige</li>
+      <li>A person who is frequently nominated for a reward has high prestige</li>
+      <li>How about out-degree?</li>
+    </ul>
+  </li>
+  <li>Closeness analogue: proximity
+    <ul>
+      <li>Uses the shortest directed path length: directed geodesic</li>
+    </ul>
+  </li>
+  <li>Directed betweeness
+    <ul>
+      <li>Almost exactly the same as undirected betweenness, but with directed geodesics and normalized in a directed way</li>
+    </ul>
+  </li>
+  <li>Influence range
+    <ul>
+      <li>The influence range is what fraction of the nodes in the network can reach you via directed paths</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="community-analysis-motivation">Community Analysis: Motivation</h2>
+<h3 id="roles-vs-groups-in-networks-2">Roles vs. Groups in Networks</h3>
+
+<p><img src="assets/screenshots/2022/11/07/21.jpeg" alt="" /></p>
+
+<h3 id="networks--communities">Networks &amp; Communities</h3>
+<ul>
+  <li>We often think of networks “looking” like this:</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/22.jpeg" alt="" /></p>
+
+<ul>
+  <li>What led to such a conceptual picture?</li>
+</ul>
+
+<h3 id="granovetters-theory">Granovetter’s Theory</h3>
+<ul>
+  <li>Granovetter makes a connection between the social and structural role of an edge</li>
+  <li>First point: <strong>Structure</strong>
+    <ul>
+      <li>Structurally embedded edges are also socially strong</li>
+      <li>Long-range edges spanning different parts of the network are socially weak</li>
+    </ul>
+  </li>
+  <li>Second point: <strong>Information</strong>
+    <ul>
+      <li>Long-range edges allow you to gather information from different parts of the network and get a job</li>
+      <li>Structurally embedded edges are heavily redundant in terms of information access</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/23.jpeg" alt="" /></p>
+
+<h3 id="edge-strength-in-real-data">Edge Strength in Real Data</h3>
+<ul>
+  <li>For many years Granovetter’s theory was not tested</li>
+  <li>But today we have large who-talks-to-whom graphs:
+    <ul>
+      <li>Email, Messenger, Cell phones, Facebook</li>
+    </ul>
+  </li>
+  <li>Onnela et al. 2007:
+    <ul>
+      <li>Cell-phone network of 20% of EU country’s population</li>
+      <li>Edge weights: no. phone calls</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="edge-overlap">Edge Overlap</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>![](https://latex.codecogs.com/svg.image?O_{ij}=\frac{</td>
+      <td>(Ni\cap&amp;space;Nj)/(i,j)</td>
+      <td>}{</td>
+      <td>(Ni\cup&amp;space;Nj)/(i,j)</td>
+      <td>})</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>N(<em>i</em>) … the set of neighbors of node <em>i</em></p>
+
+<p><img src="assets/screenshots/2022/11/07/24.jpeg" alt="" /></p>
+
+<h4 id="note-️">Note ❗️</h4>
+<p>Overlap = 0 when an edge is a local bridge</p>
+
+<h3 id="real-network-real-edge-strengths">Real Network, Real Edge Strengths</h3>
+
+<p><img src="assets/screenshots/2022/11/07/25.jpeg" alt="" /></p>
+
+<ul>
+  <li>Real edge strengths in mobile call graph
+    <ul>
+      <li>Strong ties are more embedded (hav higher overlap)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="linked-removed-by-overlap">Linked Removed by Overlap</h3>
+
+<p><img src="assets/screenshots/2022/11/07/26.jpeg" alt="" /></p>
+
+<h3 id="conceptual-picture-of-networks">Conceptual Picture of Networks</h3>
+<ul>
+  <li>Granovetter’s theory leads to the following conceptual picture of networks</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/27.jpeg" alt="" /></p>
+
+<h3 id="lessons-from-granovetters--onnelas-work">Lessons from Granovetter’s &amp; Onnela’s Work</h3>
+<ul>
+  <li>In real-world, the shape of network (or graph) is NOT homogeneous!
+    <ul>
+      <li>Homogeneous: all nodes have equal no. edges</li>
+    </ul>
+  </li>
+  <li>Heterogeneity (opposite to homogeneity) means:
+    <ul>
+      <li>Some edges are skewed to a few nodes</li>
+      <li>Local clusters (= communities) exist</li>
+    </ul>
+  </li>
+</ul>
+
+<p>-&gt; It is valuable to analyze network community!</p>
+
+<h2 id="computing-communities-overview">Computing Communities: Overview</h2>
+<h3 id="network-communities">Network Communities</h3>
+<ul>
+  <li>Sets of nodes with lots of internal connections and few external ones (to the rest of the network).</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/28.jpeg" alt="" /></p>
+
+<h3 id="finding-network-communities">Finding Network Communities</h3>
+<ul>
+  <li>How do we automatically find such densely connected groups of nodes?</li>
+  <li>Ideally such automatically detected clusters would then correspond to real groups</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/29.jpeg" alt="" /></p>
+
+<h3 id="modularity-and-network-communities">Modularity and Network Communities</h3>
+<ul>
+  <li>Communities: sets of tightly connected nodes</li>
+  <li>Define: Modularity Q
+    <ul>
+      <li>A measure of how well a network is partitioned into communities</li>
+      <li>Given a partitioning of the network into groups disjoint s ∈ S:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/30.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/11/07/31.jpeg" alt="" /></p>
+
+<h3 id="null-network-configuration-model">Null Network Configuration Model</h3>
+<ul>
+  <li>Given real G on n nodes and m edges, construct rewired Network G’
+    <ul>
+      <li>Same degree distribution but uniformly random connections</li>
+      <li>Consider G’ as a multigraph</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/32.jpeg" alt="" /></p>
+
+<ul>
+  <li>The expected number of edges between nodes i and j of degrees k<sub>i</sub> and k<sub>j</sub> equals:
+    <ul>
+      <li>The expected number of edges in (multigraph) G’:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?k_i\cdot&space;\frac{k_j}{2m}=\frac{k_ik_j}{2m}" alt="" /></p>
+
+<p><img src="https://latex.codecogs.com/svg.image?=\frac{1}{2}\sum_{i\in&space;N}\sum_{j\in&space;N}\frac{k_ik_j}{2m}=\frac{1}{2}\cdot&space;\frac{1}{2m}\sum_{i\in&space;N}k_i(\sum_{j\in&space;N}k_j)=\frac{1}{4m}2m\cdot&space;2m=m" alt="" /></p>
+
+<h4 id="note-️-1">Note ❗️</h4>
+
+<p><img src="https://latex.codecogs.com/svg.image?\sum_{u\in&space;N}k_u=2m" alt="" /></p>
+
+<h3 id="modularity">Modularity</h3>
+<ul>
+  <li>Modularity of partitioning S of graph G:</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/33.jpeg" alt="" /></p>
+
+<ul>
+  <li>Modularity values take range [-1, 1]
+    <ul>
+      <li>It is positive if the number of edges within groups exceeds the expected number</li>
+      <li>Q greater than 0.3-0.7 means significant community structure</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?Q(G,S)=\frac{1}{2m}\sum_{s\in&space;S}\sum_{i\in&space;s}\sum{j\sum&space;s}(A_{ij}-\frac{k_ik_j}{2m})" alt="" /></p>
+
+<p>Equivalently modularity can be written as:</p>
+
+<p><img src="assets/screenshots/2022/11/07/34.jpeg" alt="" /></p>
+
+<p><strong>Idea: We can identify communities by maximizing modularity</strong></p>
+
+<h2 id="computing-communities-newman-method">Computing Communities: Newman Method</h2>
+<h3 id="newman-method-intuition">Newman Method: Intuition</h3>
+<ul>
+  <li>Considering Edge Betweenness!
+    <ul>
+      <li>No. shortest paths passing over the edges</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/35.jpeg" alt="" /></p>
+
+<p><img src="assets/screenshots/2022/11/07/36.jpeg" alt="" /></p>
+
+<h3 id="newman-method-an-overview">Newman Method: An overview</h3>
+<ul>
+  <li>Division hierarchical clustering based on notion of edge betweenness</li>
+  <li>Works on undirected unweighted networks</li>
+  <li>Steps:
+    <ol>
+      <li>Calculate betweenness of edges</li>
+      <li>Remove edges with highest betweenness</li>
+      <li>Connected components are communities</li>
+      <li>Give a hierarchical decomposition of the network</li>
+      <li>Repeat 1-5
+        <ul>
+          <li>Find the best clustering based on threshold of modularity</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="newman-method-illustration">Newman Method: Illustration</h3>
+
+<p><img src="assets/screenshots/2022/11/07/37.jpeg" alt="" /></p>
+
+<p>Need to re-compute betweenness at every step</p>
+
+<p><img src="assets/screenshots/2022/11/07/38.jpeg" alt="" /></p>
+
+<h3 id="how-to-compute-edge-betweenness">How to Compute Edge Betweenness?</h3>
+<ol>
+  <li>Starting from a randomly selected node (e.g., A) conduct breath first search (BFS)</li>
+</ol>
+
+<p><img src="assets/screenshots/2022/11/07/39.jpeg" alt="" /></p>
+
+<ol>
+  <li>Count the no. the shortest paths from A to all other nodes of the network</li>
+</ol>
+
+<p><img src="assets/screenshots/2022/11/07/40.jpeg" alt="" /></p>
+
+<ol>
+  <li>Compute betweenness by working up the tre from the lowest layers of the tree
+    <ul>
+      <li>If there are multiple paths, count them fractionally</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="assets/screenshots/2022/11/07/41.jpeg" alt="" /></p>
+
+<h3 id="results-hierarchical-network-decomposition">Results: Hierarchical network decomposition</h3>
+
+<p><img src="assets/screenshots/2022/11/07/42.jpeg" alt="" /></p>
+
+<h3 id="finally-deciding-clusters">Finally Deciding Clusters</h3>
+<ul>
+  <li>Compute modularity for each steps, then decide clusters with the highest modularity!</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/43.jpeg" alt="" /></p>
+
+<h3 id="newman-method-an-example-graph">Newman Method: An Example Graph</h3>
+
+<p><img src="assets/screenshots/2022/11/07/44.jpeg" alt="" /></p>
+
+<h2 id="computing-communities-louvain-method">Computing Communities: Louvain Method</h2>
+<h3 id="louvain-algorithm">Louvain Algorithm</h3>
+<ul>
+  <li>Greedy algorithm for community detection
+    <ul>
+      <li>O(n log n) run time</li>
+    </ul>
+  </li>
+  <li>Support weighted graphs</li>
+  <li>Provides hierarchical communities</li>
+  <li>Widely used to study large networks because:
+    <ul>
+      <li>Fast</li>
+      <li>Rapid convergence</li>
+      <li>High modularity output (i.e., “better communities”)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/45.jpeg" alt="" /></p>
+
+<h3 id="louvain-algorithm-at-high-level">Louvain Algorithm: At High Level</h3>
+<ul>
+  <li>Louvain algorithm greedily maximizes modularity</li>
+  <li>Every pass is made of 2 phases:
+    <ul>
+      <li>Phase 1: Modularity is optimized by allowing only local changes to node-communities memberships</li>
+      <li>Phase 2: The identified communities are aggregated into super-nodes to build a new network</li>
+      <li>Goto Phase 1</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/07/46.jpeg" alt="" /></p>
+
+<h3 id="louvain-algorithm-1st-phase-partitioning">Louvain Algorithm: 1st Phase (Partitioning)</h3>
+<ul>
+  <li>Put each node in a graph into a distinct community (one node per community)</li>
+  <li>For each node i, the algorithm performs two calculations:
+    <ul>
+      <li>Compute the modularity delta (∆Q) when putting node i into the community of some neighbor j</li>
+      <li>Move i to a community of node j that yields the largest gain in ∆Q</li>
+    </ul>
+  </li>
+  <li>Phase 1 runs until no movement yields a gain</li>
+</ul>
+
+<h4 id="note-️-2">Note ❗️</h4>
+
+<p>The first phase stops when a local maxima of modularity is attained, i.e., when no individual node move can improve the 
+modularity.</p>
+
+<p>The output of the algorithm <strong>depends on the order in which the nodes are considered</strong>. Research indicates that the
+ordering of the nodes does NOT have a significant influence on the overall modularity that is obtained.</p>
+
+<h3 id="louvain-algorithm-modularity-gain">Louvain Algorithm: Modularity Gain</h3>
+<ul>
+  <li>What is ∆Q if we have node i to community C?</li>
+</ul>
+
+<p><img src="https://latex.codecogs.com/svg.image?\bigtriangleup&space;Q(i\to&space;C)=[\frac{\sum_{in}&plus;k_{i,in}}{2m}-(\frac{\sum_{tot}&plus;k_i}{2m})^2]-[\frac{\sum_{in}}{2m}-(\frac{\sum_{tot}}{2m})^2-(\frac{k_i}{2m})^2]" alt="" /></p>
+
+<ul>
+  <li>where
+    <ul>
+      <li>∑<sub>in</sub> … sum of link weights between nodes in C</li>
+      <li>∑<sub>tot</sub> … sum of all link weights of nodes in C</li>
+      <li>k<sub>i,in</sub> … sum of alink weights between nodes i and C</li>
+      <li>k<sub>i</sub> … sum of all link weights (i.e., degree) of node i</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="more-detail">More Detail</h4>
+
+<p><img src="assets/screenshots/2022/11/07/47.jpeg" alt="" /></p>
+
+<h3 id="louvain-2nd-phase-reconstructing">Louvain: 2nd Phase (Reconstructing)</h3>
+<ul>
+  <li>The communities obtained in the first phase are contracted into super-nodes, and the network is created accordingly:
+    <ul>
+      <li>Super-nodes are connected if there is at least one edge between the nodes of the corresponding communities</li>
+      <li>The weight of the edge between the two super-nodes is the sum of the weights from all edges between their 
+corresponding communities</li>
+    </ul>
+  </li>
+  <li>Phase 1 is then run on the super-node network</li>
+</ul>
+
+<h3 id="louvain-algorithm-1">Louvain Algorithm</h3>
+
+<p><img src="assets/screenshots/2022/11/07/48.jpeg" alt="" /></p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -507,6 +1031,14 @@ nodes
                         
                         
                         
+                         <li><a href="/Big_Data-Text_Mining_(LSA)_Visualization">Big Data - Text Mining (LSA) Visualization</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Big_Data-Text_Mining">Big Data - Text Mining</a></li>
                             
                             
@@ -515,7 +1047,7 @@ nodes
                         
                         
                         
-                         <li><a href="/Big_Data-Time_Series">Big Data - Time Series</a></li>
+                         <li><a href="/Computer_Network-TCP_Congestion_Control">Computer Network - TCP Congestion Control</a></li>
                             
                             
                             
@@ -523,8 +1055,21 @@ nodes
                         
                         
                         
-                         <li><a href="/Intelligent_Information-Drawing_Word_Cloud">Intelligent Information Systems - Drawing Word Cloud</a></li>
+                        
                             
+                            
+                            
+                        
+                        
+                        
+                        
+                            
+                            
+                            
+                        
+                        
+                        
+                        
                             
                             
                             
@@ -886,7 +1431,7 @@ nodes
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 40 posts →
+                        See all 43 posts →
                         
                     </a>
                 </footer>

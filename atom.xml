@@ -8,6 +8,33 @@
     
       
       <item>
+        <title>Big Data - Text Mining (LSA) Visualization</title>
+        
+          <description>&lt;h3 id=&quot;vs-model-in-practice&quot;&gt;VS model in practice&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Document &amp;amp; query are represented by term vectors
+    &lt;ul&gt;
+      &lt;li&gt;Terms are not necessarily orthogonal to each other
+        &lt;ul&gt;
+          &lt;li&gt;Synonymy: car vs. automobile&lt;/li&gt;
+          &lt;li&gt;Polysemy: fly (action vs. insects)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 28 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Big_Data-Text_Mining_(LSA)_Visualization</link>
+        <guid isPermaLink="true">/Big_Data-Text_Mining_(LSA)_Visualization</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Big Data - Text Mining</title>
         
           <description>&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
@@ -29,6 +56,25 @@ unknown&lt;/strong&gt; information, or to answers for questions for which the an
     
       
       <item>
+        <title>Computer Network - TCP Congestion Control</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-classic-tcp-congestion-control&quot;&gt;1️⃣ Classic TCP Congestion Control&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Congestion window&lt;/strong&gt;: Denoted &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cwnd&lt;/code&gt;, imposes a constraint on the rate at which a TCP sender can send traffic into
+the network.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 21 Nov 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-TCP_Congestion_Control</link>
+        <guid isPermaLink="true">/Computer_Network-TCP_Congestion_Control</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Big Data - Time Series</title>
         
           <description>&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
@@ -40,6 +86,25 @@ unknown&lt;/strong&gt; information, or to answers for questions for which the an
         <link>
         /Big_Data-Time_Series</link>
         <guid isPermaLink="true">/Big_Data-Time_Series</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Principles of Congestion Control</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-the-causes-and-the-costs-of-congestion&quot;&gt;1️⃣ The Causes and the Costs of Congestion&lt;/h2&gt;
+&lt;h3 id=&quot;scenario-1-two-senders-a-router-with-infinite-buffers&quot;&gt;Scenario 1: Two Senders, a Router with Infinite Buffers&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Per-connection throughput&lt;/strong&gt;: Number of bytes per second at the receiver&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 18 Nov 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Principles_of_Congestion_Control</link>
+        <guid isPermaLink="true">/Computer_Network-Principles_of_Congestion_Control</guid>
       </item>
       
     
