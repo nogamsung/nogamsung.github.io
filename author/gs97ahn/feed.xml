@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-11-29T10:31:17+09:00</updated>
+  <updated>2022-12-01T17:33:14+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -302,6 +302,201 @@ i &amp;lt;= k, and ∑&lt;sub&gt;ii&lt;/sub&gt; = 0 for i &amp;gt; k&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;histograms&quot;&gt;Histograms&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;One dimensional&lt;/li&gt;
+  &lt;li&gt;Shows shape by binning a continuous distribution&lt;/li&gt;
+  &lt;li&gt;Grouped histogram can indicate multiple discrete categories -&amp;gt; Good for comparison&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pie-chart&quot;&gt;Pie Chart&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A whole split into parts&lt;/li&gt;
+  &lt;li&gt;Emphasizes that all parts sum to a constant&lt;/li&gt;
+  &lt;li&gt;Single dimension with discrete categories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stacked-bar-plot&quot;&gt;Stacked Bar Plot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wholes split into parts&lt;/li&gt;
+  &lt;li&gt;Easy to compare
+    &lt;ul&gt;
+      &lt;li&gt;Often better than pie chart&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Can have multiple discrete dimensions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;venn-diagram&quot;&gt;Venn diagram&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Shows overlap between discrete groups&lt;/li&gt;
+  &lt;li&gt;Sometimes the only way to display overlapping sets
+    &lt;ul&gt;
+      &lt;li&gt;No overlapping ratio&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;scatter-plots&quot;&gt;Scatter Plots&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Relationship between observations on two continuous dimensions&lt;/li&gt;
+  &lt;li&gt;Can show multiple groups&lt;/li&gt;
+  &lt;li&gt;Can show trend lines etc.&lt;/li&gt;
+  &lt;li&gt;Uninformative with too much data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;line-plot&quot;&gt;Line Plot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Good for showing one variable (e.g., time) as continuous even though you have discrete measures.&lt;/li&gt;
+  &lt;li&gt;Can compare several discrete groups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bar-plots&quot;&gt;Bar plots&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can be used for lots of discrete grouping factors&lt;/li&gt;
+  &lt;li&gt;Natural semantics of grouping&lt;/li&gt;
+  &lt;li&gt;Conceals data distribution (i.e., Less Informative)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;cf-issues-on-bar-chart&quot;&gt;(CF) Issues on bar chart&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;X-axis vs. legend: please think what to compare first&lt;/li&gt;
+  &lt;li&gt;Usually, too much is bad
+    &lt;ul&gt;
+      &lt;li&gt;Separation may be better&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;heatmap&quot;&gt;Heatmap&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Works very well when there are natural semantics or comparing intensity of data&lt;/li&gt;
+  &lt;li&gt;Color mapping can be problematic
+    &lt;ul&gt;
+      &lt;li&gt;Usually, sequential or diverging colors are good&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bubble-plot&quot;&gt;Bubble Plot&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Extension of scatter plot (+ one dimension)
+    &lt;ul&gt;
+      &lt;li&gt;Size is not perfectly quantitative&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-visualization-visualization-for-distribution&quot;&gt;Data Visualization: Visualization for Distribution&lt;/h2&gt;
+&lt;h3 id=&quot;visualizing-distributions&quot;&gt;Visualizing Distributions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The first step to observe “how data is shaped” without any manipulation
+    &lt;ul&gt;
+      &lt;li&gt;Power-law, normal, …&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How?
+    &lt;ul&gt;
+      &lt;li&gt;Using error bars&lt;/li&gt;
+      &lt;li&gt;Histograms after binning -&amp;gt; kernel density estimation&lt;/li&gt;
+      &lt;li&gt;Box, violin, strip, sina, ridgeline&lt;/li&gt;
+      &lt;li&gt;CDF &amp;amp; QQ-plots&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;using-error-bars-for-distribution&quot;&gt;Using Error Bars for Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mean + standard deviation&lt;/li&gt;
+  &lt;li&gt;Can be used for lots of discrete grouping factors
+    &lt;ul&gt;
+      &lt;li&gt;Good to compare&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conceals data distribution (i.e., Less Informative)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;histogram-for-distribution&quot;&gt;Histogram for Distribution&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Binning is essential process&lt;/li&gt;
+  &lt;li&gt;Good to see distribution of one variable&lt;/li&gt;
+  &lt;li&gt;Different binning may result in different messages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;histogram-to-kernel-density-estimation&quot;&gt;Histogram to Kernel Density Estimation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Discrete variable -&amp;gt; Continuous trends&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;comparing-distributions&quot;&gt;Comparing Distributions&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-about-3-or-more-distributions&quot;&gt;How about 3 or more distributions?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Error bar is too lossy&lt;/li&gt;
+  &lt;li&gt;Boxplot can be an answer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;violin-plot-is-a-super-set-of-boxplot&quot;&gt;Violin plot is a super set of boxplot&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/31.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;strip-or-sina-plot-may-be-better&quot;&gt;Strip or Sina plot May Be Better&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strip: Using jitter to represent density&lt;/li&gt;
+  &lt;li&gt;Sina: Violin + strip&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;if-you-have-more-distributions&quot;&gt;If You Have More Distributions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ridgeline plots can be a solution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;warning-️&quot;&gt;Warning ❗️&lt;/h4&gt;
+&lt;p&gt;You should have enough number of data&lt;/p&gt;
+
+&lt;h3 id=&quot;for-raw-empirical-data-cdf-is-usually-best&quot;&gt;For raw (empirical) data, CDF is usually best&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;empirical-data-with-theoretical-fits&quot;&gt;Empirical data with Theoretical fits&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Quantile-Quantile (QQ) plots&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/27/35.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -329,6 +524,102 @@ i &amp;lt;= k, and ∑&lt;sub&gt;ii&lt;/sub&gt; = 0 for i &amp;gt; k&lt;/li&gt;
 
       
         <summary type="html">VS model in practice Document &amp;amp; query are represented by term vectors Terms are not necessarily orthogonal to each other Synonymy: car vs. automobile Polysemy: fly (action vs. insects)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Computer Network - Overview of Network Layer</title>
+      <link href="/Computer_Network-Overview_of_Network_Layer" rel="alternate" type="text/html" title="Computer Network - Overview of Network Layer" />
+      <published>2022-11-25T00:00:00+09:00</published>
+      <updated>2022-11-25T00:00:00+09:00</updated>
+      <id>/Computer_Network-Overview_of_Network_Layer</id>
+      <content type="html" xml:base="/Computer_Network-Overview_of_Network_Layer">&lt;h2 id=&quot;1️⃣-forwarding-and-routing-the-data-and-control-planes&quot;&gt;1️⃣ Forwarding and Routing: The Data and Control Planes&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/24/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Two important network-layer functions can be identified:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Forwarding&lt;/em&gt;. When a packet arrives at a router’s input link, the router must move the packet to the appropriate
+output link.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Routing&lt;/em&gt;. The network layer must determine the route or path taken by packets as they flow from a sender to receiver.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Routing algorithms&lt;/strong&gt;: Determine, for example, the path along which packets flow from H1 to H2.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Forwarding&lt;/strong&gt;: The router-local action of transferring a packet from an input link interface to the appropriate
+output link interface.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Routing&lt;/strong&gt;: The network-wide process that determines the end-to-end paths that packets take from source to 
+destination.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Forwarding table&lt;/strong&gt;: A key element in every network router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;control-plane-the-traditional-approach&quot;&gt;Control Plane: The Traditional Approach&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/24/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;control-plane-the-sdn-approach&quot;&gt;Control Plane: The SDN Approach&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/24/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Software-defined networking (SDN)&lt;/strong&gt;: The network is “software-defined” because the controller that computes 
+forwarding tables and interacts with routers is implemented in software.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2️⃣-network-service-model&quot;&gt;2️⃣ Network Service Model&lt;/h2&gt;
+
+&lt;p&gt;The &lt;strong&gt;network service model&lt;/strong&gt; defines the characteristics of end-to-end delivery of packets between sending and
+receiving hosts.&lt;/p&gt;
+
+&lt;p&gt;Some possible services that network layer could provide are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Guaranteed delivery&lt;/em&gt;. This service guarantees that a packet sent by a source host will eventually arrive at the 
+destination host.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Guaranteed delivery with bounded delay&lt;/em&gt;. This service not only guarantees delivery of the packet, but delivery within
+a specified host-to-host delay bound.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;In-order packet delivery&lt;/em&gt;. This service guarantees that packets arrive at the destination in the order that they were
+sent.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Guaranteed minimal bandwidth&lt;/em&gt;. This network-layer service emulates the behavior of a transmission link of a specified
+bit rate between sending and receiving hosts. As long as the sending host transmits bits at a rate below the specified
+bit rate, then all packets are eventually delivered to the destination host.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Security&lt;/em&gt;. The network layer could encrypt all datagrams at the source and decrypt them at the destination, thereby
+providing confidentiality to all transport-layer segments.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Best-effort service&lt;/strong&gt;: A single service provided by the Internet’s layer that packets are neither guaranteed to be
+received in the order in which they were sent, nor is their eventual delivery even guaranteed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="comsci" />
+      
+
+      
+        <summary type="html">1️⃣ Forwarding and Routing: The Data and Control Planes</summary>
       
 
       
@@ -2664,769 +2955,6 @@ reached the target host.&lt;/li&gt;
 
       
         <summary type="html">Get all the location</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Graph Mining (Roles and Communities)</title>
-      <link href="/Big_Data-Graph_Mining_(Roles_and_Communities)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Roles and Communities)" />
-      <published>2022-11-07T22:30:00+09:00</published>
-      <updated>2022-11-07T22:30:00+09:00</updated>
-      <id>/Big_Data-Graph_Mining_(Roles_and_Communities)</id>
-      <content type="html" xml:base="/Big_Data-Graph_Mining_(Roles_and_Communities)">&lt;h3 id=&quot;roles-vs-groups-in-networks&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;structural-roles-in-networks&quot;&gt;Structural Roles in Networks&lt;/h2&gt;
-&lt;h3 id=&quot;what-are-roles&quot;&gt;What Are Roles?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Roles are “&lt;strong&gt;functions&lt;/strong&gt;” of nodes in a network:
-    &lt;ul&gt;
-      &lt;li&gt;Roles of species in ecosystems&lt;/li&gt;
-      &lt;li&gt;Roles of individuals in companies&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Roles are measured by structural behaviors:
-    &lt;ul&gt;
-      &lt;li&gt;centers of stars(hub)&lt;/li&gt;
-      &lt;li&gt;members of cliques(community)&lt;/li&gt;
-      &lt;li&gt;peripheral nodes, etc. (outliers, …)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;example-of-roles&quot;&gt;Example of Roles&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;roles-vs-groups-in-networks-1&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Roles:
-    &lt;ul&gt;
-      &lt;li&gt;A group of nodes with similar structural properties&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Communities/Groups:
-    &lt;ul&gt;
-      &lt;li&gt;A group of nodes that are &lt;strong&gt;well-connected&lt;/strong&gt; to each other&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Roles and communities are complementary&lt;/li&gt;
-  &lt;li&gt;Consider the social network of a CSE Dept:
-    &lt;ul&gt;
-      &lt;li&gt;Roles: Faculty, Staff, Students&lt;/li&gt;
-      &lt;li&gt;Communities: AI Lab, Network Lab, System Lab&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;roles-more-formally&quot;&gt;Roles: More Formally&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Structural equivalence: Node &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are &lt;strong&gt;structurally equivalent&lt;/strong&gt; if they have the same relations to all other 
-nodes
-    &lt;ul&gt;
-      &lt;li&gt;Structurally equivalent nodes are likely to be similar in other ways - i.e., friendships in social networks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;structural-equivalence-example&quot;&gt;Structural Equivalence: Example&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Nodes &lt;em&gt;u&lt;/em&gt; and &lt;em&gt;v&lt;/em&gt; are structurally equivalent:
-    &lt;ul&gt;
-      &lt;li&gt;For all the other nodes &lt;em&gt;k&lt;/em&gt;, node &lt;em&gt;u&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt; if and only if node &lt;em&gt;v&lt;/em&gt; has tie to &lt;em&gt;k&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;discovering-structural-roles-in-networks&quot;&gt;Discovering Structural Roles in Networks&lt;/h2&gt;
-&lt;h3 id=&quot;method-to-discover-structural-roles&quot;&gt;Method to Discover Structural Roles&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;RoIX: Automatic discovery of nodes’ structural roles in networks
-    &lt;ul&gt;
-      &lt;li&gt;Unsupervised learning approach&lt;/li&gt;
-      &lt;li&gt;No prior knowledge required&lt;/li&gt;
-      &lt;li&gt;Assigns a mixed-membership of roles to each node&lt;/li&gt;
-      &lt;li&gt;Scales linearly in number (of edges)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;roix-approach-overview&quot;&gt;RoIX: Approach Overview&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;recursive-feature-extraction&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Recursive feature extraction turns network connectivity into structural features&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Neighborhood features: What is a node’s &lt;strong&gt;connectivity&lt;/strong&gt; pattern?&lt;/li&gt;
-  &lt;li&gt;Recursive features: To &lt;strong&gt;what kinds of nodes&lt;/strong&gt; is a node &lt;strong&gt;connected&lt;/strong&gt;?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;recursive-feature-extraction-1&quot;&gt;Recursive Feature Extraction&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Idea: Aggregate features of a node and use them to generate new recursive features&lt;/li&gt;
-  &lt;li&gt;Base set of a node’s neighborhood features:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Local features&lt;/strong&gt;: All measures of the node degree:
-        &lt;ul&gt;
-          &lt;li&gt;If network is directed, include in-degree and out-degree, total degree&lt;/li&gt;
-          &lt;li&gt;If network is weighted, include weighted feature versions&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Egonet features&lt;/strong&gt;: Computed on the node’s egonet:
-        &lt;ul&gt;
-          &lt;li&gt;Egonet includes the node, its neighbors, and any edges in the induced subgraph on these nodes&lt;/li&gt;
-          &lt;li&gt;Number of within-egonet edges&lt;/li&gt;
-          &lt;li&gt;Number of edges entering/leaving egonet&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Start with the base set of node features&lt;/li&gt;
-  &lt;li&gt;Use the set of current node features to generate additional features:
-    &lt;ul&gt;
-      &lt;li&gt;Two types of aggregate functions: mean and sum
-        &lt;ul&gt;
-          &lt;li&gt;E.g., mean value of “unweighted degree” feature between all neighbors of a node&lt;/li&gt;
-          &lt;li&gt;Compute means and sums over all current features, including other recursive features&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Repeat&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The number of possible recursive features grows exponentially with each recursive iteration:
-    &lt;ul&gt;
-      &lt;li&gt;Reduce the number of features using a pruning technique:
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Look for pairs of features&lt;/strong&gt; that are &lt;strong&gt;high correlated&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Eliminate one of the features&lt;/strong&gt; whenever two features are correlated above a user-defined threshold&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;role-extraction&quot;&gt;Role Extraction&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;application-structural-similarity&quot;&gt;Application: Structural Similarity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Task: Cluster nodes based on their structural similarity&lt;/li&gt;
-  &lt;li&gt;Two networks:
-    &lt;ul&gt;
-      &lt;li&gt;Network science co-authorship network:
-        &lt;ul&gt;
-          &lt;li&gt;Nodes: Network scientists&lt;/li&gt;
-          &lt;li&gt;Edges: The number of co-authored papers&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Political books co-purchasing network:
-        &lt;ul&gt;
-          &lt;li&gt;Nodes: Political books on Amazon&lt;/li&gt;
-          &lt;li&gt;Edges: Frequent co-purchasing of books by the same buyers&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Setup: For each network,
-    &lt;ol&gt;
-      &lt;li&gt;Use RoIX to assign each node a distribution over the set of discovered, structural roles&lt;/li&gt;
-      &lt;li&gt;Determine similarity between nodes by comparing their role distributions&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;structural-sim&quot;&gt;Structural Sim&lt;/h3&gt;
-&lt;h4 id=&quot;co-authorship-network&quot;&gt;Co-authorship Network&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;political-book-network&quot;&gt;Political Book Network&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Book labels (i.e., liberal, conservative, neutral) were not given to role discovery algorithm&lt;/p&gt;
-
-&lt;h2 id=&quot;centrality-a-specific-role-of-nodes-in-the-network&quot;&gt;Centrality: A Specific Role of Nodes in the Network&lt;/h2&gt;
-&lt;h3 id=&quot;centrality-or-prestige&quot;&gt;Centrality (or Prestige)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Some nodes are more important than others&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“Important” nodes?
-    &lt;ul&gt;
-      &lt;li&gt;Can be differently identified depending on the context&lt;/li&gt;
-      &lt;li&gt;Exchange, spread of information, brokerage opportunities, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Centrality measures can quantify the important nodes from various perspectives&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;node-centrality&quot;&gt;Node Centrality&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;We can identify hub nodes from various perspectives
-    &lt;ul&gt;
-      &lt;li&gt;Degree centrality: Node with many neighbors&lt;/li&gt;
-      &lt;li&gt;Closeness centrality: Close (higher weights or lower costs) to other nodes&lt;/li&gt;
-      &lt;li&gt;Betweenness centrality: Nodes which connect to more “sub-networks”&lt;/li&gt;
-      &lt;li&gt;Eigenvector cnetrality (similar to PageRank Centrality): Nodes which connects to larger network&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;degree-centrality&quot;&gt;Degree Centrality&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The node with the most connections is most important
-    &lt;ul&gt;
-      &lt;li&gt;E.g., no. supporters, audience size, no. trading partners, no. direct reports&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;closeness-centrality&quot;&gt;Closeness Centrality&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The node in the middle of the action is most central
-    &lt;ul&gt;
-      &lt;li&gt;Node with highest closeness centrality has the &lt;strong&gt;shortest distance to the other nodes&lt;/strong&gt;, on average&lt;/li&gt;
-      &lt;li&gt;e.g., access to information opinion formation, spread of disease, adoption of new technology&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;between-centrality&quot;&gt;Between Centrality&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The node you have to go through is most central
-    &lt;ul&gt;
-      &lt;li&gt;e.g., brokering between groups, control of information, innovation, collaboration&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;examples&quot;&gt;Examples&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?C_B(v_i)=\frac{\sum_{j&amp;lt;k}\frac{g_{jk}(v_i)}{g_{jk}}}{(N-1)(N-2)/2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;eigenvector-centrality&quot;&gt;Eigenvector Centrality&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The node that &lt;strong&gt;connects to the important nodes is important&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;e.g., a twitter account followed by someone with a large audience, a entrepreneur who knows Jack Dorsey, a senator’s
-barer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;A node’s eigenvector centrality is proportional to the centrality of it’s neighbors&lt;/li&gt;
-  &lt;li&gt;A node can have higher eigenvector centrality because:
-    &lt;ul&gt;
-      &lt;li&gt;They have more connections&lt;/li&gt;
-      &lt;li&gt;They have important connections&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;comparing-three-centralises&quot;&gt;Comparing Three Centralises&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The three measures are clearly related, because they each get at something slightly different!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cf-network-centralization&quot;&gt;CF: Network Centralization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A measure of how centrality is distributed in the network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;network-centralization&quot;&gt;Network Centralization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Centralization tells us about “how influence is spread across the network”
-    &lt;ul&gt;
-      &lt;li&gt;e.g., Financial trading networks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;prestige&quot;&gt;Prestige&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Centrality in directed network is called “prestige”&lt;/li&gt;
-  &lt;li&gt;This is sometimes a fine name:
-    &lt;ul&gt;
-      &lt;li&gt;admiration or trust&lt;/li&gt;
-      &lt;li&gt;influence&lt;/li&gt;
-      &lt;li&gt;friendship&lt;/li&gt;
-      &lt;li&gt;trade&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;But depending on the type of link, it might be misleading:
-    &lt;ul&gt;
-      &lt;li&gt;money lending&lt;/li&gt;
-      &lt;li&gt;giving advice&lt;/li&gt;
-      &lt;li&gt;hatred or distrust&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Context matters!&lt;/strong&gt; Always consider the interpretation of a measure in a particular context&lt;/p&gt;
-
-&lt;h3 id=&quot;computing-a-fes-types-of-prestige&quot;&gt;Computing A Fes Types of Prestige&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In-degree
-    &lt;ul&gt;
-      &lt;li&gt;A website that is linked to often has high prestige&lt;/li&gt;
-      &lt;li&gt;A person who is frequently nominated for a reward has high prestige&lt;/li&gt;
-      &lt;li&gt;How about out-degree?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Closeness analogue: proximity
-    &lt;ul&gt;
-      &lt;li&gt;Uses the shortest directed path length: directed geodesic&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Directed betweeness
-    &lt;ul&gt;
-      &lt;li&gt;Almost exactly the same as undirected betweenness, but with directed geodesics and normalized in a directed way&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Influence range
-    &lt;ul&gt;
-      &lt;li&gt;The influence range is what fraction of the nodes in the network can reach you via directed paths&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;community-analysis-motivation&quot;&gt;Community Analysis: Motivation&lt;/h2&gt;
-&lt;h3 id=&quot;roles-vs-groups-in-networks-2&quot;&gt;Roles vs. Groups in Networks&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;networks--communities&quot;&gt;Networks &amp;amp; Communities&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;We often think of networks “looking” like this:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;What led to such a conceptual picture?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;granovetters-theory&quot;&gt;Granovetter’s Theory&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Granovetter makes a connection between the social and structural role of an edge&lt;/li&gt;
-  &lt;li&gt;First point: &lt;strong&gt;Structure&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Structurally embedded edges are also socially strong&lt;/li&gt;
-      &lt;li&gt;Long-range edges spanning different parts of the network are socially weak&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Second point: &lt;strong&gt;Information&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Long-range edges allow you to gather information from different parts of the network and get a job&lt;/li&gt;
-      &lt;li&gt;Structurally embedded edges are heavily redundant in terms of information access&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;edge-strength-in-real-data&quot;&gt;Edge Strength in Real Data&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;For many years Granovetter’s theory was not tested&lt;/li&gt;
-  &lt;li&gt;But today we have large who-talks-to-whom graphs:
-    &lt;ul&gt;
-      &lt;li&gt;Email, Messenger, Cell phones, Facebook&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Onnela et al. 2007:
-    &lt;ul&gt;
-      &lt;li&gt;Cell-phone network of 20% of EU country’s population&lt;/li&gt;
-      &lt;li&gt;Edge weights: no. phone calls&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;edge-overlap&quot;&gt;Edge Overlap&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?O_{ij}=\frac{&lt;/td&gt;
-      &lt;td&gt;(Ni\cap&amp;amp;space;Nj)/(i,j)&lt;/td&gt;
-      &lt;td&gt;}{&lt;/td&gt;
-      &lt;td&gt;(Ni\cup&amp;amp;space;Nj)/(i,j)&lt;/td&gt;
-      &lt;td&gt;})&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;N(&lt;em&gt;i&lt;/em&gt;) … the set of neighbors of node &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
-&lt;p&gt;Overlap = 0 when an edge is a local bridge&lt;/p&gt;
-
-&lt;h3 id=&quot;real-network-real-edge-strengths&quot;&gt;Real Network, Real Edge Strengths&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Real edge strengths in mobile call graph
-    &lt;ul&gt;
-      &lt;li&gt;Strong ties are more embedded (hav higher overlap)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;linked-removed-by-overlap&quot;&gt;Linked Removed by Overlap&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;conceptual-picture-of-networks&quot;&gt;Conceptual Picture of Networks&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Granovetter’s theory leads to the following conceptual picture of networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;lessons-from-granovetters--onnelas-work&quot;&gt;Lessons from Granovetter’s &amp;amp; Onnela’s Work&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In real-world, the shape of network (or graph) is NOT homogeneous!
-    &lt;ul&gt;
-      &lt;li&gt;Homogeneous: all nodes have equal no. edges&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Heterogeneity (opposite to homogeneity) means:
-    &lt;ul&gt;
-      &lt;li&gt;Some edges are skewed to a few nodes&lt;/li&gt;
-      &lt;li&gt;Local clusters (= communities) exist&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;-&amp;gt; It is valuable to analyze network community!&lt;/p&gt;
-
-&lt;h2 id=&quot;computing-communities-overview&quot;&gt;Computing Communities: Overview&lt;/h2&gt;
-&lt;h3 id=&quot;network-communities&quot;&gt;Network Communities&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sets of nodes with lots of internal connections and few external ones (to the rest of the network).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;finding-network-communities&quot;&gt;Finding Network Communities&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;How do we automatically find such densely connected groups of nodes?&lt;/li&gt;
-  &lt;li&gt;Ideally such automatically detected clusters would then correspond to real groups&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;modularity-and-network-communities&quot;&gt;Modularity and Network Communities&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Communities: sets of tightly connected nodes&lt;/li&gt;
-  &lt;li&gt;Define: Modularity Q
-    &lt;ul&gt;
-      &lt;li&gt;A measure of how well a network is partitioned into communities&lt;/li&gt;
-      &lt;li&gt;Given a partitioning of the network into groups disjoint s ∈ S:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/31.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;null-network-configuration-model&quot;&gt;Null Network Configuration Model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Given real G on n nodes and m edges, construct rewired Network G’
-    &lt;ul&gt;
-      &lt;li&gt;Same degree distribution but uniformly random connections&lt;/li&gt;
-      &lt;li&gt;Consider G’ as a multigraph&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The expected number of edges between nodes i and j of degrees k&lt;sub&gt;i&lt;/sub&gt; and k&lt;sub&gt;j&lt;/sub&gt; equals:
-    &lt;ul&gt;
-      &lt;li&gt;The expected number of edges in (multigraph) G’:&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?k_i\cdot&amp;space;\frac{k_j}{2m}=\frac{k_ik_j}{2m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?=\frac{1}{2}\sum_{i\in&amp;space;N}\sum_{j\in&amp;space;N}\frac{k_ik_j}{2m}=\frac{1}{2}\cdot&amp;space;\frac{1}{2m}\sum_{i\in&amp;space;N}k_i(\sum_{j\in&amp;space;N}k_j)=\frac{1}{4m}2m\cdot&amp;space;2m=m&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;note-️-1&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\sum_{u\in&amp;space;N}k_u=2m&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;modularity&quot;&gt;Modularity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Modularity of partitioning S of graph G:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Modularity values take range [-1, 1]
-    &lt;ul&gt;
-      &lt;li&gt;It is positive if the number of edges within groups exceeds the expected number&lt;/li&gt;
-      &lt;li&gt;Q greater than 0.3-0.7 means significant community structure&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?Q(G,S)=\frac{1}{2m}\sum_{s\in&amp;space;S}\sum_{i\in&amp;space;s}\sum{j\sum&amp;space;s}(A_{ij}-\frac{k_ik_j}{2m})&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Equivalently modularity can be written as:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Idea: We can identify communities by maximizing modularity&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;computing-communities-newman-method&quot;&gt;Computing Communities: Newman Method&lt;/h2&gt;
-&lt;h3 id=&quot;newman-method-intuition&quot;&gt;Newman Method: Intuition&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Considering Edge Betweenness!
-    &lt;ul&gt;
-      &lt;li&gt;No. shortest paths passing over the edges&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/35.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/36.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;newman-method-an-overview&quot;&gt;Newman Method: An overview&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Division hierarchical clustering based on notion of edge betweenness&lt;/li&gt;
-  &lt;li&gt;Works on undirected unweighted networks&lt;/li&gt;
-  &lt;li&gt;Steps:
-    &lt;ol&gt;
-      &lt;li&gt;Calculate betweenness of edges&lt;/li&gt;
-      &lt;li&gt;Remove edges with highest betweenness&lt;/li&gt;
-      &lt;li&gt;Connected components are communities&lt;/li&gt;
-      &lt;li&gt;Give a hierarchical decomposition of the network&lt;/li&gt;
-      &lt;li&gt;Repeat 1-5
-        &lt;ul&gt;
-          &lt;li&gt;Find the best clustering based on threshold of modularity&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;newman-method-illustration&quot;&gt;Newman Method: Illustration&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/37.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Need to re-compute betweenness at every step&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/38.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-compute-edge-betweenness&quot;&gt;How to Compute Edge Betweenness?&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Starting from a randomly selected node (e.g., A) conduct breath first search (BFS)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/39.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Count the no. the shortest paths from A to all other nodes of the network&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/40.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Compute betweenness by working up the tre from the lowest layers of the tree
-    &lt;ul&gt;
-      &lt;li&gt;If there are multiple paths, count them fractionally&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/41.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;results-hierarchical-network-decomposition&quot;&gt;Results: Hierarchical network decomposition&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/42.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;finally-deciding-clusters&quot;&gt;Finally Deciding Clusters&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Compute modularity for each steps, then decide clusters with the highest modularity!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/43.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;newman-method-an-example-graph&quot;&gt;Newman Method: An Example Graph&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/44.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;computing-communities-louvain-method&quot;&gt;Computing Communities: Louvain Method&lt;/h2&gt;
-&lt;h3 id=&quot;louvain-algorithm&quot;&gt;Louvain Algorithm&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Greedy algorithm for community detection
-    &lt;ul&gt;
-      &lt;li&gt;O(n log n) run time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Support weighted graphs&lt;/li&gt;
-  &lt;li&gt;Provides hierarchical communities&lt;/li&gt;
-  &lt;li&gt;Widely used to study large networks because:
-    &lt;ul&gt;
-      &lt;li&gt;Fast&lt;/li&gt;
-      &lt;li&gt;Rapid convergence&lt;/li&gt;
-      &lt;li&gt;High modularity output (i.e., “better communities”)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/45.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;louvain-algorithm-at-high-level&quot;&gt;Louvain Algorithm: At High Level&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Louvain algorithm greedily maximizes modularity&lt;/li&gt;
-  &lt;li&gt;Every pass is made of 2 phases:
-    &lt;ul&gt;
-      &lt;li&gt;Phase 1: Modularity is optimized by allowing only local changes to node-communities memberships&lt;/li&gt;
-      &lt;li&gt;Phase 2: The identified communities are aggregated into super-nodes to build a new network&lt;/li&gt;
-      &lt;li&gt;Goto Phase 1&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/46.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;louvain-algorithm-1st-phase-partitioning&quot;&gt;Louvain Algorithm: 1st Phase (Partitioning)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Put each node in a graph into a distinct community (one node per community)&lt;/li&gt;
-  &lt;li&gt;For each node i, the algorithm performs two calculations:
-    &lt;ul&gt;
-      &lt;li&gt;Compute the modularity delta (∆Q) when putting node i into the community of some neighbor j&lt;/li&gt;
-      &lt;li&gt;Move i to a community of node j that yields the largest gain in ∆Q&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Phase 1 runs until no movement yields a gain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;note-️-2&quot;&gt;Note ❗️&lt;/h4&gt;
-
-&lt;p&gt;The first phase stops when a local maxima of modularity is attained, i.e., when no individual node move can improve the 
-modularity.&lt;/p&gt;
-
-&lt;p&gt;The output of the algorithm &lt;strong&gt;depends on the order in which the nodes are considered&lt;/strong&gt;. Research indicates that the
-ordering of the nodes does NOT have a significant influence on the overall modularity that is obtained.&lt;/p&gt;
-
-&lt;h3 id=&quot;louvain-algorithm-modularity-gain&quot;&gt;Louvain Algorithm: Modularity Gain&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;What is ∆Q if we have node i to community C?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?\bigtriangleup&amp;space;Q(i\to&amp;space;C)=[\frac{\sum_{in}&amp;plus;k_{i,in}}{2m}-(\frac{\sum_{tot}&amp;plus;k_i}{2m})^2]-[\frac{\sum_{in}}{2m}-(\frac{\sum_{tot}}{2m})^2-(\frac{k_i}{2m})^2]&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;where
-    &lt;ul&gt;
-      &lt;li&gt;∑&lt;sub&gt;in&lt;/sub&gt; … sum of link weights between nodes in C&lt;/li&gt;
-      &lt;li&gt;∑&lt;sub&gt;tot&lt;/sub&gt; … sum of all link weights of nodes in C&lt;/li&gt;
-      &lt;li&gt;k&lt;sub&gt;i,in&lt;/sub&gt; … sum of alink weights between nodes i and C&lt;/li&gt;
-      &lt;li&gt;k&lt;sub&gt;i&lt;/sub&gt; … sum of all link weights (i.e., degree) of node i&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;more-detail&quot;&gt;More Detail&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/47.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;louvain-2nd-phase-reconstructing&quot;&gt;Louvain: 2nd Phase (Reconstructing)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The communities obtained in the first phase are contracted into super-nodes, and the network is created accordingly:
-    &lt;ul&gt;
-      &lt;li&gt;Super-nodes are connected if there is at least one edge between the nodes of the corresponding communities&lt;/li&gt;
-      &lt;li&gt;The weight of the edge between the two super-nodes is the sum of the weights from all edges between their 
-corresponding communities&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Phase 1 is then run on the super-node network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;louvain-algorithm-1&quot;&gt;Louvain Algorithm&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/07/48.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">Roles vs. Groups in Networks</summary>
       
 
       

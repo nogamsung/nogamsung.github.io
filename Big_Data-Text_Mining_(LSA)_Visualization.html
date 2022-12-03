@@ -456,6 +456,201 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
 <p><img src="assets/screenshots/2022/11/27/15.jpeg" alt="" /></p>
 
 <h3 id="histograms">Histograms</h3>
+<ul>
+  <li>One dimensional</li>
+  <li>Shows shape by binning a continuous distribution</li>
+  <li>Grouped histogram can indicate multiple discrete categories -&gt; Good for comparison</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/16.jpeg" alt="" /></p>
+
+<h3 id="pie-chart">Pie Chart</h3>
+<ul>
+  <li>A whole split into parts</li>
+  <li>Emphasizes that all parts sum to a constant</li>
+  <li>Single dimension with discrete categories</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/17.jpeg" alt="" /></p>
+
+<h3 id="stacked-bar-plot">Stacked Bar Plot</h3>
+<ul>
+  <li>Wholes split into parts</li>
+  <li>Easy to compare
+    <ul>
+      <li>Often better than pie chart</li>
+    </ul>
+  </li>
+  <li>Can have multiple discrete dimensions</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/18.jpeg" alt="" /></p>
+
+<h3 id="venn-diagram">Venn diagram</h3>
+<ul>
+  <li>Shows overlap between discrete groups</li>
+  <li>Sometimes the only way to display overlapping sets
+    <ul>
+      <li>No overlapping ratio</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/19.jpeg" alt="" /></p>
+
+<h3 id="scatter-plots">Scatter Plots</h3>
+<ul>
+  <li>Relationship between observations on two continuous dimensions</li>
+  <li>Can show multiple groups</li>
+  <li>Can show trend lines etc.</li>
+  <li>Uninformative with too much data</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/20.jpeg" alt="" /></p>
+
+<h3 id="line-plot">Line Plot</h3>
+<ul>
+  <li>Good for showing one variable (e.g., time) as continuous even though you have discrete measures.</li>
+  <li>Can compare several discrete groups</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/21.jpeg" alt="" /></p>
+
+<h3 id="bar-plots">Bar plots</h3>
+<ul>
+  <li>Can be used for lots of discrete grouping factors</li>
+  <li>Natural semantics of grouping</li>
+  <li>Conceals data distribution (i.e., Less Informative)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/22.jpeg" alt="" /></p>
+
+<h3 id="cf-issues-on-bar-chart">(CF) Issues on bar chart</h3>
+<ul>
+  <li>X-axis vs. legend: please think what to compare first</li>
+  <li>Usually, too much is bad
+    <ul>
+      <li>Separation may be better</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/23.jpeg" alt="" /></p>
+
+<h3 id="heatmap">Heatmap</h3>
+<ul>
+  <li>Works very well when there are natural semantics or comparing intensity of data</li>
+  <li>Color mapping can be problematic
+    <ul>
+      <li>Usually, sequential or diverging colors are good</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/24.jpeg" alt="" /></p>
+
+<h3 id="bubble-plot">Bubble Plot</h3>
+<ul>
+  <li>Extension of scatter plot (+ one dimension)
+    <ul>
+      <li>Size is not perfectly quantitative</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/25.jpeg" alt="" /></p>
+
+<h2 id="data-visualization-visualization-for-distribution">Data Visualization: Visualization for Distribution</h2>
+<h3 id="visualizing-distributions">Visualizing Distributions</h3>
+<ul>
+  <li>The first step to observe “how data is shaped” without any manipulation
+    <ul>
+      <li>Power-law, normal, …</li>
+    </ul>
+  </li>
+  <li>How?
+    <ul>
+      <li>Using error bars</li>
+      <li>Histograms after binning -&gt; kernel density estimation</li>
+      <li>Box, violin, strip, sina, ridgeline</li>
+      <li>CDF &amp; QQ-plots</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="using-error-bars-for-distribution">Using Error Bars for Distribution</h3>
+<ul>
+  <li>Mean + standard deviation</li>
+  <li>Can be used for lots of discrete grouping factors
+    <ul>
+      <li>Good to compare</li>
+    </ul>
+  </li>
+  <li>Conceals data distribution (i.e., Less Informative)</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/26.jpeg" alt="" /></p>
+
+<h3 id="histogram-for-distribution">Histogram for Distribution</h3>
+<ul>
+  <li>Binning is essential process</li>
+  <li>Good to see distribution of one variable</li>
+  <li>Different binning may result in different messages</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/27.jpeg" alt="" /></p>
+
+<h3 id="histogram-to-kernel-density-estimation">Histogram to Kernel Density Estimation</h3>
+<ul>
+  <li>Discrete variable -&gt; Continuous trends</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/28.jpeg" alt="" /></p>
+
+<h3 id="comparing-distributions">Comparing Distributions</h3>
+
+<p><img src="assets/screenshots/2022/11/27/29.jpeg" alt="" /></p>
+
+<h3 id="how-about-3-or-more-distributions">How about 3 or more distributions?</h3>
+<ul>
+  <li>Error bar is too lossy</li>
+  <li>Boxplot can be an answer</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/30.jpeg" alt="" /></p>
+
+<h3 id="violin-plot-is-a-super-set-of-boxplot">Violin plot is a super set of boxplot</h3>
+
+<p><img src="assets/screenshots/2022/11/27/31.jpeg" alt="" /></p>
+
+<h3 id="strip-or-sina-plot-may-be-better">Strip or Sina plot May Be Better</h3>
+<ul>
+  <li>Strip: Using jitter to represent density</li>
+  <li>Sina: Violin + strip</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/32.jpeg" alt="" /></p>
+
+<h3 id="if-you-have-more-distributions">If You Have More Distributions</h3>
+<ul>
+  <li>Ridgeline plots can be a solution</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/33.jpeg" alt="" /></p>
+
+<h4 id="warning-️">Warning ❗️</h4>
+<p>You should have enough number of data</p>
+
+<h3 id="for-raw-empirical-data-cdf-is-usually-best">For raw (empirical) data, CDF is usually best</h3>
+
+<p><img src="assets/screenshots/2022/11/27/34.jpeg" alt="" /></p>
+
+<h3 id="empirical-data-with-theoretical-fits">Empirical data with Theoretical fits</h3>
+<ul>
+  <li>Quantile-Quantile (QQ) plots</li>
+</ul>
+
+<p><img src="assets/screenshots/2022/11/27/35.jpeg" alt="" /></p>
 
 <h2 id="reference">Reference</h2>
 <ul>
@@ -576,6 +771,14 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
                         
                         
                         
+                         <li><a href="/Computer_Network-Overview_of_Network_Layer">Computer Network - Overview of Network Layer</a></li>
+                            
+                            
+                            
+                            
+                        
+                        
+                        
                          <li><a href="/Big_Data-Text_Mining">Big Data - Text Mining</a></li>
                             
                             
@@ -592,8 +795,7 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
                         
                         
                         
-                         <li><a href="/Big_Data-Time_Series">Big Data - Time Series</a></li>
-                            
+                        
                             
                             
                             
@@ -972,7 +1174,7 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
                 <footer class="read-next-card-footer">
                     <a href="/tag/comsci/">
                         
-                        See all 43 posts →
+                        See all 44 posts →
                         
                     </a>
                 </footer>
@@ -989,12 +1191,12 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Big_Data-Text_Mining">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/big-data-logo.jpeg)"></div>
+            <a class="post-card-image-link" href="/Computer_Network-Overview_of_Network_Layer">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/computer-network-logo.jpeg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Big_Data-Text_Mining">
+            <a class="post-card-content-link" href="/Computer_Network-Overview_of_Network_Layer">
                 <header class="post-card-header">
                     
                         
@@ -1004,11 +1206,13 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
                         
                     
 
-                    <h2 class="post-card-title">Big Data - Text Mining</h2>
+                    <h2 class="post-card-title">Computer Network - Overview of Network Layer</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
-                        <p>What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to</p>
+                        <p>1️⃣ Forwarding and Routing: The Data and Control Planes
+
+</p>
                     
                 </section>
             </a>
@@ -1026,7 +1230,7 @@ i &lt;= k, and ∑<sub>ii</sub> = 0 for i &gt; k</li>
                 <span class="reading-time">
                     
                     
-                      6 min read
+                      1 min read
                     
                 </span>
             </footer>
