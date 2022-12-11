@@ -1,4 +1,489 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-12-01T17:33:14+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Big Data - Text Mining (LSA) Visualization</title><link href="/Big_Data-Text_Mining_(LSA)_Visualization" rel="alternate" type="text/html" title="Big Data - Text Mining (LSA) Visualization" /><published>2022-11-28T00:00:00+09:00</published><updated>2022-11-28T00:00:00+09:00</updated><id>/Big_Data-Text_Mining_(LSA)_Visualization</id><content type="html" xml:base="/Big_Data-Text_Mining_(LSA)_Visualization">&lt;h3 id=&quot;vs-model-in-practice&quot;&gt;VS model in practice&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-12-11T17:17:18+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - Middleboxes</title><link href="/Computer_Network-Middleboxes" rel="alternate" type="text/html" title="Computer Network - Middleboxes" /><published>2022-12-02T01:00:00+09:00</published><updated>2022-12-02T01:00:00+09:00</updated><id>/Computer_Network-Middleboxes</id><content type="html" xml:base="/Computer_Network-Middleboxes">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Middleboxes&lt;/strong&gt;: Any intermediary box performing functions apart from normal, standard functions of an IP router on
+the data path between a source hose and destination host.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The three types of services performed by middleboxes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;NAT Translation&lt;/em&gt;. NAT boxes implement private network addressing, rewriting datagram header IP addresses and port
+numbers.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Security Services&lt;/em&gt;. Firewalls block traffic based on header-field values or redirect packets for additional
+processing, such as deep packet inspection (DPI). Intrusion Detection Systems (IDS) are able to detect predetermined
+patterns and filter packets accordingly. Application-level e-mail filters block e-mails considered to be junk, phishing
+or otherwise posing a security threat.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Performance Enhancement&lt;/em&gt;. These middleboxes perform services such as compression, content caching, and load balancing
+of service requests to one of a set of servers that can provide the desired service.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Network Function Virtualization (NFV)&lt;/strong&gt;: Use of commodity hardware with specialized software built on top of a common
+software stack.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Middleboxes: Any intermediary box performing functions apart from normal, standard functions of an IP router on the data path between a source hose and destination host.</summary></entry><entry><title type="html">Computer Network - Generalized Forwarding and SDN</title><link href="/Computer_Network-Generalized_Forwarding_and_SDN" rel="alternate" type="text/html" title="Computer Network - Generalized Forwarding and SDN" /><published>2022-12-02T00:30:00+09:00</published><updated>2022-12-02T00:30:00+09:00</updated><id>/Computer_Network-Generalized_Forwarding_and_SDN</id><content type="html" xml:base="/Computer_Network-Generalized_Forwarding_and_SDN">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Flow table&lt;/strong&gt;: Match-plus action forwarding table.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Each entry in a flow table in OpenFlow includes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;A set of header field values&lt;/em&gt; to which an incoming packet will be matched. As in the case of destination-based 
+forwarding, hardware-based matching is most rapidly performed in TCAM memory, with more than a million destination
+address entries being possible. A packet that matches no flow table entry can be dropped or sent to the remote controller
+for more processing.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A set of counters&lt;/em&gt; that are updated as packets are matched to flow table entries. These counters might include the
+number of packets that have been matched by that table entry, and the time since the table entry was last updated.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A set of actions to be taken&lt;/em&gt; when a packet matches a flow table entry. These actions might be to forward the packet
+to a given output port, to drop the packet, makes copies of the packet and sent them to multiple output ports, and/or to
+rewrite selected header fields.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-match&quot;&gt;1️⃣ Match&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-action&quot;&gt;2️⃣ Action&lt;/h2&gt;
+
+&lt;p&gt;Each flow table entry has a list of zero or more actions that determine the processing that is to be applied to a packet
+that matches a flow table entry. Among the most important possible actions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Forwarding&lt;/em&gt;. An incoming packet may be forwarded to a particular physical output port, broadcast over all ports or
+multicast over a selected set of ports.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Dropping&lt;/em&gt;. A flow table entry with no action indicates that a matched packet should be dropped.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Modify-field&lt;/em&gt;. The values in 10 packet-header fields may be re-written before the packet is forwarded to the chosen
+output port&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-openflow-examples-of-match-plus-action-in-action&quot;&gt;3️⃣ OpenFlow Examples of Match-plus-action in Action&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;a-first-example-simple-forwarding&quot;&gt;A First Example: Simple Forwarding&lt;/h3&gt;
+
+&lt;p&gt;Suppose that the desired forwarding behavior is that packets from h5 or h6 destined to h3 or h4 are to be forwarded from
+s3 to s1, and then from s1 to s2. The flow table entry in s1 would be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, we’ll also need a flow entry in s3 so that datagrams sent from h5 or h6 are forwarded to s1 over outgoing
+interface 3:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lastly, we’ll also need a flow table entry in s2 to complete this first example, so that datagrams arriving from s1 are
+forwarded to their destination, either host h3 or h4:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;a-second-example-load-balancing&quot;&gt;A Second Example: Load Balancing&lt;/h3&gt;
+
+&lt;p&gt;Consider a load-balancing scenario, where datagrams from h3 destined to 10.1.* . * are to be forwarded over the direct 
+link between s2 and s1, while datagrams from h4 destined to 10.1. * . * are to be forwarded over the link between s2 and 
+s3, and then from s3 to s1.&lt;/p&gt;
+
+&lt;h4 id=&quot;note-️&quot;&gt;Note ❗️&lt;/h4&gt;
+
+&lt;p&gt;This behavior couldn’t be achieved with IP’s destination-based forwarding.&lt;/p&gt;
+
+&lt;p&gt;In this case, the flow table in s2 would be:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Flow table entries are also needed at s1 to forward the datagrams received from s2 to either h1 or h2; and flow table
+entries are needed at s3 to forward datagrams received on interface 4 from s2 over interface 3 toward s1.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-third-example-firewalling&quot;&gt;A Third Example: Firewalling&lt;/h3&gt;
+
+&lt;p&gt;Consider a firewall scenario in which s2 wants only ot receive on any of its interfaces traffic sent from hosts attached
+to s3.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If there were no other entries in s2’s flow table, then only traffic from 10.3. * . * would be forwarded to the hosts
+attached to s2.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html"></summary></entry><entry><title type="html">Computer Network - The Internet Protocol (IP)</title><link href="/Computer_Network-The_Internet_Protocol_(IP)" rel="alternate" type="text/html" title="Computer Network - The Internet Protocol (IP)" /><published>2022-12-02T00:00:00+09:00</published><updated>2022-12-02T00:00:00+09:00</updated><id>/Computer_Network-The_Internet_Protocol_(IP)</id><content type="html" xml:base="/Computer_Network-The_Internet_Protocol_(IP)">&lt;h2 id=&quot;1️⃣-ipv4-datagram-format&quot;&gt;1️⃣ IPv4 Datagram Format&lt;/h2&gt;
+
+&lt;p&gt;The key fields in the IPv4 datagram are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Version number&lt;/em&gt;: These 4 bits specify the IP protocol version of the datagram.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Header length&lt;/em&gt;: Because an IPv4 datagram can contain variable number of options, these 4 bits are needed to determine
+where in the IP datagram the payload actually begins.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Type of service&lt;/em&gt;: The type of service (TOS) bits were included in the IPv4 header to allow different type of IP 
+datagrams to be distinguished from each other.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Datagram length&lt;/em&gt;: This is the total length of the IP datagram, measured in bytes.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Identifier, flags, fragmentation offset&lt;/em&gt;: These three fields have to do with so-called IP fragmentation, when a large
+IP datagram is broken into several smaller IP datagrams which are then forwarded independently to the destination, where
+they are reassembled before their payload data is passed up to the transport layer at the destination host.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Time-to-live (TTL)&lt;/em&gt;: Ensure that datagrams do not circulate forever in the network.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Protocol&lt;/em&gt;: This field is typically used only when an IP datagram reaches its final destination. The value of this
+field indicates the specific transport-layer protocol to which the data portion of this IP datagram should be passed.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Header checksum&lt;/em&gt;: Aids a router in detecting bit errors in a received IP datagram.
+    &lt;ul&gt;
+      &lt;li&gt;The reason why TCP/IP perform error checking at both the transport and network layers are:
+        &lt;ol&gt;
+          &lt;li&gt;Only the IP header is checksummed at the IP layer, while the TCP/UDP checksum is computed over the entire 
+TCP/UDP segment.&lt;/li&gt;
+          &lt;li&gt;TCP/UDP and IP do not necessarily both have to belong to the same protocol stack TCP. TCP can run over a
+different network-layer protocol and IP can carry data that will not be passed to TCP/UDP.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Source and destination IP addresses&lt;/em&gt;: When a source creates a datagram, it inserts its IP address into the source IP
+address field and inserts the address of the ultimate destination into the destination IP address field.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Options&lt;/em&gt;: Allows an IP header to be extended.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Data (payload)&lt;/em&gt;: Contains the transport-layer segment to be delivered to the destination.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-ipv4-addressing&quot;&gt;2️⃣ IPv4 Addressing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Interface&lt;/strong&gt;: The boundary between the host and the physical link.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dotted-decimal notation&lt;/strong&gt;: Each byte of the address is written in its decimal form and is separated by a period from
+other bytes in the address.
+    &lt;ul&gt;
+      &lt;li&gt;E.g. The address 193.32.216.9 in binary notation is 11000001 00100000 11011000 00001001.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Subnet&lt;/strong&gt;: Network interconnecting three host interfaces and one router interface.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Subnet mask&lt;/strong&gt; Indicated by the leftmost 24 bits of the 32-bit quantity.
+    &lt;ul&gt;
+      &lt;li&gt;E.g. In IP address 223.1.1.0/24, /24 is subnet mask.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;To determine the subnets, detach each interface from its host or router, creating islands of isolated networks, with
+interfaces terminating the end points of the isolated networks. Each of these isolated networks is called a subnet.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Class Interdomain Routing (CIDR)&lt;/strong&gt;: The Internet’s address assignment strategy that generalizes the notion of subnet
+addressing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Network prefix&lt;/strong&gt;: The &lt;em&gt;x&lt;/em&gt; most significant bits of an address of the form &lt;em&gt;a.b.c.d/x&lt;/em&gt; constitute the network portion
+of the IP address, and are often referred to as the prefix.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Classful addressing&lt;/strong&gt;: The network portions of an IP address which were constrained to be 8, 16, or 24 bits in
+length before CIDR was adapted.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;obtaining-a-block-of-addresses&quot;&gt;Obtaining a Block of Addresses&lt;/h3&gt;
+
+&lt;p&gt;In order to obtain a block of IP addresses for use within an organization’s subnet, a network administrator might first
+its ISP, which would provide addresses from a larger block of addresses that had already been allocated to the ISP. For
+example, the ISP may itself have been allocated the address block 200.23.16.0/20. Ths ISP, in turn, could divide its
+address block into eight equal-sized contiguous address blocks and give one of these address blocks out to each of up to
+eight organizations that are supported by this ISP, as show below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;obtaining-a-host-address-the-dynamic-host-configuration-protocol&quot;&gt;Obtaining a Host Address: The Dynamic Host Configuration Protocol&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Dynamic Host Configuration Protocol (DHCP)&lt;/strong&gt;: Allows a host to obtain an IP address automatically.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Temporary IP address&lt;/strong&gt; Allows IP address that will be different each time the host connects to the network.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Plug-and-play a.k.a. Zeroconf protocol&lt;/strong&gt;: DHCP’s ability to automate the network-related aspects of connecting a 
+host into a network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a newly arriving host, the DHCP protocol is a four-step process which are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;DHCP server discovery&lt;/em&gt;. The first task of a newly arriving host is to find a DHCP server with which to interact.
+This is done using a &lt;strong&gt;DHCP discover message&lt;/strong&gt;, which a client wends within a UDP packet to port 67.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;DHCP server offer&lt;/em&gt;. A DHCP server receiving a DHCP discover message responds to the client with a &lt;strong&gt;DHCP offer
+message&lt;/strong&gt; that is broadcast to all nodes on the subnet, using the IP broadcast address of 255.255.255.255. Since
+several DHCP servers can be present on the subnet, the client may find itself in the enviable position of being able to
+choose from among several offers. Each server offer message contains the transaction ID of the received discover 
+message, the proposed IP address for the client, the network mask, and an IP &lt;strong&gt;address lease time&lt;/strong&gt; - the amount of time
+for which the IP address will be valid.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;DHCP request&lt;/em&gt;. The newly arriving client will choose from among one or more server offers and respond to its 
+selected offer with a &lt;strong&gt;DHCP request message&lt;/strong&gt;, echoing back the configuration parameters.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;DHCP ACK&lt;/em&gt;. The server responds to the DHCP request message with a &lt;strong&gt;DHCP ACK message&lt;/strong&gt;, confirming the requested
+parameters.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3️⃣-network-address-translation-nat&quot;&gt;3️⃣ Network Address Translation (NAT)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Private network a.k.a. realm with private addresses&lt;/strong&gt;: Refers to a network whose addresses only have meaning to
+devices within that network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;NAT translation table&lt;/strong&gt;: NAT router use this to solve the issue of all datagrams arriving at the NAT router from WAN
+with the same destination IP address.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NAT traversal&lt;/strong&gt;: Technical solutions for NAT to use port numbers for hosts.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4️⃣-ipv6&quot;&gt;4️⃣ IPv6&lt;/h2&gt;
+&lt;h3 id=&quot;ipv6-datagram-format&quot;&gt;IPv6 Datagram Format&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The most important changes introduced in IPv6 are evident in the datagram format:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Expanded addressing capabilities&lt;/em&gt;. IPv6 increases the size of the IP address from 32 to 128 bits. This ensures that
+the world won’t run out of IP addresses. In addition to unicast and multicast addresses, IPv6 introduced a new type of
+address, called an &lt;strong&gt;anycast address&lt;/strong&gt;, that allows a datagram to be delivered to any one of a group of hosts.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;A streamlined 40-byte header&lt;/em&gt;. The resulting 40-byte fixed-length header allows for faster processing of the IP
+datagram by a router.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Flow labeling&lt;/em&gt;. IPv6 has an elusive definition of a &lt;strong&gt;flow&lt;/strong&gt;. RFC 2460 states that this allows “labeling of packets
+belonging to particular flows for which the sender requests special handling, such as a non-default quality of service
+or real-time service.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The simpler, more streamlined structure of the IPv6 datagram, compared to IPv4, are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Version&lt;/em&gt;. The 4-bit field identifies the IP version number.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Traffic class&lt;/em&gt;. The 8-bit traffic class field, like the TOS field in IPv4, can be used to give priority to certain
+datagrams within a flow, or it can be used to give priority to datagrams from certain applications over datagrams from
+other applications.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Flow label&lt;/em&gt;. The 20-bit field that is used to identify a flow of datagrams.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Payload length&lt;/em&gt;. The 16-bit value that is treated as an unsigned integer giving the number of bytes in the IPv6
+datagrams following the fixed-length, 40-byte datagram header.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Next header&lt;/em&gt;. The field that identifies the protocol to which the content of this datagram will be delivered.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Hop limit&lt;/em&gt;. The contents of this field are decremented by one by each router that forwards the datagram.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Source and destination addresses&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Data&lt;/em&gt;. The payload portion of the IPv6 datagram.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Several fields appearing in the IPv4 datagram are no longer present in the IPv6 datagram:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Fragmentation/reassembly&lt;/em&gt;. IPv6 does not allow for fragmentation and reassembly at intermediate routers; these
+operations can be performed only by the source and destination.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Header checksum&lt;/em&gt;. Because the transport-layer and link-layer protocols in the Internet layers perform check-summing,
+the designers of IP probably felt that this functionality was sufficiently redundant in the network layer that it could
+be removed.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Options&lt;/em&gt;. An options field is no longer a part of the standard IP header. However, the options field is one of the
+possible next headers pointed to from within the IPv6 header.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;transitioning-from-ipv4-to-ipv6&quot;&gt;Transitioning from IPv4 to IPv6&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Tunneling&lt;/strong&gt;: A key concept with applications in many other scenarios beyond IPv4-to-IPv6 transition, including wide
+use in the all-IP cellular networks.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tunnel&lt;/strong&gt;: Intervening set of IPv4 routers between two IPv6 routers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ IPv4 Datagram Format</summary></entry><entry><title type="html">Computer Network - What is Inside a Router</title><link href="/Computer_Network-What_is_Inside_a_Router" rel="alternate" type="text/html" title="Computer Network - What is Inside a Router" /><published>2022-11-28T19:30:00+09:00</published><updated>2022-11-28T19:30:00+09:00</updated><id>/Computer_Network-What_is_Inside_a_Router</id><content type="html" xml:base="/Computer_Network-What_is_Inside_a_Router">&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Four router components can be identified:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Input ports&lt;/em&gt;. An &lt;strong&gt;input port&lt;/strong&gt; performs several key functions.
+    &lt;ul&gt;
+      &lt;li&gt;The physical layer function of terminating an incoming physical link at a router.&lt;/li&gt;
+      &lt;li&gt;Link-layer functions needed to interoperate with the link layer at the other side of the incoming link.&lt;/li&gt;
+      &lt;li&gt;Lookup functions at the input port&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Output ports&lt;/em&gt;. An &lt;strong&gt;output port&lt;/strong&gt; stores packets received from the switching fabric and transmits these packets on
+outgoing link by performing the necessary link-layer and physical-layer functions.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Routing processor&lt;/em&gt;. The &lt;strong&gt;routing processor&lt;/strong&gt; performs control-plane functions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Control plane&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Router’s control functions:
+        &lt;ul&gt;
+          &lt;li&gt;Execute the routing protocols.&lt;/li&gt;
+          &lt;li&gt;Respond to attached links that go up or down.&lt;/li&gt;
+          &lt;li&gt;Communicate with the remote controller.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Management functions:
+        &lt;ul&gt;
+          &lt;li&gt;Operate at the millisecond or second timescale.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Information required for packet forwarding process:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Destination-based forwarding&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Generalized forwarding&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-input-port-processing-and-destination-based-forwarding&quot;&gt;1️⃣ Input Port Processing and Destination-Based Forwarding&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose that router has four links, numbered 0 through 3, and that packets are to be forwarded to the link interfaces as
+follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We could have the following forwarding table with just four entries:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Longest prefix matching&lt;/strong&gt;: The router finds the longest matching entry in the table and forwards the packet to the 
+link interface associated with the longest prefix match.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Lookup” is arguably the most important action in input port processing, but many other actions must be taken as well:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Physical- and link-layer processing must occur.&lt;/li&gt;
+  &lt;li&gt;The packet’s version number, checksum and tim-to-live field must be checked and the latter two fields rewritten.&lt;/li&gt;
+  &lt;li&gt;Counters used for network management must be updated.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;2️⃣-switching&quot;&gt;2️⃣ Switching&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Switching can be accomplished in a number of ways:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Switching via memory&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Switching via a bus&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Switching via an interconnection network&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Non-blocking&lt;/strong&gt;: A packet being forwarded to an output port will not be blocked from reaching that output port.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3️⃣-output-port-processing&quot;&gt;3️⃣ Output Port Processing&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4️⃣-where-does-queuing-occur&quot;&gt;4️⃣ Where Does Queuing Occur?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Packet loss&lt;/strong&gt;: Occur when no memory is available to store arriving packets.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;input-queuing&quot;&gt;Input Queuing&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Head-of-the-line (HOL) blocking&lt;/strong&gt;: A queued packet in an input queue must wait for transfer through the fabric
+because it is blocked by another packet at the head of the line.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;output-queuing&quot;&gt;Output Queuing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Drop-tail&lt;/strong&gt;: Drop of the arriving packet when there is not enough memory to buffer an incoming packet.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Active Queue Management (AQM)&lt;/strong&gt;: A number of proactive packet-dropping and -marking policies.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Random Early Detection (RED)&lt;/strong&gt;: One of the most widely studied and implemented AQM algorithm.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Packet scheduler&lt;/strong&gt;: Choose one packet among those queued for transmission at the output port.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-much-buffering-is-enough&quot;&gt;How Much Buffering Is “Enough”?&lt;/h3&gt;
+
+&lt;p&gt;For many years, the rule of thumb [Villamizar 1994] for buffer sizing was:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?B=RTT\cdot&amp;space;C&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;B = Buffer size&lt;/li&gt;
+  &lt;li&gt;RTT = Average round-trip time&lt;/li&gt;
+  &lt;li&gt;C = Link capacity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More recent theoretical and experimental efforts [Appenzeller 2004] suggests:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?B=RTT\cdot&amp;space;C/\sqrt{N}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;B = Buffer size&lt;/li&gt;
+  &lt;li&gt;RTT = Average round-trip time&lt;/li&gt;
+  &lt;li&gt;C = Link capacity&lt;/li&gt;
+  &lt;li&gt;N = Large number of independent TCP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Bufferbloat&lt;/strong&gt;: Long delay due to persistent buffering.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5️⃣-packet-scheduling&quot;&gt;5️⃣ Packet Scheduling&lt;/h2&gt;
+&lt;h3 id=&quot;first-in-first-out-fifo&quot;&gt;First-In-First-Out (FIFO)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;priority-queuing&quot;&gt;Priority Queuing&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Non-preemptive priority queuing&lt;/strong&gt;: A discipline that forces the transmission of a packet to be not interrupted once
+it has begun.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;round-robin-and-weighted-fair-queuing-wfq&quot;&gt;Round Robin and Weighted Fair Queuing (WFQ)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Work-conserving queuing&lt;/strong&gt;: A discipline that forces the to never allow the link to remain idle whenever there are
+packets queued for transmission.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Weighted fair queuing (WFQ) discipline&lt;/strong&gt;: Arriving packets are classified and queued in the appropriate per-class
+waiting area.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html"></summary></entry><entry><title type="html">Big Data - Text Mining (LSA) Visualization</title><link href="/Big_Data-Text_Mining_(LSA)_Visualization" rel="alternate" type="text/html" title="Big Data - Text Mining (LSA) Visualization" /><published>2022-11-28T00:00:00+09:00</published><updated>2022-11-28T00:00:00+09:00</updated><id>/Big_Data-Text_Mining_(LSA)_Visualization</id><content type="html" xml:base="/Big_Data-Text_Mining_(LSA)_Visualization">&lt;h3 id=&quot;vs-model-in-practice&quot;&gt;VS model in practice&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Document &amp;amp; query are represented by term vectors
     &lt;ul&gt;
@@ -1747,845 +2232,4 @@ outgoing link.&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Causes and the Costs of Congestion Scenario 1: Two Senders, a Router with Infinite Buffers Per-connection throughput: Number of bytes per second at the receiver</summary></entry><entry><title type="html">Intelligent Information Systems - Drawing Word Cloud</title><link href="/Intelligent_Information-Drawing_Word_Cloud" rel="alternate" type="text/html" title="Intelligent Information Systems - Drawing Word Cloud" /><published>2022-11-16T00:00:00+09:00</published><updated>2022-11-16T00:00:00+09:00</updated><id>/Intelligent_Information-Drawing_Word_Cloud</id><content type="html" xml:base="/Intelligent_Information-Drawing_Word_Cloud">&lt;h3 id=&quot;word-cloud&quot;&gt;Word Cloud&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Word Cloud
-    &lt;ul&gt;
-      &lt;li&gt;Size depends on frequency&lt;/li&gt;
-      &lt;li&gt;Shows frequently used word visually&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wordcloud&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;South Korean constitution law&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;konlpy.corpus&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kolaw&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;fids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kolaw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileids&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fobj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kolaw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fids&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fobj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;140&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;fobj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kolaw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fids&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fobj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;word-cloud-1&quot;&gt;Word Cloud&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Importing word cloud&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;wordcloud&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Create word cloud object
-    &lt;ol&gt;
-      &lt;li&gt;font_path&lt;/li&gt;
-      &lt;li&gt;max_words&lt;/li&gt;
-      &lt;li&gt;background_color&lt;/li&gt;
-      &lt;li&gt;mask&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;drawing-word-cloud&quot;&gt;Drawing Word Cloud&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;wordcloud&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;AppleGothic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interpolation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bilinear&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;generate_from_frequencies-and-counter&quot;&gt;generate_from_frequencies() and Counter()&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;generate() or generate_from_text()&lt;/li&gt;
-  &lt;li&gt;generate_from_frequencies()&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;AppleGothic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_from_frequencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;most_common&quot;&gt;most_common&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most_common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;extracting-nouns&quot;&gt;Extracting Nouns&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;konlpy.tag&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Okt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;okt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Okt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ko_doc_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nouns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;drawing-word-cloud-nouns&quot;&gt;Drawing Word Cloud: Nouns&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;AppleGothic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_from_frequencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interpolation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;bilinear&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;remove-stopword&quot;&gt;Remove stopword&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;What is stopword?
-    &lt;ul&gt;
-      &lt;li&gt;Word that does not have any meaning&lt;/li&gt;
-      &lt;li&gt;E.g. I, me, my, …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;remove-single-letter-word&quot;&gt;Remove single letter word&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;noun_word&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;noun_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;noun_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopword&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_from_frequencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interpolation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;bilinear&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;drawing-word-cloud-using-mask&quot;&gt;Drawing Word Cloud: Using Mask&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PIL&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;img_mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;law.jpg&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;AppleGothic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_from_frequencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interpolation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;bilinear&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;off&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;text-mining-process&quot;&gt;Text Mining Process&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Data collection&lt;/li&gt;
-  &lt;li&gt;Data pre-processing&lt;/li&gt;
-  &lt;li&gt;Data analysis and visualization&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;get-data-from-naver-and-drawing-it&quot;&gt;Get Data from Naver and Drawing it&lt;/h3&gt;
-&lt;h4 id=&quot;data-collection&quot;&gt;Data Collection&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bs4&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm.notebook&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://kin.naver.com/search/list.naver?query=%EB%B9%BC%EB%B9%BC%EB%A1%9C%EB%8D%B0%EC%9D%B4&amp;amp;page=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;html.parser&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;docs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ul&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;basic1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;li&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;docs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-        
-    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;data-pre-processing&quot;&gt;Data pre-processing&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;konlpy.tag&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Okt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;okt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Okt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ko_doc_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;okt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nouns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;collections&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ko_doc_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most_common&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;빼빼로데이&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;빼빼로&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;데이&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopword&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopword_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopword&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;data-visualization&quot;&gt;Data visualization&lt;/h4&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;PIL&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;img_mask&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;present.jpg&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WordCloud&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;background_color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;white&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_words&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;font_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;AppleGothic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate_from_frequencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count_noun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imshow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wc_img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interpolation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;bilinear&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;off&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/15/15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Word Cloud Word Cloud Size depends on frequency Shows frequently used word visually</summary></entry><entry><title type="html">Big Data - Graph Mining (Applications)</title><link href="/Big_Data-Graph_Mining_(Applications)" rel="alternate" type="text/html" title="Big Data - Graph Mining (Applications)" /><published>2022-11-14T22:30:00+09:00</published><updated>2022-11-14T22:30:00+09:00</updated><id>/Big_Data-Graph_Mining_(Applications)</id><content type="html" xml:base="/Big_Data-Graph_Mining_(Applications)">&lt;h2 id=&quot;graph-mining-for-content-propagation&quot;&gt;Graph Mining for Content Propagation&lt;/h2&gt;
-&lt;h3 id=&quot;ex1-interest-graph-in-pinterest&quot;&gt;Ex1: Interest Graph in Pinterest&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;“Interest Graph” represents relations (in terms of shared interests) among users&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;community-analysis-in-interest-graph&quot;&gt;Community Analysis in Interest Graph&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Community detection in Interest Graph
-    &lt;ul&gt;
-      &lt;li&gt;Using Louvain method&lt;/li&gt;
-      &lt;li&gt;16 K communities are identified&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uniformity in the same community
-    &lt;ul&gt;
-      &lt;li&gt;Probability that randomly selected two users in the same community have the same property (e.g., gender or country)&lt;/li&gt;
-      &lt;li&gt;Properties
-        &lt;ul&gt;
-          &lt;li&gt;User’s similarity: Gender, Country, Major category, Interest feature (C&lt;sub&gt;1&lt;/sub&gt;, C&lt;sub&gt;2&lt;/sub&gt;, …, C&lt;sub&gt;32&lt;/sub&gt;)&lt;/li&gt;
-          &lt;li&gt;Shared interests: Category, Source&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uniformity of each property&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;prediction-on-pin-consumption&quot;&gt;Prediction on Pin Consumption&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Prediction methods
-    &lt;ul&gt;
-      &lt;li&gt;User-centric
-        &lt;ul&gt;
-          &lt;li&gt;User-property-based: 8 user features like gender and major category&lt;/li&gt;
-          &lt;li&gt;User-interest-based: (C&lt;sub&gt;1&lt;/sub&gt;, C&lt;sub&gt;2&lt;/sub&gt;, …, C&lt;sub&gt;32&lt;/sub&gt;)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Pin-centric
-        &lt;ul&gt;
-          &lt;li&gt;CF-based: (item-to-item) collaborative filtering technique&lt;/li&gt;
-          &lt;li&gt;Pin-based: properties of a pin (i.e., category and source) + collective opinions of other users (i.e., number of 
-likes of the original pin)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Accuracy for each prediction method&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ex2-modeling-echo-chamber-network&quot;&gt;Ex2: Modeling Echo Chamber Network&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ex3-content-publish--consumption-patterns&quot;&gt;Ex3: Content Publish &amp;amp; Consumption Patterns&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-domain-categories-are-used-as-publishingconsuming-spaces&quot;&gt;What Domain Categories Are Used as Publishing/Consuming Spaces?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Both Content sources and publishing spaces: Social Network, Search Engine&lt;/li&gt;
-  &lt;li&gt;Major publishing spaces: Computer &amp;amp; Electronics&lt;/li&gt;
-  &lt;li&gt;Major content sources: News &amp;amp; Media and Streaming&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-domain-categories-play-different-roles-in-publishingconsuming-web-content&quot;&gt;What Domain Categories Play Different Roles in Publishing/Consuming Web Content?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-differently-content-pages-are-accessed-from-different-publishing-spaces&quot;&gt;How Differently Content Pages Are Accessed from Different Publishing Spaces?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;graphing-mining-for-human-behaviors&quot;&gt;Graphing Mining for Human Behaviors&lt;/h2&gt;
-&lt;h3 id=&quot;ex1-modeling-socio-economic-system-multi-layer-graph&quot;&gt;Ex1: Modeling Socio-Economic System: Multi-Layer Graph&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;social-interaction-with-economic-behavior&quot;&gt;Social Interaction with Economic Behavior&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;modeling-upper-class-users-weighted-degree&quot;&gt;Modeling Upper Class Users: Weighted Degree&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;rmt-associated-users-found-by-graph-analysis&quot;&gt;RMT-Associated Users Found by Graph Analysis&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;tip-️&quot;&gt;Tip ❗️&lt;/h4&gt;
-&lt;p&gt;RMT is Real Money Trade which is usually illegal in the game.&lt;/p&gt;
-
-&lt;h3 id=&quot;real-money-trade-rmt&quot;&gt;Real Money Trade (RMT)?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ex2-understanding-social-support-for-mh&quot;&gt;Ex2: Understanding Social Support for MH&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Social support&lt;/strong&gt;: A system that a person with mental illness gets supported from his/her social network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Social support in offline spaces -&amp;gt; extended to online&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;modeling-social-supporting-network&quot;&gt;Modeling Social Supporting Network&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;-&amp;gt; Then, hub and community analysis conducted&lt;/p&gt;
-
-&lt;h3 id=&quot;key-result-by-hub-analysis&quot;&gt;Key Result by Hub Analysis&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;K% (out-degree) hub&lt;/strong&gt;: users who support the more number of support-seekers&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;IS (Information Score) » ES (Emotional Score) by hub (i.e., heavily-supportive) users!&lt;/li&gt;
-  &lt;li&gt;Hub users attracts more votes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;key-result-on-community-analysis&quot;&gt;Key Result on Community Analysis&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Community detection (Louvain), LDA, then t-SNE of keywords embeddings (w2v) of communities&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Big cross-subreddit communities deals with general MH topics (e.g., anxiety, depression, …)&lt;/li&gt;
-  &lt;li&gt;Small communities cover specific topics (hair pulling, cyber-bullying, …)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;graph-mining-with-inferred-relation&quot;&gt;Graph Mining with Inferred Relation&lt;/h2&gt;
-&lt;h4 id=&quot;note️&quot;&gt;Note❗️&lt;/h4&gt;
-&lt;p&gt;Inferring Relations from Bipartite Graph&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We call this “bipartite graph projection”&lt;/p&gt;
-
-&lt;h3 id=&quot;ex1-modeling-relations-among-content&quot;&gt;Ex1: Modeling Relations among Content&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;community-analysis-on-content-network&quot;&gt;Community Analysis on Content Network&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Similarity analysis among the members in the same community&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ex2-modeling-relations-among-topics&quot;&gt;Ex2: Modeling Relations among Topics&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;topic-network-analysis&quot;&gt;Topic Network Analysis&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Graph illustration
-    &lt;ul&gt;
-      &lt;li&gt;A large circle - high degree&lt;/li&gt;
-      &lt;li&gt;A thick edge - high weight&lt;/li&gt;
-      &lt;li&gt;Same color of nodes - same community&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Hub (or portal)&lt;/strong&gt; topics
-    &lt;ul&gt;
-      &lt;li&gt;Many links, high degree&lt;/li&gt;
-      &lt;li&gt;E.g., topics 1, 8, 9&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Strong connectivity between topics
-    &lt;ul&gt;
-      &lt;li&gt;High weights between topics 1 - 8 and 1 - 10, but low weight between 8 - 10&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Community&lt;/strong&gt; of topics
-    &lt;ul&gt;
-      &lt;li&gt;A community implies a set of common interests&lt;/li&gt;
-      &lt;li&gt;Using a well known community detection algorithm - weighted version of &lt;strong&gt;Louvain&lt;/strong&gt; method&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;comparing-pinning-vs-repining&quot;&gt;Comparing Pinning vs. Repining&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/14/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Graph Mining for Content Propagation Ex1: Interest Graph in Pinterest “Interest Graph” represents relations (in terms of shared interests) among users</summary></entry><entry><title type="html">Computer Network - Connection Oriented Transport TCP</title><link href="/Computer_Network-Connection_Oriented_Transport_TCP" rel="alternate" type="text/html" title="Computer Network - Connection Oriented Transport TCP" /><published>2022-11-11T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>/Computer_Network-Connection_Oriented_Transport_TCP</id><content type="html" xml:base="/Computer_Network-Connection_Oriented_Transport_TCP">&lt;h2 id=&quot;1️⃣-the-tcp-connection&quot;&gt;1️⃣ The TCP Connection&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Connection-oriented&lt;/strong&gt;: Before one application process can begin to send data to another, the two processes must
-first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the 
-parameters of ensuing data transfer.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Full-duplex service&lt;/strong&gt;: If there is a TCP connection between Process A on one host and Process B on another host,
-then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from 
-Process A to Process B.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Point-to-point&lt;/strong&gt;: Between a single sender and a single receiver.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Multicasting&lt;/strong&gt;: The transfer of data from one sender to many receivers in a single send operation, which is not 
-possible with TCP.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Three-way handshake&lt;/strong&gt;: Three segments sent between the two hosts.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Send buffer&lt;/strong&gt;: One of the buffers that is set aside during the initial three-way handshake.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Maximum segment size (MSS)&lt;/strong&gt;: The maximum amount of data that can be grabbed and placed in a segment.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Maximum transmission Unit (MTU)&lt;/strong&gt;: Length of the largest link-layer frame that can be sent by the local sending 
-host.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;TCP segments&lt;/strong&gt;: Passed down to the network layer, where they are separately encapsulated within network-layer IP 
-datagrams.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-tcp-segment-structure&quot;&gt;2️⃣ TCP Segment Structure&lt;/h2&gt;
-
-&lt;p&gt;The TCP segment header contains the following fields:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Source and destination port numbers&lt;/strong&gt; which is used for multiplexing/demultiplexing data from/to upper-layer 
-applications.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Checksum field&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;The 32-bit &lt;strong&gt;sequence number field&lt;/strong&gt; and the 32-bit &lt;strong&gt;acknowledgement number field&lt;/strong&gt; are used by the TCP sender and 
-receiver in implementing a reliable data transfer service.&lt;/li&gt;
-  &lt;li&gt;The 16-bit &lt;strong&gt;receive window&lt;/strong&gt; field is used for flow control.&lt;/li&gt;
-  &lt;li&gt;The 4-bit &lt;strong&gt;header length field&lt;/strong&gt; specifies the length of the TCP header in 32-bit words. The TCP header can be of 
-variable length due to the TCP options field.&lt;/li&gt;
-  &lt;li&gt;The optional and variable-length &lt;strong&gt;options field&lt;/strong&gt; is used when a sender and receiver negotiate the maximum segment 
-size (MSS) or as a window scaling factor for use in high-speed networks. A time-stamping option is also defined.&lt;/li&gt;
-  &lt;li&gt;The &lt;strong&gt;flag field&lt;/strong&gt; contains 6 bits. The ACK bit is used to indicate that the value carried in the acknowledgement 
-field is valid; that is, the segment contains an acknowledgement for a segment that has been successfully received. The 
-&lt;strong&gt;RST&lt;/strong&gt;, &lt;strong&gt;SYN&lt;/strong&gt;, and &lt;strong&gt;FIN&lt;/strong&gt; bits are used for connection setup and teardown. The CWR and ECE bits are used in explicit
-congestion notification. Setting the &lt;strong&gt;PSH&lt;/strong&gt; bit indicates that the receiver should pass the data to the upper layer 
-immediately. Finally, the &lt;strong&gt;URG&lt;/strong&gt; bit is used to indicate that there is data in this segment that the sending-side 
-upper-layer entity has marked as “urgent”. The location of the last byte of this urgent data is indicated by the 16-bit 
-&lt;strong&gt;urgent data pointer field&lt;/strong&gt;. TCP must inform the receiving-side upper-layer entity when urgent data exists and pass it
-a pointer to the end of the urgent data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;sequence-numbers-and-acknowledgement-numbers&quot;&gt;Sequence Numbers and Acknowledgement Numbers&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Sequence number for a segment&lt;/strong&gt;: The byte-stream number of the first byte in the segment.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Cumulative acknowledgements&lt;/strong&gt;: The concept of TCP that it only acknowledges bytes up to the first missing byte in 
-the stream.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When a computer receives out-of-order segments in a TCP connection, the programming implementing a TCP implementation 
-can decide to either:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The receiver immediately discards out-of-order segments&lt;/li&gt;
-  &lt;li&gt;The receiver keeps the out-of-order bytes and waits for the missing bytes to fill in the gaps.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;telnet-a-case-study-for-sequence-and-acknowledgement-numbers&quot;&gt;Telnet: A Case Study for Sequence and Acknowledgement Numbers&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Piggybacked&lt;/strong&gt;: The acknowledgement for client-to-server data is carried in a segment carrying server-to-client data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3️⃣-round-trip-time-estimation-and-timeout&quot;&gt;3️⃣ Round-Trip Time Estimation and Timeout&lt;/h2&gt;
-&lt;h3 id=&quot;estimating-the-round-trip-time&quot;&gt;Estimating the Round-Trip Time&lt;/h3&gt;
-
-&lt;p&gt;Upon obtaining a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt;, TCP updates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt; according to the following formula:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;(1-\alpha)&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;\alpha&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;EstimatedRTT&lt;/strong&gt;: An average, which the new value of &lt;strong&gt;EstimatedRTT&lt;/strong&gt; is a weighted combination of the previous value 
-&lt;strong&gt;EstimatedRTT&lt;/strong&gt; and the new value for &lt;strong&gt;SampleRTT&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The recommended value of α is α = 0.125, in which case the formula above becomes:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?EstimatedRTT&amp;space;=&amp;space;0.875&amp;space;\cdot&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;0.125&amp;space;\cdot&amp;space;SampleRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Exponential weighted moving average (EWMA)&lt;/strong&gt;: The weighted average puts more weight on recent samples better reflect
-the current congestion in the network. The word “exponential” appears because the weight of a given &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; decays 
-exponentially fast as the updates proceed.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; is an estimate of how much &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; typically deviates from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EstimatedRTT&lt;/code&gt;:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?DevRTT&amp;amp;space;=&amp;amp;space;(1-\beta)&amp;amp;space;\cdot&amp;amp;space;DevRTT&amp;amp;space;&amp;amp;plus;&amp;amp;space;\beta&amp;amp;space;\cdot&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;SampleRTT&amp;amp;space;-&amp;amp;space;EstimatedRTT&lt;/td&gt;
-      &lt;td&gt;)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;If the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SampleRTT&lt;/code&gt; values have little fluctuation, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DevRTT&lt;/code&gt; wil be small and vica-versa. The recommended value of β 
-is 0.25.&lt;/p&gt;
-
-&lt;h3 id=&quot;setting-and-managing-the-retransmission-timeout-interval&quot;&gt;Setting and Managing the Retransmission Timeout Interval&lt;/h3&gt;
-
-&lt;p&gt;Formula to determine the retransmission timeout interval:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?TimeoutInterval&amp;space;=&amp;space;EstimatedRTT&amp;space;&amp;plus;&amp;space;4&amp;space;\cdot&amp;space;DevRTT&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;An initial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeoutInterval&lt;/code&gt; value of 1 second is recommended.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4️⃣-reliable-data-transfer&quot;&gt;4️⃣ Reliable Data Transfer&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Reliable data transfer service&lt;/strong&gt;: Created by TCP on top of IP’s unreliable best-effort service, it ensures that the
-data stream that a process reads out of its TCP receive buffer is uncorrupted, without gaps, without duplication, and in
-sequence.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The 3 major events related to data transmission and retransmission in the TCP sender&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Data received from application above.&lt;/li&gt;
-  &lt;li&gt;Timer timeout&lt;/li&gt;
-  &lt;li&gt;ACK receipt&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;a-few-interesting-scenarios&quot;&gt;A Few Interesting Scenarios&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;doubling-the-timeout-interval&quot;&gt;Doubling the Timeout Interval&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fast-retransmit&quot;&gt;Fast Retransmit&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Duplicate ACK&lt;/strong&gt;: An ACK that re-acknowledges a segment for which the sender has already received an earlier
-acknowledgement.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Fast retransmit&lt;/strong&gt;: Retransmission of the missing segment before that segment’s timer expires.Performed by sender 
-when three duplicate ACKs are received.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;event: ACK received, with ACK field value of y
-            if (y &amp;gt; SendBase) {
-                sendBase = y
-                if (there are currently any not yet acknowledged segments)
-                    start timer
-            }
-            else { /* a duplicate ACK for already ACKed segment */
-                increment number of duplicate ACKs received for y
-                if (number of duplicate ACKs received for y == 3)
-                /* TCP fast retrnasmit */
-                    resend segment with sequence number y
-            }
-        break;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;go-back-n-or-selective-repeat&quot;&gt;Go-Back-N or Selective Repeat?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Selective acknowledgement&lt;/strong&gt;: A proposed modification to TCP, it allows a TCP receiver to acknowledge out-of-order
-segments selectively rather than just cumulatively acknowledging the last correctly received, in-order segment.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5️⃣-flow-control&quot;&gt;5️⃣ Flow Control&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Flow-control service&lt;/strong&gt;: Provided by TCP to its applications, it eliminates the possibility of the sender overflowing
-the receiver’s buffer.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Congestion control&lt;/strong&gt;: A TCP sender can also be throttled due to congestion within the IP network.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Receiver window&lt;/strong&gt;: A variable maintained by the sender for flow control.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Host B allocates a receive buffer to this connection; denote its size by &lt;em&gt;RcvBuffer&lt;/em&gt;. From time to time, the application
-process in Host B reads from the buffer. Define the following variables:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;LastByteRead&lt;/em&gt;: The number of the last byte in the data stream read from the buffer by the application process in B.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;LastByteRcvd&lt;/em&gt;: The number of the last byte in the data stream that has arrived from the network and has been placed
-in the receive buffer at B.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Because TCP is not permitted to overflow the allocated buffer, we must have&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;LastByteRcvd&lt;/em&gt; - &lt;em&gt;LastByteRead&lt;/em&gt; &amp;lt;= &lt;em&gt;RcvBuffer&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The receive window, denoted &lt;em&gt;rwnd&lt;/em&gt; is set to the amount fo spare room in the buffer:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;rwnd&lt;/em&gt; = &lt;em&gt;RcvBuffer&lt;/em&gt; - [ &lt;em&gt;LastByteRcvd&lt;/em&gt; - &lt;em&gt;LastByteRead&lt;/em&gt; ]&lt;/p&gt;
-
-&lt;p&gt;Host A makes sure throughout the connection’s life that&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;LastByteSent&lt;/em&gt; - &lt;em&gt;LastByteAcked&lt;/em&gt; &amp;lt;= &lt;em&gt;rwnd&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;6️⃣-tcp-connection-management&quot;&gt;6️⃣ TCP Connection Management&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;SYNACK segment&lt;/strong&gt;: Connection-granted segment.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How TCP connection is established&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;The client-side TCP first sends a special TCP segment to the server-side TCP. This special segment contains segment
-to the server-side TCP. This special segment contains no application layer data. But one of the flag bits in the
-segment’s header, the SYN bit, is set to 1. In addition, the client randomly chooses an initial sequence number 
-(&lt;em&gt;client_isn&lt;/em&gt;) and puts this number in the sequence number field of the initial TCP SYN segment. This segment is
-encapsulated within an IP datagram and sent to the server.&lt;/li&gt;
-  &lt;li&gt;Once the IP datagram containing the TCP SYN segment arrives at the server host, the server extracts the TCP SYN
-segment from the datagram, allocates the TCP buffers and variables to the connection, and sends a connection-granted
-segment to the client TCP. This connection-granted segment also contains no application-layer data. However, it does
-contain three important information in the segment header. First, the SYN bit is set to 1. Second, the acknowledgement
-field of the TCP segment header is set to &lt;em&gt;client_isn+1&lt;/em&gt;. Finally, the server chooses its own initial sequence number
-(&lt;em&gt;server_isn&lt;/em&gt;) and puts this value in the sequence number field of the TCP segment header.&lt;/li&gt;
-  &lt;li&gt;Upon receiving the SYNACK segment, the client also allocates buffers and variables to the connection. The client host
-then sends the server yet another segment; this last segment acknowledges the server’s connection-granted segment. The
-SYN bit is set to zero, since the connection is established. This third stage of the three-way handshake may carry
-client-to-server data in the segment payload.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;TCP states&lt;/strong&gt;: The TCP protocol running in each host makes transitions with this during the life of a TCP connection.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/10/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;To explore a specific TCP port, say port 8080, on a target host, nmap will send a TCP SYN segment with destination port
-8080 to that host. There are 3 possible outcomes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The source host receives a TCP SYNACK segment from the target host. Since this means that an application is running
-with TCP port 8080 on the target post, nmap returns “open”.&lt;/li&gt;
-  &lt;li&gt;The source host receives a TCP RST segment from the target host. This means that the SYN segment reached the target
-host, but the target host is not running an application with TCP port 8080. But the attacker at least knows that the
-segments destined to the host at port 8080 are not blocked by any firewall on the path between source and target hosts.&lt;/li&gt;
-  &lt;li&gt;The source receives nothing. This likely means that the SYN segment was blocked by an intervening firewall and never
-reached the target host.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The TCP Connection Connection-oriented: Before one application process can begin to send data to another, the two processes must first “handshake” with each other - that is, they must send some preliminary segments to each other to establish the parameters of ensuing data transfer. Full-duplex service: If there is a TCP connection between Process A on one host and Process B on another host, then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from Process A to Process B. Point-to-point: Between a single sender and a single receiver. Multicasting: The transfer of data from one sender to many receivers in a single send operation, which is not possible with TCP. Three-way handshake: Three segments sent between the two hosts. Send buffer: One of the buffers that is set aside during the initial three-way handshake. Maximum segment size (MSS): The maximum amount of data that can be grabbed and placed in a segment. Maximum transmission Unit (MTU): Length of the largest link-layer frame that can be sent by the local sending host. TCP segments: Passed down to the network layer, where they are separately encapsulated within network-layer IP datagrams.</summary></entry><entry><title type="html">Intelligent Information Systems - Selenium</title><link href="/Intelligent_Information-Selenium" rel="alternate" type="text/html" title="Intelligent Information Systems - Selenium" /><published>2022-11-09T00:00:00+09:00</published><updated>2022-11-09T00:00:00+09:00</updated><id>/Intelligent_Information-Selenium</id><content type="html" xml:base="/Intelligent_Information-Selenium">&lt;h3 id=&quot;get-all-the-location&quot;&gt;Get all the location&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;selenium.webdriver.chrome.options&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_experimental_option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;prefs&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;download.default_directory&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/Users/gs97ahn/Development/jupyter-notebook-workspace/Excercises/Week10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webdriver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Chrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/Users/gs97ahn/Development/jupyter-notebook-workspace/Excercises/chromedriver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;main_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://www.opinet.co.kr/user/main/mainView.do&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://www.opinet.co.kr/searRgSelect.do&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;sigungu_xpath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;SIGUNGU_NM0&quot;]&apos;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gu_list_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sigungu_xpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gu_list_raw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;tag name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;option&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;install-all-location-data-in-excel&quot;&gt;Install all location data in excel&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tqdm.notebook&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tqdm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gu_xpath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;SIGUNGU_NM0&quot;]&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gu_xpath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gu_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;search_button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;searRgSelect&quot;]&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;save_excel_button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;//*[@id=&quot;glopopd_excel&quot;]&apos;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;xpath&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;save_excel_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;read-excel-data&quot;&gt;Read excel data&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;glob&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;station_files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;glob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;지역*.xls&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;station_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_excel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;stations&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;exception-handling&quot;&gt;Exception Handling&lt;/h3&gt;
-
-&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;가격 != &apos;-&apos;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stations_sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/08/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Intelligent Information Systems Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201019&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Youhyun Shin&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Get all the location</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Causes and the Costs of Congestion Scenario 1: Two Senders, a Router with Infinite Buffers Per-connection throughput: Number of bytes per second at the receiver</summary></entry></feed>

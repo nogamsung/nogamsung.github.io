@@ -8,6 +8,69 @@
     
       
       <item>
+        <title>Computer Network - Middleboxes</title>
+        
+          <description>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Middleboxes&lt;/strong&gt;: Any intermediary box performing functions apart from normal, standard functions of an IP router on
+the data path between a source hose and destination host.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 02 Dec 2022 01:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Middleboxes</link>
+        <guid isPermaLink="true">/Computer_Network-Middleboxes</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Generalized Forwarding and SDN</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/01/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 02 Dec 2022 00:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Generalized_Forwarding_and_SDN</link>
+        <guid isPermaLink="true">/Computer_Network-Generalized_Forwarding_and_SDN</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - The Internet Protocol (IP)</title>
+        
+          <description>&lt;h2 id=&quot;1️⃣-ipv4-datagram-format&quot;&gt;1️⃣ IPv4 Datagram Format&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 02 Dec 2022 00:00:00 +0900</pubDate>
+        <link>
+        /Computer_Network-The_Internet_Protocol_(IP)</link>
+        <guid isPermaLink="true">/Computer_Network-The_Internet_Protocol_(IP)</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - What is Inside a Router</title>
+        
+          <description>&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/28/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 28 Nov 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-What_is_Inside_a_Router</link>
+        <guid isPermaLink="true">/Computer_Network-What_is_Inside_a_Router</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Big Data - Text Mining (LSA) Visualization</title>
         
           <description>&lt;h3 id=&quot;vs-model-in-practice&quot;&gt;VS model in practice&lt;/h3&gt;

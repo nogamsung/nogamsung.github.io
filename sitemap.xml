@@ -4,6 +4,70 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>/Computer_Network-Middleboxes.html</loc>
+        
+        <lastmod>2022-12-02T01:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-Generalized_Forwarding_and_SDN.html</loc>
+        
+        <lastmod>2022-12-02T00:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-The_Internet_Protocol_(IP).html</loc>
+        
+        <lastmod>2022-12-02T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>/Computer_Network-What_is_Inside_a_Router.html</loc>
+        
+        <lastmod>2022-11-28T19:30:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>/Big_Data-Text_Mining_(LSA)_Visualization.html</loc>
         
         <lastmod>2022-11-28T00:00:00+09:00</lastmod>
