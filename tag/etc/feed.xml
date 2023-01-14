@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/etc/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-12-11T17:17:18+09:00</updated>
+  <updated>2023-01-14T19:05:09+09:00</updated>
   <id>/tag/etc/feed.xml</id>
 
   
@@ -919,45 +919,6 @@ disappear. Therefore, when the pawn respawn, the original controller must be rec
     </entry>
   
     <entry>
-      <title type="html">Graduation Project - First Project</title>
-      <link href="/Graduation_Project-First_Project" rel="alternate" type="text/html" title="Graduation Project - First Project" />
-      <published>2022-09-29T00:00:00+09:00</published>
-      <updated>2022-09-29T00:00:00+09:00</updated>
-      <id>/Graduation_Project-First_Project</id>
-      <content type="html" xml:base="/Graduation_Project-First_Project">&lt;h2 id=&quot;what-is-capstone-design&quot;&gt;What is Capstone Design?&lt;/h2&gt;
-
-&lt;p&gt;I currently attend Incheon National University located in Incheon, South Korea. Upon graduation, the university requires
-all of its student to make a software program.&lt;/p&gt;
-
-&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="etc" />
-      
-
-      
-        <summary type="html">What is Capstone Design?</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">Unreal Engine - Custom Event and Event Dispatcher</title>
       <link href="/Unreal_Engine-Custom_Event_and_Event_Dispatcher" rel="alternate" type="text/html" title="Unreal Engine - Custom Event and Event Dispatcher" />
       <published>2022-09-28T19:30:00+09:00</published>
@@ -1343,6 +1304,162 @@ all of its student to make a software program.&lt;/p&gt;
 
       
         <summary type="html">Blueprint</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Unreal Engine - Game Mode and Pawn</title>
+      <link href="/Unreal_Engine-Game_Mode_and_Pawn" rel="alternate" type="text/html" title="Unreal Engine - Game Mode and Pawn" />
+      <published>2022-09-20T01:30:00+09:00</published>
+      <updated>2022-09-20T01:30:00+09:00</updated>
+      <id>/Unreal_Engine-Game_Mode_and_Pawn</id>
+      <content type="html" xml:base="/Unreal_Engine-Game_Mode_and_Pawn">&lt;h2 id=&quot;concept-of-class&quot;&gt;Concept of Class&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is &lt;strong&gt;Class&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;C++: expressed in object as it is an object-oriented language&lt;/li&gt;
+      &lt;li&gt;Object is implemented in class&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt; is a part that is implemented in class&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What is &lt;strong&gt;Blueprint&lt;/strong&gt;?
+    &lt;ul&gt;
+      &lt;li&gt;In Unreal Engine, you can use &lt;strong&gt;blueprint&lt;/strong&gt;, similar to C++, it is a visual script language&lt;/li&gt;
+      &lt;li&gt;The blueprint is a C++ class internally&lt;/li&gt;
+      &lt;li&gt;Therefore, C++ class and blueprint class is similar in characteristic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ways to implement class: C++ or Blueprint
+    &lt;ul&gt;
+      &lt;li&gt;The way it to implement is not essential&lt;/li&gt;
+      &lt;li&gt;Categorized into &lt;strong&gt;C++ class&lt;/strong&gt; or &lt;strong&gt;blueprint class&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Example of Class
+    &lt;ul&gt;
+      &lt;li&gt;Object class, Actor class, pawn class, and so on&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;game-framework&quot;&gt;Game Framework&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every game needs to have basic structure
+    &lt;ul&gt;
+      &lt;li&gt;Player character, player controller, camera, and so on&lt;/li&gt;
+      &lt;li&gt;Even if you use an empty template, you need include a minimum game structure&lt;/li&gt;
+      &lt;li&gt;The game structure in UE is “Game Framework”&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Game Mode
+    &lt;ul&gt;
+      &lt;li&gt;Object that express the rules for a game to be played&lt;/li&gt;
+      &lt;li&gt;Decides the player and camera in a map during the “Game Mode”&lt;/li&gt;
+      &lt;li&gt;If it is not altered, the standard game mode is set to default&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;core-class&quot;&gt;Core Class&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Core classes in UE
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt;: A class located at the top of all class, all of the classes are derived from this class.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Actor&lt;/strong&gt;: Place a class in level. It is a child class of an object.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Pawn&lt;/strong&gt;: A class that has a physical looks, such as player or A.I. It is child class of an actor.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Character&lt;/strong&gt;: A class that is able to walk or do any type of movement function. It is a child class of a pawn.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Player controller&lt;/strong&gt;: A class that controls a player’s pawn. It is a child class of an actor.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Game mode&lt;/strong&gt;: A class that express the rules for a game. It is a child class of an actor.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Name of the core class
+    &lt;ul&gt;
+      &lt;li&gt;Class is usually omitted. So just say object, actor, pawn, player controller, and character.&lt;/li&gt;
+      &lt;li&gt;Name of the class implemented in C++: UObject, APawn, ACharacter, APlayerController, AGameMode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;blueprint&quot;&gt;Blueprint&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is blueprint?
+    &lt;ul&gt;
+      &lt;li&gt;Visual script system provided by UE
+        &lt;ul&gt;
+          &lt;li&gt;Node based development environment that uses the mouse to connect commands.&lt;/li&gt;
+          &lt;li&gt;Easy. -&amp;gt; All producers can participate in development.&lt;/li&gt;
+          &lt;li&gt;Block assemble form that reduces the grammatical error.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Good when making interactive assets
+        &lt;ul&gt;
+          &lt;li&gt;Event process script&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Easy to combine various functions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Making blueprint object
+    &lt;ul&gt;
+      &lt;li&gt;You can use C++ to make a class or use the blueprint.&lt;/li&gt;
+      &lt;li&gt;Blueprint class is a powerful means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;concept-of-component&quot;&gt;Concept of Component&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Component
+    &lt;ul&gt;
+      &lt;li&gt;A single blueprint class has many component inside a component container&lt;/li&gt;
+      &lt;li&gt;Component is added to a blueprint class to act as a class&lt;/li&gt;
+      &lt;li&gt;Different components do different tasks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Types of component
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Actor component&lt;/strong&gt;: A base class component that does not have any transform data.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Scene Component&lt;/strong&gt;: A child class of an actor component that has transform data.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Primitive component&lt;/strong&gt;: A child class of a scene component that has graphic expression.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Entertainment Software Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=1282578&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24008&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Jongseung Park&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9788968482809&quot; target=&quot;_blank&quot;&gt;실전 게임 제작으로 배우는 언리얼 엔진 4 by 윤인성&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;amp;ejkGb=KOR&amp;amp;barcode=9791156005896&quot; target=&quot;_blank&quot;&gt;언리얼 게임개봘과 시뮬레이션 by 박종승, 오경수&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="etc" />
+      
+
+      
+        <summary type="html">Concept of Class</summary>
       
 
       

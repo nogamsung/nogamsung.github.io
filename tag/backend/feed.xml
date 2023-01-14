@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2022-12-11T17:17:18+09:00</updated>
+  <updated>2023-01-14T19:05:09+09:00</updated>
   <id>/tag/backend/feed.xml</id>
 
   
@@ -32,12 +32,12 @@
 
   
     <entry>
-      <title type="html">Spring Boot - Injecting Data using Implemented Service</title>
-      <link href="/Spring_Boot-Injecting_Data_using_Implemented_Service" rel="alternate" type="text/html" title="Spring Boot - Injecting Data using Implemented Service" />
+      <title type="html">Spring - Injecting Data using Implemented Service</title>
+      <link href="/Spring-Injecting_Data_using_Implemented_Service" rel="alternate" type="text/html" title="Spring - Injecting Data using Implemented Service" />
       <published>2022-09-07T09:08:00+09:00</published>
       <updated>2022-09-07T09:08:00+09:00</updated>
-      <id>/Spring_Boot-Injecting_Data_using_Implemented_Service</id>
-      <content type="html" xml:base="/Spring_Boot-Injecting_Data_using_Implemented_Service">&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one
+      <id>/Spring-Injecting_Data_using_Implemented_Service</id>
+      <content type="html" xml:base="/Spring-Injecting_Data_using_Implemented_Service">&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one
 of the options that I had was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CommandLineRunner&lt;/code&gt;. However, I wanted to make my &lt;strong&gt;code clean&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;commandlinerunner-example&quot;&gt;CommandLineRunner Example&lt;/h4&gt;
@@ -113,12 +113,12 @@ specific codes that I need for inserting data. Also, I personally think that thi
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - Sending Email</title>
-      <link href="/Spring_Boot-Sending_Email" rel="alternate" type="text/html" title="Spring Boot - Sending Email" />
+      <title type="html">Spring - Sending Email</title>
+      <link href="/Spring-Sending_Email" rel="alternate" type="text/html" title="Spring - Sending Email" />
       <published>2022-08-26T11:26:00+09:00</published>
       <updated>2022-08-26T11:26:00+09:00</updated>
-      <id>/Spring_Boot-Sending_Email</id>
-      <content type="html" xml:base="/Spring_Boot-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
+      <id>/Spring-Sending_Email</id>
+      <content type="html" xml:base="/Spring-Sending_Email">&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
 &lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
 just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spring-boot-starter-mail&lt;/code&gt;.&lt;/p&gt;
 
@@ -147,27 +147,27 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
 
 &lt;p&gt;1️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manage your Google Account&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-1.png&quot; alt=&quot;screenshot-1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Security&lt;/code&gt; from the left menu&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-2.png&quot; alt=&quot;screenshot-2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;3️⃣ Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App passwords&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-3.png&quot; alt=&quot;screenshot-3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;4️⃣ Select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Other (Custom name)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-4.png&quot; alt=&quot;screenshot-4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;5️⃣ Name the app password and click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GENERATE&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-5.png&quot; alt=&quot;screenshot-5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;6️⃣ Finally, you will get your app password&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/08/26/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../../assets/screenshots/2022/08/26/screenshot-6.png&quot; alt=&quot;screenshot-6&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
 
@@ -228,12 +228,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - Validation Sequence</title>
-      <link href="/Spring_Boot-Validation_Sequence" rel="alternate" type="text/html" title="Spring Boot - Validation Sequence" />
+      <title type="html">Spring - Validation Sequence</title>
+      <link href="/Spring-Validation_Sequence" rel="alternate" type="text/html" title="Spring - Validation Sequence" />
       <published>2022-08-19T01:12:00+09:00</published>
       <updated>2022-08-19T01:12:00+09:00</updated>
-      <id>/Spring_Boot-Validation_Sequence</id>
-      <content type="html" xml:base="/Spring_Boot-Validation_Sequence">&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
+      <id>/Spring-Validation_Sequence</id>
+      <content type="html" xml:base="/Spring-Validation_Sequence">&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
 &lt;p&gt;When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, you probably want to validate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;. In this case you need to validate data in a specific sequence.&lt;/p&gt;
 
 &lt;h4 id=&quot;dependency&quot;&gt;Dependency&lt;/h4&gt;
@@ -301,12 +301,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - @Email</title>
-      <link href="/Spring_Boot-@Email" rel="alternate" type="text/html" title="Spring Boot - @Email" />
+      <title type="html">Spring - @Email</title>
+      <link href="/Spring-@Email" rel="alternate" type="text/html" title="Spring - @Email" />
       <published>2022-08-05T09:44:00+09:00</published>
       <updated>2022-08-05T09:44:00+09:00</updated>
-      <id>/Spring_Boot-@Email</id>
-      <content type="html" xml:base="/Spring_Boot-@Email">&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
+      <id>/Spring-@Email</id>
+      <content type="html" xml:base="/Spring-@Email">&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
 &lt;p&gt;To validate email, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Email&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;problem-with-email&quot;&gt;Problem with @Email&lt;/h4&gt;
@@ -353,12 +353,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - @Size, @Length, and @Column(length=value)</title>
-      <link href="/Spring_Boot-@Size_@Length_and_@Column(length=value)" rel="alternate" type="text/html" title="Spring Boot - @Size, @Length, and @Column(length=value)" />
+      <title type="html">Spring - @Size, @Length, and @Column(length=value)</title>
+      <link href="/Spring-@Size_@Length_and_@Column(length=value)" rel="alternate" type="text/html" title="Spring - @Size, @Length, and @Column(length=value)" />
       <published>2022-07-26T10:52:00+09:00</published>
       <updated>2022-07-26T10:52:00+09:00</updated>
-      <id>/Spring_Boot-@Size_@Length_and_@Column(length=value)</id>
-      <content type="html" xml:base="/Spring_Boot-@Size_@Length_and_@Column(length=value)">&lt;h3 id=&quot;difference-between-size-length-and-column&quot;&gt;Difference between @Size, @Length, and @Column&lt;/h3&gt;
+      <id>/Spring-@Size_@Length_and_@Column(length=value)</id>
+      <content type="html" xml:base="/Spring-@Size_@Length_and_@Column(length=value)">&lt;h3 id=&quot;difference-between-size-length-and-column&quot;&gt;Difference between @Size, @Length, and @Column&lt;/h3&gt;
 &lt;p&gt;For some fields when getting a request from a client, there is a minimum or maximum length of the field. There are three annotations that developers use which are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Length&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Column&lt;/code&gt;. Let’s find the difference between these three annotations.&lt;/p&gt;
 
 &lt;h4 id=&quot;size&quot;&gt;@Size&lt;/h4&gt;
@@ -428,12 +428,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - Data Type vs Object</title>
-      <link href="/Spring_Boot-Data_Type_vs_Object" rel="alternate" type="text/html" title="Spring Boot - Data Type vs Object" />
+      <title type="html">Spring - Data Type vs Object</title>
+      <link href="/Spring-Data_Type_vs_Object" rel="alternate" type="text/html" title="Spring - Data Type vs Object" />
       <published>2022-07-19T00:22:00+09:00</published>
       <updated>2022-07-19T00:22:00+09:00</updated>
-      <id>/Spring_Boot-Data_Type_vs_Object</id>
-      <content type="html" xml:base="/Spring_Boot-Data_Type_vs_Object">&lt;h3 id=&quot;which-one-to-use-char-vs-character&quot;&gt;Which One to Use? char vs Character&lt;/h3&gt;
+      <id>/Spring-Data_Type_vs_Object</id>
+      <content type="html" xml:base="/Spring-Data_Type_vs_Object">&lt;h3 id=&quot;which-one-to-use-char-vs-character&quot;&gt;Which One to Use? char vs Character&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -693,12 +693,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - BaseTimeEntity for MongoDB</title>
-      <link href="/Spring_Boot-BaseTimeEntity_for_MongoDB" rel="alternate" type="text/html" title="Spring Boot - BaseTimeEntity for MongoDB" />
+      <title type="html">Spring - BaseTimeEntity for MongoDB</title>
+      <link href="/Spring-BaseTimeEntity_for_MongoDB" rel="alternate" type="text/html" title="Spring - BaseTimeEntity for MongoDB" />
       <published>2022-07-18T01:29:00+09:00</published>
       <updated>2022-07-18T01:29:00+09:00</updated>
-      <id>/Spring_Boot-BaseTimeEntity_for_MongoDB</id>
-      <content type="html" xml:base="/Spring_Boot-BaseTimeEntity_for_MongoDB">&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;
+      <id>/Spring-BaseTimeEntity_for_MongoDB</id>
+      <content type="html" xml:base="/Spring-BaseTimeEntity_for_MongoDB">&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;
 &lt;p&gt;I currently am working on a project and I need to use MongoDB. I came to realize that I cannot use JPA anymore and need to setup BaseTimeEntity differently when using MongoDB.&lt;/p&gt;
 
 &lt;h4 id=&quot;1️⃣-create-basetimeentityjava&quot;&gt;1️⃣ Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BaseTimeEntity.java&lt;/code&gt;&lt;/h4&gt;
@@ -766,12 +766,12 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
     </entry>
   
     <entry>
-      <title type="html">Spring Boot - build.gradle for Production</title>
-      <link href="/Spring_Boot-build_gradle_for_Production" rel="alternate" type="text/html" title="Spring Boot - build.gradle for Production" />
+      <title type="html">Spring - build.gradle for Production</title>
+      <link href="/Spring-build_gradle_for_Production" rel="alternate" type="text/html" title="Spring - build.gradle for Production" />
       <published>2022-07-03T22:26:00+09:00</published>
       <updated>2022-07-03T22:26:00+09:00</updated>
-      <id>/Spring_Boot-build_gradle_for_Production</id>
-      <content type="html" xml:base="/Spring_Boot-build_gradle_for_Production">&lt;h3 id=&quot;code-buildgradle-for-dockerization-and-production&quot;&gt;Code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; for Dockerization and Production&lt;/h3&gt;
+      <id>/Spring-build_gradle_for_Production</id>
+      <content type="html" xml:base="/Spring-build_gradle_for_Production">&lt;h3 id=&quot;code-buildgradle-for-dockerization-and-production&quot;&gt;Code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; for Dockerization and Production&lt;/h3&gt;
 &lt;p&gt;The famous Byeong-Joon Song became a friend of mine recently, and apparently he uses this code for dockerization and production of Spring server. I looked at the code, and it is astonishing.&lt;/p&gt;
 
 &lt;h4 id=&quot;0️⃣-setup&quot;&gt;0️⃣ Setup&lt;/h4&gt;

@@ -8,6 +8,38 @@
     
       
       <item>
+        <title>Computer Network - Routing Algorithms</title>
+        
+          <description>&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Routing algorithms&lt;/strong&gt;: Its goal is to determine good path, from senders to receivers, through the network of routers.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 05 Dec 2022 19:40:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Routing_Algorithms</link>
+        <guid isPermaLink="true">/Computer_Network-Routing_Algorithms</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Network - Introduction to Control Plane</title>
+        
+          <description>&lt;p&gt;Two possible approaches to computation, maintenance, and installation of forwarding and flow tables are:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 05 Dec 2022 19:30:00 +0900</pubDate>
+        <link>
+        /Computer_Network-Introduction_to_Control_Plane</link>
+        <guid isPermaLink="true">/Computer_Network-Introduction_to_Control_Plane</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Computer Network - Middleboxes</title>
         
           <description>&lt;ul&gt;
@@ -777,21 +809,6 @@ the base stations.&lt;/li&gt;
     
       
       <item>
-        <title>Graduation Project - First Project</title>
-        
-          <description>&lt;h2 id=&quot;what-is-capstone-design&quot;&gt;What is Capstone Design?&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Thu, 29 Sep 2022 00:00:00 +0900</pubDate>
-        <link>
-        /Graduation_Project-First_Project</link>
-        <guid isPermaLink="true">/Graduation_Project-First_Project</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Unreal Engine - Custom Event and Event Dispatcher</title>
         
           <description>&lt;h2 id=&quot;event-node&quot;&gt;Event Node&lt;/h2&gt;
@@ -1143,7 +1160,7 @@ the base stations.&lt;/li&gt;
     
       
       <item>
-        <title>Spring Boot - Injecting Data using Implemented Service</title>
+        <title>Spring - Injecting Data using Implemented Service</title>
         
           <description>&lt;p&gt;I needed to inject some data that are in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csv&lt;/code&gt; format when starting Spring Boot using the &lt;strong&gt;service&lt;/strong&gt;. I know that one
 of the options that I had was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CommandLineRunner&lt;/code&gt;. However, I wanted to make my &lt;strong&gt;code clean&lt;/strong&gt;.&lt;/p&gt;
@@ -1152,8 +1169,8 @@ of the options that I had was &lt;code class=&quot;language-plaintext highlighte
         
         <pubDate>Wed, 07 Sep 2022 09:08:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Injecting_Data_using_Implemented_Service</link>
-        <guid isPermaLink="true">/Spring_Boot-Injecting_Data_using_Implemented_Service</guid>
+        /Spring-Injecting_Data_using_Implemented_Service</link>
+        <guid isPermaLink="true">/Spring-Injecting_Data_using_Implemented_Service</guid>
       </item>
       
     
@@ -1273,7 +1290,7 @@ Analysis, etc.&lt;/li&gt;
     
       
       <item>
-        <title>Spring Boot - Sending Email</title>
+        <title>Spring - Sending Email</title>
         
           <description>&lt;h3 id=&quot;how-would-you-send-email-using-spring-boot&quot;&gt;How would you send email using Spring Boot?&lt;/h3&gt;
 &lt;p&gt;Often times, you would need to communicate with your users by sending them emails. This is very simple to do, if you
@@ -1283,8 +1300,8 @@ just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spri
         
         <pubDate>Fri, 26 Aug 2022 11:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Sending_Email</link>
-        <guid isPermaLink="true">/Spring_Boot-Sending_Email</guid>
+        /Spring-Sending_Email</link>
+        <guid isPermaLink="true">/Spring-Sending_Email</guid>
       </item>
       
     
@@ -1325,7 +1342,7 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
     
       
       <item>
-        <title>Spring Boot - Validation Sequence</title>
+        <title>Spring - Validation Sequence</title>
         
           <description>&lt;h3 id=&quot;why-validation-sequence-is-necessary&quot;&gt;Why Validation Sequence is Necessary?&lt;/h3&gt;
 &lt;p&gt;When working with DTOs, you are probably using a bunch of annotations to validate the data. However, what if you want to the validation to go in a specific order. For example if you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, you probably want to validate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;. In this case you need to validate data in a specific sequence.&lt;/p&gt;
@@ -1334,14 +1351,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Fri, 19 Aug 2022 01:12:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Validation_Sequence</link>
-        <guid isPermaLink="true">/Spring_Boot-Validation_Sequence</guid>
+        /Spring-Validation_Sequence</link>
+        <guid isPermaLink="true">/Spring-Validation_Sequence</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - @Email</title>
+        <title>Spring - @Email</title>
         
           <description>&lt;h3 id=&quot;email-in-use&quot;&gt;@Email in use&lt;/h3&gt;
 &lt;p&gt;To validate email, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Email&lt;/code&gt;.&lt;/p&gt;
@@ -1350,14 +1367,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Fri, 05 Aug 2022 09:44:00 +0900</pubDate>
         <link>
-        /Spring_Boot-@Email</link>
-        <guid isPermaLink="true">/Spring_Boot-@Email</guid>
+        /Spring-@Email</link>
+        <guid isPermaLink="true">/Spring-@Email</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - @Size, @Length, and @Column(length=value)</title>
+        <title>Spring - @Size, @Length, and @Column(length=value)</title>
         
           <description>&lt;h3 id=&quot;difference-between-size-length-and-column&quot;&gt;Difference between @Size, @Length, and @Column&lt;/h3&gt;
 &lt;p&gt;For some fields when getting a request from a client, there is a minimum or maximum length of the field. There are three annotations that developers use which are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Size&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Length&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Column&lt;/code&gt;. Let’s find the difference between these three annotations.&lt;/p&gt;
@@ -1366,14 +1383,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 26 Jul 2022 10:52:00 +0900</pubDate>
         <link>
-        /Spring_Boot-@Size_@Length_and_@Column(length=value)</link>
-        <guid isPermaLink="true">/Spring_Boot-@Size_@Length_and_@Column(length=value)</guid>
+        /Spring-@Size_@Length_and_@Column(length=value)</link>
+        <guid isPermaLink="true">/Spring-@Size_@Length_and_@Column(length=value)</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Data Type vs Object</title>
+        <title>Spring - Data Type vs Object</title>
         
           <description>&lt;h3 id=&quot;which-one-to-use-char-vs-character&quot;&gt;Which One to Use? char vs Character&lt;/h3&gt;
 
@@ -1381,8 +1398,8 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Tue, 19 Jul 2022 00:22:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Data_Type_vs_Object</link>
-        <guid isPermaLink="true">/Spring_Boot-Data_Type_vs_Object</guid>
+        /Spring-Data_Type_vs_Object</link>
+        <guid isPermaLink="true">/Spring-Data_Type_vs_Object</guid>
       </item>
       
     
@@ -1427,7 +1444,7 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
     
       
       <item>
-        <title>Spring Boot - BaseTimeEntity for MongoDB</title>
+        <title>Spring - BaseTimeEntity for MongoDB</title>
         
           <description>&lt;h3 id=&quot;basetimeentity-setup-for-mongodb-is-different&quot;&gt;BaseTimeEntity setup for MongoDB is different&lt;/h3&gt;
 &lt;p&gt;I currently am working on a project and I need to use MongoDB. I came to realize that I cannot use JPA anymore and need to setup BaseTimeEntity differently when using MongoDB.&lt;/p&gt;
@@ -1436,8 +1453,8 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Mon, 18 Jul 2022 01:29:00 +0900</pubDate>
         <link>
-        /Spring_Boot-BaseTimeEntity_for_MongoDB</link>
-        <guid isPermaLink="true">/Spring_Boot-BaseTimeEntity_for_MongoDB</guid>
+        /Spring-BaseTimeEntity_for_MongoDB</link>
+        <guid isPermaLink="true">/Spring-BaseTimeEntity_for_MongoDB</guid>
       </item>
       
     
@@ -1459,7 +1476,7 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
     
       
       <item>
-        <title>Spring Boot - build.gradle for Production</title>
+        <title>Spring - build.gradle for Production</title>
         
           <description>&lt;h3 id=&quot;code-buildgradle-for-dockerization-and-production&quot;&gt;Code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; for Dockerization and Production&lt;/h3&gt;
 &lt;p&gt;The famous Byeong-Joon Song became a friend of mine recently, and apparently he uses this code for dockerization and production of Spring server. I looked at the code, and it is astonishing.&lt;/p&gt;
@@ -1468,14 +1485,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sun, 03 Jul 2022 22:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-build_gradle_for_Production</link>
-        <guid isPermaLink="true">/Spring_Boot-build_gradle_for_Production</guid>
+        /Spring-build_gradle_for_Production</link>
+        <guid isPermaLink="true">/Spring-build_gradle_for_Production</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - BaseTimeEntity for SQL</title>
+        <title>Spring - BaseTimeEntity for SQL</title>
         
           <description>&lt;h3 id=&quot;use-createddate-and-lastmodifieddate&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@CreatedDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@LastModifiedDate&lt;/code&gt; to avoid the lines of code for implementing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createdDate&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lastModifiedDate&lt;/code&gt;.&lt;/p&gt;
@@ -1484,14 +1501,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Fri, 24 Jun 2022 22:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-BaseTimeEntity_for_SQL</link>
-        <guid isPermaLink="true">/Spring_Boot-BaseTimeEntity_for_SQL</guid>
+        /Spring-BaseTimeEntity_for_SQL</link>
+        <guid isPermaLink="true">/Spring-BaseTimeEntity_for_SQL</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - @NotNull, @NotBlank, and @NotEmpty</title>
+        <title>Spring - @NotNull, @NotBlank, and @NotEmpty</title>
         
           <description>&lt;h3 id=&quot;difference-between-notnull-notempty-and-notblank&quot;&gt;Difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotNull&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotEmpty&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@NotBlank&lt;/code&gt;&lt;/h3&gt;
 
@@ -1499,14 +1516,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Thu, 23 Jun 2022 23:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-@NotNull_@NotBlank_and_@NotEmpty</link>
-        <guid isPermaLink="true">/Spring_Boot-@NotNull_@NotBlank_and_@NotEmpty</guid>
+        /Spring-@NotNull_@NotBlank_and_@NotEmpty</link>
+        <guid isPermaLink="true">/Spring-@NotNull_@NotBlank_and_@NotEmpty</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - AOP</title>
+        <title>Spring - AOP</title>
         
           <description>&lt;h3 id=&quot;situations-where-aop-is-needed&quot;&gt;Situations Where AOP is Needed&lt;/h3&gt;
 &lt;ul&gt;
@@ -1519,14 +1536,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Fri, 13 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-AOP</link>
-        <guid isPermaLink="true">/Spring_Boot-AOP</guid>
+        /Spring-AOP</link>
+        <guid isPermaLink="true">/Spring-AOP</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Spring DB Access Technique</title>
+        <title>Spring - Spring DB Access Technique</title>
         
           <description>&lt;h3 id=&quot;h2-database-installation&quot;&gt;H2 Database Installation&lt;/h3&gt;
 &lt;p&gt;Provide light and convenient DB for development and test purpose&lt;/p&gt;
@@ -1535,14 +1552,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Thu, 12 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Spring_DB_Access_Technique</link>
-        <guid isPermaLink="true">/Spring_Boot-Spring_DB_Access_Technique</guid>
+        /Spring-Spring_DB_Access_Technique</link>
+        <guid isPermaLink="true">/Spring-Spring_DB_Access_Technique</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Web MVC Development</title>
+        <title>Spring - Web MVC Development</title>
         
           <description>&lt;h3 id=&quot;member-web-function---add-home-controller&quot;&gt;Member Web Function - Add Home Controller&lt;/h3&gt;
 &lt;p&gt;Add Home Controller&lt;br /&gt;
@@ -1552,14 +1569,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Mon, 09 May 2022 06:26:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Web_MVC_Development</link>
-        <guid isPermaLink="true">/Spring_Boot-Web_MVC_Development</guid>
+        /Spring-Web_MVC_Development</link>
+        <guid isPermaLink="true">/Spring-Web_MVC_Development</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Spring Bin and Dependencies Relation</title>
+        <title>Spring - Spring Bin and Dependencies Relation</title>
         
           <description>&lt;h3 id=&quot;register-srping-bin-and-set-dependencies-relation&quot;&gt;Register Srping Bin and Set Dependencies Relation&lt;/h3&gt;
 &lt;p&gt;Set dependcies relation for member controller to use member service and member repository&lt;/p&gt;
@@ -1568,14 +1585,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 10:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Spring_Bin_and_Dependencies_Relation</link>
-        <guid isPermaLink="true">/Spring_Boot-Spring_Bin_and_Dependencies_Relation</guid>
+        /Spring-Spring_Bin_and_Dependencies_Relation</link>
+        <guid isPermaLink="true">/Spring-Spring_Bin_and_Dependencies_Relation</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Backend Development</title>
+        <title>Spring - Backend Development</title>
         
           <description>&lt;h3 id=&quot;business-requirements&quot;&gt;Business Requirements&lt;/h3&gt;
 &lt;ul&gt;
@@ -1588,14 +1605,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 07:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Backend_Development</link>
-        <guid isPermaLink="true">/Spring_Boot-Backend_Development</guid>
+        /Spring-Backend_Development</link>
+        <guid isPermaLink="true">/Spring-Backend_Development</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Web Development Basics</title>
+        <title>Spring - Web Development Basics</title>
         
           <description>&lt;ul&gt;
   &lt;li&gt;Static Contents&lt;/li&gt;
@@ -1607,14 +1624,14 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 06:10:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Web_Development_Basics</link>
-        <guid isPermaLink="true">/Spring_Boot-Web_Development_Basics</guid>
+        /Spring-Web_Development_Basics</link>
+        <guid isPermaLink="true">/Spring-Web_Development_Basics</guid>
       </item>
       
     
       
       <item>
-        <title>Spring Boot - Project Environment Setting</title>
+        <title>Spring - Project Environment Setting</title>
         
           <description>&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
 &lt;ul&gt;
@@ -1626,8 +1643,8 @@ pricing that AWS provide. Basically, you can understand it as a &lt;strong&gt;re
         
         <pubDate>Sat, 07 May 2022 06:00:00 +0900</pubDate>
         <link>
-        /Spring_Boot-Project_Environment_Setting</link>
-        <guid isPermaLink="true">/Spring_Boot-Project_Environment_Setting</guid>
+        /Spring-Project_Environment_Setting</link>
+        <guid isPermaLink="true">/Spring-Project_Environment_Setting</guid>
       </item>
       
     

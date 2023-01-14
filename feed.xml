@@ -1,4 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-12-11T17:17:18+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - Middleboxes</title><link href="/Computer_Network-Middleboxes" rel="alternate" type="text/html" title="Computer Network - Middleboxes" /><published>2022-12-02T01:00:00+09:00</published><updated>2022-12-02T01:00:00+09:00</updated><id>/Computer_Network-Middleboxes</id><content type="html" xml:base="/Computer_Network-Middleboxes">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-01-14T19:05:09+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - Routing Algorithms</title><link href="/Computer_Network-Routing_Algorithms" rel="alternate" type="text/html" title="Computer Network - Routing Algorithms" /><published>2022-12-05T19:40:00+09:00</published><updated>2022-12-05T19:40:00+09:00</updated><id>/Computer_Network-Routing_Algorithms</id><content type="html" xml:base="/Computer_Network-Routing_Algorithms">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Routing algorithms&lt;/strong&gt;: Its goal is to determine good path, from senders to receivers, through the network of routers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Neighbor&lt;/strong&gt;: Used express node relationship if they belong to the same edge.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Least-cost path&lt;/strong&gt;: The path between the source and destination that has least cost.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Shortest path&lt;/strong&gt;: The path with the smallest number of links between the source and the destination.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;one-way-to-classify-routing-algorithms-is-according-to-whether-tey-are-centralized-or-decentralized&quot;&gt;One way to classify routing algorithms is according to whether tey are centralized or decentralized.&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;centralized routing algorithm&lt;/strong&gt; computes the least-cost path between a source and destination using complete,
+global knowledge about network. That is, the algorithm takes the connectivity between all nodes and all link costs as
+inputs. This then requires that the algorithm somehow obtain this information before actually performing the calculation.
+The calculation itself can be run at one site or could be replicated in the routing component of each and every router.
+The key distinguishing feature here, however, is that the algorithm has complete information about connectivity and link
+costs. Algorithm with global state information are often referred to as &lt;strong&gt;link state (LS) algorithms&lt;/strong&gt;, since the 
+algorithm must be aware of the cost of each link in the network.&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;decentralized routing algorithm&lt;/strong&gt; calculates the least-cost path and is carried out in an iterative, distributed
+manner by the routers. No node has complete information about the costs of all network links. Instead, each node begins
+with only the knowledge of the costs of its own directly attached links. Then, through an iterative process of
+calculation and exchange of information with its neighboring nodes, a node gradually calculates the least-cost path to a
+destination or set of destinations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;another-way-to-classify-routing-algorithms-is-according-to-whether-they-are-static-or-dynamic&quot;&gt;Another way to classify routing algorithms is according to whether they are static or dynamic.&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;static routing algorithms&lt;/strong&gt; routes change very slowly over time, often as a result of human intervention.&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;dynamic routing algorithms&lt;/strong&gt; change the routing paths as the network traffic loads or topology change. It can be
+run either periodically or in direct response to topology or link cost changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-last-way-to-classify-routing-algorithms-is-according-to-whether-they-are-load-sensitive-or-load-insensitive&quot;&gt;The last way to classify routing algorithms is according to whether they are load-sensitive or load-insensitive.&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;load-sensitive algorithm&lt;/strong&gt;’s costs of links vary dynamically to reflect the current level of congestion in the
+underlying link.&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;load-insensitive algorithm&lt;/strong&gt;’s costs of links does not explicitly reflect its current level of congestion.
+    &lt;ul&gt;
+      &lt;li&gt;Used as today’s Internet routing algorithm&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1️⃣-the-link-state-ls-routing-algorithm&quot;&gt;1️⃣ The Link-State (LS) Routing Algorithm&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Link-State (LS)&lt;/strong&gt; algorithm**: An algorithm that uses global information to find path.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Link-state broadcast algorithm&lt;/strong&gt;: Each node broadcast link-state packets to all other nodes in the network, with
+each link-state packet containing the identities and costs of its attached links. Therefore, all nodes have an identical
+and complete view of the network.
+    &lt;ul&gt;
+      &lt;li&gt;a.k.a. Dijkstra’s algorithm&lt;/li&gt;
+      &lt;li&gt;Notations:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;D(v)&lt;/em&gt;: Cost of the least-cost path from the source node to destination v as of this iteration of the algorithm.&lt;/li&gt;
+          &lt;li&gt;&lt;em&gt;p(v)&lt;/em&gt;: Previous node along the current least-cost path from source to v.&lt;/li&gt;
+          &lt;li&gt;&lt;em&gt;N’&lt;/em&gt;: Subset of nodes; v is in N’ if the least-cost path from the source to v is definitively known.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;link-state-ls-algorithm-for-source-node-u&quot;&gt;Link-State (LS) Algorithm for Source Node &lt;em&gt;u&lt;/em&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Initialization:
+    N&apos; = {u}
+    for all nodes v
+        if v is a neighbor of u
+            then D(v) = c(u,v)
+        else D(v) = infinite
+
+Loop
+    find w not in N&apos; such that D(w) is a minium
+    add w to N&apos;
+    update D(v) for each neighbor v of w and not in N&apos;:
+        D(v) = min(D(v), D(w) + c(w,v))
+        /* new cost to v is eiether old cost to v or known least path cost to w plus cost from w to v */
+until N&apos; = N
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The worst-case complexity of order n squared: O(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2️⃣-the-distance-vector-dv-routing-algorithm&quot;&gt;2️⃣ The Distance-Vector (DV) Routing Algorithm&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Distance-vector (DV) algorithm&lt;/strong&gt;: An algorithm that is iterative, asynchronous, and distributed. It is distributed 
+in that each node receives some information from one or more of its directly attached neighbors, performs a calculation,
+and then distributes the results of its calculation back to its neighbors. It is iterative in that this process 
+continues on until no more information is exchanged between neighbors. It is asynchronous as it does not require all of
+the nodes to operate in lockstep with each other.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-least-cost-can-be-found-with-bellman-ford-equation&quot;&gt;The least cost can be found with Bellman-Ford equation:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?d_x\left(y\right)=min\left\{c\left(x,v\right)&amp;plus;d_v\left(y\right)\right\}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;d&lt;sub&gt;x&lt;/sub&gt;(y) = cost of the least path&lt;/li&gt;
+  &lt;li&gt;x, y = nodes&lt;/li&gt;
+  &lt;li&gt;min&lt;sub&gt;v&lt;/sub&gt; = Taken over all of x’s neighbors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-updated-bellman-ford-equation&quot;&gt;The updated Bellman-FOrd equation:&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?D_x\left(y\right)=min\left\{c\left(x,v\right)&amp;plus;D_v\left(y\right)\right\}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;for each &lt;em&gt;y&lt;/em&gt; in &lt;em&gt;N&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;distance-vector-dv-algorithm&quot;&gt;Distance-Vector (DV) Algorithm&lt;/h3&gt;
+
+&lt;p&gt;At each node, x:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Initialization:
+    for all destination y in N:
+        Dx(y) = c(x,y) /* if y is not a neight then c(x,y) = infinite */
+    for each neighbor w
+        Dw(y) = ? for all destinations y in N
+    for each neighbor w
+        send distance vector Dx = [Dx(y): y in N] to w
+        
+loop
+    wait (until I see a link cost change to some neighbor w or until I receive a distance vector from some neighbor w)
+    for each y in N:
+        Dx(y) = minv{ c(x,v) + Dv(y) }
+
+if Dx(y) changed for any destination y
+    send distance vecotr Dx = [Dx(y): y in N] to all neighbors
+
+forever
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;distance-vector-algorithm-link-cost-changes-and-link-failure&quot;&gt;Distance-Vector Algorithm: Link-Cost Changes and Link Failure&lt;/h3&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Routing algorithms: Its goal is to determine good path, from senders to receivers, through the network of routers.</summary></entry><entry><title type="html">Computer Network - Introduction to Control Plane</title><link href="/Computer_Network-Introduction_to_Control_Plane" rel="alternate" type="text/html" title="Computer Network - Introduction to Control Plane" /><published>2022-12-05T19:30:00+09:00</published><updated>2022-12-05T19:30:00+09:00</updated><id>/Computer_Network-Introduction_to_Control_Plane</id><content type="html" xml:base="/Computer_Network-Introduction_to_Control_Plane">&lt;p&gt;Two possible approaches to computation, maintenance, and installation of forwarding and flow tables are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Per-router control&lt;/em&gt;. Figure below illustrates the case where a routing algorithm  runs in each and very router; both
+a forwarding and a routing functions are contained within each router. Each router has routing component that
+communicates with the routing components in other routers to compute the values for its forwarding table.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Logically centralized control&lt;/em&gt;. Figure below illustrates the case in which a logically centralized controller
+computes and distributes the forwarding tables to be used by each and every router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Two possible approaches to computation, maintenance, and installation of forwarding and flow tables are:</summary></entry><entry><title type="html">Computer Network - Middleboxes</title><link href="/Computer_Network-Middleboxes" rel="alternate" type="text/html" title="Computer Network - Middleboxes" /><published>2022-12-02T01:00:00+09:00</published><updated>2022-12-02T01:00:00+09:00</updated><id>/Computer_Network-Middleboxes</id><content type="html" xml:base="/Computer_Network-Middleboxes">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Middleboxes&lt;/strong&gt;: Any intermediary box performing functions apart from normal, standard functions of an IP router on
 the data path between a source hose and destination host.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1776,460 +1944,4 @@ close to K but then increase rapidly as t exceeds K.&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Classic TCP Congestion Control Congestion window: Denoted cwnd, imposes a constraint on the rate at which a TCP sender can send traffic into the network.</summary></entry><entry><title type="html">Big Data - Time Series</title><link href="/Big_Data-Time_Series" rel="alternate" type="text/html" title="Big Data - Time Series" /><published>2022-11-21T00:00:00+09:00</published><updated>2022-11-21T00:00:00+09:00</updated><id>/Big_Data-Time_Series</id><content type="html" xml:base="/Big_Data-Time_Series">&lt;h2 id=&quot;understanding-time-series&quot;&gt;Understanding Time Series&lt;/h2&gt;
-&lt;h3 id=&quot;time-series&quot;&gt;Time Series?&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A time series is a sequential set of data points, measured typically over successive times&lt;/li&gt;
-  &lt;li&gt;Time series analysis comprises methods for analyzing time series data in order to extract meaningful statistics and
-other characteristics of the data&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;terminologies&quot;&gt;Terminologies&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;uni-variate vs. multivariate
-    &lt;ul&gt;
-      &lt;li&gt;A time series containing records of a single variable is termed as uni-variate, but if records of more than one 
-variable are considered then it is termed as multivariate&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;linear vs. non-linear
-    &lt;ul&gt;
-      &lt;li&gt;A time series model is said to be linear or non-linear depending on whether the current value of the series is a
-linear or non-linear function of past observations&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;discrete vs. continuous
-    &lt;ul&gt;
-      &lt;li&gt;In a continuous time series observations are measured at every instance of time, whereas a discrete time series
-contains observations measured at discrete points in time&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;components-of-time-series-1-trend&quot;&gt;Components of Time Series: (1) Trend&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The general tendency of a time series to increase, decrease or stagnate over a long period of time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The price of chicken: monthly whole bird spot price, Georgia docks, US cents per pound, August 2001 to July 2016, with
-fitted linear trend line.&lt;/p&gt;
-
-&lt;h3 id=&quot;components-of-time-series-2-seasonal&quot;&gt;Components of Time Series: (2) Seasonal&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The fluctuations within a year during the season, usually caused by climate and weather conditions, customs,
-traditional habits, etc&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;components-of-time-series-3-cyclic&quot;&gt;Components of Time Series: (3) Cyclic&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;The medium-term (not fixed!) changes caused by circumstances, which repeat in cycles. The duration of a cycle extends
-over longer period of time.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;component-of-time-series-4-irregular&quot;&gt;Component of Time Series: (4) Irregular&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Caused by unpredictable influences, which are not regular and also do not repeat in a particular pattern
-    &lt;ul&gt;
-      &lt;li&gt;E.g., incidences such as war, strike, earthquake, flood, revolution, etc.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;No defined statistical technique for measuring random fluctuations in a time series&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;decomposition-of-time-series&quot;&gt;Decomposition of Time Series&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?t_t&amp;space;=&amp;space;f(S_t,T_t,R_t)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;y&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = data at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;T&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = trend-cycle component at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;S&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = seasonal component at period &lt;em&gt;t&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;R&lt;sub&gt;t&lt;/sub&gt;&lt;/em&gt;&lt;/strong&gt; = remainder component at period &lt;em&gt;t&lt;/em&gt; (i.e., cyclic + irregular)&lt;/li&gt;
-  &lt;li&gt;Additive&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t&amp;plus;T_t&amp;plus;R_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Multiplicative&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t\times&amp;space;T_t\times&amp;space;R_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Additive model appropriate if magnitude of seasonal fluctuations does not vary with level&lt;/li&gt;
-  &lt;li&gt;If seasonal are proportional to level of series, then multiplicative model appropriate&lt;/li&gt;
-  &lt;li&gt;Multiplicative decomposition more prevalent with economic series&lt;/li&gt;
-  &lt;li&gt;Logs turn multiplicative relationship into an additive relationship:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t&amp;space;=&amp;space;S_t\times&amp;space;T_t\times&amp;space;R_t&amp;space;\to&amp;space;logy_t&amp;space;=&amp;space;logS_t&amp;plus;logT_t&amp;plus;logR_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;more-techniques-on-decomposition&quot;&gt;More Techniques on Decomposition?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;X11&lt;/li&gt;
-  &lt;li&gt;SEATS&lt;/li&gt;
-  &lt;li&gt;STL&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;exponential-smoothing&quot;&gt;Exponential Smoothing&lt;/h2&gt;
-&lt;h3 id=&quot;big-idea-control-the-rate-of-change&quot;&gt;Big Idea: Control the Rate of Change&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;α controls the flexibility of the &lt;strong&gt;level&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;If α = 0, the level never updates (mean)&lt;/li&gt;
-      &lt;li&gt;If α = 1, the level updates completely (naive)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;β controls the flexibility of the &lt;strong&gt;trend&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;If β = 0, the trend is linear&lt;/li&gt;
-      &lt;li&gt;If β = 1, the trend changes suddenly every observation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;γ controls the flexibility of the &lt;strong&gt;seasonality&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;If γ = 0, the seasonality is fixed (seasonal means)&lt;/li&gt;
-      &lt;li&gt;If γ = 1, the seasonality updates completely (seasonal naive)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;exponential-smoothing-1&quot;&gt;Exponential Smoothing&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;We want a model that captures the level (l&lt;sub&gt;t&lt;/sub&gt;), trend (b&lt;sub&gt;t&lt;/sub&gt;) and seasonality (s&lt;sub&gt;t&lt;/sub&gt;)&lt;/li&gt;
-  &lt;li&gt;How do we combine these element?
-    &lt;ul&gt;
-      &lt;li&gt;Additively: y&lt;sub&gt;t&lt;/sub&gt; = l&lt;sub&gt;t-1&lt;/sub&gt; + b&lt;sub&gt;t-1&lt;/sub&gt; + s&lt;sub&gt;t-m&lt;/sub&gt; + ε&lt;sub&gt;t&lt;/sub&gt;&lt;/li&gt;
-      &lt;li&gt;Multiplicatively: y&lt;sub&gt;t&lt;/sub&gt; = l&lt;sub&gt;t-1&lt;/sub&gt; b&lt;sub&gt;t-1&lt;/sub&gt; s&lt;sub&gt;t-m&lt;/sub&gt; (1 + ε&lt;sub&gt;t&lt;/sub&gt;)&lt;/li&gt;
-      &lt;li&gt;Hybrid: y&lt;sub&gt;t&lt;/sub&gt; = (l&lt;sub&gt;t-1&lt;/sub&gt; + b&lt;sub&gt;t-1&lt;/sub&gt;) s&lt;sub&gt;t-m&lt;/sub&gt; + ε&lt;sub&gt;t&lt;/sub&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How do the level, trend, and seasonal components evolve over time?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;generalized-exponential-smoothing-ets&quot;&gt;Generalized ExponenTial Smoothing (ETS)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;General Notation of ETS
-    &lt;ul&gt;
-      &lt;li&gt;E: Error&lt;/li&gt;
-      &lt;li&gt;T: Trend&lt;/li&gt;
-      &lt;li&gt;S: Season&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Error: Additive (“A”) or multiplicative (“M”)&lt;/li&gt;
-  &lt;li&gt;Trend: None(“N”), additive (“A”), multiplicative (“M”), or damped (“A&lt;sub&gt;d&lt;/sub&gt;”)&lt;/li&gt;
-  &lt;li&gt;Seasonality: None(“N”), additive (“A”), or multiplicative (“M”)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ets-generalized-exponential-smoothing&quot;&gt;ETS: Generalized Exponential Smoothing&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;(N,N): Simple exponential smoothing&lt;/li&gt;
-  &lt;li&gt;(A,N): Holt’s linear method&lt;/li&gt;
-  &lt;li&gt;(A&lt;sub&gt;d&lt;/sub&gt;,N): Additive damped trend method&lt;/li&gt;
-  &lt;li&gt;(A,A): Additive Holt-Winters’ method&lt;/li&gt;
-  &lt;li&gt;(A,M): Multiplicative Holt-Winters’ method&lt;/li&gt;
-  &lt;li&gt;(A&lt;sub&gt;d&lt;/sub&gt;,M): Damped multiplicative Holt-Winters’ method&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;simple-exponential-smoothing-ses&quot;&gt;Simple Exponential Smoothing (SES)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Equation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?\widehat{y}_{T&amp;amp;plus;1&lt;/td&gt;
-      &lt;td&gt;t}=\alpha&amp;amp;space;y_T&amp;amp;plus;\alpha&amp;amp;space;(1-\alpha)y_{T-1}&amp;amp;plus;\alpha&amp;amp;space;(1-\alpha)^2y_{T-2}&amp;amp;plus;\cdots&amp;amp;space;,&amp;amp;space;0\leq&amp;amp;space;\alpha&amp;amp;space;\leq&amp;amp;space;1)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ses-as-component-form&quot;&gt;SES as Component Form&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;adding-trend-holts-linear-trend&quot;&gt;Adding Trend: Holt’s Linear Trend&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Holt’s method with additive errors
-    &lt;ul&gt;
-      &lt;li&gt;Assumption: ε&lt;sub&gt;t&lt;/sub&gt; = y&lt;sub&gt;t&lt;/sub&gt; - l&lt;sub&gt;t-1&lt;/sub&gt; - b&lt;sub&gt;t-1&lt;/sub&gt; ~ NID(0, σ&lt;sup&gt;2&lt;/sup&gt;) &amp;lt;- Normally 
-Independent Distribution&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;damped-trend&quot;&gt;Damped Trend&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Good to forecast time-series values in a long range
-    &lt;ul&gt;
-      &lt;li&gt;H) Trend less affect to the values in distant future&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Equation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Damping parameter - &amp;lt; Φ &amp;lt; 1&lt;/li&gt;
-  &lt;li&gt;If Φ = 1, identical to Holt’s linear trend&lt;/li&gt;
-  &lt;li&gt;As h -&amp;gt; ∞&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?\widehat{y}_{T&amp;amp;plus;h&lt;/td&gt;
-      &lt;td&gt;T}\to&amp;amp;space;l_T&amp;amp;plus;\phi&amp;amp;space;b_T/(1-\phi))&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Short-run forecasts trended, long run forecasts constant&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;adding-seasonality-holt-winters-method&quot;&gt;Adding Seasonality: Holt-Winters Method&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Equation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Seasonal component is usually expressed as&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?s_t=\gamma^*(y_t-l_t)&amp;plus;(1-\gamma^*)s_{t-m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Substitute in for l&lt;sub&gt;t&lt;/sub&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?s_t=\gamma^*(1-a)(y_t-l_{t-1}-b_{t-1})&amp;plus;[1-\gamma^*(1-\alpha)]s_{t-m}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Set γ = γ&lt;sup&gt;*&lt;/sup&gt;(1 - α), then 0 &amp;lt;= γ &amp;lt;= 1 - α&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;arima&quot;&gt;ARIMA&lt;/h2&gt;
-&lt;h3 id=&quot;quick-glance-at-arima&quot;&gt;Quick Glance At ARIMA&lt;/h3&gt;
-
-&lt;p&gt;AR: autoregressive (lagged observation as inputs)&lt;/p&gt;
-
-&lt;p&gt;I: integrated (differencing to make series stationary)&lt;/p&gt;
-
-&lt;p&gt;MA: moving average (lagged errors as inputs)&lt;/p&gt;
-
-&lt;p&gt;An ARIMA model is rarely interpretable in terms of visible data structures like trend and seasonality. But it can
-capture a huge range of time series patterns.&lt;/p&gt;
-
-&lt;h3 id=&quot;stationary&quot;&gt;Stationary&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Definition
-    &lt;ul&gt;
-      &lt;li&gt;If {y_t} is a stationary time series, then for all s, the distribution of (y&lt;sub&gt;t&lt;/sub&gt;,…,y&lt;sub&gt;t+s&lt;/sub&gt;) does
-&lt;strong&gt;NOT&lt;/strong&gt; depend on t&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Characteristics
-    &lt;ul&gt;
-      &lt;li&gt;Roughly horizontal&lt;/li&gt;
-      &lt;li&gt;Constant variance&lt;/li&gt;
-      &lt;li&gt;No patterns predictable in the long-term&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;For ARIMA modeling, we need to stabilize the mean!
-    &lt;ul&gt;
-      &lt;li&gt;By Differencing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;differencing&quot;&gt;Differencing&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Differencing helps to stabilize the mean&lt;/li&gt;
-  &lt;li&gt;(First-order) differencing
-    &lt;ul&gt;
-      &lt;li&gt;The “differenced series” is the change between each observation in the original series: y&lt;sub&gt;t&lt;/sub&gt;’ = y&lt;sub&gt;t
-&lt;/sub&gt; - y&lt;sub&gt;t-1&lt;/sub&gt;&lt;/li&gt;
-      &lt;li&gt;The differenced series will have only T - 1 values since it is not possible to calculate a difference y&lt;sub&gt;1&lt;/sub&gt;’
-for the first observation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;other-differencing&quot;&gt;Other Differencing?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Second-order differencing
-    &lt;ul&gt;
-      &lt;li&gt;In practice, it is almost never necessary to go beyond second-order differences&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Seasonal differencing&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;autoregressive-ar-model&quot;&gt;AutoRegressive (AR) Model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Equation (p-th order)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t=c&amp;plus;\phi_1y_{t-1}&amp;plus;\phi_2y_{t-2}&amp;plus;\cdots&amp;space;&amp;plus;\phi_py_{t-p}&amp;plus;\epsilon_t&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;where ε&lt;sub&gt;t&lt;/sub&gt; is white noise.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Same as the multiple regression with lagged values of y&lt;sub&gt;t&lt;/sub&gt; as predictors&lt;/li&gt;
-  &lt;li&gt;Only for stationary data with constraints on parameters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;moving-average-ma&quot;&gt;Moving Average (MA)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Equation (q-th order)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?y_t=c&amp;plus;\epsilon_t&amp;plus;\theta_1\epsilon_{t-1}&amp;plus;\theta_2\epsilon_{t-2}&amp;plus;\cdots&amp;space;&amp;plus;\theta_q\epsilon_{t-q}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;where ε&lt;sub&gt;t&lt;/sub&gt; is white noise.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Same as multiple regression with past errors as predictors (not moving average smoothing)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;arp--ma&quot;&gt;AR(p) = MA(∞)&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How about MA(q) -&amp;gt; AR(∞)?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;invertible-property&quot;&gt;Invertible Property&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;MA(q) -&amp;gt; AR(∞) when the parameters of MA are restricted (called invertible property)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;ar--ma--differencing--arima&quot;&gt;AR + MA + Differencing = ARIMA&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Equation: ARIMA(p, d, q)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;White noise: ARIMA(0, 0, 0)&lt;/li&gt;
-  &lt;li&gt;AR(p): ARIMA(p, 0, 0)&lt;/li&gt;
-  &lt;li&gt;MA(q): ARIMA(0, q, 0)&lt;/li&gt;
-  &lt;li&gt;How to choose parameters? -&amp;gt; MLE&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;seasonal-arima&quot;&gt;Seasonal ARIMA&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Example: SARIMA(1, 1, 1)(1, 1, 1)&lt;sub&gt;4&lt;/sub&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;arima-vs-ets&quot;&gt;ARIMA vs. ETS&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Myth: ARIMA models are more general than exponential smoothing&lt;/li&gt;
-  &lt;li&gt;Linear exponential smoothing models are all special cases of ARIMA models&lt;/li&gt;
-  &lt;li&gt;Non-linear exponential smoothing models have NO equivalent ARIMA counterparts&lt;/li&gt;
-  &lt;li&gt;Many ARIMA models have NO exponential smoothing counterparts&lt;/li&gt;
-  &lt;li&gt;ETS models all non-stationary&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/20/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">Understanding Time Series Time Series?</summary></entry><entry><title type="html">Computer Network - Principles of Congestion Control</title><link href="/Computer_Network-Principles_of_Congestion_Control" rel="alternate" type="text/html" title="Computer Network - Principles of Congestion Control" /><published>2022-11-18T00:00:00+09:00</published><updated>2022-11-18T00:00:00+09:00</updated><id>/Computer_Network-Principles_of_Congestion_Control</id><content type="html" xml:base="/Computer_Network-Principles_of_Congestion_Control">&lt;h2 id=&quot;1️⃣-the-causes-and-the-costs-of-congestion&quot;&gt;1️⃣ The Causes and the Costs of Congestion&lt;/h2&gt;
-&lt;h3 id=&quot;scenario-1-two-senders-a-router-with-infinite-buffers&quot;&gt;Scenario 1: Two Senders, a Router with Infinite Buffers&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Per-connection throughput&lt;/strong&gt;: Number of bytes per second at the receiver&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;scenario-2-two-senders-and-a-router-with-finite-buffers&quot;&gt;Scenario 2: Two Senders and a Router with Finite Buffers&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Offered load&lt;/strong&gt;: The rate at which the transport layer sends segments containing original data and retransmitted data
-into the network&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;scenario-3-four-senders-routers-with-finite-buffers-and-multihop-paths&quot;&gt;Scenario 3: Four Senders, Routers with Finite Buffers, and Multihop Paths&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-approaches-to-congestion-control&quot;&gt;2️⃣ Approaches to Congestion Control&lt;/h2&gt;
-
-&lt;p&gt;At the highest level, we can distinguish among congestion-control approaches by whether the network layer provides
-explicit assistance to the transport layer for congestion-control purposes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;End-to-end congestion control.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Network-assisted congestion control.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ATM Available Bit Rate (ABR)&lt;/strong&gt;: A router informs the sender of the maximum host sending rate it can support on an 
-outgoing link.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/17/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ The Causes and the Costs of Congestion Scenario 1: Two Senders, a Router with Infinite Buffers Per-connection throughput: Number of bytes per second at the receiver</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Classic TCP Congestion Control Congestion window: Denoted cwnd, imposes a constraint on the rate at which a TCP sender can send traffic into the network.</summary></entry></feed>
