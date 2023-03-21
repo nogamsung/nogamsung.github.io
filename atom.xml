@@ -8,6 +8,23 @@
     
       
       <item>
+        <title>AWS_Code_Deploy - Setting Up AWS Code Deploy</title>
+        
+          <description>&lt;h2 id=&quot;aws-code-deploy&quot;&gt;AWS Code Deploy&lt;/h2&gt;
+&lt;p&gt;AWS Code Deploy is a CICD pipeline tool that you can use to create a pipeline to AWS EC2 or other AWS computing 
+instances.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Mar 2023 17:00:00 +0900</pubDate>
+        <link>
+        /AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy</link>
+        <guid isPermaLink="true">/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Computer Network - Routing Algorithms</title>
         
           <description>&lt;ul&gt;

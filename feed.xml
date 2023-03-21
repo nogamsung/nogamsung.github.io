@@ -1,4 +1,248 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-01-14T19:05:09+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">Computer Network - Routing Algorithms</title><link href="/Computer_Network-Routing_Algorithms" rel="alternate" type="text/html" title="Computer Network - Routing Algorithms" /><published>2022-12-05T19:40:00+09:00</published><updated>2022-12-05T19:40:00+09:00</updated><id>/Computer_Network-Routing_Algorithms</id><content type="html" xml:base="/Computer_Network-Routing_Algorithms">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-22T00:13:49+09:00</updated><id>/feed.xml</id><title type="html">nogamsung</title><subtitle>Computer Science &amp; Engineering</subtitle><entry><title type="html">AWS_Code_Deploy - Setting Up AWS Code Deploy</title><link href="/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy" rel="alternate" type="text/html" title="AWS_Code_Deploy - Setting Up AWS Code Deploy" /><published>2023-03-20T17:00:00+09:00</published><updated>2023-03-20T17:00:00+09:00</updated><id>/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy-</id><content type="html" xml:base="/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy">&lt;h2 id=&quot;aws-code-deploy&quot;&gt;AWS Code Deploy&lt;/h2&gt;
+&lt;p&gt;AWS Code Deploy is a CICD pipeline tool that you can use to create a pipeline to AWS EC2 or other AWS computing 
+instances.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-choose-aws-code-deploy-when-there-are-other-choices-for-cicd-pipeline&quot;&gt;Why choose AWS Code Deploy when there are other choices for CICD pipeline?&lt;/h3&gt;
+&lt;p&gt;A pipeline that I used to use was by using Docker, GitHub Actions, and Watchtower. The problem with this is that
+it uses docker which could consume a lot of memory, leading to failure of a server. However, by using AWS Code Deploy,
+you can construct a pipeline so that it runs on the operating system such as Ubuntu right on it.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-infra-architecture&quot;&gt;The infra-architecture&lt;/h2&gt;
+&lt;p&gt;The infra-architecture that I will be constructing looks like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-0️⃣&quot;&gt;Step 0️⃣&lt;/h3&gt;
+&lt;p&gt;You need to have an active EC2 instance setup.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1️⃣&quot;&gt;Step 1️⃣&lt;/h3&gt;
+&lt;p&gt;Create a S3 bucket using the below options.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2️⃣&quot;&gt;Step 2️⃣&lt;/h3&gt;
+&lt;p&gt;Configure S3 IAM user.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-2️⃣---1️⃣&quot;&gt;Step 2️⃣ - 1️⃣&lt;/h4&gt;
+&lt;p&gt;Create S3 IAM user using the below options.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2️⃣---2️⃣&quot;&gt;Step 2️⃣ - 2️⃣&lt;/h3&gt;
+&lt;p&gt;Create an access key and make sure you download the file somewhere safe.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3️⃣&quot;&gt;Step 3️⃣&lt;/h3&gt;
+&lt;p&gt;Configure EC2 IAM role.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3️⃣---1️⃣&quot;&gt;Step 3️⃣ - 1️⃣&lt;/h4&gt;
+&lt;p&gt;Create IAM role.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-3️⃣---2️⃣&quot;&gt;Step 3️⃣ - 2️⃣&lt;/h4&gt;
+&lt;p&gt;Modify EC2 IAM role and give the created IAM role to EC2.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4️⃣&quot;&gt;Step 4️⃣&lt;/h3&gt;
+&lt;p&gt;Create CodeDeploy IAM role.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5️⃣&quot;&gt;Step 5️⃣&lt;/h3&gt;
+&lt;p&gt;Create Code Deploy application and deployment group.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-5️⃣-1&quot;&gt;Step 5️⃣&lt;/h3&gt;
+&lt;p&gt;Create Code Deploy application and deployment group.&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5️⃣---1️⃣&quot;&gt;Step 5️⃣ - 1️⃣&lt;/h4&gt;
+&lt;p&gt;Create application.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;step-5️⃣---2️⃣&quot;&gt;Step 5️⃣ - 2️⃣&lt;/h4&gt;
+&lt;p&gt;Create deployment group.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/screenshots/2023/03/20/21.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-6️⃣&quot;&gt;Step 6️⃣&lt;/h3&gt;
+&lt;p&gt;Install and download the following to EC2.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Download AWS Corretto&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;wget https://corretto.aws/downloads/latest/amazon-corretto-11-x64-linux-jdk.rpm &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; java11.rpm
+
+&lt;span class=&quot;c&quot;&gt;# Install Java 11 JDK&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openjdk-11-jdk
+
+&lt;span class=&quot;c&quot;&gt;# Verify Java version&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;java &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install Ruby&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-full
+
+&lt;span class=&quot;c&quot;&gt;# Download Seoul region resource kit file for AWS Code Deploy&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;wget https://aws-codedeploy-ap-northeast-2.s3.ap-northeast-2.amazonaws.com/latest/install
+
+&lt;span class=&quot;c&quot;&gt;# Grant execute&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x ./install
+
+&lt;span class=&quot;c&quot;&gt;# Install agent&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./install auto
+
+&lt;span class=&quot;c&quot;&gt;# Verify agent status&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service codedeploy-agent status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-7️⃣&quot;&gt;Step 7️⃣&lt;/h3&gt;
+&lt;p&gt;Add repository secrets to your GitHub repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.PROJECT_NAME&lt;/code&gt;: Name of your project&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.CICD_BUCKET&lt;/code&gt;: Name of your cicd bucket&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.CODE_DEPLOY_APP_NAME&lt;/code&gt;: Name of your CodeDeploy application&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secrets.DEPLOYMENT_GROUP_NAME&lt;/code&gt;: name of your CodeDeploy deployment group&lt;/p&gt;
+
+&lt;h3 id=&quot;step-8️⃣&quot;&gt;Step 8️⃣&lt;/h3&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.yaml&lt;/code&gt; for GitHub Actions flow to your repository &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.github/workflows/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;CICD using AWS CodeDeploy&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;master&quot;&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;PROJECT_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;BUCKET_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;CODE_DEPLOY_APP_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;DEPLOYMENT_GROUP_NAME&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Checkout&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v3&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Setup Java JDK &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/setup-java@v3&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;distribution&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;adopt&apos;&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;java-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;11&apos;&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Grant execute permission for gradlew and deploy.sh&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;chmod +x gradlew scripts/deploy.sh&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bash&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build with Gradle&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./gradlew build&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bash&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Make ZIP File&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;zip -qq -r ./$GITHUB_SHA.zip .&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bash&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Configure AWS credentials&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;aws-actions/configure-aws-credentials@v1&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;aws-access-key-id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;aws-secret-access-key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;aws-region&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Upload to S3&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip&lt;/span&gt;
+
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Code Deploy&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;aws deploy create-deployment --application-name $CODE_DEPLOY_APP_NAME --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name $DEPLOYMENT_GROUP_NAME --s3-location bucket=$BUCKET_NAME,bundleType=zip,key=$PROJECT_NAME/$GITHUB_SHA.zip&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-9️⃣&quot;&gt;Step 9️⃣&lt;/h3&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;appspec.yml&lt;/code&gt; to your repository’s root path.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0.0&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;linux&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/home/ubuntu/project&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;permissions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/home/ubuntu/project/&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;owner&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;hooks&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;AfterInstall&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scripts/deploy.sh&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;runas&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-1️⃣0️⃣&quot;&gt;Step 1️⃣0️⃣&lt;/h3&gt;
+&lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deploy.sh&lt;/code&gt; to this path &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scripts/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;REPOSITORY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/ubuntu/project
+&lt;span class=&quot;nv&quot;&gt;APPLICATION_YML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/ubuntu/application.yml
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$REPOSITORY&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;APP_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;project
+&lt;span class=&quot;nv&quot;&gt;JAR_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$REPOSITORY&lt;/span&gt;/build/libs/ | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;app.jar&apos;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; 1&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;JAR_PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$REPOSITORY&lt;/span&gt;/build/libs/&lt;span class=&quot;nv&quot;&gt;$JAR_NAME&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;CURRENT_PID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;pgrep &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$APP_NAME&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$CURRENT_PID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;then
+  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$APP_NAME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; process does not exist&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else
+  &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; kill -9 &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CURRENT_PID&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;kill&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-15&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$CURRENT_PID&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;5
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$JAR_PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; Deployed&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;nohup &lt;/span&gt;java &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$JAR_PATH&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--spring&lt;/span&gt;.conf.location&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$APPLICATION_YML&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--server&lt;/span&gt;.port&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8080 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /dev/null 2&amp;gt; /dev/null &amp;lt; /dev/null &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;caution-️&quot;&gt;Caution ❗️&lt;/h4&gt;
+&lt;p&gt;Make sure you have your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.yml&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.properties&lt;/code&gt; in EC2 if you have any environment variables.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1️⃣1️⃣&quot;&gt;Step 1️⃣1️⃣&lt;/h3&gt;
+&lt;p&gt;Finally, push to GitHub!&lt;/p&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=UF2Giz9PE-E&amp;amp;t=464s&quot; target=&quot;_blank&quot;&gt;BE로마 in YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="devops" /><summary type="html">AWS Code Deploy AWS Code Deploy is a CICD pipeline tool that you can use to create a pipeline to AWS EC2 or other AWS computing instances.</summary></entry><entry><title type="html">Computer Network - Routing Algorithms</title><link href="/Computer_Network-Routing_Algorithms" rel="alternate" type="text/html" title="Computer Network - Routing Algorithms" /><published>2022-12-05T19:40:00+09:00</published><updated>2022-12-05T19:40:00+09:00</updated><id>/Computer_Network-Routing_Algorithms</id><content type="html" xml:base="/Computer_Network-Routing_Algorithms">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Routing algorithms&lt;/strong&gt;: Its goal is to determine good path, from senders to receivers, through the network of routers.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -138,8 +382,6 @@ forever
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/12/05/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;distance-vector-algorithm-link-cost-changes-and-link-failure&quot;&gt;Distance-Vector Algorithm: Link-Cost Changes and Link Failure&lt;/h3&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
@@ -1844,104 +2086,4 @@ unknown&lt;/strong&gt; information, or to answers for questions for which the an
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary></entry><entry><title type="html">Computer Network - TCP Congestion Control</title><link href="/Computer_Network-TCP_Congestion_Control" rel="alternate" type="text/html" title="Computer Network - TCP Congestion Control" /><published>2022-11-21T19:30:00+09:00</published><updated>2022-11-21T19:30:00+09:00</updated><id>/Computer_Network-TCP_Congestion_Control</id><content type="html" xml:base="/Computer_Network-TCP_Congestion_Control">&lt;h2 id=&quot;1️⃣-classic-tcp-congestion-control&quot;&gt;1️⃣ Classic TCP Congestion Control&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Congestion window&lt;/strong&gt;: Denoted &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cwnd&lt;/code&gt;, imposes a constraint on the rate at which a TCP sender can send traffic into
-the network.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LastByeSent - LastByteAcked &amp;lt;= min{ cwnd, rwnd }&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Self-clocking&lt;/strong&gt;: TCP uses acknowledgements to trigger its increase in congestion window size.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;TCP guiding principles for congestion:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;A lost segment implies congestion, and hence, the TCP sender’s rate should be decreased when a segment is lost.&lt;/li&gt;
-  &lt;li&gt;An acknowledged segment indicates that the network is delivering the sender’s segments to the receiver, and hence, the
-sender’s rate can be increased when an ACk arrives for a previously unacknowledged segment.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Bandwidth probing.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;TCP congestion-control algorithm&lt;/strong&gt;: The algorithm has three major components
-    &lt;ol&gt;
-      &lt;li&gt;Slow start&lt;/li&gt;
-      &lt;li&gt;Congestion avoidance&lt;/li&gt;
-      &lt;li&gt;Fast recovery&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;slow-start&quot;&gt;Slow Start&lt;/h3&gt;
-
-&lt;p&gt;The value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cwnd&lt;/code&gt; begins at 1 MSS and increase by 1 MSS every time a transmitted segment is first acknowledged.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/27.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;congestion-avoidance&quot;&gt;Congestion Avoidance&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/28.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fast-recovery&quot;&gt;Fast Recovery&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/29.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;TCP Tahoe&lt;/strong&gt;: The early version of TCP that unconditionally cut its congestion window to 1 MSS and entered the slow 
-start phase after either a timeout-indicated or tripled-duplicate-ACK-indicated loss event.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;TCP Reno&lt;/strong&gt;: The newer version of TCP that incorporated fast recovery.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tcp-congestion-control-retrospective&quot;&gt;TCP Congestion Control: Retrospective&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/30.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Additive-increase, multiplicative-decrease (AIMD)&lt;/strong&gt;: Form of congestion control that gives rise to the “saw tooth”
-behavior.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tcp-cubic&quot;&gt;TCP Cubic&lt;/h3&gt;
-
-&lt;p&gt;CUBIC only changes the congestion avoidance phase, as follows:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Let W&lt;sub&gt;max&lt;/sub&gt; be size of TCP’s congestion control window when loss was last detected, and let K be the future
-point in time when TCP CUBIC’s window size will again reach W&lt;sub&gt;max&lt;/sub&gt;, assuming no losses. Several tunable CUBIC
-parameters determine the value K, that is, how quickly the protocol’s congestion window size would reach W&lt;sub&gt;max&lt;/sub&gt;.&lt;/li&gt;
-  &lt;li&gt;CUBIC increase the congestion window as a function of cube of the distance between the current time, t, and K. Thus,
-when t is further away from K, the congestion window size increases are much larger than when t is close to K. That is
-CUBIC quickly ramps up TCP’s sending rate to get close to the pre-loss rate, W&lt;sub&gt;max&lt;/sub&gt;, and only then probes
-cautiously for bandwidth as it approaches W&lt;sub&gt;max&lt;/sub&gt;.&lt;/li&gt;
-  &lt;li&gt;When t is greater than K, the cubic rule implies that CUBIC’s congestion window increases are small when t is still
-close to K but then increase rapidly as t exceeds K.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/31.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;macroscopic-description-of-tcp-reno-throughput&quot;&gt;Macroscopic Description of TCP Reno Throughput&lt;/h3&gt;
-
-&lt;p&gt;TCP throughput increases linearly between the two extreme values, therefore&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;average throughput of a connection = (0.75 * W) / RTT&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2️⃣-network-assisted-explicit-congestion-notification-and-delayed-based-congestion-control&quot;&gt;2️⃣ Network-Assisted Explicit Congestion Notification and Delayed-based Congestion Control&lt;/h2&gt;
-&lt;h3 id=&quot;explicit-congestion-notification&quot;&gt;Explicit Congestion Notification&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/32.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;delayed-based-congestion-control&quot;&gt;Delayed-based Congestion Control&lt;/h3&gt;
-
-&lt;p&gt;In TCP Vegas, the sender measures the RTT of the source-to-destination path for all acknowledged packets.&lt;/p&gt;
-
-&lt;h2 id=&quot;3️⃣-fairness&quot;&gt;3️⃣ Fairness&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/33.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/34.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Networking-Global-James-Kurose/dp/1292405465&quot; target=&quot;_blank&quot;&gt;Computer Networking 8th: A Top-Down Approach by James Kurose and Keith Ross&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Computer Network Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=24017&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Seungsik Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">1️⃣ Classic TCP Congestion Control Congestion window: Denoted cwnd, imposes a constraint on the rate at which a TCP sender can send traffic into the network.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>nogamsung</name></author><category term="comsci" /><summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary></entry></feed>
