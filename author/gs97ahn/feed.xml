@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/gs97ahn/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2023-03-22T00:13:49+09:00</updated>
+  <updated>2023-03-24T17:19:37+09:00</updated>
   <id>/author/gs97ahn/feed.xml</id>
 
   
@@ -30,6 +30,86 @@
   
   
 
+  
+    <entry>
+      <title type="html">MongoDB - Setting Up MongoDB For The First Time</title>
+      <link href="/MongoDB-Setting_Up_MongoDB_For_The_First_Time" rel="alternate" type="text/html" title="MongoDB - Setting Up MongoDB For The First Time" />
+      <published>2023-03-24T00:00:00+09:00</published>
+      <updated>2023-03-24T00:00:00+09:00</updated>
+      <id>/MongoDB-Setting_Up_MongoDB_For_The_First_Time</id>
+      <content type="html" xml:base="/MongoDB-Setting_Up_MongoDB_For_The_First_Time">&lt;h3 id=&quot;security-configuration&quot;&gt;Security Configuration&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;In ubuntu, you need to get into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongod.conf&lt;/code&gt; by typing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo vi /etc/mongod.conf&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Make sure that you have the following included in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongod.conf&lt;/code&gt;. And save and exit from vi.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;security:
+  authorization: enabled
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Restart mongodb &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo systemctl restart mongod.service&lt;/code&gt; or start it by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo systemctl start mongod.service&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;tip&quot;&gt;Tip&lt;/h4&gt;
+&lt;p&gt;Also, if you want to allow any ip address to access your database, you have to make sure that this is fixed or included
+in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongod.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;net:
+  port: 27017
+  bindIp: 0.0.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;creating-a-database-user&quot;&gt;Creating a Database User&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Get into Mongo Shell by using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongosh&lt;/code&gt; in your ubuntu. If you have a root user already, you must use 
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mongosh -u &amp;lt;admin_user_id&amp;gt; -p&lt;/code&gt; and then type your root user’s password.&lt;/li&gt;
+  &lt;li&gt;Type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;use admin&lt;/code&gt; once you get into to Mongo Shell.&lt;/li&gt;
+  &lt;li&gt;Create a user by typeing the following command:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.createUser({
+  user: &quot;&amp;lt;database_user_name&amp;gt;&quot;,
+  pwd: &quot;&amp;lt;password&amp;gt;&quot;,
+  roles: [{
+    role: &quot;dbOwner&quot;,
+    db: &quot;&amp;lt;database_name&amp;gt;&quot;
+  }]
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;reference&quot;&gt;Reference&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mongodb.com/docs/&quot; target=&quot;_blank&quot;&gt;MongoDB Official Document&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>nogamsung</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="backend" />
+      
+
+      
+        <summary type="html">Security Configuration</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">AWS_Code_Deploy - Setting Up AWS Code Deploy</title>
@@ -1753,706 +1833,6 @@ received in the order in which they were sent, nor is their eventual delivery ev
 
       
         <summary type="html">1️⃣ Forwarding and Routing: The Data and Control Planes</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Big Data - Text Mining</title>
-      <link href="/Big_Data-Text_Mining" rel="alternate" type="text/html" title="Big Data - Text Mining" />
-      <published>2022-11-21T22:30:00+09:00</published>
-      <updated>2022-11-21T22:30:00+09:00</updated>
-      <id>/Big_Data-Text_Mining</id>
-      <content type="html" xml:base="/Big_Data-Text_Mining">&lt;h3 id=&quot;what-is-text-mining&quot;&gt;What is “Text Mining”?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;“Text mining, also referred to as &lt;strong&gt;text data mining&lt;/strong&gt;, roughly equivalent to text analytics, refers to the process of
-deriving high-quality information from text.” - wikipedia&lt;/li&gt;
-  &lt;li&gt;“Another way to view text data mining is as a process fo &lt;strong&gt;exploratory&lt;/strong&gt; data analysis that lead to &lt;strong&gt;heretofore
-unknown&lt;/strong&gt; information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;text-mining-around-us&quot;&gt;Text mining around us&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sentiment analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Document summarization&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;News recommendation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Text analytics in financial services&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/5.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Text analytics in healthcare&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/6.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-perform-text-mining&quot;&gt;How to perform text mining?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;As computer scientists, we view it as
-    &lt;ul&gt;
-      &lt;li&gt;Text Mining = &lt;strong&gt;Data Mining&lt;/strong&gt; + &lt;strong&gt;Text Data&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Data Mining
-            &lt;ul&gt;
-              &lt;li&gt;Information retrieval&lt;/li&gt;
-              &lt;li&gt;Natural language processing&lt;/li&gt;
-              &lt;li&gt;Applied machine learning&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Text Data
-            &lt;ul&gt;
-              &lt;li&gt;Scientific literature&lt;/li&gt;
-              &lt;li&gt;Email, Tweets, News articles&lt;/li&gt;
-              &lt;li&gt;Software documentations&lt;/li&gt;
-              &lt;li&gt;Blogs, Web pages&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;text-mining-vs-nl-ir-dm&quot;&gt;Text mining vs. NL, IR, DM…&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;How does it relate to data mining in general?&lt;/li&gt;
-  &lt;li&gt;How does it relate to computations linguistics?&lt;/li&gt;
-  &lt;li&gt;How does it relate to information retrieval?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/7.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;text-mining-in-general&quot;&gt;Text mining in general&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/8.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;challenges-in-text-mining&quot;&gt;Challenges in text mining&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Data collections is “free text”
-    &lt;ul&gt;
-      &lt;li&gt;Data is not well-organized
-        &lt;ul&gt;
-          &lt;li&gt;Semi-structured or unstructured&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Natural language text contains ambiguities on many levels
-        &lt;ul&gt;
-          &lt;li&gt;Lexical, syntactic, semantic, and pragmatic&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Learning techniques for processing text typically need annotated traning examples
-        &lt;ul&gt;
-          &lt;li&gt;Expensive to acquire at scale&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What to mine?&lt;/li&gt;
-  &lt;li&gt;Huge in size
-    &lt;ul&gt;
-      &lt;li&gt;Google processes 5.13 B queries/day (2013)&lt;/li&gt;
-      &lt;li&gt;Twitter receives 340 M tweets/day (2012)&lt;/li&gt;
-      &lt;li&gt;Facebook has 2.5 PB of user data + 15 TB/day (4/2009)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;80% data is unstructured (IBM, 2010)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;scalability-is-crucial&quot;&gt;Scalability is crucial&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Large scale text processing techniques
-    &lt;ul&gt;
-      &lt;li&gt;MapReduce framework&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/9.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;state-of-the-art-solutions&quot;&gt;State-of-the-art solutions&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Apache Spark
-    &lt;ul&gt;
-      &lt;li&gt;In-memory MapReduce
-        &lt;ul&gt;
-          &lt;li&gt;Specialized for machine learning algorithms&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Speed
-        &lt;ul&gt;
-          &lt;li&gt;100x faster than Hadoop MapReduce in memory or 10x faster on disk.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/10.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;In-memory MapReduce
-    &lt;ul&gt;
-      &lt;li&gt;Specialized for machine learning algorithms&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generality
-    &lt;ul&gt;
-      &lt;li&gt;Combine SQL, streaming, and complex analytics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;document-representation&quot;&gt;Document Representation&lt;/h2&gt;
-&lt;h3 id=&quot;how-to-represent-a-document&quot;&gt;How to represent a document&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Represent by a string?
-    &lt;ul&gt;
-      &lt;li&gt;No semantic meaning&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Represent by a list of sentences?
-    &lt;ul&gt;
-      &lt;li&gt;Sentence is just like a short document (recursive definition)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;vector-space-vs-model&quot;&gt;Vector Space (VS) model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Represent documents by concept vectors
-    &lt;ul&gt;
-      &lt;li&gt;Each concept defines one dimension&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;k&lt;/em&gt; concepts define a high-dimensional space&lt;/li&gt;
-      &lt;li&gt;Element of vector corresponds to concept weight&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Distance between the vectors in this concept space
-    &lt;ul&gt;
-      &lt;li&gt;Relationship among documents&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;an-illustration-of-vs-model&quot;&gt;An illustration of VS model&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;All documents are projected into this concept space&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/12.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;what-the-vs-model-doesnt-say&quot;&gt;What the VS model doesn’t say&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;How to define/select the “basic concept”
-    &lt;ul&gt;
-      &lt;li&gt;Concepts are assumed to be orthogonal&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to assign weights
-    &lt;ul&gt;
-      &lt;li&gt;Weights indicate how well the concept characterizes the document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to define the distance metric&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-is-a-good-basic-concept&quot;&gt;What is a good “Basic Concept”?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Orthogonal
-    &lt;ul&gt;
-      &lt;li&gt;Linearly independent basis vectors
-        &lt;ul&gt;
-          &lt;li&gt;“Non-overlapping” in meaning&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;No ambiguity&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Weights should be assigned automatically and accurately&lt;/li&gt;
-  &lt;li&gt;Existing solutions
-    &lt;ul&gt;
-      &lt;li&gt;Terms or N-grams, a.k.a., Bag-of-Words&lt;/li&gt;
-      &lt;li&gt;Topics&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;document-representation-bag-of-words&quot;&gt;Document Representation: Bag-of-Words&lt;/h2&gt;
-&lt;h3 id=&quot;bag-of-words-representation&quot;&gt;Bag-of-Words representation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Term as the basis for vector space
-    &lt;ul&gt;
-      &lt;li&gt;Doc1: Text mining is to identify useful information.&lt;/li&gt;
-      &lt;li&gt;Doc2: Useful information is mined from text.&lt;/li&gt;
-      &lt;li&gt;Doc3: Apple is delicious.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/13.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Break a stream of text into meaningful units
-    &lt;ul&gt;
-      &lt;li&gt;Tokens: words, phrases, symbols
-        &lt;ul&gt;
-          &lt;li&gt;Input: It’s not straight-forward to perform so-called “tokenization”.&lt;/li&gt;
-          &lt;li&gt;Output(1): “‘It’s’, ‘not’, ‘straight-forward”, ‘to’, ‘perform’, ‘so-called’, ‘tokenization’”&lt;/li&gt;
-          &lt;li&gt;Output(2): “‘It’, ‘’s’, ‘not’, ‘straight’, ‘-‘, ‘forward’, ‘to’, ‘perform’, ‘so’, ‘-‘, ‘called’, ‘tokenization’”&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Definition depends on language, corpus, or even context&lt;/li&gt;
-  &lt;li&gt;Solutions
-    &lt;ul&gt;
-      &lt;li&gt;Regular expressions
-        &lt;ul&gt;
-          &lt;li&gt;[\w]+: so-called -&amp;gt; ‘so’, ‘called’&lt;/li&gt;
-          &lt;li&gt;[\S]+: It’s -&amp;gt; ‘It’s’ instead of ‘It’, ‘’s’&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Statistical methods
-        &lt;ul&gt;
-          &lt;li&gt;Explore rich features to decide where the boundary of a word is
-            &lt;ul&gt;
-              &lt;li&gt;Apache OpenNLP&lt;/li&gt;
-              &lt;li&gt;Standford NLP Parser&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Online Demo
-            &lt;ul&gt;
-              &lt;li&gt;Standford&lt;/li&gt;
-              &lt;li&gt;UIUC&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bag-of-words-representation-1&quot;&gt;Bag-of-Words representation&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Assumption
-    &lt;ul&gt;
-      &lt;li&gt;Words are independent from each other&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pros
-    &lt;ul&gt;
-      &lt;li&gt;Simple&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cons
-    &lt;ul&gt;
-      &lt;li&gt;Basis vectors are clearly not linearly independent!&lt;/li&gt;
-      &lt;li&gt;Grammar and order are missing&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The ost frequently used document representation
-    &lt;ul&gt;
-      &lt;li&gt;Image, speech, gene sequence&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bag-of-words-with-n-grams&quot;&gt;Bag-of-Words with N-grams&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;N-grams: a contiguous sequence of N tokens from a given piece of test
-    &lt;ul&gt;
-      &lt;li&gt;E.g., ‘Text mining is to identify useful information’&lt;/li&gt;
-      &lt;li&gt;Bigrams: ‘text_mining’, ‘mining_is’, ‘is_to’, ‘to_identify’, ‘identify_useful’, ‘useful_information’, ‘information_’&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pros: capture local dependency and order&lt;/li&gt;
-  &lt;li&gt;Cons: a pure statistical view, increase the vocabulary size O(V&lt;sup&gt;N&lt;/sup&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;automatic-document-representation&quot;&gt;Automatic document representation&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Represent a document with all the occurring words
-    &lt;ul&gt;
-      &lt;li&gt;Pros
-        &lt;ul&gt;
-          &lt;li&gt;Preserve all information in the text (hopefully)&lt;/li&gt;
-          &lt;li&gt;Fully automatic&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Cons
-        &lt;ul&gt;
-          &lt;li&gt;Vocabulary gap: cars versus car, talk versus talking&lt;/li&gt;
-          &lt;li&gt;Large storage: N-grams needs O(V&lt;sup&gt;N&lt;/sup&gt;)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Solution
-        &lt;ul&gt;
-          &lt;li&gt;Construct controlled vocabulary&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;a-statistical-property-of-language&quot;&gt;A statistical property of language&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Zipf’s law
-    &lt;ul&gt;
-      &lt;li&gt;Frequency of any word is inversely proportional to tis rank in the frequency table&lt;/li&gt;
-      &lt;li&gt;Formally&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f(k;s,N)=\frac{1/k^s}{\sum_{n=1}^{N}1/n^s}v&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;where &lt;em&gt;k&lt;/em&gt; is rank of word; &lt;em&gt;N&lt;/em&gt; is the vocabulary size; &lt;em&gt;s&lt;/em&gt; is language-specific parameter&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Simply&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?f(k;s,N)\propto&amp;space;1/k^s&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/15.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;zipfs-law-tells-us&quot;&gt;Zipf’s law tells us&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Head words take large portion of occurrences, but they are semantically meaningless
-    &lt;ul&gt;
-      &lt;li&gt;E.g., the, a, an, we, do, to&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Trail words take major portion of vocabulary, but they rarely occur in documents
-    &lt;ul&gt;
-      &lt;li&gt;E.g., sesquipedalianism&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The rest is most representative
-    &lt;ul&gt;
-      &lt;li&gt;To be included in the controlled vocabulary&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;automatic-document-representation-1&quot;&gt;Automatic document representation&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;stopwords&quot;&gt;Stopwords&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Useless words for document analaysis
-    &lt;ul&gt;
-      &lt;li&gt;Not all words are informative&lt;/li&gt;
-      &lt;li&gt;Remove such words to reduce vocabulary size&lt;/li&gt;
-      &lt;li&gt;No universal definition&lt;/li&gt;
-      &lt;li&gt;Risk: break the original meaning and structure of text
-        &lt;ul&gt;
-          &lt;li&gt;E.g., this is not a good option -&amp;gt; option to be or not to be -&amp;gt; null&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;normalization&quot;&gt;Normalization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Convert different forms of a word to a normalized form in the vocabulary
-    &lt;ul&gt;
-      &lt;li&gt;U.S.A -&amp;gt; USA, ST.Louis -&amp;gt; Saint Louis&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Solution
-    &lt;ul&gt;
-      &lt;li&gt;Rule-based
-        &lt;ul&gt;
-          &lt;li&gt;Delete periods and hyphens&lt;/li&gt;
-          &lt;li&gt;All in lower cases&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Dictionary-based
-        &lt;ul&gt;
-          &lt;li&gt;Construct equivalent calss
-            &lt;ul&gt;
-              &lt;li&gt;Car -&amp;gt; “automobile, vehicle”&lt;/li&gt;
-              &lt;li&gt;Mobile phone -&amp;gt; “cellphone”&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;stemming&quot;&gt;Stemming&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Reduce inflected or derived words to their root form
-    &lt;ul&gt;
-      &lt;li&gt;Plurals, adverbs, inflected word forms
-        &lt;ul&gt;
-          &lt;li&gt;E.g., ladies -&amp;gt; lady, referring -&amp;gt; refer, forgotten -&amp;gt; forget&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Bridge the vocabulary gap&lt;/li&gt;
-      &lt;li&gt;Solutions (for English)
-        &lt;ul&gt;
-          &lt;li&gt;Porter stemmer: patterns of vowel-consonant sequence&lt;/li&gt;
-          &lt;li&gt;Krovetz stemmer: morphological rules&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Risk: lose precise meaning of the word
-        &lt;ul&gt;
-          &lt;li&gt;E.g., lay -&amp;gt; lie (a false statement? or be in a horizontal position?)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;constructing-a-vsm-representation&quot;&gt;Constructing a VSM representation&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/17.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-assign-weights&quot;&gt;How to assign weights?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Important!&lt;/li&gt;
-  &lt;li&gt;Why?
-    &lt;ul&gt;
-      &lt;li&gt;Corpus-wise: some terms carry more information about the document content&lt;/li&gt;
-      &lt;li&gt;Document-wise: not all terms are equally important&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How?
-    &lt;ul&gt;
-      &lt;li&gt;Two basic heuristics
-        &lt;ul&gt;
-          &lt;li&gt;TF (Term Frequency) = Within-doc-frequency&lt;/li&gt;
-          &lt;li&gt;IDF (Inverse Document Frequency)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;term-frequency&quot;&gt;Term frequency&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Idea: a term is more important if it occurs more frequently in a document&lt;/li&gt;
-  &lt;li&gt;TF Formulas
-    &lt;ul&gt;
-      &lt;li&gt;Let c(t,d) be the frequency count of term t in doc d&lt;/li&gt;
-      &lt;li&gt;Raw TF: tf(t,d) = c(t,d)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Which two documents are more similar to each other?&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;‘good weather’, 10&lt;/li&gt;
-  &lt;li&gt;‘good weather’, 2&lt;/li&gt;
-  &lt;li&gt;‘good weather’, 3&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;tf-normalization&quot;&gt;TF normalization&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Two views of document length
-    &lt;ul&gt;
-      &lt;li&gt;A doc is long because it is verbose&lt;/li&gt;
-      &lt;li&gt;A doc is long because it has more content&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Raw TF is inaccurate
-    &lt;ul&gt;
-      &lt;li&gt;Document length variation&lt;/li&gt;
-      &lt;li&gt;“Repeated occurrences” are less informative than the “first occurrence”&lt;/li&gt;
-      &lt;li&gt;Information about semantic does not increase proportionally with number of term occurrence&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generally penalize long document, but avoid over-penalizing
-    &lt;ul&gt;
-      &lt;li&gt;Pivoted length normalization&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Maximum TF scaling
-    &lt;ul&gt;
-      &lt;li&gt;Normalize by the most frequent word in this doc&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?tf(t,d)=\alpha&amp;space;&amp;plus;(a-\alpha)\frac{c(t,d)}{max_tc(t,d)&apos;},&amp;space;if&amp;space;c(t,d)&amp;gt;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/18.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sub-linear TF scaling&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/19.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/20.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Idea: a term is more discriminative if it occurs only in fewer documents&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/21.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;inverse-document-frequency&quot;&gt;Inverse document frequency&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Solution
-    &lt;ul&gt;
-      &lt;li&gt;Assign higher weights to rare terms&lt;/li&gt;
-      &lt;li&gt;Formula&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/22.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A corpus-specific property
-    &lt;ul&gt;
-      &lt;li&gt;Independent of a single document&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-document-frequency&quot;&gt;What document frequency&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;How about total term frequency?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?ttf(t)=\sum_{d}c(t,d)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/23.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cannot recognize words frequently occurring in a subset of documents&lt;/p&gt;
-
-&lt;h3 id=&quot;tf-idf-weighting&quot;&gt;TF-IDF weighting&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Combining TF and IDF
-    &lt;ul&gt;
-      &lt;li&gt;Common in doc -&amp;gt; high tf -&amp;gt; high weight&lt;/li&gt;
-      &lt;li&gt;Rare in collection -&amp;gt; high idf -&amp;gt; high weight&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?w(t,d)=TF(t,d)\times&amp;space;IDF(t)&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Most well-known document representation schema in IR (G Salton et al. 1983)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;how-to-define-a-good-similarity-metric&quot;&gt;How to define a good similarity metric?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Euclidean distance?
-    &lt;ul&gt;
-      &lt;li&gt;Longer documents will be penalized by the extra words&lt;/li&gt;
-      &lt;li&gt;We care more about how these two vectors are overlapped&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/svg.image?dist(d_i,d_j)=\sqrt{\sum_{t\in&amp;space;V}[tf(t,d_i)idf(t)-tf(t,d_j)idf(t)]^2}&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/24.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;from-distance-to-angle&quot;&gt;From distance to angle&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Angle: how vectors are overlapped
-    &lt;ul&gt;
-      &lt;li&gt;Cosine similarity - projection of one vector onto another&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/25.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;cosine-similarity&quot;&gt;Cosine similarity&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Angle between two vectors&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;![](https://latex.codecogs.com/svg.image?cosine(d_i,d_j)=\frac{V_{d_i}^TV_{d_j}}{&lt;/td&gt;
-      &lt;td&gt;d_{d_i}&lt;/td&gt;
-      &lt;td&gt;_2\times&amp;amp;space;&lt;/td&gt;
-      &lt;td&gt;v_{d_j}&lt;/td&gt;
-      &lt;td&gt;}_2)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Documents are normalized by length&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/screenshots/2022/11/21/26.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;advantage-and-disadvantage-of-vs-model&quot;&gt;Advantage and Disadvantage of VS model&lt;/h3&gt;
-&lt;p&gt;|                Pros                |             Cons              |
-|:———————————-:|:—————————–:|
-|       Empirically effective        |    Assume term idependence    |
-|             Intuitive              | Lack of “predictive adequacy” |
-|         Easy to implement          |   Lots of parameter tuning    |
-|   Well-studied/mostly evaluated    |                               |
-|          The Smart system          |                               |
-| Warning: maning variants of TF-IDF |                               |&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.mmds.org/&quot; target=&quot;_blank&quot;&gt;Mining of Massive Datasets by Jure Leskovec, Anand Rajaraman, Jeff Ullman&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Introduction to Big Data Lecture by &lt;a href=&quot;https://www.inu.ac.kr/user/indexSub.do?codyMenuSeq=2236524&amp;amp;siteId=isis&amp;amp;dum=dum&amp;amp;command=empDetail&amp;amp;empNum=20201168&amp;amp;empSearchTab=01&amp;amp;deptCode=&amp;amp;siteId=isis&quot; target=&quot;_blank&quot;&gt;Daejin Choi&lt;/a&gt; in &lt;a href=&quot;https://www.inu.ac.kr/&quot; target=&quot;_blank&quot;&gt;Incheon National University&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>nogamsung</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="comsci" />
-      
-
-      
-        <summary type="html">What is “Text Mining”? “Text mining, also referred to as text data mining, roughly equivalent to text analytics, refers to the process of deriving high-quality information from text.” - wikipedia “Another way to view text data mining is as a process fo exploratory data analysis that lead to heretofore unknown information, or to answers for questions for which the answer is not currently known.” - Hearst, 1999</summary>
       
 
       
