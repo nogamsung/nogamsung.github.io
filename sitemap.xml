@@ -4,7 +4,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>/MongoDB-Setting_Up_MongoDB_For_The_First_Time.html</loc>
+        <loc>/MongoDB-Setting_Up_For_The_First_Time.html</loc>
         
         <lastmod>2023-03-24T00:00:00+09:00</lastmod>
         
@@ -20,7 +20,7 @@
     </url>
     
     <url>
-        <loc>/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy.html</loc>
+        <loc>/AWS_Code_Deploy-Setting_Up.html</loc>
         
         <lastmod>2023-03-20T17:00:00+09:00</lastmod>
         

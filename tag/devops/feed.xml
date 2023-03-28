@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/devops/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2023-03-24T17:19:37+09:00</updated>
+  <updated>2023-03-28T17:42:55+09:00</updated>
   <id>/tag/devops/feed.xml</id>
 
   
@@ -32,12 +32,12 @@
 
   
     <entry>
-      <title type="html">AWS_Code_Deploy - Setting Up AWS Code Deploy</title>
-      <link href="/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy" rel="alternate" type="text/html" title="AWS_Code_Deploy - Setting Up AWS Code Deploy" />
+      <title type="html">AWS Code Deploy - Setting Up</title>
+      <link href="/AWS_Code_Deploy-Setting_Up" rel="alternate" type="text/html" title="AWS Code Deploy - Setting Up" />
       <published>2023-03-20T17:00:00+09:00</published>
       <updated>2023-03-20T17:00:00+09:00</updated>
-      <id>/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy-</id>
-      <content type="html" xml:base="/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy">&lt;h2 id=&quot;aws-code-deploy&quot;&gt;AWS Code Deploy&lt;/h2&gt;
+      <id>/AWS_Code_Deploy-Setting_Up</id>
+      <content type="html" xml:base="/AWS_Code_Deploy-Setting_Up">&lt;h2 id=&quot;aws-code-deploy&quot;&gt;AWS Code Deploy&lt;/h2&gt;
 &lt;p&gt;AWS Code Deploy is a CICD pipeline tool that you can use to create a pipeline to AWS EC2 or other AWS computing 
 instances.&lt;/p&gt;
 

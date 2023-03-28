@@ -8,7 +8,7 @@
     
       
       <item>
-        <title>MongoDB - Setting Up MongoDB For The First Time</title>
+        <title>MongoDB - Setting Up For The First Time</title>
         
           <description>&lt;h3 id=&quot;security-configuration&quot;&gt;Security Configuration&lt;/h3&gt;
 
@@ -16,14 +16,14 @@
         
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0900</pubDate>
         <link>
-        /MongoDB-Setting_Up_MongoDB_For_The_First_Time</link>
-        <guid isPermaLink="true">/MongoDB-Setting_Up_MongoDB_For_The_First_Time</guid>
+        /MongoDB-Setting_Up_For_The_First_Time</link>
+        <guid isPermaLink="true">/MongoDB-Setting_Up_For_The_First_Time</guid>
       </item>
       
     
       
       <item>
-        <title>AWS_Code_Deploy - Setting Up AWS Code Deploy</title>
+        <title>AWS Code Deploy - Setting Up</title>
         
           <description>&lt;h2 id=&quot;aws-code-deploy&quot;&gt;AWS Code Deploy&lt;/h2&gt;
 &lt;p&gt;AWS Code Deploy is a CICD pipeline tool that you can use to create a pipeline to AWS EC2 or other AWS computing 
@@ -33,8 +33,8 @@ instances.&lt;/p&gt;
         
         <pubDate>Mon, 20 Mar 2023 17:00:00 +0900</pubDate>
         <link>
-        /AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy</link>
-        <guid isPermaLink="true">/AWS_Code_Deploy-Setting_Up_AWS_Code_Deploy</guid>
+        /AWS_Code_Deploy-Setting_Up</link>
+        <guid isPermaLink="true">/AWS_Code_Deploy-Setting_Up</guid>
       </item>
       
     
