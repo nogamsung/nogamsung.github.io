@@ -18,6 +18,7 @@ Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사�
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
 
 ##### Domain
+
 ```java
 @Getter
 @Entity
@@ -33,6 +34,7 @@ public class Contact extends BaseEntity {
 # `findBy`
 ---
 ##### Repository
+
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
