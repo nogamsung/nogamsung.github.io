@@ -7,8 +7,7 @@ categories: [spring, jpa]
 img: null
 tags: [spring, jpa]
 ---
-> 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다.
-> 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
+> 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
 
 ## 목차
 1. 설명
@@ -16,10 +15,14 @@ tags: [spring, jpa]
 3. countBy
 4. existBy
 5. 정리
+
 ---
+
 ## 설명
+
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
+
 ##### Domain
 ```java
 @Getter
@@ -32,6 +35,7 @@ public class Contact extends BaseEntity {
     // ...
 }
 ```
+
 ### `findBy`
 ##### Repository
 ```java
@@ -55,6 +59,7 @@ void findByEmail() {
 ```
 ![](../../assets/img/spring/2023/10/01_1.png)
 **결과: 0.214초**
+
 ### `countBy`
 #### Repository
 ```java
@@ -78,6 +83,7 @@ void countByEmail() {
 ```
 ![](../../assets/img/spring/2023/10/01_2.png)
 **결과: 0.196초**
+
 ### `existsBy`
 #### Repository
 ```java
@@ -103,6 +109,7 @@ void existsByEmail() {
 **결과: 0.166초**
 
 ## 정리
+
 |     | findBy | countBy | existsBy |
 |-----|--------|---------|----------|
 | 시간  | 0.214초 | 0.196초  | 0.166초   |
