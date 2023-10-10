@@ -6,6 +6,9 @@ description: null
 categories: [spring, jpa]
 img: null
 tags: [spring, jpa]
+toc: true
+toc_sticky: true
+toc_label: 목차
 ---
 > 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
 
