@@ -16,8 +16,6 @@ tags: [spring, jpa]
 4. existBy
 5. 정리
 
----
-
 ## 설명
 
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
