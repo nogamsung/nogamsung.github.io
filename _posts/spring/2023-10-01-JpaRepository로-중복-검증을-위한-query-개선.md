@@ -38,12 +38,14 @@ public class Contact extends BaseEntity {
 ```
 
 ## `findBy`
+
 ##### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
 }
 ```
+
 ##### Test
 ```java
 @Test
@@ -63,12 +65,14 @@ void findByEmail() {
 **결과: 0.214초**
 
 ## `countBy`
+
 #### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     int countByEmail(String email);
 }
 ```
+
 ##### Test
 ```java
 @Test
@@ -88,12 +92,14 @@ void countByEmail() {
 **결과: 0.196초**
 
 ## `existsBy`
+
 #### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     boolean existsByEmail(String email);
 }
 ```
+
 ##### Test
 ```java
 @Test
