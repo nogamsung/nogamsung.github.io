@@ -102,7 +102,7 @@ void existsByEmail() {
 ![](../../assets/img/spring/2023/10/01_3.png)
 **결과: 0.166초**
 
-## 정리<a id="wrapUp"></a>
+## 정리
 |     | findBy | countBy | existsBy |
 |-----|--------|---------|----------|
 | 시간  | 0.214초 | 0.196초  | 0.166초   |
