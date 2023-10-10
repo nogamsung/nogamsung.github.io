@@ -34,13 +34,14 @@ public class Contact extends BaseEntity {
 }
 ```
 
-### `findBy`
+## `findBy`
 ##### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
 }
 ```
+
 ##### Test
 ```java
 @Test
@@ -56,16 +57,20 @@ void findByEmail() {
 }
 ```
 ![](../../assets/img/spring/2023/10/01_1.png)
+
 **결과: 0.214초**
 
-### `countBy`
+## `countBy`
 #### Repository
+
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     int countByEmail(String email);
 }
 ```
+
 ##### Test
+
 ```java
 @Test
 void countByEmail() {
@@ -80,16 +85,20 @@ void countByEmail() {
 }
 ```
 ![](../../assets/img/spring/2023/10/01_2.png)
+
 **결과: 0.196초**
 
-### `existsBy`
+## `existsBy`
 #### Repository
+
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     boolean existsByEmail(String email);
 }
 ```
+
 ##### Test
+
 ```java
 @Test
 void existsByEmail() {
@@ -103,7 +112,9 @@ void existsByEmail() {
     assertThat(result).isTrue();
 }
 ```
+
 ![](../../assets/img/spring/2023/10/01_3.png)
+
 **결과: 0.166초**
 
 ## 정리
