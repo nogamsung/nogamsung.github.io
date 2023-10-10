@@ -17,7 +17,7 @@ tags: [spring, jpa]
 4. [existBy](#4)
 5. [정리](#5)
 ---
-## <a id="1">설명</a>
+## <a name="1">설명</a>
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
 ##### Domain
@@ -32,7 +32,7 @@ public class Contact extends BaseEntity {
     // ...
 }
 ```
-### <a id="2">`findBy`</a>
+### <a name="2">`findBy`</a>
 ##### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
@@ -55,7 +55,7 @@ void findByEmail() {
 ```
 ![](../../assets/img/spring/2023/10/01_1.png)
 **결과: 0.214초**
-### <a id="3">`countBy`</a>
+### <a name="3">`countBy`</a>
 #### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
