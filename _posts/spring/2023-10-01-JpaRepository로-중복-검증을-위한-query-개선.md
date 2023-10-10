@@ -44,7 +44,6 @@ public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
 }
 ```
-
 ##### Test
 ```java
 @Test
@@ -65,15 +64,12 @@ void findByEmail() {
 
 ## `countBy`
 #### Repository
-
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     int countByEmail(String email);
 }
 ```
-
 ##### Test
-
 ```java
 @Test
 void countByEmail() {
@@ -93,15 +89,12 @@ void countByEmail() {
 
 ## `existsBy`
 #### Repository
-
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     boolean existsByEmail(String email);
 }
 ```
-
 ##### Test
-
 ```java
 @Test
 void existsByEmail() {
