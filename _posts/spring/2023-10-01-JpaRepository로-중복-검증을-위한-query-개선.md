@@ -13,12 +13,11 @@ toc_label: 목차
 > 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
 
 # 설명
----
+
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
 
 ##### Domain
-
 ```java
 @Getter
 @Entity
@@ -32,9 +31,7 @@ public class Contact extends BaseEntity {
 ```
 
 # `findBy`
----
 ##### Repository
-
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
@@ -55,14 +52,13 @@ void findByEmail() {
     assertThat(result).isPresent();
 }
 ```
+
 ![](../../assets/img/spring/2023/10/01_1.png)
 
 **결과: 0.214초**
 
 # `countBy`
----
 #### Repository
-
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     int countByEmail(String email);
@@ -70,7 +66,6 @@ public interface ContactRepsitory extends JpaRepository<Contact, Long> {
 ```
 
 ##### Test
-
 ```java
 @Test
 void countByEmail() {
@@ -90,9 +85,7 @@ void countByEmail() {
 **결과: 0.196초**
 
 # `existsBy`
----
 #### Repository
-
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     boolean existsByEmail(String email);
@@ -100,7 +93,6 @@ public interface ContactRepsitory extends JpaRepository<Contact, Long> {
 ```
 
 ##### Test
-
 ```java
 @Test
 void existsByEmail() {
@@ -120,7 +112,6 @@ void existsByEmail() {
 **결과: 0.166초**
 
 # 정리
----
 
 |     | findBy | countBy | existsBy |
 |-----|--------|---------|----------|
