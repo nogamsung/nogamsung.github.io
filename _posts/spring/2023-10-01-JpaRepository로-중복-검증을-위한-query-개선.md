@@ -12,7 +12,7 @@ toc_label: 목차
 ---
 > 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
 
-# 설명
+# 개요
 
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
