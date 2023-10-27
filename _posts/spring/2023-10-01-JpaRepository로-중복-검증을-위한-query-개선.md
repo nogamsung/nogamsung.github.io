@@ -53,7 +53,7 @@ void findByEmail() {
 }
 ```
 
-![](../../assets/img/spring/2023/10/01_1.png)
+![](../../assets/img/spring/2023/10/01-1.png)
 
 **결과: 0.214초**
 
@@ -80,7 +80,7 @@ void countByEmail() {
 }
 ```
 
-![](../../assets/img/spring/2023/10/01_2.png)
+![](../../assets/img/spring/2023/10/01-2.png)
 
 **결과: 0.196초**
 
@@ -107,7 +107,7 @@ void existsByEmail() {
 }
 ```
 
-![](../../assets/img/spring/2023/10/01_3.png)
+![](../../assets/img/spring/2023/10/01-3.png)
 
 **결과: 0.166초**
 
