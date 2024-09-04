@@ -1,11 +1,17 @@
 ---
 layout: post
 title: Kong API Gateway 설치하기
-date: '2024-08-30'
-description: null
-categories: [devops, api-gateway]
-img: null
-tags: [devops, api-gateway, kong, konga]
+date: 2024-08-30
+description:
+categories:
+  - devops
+  - api-gateway
+img:
+tags:
+  - devops
+  - api-gateway
+  - kong
+  - konga
 toc: true
 toc_sticky: true
 toc_label: 목차
