@@ -10,6 +10,7 @@ toc: true
 toc_sticky: true
 toc_label: 목차
 ---
+
 # 개요
 
 여러 API 서버들이 존재할 때 이를 편하게 관리하기 위해서는 여러대의 Nginx 같은 reverse proxy를 두는거 보다 하나의 API Gateway로 들어오는 모든 Client 요청들을 관리하는게 편하다. 특히 MSA 같은 환경을 구성할때 API Gateway는 필수 요소다.
