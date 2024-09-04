@@ -161,7 +161,6 @@ docker run -p 1337:1337 \
 ## Konga 연결 설정
 
 ![](../../assets/img/2024/08/30-1.png)
-![]()
 
 ## Service 등록
 
