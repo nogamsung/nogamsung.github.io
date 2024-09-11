@@ -187,7 +187,7 @@ docker run -p 1337:1337 \
 
 ![](../../assets/img/2024/08/30-5.png)
 
-![](chimchakman-3.gif)
+![](../../assets/img/zzal/chimchakman-3.gif)
 
 # 참조
 

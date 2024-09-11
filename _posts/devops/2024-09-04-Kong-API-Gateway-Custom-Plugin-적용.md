@@ -169,7 +169,7 @@ Kong Manager는 `localhost:8002`를 통해 접속할 수 있다. 그리고 Consu
 
 ![](../../assets/img/2024/09/04-16.png)
 
-![](chimchakman-1.jpg)
+![](../../assets/img/zzal/chimchakman-1.jpg)
 
 # 참조
 
