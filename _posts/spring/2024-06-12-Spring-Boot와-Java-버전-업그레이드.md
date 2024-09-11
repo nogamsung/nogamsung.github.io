@@ -24,7 +24,7 @@ toc_label: 목차
 Java 11 ➡️ Java 21
 Spring Boot 2.7.1 ➡️ Spring Boot 3.3.0
 
-## 1️⃣ 자바 버전 업그레이드 및 스프링부트 2에서 최대 버전 업그레이드
+# 1️⃣ 자바 버전 업그레이드 및 스프링부트 2에서 최대 버전 업그레이드
 
 먼저 스프링부트 버전을 2.7.x 버전, 즉 가장 최신 2 버전으로 맞춰서 라이브러리의 의존성을 확인한다.
 
@@ -66,7 +66,7 @@ dependencies {
 }
 ```
 
-## 2️⃣ 스프링부트 최신 버전 업그레이드
+# 2️⃣ 스프링부트 최신 버전 업그레이드
 
 스프링부트 최신 버전으로 업그레이드한다. 아래와 같이 변경을 해주면 gradle build는 잘 돌아가게 된다.
 
@@ -100,7 +100,7 @@ dependencies {
 ##### `gradle-wrapper.properties`
 
 ```properties
-distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-bin.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip
 ```
 
 #### 변경 후
@@ -128,10 +128,10 @@ dependencies {
 ##### `gradle-wrapper.properties`
 
 ```properties
-distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip
 ```
 
-## 3️⃣ 코드 변경
+# 3️⃣ 코드 변경
 
 #### 변경 전
 
@@ -211,13 +211,13 @@ public class SecurityConfig {
 }
 ```
 
-## 4️⃣ 마무리
+# 4️⃣ 마무리
 
 - ECS와 같은 환경에서는 `buildspec.yml`도 바꿔야 된다
 - `@Table(name = "schema.table)`로 Entity를 설정해 줬다면 더이상 읽지 못하기 때문에 `@Table(catalog = "schema", name = "table")`로 바꿔줘야 된다.
 - Querydsl에 `Expressions.StringTemplate` 같은 코드도 수정이 필요하기 때문에 모든 API들에 코드들을 점검해야 한다.
 
-## 참조
+# 참조
 
 - https://luvstudy.tistory.com/221
 - https://hodolman.com/54

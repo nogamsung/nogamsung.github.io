@@ -2,11 +2,11 @@
 layout: post
 title: Kong API Gateway 설치하기
 date: 2024-08-30
-description:
+description: 
 categories:
   - devops
   - api-gateway
-img:
+img: 
 tags:
   - devops
   - api-gateway
@@ -16,7 +16,6 @@ toc: true
 toc_sticky: true
 toc_label: 목차
 ---
-
 # 개요
 
 여러 API 서버들이 존재할 때 이를 편하게 관리하기 위해서는 여러대의 Nginx 같은 reverse proxy를 두는거 보다 하나의 API Gateway로 들어오는 모든 Client 요청들을 관리하는게 편하다. 특히 MSA 같은 환경을 구성할때 API Gateway는 필수 요소다.
@@ -78,7 +77,9 @@ docker run -d --name kong-database \
 
 ```
 docker exec -it kong-database /bin/bash
+```
 
+```
 psql -U kong
 ```
 
@@ -166,6 +167,8 @@ docker run -p 1337:1337 \
 
 ## Konga 연결 설정
 
+`localhost:1337`로 접속한다.
+
 ![](../../assets/img/2024/08/30-1.png)
 
 ## Service 등록
@@ -184,7 +187,9 @@ docker run -p 1337:1337 \
 
 ![](../../assets/img/2024/08/30-5.png)
 
-## 참조
+![](chimchakman-3.gif)
+
+# 참조
 
 - [https://docs.konghq.com/gateway/3.7.x/install/docker/](https://docs.konghq.com/gateway/3.7.x/install/docker/)
 - [https://www.sktenterprise.com/bizInsight/blogDetail/dev/2850](https://www.sktenterprise.com/bizInsight/blogDetail/dev/2850)
