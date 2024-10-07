@@ -1,11 +1,16 @@
 ---
 layout: post
 title: JpaRepository로 중복 검증을 위한 query 개선
-date: '2023-10-01'
-description: null
-categories: [spring, jpa]
-img: null
-tags: [spring, jpa]
+date: 2023-10-01
+description: 
+categories:
+  - backend
+  - spring
+  - jpa
+img: 
+tags:
+  - spring
+  - jpa
 toc: true
 toc_sticky: true
 toc_label: 목차

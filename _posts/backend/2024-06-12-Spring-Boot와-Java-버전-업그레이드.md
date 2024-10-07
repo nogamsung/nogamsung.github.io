@@ -4,6 +4,7 @@ title: Spring Boot와 Java 버전 업그레이드
 date: 2024-06-12
 description: 
 categories:
+  - backend
   - spring
   - java
 img: 
@@ -14,7 +15,6 @@ toc: true
 toc_sticky: true
 toc_label: 목차
 ---
-
 # 개요
 
 회사에서 ISMS 심사를 받기로해 deprecated 된 버전들은 반드시 버전업을 해야 된다고 전해 받아 Spring Boot 2는 Spring 3으로 버전 업을 하게 됐다. 

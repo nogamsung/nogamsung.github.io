@@ -8,7 +8,6 @@ categories:
   - api-gateway
 img: 
 tags:
-  - devops
   - api-gateway
   - kong
   - konga
