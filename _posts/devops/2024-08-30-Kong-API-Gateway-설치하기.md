@@ -9,7 +9,7 @@ description: >-
 categories: [devops, api-gateway]
 tags: [kong, konga, api-gateway, docker]
 image:
-  path: /assets/img/thumbnail/kong-api-gateway-install.png
+  path: /assets/img/thumbnail/kong-api-gateway-install.jpg
   alt: "Kong API Gateway 설치하기"
 ---
 
@@ -166,25 +166,25 @@ docker run -p 1337:1337 \
 
 `localhost:1337`로 접속한다.
 
-![Kong API Gateway 설치하기 - Konga 연결 설정](/assets/img/2024/08/30-1.png)
+![Kong API Gateway 설치하기 - Konga 연결 설정](/assets/img/2024/08/30-1.webp){: width="649" height="693" }
 
 ### Service 등록
 
-![Kong API Gateway 설치하기 - Service 등록](/assets/img/2024/08/30-2.png)
+![Kong API Gateway 설치하기 - Service 등록](/assets/img/2024/08/30-2.webp){: width="891" height="1257" }
 
 ### Route 등록
 
-![Kong API Gateway 설치하기 - Route 등록](/assets/img/2024/08/30-3.png)
+![Kong API Gateway 설치하기 - Route 등록](/assets/img/2024/08/30-3.webp){: width="889" height="1220" }
 
-![Kong API Gateway 설치하기 - Route 등록 (2)](/assets/img/2024/08/30-4.png)
+![Kong API Gateway 설치하기 - Route 등록 (2)](/assets/img/2024/08/30-4.webp){: width="890" height="657" }
 
 ### 연결 확인
 
 등록한 Route Path 인 `/api/spring` 그리고 8000 Port로 요청을 보내면 Kong이 성공적으로 작용하고 있는걸 확인할 수 있다.
 
-![Kong API Gateway 설치하기 - 연결 확인](/assets/img/2024/08/30-5.png)
+![Kong API Gateway 설치하기 - 연결 확인](/assets/img/2024/08/30-5.webp){: width="709" height="489" }
 
-![Kong API Gateway 설치하기 - 연결 확인 (2)](/assets/img/zzal/chimchakman-3.gif)
+![Kong API Gateway 설치하기 - 연결 확인 (2)](/assets/img/zzal/chimchakman-3.gif){: width="362" height="446" }
 
 ## 참조
 

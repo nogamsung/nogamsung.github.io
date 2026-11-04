@@ -9,7 +9,7 @@ description: >-
 categories: [backend, spring]
 tags: [spring, spring-boot, java, upgrade]
 image:
-  path: /assets/img/thumbnail/spring-boot-3-java-21-upgrade.png
+  path: /assets/img/thumbnail/spring-boot-3-java-21-upgrade.jpg
   alt: "Spring Boot와 Java 버전 업그레이드"
 ---
 

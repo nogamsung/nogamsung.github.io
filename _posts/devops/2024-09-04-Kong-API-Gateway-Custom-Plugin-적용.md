@@ -9,7 +9,7 @@ description: >-
 categories: [devops, api-gateway]
 tags: [kong, konga, api-gateway, lua, plugin]
 image:
-  path: /assets/img/thumbnail/kong-custom-plugin.png
+  path: /assets/img/thumbnail/kong-custom-plugin.jpg
   alt: "Kong API Gateway Custom Plugin 적용"
 ---
 
@@ -58,7 +58,7 @@ docker build -t kong-custom .
 
 빌드가 잘됐다면 `kong-custom` 이미지가 생성된 것을 확인할 수 있다.
 
-![Kong API Gateway Custom Plugin 적용 - Docker 빌드](/assets/img/2024/09/04-1.png)
+![Kong API Gateway Custom Plugin 적용 - Docker 빌드](/assets/img/2024/09/04-1.webp){: width="1278" height="835" }
 
 ### Docker 실행
 
@@ -86,7 +86,7 @@ docker run -d --name kong \
 
  실행이 잘됐다면 `kong` 컨테이너가 실행중인 것을 확인할 수 있다.
  
-![Kong API Gateway Custom Plugin 적용 - Docker 실행](/assets/img/2024/09/04-2.png)
+![Kong API Gateway Custom Plugin 적용 - Docker 실행](/assets/img/2024/09/04-2.webp){: width="1278" height="835" }
 
 ### Kong 실행
 
@@ -115,19 +115,19 @@ Kong에서 Plugin 적용 대상은 다음과 같다.
 
 먼저 konga에 접속하기 위해 `localhost:1337`로 이동해서 대상 route를 클릭한다.
 
-![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기](/assets/img/2024/09/04-3.png)
+![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기](/assets/img/2024/09/04-3.webp){: width="1600" height="688" }
 
 plugin 탭으로 이동해서 add plugin을 클릭한다.
 
-![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (2)](/assets/img/2024/09/04-4.png)
+![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (2)](/assets/img/2024/09/04-4.webp){: width="1600" height="688" }
 
 Other 탭으로 이동해 해당 plugin을 추가한다.
 
-![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (3)](/assets/img/2024/09/04-5.png)
+![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (3)](/assets/img/2024/09/04-5.webp){: width="891" height="1290" }
 
 Plugin에 대한 속성 값을 설정한다.
 
-![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (4)](/assets/img/2024/09/04-6.png)
+![Kong API Gateway Custom Plugin 적용 - Konga에서 Custom Plugin 적용하기 (4)](/assets/img/2024/09/04-6.webp){: width="891" height="1140" }
 
 ## Kong Manager에서 Custom Plugin 설정
 
@@ -135,37 +135,37 @@ Plugin에 대한 속성 값을 설정한다.
 
 Kong Manager는 `localhost:8002`를 통해 접속할 수 있다. 그리고 Consumers 탭으로 이동해서 먼저 Consumer를 새로 만들어 준다.
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정](/assets/img/2024/09/04-7.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정](/assets/img/2024/09/04-7.webp){: width="1600" height="615" }
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (2)](/assets/img/2024/09/04-8.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (2)](/assets/img/2024/09/04-8.webp){: width="1600" height="615" }
 
 만들어진 consumer를 통해 JWT 관련 설정값을 세팅할 수 있는 기본 JWT plugin을 적용시켜 주자.
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (3)](/assets/img/2024/09/04-9.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (3)](/assets/img/2024/09/04-9.webp){: width="1600" height="615" }
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (4)](/assets/img/2024/09/04-10.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (4)](/assets/img/2024/09/04-10.webp){: width="1600" height="615" }
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (5)](/assets/img/2024/09/04-11.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (5)](/assets/img/2024/09/04-11.webp){: width="1600" height="615" }
 
 우리의 목적은 custom JWT를 사용하는거고 기본 JWT는 DB에 해당 값을 설정해주는데만 활용한다. 그렇기에 기본 JWT plugin은 disable하자.
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (6)](/assets/img/2024/09/04-12.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (6)](/assets/img/2024/09/04-12.webp){: width="1600" height="1160" }
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (7)](/assets/img/2024/09/04-13.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (7)](/assets/img/2024/09/04-13.webp){: width="1600" height="536" }
 
 설정이 완료됐으면 다시 consumer에 대한 credentials로 JWT를 설정할 수 있게 된다.
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (8)](/assets/img/2024/09/04-14.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (8)](/assets/img/2024/09/04-14.webp){: width="1600" height="609" }
 
 이제 secret key, issuer, algorithm 값을 설정해주자.
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (9)](/assets/img/2024/09/04-15.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (9)](/assets/img/2024/09/04-15.webp){: width="1600" height="675" }
 
 이것으로 Custom plugin 적용 완료!
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (10)](/assets/img/2024/09/04-16.png)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (10)](/assets/img/2024/09/04-16.webp){: width="1600" height="675" }
 
-![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (11)](/assets/img/zzal/chimchakman-1.jpg)
+![Kong API Gateway Custom Plugin 적용 - Kong Manager에서 Custom Plugin 설정 (11)](/assets/img/zzal/chimchakman-1.webp){: width="1288" height="720" }
 
 ## 참조
 

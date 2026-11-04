@@ -9,7 +9,7 @@ description: >-
 categories: [backend, spring]
 tags: [spring, jpa, performance]
 image:
-  path: /assets/img/thumbnail/jpa-duplicate-check-query.png
+  path: /assets/img/thumbnail/jpa-duplicate-check-query.jpg
   alt: "JpaRepository로 중복 검증을 위한 query 개선"
 ---
 
@@ -56,7 +56,7 @@ void findByEmail() {
 }
 ```
 
-![JpaRepository로 중복 검증을 위한 query 개선 - findBy](/assets/img/2023/10/01-1.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - findBy](/assets/img/2023/10/01-1.webp){: width="426" height="377" }
 
 **결과: 0.214초**
 
@@ -83,7 +83,7 @@ void countByEmail() {
 }
 ```
 
-![JpaRepository로 중복 검증을 위한 query 개선 - countBy](/assets/img/2023/10/01-2.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - countBy](/assets/img/2023/10/01-2.webp){: width="423" height="268" }
 
 **결과: 0.196초**
 
@@ -110,7 +110,7 @@ void existsByEmail() {
 }
 ```
 
-![JpaRepository로 중복 검증을 위한 query 개선 - existsBy](/assets/img/2023/10/01-3.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - existsBy](/assets/img/2023/10/01-3.webp){: width="485" height="266" }
 
 **결과: 0.166초**
 
