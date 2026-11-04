@@ -36,3 +36,6 @@ assets/js/dist
 *~
 .DS_Store
 Thumbs.db
+
+# iCloud Drive 가 만드는 충돌 복사본 ("name 2.ext")
+* 2.*
