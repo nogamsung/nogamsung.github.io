@@ -33,6 +33,11 @@ social:
     # 첫 번째 링크가 저작권자 링크로 쓰인다
     - https://github.com/nogamsung
 
+# 구조화 데이터(JSON-LD)의 작성자 Person 엔티티 (jekyll-seo-tag). 글 by-line 은 social.name 을 쓴다.
+author:
+  name: Geomseong Ahn
+  url: https://github.com/nogamsung
+
 # 사이트 소유 확인 (jekyll-seo-tag) › Google Search Console / Bing 웹마스터 등
 webmaster_verifications:
   google: 3H6l4VV0Rc5nDPkKUjzbE6IUrFOJJwCUviaoOYGSyGI

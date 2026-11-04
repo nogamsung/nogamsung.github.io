@@ -24,10 +24,12 @@
 /* append your custom style below */
 
 /* 한글 줄바꿈: 단어 중간이 아니라 어절 단위로 끊는다 */
-.post-content,
-.post-title,
+main h1,
+.content,
+.post-desc,
 .card-title,
-.post-preview .card-text {
+.card-text,
+.series-box {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
