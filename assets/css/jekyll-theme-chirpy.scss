@@ -4,3 +4,47 @@
 @import 'main';
 
 /* append your custom style below */
+
+/* 한글 줄바꿈: 단어 중간이 아니라 어절 단위로 끊는다 */
+.post-content,
+.post-title,
+.card-title,
+.post-preview .card-text {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 시리즈 안내 박스 */
+.series-box {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.25));
+  background: var(--card-bg, transparent);
+
+  .series-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-muted-color);
+    margin-bottom: 0.5rem;
+
+    strong {
+      color: var(--heading-color);
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 1.5rem;
+
+    li {
+      margin: 0.25rem 0;
+    }
+
+    li.current {
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+  }
+}

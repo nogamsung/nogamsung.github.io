@@ -1,0 +1,21 @@
+<!-- 같은 series 값을 가진 글을 날짜순으로 나열한다. page.series 가 없으면 아무것도 출력하지 않는다. -->
+{% if page.series %}
+  {% assign series_posts = site.posts | where: 'series', page.series | sort: 'date' %}
+  {% if series_posts.size > 1 %}
+    <nav class="series-box" aria-label="{{ site.data.locales[include.lang].post.series }}">
+      <div class="series-title">
+        {{ site.data.locales[include.lang].post.series }}: <strong>{{ page.series }}</strong>
+        ({{ series_posts.size }}{{ site.data.locales[include.lang].post.series_count_suffix }})
+      </div>
+      <ol>
+        {% for p in series_posts %}
+          {% if p.url == page.url %}
+            <li class="current" aria-current="page">{{ p.title }}</li>
+          {% else %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
+{% endif %}

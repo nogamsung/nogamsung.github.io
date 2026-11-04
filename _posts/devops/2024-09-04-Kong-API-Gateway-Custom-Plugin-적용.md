@@ -1,6 +1,7 @@
 ---
 title: Kong API Gateway Custom Plugin 적용
 slug: kong-custom-plugin
+series: Kong API Gateway
 redirect_from:
   - /posts/Kong-API-Gateway-Custom-Plugin-적용/
 date: 2024-09-04

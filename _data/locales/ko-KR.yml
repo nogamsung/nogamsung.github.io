@@ -53,6 +53,8 @@ notification:
 
 post:
   written_by: By
+  series: 시리즈
+  series_count_suffix: 편
   posted: 게시
   updated: 업데이트
   words: 단어

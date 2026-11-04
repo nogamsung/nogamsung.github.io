@@ -1,6 +1,7 @@
 ---
 title: Kong API Gateway 설치하기
 slug: kong-api-gateway-install
+series: Kong API Gateway
 redirect_from:
   - /posts/Kong-API-Gateway-설치하기/
 date: 2024-08-30

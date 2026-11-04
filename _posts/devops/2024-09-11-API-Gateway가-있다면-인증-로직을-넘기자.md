@@ -1,6 +1,7 @@
 ---
 title: API Gateway가 있다면 인증 로직을 넘기자
 slug: api-gateway-authentication
+series: Kong API Gateway
 redirect_from:
   - /posts/API-Gateway가-있다면-인증-로직을-넘기자/
 date: 2024-09-11

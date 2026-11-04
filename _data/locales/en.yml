@@ -52,6 +52,8 @@ notification:
 # ----- Posts related labels -----
 
 post:
+  series: Series
+  series_count_suffix: " posts"
   written_by: By
   posted: Posted
   updated: Updated
