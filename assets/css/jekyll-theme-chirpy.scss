@@ -1,7 +1,25 @@
 ---
 ---
 
-@import 'main';
+/* 한글 가독성을 위해 Pretendard 를 본문·제목 기본 서체로 사용한다 (head.html 에서 로드) */
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}',
+  $font-family-base: (
+    'Pretendard Variable', Pretendard, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif
+  ),
+  $font-family-heading: (
+    'Pretendard Variable', Pretendard, Lato, -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif
+  )
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
 /* append your custom style below */
 
@@ -14,7 +32,7 @@
   overflow-wrap: break-word;
 }
 
-/* 시리즈 안내 박스 */
+/* 시리즈 안내 박스 (_includes/series.html) */
 .series-box {
   margin: 1.5rem 0 2rem;
   padding: 1rem 1.25rem;

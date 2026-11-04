@@ -23,6 +23,8 @@ noindex 처리된 태그·카테고리·아카이브 목록과 네이버 인증 
   {% assign skip_layouts = "tag,category,tags,categories,archives" | split: "," %}
   {% for page in site.pages %}
     {% assign ext = page.url | split: "." | last %}
+    {% assign name_ext = page.name | split: "." | last %}
+    {% unless name_ext == 'html' or name_ext == 'md' or name_ext == 'markdown' %}{% continue %}{% endunless %}
     {% if page.sitemap == false or page.url contains '/page' or page.url == '/404.html' or page.url == '/redirects.json' or page.url == '/feed.xml' or page.url == '/rss.xml' or page.url == '/sitemap.xml' or page.url == '/robots.txt' or page.url contains '/assets/' or page.url contains 'naver' %}{% continue %}{% endif %}
     {% if skip_layouts contains page.layout %}{% continue %}{% endif %}
     {% if ext == 'xml' or ext == 'json' or ext == 'js' or ext == 'css' or ext == 'txt' %}{% continue %}{% endif %}

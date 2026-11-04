@@ -1,14 +1,11 @@
 # The Site Configuration
+# Chirpy 7.x (gem 기반) › https://github.com/cotes2020/jekyll-theme-chirpy
 
-# Import the theme
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
+# 언어 › http://www.lingoes.net/en/translator/langcode.htm (_data/locales 의 파일명과 일치해야 함)
 lang: ko-KR
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -16,120 +13,135 @@ timezone: Asia/Seoul
 
 title: 노갬성 # the main title
 
-tagline: 백엔드 개발자 안검성의 기술 블로그 # it will display as the sub-title
+tagline: 백엔드 개발자 안검성의 기술 블로그 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   백엔드 개발자 안검성(nogamsung)의 기술 블로그. Spring Boot, JPA, Querydsl, Redis, Kong API Gateway, Airflow 등
   실무에서 겪은 문제와 해결 과정을 기록합니다.
-# A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
-# Fill in the protocol & hostname for your site.
-# e.g. 'https://username.github.io', note that it does not end with a '/'.
+# 사이트 주소 (프로토콜 포함, 끝에 슬래시 없음)
 url: "https://nogamsung.github.io"
 
 github:
-  username: nogamsung # change to your github username
-
-# twitter:
-#   username: twitter_username # change to your twitter username
+  username: nogamsung
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
+  # 글의 기본 작성자이자 푸터 저작권 표시 이름
   name: Geomseong Ahn
-  email: gs97ahn@naver.com # change to your email address
+  email: gs97ahn@naver.com
   links:
-    # The first element serves as the copyright owner's link
-    # - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/nogamsung # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    # 첫 번째 링크가 저작권자 링크로 쓰인다
+    - https://github.com/nogamsung
 
-google_site_verification: 3H6l4VV0Rc5nDPkKUjzbE6IUrFOJJwCUviaoOYGSyGI # fill in to your verification string
+# 사이트 소유 확인 (jekyll-seo-tag) › Google Search Console / Bing 웹마스터 등
+webmaster_verifications:
+  google: 3H6l4VV0Rc5nDPkKUjzbE6IUrFOJJwCUviaoOYGSyGI
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
 
 # 네이버 서치어드바이저 › https://searchadvisor.naver.com/console/board
-# 사이트 등록 후 'HTML 태그' 방식의 content 값을 아래에 넣으면 <meta name="naver-site-verification"> 이 자동으로 출력됩니다.
+# 'HTML 태그' 방식의 content 값을 넣으면 _includes/metadata-hook.html 이 <meta name="naver-site-verification"> 을 출력한다.
+# (현재는 루트의 naver*.html 파일 업로드 방식으로 인증되어 있으므로 비워 두어도 된다)
 naver_site_verification:
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
-google_analytics:
-  id: G-P06BXW4HP1 # fill in your Google Analytics ID
+# Web Analytics Settings
+analytics:
+  google:
+    id: G-P06BXW4HP1
+  goatcounter:
+    id:
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+# Page views settings
+pageviews:
+  provider: # now only supports 'goatcounter'
 
 # Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode: # [light|dark]
+# 비워 두면 시스템 설정을 따르고, 사이드바 토글로 바꿀 수 있다.
+theme_mode: # [light | dark]
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
-# e.g. 'https://cdn.com'
-img_cdn:
+# 이미지 CDN. 비워 두면 /assets/img 로컬 경로를 그대로 쓴다.
+cdn:
 
-# the avatar on sidebar, support local or CORS resources
+# 사이드바 아바타
 avatar: https://avatars.githubusercontent.com/u/84578465?v=4
+
+# 글에 썸네일(image)이 없을 때 쓰이는 기본 소셜 미리보기 이미지 (홈, 탭 페이지 등)
+social_preview_image: /assets/img/og-default.jpg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
 comments:
-  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: giscus # [disqus | utterances | giscus]
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
+    shortname:
   utterances:
-    repo: # <gh-username>/<repo>
-    issue_term: # < url | pathname | title | ...>
+    repo:
+    issue_term:
   # Giscus options › https://giscus.app
-  # giscus 사용 절차: 1) https://github.com/apps/giscus 를 이 저장소에 설치
-  #   2) https://giscus.app 에서 저장소 입력 후 'Announcements' 카테고리 선택 → category_id 복사
-  #   3) 아래 category_id 를 채우고 위 active 값을 giscus 로 변경
   giscus:
-    repo: nogamsung/nogamsung.github.io # <gh-username>/<repo>
+    repo: nogamsung/nogamsung.github.io
     repo_id: R_kgDOHSXcqg
     category: Announcements
     category_id: DIC_kwDOHSXcqs4DKWzU
     mapping: # optional, default to 'pathname'
+    strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
-    lang: ko # optional, default to the value of `site.lang`
+    lang: ko
     reactions_enabled: # optional, default to the value of `1`
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
     enabled: # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env: # [development|production]
+    env: # [development | production]
 
 pwa:
-  enabled: true # the option for PWA feature
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
 
 # The base URL of your site
 baseurl: ""
 
+plugins:
+  - jekyll-redirect-from # Chirpy 7.x 는 더 이상 기본 포함하지 않으므로 직접 활성화
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
-    # default_lang: console
     span:
       line_numbers: false
     block:
@@ -162,14 +174,6 @@ defaults:
     values:
       layout: page
       permalink: /:title/
-  - scope:
-      path: assets/img/favicons
-    values:
-      swcache: true
-  - scope:
-      path: assets/js/dist
-    values:
-      swcache: true
 
 sass:
   style: compressed
@@ -184,15 +188,15 @@ compress_html:
     envs: [development]
 
 exclude:
-  - _posts/2023-01-01-title.md # local post template
   - "*.gem"
   - "*.gemspec"
   - docs
   - tools
   - README.md
   - LICENSE
-  - rollup.config.js
+  - "*.config.js"
   - package*.json
+  - _posts/2023-01-01-title.md   # 로컬 전용 글 템플릿 (gitignore 됨)
 
 jekyll-archives:
   enabled: [categories, tags]

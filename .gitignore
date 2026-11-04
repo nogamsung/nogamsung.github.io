@@ -1,4 +1,4 @@
-# Template
+# Template (로컬 전용 글 템플릿)
 _posts/2023-01-01-title.md
 
 # Bundler cache
@@ -8,6 +8,7 @@ Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
+.jekyll-metadata
 _site
 
 # RubyGems
@@ -19,9 +20,19 @@ package-lock.json
 
 # IDE configurations
 .idea
-.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
 
 # Misc
+_sass/vendors
+assets/js/dist
 
 # Obsidian vault config
 .obsidian
+
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db

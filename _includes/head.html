@@ -1,42 +1,57 @@
-<!-- The Head -->
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
   >
 
-  {% capture seo_tags %}
+  {%- capture seo_tags -%}
     {% seo title=false %}
-  {% endcapture %}
+  {%- endcapture -%}
+
+  <!-- Setup Open Graph image -->
 
   {% if page.image %}
-    {% assign img = page.image.path | default: page.image %}
+    {% assign src = page.image.path | default: page.image %}
 
-    {% unless img contains '://' %}
-      {% assign img_path = page.img_path | append: '/' | append: img | replace: '//', '/' %}
-      {% capture target %}"{{ img | absolute_url }}"{% endcapture %}
+    {% unless src contains '://' %}
+      {%- capture img_url -%}
+        {% include media-url.html src=src subpath=page.media_subpath absolute=true %}
+      {%- endcapture -%}
 
-      {% if site.img_cdn contains '//' %}
-        <!-- it's a cross-origin URL -->
-        {% capture replacement %}"{{ site.img_cdn }}{{ img_path }}"{% endcapture %}
-      {% else %}
-        <!-- it's a local file path -->
-        {%- capture replacement -%}
-          "{{ site.img_cdn | append: '/' | append: img_path | replace: '//', '/' | absolute_url }}"
-        {%- endcapture -%}
-      {% endif %}
+      {%- capture old_url -%}{{ src | absolute_url }}{%- endcapture -%}
+      {%- capture new_url -%}{{ img_url }}{%- endcapture -%}
 
-      {% assign seo_tags = seo_tags | replace: target, replacement %}
+      {% assign seo_tags = seo_tags | replace: old_url, new_url %}
     {% endunless %}
+
+  {% elsif site.social_preview_image %}
+    {%- capture img_url -%}
+      {% include media-url.html src=site.social_preview_image absolute=true %}
+    {%- endcapture -%}
+
+    {%- capture og_image -%}
+      <meta property="og:image" content="{{ img_url }}" />
+    {%- endcapture -%}
+
+    {%- capture twitter_image -%}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:image" content="{{ img_url }}" />
+    {%- endcapture -%}
+
+    {% assign old_meta_clip = '<meta name="twitter:card" content="summary" />' %}
+    {% assign new_meta_clip = og_image | append: twitter_image %}
+    {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
   {% endif %}
 
   {{ seo_tags }}
+
+  {%- if site.social.fediverse_handle %}
+    <!-- Fediverse handle/creator -->
+    <meta name="fediverse:creator" content="{{ site.social.fediverse_handle }}">
+  {% endif %}
 
   {%- comment -%} 태그/카테고리/아카이브 목록 페이지는 색인하지 않고 링크만 따라가게 한다 (얇은 페이지로 평가 분산 방지) {%- endcomment -%}
   {% if page.layout == 'tag' or page.layout == 'category' or page.layout == 'tags' or page.layout == 'categories' or page.layout == 'archives' %}
@@ -45,45 +60,49 @@
 
   <title>
     {%- if page.layout == 'home' -%}
-      {{ site.title }} | {{ site.tagline }}
+      {{- site.title }} | {{ site.tagline -}}
     {%- else -%}
-      {{ page.title | append: ' | ' }}{{ site.title }}
+      {%- capture title -%}
+        {%- if page.collection == 'tabs' -%}
+          {%- assign tab_key = page.title | downcase -%}
+          {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}
+        {%- else -%}
+          {{- page.title -}}
+        {%- endif -%}
+      {%- endcapture -%}
+      {{- title | append: ' | ' -}}{{- site.title -}}
     {%- endif -%}
   </title>
 
   {% include_cached favicons.html %}
 
-  {% if site.resources.ignore_env != jekyll.environment and site.resources.self_hosted %}
-    <link href="{{ site.data.origin[type].webfonts | relative_url }}" rel="stylesheet">
-
-  {% else %}
-    {% for cdn in site.data.origin[type].cdns %}
-      <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
-      <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
+  <!-- Resource Hints -->
+  {% unless site.assets.self_host.enabled %}
+    {% for hint in site.data.origin.cors.resource_hints %}
+      {% for link in hint.links %}
+        <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
+      {% endfor %}
     {% endfor %}
+  {% endunless %}
 
-    <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
-  {% endif %}
+  <!-- Bootstrap -->
+  {% unless jekyll.environment == 'production' %}
+    <link rel="stylesheet" href="{{ site.data.origin.cors.bootstrap.css }}">
+  {% endunless %}
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
+
+  <!-- Web Font -->
+  <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
 
   <!-- 한글 본문용 웹폰트 (Pretendard, 가변·다이내믹 서브셋) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" crossorigin="anonymous">
 
-  <!-- GA -->
-  {% if jekyll.environment == 'production' and site.google_analytics.id != empty and site.google_analytics.id %}
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-  {% endif %}
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].bootstrap.css | relative_url}}">
-
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
 
-  <link rel="stylesheet" href="{{ '/assets/css/:THEME.css' | replace: ':THEME', site.theme | relative_url }}">
+  <!-- 3rd-party Dependencies -->
 
   {% if site.toc and page.toc %}
     <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
@@ -94,15 +113,34 @@
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
-    <!-- Manific Popup -->
-    <link rel="stylesheet" href="{{ site.data.origin[type].magnific-popup.css | relative_url }}">
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
   {% endif %}
 
-  <!-- JavaScript -->
+  <!-- Scripts -->
 
-  {% unless site.theme_mode %}
-    {% include mode-toggle.html %}
-  {% endunless %}
+  <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
+
+  {% include js-selector.html lang=lang %}
+
+  {% if jekyll.environment == 'production' %}
+    <!-- PWA -->
+    {% if site.pwa.enabled %}
+      <script
+        defer
+        src="{{ '/app.min.js' | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
+      ></script>
+    {% endif %}
+
+    <!-- Web Analytics -->
+    {% for analytics in site.analytics %}
+      {% capture str %}{{ analytics }}{% endcapture %}
+      {% assign platform = str | split: '{' | first %}
+      {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
+        {% include analytics/{{ platform }}.html %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
   {% include metadata-hook.html %}
 </head>
