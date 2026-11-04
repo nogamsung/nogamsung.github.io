@@ -1,5 +1,8 @@
 ---
 title: Kong API Gateway Custom Plugin 적용
+slug: kong-custom-plugin
+redirect_from:
+  - /posts/Kong-API-Gateway-Custom-Plugin-적용/
 date: 2024-09-04
 description: >-
   Lua로 작성한 커스텀 플러그인을 Dockerfile로 Kong 이미지에 포함시켜 빌드하고, Konga와 Kong Manager에서 플러그인을 활성화하는 방법을 단계별로 정리합니다.
@@ -7,6 +10,7 @@ categories: [devops, api-gateway]
 tags: [kong, konga, api-gateway, lua, plugin]
 image:
   path: /assets/img/thumbnail/kong-custom-plugin.png
+  alt: "Kong API Gateway Custom Plugin 적용"
 ---
 
 ## 개요
@@ -19,7 +23,7 @@ Custom plugin은 기본적으로 Lua script로 작성할 수 있지만 Go, Java 
 
 그리고 기본적으로 Kong을 실행하기 위한 준비는 전부 완료 됐다고 가정하겠다. 즉, postgresql와 konga는 Kong을 실행시키고 custom plugin을 적용시키기 위해 필요한 application이기 때문에 이에 대한 설치는 완료가 됐다고 가정하겠다.
 
-> 참고: [Kong API Gateway 설치하기](https://nogamsung.github.io/posts/Kong-API-Gateway-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/)
+> 참고: [Kong API Gateway 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})
 
 ## Custom Plugin을 적용한 Kong 실행 방법
 

@@ -1,5 +1,8 @@
 ---
 title: Spring Boot와 Java 버전 업그레이드
+slug: spring-boot-3-java-21-upgrade
+redirect_from:
+  - /posts/Spring-Boot와-Java-버전-업그레이드/
 date: 2024-06-12
 description: >-
   ISMS 심사를 계기로 Spring Boot 2.7에서 3.3으로, Java 11에서 21로 업그레이드한 과정을 build.gradle 변경, Gradle 래퍼, SecurityConfig 코드 수정 순서로 정리합니다.
@@ -7,6 +10,7 @@ categories: [backend, spring]
 tags: [spring, spring-boot, java, upgrade]
 image:
   path: /assets/img/thumbnail/spring-boot-3-java-21-upgrade.png
+  alt: "Spring Boot와 Java 버전 업그레이드"
 ---
 
 ## 개요

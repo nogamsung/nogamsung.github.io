@@ -1,5 +1,8 @@
 ---
 title: API Gateway가 있다면 인증 로직을 넘기자
+slug: api-gateway-authentication
+redirect_from:
+  - /posts/API-Gateway가-있다면-인증-로직을-넘기자/
 date: 2024-09-11
 description: >-
   여러 Spring Boot 서버의 JWT 토큰 인증을 Auth 서버에 몰아줄지 API Gateway에서 처리할지 비교하고, Kong JWT 플러그인의 한계를 커스텀 플러그인으로 넘어서 인증을 통합한 설계 과정을 공유합니다.
@@ -7,6 +10,7 @@ categories: [devops, api-gateway]
 tags: [kong, api-gateway, jwt, authentication, msa]
 image:
   path: /assets/img/thumbnail/api-gateway-authentication.png
+  alt: "API Gateway가 있다면 인증 로직을 넘기자"
 ---
 
 ## 배경
@@ -57,8 +61,8 @@ Kong에서 무료로 제공하는 Plugin은 응답을 수정할 수 없으며, �
 내가 원하는 plugin을 lua script로 개발해서 Gateway에 추가할 수 있다.
 
 > 참고
-> - [Kong API Gateway 설치하기](https://nogamsung.github.io/posts/Kong-API-Gateway-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/)
-> - [Kong API Gateway Custom Plugin 적용](https://nogamsung.github.io/posts/Kong-API-Gateway-Custom-Plugin-%EC%A0%81%EC%9A%A9/)
+> - [Kong API Gateway 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})
+> - [Kong API Gateway Custom Plugin 적용]({% post_url devops/2024-09-04-Kong-API-Gateway-Custom-Plugin-적용 %})
 
 JWT plugin 자체가 오픈 소스이기 때문에 이를 바탕으로 토큰이 있을 경우만 검증을 수행하고, 없으면 수행하지 않고 라우팅을 진행하게 하면 된다!! 심지어 커스터마이징을 할 경우 응답 값도 내가 원하는 대로 수정하면 된다.
 

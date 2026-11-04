@@ -38,6 +38,11 @@
 
   {{ seo_tags }}
 
+  {%- comment -%} 태그/카테고리/아카이브 목록 페이지는 색인하지 않고 링크만 따라가게 한다 (얇은 페이지로 평가 분산 방지) {%- endcomment -%}
+  {% if page.layout == 'tag' or page.layout == 'category' or page.layout == 'tags' or page.layout == 'categories' or page.layout == 'archives' %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
+
   <title>
     {%- if page.layout == 'home' -%}
       {{ site.title }} | {{ site.tagline }}

@@ -1,5 +1,8 @@
 ---
 title: JpaRepository로 중복 검증을 위한 query 개선
+slug: jpa-duplicate-check-query
+redirect_from:
+  - /posts/JpaRepository로-중복-검증을-위한-query-개선/
 date: 2023-10-01
 description: >-
   이메일 중복 검증 쿼리를 Spring Data JPA의 findBy, countBy, existsBy로 각각 작성해 5만 건 데이터에서 실행 시간을 비교하고, 어떤 메서드가 가장 빠른지 정리합니다.
@@ -7,6 +10,7 @@ categories: [backend, spring]
 tags: [spring, jpa, performance]
 image:
   path: /assets/img/thumbnail/jpa-duplicate-check-query.png
+  alt: "JpaRepository로 중복 검증을 위한 query 개선"
 ---
 
 > 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.

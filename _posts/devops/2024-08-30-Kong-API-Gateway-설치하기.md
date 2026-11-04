@@ -1,5 +1,8 @@
 ---
 title: Kong API Gateway 설치하기
+slug: kong-api-gateway-install
+redirect_from:
+  - /posts/Kong-API-Gateway-설치하기/
 date: 2024-08-30
 description: >-
   Docker로 PostgreSQL, Kong API Gateway, Konga 관리 UI를 설치하고 연결한 뒤 Service와 Route를 등록해 요청이 라우팅되는지 확인하는 전 과정을 명령어와 함께 설명합니다.
@@ -7,6 +10,7 @@ categories: [devops, api-gateway]
 tags: [kong, konga, api-gateway, docker]
 image:
   path: /assets/img/thumbnail/kong-api-gateway-install.png
+  alt: "Kong API Gateway 설치하기"
 ---
 
 ## 개요
