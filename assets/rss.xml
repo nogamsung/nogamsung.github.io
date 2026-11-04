@@ -1,0 +1,35 @@
+---
+layout: compress
+permalink: /rss.xml
+# RSS 2.0 Feed (네이버 서치어드바이저용. Atom 형식인 feed.xml 은 네이버가 받지 않음)
+# reference: https://www.rssboard.org/rss-specification
+---
+
+{% capture source %}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ "/" | absolute_url }}</link>
+    <description>{{ site.description | strip_newlines | xml_escape }}</description>
+    <language>{{ site.lang | downcase }}</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll {{ jekyll.version }}</generator>
+    <atom:link href="{{ page.url | absolute_url }}" rel="self" type="application/rss+xml" />
+    {% for post in site.posts limit: 20 %}
+      {% assign post_absolute_url = post.url | absolute_url %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ post_absolute_url }}</link>
+        <guid isPermaLink="true">{{ post_absolute_url }}</guid>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <dc:creator>{{ site.social.name | xml_escape }}</dc:creator>
+        {% for category in post.categories %}
+          <category>{{ category | xml_escape }}</category>
+        {% endfor %}
+        <description>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 400 | xml_escape }}</description>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
+{% endcapture %}
+{{ source | replace: '&', '&amp;' | replace: '&amp;amp;', '&amp;' | replace: '&amp;lt;', '&lt;' | replace: '&amp;gt;', '&gt;' | replace: '&amp;quot;', '&quot;' | replace: '&amp;apos;', '&apos;' }}
