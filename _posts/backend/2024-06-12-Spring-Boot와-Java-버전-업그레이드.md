@@ -1,21 +1,15 @@
 ---
-layout: post
 title: Spring Boot와 Java 버전 업그레이드
 date: 2024-06-12
-description: 
-categories:
-  - backend
-  - spring
-  - java
-img: 
-tags:
-  - spring
-  - java
-toc: true
-toc_sticky: true
-toc_label: 목차
+description: >-
+  ISMS 심사를 계기로 Spring Boot 2.7에서 3.3으로, Java 11에서 21로 업그레이드한 과정을 build.gradle 변경, Gradle 래퍼, SecurityConfig 코드 수정 순서로 정리합니다.
+categories: [backend, spring]
+tags: [spring, spring-boot, java, upgrade]
+image:
+  path: /assets/img/thumbnail/spring-boot-3-java-21-upgrade.png
 ---
-# 개요
+
+## 개요
 
 회사에서 ISMS 심사를 받기로해 deprecated 된 버전들은 반드시 버전업을 해야 된다고 전해 받아 Spring Boot 2는 Spring 3으로 버전 업을 하게 됐다. 
 
@@ -24,11 +18,11 @@ toc_label: 목차
 Java 11 ➡️ Java 21
 Spring Boot 2.7.1 ➡️ Spring Boot 3.3.0
 
-# 1️⃣ 자바 버전 업그레이드 및 스프링부트 2에서 최대 버전 업그레이드
+## 1️⃣ 자바 버전 업그레이드 및 스프링부트 2에서 최대 버전 업그레이드
 
 먼저 스프링부트 버전을 2.7.x 버전, 즉 가장 최신 2 버전으로 맞춰서 라이브러리의 의존성을 확인한다.
 
-#### 변경 전
+##### 변경 전
 
 ###### `build.gradle`
 
@@ -47,7 +41,7 @@ dependencies {
 }
 ```
 
-#### 변경 후
+##### 변경 후
 
 ###### `build.gradle`
 
@@ -66,11 +60,11 @@ dependencies {
 }
 ```
 
-# 2️⃣ 스프링부트 최신 버전 업그레이드
+## 2️⃣ 스프링부트 최신 버전 업그레이드
 
 스프링부트 최신 버전으로 업그레이드한다. 아래와 같이 변경을 해주면 gradle build는 잘 돌아가게 된다.
 
-#### 변경 전
+##### 변경 전
 
 ###### `build.gradle`
 
@@ -97,13 +91,13 @@ dependencies {
 }
 ```
 
-##### `gradle-wrapper.properties`
+###### `gradle-wrapper.properties`
 
 ```properties
 distributionUrl=https\://services.gradle.org/distributions/gradle-7.6.1-bin.zip
 ```
 
-#### 변경 후
+##### 변경 후
 
 ###### `build.gradle`
 
@@ -125,17 +119,17 @@ dependencies {
 }
 ```
 
-##### `gradle-wrapper.properties`
+###### `gradle-wrapper.properties`
 
 ```properties
 distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip
 ```
 
-# 3️⃣ 코드 변경
+## 3️⃣ 코드 변경
 
-#### 변경 전
+##### 변경 전
 
-##### 전체
+###### 전체
 
 ```java
 import javax.persistence.*;
@@ -144,7 +138,7 @@ import javax.validation.*;
 import javax.servlet.*;
 ```
 
-##### `SecurityConfig.java`
+###### `SecurityConfig.java`
 
 ```java
 @EnableWebSecurity  
@@ -174,9 +168,9 @@ public class SecurityConfig {
 }
 ```
 
-#### 변경 후
+##### 변경 후
 
-##### 전체
+###### 전체
 
 ```java
 import jakarta.persistence.*;
@@ -185,7 +179,7 @@ import jakarta.validation.*;
 import jakarta.servlet.*;
 ```
 
-##### `SecurityConfig.java`
+###### `SecurityConfig.java`
 
 ```java
 @Configuration  
@@ -211,13 +205,13 @@ public class SecurityConfig {
 }
 ```
 
-# 4️⃣ 마무리
+## 4️⃣ 마무리
 
 - ECS와 같은 환경에서는 `buildspec.yml`도 바꿔야 된다
 - `@Table(name = "schema.table)`로 Entity를 설정해 줬다면 더이상 읽지 못하기 때문에 `@Table(catalog = "schema", name = "table")`로 바꿔줘야 된다.
 - Querydsl에 `Expressions.StringTemplate` 같은 코드도 수정이 필요하기 때문에 모든 API들에 코드들을 점검해야 한다.
 
-# 참조
+## 참조
 
 - https://luvstudy.tistory.com/221
 - https://hodolman.com/54

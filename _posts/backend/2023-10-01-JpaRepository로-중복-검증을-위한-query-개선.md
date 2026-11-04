@@ -1,28 +1,22 @@
 ---
-layout: post
 title: JpaRepository로 중복 검증을 위한 query 개선
 date: 2023-10-01
-description: 
-categories:
-  - backend
-  - spring
-  - jpa
-img: 
-tags:
-  - spring
-  - jpa
-toc: true
-toc_sticky: true
-toc_label: 목차
+description: >-
+  이메일 중복 검증 쿼리를 Spring Data JPA의 findBy, countBy, existsBy로 각각 작성해 5만 건 데이터에서 실행 시간을 비교하고, 어떤 메서드가 가장 빠른지 정리합니다.
+categories: [backend, spring]
+tags: [spring, jpa, performance]
+image:
+  path: /assets/img/thumbnail/jpa-duplicate-check-query.png
 ---
+
 > 대부분의 서비스에서는 아이디 또는 이메일 중복을 검증합니다. 그래서 이번에 중복 검증을 위한 query 개선을 해봤습니다.
 
-# 개요
+## 개요
 
 Email을 가지고 있는 `Contact`라는 entity에서 이메일 중복 검사를 수행하기 위해 query를 하는 상황입니다. 테스트를 위해 50,000개의 데이터
 `tester1@nogamsung.com` 부터 `tester50000@nogamsung.com`를 먼저 주입하여 진행하였습니다.
 
-##### Domain
+###### Domain
 ```java
 @Getter
 @Entity
@@ -35,15 +29,15 @@ public class Contact extends BaseEntity {
 }
 ```
 
-# `findBy`
-##### Repository
+## `findBy`
+###### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     Optional<Contact> findByEmail(String email);
 }
 ```
 
-##### Test
+###### Test
 ```java
 @Test
 void findByEmail() {
@@ -58,19 +52,19 @@ void findByEmail() {
 }
 ```
 
-![](../../assets/img/2023/10/01-1.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - findBy](/assets/img/2023/10/01-1.png)
 
 **결과: 0.214초**
 
-# `countBy`
-#### Repository
+## `countBy`
+##### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     int countByEmail(String email);
 }
 ```
 
-##### Test
+###### Test
 ```java
 @Test
 void countByEmail() {
@@ -85,19 +79,19 @@ void countByEmail() {
 }
 ```
 
-![](../../assets/img/2023/10/01-2.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - countBy](/assets/img/2023/10/01-2.png)
 
 **결과: 0.196초**
 
-# `existsBy`
-#### Repository
+## `existsBy`
+##### Repository
 ```java
 public interface ContactRepsitory extends JpaRepository<Contact, Long> {
     boolean existsByEmail(String email);
 }
 ```
 
-##### Test
+###### Test
 ```java
 @Test
 void existsByEmail() {
@@ -112,11 +106,11 @@ void existsByEmail() {
 }
 ```
 
-![](../../assets/img/2023/10/01-3.png)
+![JpaRepository로 중복 검증을 위한 query 개선 - existsBy](/assets/img/2023/10/01-3.png)
 
 **결과: 0.166초**
 
-# 정리
+## 정리
 
 |     | findBy | countBy | existsBy |
 |-----|--------|---------|----------|

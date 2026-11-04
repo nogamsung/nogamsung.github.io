@@ -22,3 +22,6 @@ package-lock.json
 .vscode
 
 # Misc
+
+# Obsidian vault config
+.obsidian

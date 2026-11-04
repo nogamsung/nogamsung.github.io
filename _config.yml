@@ -14,20 +14,21 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: nogamsung # the main title
+title: 노갬성 # the main title
 
-tagline: 노갬성 개발 블로그 # it will display as the sub-title
+tagline: 백엔드 개발자 안검성의 기술 블로그 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  노갬성 개발 블로그
+  백엔드 개발자 안검성(nogamsung)의 기술 블로그. Spring Boot, JPA, Querydsl, Redis, Kong API Gateway, Airflow 등
+  실무에서 겪은 문제와 해결 과정을 기록합니다.
 # A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://gs97ahn.github.io"
+url: "https://nogamsung.github.io"
 
 github:
-  username: gs97ahn # change to your github username
+  username: nogamsung # change to your github username
 
 # twitter:
 #   username: twitter_username # change to your twitter username
@@ -40,12 +41,16 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/gs97ahn # change to your github homepage
+    - https://github.com/nogamsung # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
 google_site_verification: 3H6l4VV0Rc5nDPkKUjzbE6IUrFOJJwCUviaoOYGSyGI # fill in to your verification string
+
+# 네이버 서치어드바이저 › https://searchadvisor.naver.com/console/board
+# 사이트 등록 후 'HTML 태그' 방식의 content 값을 아래에 넣으면 <meta name="naver-site-verification"> 이 자동으로 출력됩니다.
+naver_site_verification:
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
@@ -89,10 +94,13 @@ comments:
     repo: # <gh-username>/<repo>
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
+  # giscus 사용 절차: 1) https://github.com/apps/giscus 를 이 저장소에 설치
+  #   2) https://giscus.app 에서 저장소 입력 후 'Announcements' 카테고리 선택 → category_id 복사
+  #   3) 아래 category_id 를 채우고 위 active 값을 giscus 로 변경
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
+    repo: nogamsung/nogamsung.github.io # <gh-username>/<repo>
+    repo_id: R_kgDOHSXcqg
+    category: Announcements
     category_id:
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
@@ -176,6 +184,7 @@ compress_html:
     envs: [development]
 
 exclude:
+  - _posts/2023-01-01-title.md # local post template
   - "*.gem"
   - "*.gemspec"
   - docs

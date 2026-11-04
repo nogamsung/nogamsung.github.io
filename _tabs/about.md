@@ -2,8 +2,34 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+title: 소개
+description: >-
+  백엔드 개발자 안검성(nogamsung)을 소개합니다. Spring 기반 서버 개발, JPA와 Querydsl 성능 개선,
+  Redis, Kong API Gateway, Airflow 등 실무에서 다룬 기술과 이 블로그에서 다루는 주제를 정리했습니다.
 ---
 
-안녕하세요.
+안녕하세요. 백엔드 개발자 **안검성**입니다.
 
-백엔드 개발자 안검성입니다.
+Spring 기반 서버를 개발하고 운영하면서 마주친 문제와 해결 과정을 이 블로그에 기록합니다.
+2023년부터 여행 플랫폼 회사에서 백엔드 개발자로 일하고 있습니다.
+
+## 다루는 주제
+
+- **Spring Boot / JPA / Querydsl**: N+1 문제, 동적 쿼리, 조회 성능 개선, 버전 업그레이드
+- **Redis**: Redisson 분산 락을 이용한 동시성 제어
+- **API Gateway**: Kong 설치와 운영, Lua 커스텀 플러그인, Gateway 단 인증 통합
+- **데이터 / 배치**: Apache Airflow 설치와 운영
+- **SQL**: MySQL 마이그레이션 쿼리와 실행 계획
+- **기록**: 컨퍼런스 참관 후기, 연간 회고
+
+## 글을 쓰는 방식
+
+문제 상황을 먼저 설명하고, 선택지를 비교한 뒤, 실제로 적용한 코드와 측정 결과를 남기려고 합니다.
+가능한 것은 수치로 검증하고, 실무에서 바로 따라갈 수 있는 수준의 명령어와 설정을 함께 적습니다.
+
+## 연락
+
+- GitHub: [github.com/nogamsung](https://github.com/nogamsung)
+- Email: gs97ahn@naver.com
+
+글에 잘못된 내용이 있거나 궁금한 점이 있으면 댓글이나 메일로 편하게 알려주세요.
