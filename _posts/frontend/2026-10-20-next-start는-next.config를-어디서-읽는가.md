@@ -3,7 +3,7 @@ title: next start는 next.config를 어디서 읽는가, Docker 런타임 이미
 slug: next-start-runtime-config-docker
 date: 2026-10-20
 description: >-
-  빌드 스테이지에서 .next만 복사한 Next.js 런타임 이미지가 두 달 사이 세 번 장애를 냈습니다. images.remotePatterns가 무시돼 이미지가 400, basePath가 사라져 전 라우트 404, 비루트 사용자로 바꾸자 corepack이 pnpm을 다시 받으려다 멈추고 로거의 mkdir이 EACCES로 모든 BFF가 HTML 500. Next 소스에서 어떤 설정이 빌드 산출물에 들어가고 어떤 설정을 next start가 런타임에 읽는지 확인하고, 비루트 컨테이너 점검 목록을 정리합니다.
+  빌드 스테이지에서 .next만 복사한 Next.js 런타임 이미지가 두 달 사이 세 번 발목을 잡았습니다. images.remotePatterns가 무시돼 이미지가 400, basePath가 사라져 전 라우트 404, 비루트 사용자로 바꾸자 corepack이 pnpm을 다시 받으려다 멈추고 로거의 mkdir이 EACCES로 모든 BFF가 HTML 500. Next 소스에서 어떤 설정이 빌드 산출물에 들어가고 어떤 설정을 next start가 런타임에 읽는지 확인하고, 비루트 컨테이너 점검 목록을 정리합니다.
 categories: [frontend, nextjs]
 tags: [nextjs, docker, next-start, basepath, corepack, pnpm, non-root, standalone]
 image:
@@ -15,11 +15,11 @@ image:
 
 pnpm 모노레포의 Next.js 15 앱 열두 개는 전부 같은 모양의 2단계 Dockerfile로 빌드됩니다. 빌더 스테이지에서 `pnpm install`과 `next build`를 하고, 러너 스테이지에서 `pnpm install --prod`를 한 뒤 `.next`와 `public`만 복사해 `next start`로 띄웁니다. 흔한 패턴이고 두 달 동안 문제가 없었습니다.
 
-그 두 달 사이 이 러너 스테이지가 세 번 장애를 냈습니다. 세 번 모두 로컬에서는 재현되지 않았고, 세 번 모두 "컨테이너 안의 `next start`는 내가 생각한 것과 다른 것을 본다"는 한 문장으로 요약됩니다. 오늘 세 번째를 겪고 나서 Next.js 소스를 열어 **어떤 설정이 빌드 산출물에 들어가고, 어떤 설정을 `next start`가 런타임에 다시 읽는지** 확인했습니다.
+그 두 달 사이 이 러너 스테이지가 세 번 멈춰 섰습니다. 아직 출시 전이라 영향은 개발 환경과 팀 안에서 끝났지만, 출시 뒤였다면 그대로 장애가 됐을 일들입니다. 세 번 모두 로컬에서는 재현되지 않았고, 세 번 모두 "컨테이너 안의 `next start`는 내가 생각한 것과 다른 것을 본다"는 한 문장으로 요약됩니다. 오늘 세 번째를 겪고 나서 Next.js 소스를 열어 **어떤 설정이 빌드 산출물에 들어가고, 어떤 설정을 `next start`가 런타임에 다시 읽는지** 확인했습니다.
 
-| 날짜 | 증상 | 원인 |
+| 날짜 | 증상 (모두 dev 환경) | 원인 |
 |---|---|---|
-| 08-27 | 공개 사이트 4곳의 CMS 이미지가 `/_next/image` 400 | 런타임에 `images.remotePatterns`가 기본값 `[]` |
+| 08-27 | 회사 소개 사이트 4곳의 CMS 이미지가 `/_next/image` 400 | 런타임에 `images.remotePatterns`가 기본값 `[]` |
 | 10-02 | 관리자 앱 `/admin/*` 전부 404, 약 1시간 | 런타임에 `basePath`가 `""` |
 | 10-20 | 컨테이너가 기동 로그에서 멈춤. 다른 앱은 로그인 뒤 모든 API가 HTML 500 | 비루트 전환 뒤 `$HOME` 캐시 미스, 루트 소유 디렉터리 |
 
@@ -148,11 +148,11 @@ writeFileSync(join(appDir, "next.config.runtime.mjs"), `export default ${JSON.st
 +COPY --from=builder /app/apps/admin/next.config.runtime.mjs apps/admin/next.config.mjs
 ```
 
-머지에서 핫픽스 머지까지 46분, 배포 시간을 더해 약 1시간의 dev 장애였습니다. 이후 같은 날 옮긴 앱 다섯 개는 처음부터 이 단계를 넣었습니다. 8월의 "TS 설정 + TypeScript 복사"와 10월의 "매니페스트에서 생성한 .mjs", 두 가지 우회가 저장소에 공존하게 됐습니다.
+머지에서 핫픽스 머지까지 46분, 배포 시간을 더해 약 1시간 동안 dev 환경이 멈춰 있었습니다. 이후 같은 날 옮긴 앱 다섯 개는 처음부터 이 단계를 넣었습니다. 8월의 "TS 설정 + TypeScript 복사"와 10월의 "매니페스트에서 생성한 .mjs", 두 가지 우회가 저장소에 공존하게 됐습니다.
 
 ## 3. 세 번째: 루트가 빌드하고 node가 실행한다 🔐
 
-오늘 아침, 보안 후속 작업으로 Dockerfile 열두 개에 `USER node`를 넣고 `.next`를 `chown`한 변경이 배포됐습니다. 그러자 두 종류의 장애가 났습니다.
+오늘 아침, 보안 후속 작업으로 Dockerfile 열두 개에 `USER node`를 넣고 `.next`를 `chown`한 변경이 배포됐습니다. 그러자 두 종류의 문제가 났습니다.
 
 ![빌드 스테이지는 root로 pnpm을 받아 root의 홈 캐시에 두고, 런타임은 node 사용자로 전환돼 빈 캐시를 보고 네트워크로 나가다 막히는 그림. 아래쪽은 루트 소유 디렉터리에 로거가 mkdir을 못 해 HTML 500이 나는 그림](/assets/img/2026/10/20-2.svg){: width="1100" height="640" }
 
@@ -195,9 +195,9 @@ RUN mkdir -p /app/apps/service-a/log && chown -R node:node /app/apps/service-a/.
 
 ## 4. 세 번의 공통점 🧭
 
-세 사고는 겉보기엔 다르지만 모두 "빌드 스테이지가 알던 것을 런타임 스테이지는 모른다"는 한 문장입니다. 설정 파일, basePath, 패키지 매니저 바이너리, 디렉터리 소유권. 2단계 빌드의 장점은 런타임 이미지를 작게 유지하는 것인데, 작게 만드는 과정에서 빠뜨린 것이 매번 조용히 기본값으로 떨어졌습니다.
+세 번의 문제는 겉보기엔 다르지만 모두 "빌드 스테이지가 알던 것을 런타임 스테이지는 모른다"는 한 문장입니다. 설정 파일, basePath, 패키지 매니저 바이너리, 디렉터리 소유권. 2단계 빌드의 장점은 런타임 이미지를 작게 유지하는 것인데, 작게 만드는 과정에서 빠뜨린 것이 매번 조용히 기본값으로 떨어졌습니다.
 
-그리고 세 번 모두 로컬 재현이 안 됐습니다. 로컬에는 설정 파일이 있고, 사용자는 하나이고, 네트워크는 열려 있으니까요. 8월 사고 뒤부터 **GHCR 이미지를 받아 로컬에서 띄우는 것**을 배포 전 점검에 넣었고, 10월 사고 둘은 그렇게 재현했습니다.
+그리고 세 번 모두 로컬 재현이 안 됐습니다. 로컬에는 설정 파일이 있고, 사용자는 하나이고, 네트워크는 열려 있으니까요. 8월 이후 **GHCR 이미지를 받아 로컬에서 띄우는 것**을 배포 전 점검에 넣었고, 10월의 둘은 그렇게 재현했습니다.
 
 가장 근본적인 해법은 알고 있었습니다. Next의 `output: "standalone"`은 빌드 때 설정을 `server.js` 안에 직렬화해 넣으므로 런타임에 설정 파일도, pnpm도, TypeScript도 필요 없습니다. 모노레포에서 공유 패키지 추적(`outputFileTracingRoot`)을 맞추는 작업이 필요해 미뤄 두었는데, 오늘로 미룰 이유가 없어졌습니다.
 
