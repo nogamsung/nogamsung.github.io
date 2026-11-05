@@ -13,11 +13,11 @@ timezone: Asia/Seoul
 
 title: nogamsung # the main title
 
-tagline: 백엔드 개발자 안검성의 기술 블로그 # it will display as the subtitle
+tagline: 프로덕트 엔지니어 안검성의 기술 블로그 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  백엔드 개발자 안검성(nogamsung)의 기술 블로그. Spring Boot, JPA, Querydsl, Redis, Kong API Gateway, Airflow 등
-  실무에서 겪은 문제와 해결 과정을 기록합니다.
+  프로덕트 엔지니어 안검성(nogamsung)의 기술 블로그. Spring Boot, JPA, Next.js, 실시간 통신, 인증, 무중단 배포, AI 코딩 에이전트까지
+  실무에서 겪은 문제와 결정의 이유를 기록합니다.
 
 # 사이트 주소 (프로토콜 포함, 끝에 슬래시 없음)
 url: "https://nogamsung.github.io"
