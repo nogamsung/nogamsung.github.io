@@ -49,7 +49,7 @@ for f in sorted(glob.glob('_posts/*/*.md')):
     for ln in lines:
         d.text((L,y),ln,font=ft,fill=(255,255,255)); y+=int(size*1.3)
     d.text((L,H-100),'nogamsung.github.io',font=face('Medium',28),fill=(255,255,255))
-    d.text((L,H-64),'노갬성 개발 블로그  ·  백엔드 개발자 안검성',font=face('Regular',24),fill=(230,230,240))
+    d.text((L,H-64),'nogamsung 개발 블로그  ·  백엔드 개발자 안검성',font=face('Regular',24),fill=(230,230,240))
     out=f'assets/img/thumbnail/{slug}.jpg'
     img.save(out,'JPEG',quality=88,optimize=True,progressive=True)
     print('thumb',slug,size,len(lines),os.path.getsize(out)//1024,'KB')

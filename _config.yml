@@ -11,7 +11,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 노갬성 # the main title
+title: nogamsung # the main title
 
 tagline: 백엔드 개발자 안검성의 기술 블로그 # it will display as the subtitle
 
