@@ -1,4 +1,4 @@
-"""시리즈 "AI와 일하기" 5편의 다이어그램 (2026-11-05 작성).
+"""시리즈 "AI 네이티브 개발" 5편의 다이어그램 (2026-11-05 작성).
 실행: python3 tools/diagrams/make_diagrams_batch3.py "$PWD"
 로고는 assets/img/logos/*.svg (Simple Icons, CC0) 의 path 를 인라인으로 심는다.
 """

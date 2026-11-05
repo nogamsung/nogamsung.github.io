@@ -2,7 +2,7 @@
 title: Claude Code와 Codex를 같은 하네스로, CLAUDE.md에서 AGENTS.md로
 slug: claude-codex-shared-harness
 date: 2026-10-27 18:00:00 +0900
-series: AI와 일하기
+series: AI 네이티브 개발
 description: >-
   한쪽 구독이 끊겨도 다른 쪽 하나로 전부 돌아가게, 그리고 손으로 두 벌 고치는 설정 파일 없이. 지침 파일을 AGENTS.md 하나로 바꾸고, 빌드·커버리지 게이트를 에이전트 훅에서 git 훅으로 옮기고, 스킬 32개를 한 폴더에 모으고, PR마다 반대편 모델이 리뷰하게 만든 하루의 PR 다섯 개를 정리합니다. 그 과정에서 발견한 "한 번도 막지 못하고 있던 훅"과 "한 번도 돌지 않고 있던 git 훅" 이야기도 함께.
 categories: [ai, agent-workflow]
