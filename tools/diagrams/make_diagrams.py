@@ -182,7 +182,7 @@ mail = d.box(700, 340, 220, 60, '메일 서비스', color='gray')
 d.arrow([(570, 142), (700, 142)], color='blue', label='[account-access]', label_dy=-10, label_size=11)
 d.arrow([(570, 170), (700, 170)], color='blue', label='[account-read]', label_dy=12, label_size=11)
 d.arrow([(570, 310), (640, 310), (640, 270), (700, 270)], color='green'); d.text(652, 250, '[notification]', size=11, weight=700, color='#059669', anchor='start')
-d.arrow([(570, 330), (640, 330), (640, 370), (700, 370)], color='green'); d.text(652, 392, '[jemail-send]', size=11, weight=700, color='#059669', anchor='start')
+d.arrow([(570, 330), (640, 330), (640, 370), (700, 370)], color='green'); d.text(652, 392, '[mail-send]', size=11, weight=700, color='#059669', anchor='start')
 d.note(40, 450, 1020, 80, ['이전: 타임아웃·캐시는 있었지만 "반복 장애 중 후속 호출 차단"이 없었고, 판정 실패는 허용(fail-open)이었다.',
                            '이후: 회로 4개 (대상 서비스 × 실패의 의미). account 는 둘로 — 목록 조회가 느려 회로가 열려도 권한 판정은 살린다.'], color='muted', size=13)
 d.flow([

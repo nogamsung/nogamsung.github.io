@@ -87,7 +87,7 @@ WebClient 공통 필터에 한 번 끼우면 편하지만, 그렇게 하지 않�
 | `account-access` | 인가 경로: 서비스 접근 판정, 접근 프로필, 워크스페이스, 운영자 세션 확인 |
 | `account-read` | account의 나머지 조회 (사용자·회사·테넌트·코드 등) |
 | `notification` | 알림 서비스 호출 (비동기·동기·읽음 역전파) |
-| `jemail-send` | 메일 서비스의 시스템 메일 발송 |
+| `mail-send` | 메일 서비스의 시스템 메일 발송 |
 
 ## 3. 회로 설계 🛠️
 
@@ -106,7 +106,7 @@ class InternalCircuitBreakerProperties {
 open class InternalCircuitBreakers(properties: InternalCircuitBreakerProperties, meters: MeterRegistry?) {
     enum class Target(val id: String) {
         ACCOUNT_ACCESS("account-access"), ACCOUNT_READ("account-read"),
-        NOTIFICATION("notification"), JEMAIL_SEND("jemail-send"),
+        NOTIFICATION("notification"), MAIL_SEND("mail-send"),
     }
 
     internal open val registry = CircuitBreakerRegistry.of(
