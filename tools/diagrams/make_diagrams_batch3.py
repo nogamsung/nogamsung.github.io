@@ -407,3 +407,48 @@ d.flow([{'path': [(360, 145), (400, 145)], 'color': 'blue', 'dur': 0.4}, {'path'
         {'path': [(900, 300), (900, 360)], 'color': 'green', 'dur': 0.4, 'hold': 1.0}])
 d.save(out('2026/05/07-3.svg'))
 print('batch3 all ok')
+
+# =====================================================================
+# 2026/10/28-1  fastlane: where secrets go
+# =====================================================================
+BRAND.update({'apple': '#1f2937', 'googleplay': '#01875F', 'fastlane': '#00F200', 'githubactions': '#2088FF'})
+d = Diagram(1100, 520, '준비물이 흘러가는 길 — 시크릿은 main 전용 Environment 에, 레인은 API 키로 스토어에 인증한다')
+d.group(40, 90, 260, 330, '시크릿 (base64)', color='amber')
+for i, s in enumerate(('ASC_KEY_ID · ISSUER_ID', 'ASC_KEY_P8_BASE64', 'APPLE_DIST_CERT_P12 · 암호', 'PLAY_SERVICE_ACCOUNT_JSON', 'ANDROID_UPLOAD_KEYSTORE 외 3')):
+    d.box(60, 120 + i * 58, 220, 44, color='amber'); d.text(170, 147 + i * 58, s, size=10, weight=700, mono=True)
+logo_box(d, 340, 150, 240, 70, 'githubactions', 'Environment: store', 'main 브랜치만 접근', color='blue')
+logo_box(d, 340, 270, 240, 70, 'githubactions', '워크플로 job', 'env 로 넘기고 .p12 는 RUNNER_TEMP 에', color='blue')
+d.arrow([(300, 255), (340, 185)], color='amber'); d.arrow([(460, 220), (460, 270)], color='blue')
+logo_box(d, 620, 210, 200, 70, 'fastlane', 'bundle exec', 'fastlane 2.241.1 고정', color='green')
+d.arrow([(580, 305), (600, 305), (600, 245), (620, 245)], color='blue')
+logo_box(d, 860, 130, 200, 64, 'apple', 'App Store Connect', 'API 키 · 2FA 없음', color='gray')
+logo_box(d, 860, 300, 200, 64, 'googleplay', 'Google Play', '서비스 계정 JSON', color='gray')
+d.arrow([(820, 235), (840, 235), (840, 162), (860, 162)], color='green'); d.arrow([(820, 255), (840, 255), (840, 332), (860, 332)], color='green')
+d.note(40, 444, 1020, 56, ['인증서는 setup_ci 의 임시 키체인에만 · 프로파일은 시크릿으로 들고 있지 않고 API 키로 그때그때 받는다', '시크릿이 없으면 실패가 아니라 경고 후 업로드를 건너뛴다 · Play 첫 AAB 는 콘솔에 손으로'], color='muted', size=12)
+d.flow([{'path': [(300, 255), (340, 185)], 'color': 'amber', 'dur': 0.5}, {'path': [(460, 220), (460, 270)], 'color': 'blue', 'dur': 0.4},
+        {'path': [(580, 305), (600, 305), (600, 245), (620, 245)], 'color': 'blue', 'dur': 0.5},
+        {'path': [(820, 235), (840, 235), (840, 162), (860, 162)], 'color': 'green', 'dur': 0.5},
+        {'path': [(820, 255), (840, 255), (840, 332), (860, 332)], 'color': 'green', 'dur': 0.5, 'hold': 0.8}])
+d.save(out('2026/10/28-1.svg'))
+
+# =====================================================================
+# 2026/10/28-2  fastlane: three lanes + where the first run broke
+# =====================================================================
+d = Diagram(1100, 600, '레인 세 개 — 업로드와 버전 준비까지 자동, 심사 제출은 사람이. 빨간 번호는 첫 실행에서 막힌 곳')
+lanes = [('apple', 'ios release', [('dotenv', '.env 탐색', 1), ('setup_ci', '임시 키체인 + 인증서', None), ('get_provisioning_profile', 'API 키로 받기', None), ('build_app', 'Automatic → 수동 서명', 5), ('upload_to_testflight', '처리 완료까지 대기', None), ('deliver + 빌드 연결', 'submit_for_review: false', None)]),
+         ('googleplay', 'android release', [('Gradle 서명', '업로드 키스토어', None), ('upload_to_play_store', 'track = PLAY_TRACK', None), ('release_status', 'draft', None)]),
+         ('apple', 'mac profile · release', [('setup_ci + 인증서', 'sigh 가 인증서로 고른다', 3), ('get_provisioning_profile', 'macos · 파일명 검사', 2), ('electron-builder', 'mas 서명 · pkg', 4), ('upload_to_testflight', 'app_platform: osx', None), ('deliver + 빌드 연결', '제출은 사람이', None)])]
+for r, (lg, name, steps) in enumerate(lanes):
+    y = 96 + r * 150
+    logo_box(d, 40, y, 170, 60, lg, name, None, color='gray', size=22)
+    for i, (lab, sub, bad) in enumerate(steps):
+        x = 240 + i * 140
+        d.box(x, y, 128, 60, lab, [sub], color='red' if bad else 'blue', label_size=11, sub_size=9)
+        if bad: d.box(x + 104, y - 10, 24, 22, color='red', fill='#dc2626'); d.text(x + 116, y + 5, str(bad), size=11, weight=700, color='#ffffff')
+        d.arrow([(x - 12, y + 30), (x, y + 30)], color='muted', width=1)
+d.box(240, 520, 820, 50, '사람: App Store Connect 의 "심사에 추가" · Play 콘솔의 "출시 시작"', color='amber', label_size=13)
+d.text(130, 545, '자동은 여기까지 →', size=12, weight=700, color=G['amber'])
+d.flow([{'path': [(228, 126), (1080, 126)], 'color': 'blue', 'dur': 1.6}, {'path': [(228, 276), (660, 276)], 'color': 'green', 'dur': 0.9},
+        {'path': [(228, 426), (940, 426)], 'color': 'purple', 'dur': 1.4, 'hold': 0.8}])
+d.save(out('2026/10/28-2.svg'))
+print('fastlane ok')
