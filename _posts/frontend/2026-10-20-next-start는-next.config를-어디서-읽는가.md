@@ -209,7 +209,7 @@ RUN mkdir -p /app/apps/service-a/log && chown -R node:node /app/apps/service-a/.
 - 비루트 전환은 `$HOME` 캐시와 cwd 소유권을 같이 봐야 한다. `COREPACK_ENABLE_NETWORK=0`으로 "멈춤"을 "즉시 실패"로 바꾼다. 모듈 로드 실패는 JSON이 아니라 HTML 500으로 온다.
 - 로컬에서 재현되지 않는 컨테이너 문제는 **레지스트리의 이미지를 받아** 띄워 본다.
 
-## 추기 (2026-11-04)
+## 업데이트 (2026-11-04)
 
 열두 앱 전부 `output: "standalone"`으로 바꿨습니다. `outputFileTracingRoot`를 워크스페이스 루트로 두어 공유 패키지가 추적되게 했고, 러너는 `.next/standalone`과 `.next/static`, `public`만 복사해 `node apps/<app>/server.js`로 띄웁니다. 매니페스트에서 설정을 생성하던 스크립트, 런타임의 corepack·pnpm·TypeScript는 전부 사라졌습니다.
 

@@ -3,7 +3,7 @@ title: Spring Boot 4 업그레이드, 그리고 final 엔티티 때문에 LAZY�
 slug: spring-boot-4-kotlin-lazy-loading
 date: 2026-10-27
 description: >-
-  Spring Boot 3.4에서 4.1로, Kotlin 1.9에서 2.3(K2)으로 18개 모듈을 하루에 올리며 알게 된 것들. Kotlin 2.x의 plugin.jpa가 all-open을 켜면서 final이던 엔티티가 open이 되고, 그제서야 @ManyToOne(LAZY) 67곳이 지금까지 EAGER로 돌고 있었다는 사실과 가짜 fetch join 179곳이 드러났습니다. Jackson 3 때문에 전 요청이 39ms 만에 408이 난 사고도 함께 정리합니다.
+  Spring Boot 3.4에서 4.1로, Kotlin 1.9에서 2.3(K2)으로 18개 모듈을 하루에 올리며 알게 된 것들. Kotlin 2.x의 plugin.jpa가 all-open을 켜면서 final이던 엔티티가 open이 되고, 그제야 @ManyToOne(LAZY) 67곳이 지금까지 EAGER로 돌고 있었다는 사실과 가짜 fetch join 179곳이 드러났습니다. Jackson 3 때문에 전 요청이 39ms 만에 408이 난 사고도 함께 정리합니다.
 categories: [backend, spring]
 tags: [spring-boot, kotlin, k2, hibernate, jpa, querydsl, jackson, ksp, upgrade]
 image:
