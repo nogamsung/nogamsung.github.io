@@ -7,7 +7,7 @@ date: 2024-06-12
 description: >-
   ISMS 심사를 앞두고 지원이 끝난 Spring Boot 2를 3.3으로, Java 11을 21로 올렸습니다. 2.x 마지막 버전인 2.7.18에서 의존성을 먼저 정리한 뒤 3.3으로 넘어가고, Gradle 래퍼와 Querydsl jakarta 설정, javax→jakarta, Spring Security 6 람다 DSL로 SecurityConfig를 다시 쓴 과정과 놓치기 쉬운 함정을 정리합니다.
 categories: [backend, spring]
-tags: [spring, spring-boot, java, java-21, gradle, querydsl, spring-security, jakarta, upgrade]
+tags: [spring-boot, java, java-21, gradle, querydsl, spring-security, jakarta, upgrade]
 image:
   path: /assets/img/thumbnail/spring-boot-3-java-21-upgrade.jpg
   alt: "Spring Boot 2.7에서 3.3으로, Java 11에서 21로 두 단계에 나눠 올리기"

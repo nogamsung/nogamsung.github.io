@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 title: 소개
 description: >-
-  프로덕트 엔지니어 안검성(nogamsung)을 소개합니다. 여행 플랫폼에서 Spring 백엔드를 개발했고,
+  프로덕트 엔지니어 안검성(nogamsung)을 소개합니다. 여행 플랫폼에서 Spring Boot 백엔드를 개발했고,
   지금은 제조 회사에서 사내 플랫폼을 설계부터 운영까지 책임지고 있습니다.
 ---
 
@@ -14,7 +14,7 @@ description: >-
 
 ## 하는 일
 
-2023년부터 2025년까지 여행 플랫폼 회사에서 Spring 기반 백엔드를 개발했습니다.
+2023년부터 2025년까지 여행 플랫폼 회사에서 Spring Boot 기반 백엔드를 개발했습니다.
 JPA와 Querydsl 성능 개선, Redis 분산 락, Kong API Gateway 도입 같은 이 블로그 초반의 글들은 그때 겪은 일들입니다.
 
 2025년부터는 제조 회사에서 프로덕트 엔지니어로 일하고 있습니다.

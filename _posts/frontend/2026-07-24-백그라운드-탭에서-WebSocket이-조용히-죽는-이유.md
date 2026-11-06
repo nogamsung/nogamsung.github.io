@@ -5,7 +5,7 @@ date: 2026-07-24
 description: >-
   웹 메신저의 "연결이 끊겼습니다. 재연결 중..." 배너가 6주 동안 네 번 다른 이유로 떴습니다. deactivate()가 재연결을 다시 부르는 플래핑, Spring SimpleBroker가 0,0으로 협상해 버린 하트비트, 숨긴 탭의 타이머 스로틀링, 그리고 직결 WebSocket이 BFF 경유 REST보다 먼저 도착해 상태가 유실되는 첫 입장 레이스까지. stompjs와 Spring 소스를 따라가며 정리합니다.
 categories: [frontend, realtime]
-tags: [websocket, stomp, stompjs, spring, heartbeat, reconnect, page-visibility, zustand]
+tags: [websocket, stomp, stompjs, spring-boot, heartbeat, reconnect, page-visibility, zustand]
 image:
   path: /assets/img/thumbnail/websocket-background-tab-reconnect.jpg
   alt: "백그라운드 탭에서 WebSocket이 조용히 죽는 이유, 같은 배너 뒤의 네 가지 원인"

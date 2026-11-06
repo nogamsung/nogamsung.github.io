@@ -7,7 +7,7 @@ date: 2023-10-01
 description: >-
   이메일 중복 검사를 습관처럼 findBy로 짜고 있었습니다. 5만 건 데이터에서 Spring Data JPA의 findBy, countBy, existsBy가 실제로 어떤 SQL을 만드는지 로그로 확인하고, 214ms·196ms·166ms라는 결과와 함께 중복 검사에는 existsBy가 맞는 이유를 정리합니다.
 categories: [backend, spring]
-tags: [spring, jpa, spring-data-jpa, query-method, performance]
+tags: [spring-boot, jpa, spring-data-jpa, query-method, performance]
 image:
   path: /assets/img/thumbnail/jpa-duplicate-check-query.jpg
   alt: "이메일 중복 검사, findBy·countBy·existsBy 쿼리를 5만 건에서 비교하기"
