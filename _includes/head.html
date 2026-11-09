@@ -46,6 +46,16 @@
     {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
   {% endif %}
 
+  {%- comment -%}
+    jekyll-seo-tag 의 author Person 은 name/url 만 출력한다.
+    소개 페이지를 url 로, social.links 를 sameAs 로 붙여 작성자 엔티티를 보강한다 (검색엔진·LLM 의 저자 식별 신호).
+  {%- endcomment -%}
+  {% if site.author.name and site.author.url %}
+    {%- capture old_author -%}"author":{"@type":"Person","name":{{ site.author.name | jsonify }},"url":{{ site.author.url | jsonify }}}{%- endcapture -%}
+    {%- capture new_author -%}"author":{"@type":"Person","name":{{ site.author.name | jsonify }},"url":{{ '/about/' | absolute_url | jsonify }},"sameAs":{{ site.social.links | jsonify }}}{%- endcapture -%}
+    {% assign seo_tags = seo_tags | replace: old_author, new_author %}
+  {% endif %}
+
   {{ seo_tags }}
 
   {%- if site.social.fediverse_handle %}
