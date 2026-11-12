@@ -60,7 +60,7 @@ analytics:
   google:
     id: G-P06BXW4HP1
   goatcounter:
-    id: # GoatCounter 사이트 코드 (https://<id>.goatcounter.com)
+    id: nogamsung # GoatCounter 사이트 코드 (https://nogamsung.goatcounter.com)
   umami:
     id:
     domain:
@@ -74,7 +74,7 @@ analytics:
 
 # 사이드바 방문자 수 (오늘 KST · 전체) — workers/visitor-counter 의 Cloudflare Worker 주소. 비우면 표시하지 않는다
 visitor_counter:
-  endpoint:
+  endpoint: https://blog-visitor-counter.blog-visitor-counter.workers.dev
 
 # Page views settings
 pageviews:

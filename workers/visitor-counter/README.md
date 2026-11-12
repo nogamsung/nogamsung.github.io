@@ -11,30 +11,25 @@
   - 스스로 봇이라고 밝히는 크롤러는 제외됩니다.
 - **캐시**: workers.dev에서는 Cache API가 동작하지 않아서 KV에 5분 동안 캐시합니다(쓰기는 하루 최대 288번). GoatCounter가 실패하면 마지막 값을 `stale: true`로 돌려줍니다.
 
-## 처음 설정
+## 배포와 비밀값
 
-1. **GoatCounter**
-   1. https://www.goatcounter.com 에서 사이트를 만듭니다. 사이트 코드가 `<code>`이면 주소는 `https://<code>.goatcounter.com`입니다.
-   2. Settings에서 **"Allow adding visitor counts on your website"**를 켭니다. 글별 조회수가 공개 카운터를 쓰기 때문입니다.
-   3. 오른쪽 위 사용자 메뉴 → **API**에서 키를 만듭니다. 권한은 통계 읽기만 줍니다.
-2. **Worker 배포** (이 디렉터리에서)
-   ```bash
-   npm install
-   npx wrangler login
-   npx wrangler kv namespace create STATS      # 출력된 id 를 wrangler.toml 의 kv_namespaces.id 에
-   # wrangler.toml 의 GOATCOUNTER_CODE 를 <code> 로
-   npx wrangler secret put GOATCOUNTER_TOKEN   # 3번에서 만든 API 키
-   npx wrangler deploy                          # https://blog-visitor-counter.<계정>.workers.dev
-   curl https://blog-visitor-counter.<계정>.workers.dev/stats
-   ```
-3. **블로그** (`_config.yml`)
-   ```yaml
-   analytics:
-     goatcounter:
-       id: <code>
-   visitor_counter:
-     endpoint: https://blog-visitor-counter.<계정>.workers.dev
-   ```
+**배포는 GitHub Actions가 합니다**(`.github/workflows/visitor-counter-deploy.yml`). main에 `workers/visitor-counter/**`가 바뀌어 push되거나 수동 실행(workflow_dispatch)하면, 테스트 → `wrangler deploy` → `/stats` 스모크 테스트 순서로 진행합니다.
+
+비밀값은 **GitHub Secrets에만** 둡니다. 저장소와 로컬에는 남기지 않습니다.
+
+| Secret | 용도 | 만든 곳 |
+|---|---|---|
+| `CLOUDFLARE_API_TOKEN` | Worker 배포 | Cloudflare → Manage account → Account API tokens (`github-actions-blog-visitor-counter`, Workers 계정 권한) |
+| `CLOUDFLARE_ACCOUNT_ID` | 배포 대상 계정 | Cloudflare 계정 ID |
+| `GOATCOUNTER_TOKEN` | Worker가 GoatCounter 통계를 읽음. 배포할 때마다 Worker secret으로 다시 넣습니다 | GoatCounter → 사용자 메뉴 → API (`blog-visitor-counter-worker`, Read statistics만) |
+
+공개 값은 그대로 커밋합니다. 브라우저에 노출되거나 식별자일 뿐이라 비밀이 아닙니다.
+- `wrangler.toml`: GoatCounter 사이트 코드, KV namespace id
+- `_config.yml`: Worker 주소
+
+키를 바꿀 때는 새 키를 만들어 `gh secret set <이름>`으로 등록한 뒤 이 워크플로를 수동 실행하고, 옛 키는 삭제합니다.
+
+로컬에서 직접 배포해야 한다면 `npx wrangler login` → `npx wrangler deploy` 후 `npx wrangler logout`으로 로그인 토큰을 지웁니다. 비밀값 파일은 `.secret-*`, `.dev.vars` 패턴으로 git에서 제외되어 있습니다.
 
 ## 그 밖에
 
