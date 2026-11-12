@@ -20,7 +20,7 @@ Kong은 인증, 트래픽 제한, 로깅 같은 기본 플러그인을 많이 �
 
 커스텀 플러그인은 기본적으로 Lua로 작성합니다. Go, Java 같은 다른 언어로도 만들 수 있지만 추가 설정이 필요합니다. 이번 글에서는 Lua로 만든 JWT 인증 플러그인(`jwt-custom`)을 Docker 이미지에 넣어 Kong에 적용해 보겠습니다.
 
-PostgreSQL, Kong DB 초기화, Konga 설치는 이미 끝났다고 가정합니다. 아직이라면 [Docker로 Kong API Gateway와 Konga 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})를 먼저 보시면 됩니다.
+PostgreSQL, Kong DB 초기화, Konga 설치는 이미 끝났다고 가정합니다. 아직이라면 [Docker로 Kong API Gateway와 Konga 설치하기](/posts/kong-api-gateway-install/)를 먼저 보시면 됩니다.
 
 ## 1. 플러그인은 요청의 어느 단계에서 도나 🧩
 
@@ -228,6 +228,6 @@ Key(issuer), Secret, Algorithm 값을 입력합니다. Key에는 토큰의 `iss`
 
 > 참고
 > - [Kong Gateway: Plugin Distribution](https://docs.konghq.com/gateway/latest/plugin-development/distribution/)
-> - [Docker로 Kong API Gateway와 Konga 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})
-> - [API Gateway가 있다면 토큰 인증은 Gateway로 넘기자]({% post_url devops/2024-09-11-API-Gateway가-있다면-인증-로직을-넘기자 %})
+> - [Docker로 Kong API Gateway와 Konga 설치하기](/posts/kong-api-gateway-install/)
+> - [API Gateway가 있다면 토큰 인증은 Gateway로 넘기자](/posts/api-gateway-authentication/)
 {: .prompt-info }

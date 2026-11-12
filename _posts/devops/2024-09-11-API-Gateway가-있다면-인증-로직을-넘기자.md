@@ -79,8 +79,8 @@ Kong에는 원하는 동작의 플러그인을 Lua로 직접 만들어 Gateway�
 
 Kong 설치와 커스텀 플러그인을 이미지에 넣어 적용하는 과정은 시리즈의 앞 글에 정리해 두었습니다.
 
-- [Docker로 Kong API Gateway와 Konga 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})
-- [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기]({% post_url devops/2024-09-04-Kong-API-Gateway-Custom-Plugin-적용 %})
+- [Docker로 Kong API Gateway와 Konga 설치하기](/posts/kong-api-gateway-install/)
+- [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기](/posts/kong-custom-plugin/)
 
 ## 마무리
 
@@ -92,6 +92,6 @@ Kong 설치와 커스텀 플러그인을 이미지에 넣어 적용하는 과정
 > 참고
 > - [Kong Gateway: JWT plugin](https://docs.konghq.com/hub/kong-inc/jwt/)
 > - [Kong JWT plugin 소스 (GitHub)](https://github.com/Kong/kong/tree/master/kong/plugins/jwt)
-> - [Docker로 Kong API Gateway와 Konga 설치하기]({% post_url devops/2024-08-30-Kong-API-Gateway-설치하기 %})
-> - [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기]({% post_url devops/2024-09-04-Kong-API-Gateway-Custom-Plugin-적용 %})
+> - [Docker로 Kong API Gateway와 Konga 설치하기](/posts/kong-api-gateway-install/)
+> - [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기](/posts/kong-custom-plugin/)
 {: .prompt-info }

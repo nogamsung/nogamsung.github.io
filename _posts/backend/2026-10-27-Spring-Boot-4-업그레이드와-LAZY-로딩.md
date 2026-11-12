@@ -263,5 +263,5 @@ fun `서버 응답 DTO 를 core 클라이언트 DTO 로 디코딩한다`() {
 > - [Hibernate — Proxies and lazy loading](https://docs.jboss.org/hibernate/orm/7.0/introduction/html_single/Hibernate_Introduction.html#proxies-and-lazy-fetching)
 > - [OpenFeign QueryDSL](https://github.com/OpenFeign/querydsl)
 > - [Jackson 3.0 Release Notes](https://github.com/FasterXML/jackson/wiki/Jackson-Release-3.0)
-> - [IN 절로 N+1 문제 해결]({% post_url backend/2023-10-11-IN-절로-N-1-문제-해결 %})
+> - [IN 절로 N+1 문제 해결](/posts/n-plus-1-in-clause/)
 {: .prompt-info }

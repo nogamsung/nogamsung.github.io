@@ -78,7 +78,7 @@ async function verifyTypeScriptSetup(cwd, configFileName) {
 
 ## 2. 두 번째: basePath가 사라졌는데 리다이렉트는 살아 있었다 🧩
 
-10월 2일 밤, [서비스를 경로 접두 아래로 옮기는 작업]({% post_url frontend/2026-10-04-서브도메인-6개를-한-호스트의-basePath로-옮기기 %})의 첫 앱으로 관리자 앱에 `basePath: "/admin"`을 넣어 배포했습니다. 배포 직후 `/admin/*`이 **전부 404**였습니다. 이 앱의 Dockerfile은 8월의 수정이 적용되지 않은 쪽이라 러너에 설정 파일이 없었습니다.
+10월 2일 밤, [서비스를 경로 접두 아래로 옮기는 작업](/posts/nextjs-basepath-migration/)의 첫 앱으로 관리자 앱에 `basePath: "/admin"`을 넣어 배포했습니다. 배포 직후 `/admin/*`이 **전부 404**였습니다. 이 앱의 Dockerfile은 8월의 수정이 적용되지 않은 쪽이라 러너에 설정 파일이 없었습니다.
 
 흥미로운 건 증상의 모양이었습니다. 설정이 없으니 `basePath`를 모르는 건 이해가 되는데, 같은 설정 파일에 적은 `redirects()`는 **동작했습니다.** 접두 없는 `/health`를 치면 307로 `/admin/health`에 갔고, 거기서 404가 났습니다. 미들웨어는 접두가 붙은 pathname을 받아 공개 경로 판정을 틀렸습니다.
 
@@ -240,5 +240,5 @@ CMD ["node", "apps/service-a/server.js"]
 > - [Next.js with-docker 예제](https://github.com/vercel/next.js/tree/canary/examples/with-docker)
 > - [Corepack 환경 변수](https://github.com/nodejs/corepack#environment-variables)
 > - [Node Docker Best Practices: non-root user](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#non-root-user)
-> - [서브도메인 6개를 한 호스트의 basePath로 옮기기]({% post_url frontend/2026-10-04-서브도메인-6개를-한-호스트의-basePath로-옮기기 %})
+> - [서브도메인 6개를 한 호스트의 basePath로 옮기기](/posts/nextjs-basepath-migration/)
 {: .prompt-info }
