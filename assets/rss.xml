@@ -6,17 +6,18 @@ permalink: /rss.xml
 ---
 
 {% capture source %}
+{% if site.active_lang != site.default_lang %}{% assign lp = '/' | append: site.active_lang %}{% else %}{% assign lp = '' %}{% endif %}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
-    <link>{{ "/" | absolute_url }}</link>
+    <link>{{ lp | append: "/" | absolute_url }}</link>
     <description>{{ site.description | strip_newlines | xml_escape }}</description>
     <language>{{ site.lang | downcase }}</language>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll {{ jekyll.version }}</generator>
-    <atom:link href="{{ page.url | absolute_url }}" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ lp | append: page.url | absolute_url }}" rel="self" type="application/rss+xml" />
     {% for post in site.posts limit: 20 %}
-      {% assign post_absolute_url = post.url | absolute_url %}
+      {% assign post_absolute_url = lp | append: post.url | absolute_url %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <link>{{ post_absolute_url }}</link>

@@ -90,3 +90,10 @@ main h1,
     display: none;
   }
 }
+
+/* 사이드바 언어 전환 (_includes/sidebar.html). 테마의 원형 버튼 안에 아이콘 대신 EN/KO 글자를 넣는다 */
+#sidebar .sidebar-bottom > a.lang-switch {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}

@@ -1,0 +1,20 @@
+# 사이트 UI 문구 (한국어). polyglot 이 빌드 언어에 맞춰 site.data.ui 로 병합한다.
+lang_name: 한국어
+switch_label: EN
+switch_aria: 영어로 보기
+series: 시리즈
+series_count: "%n%편"
+visitors: 방문자 수
+visitors_today: 오늘
+visitors_total: 전체
+number_locale: ko-KR
+lang_names:
+  ko-KR: 한국어
+  en: English
+llms:
+  author: 작성자
+  about: 소개
+  language: 언어
+  language_value: 한국어
+  feed: 피드
+  intro: 각 글은 실무에서 겪은 문제, 비교한 선택지, 적용한 코드·설정, 측정한 결과를 담고 있습니다. 인용 시 글 URL을 출처로 남겨 주세요.

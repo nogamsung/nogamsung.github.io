@@ -21,7 +21,7 @@ image:
 
 ## 들어가며
 
-[Kamal로 무중단 배포를 도입]({% post_url devops/2026-11-04-온프레미스-서버에-Kamal로-무중단-배포-도입하기 %})하고, [배포 시간도 줄였습니다]({% post_url devops/2026-11-09-모노레포-배포-시간-실측과-단축기 %}).
+[Kamal로 무중단 배포를 도입](/posts/kamal-zero-downtime/)하고, [배포 시간도 줄였습니다](/posts/monorepo-deploy-time-reduction/).
 그런데 배포 과정에서 마지막까지 사람 손을 타던 게 하나 남아 있었습니다. **env 파일**입니다.
 
 Kamal 설정의 `env-file:`은 서버의 `~/app/env/app-backend-dev` 같은 파일을 가리키고 있었고, 값을 바꾸려면 서버에 SSH로 들어가 vi로 고친 뒤 재배포해야 했습니다.
@@ -260,8 +260,8 @@ Q. Kamal에서 known_hosts를 넣었는데 `SSH_HOST_KEY_UNKNOWN`이 납니다.
 A. SSHKit이 `호스트명,IP` 교집합으로 키를 찾기 때문일 수 있습니다. SSH 설정에 `HostKeyAlias <등록한 호스트명>`을 넣어 조회 이름을 고정하세요.
 
 > 참고
-> - [온프레미스 서버에 Kamal로 무중단 배포 도입하기]({% post_url devops/2026-11-04-온프레미스-서버에-Kamal로-무중단-배포-도입하기 %})
-> - [모노레포 배포 시간 실측과 단축기]({% post_url devops/2026-11-09-모노레포-배포-시간-실측과-단축기 %})
+> - [온프레미스 서버에 Kamal로 무중단 배포 도입하기](/posts/kamal-zero-downtime/)
+> - [모노레포 배포 시간 실측과 단축기](/posts/monorepo-deploy-time-reduction/)
 > - [GitHub — Managing environments for deployment](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/managing-environments-for-deployment)
 > - [Kamal — SSH configuration](https://kamal-deploy.org/docs/configuration/ssh/)
 > - [Docker — Build secrets](https://docs.docker.com/build/building/secrets/)

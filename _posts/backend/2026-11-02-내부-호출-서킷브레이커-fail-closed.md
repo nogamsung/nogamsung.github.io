@@ -254,7 +254,7 @@ if (!allowed) { /* 기존 403 */ }
 
 서킷브레이커 자체는 `CIRCUITBREAKER_ENABLED=false`로 끌 수 있게 했지만, **권한 조회 실패를 허용하지 않는 정책은 회로를 꺼도 유지**됩니다. 이 둘은 별개의 결정입니다.
 
-반대로 **일부러 fail-open으로 남긴 게이트**도 있습니다. 다음 날 추가한 권한 변경 즉시 반영 게이트([JWT에 권한 버전 심기]({% post_url backend/2026-11-03-JWT-권한-버전으로-즉시-반영 %}))는 조회에 실패하면 통과시킵니다. 그 게이트가 없던 시절의 동작(토큰 만료까지 옛 권한)으로 돌아갈 뿐이라, 실패의 기본 상태가 "열린 권한"이 아니라 "기존 권한 유지"이기 때문입니다.
+반대로 **일부러 fail-open으로 남긴 게이트**도 있습니다. 다음 날 추가한 권한 변경 즉시 반영 게이트([JWT에 권한 버전 심기](/posts/jwt-permission-version/))는 조회에 실패하면 통과시킵니다. 그 게이트가 없던 시절의 동작(토큰 만료까지 옛 권한)으로 돌아갈 뿐이라, 실패의 기본 상태가 "열린 권한"이 아니라 "기존 권한 유지"이기 때문입니다.
 
 > fail-open이냐 fail-closed냐는 "실패했을 때 기본 상태가 무엇인가"로 정한다. 기본 상태가 **열린 권한**이면 닫아야 하고, **기존 권한 유지**면 열어 둬도 된다.
 {: .prompt-tip }
@@ -265,7 +265,7 @@ fail-closed로 바꾼 다음 날, dev 환경에서 account 서비스를 재배�
 
 그동안 다른 서비스들이 전부 503을 냈습니다. 회로가 열리고, 권한 판정이 fail-closed이니 당연한 결과입니다.
 
-이전에는 이 공백이 **보이지 않았습니다.** fail-open이 조용히 통과시켰으니까요. 즉 fail-closed는 보안 경계를 닫는 동시에, 그동안 숨어 있던 운영 문제를 드러냈습니다. 이 일이 계기가 되어 무중단 배포를 도입했습니다. ([온프레미스 서버에 Kamal로 무중단 배포 도입하기]({% post_url devops/2026-11-04-온프레미스-서버에-Kamal로-무중단-배포-도입하기 %}))
+이전에는 이 공백이 **보이지 않았습니다.** fail-open이 조용히 통과시켰으니까요. 즉 fail-closed는 보안 경계를 닫는 동시에, 그동안 숨어 있던 운영 문제를 드러냈습니다. 이 일이 계기가 되어 무중단 배포를 도입했습니다. ([온프레미스 서버에 Kamal로 무중단 배포 도입하기](/posts/kamal-zero-downtime/))
 함께 WebClient 공통 필터에 연결 거부 1회 재시도와 DNS 캐시 5초도 넣었습니다. 그 밖의 오류는 공통 필터가 건드리지 않고 그대로 흘려서 회로가 세게 두었습니다.
 
 ## 6. 검증 ✅
@@ -290,5 +290,5 @@ fail-closed로 바꾼 다음 날, dev 환경에서 account 서비스를 재배�
 > - [Resilience4j CircuitBreaker](https://resilience4j.readme.io/docs/circuitbreaker)
 > - [Resilience4j Reactor 연동 (`CircuitBreakerOperator`)](https://resilience4j.readme.io/docs/getting-started-1)
 > - [Spring WebClient `retryWhen`](https://projectreactor.io/docs/core/release/api/reactor/util/retry/Retry.html)
-> - [온프레미스 서버에 Kamal로 무중단 배포 도입하기]({% post_url devops/2026-11-04-온프레미스-서버에-Kamal로-무중단-배포-도입하기 %})
+> - [온프레미스 서버에 Kamal로 무중단 배포 도입하기](/posts/kamal-zero-downtime/)
 {: .prompt-info }

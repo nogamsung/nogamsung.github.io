@@ -1,0 +1,20 @@
+# Site UI strings (English). polyglot merges this into site.data.ui for the /en/ build.
+lang_name: English
+switch_label: KO
+switch_aria: View in Korean
+series: Series
+series_count: "%n% parts"
+visitors: Visitors
+visitors_today: Today
+visitors_total: Total
+number_locale: en-US
+lang_names:
+  ko-KR: 한국어
+  en: English
+llms:
+  author: Author
+  about: About
+  language: Language
+  language_value: English
+  feed: Feed
+  intro: Each post covers a real problem from production, the options I compared, the code and config I shipped, and the results I measured. Please cite the post URL when quoting.

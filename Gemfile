@@ -7,6 +7,9 @@ gem "jekyll-theme-chirpy", "~> 7.6"
 # 옛 한글 URL -> 영어 슬러그 리다이렉트 (글 front matter 의 redirect_from)
 gem "jekyll-redirect-from", "~> 0.16"
 
+# 다국어(ko 기본, /en/ 영어) — 언어별로 사이트를 따로 빌드한다
+gem "jekyll-polyglot", "~> 1.14"
+
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :windows, :jruby do

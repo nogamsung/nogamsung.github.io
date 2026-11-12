@@ -227,5 +227,5 @@ Kong의 라우팅은 두 가지 객체로 이루어집니다.
 > - [pantsel/konga](https://github.com/pantsel/konga)
 > - [SK엔터프라이즈 비즈인사이트 블로그](https://www.sktenterprise.com/bizInsight/blogDetail/dev/2850)
 > - [ibks-platform 기술 블로그](https://ibks-platform.tistory.com/379)
-> - [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기]({% post_url devops/2024-09-04-Kong-API-Gateway-Custom-Plugin-적용 %})
+> - [Lua로 만든 Kong 커스텀 플러그인을 Docker 이미지로 적용하기](/posts/kong-custom-plugin/)
 {: .prompt-info }
