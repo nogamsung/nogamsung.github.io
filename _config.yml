@@ -143,6 +143,32 @@ baseurl: ""
 
 plugins:
   - jekyll-redirect-from # Chirpy 7.x 는 더 이상 기본 포함하지 않으므로 직접 활성화
+  - jekyll-polyglot
+
+# 다국어 (jekyll-polyglot) › https://polyglot.untra.io
+# 한국어가 기본(루트 경로), 영어는 /en/ 아래에 언어별로 따로 빌드된다.
+# 번역 글은 원문과 같은 slug + `lang: en` 으로 _posts/en/ 아래에 둔다.
+languages: ["ko-KR", "en"]
+default_lang: "ko-KR"
+lang_vars: ["lang"] # 빌드 중인 언어로 site.lang 을 바꿔 Chirpy 의 _data/locales 문구가 따라오게 한다
+exclude_from_localization: ["assets/img", "assets/lib", "assets/css", "assets/js/dist", "assets/robots.txt", "sitemap.xml", "naver920c22dc31bd263f2a456b0e282b8137.html"]
+# 영어 글이 없을 때 /en/ 에 대신 렌더되는 한국어 글은 canonical 을 한국어 주소로 둔다
+fallback_canonical_to_default_lang: true
+# 언어별 빌드를 fork 로 병렬 실행하면 .jekyll-cache 를 함께 써서 가끔 빌드가 깨진다. 순차로 돌린다
+parallel_localization: false
+
+# 언어별로 달라야 하는 설정 값 (_plugins/i18n-config.rb 가 해당 언어 빌드에서 덮어쓴다)
+# UI 문구는 _data/<lang>/ui.yml (polyglot 이 site.data.ui 로 병합)
+i18n:
+  en:
+    tagline: Engineering notes from product engineer Geomseong Ahn
+    description: >-
+      The engineering blog of product engineer Geomseong Ahn (nogamsung). Spring Boot, JPA, Next.js, real-time
+      messaging, auth, zero-downtime deploys, and AI coding agents: the problems I hit in production and why I
+      made the calls I did.
+    comments:
+      giscus:
+        lang: en
 
 # ------------ The following options are not recommended to be modified ------------------
 

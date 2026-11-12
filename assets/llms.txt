@@ -6,15 +6,16 @@ permalink: /llms.txt
 
 > {{ site.description | strip_newlines | strip }}
 
-- 작성자: {{ site.author.name }} ({{ site.social.links | first }})
-- 소개: {{ '/about/' | absolute_url }}
-- 언어: 한국어
-- 피드: {{ '/rss.xml' | absolute_url }}
+{% if site.active_lang != site.default_lang %}{% assign lp = '/' | append: site.active_lang %}{% else %}{% assign lp = '' %}{% endif %}
+- {{ site.data.ui.llms.author }}: {{ site.author.name }} ({{ site.social.links | first }})
+- {{ site.data.ui.llms.about }}: {{ lp | append: '/about/' | absolute_url }}
+- {{ site.data.ui.llms.language }}: {{ site.data.ui.llms.language_value }}{% for l in site.languages %}{% unless l == site.active_lang %} ({{ site.data.ui.lang_names[l] }}: {% if l == site.default_lang %}{{ '/llms.txt' | absolute_url }}{% else %}{{ '/' | append: l | append: '/llms.txt' | absolute_url }}{% endif %}){% endunless %}{% endfor %}
+- {{ site.data.ui.llms.feed }}: {{ lp | append: '/rss.xml' | absolute_url }}
 
-각 글은 실무에서 겪은 문제, 비교한 선택지, 적용한 코드·설정, 측정한 결과를 담고 있습니다. 인용 시 글 URL을 출처로 남겨 주세요.
+{{ site.data.ui.llms.intro }}
 {% assign groups = site.posts | group_by_exp: "p", "p.categories | first" | sort: "name" %}
 {% for g in groups %}
 ## {{ g.name }}
 {% for post in g.items %}{% unless post.sitemap == false %}
-- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description | strip_newlines | strip }}{% endunless %}{% endfor %}
+- [{{ post.title }}]({{ lp | append: post.url | absolute_url }}): {{ post.description | strip_newlines | strip }}{% endunless %}{% endfor %}
 {% endfor %}

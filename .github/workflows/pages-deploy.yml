@@ -50,6 +50,10 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Check English editions
+        # 영어판이 없는 글은 경고만, 영어판의 깨진 이미지 경로는 실패
+        run: python3 tools/i18n/check_translations.py
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \

@@ -8,7 +8,7 @@
   >
 
   {%- capture seo_tags -%}
-    {% seo title=false %}
+    {% seo title=false canonical=false %}
   {%- endcapture -%}
 
   <!-- Setup Open Graph image -->
@@ -56,7 +56,38 @@
     {% assign seo_tags = seo_tags | replace: old_author, new_author %}
   {% endif %}
 
+  {%- comment -%}
+    jekyll-seo-tag 는 /en/ 빌드에서도 og:url·JSON-LD url 을 접두사 없는 주소로 쓴다 (polyglot 은 href 만 고친다).
+    영어 빌드에서는 현재 페이지와 소개 페이지 주소에 /en 을 붙인다.
+  {%- endcomment -%}
+  {%- comment -%} 글·소개처럼 언어마다 따로 쓰는 페이지인데 이 언어 번역이 없어 원문을 대신 보여 주는 경우 {%- endcomment -%}
+  {% assign is_fallback = false %}
+  {% if site.active_lang != site.default_lang and page.rendered_lang and page.rendered_lang != site.active_lang %}
+    {% if page.layout == 'post' or page.layout == 'page' %}{% assign is_fallback = true %}{% endif %}
+  {% endif %}
+  {% if site.active_lang != site.default_lang and is_fallback == false %}
+    {%- capture plain_url -%}{{ page.url | absolute_url }}{%- endcapture -%}
+    {%- capture lang_url -%}{{ '/' | append: site.active_lang | append: page.url | absolute_url }}{%- endcapture -%}
+    {%- capture plain_about -%}{{ '/about/' | absolute_url }}{%- endcapture -%}
+    {%- capture lang_about -%}{{ '/' | append: site.active_lang | append: '/about/' | absolute_url }}{%- endcapture -%}
+    {% assign seo_tags = seo_tags | replace: plain_about, lang_about %}
+    {%- capture q_plain -%}"{{ plain_url }}"{%- endcapture -%}
+    {%- capture q_lang -%}"{{ lang_url }}"{%- endcapture -%}
+    {% assign seo_tags = seo_tags | replace: q_plain, q_lang %}
+  {% endif %}
+
   {{ seo_tags }}
+
+  <!-- canonical + hreflang (jekyll-polyglot) -->
+  {%- comment -%}
+    영어 빌드에서 polyglot 은 렌더 뒤 모든 href 에 /en/ 을 붙인다. 번역이 없어 한국어 글을 대신 보여 주는 페이지의
+    canonical 은 한국어 주소여야 하므로, href 대신 ferh 로 써서 그 재작성을 피한다(polyglot 이 나중에 href 로 되돌린다).
+  {%- endcomment -%}
+  {%- capture i18n_headers -%}{% I18n_Headers %}{%- endcapture -%}
+  {% if is_fallback %}
+    {% assign i18n_headers = i18n_headers | replace: 'rel="canonical" href="', 'rel="canonical" ferh="' %}
+  {% endif %}
+  {{ i18n_headers }}
 
   {%- if site.social.fediverse_handle %}
     <!-- Fediverse handle/creator -->

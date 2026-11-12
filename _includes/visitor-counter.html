@@ -8,7 +8,7 @@
     const box = document.createElement('div');
     box.className = 'visitor-counter';
     box.hidden = true;
-    box.setAttribute('aria-label', '방문자 수');
+    box.setAttribute('aria-label', '{{ site.data.ui.visitors }}');
     const item = (label) => {
       const span = document.createElement('span');
       const num = document.createElement('strong');
@@ -16,11 +16,11 @@
       box.append(span);
       return num;
     };
-    const today = item('오늘');
-    const total = item('전체');
+    const today = item('{{ site.data.ui.visitors_today }}');
+    const total = item('{{ site.data.ui.visitors_total }}');
     bottom.before(box);
 
-    const fmt = (n) => (typeof n === 'number' ? new Intl.NumberFormat('ko-KR').format(n) : '-');
+    const fmt = (n) => (typeof n === 'number' ? new Intl.NumberFormat('{{ site.data.ui.number_locale }}').format(n) : '-');
     fetch('{{ site.visitor_counter.endpoint | append: "/stats" }}')
       .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
       .then((data) => {

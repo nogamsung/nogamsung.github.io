@@ -1,5 +1,5 @@
 # 썸네일 v2: 홈 카드에서 좌우가 잘려도 글자가 보이도록 텍스트를 가운데 70% 안전 영역(x 180~1020)에 둔다.
-import re, glob, os
+import re, glob, os, sys
 from PIL import Image, ImageDraw, ImageFont
 TTC='/System/Library/Fonts/AppleSDGothicNeo.ttc'
 def face(weight,size):
@@ -22,10 +22,16 @@ def wrap(d,text,font,maxw):
             cur=w
     if cur: lines.append(cur)
     return lines
-for f in sorted(glob.glob('_posts/*/*.md')):
+# 한국어 글은 _posts/<카테고리>/, 영어 글은 _posts/en/<카테고리>/ → thumbnail/ 과 thumbnail/en/ 에 따로 만든다
+FOOTER={'ko':'nogamsung 개발 블로그  ·  프로덕트 엔지니어 안검성','en':'nogamsung dev blog  ·  Product engineer Geomseong Ahn'}
+posts=[(f,'ko') for f in sorted(glob.glob('_posts/*/*.md')) if not f.startswith('_posts/en/')]
+posts+=[(f,'en') for f in sorted(glob.glob('_posts/en/*/*.md'))]
+only=set(sys.argv[1:])  # 인자로 slug 를 주면 그 글만 다시 만든다
+for f,lang in posts:
     fm=re.match(r'---\n(.*?)\n---\n',open(f,encoding='utf-8').read(),re.S).group(1)
     title=re.search(r'^title:\s*(.+)$',fm,re.M).group(1).strip().strip('"')
     slug=re.search(r'^slug:\s*(\S+)',fm,re.M).group(1)
+    if only and slug not in only: continue
     top,sub=re.search(r'^categories:\s*\[(\w+),\s*([\w-]+)\]',fm,re.M).groups()
     c1,c2,acc=PAL[top]
     img=Image.new('RGB',(W,H)); px=img.load()
@@ -49,7 +55,8 @@ for f in sorted(glob.glob('_posts/*/*.md')):
     for ln in lines:
         d.text((L,y),ln,font=ft,fill=(255,255,255)); y+=int(size*1.3)
     d.text((L,H-100),'nogamsung.github.io',font=face('Medium',28),fill=(255,255,255))
-    d.text((L,H-64),'nogamsung 개발 블로그  ·  프로덕트 엔지니어 안검성',font=face('Regular',24),fill=(230,230,240))
-    out=f'assets/img/thumbnail/{slug}.jpg'
+    d.text((L,H-64),FOOTER[lang],font=face('Regular',24),fill=(230,230,240))
+    out=f'assets/img/thumbnail/{slug}.jpg' if lang=='ko' else f'assets/img/thumbnail/en/{slug}.jpg'
+    os.makedirs(os.path.dirname(out),exist_ok=True)
     img.save(out,'JPEG',quality=88,optimize=True,progressive=True)
     print('thumb',slug,size,len(lines),os.path.getsize(out)//1024,'KB')

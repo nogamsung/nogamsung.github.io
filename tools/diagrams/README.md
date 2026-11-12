@@ -7,4 +7,8 @@
 - `make_diagrams_batch4.py` — 2026-11-09~11 3편(모노레포 배포 시간, GitHub Environment Secrets env, 앱 통화 백그라운드)의 다이어그램 정의. 실행 방법 동일
 - `make_thumbs_v2.py` — `_posts/**/*.md` front matter(title·slug·categories)로 1200x630 JPEG 썸네일 생성 (가운데 70% 안전 영역, 상위 카테고리별 색상 `PAL`). 실행: `python3 tools/diagrams/make_thumbs_v2.py` (저장소 루트에서, Pillow 필요)
 
+- `en/*.py` — 위 다이어그램의 영어판. `assets/img/en/YYYY/MM/DD-N.svg` 로 만든다. 실행 방법 동일 (`python3 tools/diagrams/en/<file>.py "$PWD"`)
+- `check_text_fit.py` — SVG 글자가 상자·캔버스를 넘거나 서로 겹치는지 검사 (영어처럼 글이 길어졌을 때). `python3 tools/diagrams/check_text_fit.py <svg...>`
+- 썸네일은 영어 글(`_posts/en/**`)이면 `assets/img/thumbnail/en/<slug>.jpg` 로 만든다. 인자로 slug 를 주면 그 글만 만든다
+
 `tools/` 는 `_config.yml` 의 `exclude` 라 사이트 빌드에 포함되지 않는다.
