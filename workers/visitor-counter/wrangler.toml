@@ -1,0 +1,17 @@
+# 블로그 사이드바 방문자 수 Worker — 배포 방법은 README.md
+name = "blog-visitor-counter"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+GOATCOUNTER_CODE = "nogamsung"                  # https://<code>.goatcounter.com 의 <code>
+COUNT_SINCE = "2026-11-01T00:00:00Z"            # 전체 방문자 집계 시작 시각 (GoatCounter 도입 전이면 된다)
+TOTAL_OFFSET = "0"                              # 도입 전 방문자 수를 더하고 싶을 때 (예: GA 누적값)
+ALLOWED_ORIGINS = "https://nogamsung.github.io,http://127.0.0.1:4000,http://localhost:4000"
+
+# 5분 캐시용 KV — `npx wrangler kv namespace create STATS` 결과의 id 로 바꾼다
+[[kv_namespaces]]
+binding = "STATS"
+id = "31b772f7951e42c08621d21e88014062"
+
+# GOATCOUNTER_TOKEN 은 vars 가 아니라 secret 으로: `npx wrangler secret put GOATCOUNTER_TOKEN`
