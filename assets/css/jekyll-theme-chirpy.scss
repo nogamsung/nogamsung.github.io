@@ -68,3 +68,25 @@ main h1,
     }
   }
 }
+
+/* 사이드바 방문자 수 (_includes/visitor-counter.html) */
+#sidebar .visitor-counter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--sidebar-muted-color, var(--text-muted-color));
+
+  strong {
+    margin-left: 0.15rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--sidebar-active-color, var(--heading-color));
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

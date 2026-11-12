@@ -1,0 +1,34 @@
+<!-- 사이드바 방문자 수 (오늘 KST · 전체). 숫자는 workers/visitor-counter 의 Worker 가 GoatCounter API 에서 읽어 온다 -->
+{% if site.visitor_counter.endpoint and site.visitor_counter.endpoint != empty and jekyll.environment == 'production' %}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const bottom = document.querySelector('#sidebar .sidebar-bottom');
+    if (!bottom) return;
+
+    const box = document.createElement('div');
+    box.className = 'visitor-counter';
+    box.hidden = true;
+    box.setAttribute('aria-label', '방문자 수');
+    const item = (label) => {
+      const span = document.createElement('span');
+      const num = document.createElement('strong');
+      span.append(label + ' ', num);
+      box.append(span);
+      return num;
+    };
+    const today = item('오늘');
+    const total = item('전체');
+    bottom.before(box);
+
+    const fmt = (n) => (typeof n === 'number' ? new Intl.NumberFormat('ko-KR').format(n) : '-');
+    fetch('{{ site.visitor_counter.endpoint | append: "/stats" }}')
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then((data) => {
+        today.textContent = fmt(data.today);
+        total.textContent = fmt(data.total);
+        box.hidden = false;
+      })
+      .catch(() => {}); /* 실패하면 위젯을 숨긴 채로 둔다 (HTML 압축 때문에 // 주석은 쓰지 않는다) */
+  });
+</script>
+{% endif %}

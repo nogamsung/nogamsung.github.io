@@ -60,7 +60,7 @@ analytics:
   google:
     id: G-P06BXW4HP1
   goatcounter:
-    id:
+    id: # GoatCounter 사이트 코드 (https://<id>.goatcounter.com)
   umami:
     id:
     domain:
@@ -72,9 +72,13 @@ analytics:
   fathom:
     id:
 
+# 사이드바 방문자 수 (오늘 KST · 전체) — workers/visitor-counter 의 Cloudflare Worker 주소. 비우면 표시하지 않는다
+visitor_counter:
+  endpoint:
+
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: goatcounter # analytics.goatcounter.id 가 비어 있으면 표시하지 않는다
 
 # Prefer color scheme setting.
 # 비워 두면 시스템 설정을 따르고, 사이드바 토글로 바꿀 수 있다.
@@ -197,6 +201,7 @@ exclude:
   - "*.gemspec"
   - docs
   - tools
+  - workers
   - README.md
   - LICENSE
   - "*.config.js"
