@@ -6,10 +6,11 @@ permalink: /sitemap.xml
 jekyll-sitemap 기본 템플릿을 대체한다. 글/홈/소개만 포함하고
 noindex 처리된 태그·카테고리·아카이브 목록과 네이버 인증 파일은 제외한다.
 다국어(jekyll-polyglot): 이 파일은 기본 언어(한국어) 빌드에서 한 번만 만들어진다(exclude_from_localization).
-번역이 있는 글은 permalink_lang 으로 언어별 주소를 모두 싣고 xhtml:link hreflang 으로 서로 묶는다.
+번역이 있는 글은 permalink_lang 으로 언어별 주소를 모두 싣는다. 언어 간 대응(hreflang)은 각 페이지 head 에만 둔다.
+(사이트맵에 xhtml:link 를 넣으면 크롬이 XML 트리 뷰어 대신 글자만 이어 붙여 보여 주고, XSLT 로 꾸미는 방법은 크롬이 XSLT 를 없애는 중이라 쓰지 않는다)
 {%- endcomment -%}
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
     {% unless post.sitemap == false %}
     {% if post.last_modified_at %}{% assign lastmod = post.last_modified_at %}{% else %}{% assign lastmod = post.date %}{% endif %}
@@ -21,11 +22,6 @@ noindex 처리된 태그·카테고리·아카이브 목록과 네이버 인증 
   <url>
     <loc>{{ loc | absolute_url | xml_escape }}</loc>
     <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
-        {% for alt in langs %}
-          {% if alt[0] == site.default_lang %}{% assign alt_loc = alt[1] %}{% else %}{% assign alt_loc = '/' | append: alt[0] | append: alt[1] %}{% endif %}
-    <xhtml:link rel="alternate" hreflang="{{ alt[0] }}" href="{{ alt_loc | absolute_url | xml_escape }}"/>
-        {% endfor %}
-    <xhtml:link rel="alternate" hreflang="x-default" href="{{ post.url | absolute_url | xml_escape }}"/>
   </url>
       {% endfor %}
     {% else %}
